@@ -25,14 +25,15 @@ function spikes() {
 
 const LIPS = new THREE.TorusGeometry(0.06, 0.028, 10, 20)
 
-export default function Kugel({ color = '#FFD45E', dark = '#E8B63A', hat = '#B39CFF', mood = 'talk', present = true, spot = [0, 0, 0], from = [4, 0, -3], face = 0 }) {
+// ent (optional): Kundschaft aus der Spielwelt { x, z, yaw, mood, present } – dann bewegt das Spiel sie direkt.
+export default function Kugel({ color = '#FFD45E', dark = '#E8B63A', hat = '#B39CFF', mood: moodProp = 'talk', present: presentProp = true, spot = [0, 0, 0], from = [4, 0, -3], face = 0, ent }) {
   const root = useRef()
   const body = useRef()
   const lips = useRef()
   const brows = useRef([])
   const fins = useRef([])
   const eyes = useRef([])
-  const s = useRef({ size: 0, puff: 1, placed: false, blinkAt: 0, blinkNext: 1.5, yaw: face, spin: 0, moodWas: mood, moodAt: 0 })
+  const s = useRef({ size: 0, puff: 1, placed: false, blinkAt: 0, blinkNext: 1.5, yaw: face, spin: 0, moodWas: ent ? ent.mood : moodProp, moodAt: 0 })
   const spikeList = useMemo(spikes, [])
 
   useFrame(({ clock }, dtRaw) => {
@@ -40,8 +41,11 @@ export default function Kugel({ color = '#FFD45E', dark = '#E8B63A', hat = '#B39
     const t = clock.elapsedTime
     const st = s.current
     const g = root.current
+    const mood = ent ? ent.mood : moodProp
+    const present = ent ? ent.present : presentProp
     if (!st.placed) {
-      g.position.set(from[0], 0, from[2])
+      if (ent) g.position.set(ent.x, 0, ent.z)
+      else g.position.set(from[0], 0, from[2])
       st.placed = true
     }
     if (st.moodWas !== mood) {
@@ -49,16 +53,22 @@ export default function Kugel({ color = '#FFD45E', dark = '#E8B63A', hat = '#B39
       st.moodAt = t
     }
     const since = t - st.moodAt
-    const goal = present ? spot : from
-    const dx = goal[0] - g.position.x
-    const dz = goal[2] - g.position.z
-    const dist = Math.hypot(dx, dz)
     let wantYaw = face
-    if (dist > 0.03) {
-      const step = Math.min(dist, 3.6 * dt)
-      g.position.x += (dx / dist) * step
-      g.position.z += (dz / dist) * step
-      if (dist > 0.4) wantYaw = Math.atan2(dx, dz)
+    if (ent) {
+      g.position.x = ent.x
+      g.position.z = ent.z
+      wantYaw = ent.yaw
+    } else {
+      const goal = present ? spot : from
+      const dx = goal[0] - g.position.x
+      const dz = goal[2] - g.position.z
+      const dist = Math.hypot(dx, dz)
+      if (dist > 0.03) {
+        const step = Math.min(dist, 3.6 * dt)
+        g.position.x += (dx / dist) * step
+        g.position.z += (dz / dist) * step
+        if (dist > 0.4) wantYaw = Math.atan2(dx, dz)
+      }
     }
     st.yaw = turnTo(st.yaw, wantYaw, 1 - Math.exp(-dt * 8))
 

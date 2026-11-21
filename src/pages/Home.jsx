@@ -138,6 +138,7 @@ function useShownLevel(index) {
 // Loopys Laden: wächst mit dem Lernen. Antippen zeigt die Firmengeschichte.
 function Shop({ hero = false }) {
   const { lang, t } = useLang()
+  const navigate = useNavigate()
   const { xp, streak } = useProgress()
   const { index, level, next, progress } = levelOf(xp)
   const shown = useShownLevel(index)
@@ -146,9 +147,19 @@ function Shop({ hero = false }) {
 
   return (
     <section className={`mb-5 overflow-hidden rounded-card bg-surface ${hero ? '' : ''}`}>
-      <button onClick={() => setHistory(true)} aria-label={t('historyTitle')} className="block w-full active:opacity-80">
-        <ShopScene level={shown} className={`mx-auto h-auto w-full ${hero ? 'max-w-md' : 'max-w-[280px]'}`} />
-      </button>
+      <div className="relative">
+        <button onClick={() => setHistory(true)} aria-label={t('historyTitle')} className="block w-full active:opacity-80">
+          <ShopScene level={shown} className={`mx-auto h-auto w-full ${hero ? 'max-w-md' : 'max-w-[280px]'}`} />
+        </button>
+        {/* Auf der Insel spielen: Loopy & Co. */}
+        <button
+          onClick={() => navigate('/spiel')}
+          className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-accent py-2 pl-3 pr-4 text-[15px] font-semibold text-white shadow-[0_6px_18px_-6px_rgb(0_122_255/0.6)] transition-transform active:scale-95"
+        >
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M8 5.6v12.8c0 .8.9 1.3 1.6.9l10-6.4c.6-.4.6-1.3 0-1.7l-10-6.4C8.9 4.3 8 4.8 8 5.6z" /></svg>
+          {t('play')}
+        </button>
+      </div>
       <div className="px-5 pb-4">
         <div className="flex items-baseline justify-between gap-3">
           <span className="text-[17px] font-semibold text-label">{levelText(level, lang).name}</span>

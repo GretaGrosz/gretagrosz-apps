@@ -27,7 +27,8 @@ function stalkGeometry(len) {
 
 const MOUTH = new THREE.TorusGeometry(0.075, 0.017, 8, 18, Math.PI)
 
-export default function Loopy({ mood = 'idle', spot = [0, 0, 0], face = 0, onClick }) {
+// ent (optional): Objekt aus der Spielwelt { x, z, yaw, moving, mood } – dann steuert das Spiel Loopy direkt.
+export default function Loopy({ mood: moodProp = 'idle', spot = [0, 0, 0], face = 0, onClick, ent }) {
   const root = useRef()
   const body = useRef()
   const head = useRef()
@@ -36,7 +37,7 @@ export default function Loopy({ mood = 'idle', spot = [0, 0, 0], face = 0, onCli
   const mouth = useRef()
   const tail = useRef()
   const arms = useRef([])
-  const s = useRef({ walk: 0, hop: 0, vy: 0, moodWas: mood, moodAt: 0, blinkAt: 2, blinkNext: 2, yaw: face, placed: false })
+  const s = useRef({ walk: 0, hop: 0, vy: 0, moodWas: ent ? ent.mood : moodProp, moodAt: 0, blinkAt: 2, blinkNext: 2, yaw: face, placed: false })
   const stalks = useMemo(() => GILLS.map((g) => stalkGeometry(g.len)), [])
 
   useFrame(({ clock }, dtRaw) => {
@@ -44,8 +45,10 @@ export default function Loopy({ mood = 'idle', spot = [0, 0, 0], face = 0, onCli
     const t = clock.elapsedTime
     const st = s.current
     const g = root.current
+    const mood = ent ? ent.mood : moodProp
     if (!st.placed) {
-      g.position.set(spot[0], spot[1], spot[2])
+      if (ent) g.position.set(ent.x, 0, ent.z)
+      else g.position.set(spot[0], spot[1], spot[2])
       st.placed = true
     }
     if (st.moodWas !== mood) {
@@ -54,20 +57,29 @@ export default function Loopy({ mood = 'idle', spot = [0, 0, 0], face = 0, onCli
     }
     const since = t - st.moodAt
 
-    // Gehen: hüpfend zum Ziel
-    const dx = spot[0] - g.position.x
-    const dz = spot[2] - g.position.z
-    const dist = Math.hypot(dx, dz)
-    const moving = dist > 0.03
+    // Gehen: hüpfend zum Ziel (oder dorthin, wo das Spiel Loopy hinstellt)
+    let moving
     let wantYaw = face
-    if (moving) {
-      const step = Math.min(dist, 3.4 * dt)
-      g.position.x += (dx / dist) * step
-      g.position.z += (dz / dist) * step
-      st.walk += dt * 12
-      wantYaw = Math.atan2(dx, dz)
+    if (ent) {
+      g.position.x = ent.x
+      g.position.z = ent.z
+      moving = ent.moving
+      wantYaw = ent.yaw
+      if (moving) st.walk += dt * 13
+    } else {
+      const dx = spot[0] - g.position.x
+      const dz = spot[2] - g.position.z
+      const dist = Math.hypot(dx, dz)
+      moving = dist > 0.03
+      if (moving) {
+        const step = Math.min(dist, 3.4 * dt)
+        g.position.x += (dx / dist) * step
+        g.position.z += (dz / dist) * step
+        st.walk += dt * 12
+        wantYaw = Math.atan2(dx, dz)
+      }
     }
-    g.position.y += (spot[1] - g.position.y) * (1 - Math.exp(-dt * 8))
+    g.position.y += ((ent ? 0 : spot[1]) - g.position.y) * (1 - Math.exp(-dt * 8))
     st.yaw = turnTo(st.yaw, wantYaw, 1 - Math.exp(-dt * 10))
     g.rotation.y = st.yaw
 

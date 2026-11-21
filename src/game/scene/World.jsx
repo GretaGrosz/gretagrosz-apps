@@ -37,7 +37,7 @@ export function Island() {
   )
 }
 
-function Tree({ position, scale = 1 }) {
+export function Tree({ position, scale = 1 }) {
   return (
     <group position={position} scale={scale}>
       <Blob geo={CYL} color={WOOD_DEEP} s={[0.07, 0.9, 0.07]} position={[0, 0.45, 0]} />
@@ -46,7 +46,7 @@ function Tree({ position, scale = 1 }) {
   )
 }
 
-function Flower({ position, color }) {
+export function Flower({ position, color }) {
   return (
     <group position={position}>
       <mesh geometry={CYL} material={toon('#3FBF98')} scale={[0.014, 0.14, 0.014]} position={[0, 0.07, 0]} />
@@ -55,7 +55,7 @@ function Flower({ position, color }) {
   )
 }
 
-function Jar({ position, colors }) {
+export function Jar({ position, colors }) {
   const glass = useMemo(() => new THREE.MeshLambertMaterial({ color: '#CFE3FF', transparent: true, opacity: 0.45 }), [])
   return (
     <group position={position}>
@@ -68,7 +68,7 @@ function Jar({ position, colors }) {
   )
 }
 
-function Lolly({ position, color, tilt = 0 }) {
+export function Lolly({ position, color, tilt = 0 }) {
   return (
     <group position={position} rotation={[0, 0, tilt]}>
       <mesh geometry={CYL} material={toon('#FFFFFF')} scale={[0.014, 0.3, 0.014]} position={[0, 0.15, 0]} />
@@ -135,7 +135,7 @@ export function Stall({ position, sign = 'Loopys Bonbonstand', onClick }) {
 }
 
 // Aufsteller mit Tafel, wie vor dem Laden auf der Startseite
-function Board({ position }) {
+export function Board({ position }) {
   return (
     <group position={position} rotation={[0, 0.7, 0]}>
       <group rotation={[-0.2, 0, 0]}>
@@ -169,7 +169,7 @@ function Plot({ position }) {
   )
 }
 
-function Cloud({ position, scale = 1, speed = 0.1 }) {
+export function Cloud({ position, scale = 1, speed = 0.1 }) {
   const ref = useRef()
   useFrame(({ clock }) => {
     ref.current.position.x = position[0] + Math.sin(clock.elapsedTime * speed + position[2]) * 0.7
