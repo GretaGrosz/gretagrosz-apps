@@ -1,0 +1,284 @@
+{
+ "id": "u30",
+ "n": 30,
+ "phase": 4,
+ "level": "C1",
+ "title": "Partizipien & Partizipialattribute",
+ "tips": {
+  "de": "Partizip I (Infinitiv + d: steigend, fehlend) ist aktiv und gleichzeitig: die steigenden Preise (= die Preise, die steigen). Partizip II (gestiegen, beschlossen) ist passiv oder abgeschlossen: die beschlossene Reform (= die Reform, die beschlossen wurde). Vor einem Nomen bekommen sie Adjektivendungen. Im Partizipialattribut stehen alle Ergänzungen VOR dem Partizip, zwischen Artikel und Nomen: die im Parlament beschlossene Reform. Gerundivum: zu + Partizip I = muss/kann … werden: die zu lösende Aufgabe (= die Aufgabe, die gelöst werden muss).",
+  "en": "Participle I (-end) = active and ongoing: die steigenden Preise (the rising prices). Participle II = passive or completed: die beschlossene Reform. German packs a whole relative clause before the noun: 'die im Parlament beschlossene Reform' = the reform passed in parliament.",
+  "contrast": "English puts the details after the noun ('the reform passed in parliament last week'). German puts them before it, between article and noun: 'die letzte Woche im Parlament beschlossene Reform'. Read these from the outside in: article → noun first, then the middle.",
+  "table": [
+   [
+    "Relativsatz",
+    "Partizipialattribut"
+   ],
+   [
+    "die Preise, die seit Jahren steigen",
+    "die seit Jahren steigenden Preise"
+   ],
+   [
+    "die Reform, die beschlossen wurde",
+    "die beschlossene Reform"
+   ],
+   [
+    "die Mieten, die gestiegen sind",
+    "die gestiegenen Mieten"
+   ],
+   [
+    "die Aufgabe, die gelöst werden muss",
+    "die zu lösende Aufgabe"
+   ]
+  ],
+  "examples": [
+   "die seit Jahren steigenden Mieten",
+   "die im Herbst erschienene Studie",
+   "der am Strand zurückgelassene Müll",
+   "die in den sozialen Medien geteilten Fotos",
+   "die noch zu klärenden Fragen"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u30l1",
+   "title": "Partizip I oder II?",
+   "s": "part.form",
+   "items": [
+    {
+     "t": "mc",
+     "q": "die ___ Preise (die Preise steigen)",
+     "o": [
+      "steigenden",
+      "gestiegenen",
+      "steigende"
+     ],
+     "a": "steigenden",
+     "y": [
+      "Partizip I: aktiv, gleichzeitig; nach die (Plural) -en",
+      "Partizip II: abgeschlossen",
+      "Plural nach der-Wort -e"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "die ___ Reform (die Reform wurde beschlossen)",
+     "o": [
+      "beschlossene",
+      "beschließende",
+      "beschlossenen"
+     ],
+     "a": "beschlossene",
+     "y": [
+      "Partizip II: passiv; Nom. fem. nach die -e",
+      "Partizip I: aktiv",
+      "Plural -en"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "die ___ Lehrkräfte (Lehrkräfte fehlen)",
+     "o": [
+      "fehlenden",
+      "gefehlten",
+      "fehlende"
+     ],
+     "a": "fehlenden"
+    },
+    {
+     "t": "mc",
+     "q": "ein ___ Kind (das Kind schläft)",
+     "o": [
+      "schlafendes",
+      "geschlafenes",
+      "schlafende"
+     ],
+     "a": "schlafendes"
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ Mieten sind ein Problem.",
+     "h": "(steigen, Partizip I)",
+     "a": "steigenden"
+    },
+    {
+     "t": "gap",
+     "q": "Der ___ Artikel hat viele Reaktionen ausgelöst.",
+     "h": "(veröffentlichen, Partizip II)",
+     "a": "veröffentlichte"
+    },
+    {
+     "t": "gap",
+     "q": "Mit ___ Stimme las sie ihren Text vor.",
+     "h": "(zittern, Partizip I)",
+     "a": "zitternder"
+    },
+    {
+     "t": "gap",
+     "q": "Wir sprechen über die ___ Klassen.",
+     "h": "(überfüllen, Partizip II)",
+     "a": "überfüllten"
+    },
+    {
+     "t": "fix",
+     "w": "Die gestiegenden Preise belasten viele Familien.",
+     "a": "Die gestiegenen Preise belasten viele Familien."
+    },
+    {
+     "t": "fix",
+     "w": "Die fehlende Lehrkräfte sind ein Problem.",
+     "a": "Die fehlenden Lehrkräfte sind ein Problem."
+    },
+    {
+     "t": "tr",
+     "en": "the rising prices",
+     "a": "die steigenden Preise"
+    },
+    {
+     "t": "tr",
+     "en": "the published article",
+     "a": "der veröffentlichte Artikel"
+    },
+    {
+     "t": "listen",
+     "a": "Die steigenden Preise belasten viele Familien."
+    }
+   ]
+  },
+  {
+   "id": "u30l2",
+   "title": "Erweiterte Partizipialattribute",
+   "s": "part.attr",
+   "gen": {
+    "partizipAttribut": 4
+   },
+   "items": [
+    {
+     "t": "order",
+     "a": "Die im Parlament beschlossene Reform ist umstritten.",
+     "chunks": [
+      "Die",
+      "im Parlament",
+      "beschlossene",
+      "Reform",
+      "ist",
+      "umstritten"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Die seit Jahren steigenden Mieten belasten junge Familien.",
+     "chunks": [
+      "Die",
+      "seit Jahren",
+      "steigenden",
+      "Mieten",
+      "belasten",
+      "junge Familien"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Der am Strand zurückgelassene Müll gefährdet die Tiere.",
+     "chunks": [
+      "Der",
+      "am Strand",
+      "zurückgelassene",
+      "Müll",
+      "gefährdet",
+      "die Tiere"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Was bedeutet „die von vielen unterschätzte Gefahr“?",
+     "o": [
+      "die Gefahr, die von vielen unterschätzt wird",
+      "die Gefahr, die viele unterschätzt",
+      "die Gefahr, die viele unterschätzen werden"
+     ],
+     "a": "die Gefahr, die von vielen unterschätzt wird"
+    },
+    {
+     "t": "tf",
+     "q": "Mach daraus ein Partizipialattribut:\ndie Fotos, die in den sozialen Medien geteilt werden",
+     "a": "die in den sozialen Medien geteilten Fotos"
+    },
+    {
+     "t": "tf",
+     "q": "Mach daraus ein Partizipialattribut:\ndie Jugendlichen, die sich für den Klimaschutz einsetzen",
+     "a": "die sich für den Klimaschutz einsetzenden Jugendlichen"
+    },
+    {
+     "t": "tf",
+     "q": "Löse auf (Relativsatz):\nDie letzte Woche erschienene Studie zeigt das deutlich.",
+     "a": "Die Studie, die letzte Woche erschienen ist, zeigt das deutlich.",
+     "acc": [
+      "Die Studie, die letzte Woche erschien, zeigt das deutlich."
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Die im Parlament beschlossenen Reform ist umstritten.",
+     "a": "Die im Parlament beschlossene Reform ist umstritten."
+    },
+    {
+     "t": "listen",
+     "a": "Die im Parlament beschlossene Reform ist weiterhin umstritten."
+    }
+   ]
+  },
+  {
+   "id": "u30l3",
+   "title": "Gerundivum: die zu lösende Aufgabe",
+   "s": "part.gerundiv",
+   "items": [
+    {
+     "t": "mc",
+     "q": "„die zu lösende Aufgabe“ bedeutet:",
+     "o": [
+      "die Aufgabe, die gelöst werden muss",
+      "die Aufgabe, die gelöst wurde",
+      "die Aufgabe, die etwas löst"
+     ],
+     "a": "die Aufgabe, die gelöst werden muss"
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt noch einige zu ___ Fragen.",
+     "h": "(klären)",
+     "a": "klärende"
+    },
+    {
+     "t": "gap",
+     "q": "Die bis Freitag ___ Hausübung ist lang.",
+     "h": "(abgeben, Gerundivum)",
+     "a": "abzugebende"
+    },
+    {
+     "t": "tf",
+     "q": "Mach daraus ein Gerundivum:\ndie Probleme, die gelöst werden müssen",
+     "a": "die zu lösenden Probleme"
+    },
+    {
+     "t": "tf",
+     "q": "Mach daraus ein Gerundivum:\nein Risiko, das nicht unterschätzt werden darf",
+     "a": "ein nicht zu unterschätzendes Risiko"
+    },
+    {
+     "t": "fix",
+     "w": "die zu gelösten Probleme",
+     "a": "die zu lösenden Probleme"
+    },
+    {
+     "t": "tr",
+     "en": "the questions still to be clarified",
+     "a": "die noch zu klärenden Fragen"
+    },
+    {
+     "t": "listen",
+     "a": "Das ist ein nicht zu unterschätzendes Risiko."
+    }
+   ]
+  }
+ ]
+}

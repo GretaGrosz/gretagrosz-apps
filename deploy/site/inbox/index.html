@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Inbox · Greta Grosz</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#F4F6FA" />
+<meta name="color-scheme" content="light" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Inbox" />
+<link rel="manifest" href="/inbox/manifest.webmanifest" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+<link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/inbox.css" />
+<script>
+  try { var l = localStorage.getItem('lang') } catch (e) {}
+  if (l === 'de' || (l !== 'en' && (navigator.languages || [navigator.language]).some(function (x) { return /^de\b/i.test(x) }))) document.documentElement.classList.add('i18n-wait')
+</script>
+</head>
+<body class="ib">
+<main id="main" class="ib-main">
+  <section class="ib-lock" hidden>
+    <h1>Inbox</h1>
+    <form class="ib-key" novalidate>
+      <label class="gfield"><span>Inbox key</span><input type="password" name="key" autocomplete="current-password" required /></label>
+      <p class="g-err" role="alert" data-no-i18n></p>
+      <button type="submit" class="btn send"><span class="l">Open</span><span class="spin" aria-hidden="true"></span></button>
+    </form>
+  </section>
+
+  <section class="ib-app" hidden>
+    <header class="ib-head">
+      <h1>Inbox</h1>
+      <div class="ib-tools">
+        <button type="button" class="ib-ic" data-act="refresh" aria-label="Refresh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg></button>
+        <button type="button" class="ib-ic" data-act="push" aria-label="Notifications" aria-pressed="false" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15zM10 20.5a2 2 0 0 0 4 0"/></svg></button>
+        <button type="button" class="ib-ic" data-act="lock" aria-label="Lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg></button>
+      </div>
+    </header>
+    <div class="gseg ib-tabs" role="radiogroup" aria-label="Show">
+      <label><input type="radio" name="status" value="open" checked /><span><span>Open</span> <b class="n-open" data-no-i18n></b></span></label>
+      <label><input type="radio" name="status" value="done" /><span><span>Done</span> <b class="n-done" data-no-i18n></b></span></label>
+    </div>
+    <p class="ib-note" role="status" data-no-i18n></p>
+    <ol class="ib-list" aria-live="polite"></ol>
+    <p class="ib-empty" hidden></p>
+    <button type="button" class="btn soft ib-more" hidden>Show older</button>
+  </section>
+</main>
+<script src="/js/i18n.js"></script>
+<script src="/js/inbox.js"></script>
+</body>
+</html>

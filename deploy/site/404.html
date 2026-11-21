@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Not found · Greta Grosz</title>
+<meta name="description" content="This page does not exist." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+<link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/simple.css" />
+<script>
+  // Hide the page for a moment if it will be shown in German, so English never flashes first
+  try { var l = localStorage.getItem('lang') } catch (e) {}
+  if (l === 'de' || (l !== 'en' && (navigator.languages || [navigator.language]).some(function (x) { return /^de\b/i.test(x) }))) document.documentElement.classList.add('i18n-wait')
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="me" href="/"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="30" fill="#232B3D"/><g transform="translate(16 16) scale(.68)" fill="none" stroke="#D9E0EA" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M36.48 21 A32 32 0 0 1 81.88 52.79 Q81 61 72 61 L46 61"/><path d="M63.52 79 A32 32 0 0 1 18.12 47.21 Q19 39 28 39 L54 39"/></g></svg><span class="name">Greta<span class="last"> Grosz</span></span></a>
+  <div class="links"><a href="/finance/">Finance</a><a href="/apps/">Apps</a><a href="/business/">Business</a></div>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div>
+</nav>
+
+<main id="main" class="simple">
+  <div class="wrap">
+    <h1>This page doesn’t exist.</h1>
+    <p class="lead">Maybe one of these is what you were looking for.</p>
+    <!-- apps:404 -->
+    <ul class="nf-apps">
+      <li><a href="/bwbuddy/"><span class="app-icon"><img src="/img/icon-bw.webp" alt="" width="240" height="240" decoding="async" /></span><span>BW Buddy</span></a></li>
+      <li><a href="/stance/"><span class="app-icon"><img src="/img/icon-stance.webp" alt="" width="240" height="240" decoding="async" /></span><span>Agora</span></a></li>
+      <li><a href="/regional/"><span class="app-icon"><img src="/img/icon-qed.webp" alt="" width="240" height="240" decoding="async" /></span><span>QED</span></a></li>
+      <li><a href="/tenaday/"><span class="app-icon"><img src="/img/icon-ten.webp" alt="" width="240" height="240" decoding="async" /></span><span>Deca</span></a></li>
+      <li><a href="/yap/"><span class="app-icon"><img src="/img/icon-yap.webp" alt="" width="240" height="240" decoding="async" /></span><span>Yap</span></a></li>
+      <li><a href="/blank/"><span class="app-icon"><img src="/img/icon-blank.webp" alt="" width="240" height="240" decoding="async" /></span><span>Blank</span></a></li>
+      <li><a href="/deutsch/"><span class="app-icon"><img src="/img/icon-deutsch.webp" alt="" width="240" height="240" decoding="async" /></span><span>Lock-In</span></a></li>
+    </ul>
+    <!-- /apps:404 -->
+    <p class="nf-home"><a class="btn" href="/">Home</a></p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="me"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="30" fill="#232B3D"/><g transform="translate(16 16) scale(.68)" fill="none" stroke="#D9E0EA" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M36.48 21 A32 32 0 0 1 81.88 52.79 Q81 61 72 61 L46 61"/><path d="M63.52 79 A32 32 0 0 1 18.12 47.21 Q19 39 28 39 L54 39"/></g></svg>Greta Grosz</span>
+    <nav aria-label="Footer">
+      <a href="/finance/">Finance</a>
+      <a href="/apps/">Apps</a>
+      <a href="/business/">Business</a>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
+      <a href="https://www.linkedin.com/in/greta-grosz" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a class="gob" href="/goblin/">goblin</a>
+    </nav>
+    <span>© <span data-year>2026</span> · Made by Greta in Austria</span>
+  </div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/apps-data.js"></script>
+<script>I18N.add({ "Not found · Greta Grosz": "Nicht gefunden · Greta Grosz", "This page does not exist.": "Diese Seite gibt es nicht.", "This page doesn’t exist.": "Diese Seite gibt es nicht.", "Maybe one of these is what you were looking for.": "Vielleicht ist eins davon das Gesuchte.", "Home": "Start" })</script>
+<script src="/js/site.js"></script>
+</body>
+</html>

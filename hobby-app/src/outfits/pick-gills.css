@@ -1,0 +1,164 @@
+/* idle motion for the store-only gills items. Each tip's wrapper sets --i (0..3, top → bottom) and --s (0 left,
+   1 right), used to stagger the eight tips. Tip-local (0,0) is the anchor of each moving part. */
+
+/* yarn bobbles: the balls roll a little, the loose ends dangle */
+.axo .axo-acc-yarnbobbles .ball {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-yarnbobbles-roll 4.2s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.8s + var(--s, 0) * -2.1s);
+}
+
+@keyframes acc-yarnbobbles-roll {
+  0%, 100% { transform: rotate(-9deg); }
+  50% { transform: rotate(9deg); }
+}
+
+.axo .axo-acc-yarnbobbles .strand {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-yarnbobbles-dangle 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.5s + var(--s, 0) * -1.2s);
+}
+
+@keyframes acc-yarnbobbles-dangle {
+  0%, 100% { transform: rotate(-14deg); }
+  50% { transform: rotate(14deg); }
+}
+
+/* sprinkle donuts: a happy little jiggle */
+.axo .axo-acc-sprinkledonuts .donut {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-sprinkledonuts-jiggle 3.4s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.6s + var(--s, 0) * -1.7s);
+}
+
+@keyframes acc-sprinkledonuts-jiggle {
+  0%, 60%, 100% { transform: none; }
+  68% { transform: rotate(-8deg) scale(1.06, 0.94); }
+  76% { transform: rotate(6deg) scale(0.97, 1.03); }
+  84% { transform: rotate(-3deg); }
+  92% { transform: none; }
+}
+
+/* gill tunes: notes bop to the beat, and every other tip lets a tiny note float away */
+.axo .axo-acc-gilltunes .bop {
+  transform-box: view-box;
+  transform-origin: 0 4px;
+  animation: acc-gilltunes-bop 1.2s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.3s + var(--s, 0) * -0.6s);
+}
+
+@keyframes acc-gilltunes-bop {
+  0%, 100% { transform: none; }
+  20% { transform: translateY(-1.6px) rotate(-9deg) scale(0.96, 1.06); }
+  45% { transform: rotate(5deg); }
+  65% { transform: none; }
+}
+
+.axo .axo-acc-gilltunes .float {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  opacity: 0;
+  animation: acc-gilltunes-float 5.5s ease-out infinite;
+  animation-delay: calc(var(--i, 0) * -1.4s + var(--s, 0) * -2.9s);
+}
+
+@keyframes acc-gilltunes-float {
+  0%, 40% { transform: none; opacity: 0; }
+  46% { transform: translate(0, -1px) scale(0.8); opacity: 1; }
+  65% { transform: translate(3px, -7px) rotate(12deg); opacity: 1; }
+  82% { transform: translate(-1px, -13px) rotate(-10deg); opacity: 0.9; }
+  100% { transform: translate(2px, -19px) rotate(8deg) scale(0.9); opacity: 0; }
+}
+
+/* gill gems: a slow shimmer turn, with a twinkle now and then */
+.axo .axo-acc-gillgems .gem {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-gillgems-shimmer 5s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.9s + var(--s, 0) * -2.3s);
+}
+
+@keyframes acc-gillgems-shimmer {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg) scale(1.04); }
+}
+
+.axo .axo-acc-gillgems .spark {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  transform: scale(0);
+  animation: acc-gillgems-twinkle 3.6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.75s + var(--s, 0) * -1.9s);
+}
+
+@keyframes acc-gillgems-twinkle {
+  0%, 55%, 100% { transform: scale(0) rotate(0); }
+  70% { transform: scale(1.15) rotate(45deg); }
+  85% { transform: scale(0) rotate(90deg); }
+}
+
+/* bubble helmets: the big bubble wobbles, little bubbles wobble up and pop */
+.axo .axo-acc-bubblehelmets .wobble {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-bubblehelmets-wobble 3s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.7s + var(--s, 0) * -1.6s);
+}
+
+@keyframes acc-bubblehelmets-wobble {
+  0%, 100% { transform: scale(1, 1); }
+  25% { transform: scale(1.05, 0.95); }
+  50% { transform: scale(0.97, 1.03); }
+  75% { transform: scale(1.02, 0.98); }
+}
+
+.axo .axo-acc-bubblehelmets .rise {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  opacity: 0;
+  animation: acc-bubblehelmets-rise 4.4s ease-in infinite;
+  animation-delay: calc(var(--i, 0) * -1.1s + var(--s, 0) * -2.5s);
+}
+
+.axo .axo-acc-bubblehelmets .rise-b {
+  animation-duration: 5.2s;
+  animation-delay: calc(var(--i, 0) * -1.3s + var(--s, 0) * -0.9s - 2.4s);
+}
+
+@keyframes acc-bubblehelmets-rise {
+  0%, 30% { transform: scale(0.4); opacity: 0; }
+  38% { transform: translate(0, -1px) scale(1); opacity: 1; }
+  60% { transform: translate(2px, -8px); opacity: 1; }
+  82% { transform: translate(-1.5px, -15px); opacity: 1; }
+  88% { transform: translate(-1px, -17px) scale(1.5); opacity: 0.6; }
+  92%, 100% { transform: translate(-1px, -17px) scale(1.9); opacity: 0; }
+}
+
+.axo[data-axo-paused] .axo-acc-yarnbobbles .ball,
+.axo[data-axo-paused] .axo-acc-yarnbobbles .strand,
+.axo[data-axo-paused] .axo-acc-sprinkledonuts .donut,
+.axo[data-axo-paused] .axo-acc-gilltunes .bop,
+.axo[data-axo-paused] .axo-acc-gilltunes .float,
+.axo[data-axo-paused] .axo-acc-gillgems .gem,
+.axo[data-axo-paused] .axo-acc-gillgems .spark,
+.axo[data-axo-paused] .axo-acc-bubblehelmets .wobble,
+.axo[data-axo-paused] .axo-acc-bubblehelmets .rise {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc-yarnbobbles .ball,
+  .axo .axo-acc-yarnbobbles .strand,
+  .axo .axo-acc-sprinkledonuts .donut,
+  .axo .axo-acc-gilltunes .bop,
+  .axo .axo-acc-gilltunes .float,
+  .axo .axo-acc-gillgems .gem,
+  .axo .axo-acc-gillgems .spark,
+  .axo .axo-acc-bubblehelmets .wobble,
+  .axo .axo-acc-bubblehelmets .rise {
+    animation: none;
+  }
+}

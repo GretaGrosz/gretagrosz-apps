@@ -1,0 +1,856 @@
+{
+ "id": "u02",
+ "n": 2,
+ "phase": 1,
+ "level": "A2",
+ "title": "Pluralformen",
+ "weak": true,
+ "tips": {
+  "de": "Der Plural hat im Deutschen mehrere Endungen: -e (Argumente), -er (Kinder, Länder), -(e)n (Lösungen), -s (Handys), Umlaut (Träume, Städte) oder keine Endung (Schüler, Lehrer). Lerne den Plural immer mit dem Nomen. Ganz wichtig: Ein zusätzliches -n gibt es NUR im Dativ Plural (mit den Kindern). Nach „es gibt“, „alle“, „viele“, „manche“ im Nominativ/Akkusativ kommt KEIN -n dazu.",
+  "en": "German has several plural endings: -e, -er, -(e)n, -s, umlaut, or nothing. Learn each plural with its noun. The extra -n is ONLY for the dative plural (mit den Kindern). After 'es gibt', 'alle', 'viele', 'manche' (nominative/accusative) there is NO extra -n.",
+  "contrast": "English almost always adds -s, so it's tempting to add one 'plural ending' everywhere. Your typical mistake is 'Es gibt Ländern', 'Kindern lernen', 'Schülern fordern'. The -n you are adding is the dative ending, and it belongs only after mit, von, in (where?) etc.",
+  "table": [
+   [
+    "Nominativ",
+    "die Kinder lernen"
+   ],
+   [
+    "Akkusativ",
+    "es gibt Kinder / ich sehe die Kinder"
+   ],
+   [
+    "Dativ",
+    "mit den Kindern / in vielen Ländern"
+   ],
+   [
+    "Genitiv",
+    "die Rechte der Kinder"
+   ]
+  ],
+  "examples": [
+   "das Land → die Länder → in den Ländern",
+   "der Traum → die Träume → von ihren Träumen",
+   "der Schüler → die Schüler → mit den Schülern",
+   "Es gibt Länder, in denen Kinder in Zelten lernen.",
+   "das Handy → die Handys → mit den Handys (Plural auf -s: kein -n)"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u02l1",
+   "title": "-e, -er, Umlaut",
+   "s": "plural.form",
+   "gen": {
+    "pluralForm": 2
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "das Land → die ___",
+     "a": "Länder",
+     "o": [
+      "Länder",
+      "Ländern",
+      "Lande"
+     ],
+     "r": "das Land – die Länder (-er + Umlaut)."
+    },
+    {
+     "t": "gap",
+     "q": "das Kind → die ___",
+     "a": "Kinder",
+     "o": [
+      "Kinder",
+      "Kindern",
+      "Kinde"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Traum → die ___",
+     "a": "Träume",
+     "o": [
+      "Träume",
+      "Traume",
+      "Träumen"
+     ],
+     "r": "der Traum – die Träume (Umlaut + -e)."
+    },
+    {
+     "t": "gap",
+     "q": "die Stadt → die ___",
+     "a": "Städte",
+     "o": [
+      "Städte",
+      "Stadten",
+      "Städten"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Argument → die ___",
+     "a": "Argumente",
+     "o": [
+      "Argumente",
+      "Argumenten",
+      "Arguments"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Grund → die ___",
+     "a": "Gründe",
+     "o": [
+      "Gründe",
+      "Grunde",
+      "Gründen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Urlaub → die ___",
+     "a": "Urlaube",
+     "o": [
+      "Urlaube",
+      "Urlauben",
+      "Urlaubs"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Vorschlag → die ___",
+     "a": "Vorschläge",
+     "o": [
+      "Vorschläge",
+      "Vorschlagen",
+      "Vorschlage"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Haus → die ___",
+     "a": "Häuser",
+     "o": [
+      "Häuser",
+      "Hause",
+      "Häusern"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Wunsch → die ___",
+     "a": "Wünsche",
+     "o": [
+      "Wünsche",
+      "Wunsche",
+      "Wünschen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Dorf → die ___",
+     "a": "Dörfer",
+     "o": [
+      "Dörfer",
+      "Dorfe",
+      "Dörfern"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Markt → die ___",
+     "a": "Märkte",
+     "o": [
+      "Märkte",
+      "Markte",
+      "Märkten"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Falls sie ihre Traume erreichen.",
+     "a": "Falls sie ihre Träume erreichen.",
+     "r": "der Traum – die Träume (mit Umlaut)."
+    },
+    {
+     "t": "fix",
+     "w": "Viele Stadten haben Probleme mit dem Verkehr.",
+     "a": "Viele Städte haben Probleme mit dem Verkehr.",
+     "r": "die Stadt – die Städte."
+    },
+    {
+     "t": "fix",
+     "w": "Er hat gute Argumenten.",
+     "a": "Er hat gute Argumente.",
+     "r": "Akkusativ Plural: Argumente, kein -n."
+    },
+    {
+     "t": "tr",
+     "en": "Many countries have problems.",
+     "a": "Viele Länder haben Probleme."
+    },
+    {
+     "t": "tr",
+     "en": "The children have dreams.",
+     "a": "Die Kinder haben Träume."
+    },
+    {
+     "t": "listen",
+     "a": "Viele Städte und Dörfer leiden unter dem Verkehr."
+    }
+   ]
+  },
+  {
+   "id": "u02l2",
+   "title": "-(e)n, -s, ohne Endung",
+   "s": "plural.form",
+   "gen": {
+    "pluralForm": 2
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "der Schüler → die ___",
+     "a": "Schüler",
+     "o": [
+      "Schüler",
+      "Schülern",
+      "Schülers"
+     ],
+     "y": [
+      "Maskulin auf -er → Plural ohne Endung",
+      "Plural immer mit -n",
+      "Plural immer mit -s"
+     ],
+     "r": "der Schüler – die Schüler (keine Endung)."
+    },
+    {
+     "t": "gap",
+     "q": "der Lehrer → die ___",
+     "a": "Lehrer",
+     "o": [
+      "Lehrer",
+      "Lehrern",
+      "Lehrers"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Computer → die ___",
+     "a": "Computer",
+     "o": [
+      "Computer",
+      "Computers",
+      "Computern"
+     ],
+     "r": "der Computer – die Computer (wie English nicht mit -s!)."
+    },
+    {
+     "t": "gap",
+     "q": "die Lösung → die ___",
+     "a": "Lösungen",
+     "o": [
+      "Lösungen",
+      "Lösunge",
+      "Lösungs"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "die Lehrkraft → die ___",
+     "a": "Lehrkräfte",
+     "o": [
+      "Lehrkräfte",
+      "Lehrkraften",
+      "Lehrkräften"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Handy → die ___",
+     "a": "Handys",
+     "o": [
+      "Handys",
+      "Handies",
+      "Handyn"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Restaurant → die ___",
+     "a": "Restaurants",
+     "o": [
+      "Restaurants",
+      "Restauranten",
+      "Restaurante"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Thema → die ___",
+     "a": "Themen",
+     "o": [
+      "Themen",
+      "Themas",
+      "Themae"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "das Medium → die ___",
+     "a": "Medien",
+     "o": [
+      "Medien",
+      "Mediums",
+      "Medium"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "die Frau → die ___",
+     "a": "Frauen",
+     "o": [
+      "Frauen",
+      "Fraue",
+      "Fraus"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "die Lehrerin → die ___",
+     "a": "Lehrerinnen",
+     "o": [
+      "Lehrerinnen",
+      "Lehrerinen",
+      "Lehrerins"
+     ],
+     "r": "-in → -innen (Doppel-n)."
+    },
+    {
+     "t": "gap",
+     "q": "das Zimmer → die ___",
+     "a": "Zimmer",
+     "o": [
+      "Zimmer",
+      "Zimmern",
+      "Zimmers"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Mensch → die ___",
+     "a": "Menschen",
+     "o": [
+      "Menschen",
+      "Mensche",
+      "Menschs"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Aspekt → die ___",
+     "a": "Aspekte",
+     "o": [
+      "Aspekte",
+      "Aspekten",
+      "Aspekts"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Wegen des Tourismus können sie neue Restaurant bauen.",
+     "a": "Wegen des Tourismus können sie neue Restaurants bauen.",
+     "r": "Mehrere Restaurants → Plural mit -s."
+    },
+    {
+     "t": "fix",
+     "w": "Alle Lehrern sind heute krank.",
+     "a": "Alle Lehrer sind heute krank.",
+     "r": "Nominativ Plural: die Lehrer (kein -n)."
+    },
+    {
+     "t": "fix",
+     "w": "Die Schülerinen protestieren.",
+     "a": "Die Schülerinnen protestieren.",
+     "r": "-in → -innen."
+    },
+    {
+     "t": "tr",
+     "en": "The teachers are tired.",
+     "a": "Die Lehrer sind müde.",
+     "acc": [
+      "Die Lehrkräfte sind müde.",
+      "Die Lehrerinnen sind müde."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Many students have mobile phones.",
+     "a": "Viele Schüler haben Handys.",
+     "acc": [
+      "Viele Schülerinnen und Schüler haben Handys."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Lehrerinnen und Lehrer diskutieren über die Themen."
+    }
+   ]
+  },
+  {
+   "id": "u02l3",
+   "title": "Kein extra -n!",
+   "s": "plural.keinN",
+   "gen": {
+    "pluralCase": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Es gibt ___, in denen Kinder in Zelten lernen.",
+     "o": [
+      "Länder",
+      "Ländern"
+     ],
+     "a": "Länder",
+     "y": [
+      "„es gibt“ + Akkusativ → kein -n",
+      "Plural immer mit -n",
+      "„es gibt“ + Dativ → -n"
+     ],
+     "r": "„es gibt“ + Akkusativ Plural: Länder."
+    },
+    {
+     "t": "mc",
+     "q": "___ in Frankreich fordern bessere Lernbedingungen.",
+     "o": [
+      "Schüler",
+      "Schülern"
+     ],
+     "a": "Schüler",
+     "y": [
+      "Subjekt = Nominativ Plural → kein -n",
+      "Plural immer mit -n",
+      "Dativ Plural → -n"
+     ],
+     "r": "Subjekt (Nominativ): Schüler."
+    },
+    {
+     "t": "mc",
+     "q": "Manche ___ haben keinen eigenen Computer.",
+     "o": [
+      "Kinder",
+      "Kindern"
+     ],
+     "a": "Kinder",
+     "y": [
+      "Nominativ Plural → kein -n",
+      "nach „manche“ immer -n",
+      "Dativ Plural → -n"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Alle ___ teilen ihre Urlaube in den sozialen Medien.",
+     "o": [
+      "Menschen",
+      "Mensche"
+     ],
+     "a": "Menschen",
+     "r": "der Mensch – die Menschen: hier ist -en die normale Pluralform."
+    },
+    {
+     "t": "mc",
+     "q": "Wir sprechen mit den ___.",
+     "o": [
+      "Schülern",
+      "Schüler"
+     ],
+     "a": "Schülern",
+     "y": [
+      "„mit“ + Dativ Plural → -n",
+      "Akkusativ Plural → kein -n",
+      "Nominativ Plural"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Tourismus ist für manche ___ sehr wichtig.",
+     "o": [
+      "Länder",
+      "Ländern"
+     ],
+     "a": "Länder",
+     "y": [
+      "„für“ + Akkusativ → kein -n",
+      "„für“ + Dativ → -n",
+      "Plural immer mit -n"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "In vielen ___ ist der Tourismus wichtig.",
+     "o": [
+      "Ländern",
+      "Länder"
+     ],
+     "a": "Ländern",
+     "y": [
+      "„in“ (wo?) + Dativ Plural → -n",
+      "„in“ + Akkusativ → kein -n",
+      "nach „viele“ immer -n"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt viele ___, die gerne lesen.",
+     "h": "(das Kind, Plural)",
+     "a": "Kinder",
+     "r": "„es gibt“ + Akkusativ: Kinder."
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ protestieren vor dem Parlament.",
+     "h": "(der Schüler, Plural)",
+     "a": "Schüler"
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin hilft den ___.",
+     "h": "(der Schüler, Plural)",
+     "a": "Schülern",
+     "r": "„helfen“ + Dativ: den Schülern."
+    },
+    {
+     "t": "gap",
+     "q": "Viele ___ haben Angst vor der Zukunft.",
+     "h": "(der Jugendliche, Plural)",
+     "a": "Jugendliche",
+     "r": "Nach „viele“ (ohne Artikel): viele Jugendliche."
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe mit vielen ___ gesprochen.",
+     "h": "(der Lehrer, Plural)",
+     "a": "Lehrern"
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt in Österreich neun ___.",
+     "h": "(das Bundesland, Plural)",
+     "a": "Bundesländer"
+    },
+    {
+     "t": "fix",
+     "w": "Es gibt Ländern, in denen Kinder in Zelten lernen.",
+     "a": "Es gibt Länder, in denen Kinder in Zelten lernen.",
+     "r": "„es gibt“ + Akkusativ: Länder (ohne -n)."
+    },
+    {
+     "t": "fix",
+     "w": "Schülern in Frankreich fordern bessere Lernbedingungen.",
+     "a": "Schüler in Frankreich fordern bessere Lernbedingungen.",
+     "r": "Subjekt im Nominativ Plural: Schüler."
+    },
+    {
+     "t": "fix",
+     "w": "Manche Kindern können keine Computer benutzen.",
+     "a": "Manche Kinder können keine Computer benutzen."
+    },
+    {
+     "t": "fix",
+     "w": "Tourismus ist für manche Ländern wichtig.",
+     "a": "Tourismus ist für manche Länder wichtig.",
+     "r": "„für“ + Akkusativ: Länder."
+    },
+    {
+     "t": "fix",
+     "w": "Alle Schülern haben Zugriff auf das Internet.",
+     "a": "Alle Schüler haben Zugriff auf das Internet."
+    },
+    {
+     "t": "fix",
+     "w": "Ich spreche mit den Schüler.",
+     "a": "Ich spreche mit den Schülern.",
+     "r": "„mit“ + Dativ Plural → -n."
+    },
+    {
+     "t": "tr",
+     "en": "There are countries where children learn in tents.",
+     "a": "Es gibt Länder, in denen Kinder in Zelten lernen.",
+     "acc": [
+      "Es gibt Länder, wo Kinder in Zelten lernen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Students in France demand better conditions.",
+     "a": "Schüler in Frankreich fordern bessere Bedingungen.",
+     "acc": [
+      "Die Schüler in Frankreich fordern bessere Bedingungen.",
+      "Schüler in Frankreich fordern bessere Lernbedingungen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "All children need a computer.",
+     "a": "Alle Kinder brauchen einen Computer."
+    },
+    {
+     "t": "listen",
+     "a": "Es gibt Länder, in denen Kinder keine Computer haben."
+    },
+    {
+     "t": "listen",
+     "a": "In vielen Ländern lernen Kinder in Zelten."
+    }
+   ]
+  },
+  {
+   "id": "u02l4",
+   "title": "Dativ Plural -n",
+   "s": "plural.datn",
+   "gen": {
+    "pluralCase": 3
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Mit vielen ___ kommt viel Müll.",
+     "h": "(der Mensch, Plural)",
+     "a": "Menschen",
+     "r": "„mit“ + Dativ: vielen Menschen (Plural endet schon auf -n)."
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin spricht mit den ___.",
+     "h": "(das Kind, Plural)",
+     "a": "Kindern"
+    },
+    {
+     "t": "gap",
+     "q": "In vielen ___ fehlen Lehrkräfte.",
+     "h": "(die Schule, Plural)",
+     "a": "Schulen"
+    },
+    {
+     "t": "gap",
+     "q": "Der Text handelt von den ___ junger Menschen.",
+     "h": "(der Traum, Plural)",
+     "a": "Träumen"
+    },
+    {
+     "t": "gap",
+     "q": "Wir beschäftigen uns mit den wichtigsten ___.",
+     "h": "(der Aspekt, Plural)",
+     "a": "Aspekten"
+    },
+    {
+     "t": "gap",
+     "q": "Ich gratuliere den ___.",
+     "h": "(der Gewinner, Plural)",
+     "a": "Gewinnern",
+     "r": "„gratulieren“ + Dativ: den Gewinnern."
+    },
+    {
+     "t": "gap",
+     "q": "In den sozialen ___ sieht man viele Urlaubsfotos.",
+     "h": "(das Medium, Plural)",
+     "a": "Medien",
+     "r": "die Medien endet schon auf -n."
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler gehen mit ihren ___ ins Museum.",
+     "h": "(der Lehrer, Plural)",
+     "a": "Lehrern"
+    },
+    {
+     "t": "gap",
+     "q": "Das Handyverbot gilt in allen ___.",
+     "h": "(das Bundesland, Plural)",
+     "a": "Bundesländern"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Jugendliche chatten mit ihren ___.",
+     "h": "(der Freund, Plural)",
+     "a": "Freunden"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Form ist richtig?",
+     "o": [
+      "mit den Handys",
+      "mit den Handysn",
+      "mit den Handyn"
+     ],
+     "a": "mit den Handys",
+     "r": "Plural auf -s bekommt kein -n im Dativ."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Form ist richtig?",
+     "o": [
+      "in vielen Ländern",
+      "in viele Länder",
+      "in vielen Länder"
+     ],
+     "a": "in vielen Ländern",
+     "r": "Dativ Plural: Artikel/Begleiter auf -en und Nomen auf -n."
+    },
+    {
+     "t": "fix",
+     "w": "Mit viele Menschen kommt viel Müll.",
+     "a": "Mit vielen Menschen kommt viel Müll.",
+     "r": "„mit“ + Dativ Plural: vielen."
+    },
+    {
+     "t": "fix",
+     "w": "Wir sprechen mit den Lehrer über die Schularbeit.",
+     "a": "Wir sprechen mit den Lehrern über die Schularbeit."
+    },
+    {
+     "t": "fix",
+     "w": "In manche Ländern gibt es keine Schulen.",
+     "a": "In manchen Ländern gibt es keine Schulen.",
+     "r": "Dativ Plural: manchen Ländern."
+    },
+    {
+     "t": "fix",
+     "w": "Er hilft seinen Freunde.",
+     "a": "Er hilft seinen Freunden."
+    },
+    {
+     "t": "tr",
+     "en": "We talk to the children.",
+     "a": "Wir sprechen mit den Kindern."
+    },
+    {
+     "t": "tr",
+     "en": "In many countries tourism is important.",
+     "a": "In vielen Ländern ist der Tourismus wichtig.",
+     "acc": [
+      "In vielen Ländern ist Tourismus wichtig."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Mit vielen Menschen kommt viel Müll."
+    },
+    {
+     "t": "listen",
+     "a": "In den sozialen Medien zeigen alle ihre Urlaube."
+    }
+   ]
+  },
+  {
+   "id": "u02l5",
+   "title": "Gemischt: Plural im Satz",
+   "s": "plural",
+   "gen": {
+    "pluralCase": 2,
+    "pluralForm": 1
+   },
+   "items": [
+    {
+     "t": "fix",
+     "w": "Sie teilen ihr Urlauben in den sozialen Medien.",
+     "a": "Sie teilen ihre Urlaube in den sozialen Medien.",
+     "r": "Akkusativ Plural: ihre Urlaube."
+    },
+    {
+     "t": "fix",
+     "w": "Sie haben es geschafft, ihre Traume zu verwirklichen.",
+     "a": "Sie haben es geschafft, ihre Träume zu verwirklichen."
+    },
+    {
+     "t": "fix",
+     "w": "Die Klassen haben keinen Lehrkräfte.",
+     "a": "Die Klassen haben keine Lehrkräfte.",
+     "r": "Akkusativ Plural: keine Lehrkräfte."
+    },
+    {
+     "t": "fix",
+     "w": "Alle Kindern sollten eine gute Bildung bekommen.",
+     "a": "Alle Kinder sollten eine gute Bildung bekommen."
+    },
+    {
+     "t": "gap",
+     "q": "Viele ___ und ___ fordern mehr Lehrkräfte.",
+     "h": "(die Schülerin, der Schüler, Plural)",
+     "a": [
+      "Schülerinnen",
+      "Schüler"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ der ___ sind wichtig.",
+     "h": "(der Wunsch, der Jugendliche, Plural)",
+     "a": [
+      "Wünsche",
+      "Jugendlichen"
+     ],
+     "r": "Genitiv Plural nach „der“: der Jugendlichen (Adjektiv-Nomen)."
+    },
+    {
+     "t": "order",
+     "a": "Es gibt viele Länder mit überfüllten Klassen.",
+     "extra": [
+      "Ländern"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "In vielen Ländern fehlen Lehrkräfte.",
+     "extra": [
+      "Länder"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Alle Schüler haben Zugriff auf das Internet.",
+     "extra": [
+      "Schülern"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Wir sprechen mit den Kindern.",
+     "extra": [
+      "Kinder"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Some countries have no schools.",
+     "a": "Manche Länder haben keine Schulen.",
+     "acc": [
+      "Einige Länder haben keine Schulen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The students talk to the teachers.",
+     "a": "Die Schüler sprechen mit den Lehrern.",
+     "acc": [
+      "Die Schüler sprechen mit den Lehrkräften."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Tourists share their holiday photos.",
+     "a": "Touristen teilen ihre Urlaubsfotos.",
+     "acc": [
+      "Die Touristen teilen ihre Urlaubsfotos."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Alle Schüler haben Zugriff auf das Internet."
+    }
+   ]
+  }
+ ]
+}

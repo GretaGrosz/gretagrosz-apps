@@ -1,0 +1,102 @@
+/* idle motion for the gills accessories. Each tip's wrapper sets --i (0..3, top → bottom) and --s (0 left, 1 right),
+   used to stagger the eight tips so they never move in lockstep. Tip-local (0,0) is the anchor of each moving part. */
+
+/* bows wiggle like scrunchies on a bouncy kid */
+.axo .axo-acc-gillbows .bow {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-gillbows-wiggle 2.8s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.45s + var(--s, 0) * -1.3s);
+}
+
+@keyframes acc-gillbows-wiggle {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-10deg) scale(1.04, 0.96); }
+  40% { transform: rotate(6deg); }
+  55% { transform: rotate(-3deg); }
+  70% { transform: none; }
+}
+
+/* blossoms turn and breathe; now and then a petal lets go and drifts down */
+.axo .axo-acc-blossoms .bloom {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-blossoms-breathe 6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -1.1s + var(--s, 0) * -2.6s);
+}
+
+@keyframes acc-blossoms-breathe {
+  0%, 100% { transform: rotate(-8deg) scale(0.96); }
+  50% { transform: rotate(10deg) scale(1.06); }
+}
+
+.axo .axo-acc-blossoms .petal {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  opacity: 0;
+  animation: acc-blossoms-drift 9s ease-in infinite;
+  animation-delay: calc(var(--i, 0) * -2.3s + var(--s, 0) * -4.1s);
+}
+
+@keyframes acc-blossoms-drift {
+  0%, 72% { transform: none; opacity: 0; }
+  75% { transform: translate(1px, 1px) rotate(10deg); opacity: 1; }
+  86% { transform: translate(-4px, 9px) rotate(-40deg); opacity: 1; }
+  100% { transform: translate(3px, 20px) rotate(60deg); opacity: 0; }
+}
+
+/* fairy lights dangle and twinkle out of sync */
+.axo .axo-acc-fairylights .swing {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-fairylights-swing calc(2.6s + var(--i, 0) * 0.3s) ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.5s + var(--s, 0) * -1.4s);
+}
+
+@keyframes acc-fairylights-swing {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+}
+
+.axo .axo-acc-fairylights .lit {
+  animation: acc-fairylights-twinkle calc(1.7s + var(--i, 0) * 0.37s + var(--s, 0) * 0.55s) ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.7s + var(--s, 0) * -1.15s);
+}
+
+.axo .axo-acc-fairylights .halo {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: acc-fairylights-glow calc(1.7s + var(--i, 0) * 0.37s + var(--s, 0) * 0.55s) ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.7s + var(--s, 0) * -1.15s);
+}
+
+@keyframes acc-fairylights-twinkle {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.15; }
+  55% { opacity: 0.25; }
+}
+
+@keyframes acc-fairylights-glow {
+  0%, 100% { opacity: 1; transform: scale(1.08); }
+  50% { opacity: 0.25; transform: scale(0.7); }
+}
+
+.axo[data-axo-paused] .axo-acc-gillbows .bow,
+.axo[data-axo-paused] .axo-acc-blossoms .bloom,
+.axo[data-axo-paused] .axo-acc-blossoms .petal,
+.axo[data-axo-paused] .axo-acc-fairylights .swing,
+.axo[data-axo-paused] .axo-acc-fairylights .lit,
+.axo[data-axo-paused] .axo-acc-fairylights .halo {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc-gillbows .bow,
+  .axo .axo-acc-blossoms .bloom,
+  .axo .axo-acc-blossoms .petal,
+  .axo .axo-acc-fairylights .swing,
+  .axo .axo-acc-fairylights .lit,
+  .axo .axo-acc-fairylights .halo {
+    animation: none;
+  }
+}

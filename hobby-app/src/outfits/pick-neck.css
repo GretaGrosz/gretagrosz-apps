@@ -1,0 +1,148 @@
+/* idle motion for the store-only neck accessories */
+
+/* pond pearls: the shell pendant swings, pearls twinkle one after another, a glint */
+.axo .axo-acc-pondpearls .pp-swing {
+  transform-box: view-box;
+  transform-origin: 104.5px 117.6px;
+  animation: acc-pondpearls-swing 3.6s ease-in-out infinite;
+}
+.axo .axo-acc-pondpearls .pp-twinkle {
+  animation: acc-pondpearls-twinkle 3s ease-in-out infinite;
+}
+.axo .axo-acc-pondpearls .pp-glint {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-pondpearls-glint 3.6s ease-in-out infinite;
+}
+
+@keyframes acc-pondpearls-swing {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+@keyframes acc-pondpearls-twinkle {
+  0%, 70%, 100% { opacity: 0.55; }
+  80% { opacity: 1; }
+}
+@keyframes acc-pondpearls-glint {
+  0%, 60%, 100% { transform: scale(0.2) rotate(0); opacity: 0; }
+  70% { transform: scale(1.1) rotate(45deg); opacity: 1; }
+  82% { transform: scale(0.3) rotate(90deg); opacity: 0; }
+}
+
+/* instant cam: flash! then a tiny photo prints out of the bottom and fades away */
+.axo .axo-acc-instantcam .ic-flash {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-instantcam-flash 5s ease-out infinite;
+}
+.axo .axo-acc-instantcam .ic-photo {
+  transform-box: view-box;
+  animation: acc-instantcam-print 5s ease-in-out infinite;
+}
+
+@keyframes acc-instantcam-flash {
+  0%, 20%, 100% { transform: scale(0.2); opacity: 0; }
+  23% { transform: scale(1.15); opacity: 1; }
+  32% { transform: scale(0.6); opacity: 0; }
+}
+@keyframes acc-instantcam-print {
+  0%, 28% { transform: translateY(0); opacity: 1; }
+  48%, 82% { transform: translateY(13px); opacity: 1; }
+  92% { transform: translateY(15px); opacity: 0; }
+  93%, 100% { transform: translateY(0); opacity: 0; }
+}
+
+/* cozy knit: the end sways, its fringe wiggles */
+.axo .axo-acc-cozyknit .ck-end {
+  transform-box: view-box;
+  transform-origin: 116px 111px;
+  animation: acc-cozyknit-sway 4s ease-in-out infinite;
+}
+.axo .axo-acc-cozyknit .ck-fringe {
+  transform-box: view-box;
+  transform-origin: 121px 148px;
+  animation: acc-cozyknit-fringe 4s ease-in-out infinite;
+}
+
+@keyframes acc-cozyknit-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes acc-cozyknit-fringe {
+  0%, 100% { transform: skewX(6deg); }
+  50% { transform: skewX(-6deg); }
+}
+
+/* fishy bow tie: the tail flaps, the eye blinks, bubbles drift up from its mouth */
+.axo .axo-acc-fishybowtie .fb-tail {
+  transform-box: view-box;
+  transform-origin: 106.5px 113.5px;
+  animation: acc-fishybowtie-flap 1.6s ease-in-out infinite;
+}
+.axo .axo-acc-fishybowtie .fb-eye {
+  transform-box: view-box;
+  transform-origin: 88.4px 111.6px;
+  animation: acc-fishybowtie-blink 4.4s ease-in-out infinite;
+}
+.axo .axo-acc-fishybowtie .fb-bub {
+  animation: acc-fishybowtie-bubble 3.4s ease-in infinite;
+}
+.axo .axo-acc-fishybowtie .fb-bub-2 { animation-delay: -1.5s; animation-duration: 2.8s; }
+
+@keyframes acc-fishybowtie-flap {
+  0%, 100% { transform: scaleX(1) skewY(0); }
+  25% { transform: scaleX(0.86) skewY(-4deg); }
+  75% { transform: scaleX(0.94) skewY(4deg); }
+}
+@keyframes acc-fishybowtie-blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  94% { transform: scaleY(0.1); }
+}
+@keyframes acc-fishybowtie-bubble {
+  0% { transform: translate(0, 2px); opacity: 0; }
+  15% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translate(-4px, -14px); opacity: 0; }
+}
+
+/* messy bib: the noodle dangles */
+.axo .axo-acc-messybib .mb-noodle {
+  transform-box: view-box;
+  transform-origin: 108px 127px;
+  animation: acc-messybib-dangle 2.8s ease-in-out infinite;
+}
+
+@keyframes acc-messybib-dangle {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(7deg); }
+}
+
+.axo[data-axo-paused] .axo-acc-pondpearls .pp-swing,
+.axo[data-axo-paused] .axo-acc-pondpearls .pp-twinkle,
+.axo[data-axo-paused] .axo-acc-pondpearls .pp-glint,
+.axo[data-axo-paused] .axo-acc-instantcam .ic-flash,
+.axo[data-axo-paused] .axo-acc-instantcam .ic-photo,
+.axo[data-axo-paused] .axo-acc-cozyknit .ck-end,
+.axo[data-axo-paused] .axo-acc-cozyknit .ck-fringe,
+.axo[data-axo-paused] .axo-acc-fishybowtie .fb-tail,
+.axo[data-axo-paused] .axo-acc-fishybowtie .fb-eye,
+.axo[data-axo-paused] .axo-acc-fishybowtie .fb-bub,
+.axo[data-axo-paused] .axo-acc-messybib .mb-noodle {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc-pondpearls .pp-swing,
+  .axo .axo-acc-pondpearls .pp-twinkle,
+  .axo .axo-acc-pondpearls .pp-glint,
+  .axo .axo-acc-instantcam .ic-flash,
+  .axo .axo-acc-instantcam .ic-photo,
+  .axo .axo-acc-cozyknit .ck-end,
+  .axo .axo-acc-cozyknit .ck-fringe,
+  .axo .axo-acc-fishybowtie .fb-tail,
+  .axo .axo-acc-fishybowtie .fb-eye,
+  .axo .axo-acc-fishybowtie .fb-bub,
+  .axo .axo-acc-messybib .mb-noodle {
+    animation: none;
+  }
+}

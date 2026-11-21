@@ -1,0 +1,890 @@
+{
+ "id": "u03",
+ "n": 3,
+ "phase": 1,
+ "level": "A2",
+ "title": "Die vier Fälle",
+ "weak": true,
+ "tips": {
+  "de": "Jedes Nomen steht in einem Fall. Nominativ: Subjekt (Wer/Was?). Akkusativ: direktes Objekt (Wen/Was?). Dativ: indirektes Objekt (Wem?). Genitiv: Besitz (Wessen?). Den Fall erkennt man am Artikel. Manche Verben verlangen immer den Dativ: helfen, danken, gefallen, gehören, antworten, jemandem etwas geben/zeigen/schicken, jemandem Probleme machen.",
+  "en": "Every noun is in a case. Nominative = subject. Accusative = direct object. Dative = indirect object ('to whom?'). Genitive = possession ('of'). You see the case on the article. Some verbs always take the dative: helfen, danken, gefallen, gehören, antworten.",
+  "contrast": "English only shows case in pronouns: he/him, she/her, they/them. German shows it on every article: der → den → dem → des. Word order can't tell you the role in German. The case does. 'Den Schülern helfen die Lehrer' still means the teachers help the students.",
+  "table": [
+   [
+    "",
+    "maskulin",
+    "feminin",
+    "neutral",
+    "Plural"
+   ],
+   [
+    "Nom.",
+    "der / ein",
+    "die / eine",
+    "das / ein",
+    "die / keine"
+   ],
+   [
+    "Akk.",
+    "den / einen",
+    "die / eine",
+    "das / ein",
+    "die / keine"
+   ],
+   [
+    "Dat.",
+    "dem / einem",
+    "der / einer",
+    "dem / einem",
+    "den / keinen (+n)"
+   ],
+   [
+    "Gen.",
+    "des / eines (+s)",
+    "der / einer",
+    "des / eines (+s)",
+    "der / keiner"
+   ]
+  ],
+  "examples": [
+   "Der Lehrer (Nom.) gibt dem Schüler (Dat.) den Text (Akk.).",
+   "Die Meinung des Staates (Gen.) ist klar.",
+   "Wenn sie nicht den Unschuldigen (Dat.) Probleme machen …",
+   "Meiner Meinung (Dat.) nach …",
+   "Ich helfe meiner Freundin (Dat.)."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u03l1",
+   "title": "Nominativ & Akkusativ",
+   "s": "art.A",
+   "gen": {
+    "articleCase": 2,
+    "nounPhraseCase": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ Staat muss die Bildung fördern.",
+     "o": [
+      "Der",
+      "Den",
+      "Dem"
+     ],
+     "a": "Der",
+     "y": [
+      "Nominativ: Subjekt (Wer muss fördern?)",
+      "Akkusativ: Objekt (Wen?)",
+      "Dativ (Wem?)"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir kritisieren ___ Staat.",
+     "o": [
+      "den",
+      "der",
+      "dem"
+     ],
+     "a": "den",
+     "y": [
+      "Akkusativ: Wen kritisieren wir?",
+      "Nominativ: Subjekt",
+      "Dativ: Wem?"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich lese ___ Artikel über das Handyverbot.",
+     "o": [
+      "den",
+      "der",
+      "dem"
+     ],
+     "a": "den",
+     "y": [
+      "Akkusativ maskulin: den",
+      "Nominativ maskulin: der",
+      "Dativ maskulin: dem"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Schüler organisieren ___ Protest.",
+     "o": [
+      "einen",
+      "ein",
+      "einem"
+     ],
+     "a": "einen",
+     "y": [
+      "Akkusativ maskulin: einen",
+      "Nominativ maskulin: ein",
+      "Dativ: einem"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "___ Massentourismus zerstört die Natur.",
+     "o": [
+      "Der",
+      "Den",
+      "Des"
+     ],
+     "a": "Der"
+    },
+    {
+     "t": "mc",
+     "q": "Der Massentourismus zerstört ___ Natur.",
+     "o": [
+      "die",
+      "der",
+      "den"
+     ],
+     "a": "die",
+     "r": "Akkusativ feminin = die (wie Nominativ)."
+    },
+    {
+     "t": "gap",
+     "q": "Viele Jugendliche haben ___ eigenen Computer.",
+     "h": "(kein-, der Computer)",
+     "a": "keinen"
+    },
+    {
+     "t": "gap",
+     "q": "Die Zeitung veröffentlicht ___ Leserbrief.",
+     "h": "(mein-, der Leserbrief)",
+     "a": "meinen"
+    },
+    {
+     "t": "gap",
+     "q": "___ Bürgermeister plant einen neuen Radweg.",
+     "h": "(der)",
+     "a": "Der"
+    },
+    {
+     "t": "gap",
+     "q": "Ich verstehe ___ Argument nicht.",
+     "h": "(dies-, das Argument)",
+     "a": "dieses"
+    },
+    {
+     "t": "gap",
+     "q": "Wer hat ___ Text geschrieben?",
+     "h": "(der Text)",
+     "a": "den"
+    },
+    {
+     "t": "match",
+     "q": "Welche Frage passt zu welchem Fall?",
+     "pairs": [
+      [
+       "Wer?",
+       "Nominativ"
+      ],
+      [
+       "Wen?",
+       "Akkusativ"
+      ],
+      [
+       "Wem?",
+       "Dativ"
+      ],
+      [
+       "Wessen?",
+       "Genitiv"
+      ]
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe der Artikel gelesen.",
+     "a": "Ich habe den Artikel gelesen.",
+     "r": "Akkusativ maskulin: den."
+    },
+    {
+     "t": "fix",
+     "w": "Den Schülern, die protestieren, können das auch.",
+     "a": "Die Schüler, die protestieren, können das auch.",
+     "r": "Subjekt → Nominativ: Die Schüler."
+    },
+    {
+     "t": "fix",
+     "w": "Wir brauchen ein neuer Plan.",
+     "a": "Wir brauchen einen neuen Plan.",
+     "r": "Akkusativ maskulin: einen neuen Plan."
+    },
+    {
+     "t": "fix",
+     "w": "Der Lehrer kritisiert der Schüler.",
+     "a": "Der Lehrer kritisiert den Schüler."
+    },
+    {
+     "t": "tr",
+     "en": "The state supports the project.",
+     "a": "Der Staat unterstützt das Projekt."
+    },
+    {
+     "t": "tr",
+     "en": "We need a new plan.",
+     "a": "Wir brauchen einen neuen Plan."
+    },
+    {
+     "t": "tr",
+     "en": "I read the article yesterday.",
+     "a": "Ich habe den Artikel gestern gelesen.",
+     "acc": [
+      "Ich las den Artikel gestern.",
+      "Gestern habe ich den Artikel gelesen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Staat muss den Schülern helfen."
+    }
+   ]
+  },
+  {
+   "id": "u03l2",
+   "title": "Dativ & Dativ-Verben",
+   "s": "art.D",
+   "gen": {
+    "articleCase": 2,
+    "nounPhraseCase": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wenn sie nicht ___ Unschuldigen Probleme machen …",
+     "o": [
+      "den",
+      "für die",
+      "die"
+     ],
+     "a": "den",
+     "y": [
+      "jemandem Probleme machen → Dativ Plural",
+      "Probleme machen für + Akkusativ",
+      "Akkusativ Plural"
+     ],
+     "r": "jemandem (Dativ) Probleme machen – ohne „für“."
+    },
+    {
+     "t": "mc",
+     "q": "Ich helfe ___ Freundin bei der Hausübung.",
+     "o": [
+      "meiner",
+      "meine",
+      "meinen"
+     ],
+     "a": "meiner",
+     "y": [
+      "„helfen“ + Dativ (wem?)",
+      "„helfen“ + Akkusativ (wen?)",
+      "Genitiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das Handyverbot gefällt ___ Schülern nicht.",
+     "o": [
+      "den",
+      "die",
+      "der"
+     ],
+     "a": "den",
+     "y": [
+      "„gefallen“ + Dativ (wem gefällt es?)",
+      "Akkusativ Plural",
+      "Nominativ Plural"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich danke ___ Lehrerin für die Hilfe.",
+     "o": [
+      "der",
+      "die",
+      "den"
+     ],
+     "a": "der",
+     "y": [
+      "„danken“ + Dativ",
+      "„danken“ + Akkusativ",
+      "Nominativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Der Computer gehört ___ Schule.",
+     "o": [
+      "der",
+      "die",
+      "den"
+     ],
+     "a": "der",
+     "y": [
+      "„gehören“ + Dativ",
+      "Akkusativ feminin",
+      "Nominativ feminin"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Bitte antworten Sie ___ Redaktion.",
+     "o": [
+      "der",
+      "die",
+      "dem"
+     ],
+     "a": "der",
+     "y": [
+      "„antworten“ + Dativ (wem?)",
+      "Akkusativ",
+      "Dativ maskulin"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin gibt ___ Schüler eine gute Note.",
+     "h": "(der Schüler, Singular)",
+     "a": "dem",
+     "r": "Wem gibt sie die Note? → Dativ: dem Schüler."
+    },
+    {
+     "t": "gap",
+     "q": "Ich schicke ___ Zeitung einen Leserbrief.",
+     "h": "(die Zeitung)",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Die Proteste schaden ___ Image der Stadt.",
+     "h": "(das Image)",
+     "a": "dem",
+     "r": "„schaden“ + Dativ."
+    },
+    {
+     "t": "gap",
+     "q": "Wir müssen ___ Kindern zuhören.",
+     "h": "(die Kinder)",
+     "a": "den",
+     "r": "„zuhören“ + Dativ Plural: den Kindern."
+    },
+    {
+     "t": "gap",
+     "q": "Es fällt ___ Jugendlichen schwer, das Handy wegzulegen.",
+     "h": "(viele Jugendliche)",
+     "a": "vielen",
+     "r": "„jemandem schwerfallen“ + Dativ Plural."
+    },
+    {
+     "t": "gap",
+     "q": "Social Media macht ___ Eltern Sorgen.",
+     "h": "(viele Eltern)",
+     "a": "vielen",
+     "r": "jemandem Sorgen machen → Dativ."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn sie nicht für die Unschuldige Probleme machen …",
+     "a": "Wenn sie nicht den Unschuldigen Probleme machen …",
+     "r": "jemandem Probleme machen → Dativ Plural: den Unschuldigen."
+    },
+    {
+     "t": "fix",
+     "w": "Ich helfe meine Freundin.",
+     "a": "Ich helfe meiner Freundin.",
+     "r": "helfen + Dativ."
+    },
+    {
+     "t": "fix",
+     "w": "Das Konzept gefällt die Schüler.",
+     "a": "Das Konzept gefällt den Schülern.",
+     "r": "gefallen + Dativ Plural: den Schülern."
+    },
+    {
+     "t": "fix",
+     "w": "Wir danken unsere Lehrerin.",
+     "a": "Wir danken unserer Lehrerin."
+    },
+    {
+     "t": "tr",
+     "en": "The rule causes problems for the students.",
+     "a": "Die Regel macht den Schülern Probleme.",
+     "acc": [
+      "Die Regel bereitet den Schülern Probleme."
+     ],
+     "r": "jemandem Probleme machen – kein „für“."
+    },
+    {
+     "t": "tr",
+     "en": "I like the idea.",
+     "a": "Die Idee gefällt mir.",
+     "r": "English 'I like it' = German 'Es gefällt mir' (Dativ)."
+    },
+    {
+     "t": "tr",
+     "en": "We help the teacher.",
+     "a": "Wir helfen dem Lehrer.",
+     "acc": [
+      "Wir helfen der Lehrerin."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Das Handyverbot gefällt den Schülern nicht."
+    }
+   ]
+  },
+  {
+   "id": "u03l3",
+   "title": "Genitiv",
+   "s": "art.G",
+   "gen": {
+    "articleCase": 1,
+    "nounPhraseCase": 2
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "in der Nähe ___ Amtssitzes",
+     "h": "(der Amtssitz)",
+     "a": "des",
+     "y": [
+      "Genitiv maskulin: des + Nomen mit -s",
+      "Dativ maskulin",
+      "Akkusativ maskulin"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "der Sitz ___ Premierministers",
+     "h": "(der Premierminister)",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "die verschiedenen Aspekte ___ Themas",
+     "h": "(dies-, das Thema)",
+     "a": "dieses"
+    },
+    {
+     "t": "gap",
+     "q": "aus Sicht ___ Wirtschaft",
+     "h": "(die Wirtschaft)",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "die Meinung ___ Jugendlichen",
+     "h": "(die Jugendlichen, Plural)",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "die Folgen des ___",
+     "h": "(der Klimawandel)",
+     "a": "Klimawandels",
+     "r": "Genitiv maskulin: Nomen + -s."
+    },
+    {
+     "t": "gap",
+     "q": "die Bedeutung des ___",
+     "h": "(das Internet)",
+     "a": "Internets"
+    },
+    {
+     "t": "gap",
+     "q": "die Rolle des ___",
+     "h": "(der Staat)",
+     "a": "Staates",
+     "acc": [
+      "Staats"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "die Probleme des ___",
+     "h": "(der Tourismus)",
+     "a": "Tourismus",
+     "r": "Nomen auf -us: kein zusätzliches -s (des Tourismus)."
+    },
+    {
+     "t": "mc",
+     "q": "Manche ___ reichsten Menschen haben keinen Abschluss.",
+     "o": [
+      "der",
+      "unsere",
+      "die"
+     ],
+     "a": "der",
+     "y": [
+      "„manche von …“ → Genitiv Plural: der",
+      "Nominativ Plural",
+      "Possessivartikel im Nominativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wessen Idee war das?",
+     "o": [
+      "Es war die Idee der Lehrerin.",
+      "Es war die Idee die Lehrerin.",
+      "Es war die Idee von die Lehrerin."
+     ],
+     "a": "Es war die Idee der Lehrerin."
+    },
+    {
+     "t": "fix",
+     "w": "Manche unsere reichsten Menschen haben keine Matura.",
+     "a": "Manche der reichsten Menschen haben keine Matura.",
+     "r": "„einige/manche von“ = Genitiv: der reichsten Menschen."
+    },
+    {
+     "t": "fix",
+     "w": "Die Meinung des Staat ist klar.",
+     "a": "Die Meinung des Staates ist klar.",
+     "r": "Genitiv maskulin: des Staates (Nomen + -es/-s)."
+    },
+    {
+     "t": "fix",
+     "w": "Ich spreche über die Aspekte diesem Thema.",
+     "a": "Ich spreche über die Aspekte dieses Themas.",
+     "r": "Genitiv neutral: dieses Themas."
+    },
+    {
+     "t": "fix",
+     "w": "Das ist eine Goldmine in Sicht der Wirtschaft.",
+     "a": "Das ist eine Goldmine aus Sicht der Wirtschaft.",
+     "r": "aus Sicht + Genitiv."
+    },
+    {
+     "t": "tr",
+     "en": "the role of the state",
+     "a": "die Rolle des Staates",
+     "acc": [
+      "die Rolle des Staats"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "the opinion of the students",
+     "a": "die Meinung der Schüler",
+     "acc": [
+      "die Meinung der Schülerinnen und Schüler"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "from the point of view of the economy",
+     "a": "aus Sicht der Wirtschaft"
+    },
+    {
+     "t": "listen",
+     "a": "Aus Sicht der Wirtschaft ist der Tourismus eine Goldmine."
+    }
+   ]
+  },
+  {
+   "id": "u03l4",
+   "title": "Fälle im ganzen Satz",
+   "s": "art",
+   "gen": {
+    "articleCase": 2,
+    "nounPhraseCase": 2
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "___ Lehrer gibt ___ Schülerin ___ Text zurück.",
+     "h": "(der Lehrer, die Schülerin, der Text)",
+     "a": [
+      "Der",
+      "der",
+      "den"
+     ],
+     "r": "Wer? Der Lehrer. Wem? der Schülerin. Was? den Text."
+    },
+    {
+     "t": "gap",
+     "q": "___ Regierung zeigt ___ Bürgern ___ neuen Plan.",
+     "h": "(die Regierung, die Bürger, der Plan)",
+     "a": [
+      "Die",
+      "den",
+      "den"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich erkläre ___ Freund ___ Problem.",
+     "h": "(mein- Freund, das Problem)",
+     "a": [
+      "meinem",
+      "das"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Zeitung erklärt ___ Lesern die Folgen ___ Streiks.",
+     "h": "(die Leser, der Streik)",
+     "a": [
+      "den",
+      "des"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wir schicken ___ Bürgermeister ___ Brief.",
+     "h": "(der Bürgermeister, ein Brief)",
+     "a": [
+      "dem",
+      "einen"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wem gibt der Staat Geld?",
+     "o": [
+      "den Familien",
+      "die Familien",
+      "der Familien"
+     ],
+     "a": "den Familien",
+     "y": [
+      "Wem? → Dativ Plural",
+      "Wen? → Akkusativ",
+      "Wessen? → Genitiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wen unterstützt die Gemeinde?",
+     "o": [
+      "die Vereine",
+      "den Vereinen",
+      "der Vereine"
+     ],
+     "a": "die Vereine"
+    },
+    {
+     "t": "fix",
+     "w": "Der Staat gibt die Familien mehr Geld.",
+     "a": "Der Staat gibt den Familien mehr Geld.",
+     "r": "Wem gibt der Staat Geld? → Dativ Plural."
+    },
+    {
+     "t": "fix",
+     "w": "Ich zeige meine Freundin den Artikel.",
+     "a": "Ich zeige meiner Freundin den Artikel."
+    },
+    {
+     "t": "fix",
+     "w": "Die Lehrerin erklärt den Schüler die Regel.",
+     "a": "Die Lehrerin erklärt den Schülern die Regel."
+    },
+    {
+     "t": "order",
+     "a": "Der Lehrer gibt den Schülern die Texte zurück.",
+     "extra": [
+      "dem",
+      "die"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Die Regierung schenkt den Jugendlichen ein Klimaticket.",
+     "extra": [
+      "die"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The teacher gives the students the texts.",
+     "a": "Der Lehrer gibt den Schülern die Texte.",
+     "acc": [
+      "Die Lehrerin gibt den Schülern die Texte."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I show my friend the article.",
+     "a": "Ich zeige meinem Freund den Artikel.",
+     "acc": [
+      "Ich zeige meiner Freundin den Artikel."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The government gives the families more money.",
+     "a": "Die Regierung gibt den Familien mehr Geld."
+    },
+    {
+     "t": "listen",
+     "a": "Die Lehrerin erklärt den Schülern die Regel."
+    }
+   ]
+  },
+  {
+   "id": "u03l5",
+   "title": "Feste Wendungen mit Fall",
+   "s": "kollok.fall",
+   "gen": {
+    "nounPhraseCase": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ Meinung nach ist das Handyverbot sinnvoll.",
+     "o": [
+      "Meiner",
+      "Meine",
+      "Mein"
+     ],
+     "a": "Meiner",
+     "y": [
+      "„nach“ + Dativ → meiner Meinung",
+      "Nominativ: meine Meinung",
+      "Akkusativ"
+     ],
+     "r": "Meiner Meinung nach = nach meiner Meinung (Dativ)."
+    },
+    {
+     "t": "mc",
+     "q": "___ anderen Seite gibt es auch Nachteile.",
+     "o": [
+      "Auf der",
+      "An der",
+      "Auf die"
+     ],
+     "a": "Auf der",
+     "r": "Auf der anderen Seite (Dativ, feste Wendung)."
+    },
+    {
+     "t": "mc",
+     "q": "Ich möchte ___ Folgenden Stellung nehmen.",
+     "o": [
+      "im",
+      "in",
+      "in dem"
+     ],
+     "a": "im",
+     "r": "im Folgenden (= in dem Folgenden), großgeschrieben."
+    },
+    {
+     "t": "mc",
+     "q": "Es ist leicht, anderen ___ zuzuschieben.",
+     "o": [
+      "die Schuld",
+      "der Schuld",
+      "den Schuld"
+     ],
+     "a": "die Schuld",
+     "r": "jemandem (Dativ) die Schuld (Akkusativ) zuschieben."
+    },
+    {
+     "t": "mc",
+     "q": "Man kann fast alles ___ Internet lernen.",
+     "o": [
+      "im",
+      "in",
+      "auf"
+     ],
+     "a": "im",
+     "r": "im Internet (in dem Internet)."
+    },
+    {
+     "t": "gap",
+     "q": "___ Ansicht nach sollte man weniger fliegen.",
+     "h": "(mein-)",
+     "a": "Meiner"
+    },
+    {
+     "t": "gap",
+     "q": "Wir sollten ___ Umwelt zuliebe weniger fliegen.",
+     "h": "(die Umwelt)",
+     "a": "der",
+     "r": "jemandem zuliebe (Dativ)."
+    },
+    {
+     "t": "gap",
+     "q": "___ Ende des Textes formuliere ich einen Appell.",
+     "h": "(an + das Ende)",
+     "a": "Am"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Menschen geben ___ Politik die Schuld.",
+     "h": "(die Politik)",
+     "a": "der",
+     "r": "jemandem (Dativ) die Schuld geben."
+    },
+    {
+     "t": "fix",
+     "w": "Meine Meinung nach ist das falsch.",
+     "a": "Meiner Meinung nach ist das falsch.",
+     "r": "nach + Dativ: Meiner Meinung nach."
+    },
+    {
+     "t": "fix",
+     "w": "An der anderen Seite gibt es Nachteile.",
+     "a": "Auf der anderen Seite gibt es Nachteile.",
+     "r": "Die Wendung heißt „Auf der anderen Seite“."
+    },
+    {
+     "t": "fix",
+     "w": "Auf einer Seite können Proteste Änderungen bewirken.",
+     "a": "Auf der einen Seite können Proteste Änderungen bewirken."
+    },
+    {
+     "t": "fix",
+     "w": "Man kann alles in Internet finden.",
+     "a": "Man kann alles im Internet finden."
+    },
+    {
+     "t": "fix",
+     "w": "Es ist einfacher, der Schuld an anderen zu geben.",
+     "a": "Es ist einfacher, anderen die Schuld zu geben.",
+     "r": "jemandem (Dativ) die Schuld (Akkusativ) geben."
+    },
+    {
+     "t": "tr",
+     "en": "In my opinion, this is right.",
+     "a": "Meiner Meinung nach ist das richtig.",
+     "acc": [
+      "Meiner Meinung nach ist das korrekt."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "On the other hand, flying is cheap.",
+     "a": "Auf der anderen Seite ist Fliegen billig.",
+     "acc": [
+      "Auf der anderen Seite ist Fliegen günstig.",
+      "Auf der anderen Seite ist das Fliegen billig.",
+      "Auf der anderen Seite ist das Fliegen günstig."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "In the following, I will take a position on this topic.",
+     "a": "Im Folgenden nehme ich zu diesem Thema Stellung.",
+     "acc": [
+      "Im Folgenden werde ich zu diesem Thema Stellung nehmen.",
+      "Im Folgenden möchte ich zu diesem Thema Stellung nehmen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Meiner Meinung nach ist das Handyverbot sinnvoll."
+    },
+    {
+     "t": "listen",
+     "a": "Auf der anderen Seite gibt es auch Nachteile."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,539 @@
+{
+ "id": "u16",
+ "n": 16,
+ "phase": 1,
+ "level": "B1",
+ "title": "Verben mit Präpositionen, da-/wo-Wörter",
+ "weak": true,
+ "tips": {
+  "de": "Viele Verben, Adjektive und Nomen haben eine feste Präposition mit festem Fall: eingehen auf + Akk., teilnehmen an + Dat., sich interessieren für + Akk., abhängen von + Dat., Stellung nehmen zu + Dat. Lerne sie als Block. Bei Sachen ersetzt man Präposition + Nomen durch ein da-Wort (darauf, daran, damit …) und fragt mit einem wo-Wort (worauf? woran? womit?). Beginnt die Präposition mit einem Vokal, kommt ein -r- dazu: darüber, worüber. Bei Personen: Präposition + Pronomen (an ihn, mit ihr).",
+  "en": "Many verbs come with a fixed preposition and case. Learn them as one block. For things, use da-/wo-compounds (darauf, worauf). Add -r- before a vowel: darüber. For people, use preposition + pronoun.",
+  "contrast": "The German preposition is often different from English: 'deal with' = eingehen auf, 'take part in' = teilnehmen an, 'depend on' = abhängen von, 'be interested in' = sich interessieren für. Don't translate the preposition. Learn the German block. 'What are you thinking about?' = 'Woran denkst du?'",
+  "examples": [
+   "Im Text gehe ich auf die wichtigsten Aspekte ein.",
+   "Viele Schüler nehmen an der Demonstration teil.",
+   "Das hängt von der Situation ab.",
+   "Ich nehme zu diesem Thema Stellung.",
+   "Worüber diskutiert ihr? – Wir diskutieren darüber, ob …"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u16l1",
+   "title": "Die wichtigsten Verb-Präpositionen",
+   "s": "vprep",
+   "gen": {
+    "verbPrep": 3,
+    "verbPrepMatch": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "In meinem Text gehe ich ___ die wichtigsten Aspekte ein.",
+     "o": [
+      "auf",
+      "an",
+      "über"
+     ],
+     "a": "auf",
+     "y": [
+      "eingehen auf + Akkusativ",
+      "eingehen an + Dativ",
+      "eingehen über + Akkusativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich gehe auf ___ wichtigsten Aspekte ein.",
+     "o": [
+      "die",
+      "den",
+      "der"
+     ],
+     "a": "die",
+     "y": [
+      "eingehen auf + Akkusativ Plural → die",
+      "auf + Dativ Plural → den",
+      "Genitiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Viele Schüler nehmen ___ Demonstration teil.",
+     "o": [
+      "an der",
+      "an die",
+      "bei der"
+     ],
+     "a": "an der",
+     "y": [
+      "teilnehmen an + Dativ",
+      "teilnehmen an + Akkusativ",
+      "teilnehmen bei"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich möchte ___ diesem Thema Stellung nehmen.",
+     "o": [
+      "zu",
+      "über",
+      "für"
+     ],
+     "a": "zu"
+    },
+    {
+     "t": "mc",
+     "q": "Das hängt ___ der Situation ab.",
+     "o": [
+      "von",
+      "an",
+      "auf"
+     ],
+     "a": "von"
+    },
+    {
+     "t": "mc",
+     "q": "Sie interessiert sich ___ Politik.",
+     "o": [
+      "für",
+      "an",
+      "in"
+     ],
+     "a": "für",
+     "r": "sich interessieren für (English: interested IN)."
+    },
+    {
+     "t": "gap",
+     "q": "Wir müssen uns ___ die Regeln halten.",
+     "a": "an"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Städte leiden ___ dem Massentourismus.",
+     "a": "unter"
+    },
+    {
+     "t": "gap",
+     "q": "Die Wirtschaft profitiert ___ Tourismus.",
+     "h": "(von + dem)",
+     "a": "vom"
+    },
+    {
+     "t": "gap",
+     "q": "Jeder kann ___ Klimaschutz beitragen.",
+     "h": "(zu + dem)",
+     "a": "zum"
+    },
+    {
+     "t": "gap",
+     "q": "Ich bereite mich ___ die Schularbeit vor.",
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Die Zeitung berichtet ___ den Streik.",
+     "a": "über"
+    },
+    {
+     "t": "gap",
+     "q": "Viele haben Angst ___ der Zukunft.",
+     "a": "vor"
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler setzen sich ___ den Klimaschutz ein.",
+     "a": "für"
+    },
+    {
+     "t": "fix",
+     "w": "Ich gehe auf den wichtigsten Aspekten ein.",
+     "a": "Ich gehe auf die wichtigsten Aspekte ein.",
+     "r": "eingehen auf + Akkusativ."
+    },
+    {
+     "t": "fix",
+     "w": "Ich interessiere mich in Politik.",
+     "a": "Ich interessiere mich für Politik."
+    },
+    {
+     "t": "fix",
+     "w": "Viele nehmen bei der Demonstration teil.",
+     "a": "Viele nehmen an der Demonstration teil."
+    },
+    {
+     "t": "fix",
+     "w": "Es hängt auf dem Wetter ab.",
+     "a": "Es hängt vom Wetter ab."
+    },
+    {
+     "t": "tr",
+     "en": "I will deal with the most important aspects.",
+     "a": "Ich gehe auf die wichtigsten Aspekte ein.",
+     "acc": [
+      "Ich werde auf die wichtigsten Aspekte eingehen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "It depends on the situation.",
+     "a": "Es hängt von der Situation ab.",
+     "acc": [
+      "Das hängt von der Situation ab."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Many students take part in the demonstration.",
+     "a": "Viele Schüler nehmen an der Demonstration teil."
+    },
+    {
+     "t": "listen",
+     "a": "In meinem Text gehe ich auf die wichtigsten Aspekte ein."
+    }
+   ]
+  },
+  {
+   "id": "u16l2",
+   "title": "Adjektive & Nomen mit Präposition",
+   "s": "vprep.adj",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Jeder ist ___ sein eigenes Leben verantwortlich.",
+     "o": [
+      "für",
+      "über",
+      "an"
+     ],
+     "a": "für"
+    },
+    {
+     "t": "mc",
+     "q": "Sie ist stolz ___ ihre Leistung.",
+     "o": [
+      "auf",
+      "über",
+      "von"
+     ],
+     "a": "auf"
+    },
+    {
+     "t": "mc",
+     "q": "Ich bin ___ dem Ergebnis zufrieden.",
+     "o": [
+      "mit",
+      "über",
+      "von"
+     ],
+     "a": "mit"
+    },
+    {
+     "t": "mc",
+     "q": "Viele Jugendliche haben Interesse ___ Politik.",
+     "o": [
+      "an",
+      "für",
+      "in"
+     ],
+     "a": "an",
+     "r": "Interesse an + Dativ (aber: sich interessieren für)."
+    },
+    {
+     "t": "mc",
+     "q": "Die Schüler haben Zugriff ___ das Internet.",
+     "o": [
+      "auf",
+      "zu",
+      "an"
+     ],
+     "a": "auf"
+    },
+    {
+     "t": "mc",
+     "q": "Die Regierung übt Kritik ___ den Plänen.",
+     "o": [
+      "an",
+      "über",
+      "gegen"
+     ],
+     "a": "an"
+    },
+    {
+     "t": "gap",
+     "q": "Wir sind abhängig ___ unseren Handys.",
+     "a": "von"
+    },
+    {
+     "t": "gap",
+     "q": "Die Jugendlichen sind ___ die Entscheidung enttäuscht.",
+     "a": "über",
+     "acc": [
+      "von"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt keine Lösung ___ dieses Problem.",
+     "a": "für"
+    },
+    {
+     "t": "gap",
+     "q": "Der Grund ___ die Proteste ist der Lehrermangel.",
+     "a": "für"
+    },
+    {
+     "t": "gap",
+     "q": "Sie hat Angst ___ der Schularbeit.",
+     "a": "vor"
+    },
+    {
+     "t": "fix",
+     "w": "Alle haben Zugreife auf das Internet.",
+     "a": "Alle haben Zugriff auf das Internet.",
+     "r": "das Nomen heißt „der Zugriff“ (auf + Akkusativ).",
+     "s": "rs.wort",
+     "c": "R"
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe Interesse für Politik.",
+     "a": "Ich habe Interesse an Politik."
+    },
+    {
+     "t": "fix",
+     "w": "Er ist verantwortlich über das Projekt.",
+     "a": "Er ist verantwortlich für das Projekt."
+    },
+    {
+     "t": "tr",
+     "en": "access to the internet",
+     "a": "Zugriff auf das Internet",
+     "acc": [
+      "Zugang zum Internet"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "She is proud of her result.",
+     "a": "Sie ist stolz auf ihr Ergebnis."
+    },
+    {
+     "t": "listen",
+     "a": "Jeder ist für sein eigenes Leben verantwortlich."
+    }
+   ]
+  },
+  {
+   "id": "u16l3",
+   "title": "da-Wörter & wo-Wörter",
+   "s": "dawo",
+   "gen": {
+    "daWo": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wir diskutieren über das Verbot. – Wir diskutieren ___.",
+     "o": [
+      "darüber",
+      "über es",
+      "daüber"
+     ],
+     "a": "darüber",
+     "y": [
+      "Sache → da(r) + Präposition; Vokal → -r-",
+      "Präposition + Pronomen (wie bei Personen)",
+      "da + Präposition ohne r"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich denke oft an meine Oma. – Ich denke oft ___.",
+     "o": [
+      "an sie",
+      "daran",
+      "woran"
+     ],
+     "a": "an sie",
+     "r": "Personen: Präposition + Pronomen."
+    },
+    {
+     "t": "mc",
+     "q": "___ interessierst du dich? – Für Musik.",
+     "o": [
+      "Wofür",
+      "Für was",
+      "Dafür"
+     ],
+     "a": "Wofür",
+     "r": "Frage nach einer Sache: wo(r) + Präposition. „Für was“ ist umgangssprachlich."
+    },
+    {
+     "t": "mc",
+     "q": "___ wartest du? – Auf den Bus.",
+     "o": [
+      "Worauf",
+      "Auf was",
+      "Darauf"
+     ],
+     "a": "Worauf"
+    },
+    {
+     "t": "mc",
+     "q": "Letztendlich kommt es ___ an, eine Lösung zu finden.",
+     "o": [
+      "darauf",
+      "daran",
+      "dafür"
+     ],
+     "a": "darauf"
+    },
+    {
+     "t": "mc",
+     "q": "Wir müssen ___ sorgen, dass alle Kinder lernen können.",
+     "o": [
+      "dafür",
+      "darauf",
+      "damit"
+     ],
+     "a": "dafür"
+    },
+    {
+     "t": "gap",
+     "q": "Ich freue mich ___, dich zu sehen.",
+     "h": "(da-Wort, sich freuen auf)",
+     "a": "darauf"
+    },
+    {
+     "t": "gap",
+     "q": "Es geht ___, wer die Verantwortung übernimmt.",
+     "h": "(es geht um)",
+     "a": "darum"
+    },
+    {
+     "t": "gap",
+     "q": "___ hängt das ab?",
+     "h": "(abhängen von)",
+     "a": "Wovon"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Experten warnen ___, dass das Klima kippt.",
+     "h": "(warnen vor)",
+     "a": "davor"
+    },
+    {
+     "t": "fix",
+     "w": "Für was interessierst du dich?",
+     "a": "Wofür interessierst du dich?"
+    },
+    {
+     "t": "fix",
+     "w": "Letztendlich kommt es darauf an eine Lösung zu finden.",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden.",
+     "s": "komma.inf",
+     "c": "B"
+    },
+    {
+     "t": "fix",
+     "w": "Wir diskutieren daüber.",
+     "a": "Wir diskutieren darüber."
+    },
+    {
+     "t": "tr",
+     "en": "What are you thinking about?",
+     "a": "Woran denkst du?"
+    },
+    {
+     "t": "tr",
+     "en": "It depends on that.",
+     "a": "Es hängt davon ab.",
+     "acc": [
+      "Das hängt davon ab."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "We are discussing whether the ban makes sense.",
+     "a": "Wir diskutieren darüber, ob das Verbot sinnvoll ist."
+    },
+    {
+     "t": "listen",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden."
+    }
+   ]
+  },
+  {
+   "id": "u16l4",
+   "title": "Präpositionen-Mix",
+   "s": "vprep",
+   "gen": {
+    "verbPrep": 3,
+    "verbPrepMatch": 2
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Die Anrainer beschweren sich ___ den Lärm.",
+     "a": "über"
+    },
+    {
+     "t": "gap",
+     "q": "Ich wende mich ___ die Redaktion.",
+     "a": "an"
+    },
+    {
+     "t": "gap",
+     "q": "Wir hoffen ___ eine bessere Zukunft.",
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Er hat sich ___ eine Lehrstelle beworben.",
+     "a": "um"
+    },
+    {
+     "t": "gap",
+     "q": "Die Klasse besteht ___ 25 Schülern.",
+     "a": "aus"
+    },
+    {
+     "t": "gap",
+     "q": "Der Lehrer fragt ___ unserer Meinung.",
+     "a": "nach"
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe mich ___ die neue Schule gewöhnt.",
+     "a": "an"
+    },
+    {
+     "t": "gap",
+     "q": "Wir müssen die Natur ___ dem Müll schützen.",
+     "a": "vor"
+    },
+    {
+     "t": "tr",
+     "en": "I am writing to the editors.",
+     "a": "Ich wende mich an die Redaktion.",
+     "acc": [
+      "Ich schreibe an die Redaktion."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The residents complain about the noise.",
+     "a": "Die Anrainer beschweren sich über den Lärm.",
+     "acc": [
+      "Die Bewohner beschweren sich über den Lärm."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Anrainer beschweren sich über den Lärm der Touristen."
+    }
+   ]
+  }
+ ]
+}

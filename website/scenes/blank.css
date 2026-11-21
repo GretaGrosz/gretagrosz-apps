@@ -1,0 +1,97 @@
+/* Blank: a project page, the focus timer, the before→after reel and the buddy, in the app's own look:
+   system font, iOS greys, Blank's terracotta accent. All in cqw. */
+.sc-blank { --bl-acc: #B85A43; --bl-sec: rgba(60, 60, 67, 0.6); background: #F2F2F7; color: #000; cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+.sc-blank .bl-all { position: absolute; inset: 0; overflow: hidden; }
+.sc-blank .bl-all * { hyphens: manual; -webkit-hyphens: manual; }
+.sc-blank .bl-all > * { position: absolute; will-change: transform, opacity; }
+.sc-blank .bl-all svg { display: block; }
+.sc-blank img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.sc-blank .bl-proj { left: 5cqw; top: 5cqw; width: 52cqw; height: 70cqw; }
+.sc-blank .bl-proj > * { position: absolute; }
+.sc-blank .bl-title { left: 0; top: 0; width: 41cqw; font-size: 4.6cqw; line-height: 1.08; font-weight: 700; letter-spacing: -0.03em; }
+.sc-blank .bl-meta { left: 0; top: 11.6cqw; font-size: 2.6cqw; color: var(--bl-sec); white-space: nowrap; }
+.sc-blank .bl-bar { left: 0; top: 17.2cqw; width: 44cqw; height: 1.2cqw; border-radius: 0.6cqw; background: #E5E5EA; overflow: hidden; }
+.sc-blank .bl-bar i { display: block; height: 100%; width: 40%; border-radius: 0.6cqw; background: var(--bl-acc); }
+.sc-blank .bl-of { left: 46cqw; top: 16.2cqw; font-size: 2.7cqw; font-weight: 600; font-variant-numeric: tabular-nums; }
+.sc-blank .bl-step { left: 0; top: 21.5cqw; width: 52cqw; height: 25cqw; border-radius: 4cqw; background: var(--bl-acc); color: #fff; }
+.sc-blank .bl-step > * { position: absolute; }
+.sc-blank .bl-eye { left: 3.6cqw; top: 3.2cqw; width: 40cqw; height: 3cqw; font-size: 2.2cqw; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255, 255, 255, 0.82); }
+.sc-blank .bl-eye span, .sc-blank .bl-st span { position: absolute; left: 0; top: 0; will-change: transform, opacity; }
+.sc-blank .bl-st { left: 3.6cqw; top: 7cqw; width: 45cqw; height: 9cqw; font-size: 3.5cqw; line-height: 1.18; font-weight: 700; }
+.sc-blank .bl-acts { left: 3.6cqw; right: 3.6cqw; top: 17cqw; height: 5.6cqw; display: flex; gap: 1.4cqw; }
+.sc-blank .bl-acts > span { display: flex; align-items: center; justify-content: center; gap: 1cqw; height: 100%; border-radius: 2.8cqw; font-size: 2.6cqw; font-weight: 600; white-space: nowrap; will-change: transform; }
+.sc-blank .bl-acts svg { width: 2.8cqw; height: 2.8cqw; flex: none; }
+.sc-blank .bl-done { flex: 1.3; background: #fff; color: var(--bl-acc); }
+.sc-blank .bl-min { flex: 1; background: rgba(255, 255, 255, 0.2); }
+.sc-blank .bl-cam { flex: none; width: 5.6cqw; background: rgba(255, 255, 255, 0.2); }
+.sc-blank .bl-tap { position: absolute; width: 7cqw; height: 7cqw; border-radius: 50%; background: rgba(255, 255, 255, 0.5); opacity: 0; pointer-events: none; }
+.sc-blank .bl-ph { left: 0; top: 50.5cqw; font-size: 2.3cqw; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bl-sec); }
+.sc-blank .bl-strip { left: 0; top: 54.5cqw; display: flex; gap: 2cqw; }
+.sc-blank .bl-th { position: relative; width: 13cqw; height: 13cqw; border-radius: 2.4cqw; overflow: hidden; background: #E5E5EA; will-change: transform, opacity; }
+.sc-blank .bl-th small, .sc-blank .bl-half small { position: absolute; left: 1cqw; bottom: 1cqw; padding: 0.3cqw 1.2cqw; border-radius: 1.4cqw; background: rgba(0, 0, 0, 0.45); color: #fff; font-size: 1.9cqw; font-weight: 600; white-space: nowrap; }
+
+.sc-blank .bl-timer { left: 61cqw; top: 9cqw; width: 34cqw; height: 46cqw; border-radius: 4.4cqw; background: #fff; box-shadow: 0 1cqw 4cqw rgba(0, 0, 0, 0.08); }
+.sc-blank .bl-timer > * { position: absolute; }
+.sc-blank .bl-ring { left: 3cqw; top: 4cqw; width: 28cqw; height: 28cqw; transform: rotate(-90deg); }
+.sc-blank .bl-track { fill: none; stroke: #ECECEE; stroke-width: 5; }
+.sc-blank .bl-arc { fill: none; stroke: var(--bl-acc); stroke-width: 5; stroke-linecap: round; }
+.sc-blank .bl-clock { left: 0; right: 0; top: 14.2cqw; text-align: center; font-size: 6cqw; font-weight: 700; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.sc-blank .bl-mins { left: 0; right: 0; top: 36cqw; text-align: center; font-size: 2.6cqw; color: var(--bl-sec); }
+.sc-blank .bl-ok { left: 13cqw; top: 13.8cqw; width: 8cqw; height: 8cqw; padding: 1.6cqw; border-radius: 50%; background: var(--bl-acc); color: #fff; box-sizing: border-box; will-change: transform, opacity; }
+.sc-blank .bl-ok svg { width: 100%; height: 100%; }
+
+.sc-blank .bl-reel { left: 63cqw; top: 5cqw; width: 30cqw; height: 53.3cqw; border-radius: 3.2cqw; overflow: hidden; background: #000; box-shadow: 0 1.4cqw 5cqw rgba(0, 0, 0, 0.22); }
+.sc-blank .bl-half { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; }
+.sc-blank .bl-before { top: 0; }
+.sc-blank .bl-after { top: 50%; border-top: 0.3cqw solid #000; }
+.sc-blank .bl-half small { left: 2cqw; top: 2cqw; bottom: auto; }
+.sc-blank .bl-after small { background: var(--bl-acc); }
+.sc-blank .bl-rt { position: absolute; left: 2.4cqw; right: 2.4cqw; bottom: 2.6cqw; color: #fff; font-size: 3cqw; line-height: 1.1; font-weight: 700; text-shadow: 0 0.3cqw 1.4cqw rgba(0, 0, 0, 0.5); }
+
+.sc-blank .bl-buddy { left: 61cqw; top: 62cqw; width: 34cqw; height: 8.6cqw; display: flex; align-items: center; gap: 1.6cqw; padding: 0 2.4cqw 0 1.6cqw; border-radius: 4.3cqw; background: #fff; box-shadow: 0 0.6cqw 2.4cqw rgba(0, 0, 0, 0.08); box-sizing: border-box; font-size: 2.5cqw; font-weight: 600; white-space: nowrap; }
+.sc-blank .bl-av { flex: none; display: grid; place-items: center; width: 5.6cqw; height: 5.6cqw; border-radius: 50%; background: #2C6E6A; color: #fff; font-size: 2.6cqw; font-weight: 700; }
+.sc-blank .bl-bt { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.15; }
+.sc-blank .bl-bt b { font-size: 2.6cqw; font-weight: 600; }
+.sc-blank .bl-bt small { font-size: 2.2cqw; font-weight: 400; color: var(--bl-sec); }
+.sc-blank .bl-nm { display: flex; align-items: center; gap: 1.4cqw; }
+.sc-blank .bl-buddy .bl-fl { display: flex; align-items: center; gap: 0.7cqw; font-size: 2.4cqw; color: var(--bl-acc); font-variant-numeric: tabular-nums; }
+.sc-blank .bl-buddy .bl-fl svg { width: 4.4cqw; height: 4.4cqw; margin: -1.2cqw 0 -0.4cqw; }
+
+/* The tip: the axolotl peeks over the card's top edge (the app's Peek: paws on the edge, clipped just below it) */
+.sc-blank .bl-tip { left: 61cqw; top: 21cqw; width: 34cqw; height: 31cqw; }
+.sc-blank .bl-tip > * { position: absolute; will-change: transform, opacity; }
+.sc-blank .bl-tipaxo { left: 2.4cqw; top: 0; width: 15cqw; height: 15cqw; z-index: 1; clip-path: inset(-60% -60% 18.4% -60%); }
+.sc-blank .bl-tipaxo .axo { width: 100%; height: 100%; will-change: transform; }
+.sc-blank .bl-tipcard { left: 0; right: 0; top: 11cqw; padding: 2.6cqw 2.4cqw 2.4cqw 2.6cqw; border-radius: 4.4cqw; background: #fff; box-shadow: 0 1cqw 4cqw rgba(0, 0, 0, 0.1); }
+.sc-blank .bl-tipt { display: block; font-size: 2.5cqw; line-height: 1.28; font-weight: 500; text-wrap: pretty; }
+.sc-blank .bl-tipb { position: relative; display: flex; align-items: center; justify-content: center; gap: 0.9cqw; width: fit-content; height: 5.4cqw; margin: 1.8cqw 0 0 auto; padding: 0 2.6cqw; border-radius: 2.7cqw; background: var(--bl-acc); color: #fff; font-size: 2.6cqw; font-weight: 600; white-space: nowrap; will-change: transform; }
+.sc-blank .bl-tipb svg { width: 2.8cqw; height: 2.8cqw; flex: none; }
+
+/* The axolotl: Blank's own art (blank-axo.js); idle blink and gill sway ported from the app's axolotl.css.
+   Hop, number roll and peek run on the scene's timeline in blank.js. */
+.sc-blank .bl-streak { left: 42.5cqw; top: -3.2cqw; width: 13.5cqw; height: 13.5cqw; }
+.sc-blank .axo { display: block; width: 100%; height: 100%; overflow: visible; }
+.sc-blank .axo .axo-body { transform-box: fill-box; transform-origin: 50% 100%; }
+.sc-blank .axo .axo-gills-l { --axo-dir: -1; }
+.sc-blank .axo .axo-gills-r { --axo-dir: 1; }
+.sc-blank .axo { --axo-amp: 4deg; --axo-droop: 0deg; }
+.sc-blank .axo[data-mood='happy'] { --axo-amp: 6deg; }
+.sc-blank .axo[data-mood='cheer'] { --axo-amp: 8deg; --axo-droop: -5deg; }
+.sc-blank .axo .axo-gill { transform-box: view-box; animation: bl-axo-sway 3.4s ease-in-out infinite; animation-delay: calc(var(--i, 0) * -0.3s); }
+.sc-blank .bl-buddy .axo .axo-gill { animation-delay: calc(-1.7s - var(--i, 0) * 0.3s); }
+@keyframes bl-axo-sway {
+  0%, 100% { transform: rotate(calc((var(--axo-droop) - var(--axo-amp)) * var(--axo-dir, 1))); }
+  50% { transform: rotate(calc((var(--axo-droop) + var(--axo-amp)) * var(--axo-dir, 1))); }
+}
+.sc-blank .axo .axo-lid { animation: bl-axo-blink 4.6s linear infinite; }
+.sc-blank .bl-buddy .axo .axo-lid { animation-delay: -2.1s; }
+@keyframes bl-axo-blink {
+  0%, 92%, 100% { transform: scaleY(0); }
+  93.5%, 94.5% { transform: scaleY(1); }
+  96% { transform: scaleY(0); }
+}
+.sc-blank .axo .axo-prop, .sc-blank .axo .axo-badge, .sc-blank .axo .axo-badge-num, .sc-blank .axo .axo-badge-ghost { transform-box: fill-box; transform-origin: 50% 50%; }
+.sc-blank:not(.bl-on) .axo *, [data-still] .sc-blank .axo * { animation-play-state: paused; }
+.sc-blank .bl-flash { inset: 0; background: #fff; opacity: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .sc-blank { cursor: default; } .sc-blank .axo .axo-gill, .sc-blank .axo .axo-lid { animation: none; } }

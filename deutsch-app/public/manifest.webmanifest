@@ -1,0 +1,15 @@
+{
+  "name": "Deutsch Lock-In",
+  "short_name": "Lock-In",
+  "description": "Deutsch für die Schularbeit: Grammatik-Pfad, strenge Übungen, Textsorten.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EAF7F0",
+  "theme_color": "#F4F6F5",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

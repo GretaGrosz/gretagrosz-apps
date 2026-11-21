@@ -1,0 +1,247 @@
+{
+ "id": "u34",
+ "n": 34,
+ "phase": 4,
+ "level": "C1",
+ "title": "Indirekte Rede C1",
+ "tips": {
+  "de": "Vergangenheit in der indirekten Rede: habe/sei + Partizip II (Konj. I) bzw. hätte/wäre + Partizip II (Ersatz): Sie sagt, sie habe den Artikel gelesen. Fragen: ob (ja/nein) oder Fragewort + Konjunktiv, Verb am Ende: Er fragt, ob die Schule später beginne / wann die Schularbeit sei. Aufforderungen: sollen (Befehl) oder mögen (höfliche Bitte): Sie sagt, wir sollten leiser sein. / Er bittet, man möge ihn anrufen. Zukunft: werde + Infinitiv. Pronomen und Ortsangaben anpassen: ich → er/sie, hier → dort, heute → an diesem Tag.",
+  "en": "Past in reported speech: habe/sei + participle. Questions: ob or a question word, verb last. Commands: sollen; polite requests: mögen ('er möge'). Adjust pronouns and time/place words.",
+  "contrast": "English shifts tenses ('She said she had read it'). German shifts mood: 'Sie sagte, sie habe ihn gelesen'. 'He asked whether…' = 'Er fragte, ob …' with the verb at the end. 'He told us to be quiet' = 'Er sagte, wir sollten leise sein'.",
+  "table": [
+   [
+    "direkte Rede",
+    "indirekte Rede"
+   ],
+   [
+    "„Ich habe es gelesen.“",
+    "Sie sagt, sie habe es gelesen."
+   ],
+   [
+    "„Kommst du mit?“",
+    "Er fragt, ob ich mitkomme / mitkäme."
+   ],
+   [
+    "„Wann beginnt die Schule?“",
+    "Sie fragt, wann die Schule beginne."
+   ],
+   [
+    "„Seid leise!“",
+    "Er sagt, wir sollten leise sein."
+   ],
+   [
+    "„Rufen Sie mich bitte an!“",
+    "Er bittet, man möge ihn anrufen."
+   ]
+  ],
+  "examples": [
+   "Die Autorin behauptet, die Regierung habe das Problem lange ignoriert.",
+   "Der Minister erklärte, die Reform werde bald umgesetzt.",
+   "Die Schüler fragen, warum es keine Lösung gebe.",
+   "Die Lehrerin sagt, wir sollten die Angabe genau lesen.",
+   "Der Experte warnt, man dürfe die Folgen nicht unterschätzen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u34l1",
+   "title": "Vergangenheit & Zukunft",
+   "s": "konj1",
+   "items": [
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Sie sagt, …):\n„Ich habe den Artikel gelesen.“",
+     "a": "Sie sagt, sie habe den Artikel gelesen.",
+     "acc": [
+      "Sie sagt, dass sie den Artikel gelesen habe."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Der Autor behauptet, …):\n„Die Regierung hat das Problem lange ignoriert.“",
+     "a": "Der Autor behauptet, die Regierung habe das Problem lange ignoriert.",
+     "acc": [
+      "Der Autor behauptet, dass die Regierung das Problem lange ignoriert habe."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Der Minister erklärte, …):\n„Die Reform wird bald umgesetzt.“",
+     "a": "Der Minister erklärte, die Reform werde bald umgesetzt.",
+     "acc": [
+      "Der Minister erklärte, dass die Reform bald umgesetzt werde."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Die Schüler sagen, …):\n„Wir sind zu spät gekommen.“",
+     "a": "Die Schüler sagen, sie seien zu spät gekommen.",
+     "acc": [
+      "Die Schüler sagen, dass sie zu spät gekommen seien."
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "„Wir haben keine Zeit gehabt.“ → Sie sagen, sie ___ keine Zeit gehabt.",
+     "o": [
+      "hätten",
+      "haben",
+      "habe"
+     ],
+     "a": "hätten",
+     "r": "Konj. I (haben) = Indikativ → Ersatz Konj. II: hätten."
+    },
+    {
+     "t": "fix",
+     "w": "Sie sagt, sie hat den Artikel gelesen habe.",
+     "a": "Sie sagt, sie habe den Artikel gelesen."
+    },
+    {
+     "t": "listen",
+     "a": "Der Autor behauptet, die Regierung habe das Problem lange ignoriert."
+    }
+   ]
+  },
+  {
+   "id": "u34l2",
+   "title": "Fragen & Aufforderungen",
+   "s": "konj1.frage",
+   "items": [
+    {
+     "t": "tf",
+     "q": "Indirekte Frage (Er fragt, …):\n„Beginnt die Schule später?“",
+     "a": "Er fragt, ob die Schule später beginne.",
+     "acc": [
+      "Er fragt, ob die Schule später beginnt."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Frage (Sie fragt, …):\n„Wann ist die Schularbeit?“",
+     "a": "Sie fragt, wann die Schularbeit sei.",
+     "acc": [
+      "Sie fragt, wann die Schularbeit ist."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Die Lehrerin sagt, …):\n„Lest die Angabe genau!“",
+     "a": "Die Lehrerin sagt, wir sollten die Angabe genau lesen.",
+     "acc": [
+      "Die Lehrerin sagt, wir sollen die Angabe genau lesen.",
+      "Die Lehrerin sagt, dass wir die Angabe genau lesen sollten.",
+      "Die Lehrerin sagt, dass wir die Angabe genau lesen sollen."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Höfliche Bitte (Er bittet, …):\n„Rufen Sie mich bitte zurück!“",
+     "a": "Er bittet, man möge ihn zurückrufen.",
+     "acc": [
+      "Er bittet, dass man ihn zurückrufe.",
+      "Er bittet, man solle ihn zurückrufen."
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "„Warum gibt es keine Lösung?“ → Die Schüler fragen, ___",
+     "o": [
+      "warum es keine Lösung gebe.",
+      "warum gibt es keine Lösung.",
+      "ob es keine Lösung gebe warum."
+     ],
+     "a": "warum es keine Lösung gebe."
+    },
+    {
+     "t": "fix",
+     "w": "Er fragt, ob kommt sie mit.",
+     "a": "Er fragt, ob sie mitkomme.",
+     "acc": [
+      "Er fragt, ob sie mitkommt."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "She asked whether the test was difficult.",
+     "a": "Sie fragte, ob die Schularbeit schwierig sei.",
+     "acc": [
+      "Sie fragte, ob die Schularbeit schwer sei.",
+      "Sie fragte, ob der Test schwierig sei.",
+      "Sie fragte, ob der Test schwer sei."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Lehrerin sagt, wir sollten die Angabe genau lesen."
+    }
+   ]
+  },
+  {
+   "id": "u34l3",
+   "title": "Redewiedergabe im Text",
+   "s": "konj1.text",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Redeeinleitung passt, wenn jemand etwas ohne Beweis sagt?",
+     "o": [
+      "behaupten",
+      "feststellen",
+      "nachweisen"
+     ],
+     "a": "behaupten"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Redeeinleitung passt, wenn jemand vor etwas Gefahr spricht?",
+     "o": [
+      "warnen",
+      "loben",
+      "zugeben"
+     ],
+     "a": "warnen"
+    },
+    {
+     "t": "match",
+     "q": "Redeeinleitung → Bedeutung",
+     "pairs": [
+      [
+       "zugeben",
+       "admit"
+      ],
+      [
+       "einräumen",
+       "concede"
+      ],
+      [
+       "bezweifeln",
+       "doubt"
+      ],
+      [
+       "fordern",
+       "demand"
+      ]
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Der Experte warnt, …):\n„Man darf die Folgen nicht unterschätzen.“",
+     "a": "Der Experte warnt, man dürfe die Folgen nicht unterschätzen."
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Die Ministerin räumt ein, …):\n„Wir haben Fehler gemacht.“",
+     "a": "Die Ministerin räumt ein, sie hätten Fehler gemacht.",
+     "acc": [
+      "Die Ministerin räumt ein, man habe Fehler gemacht.",
+      "Die Ministerin räumt ein, dass sie Fehler gemacht hätten."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Ministerin räumt ein, man habe Fehler gemacht."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,108 @@
+/* idle motion for the neck accessories */
+
+/* duck floatie: bobs like it's on water, the duck nods along */
+.axo .axo-acc-duckfloat .df-bob {
+  transform-box: view-box;
+  transform-origin: 104px 112px;
+  animation: acc-duckfloat-bob 3.2s ease-in-out infinite;
+}
+.axo .axo-acc-duckfloat .df-duck {
+  transform-box: view-box;
+  transform-origin: 163px 110px;
+  animation: acc-duckfloat-nod 3.2s ease-in-out infinite;
+}
+
+@keyframes acc-duckfloat-bob {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(1.4px) rotate(-1deg); }
+}
+
+@keyframes acc-duckfloat-nod {
+  0%, 30%, 100% { transform: rotate(0); }
+  40% { transform: rotate(9deg); }
+  48% { transform: rotate(-2deg); }
+  56% { transform: rotate(6deg); }
+  66% { transform: rotate(0); }
+}
+
+/* kelp scarf: the loose ends drift like they're underwater, bubbles rise off them */
+.axo .axo-acc-kelp .kelp-end {
+  transform-box: view-box;
+  animation: acc-kelp-sway 4.2s ease-in-out infinite;
+}
+.axo .axo-acc-kelp .kelp-end-l { transform-origin: 102px 118px; }
+.axo .axo-acc-kelp .kelp-end-r { transform-origin: 106px 119px; animation-delay: -1.6s; }
+
+@keyframes acc-kelp-sway {
+  0%, 100% { transform: rotate(-5deg) skewX(3deg); }
+  50% { transform: rotate(5deg) skewX(-4deg); }
+}
+
+.axo .axo-acc-kelp .kelp-bub {
+  transform-box: view-box;
+  animation: acc-kelp-bubble 3.6s ease-in infinite;
+}
+.axo .axo-acc-kelp .kelp-bub-2 { animation-delay: -1.9s; }
+.axo .axo-acc-kelp .kelp-bub-3 { animation-delay: -0.8s; animation-duration: 2.9s; }
+
+@keyframes acc-kelp-bubble {
+  0% { transform: translate(0, 4px); opacity: 0; }
+  15% { opacity: 1; }
+  50% { transform: translate(1.5px, -5px); }
+  80% { opacity: 1; }
+  100% { transform: translate(-1px, -14px); opacity: 0; }
+}
+
+/* champion medal: a slow swing, a shine sweeping across, a glint */
+.axo .axo-acc-medal .medal-swing {
+  transform-box: view-box;
+  transform-origin: 104px 113px;
+  animation: acc-medal-swing 3.8s ease-in-out infinite;
+}
+.axo .axo-acc-medal .medal-sweep {
+  transform-box: view-box;
+  animation: acc-medal-sweep 3.8s ease-in-out infinite;
+}
+.axo .axo-acc-medal .medal-glint {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-medal-glint 3.8s ease-in-out infinite;
+}
+
+@keyframes acc-medal-swing {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes acc-medal-sweep {
+  0%, 50% { transform: translateX(0); }
+  74%, 100% { transform: translateX(50px); }
+}
+
+@keyframes acc-medal-glint {
+  0%, 62%, 100% { transform: scale(0.2) rotate(0); opacity: 0; }
+  72% { transform: scale(1.15) rotate(45deg); opacity: 1; }
+  84% { transform: scale(0.3) rotate(90deg); opacity: 0; }
+}
+
+.axo[data-axo-paused] .axo-acc-duckfloat .df-bob,
+.axo[data-axo-paused] .axo-acc-duckfloat .df-duck,
+.axo[data-axo-paused] .axo-acc-kelp .kelp-end,
+.axo[data-axo-paused] .axo-acc-kelp .kelp-bub,
+.axo[data-axo-paused] .axo-acc-medal .medal-swing,
+.axo[data-axo-paused] .axo-acc-medal .medal-sweep,
+.axo[data-axo-paused] .axo-acc-medal .medal-glint {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc-duckfloat .df-bob,
+  .axo .axo-acc-duckfloat .df-duck,
+  .axo .axo-acc-kelp .kelp-end,
+  .axo .axo-acc-kelp .kelp-bub,
+  .axo .axo-acc-medal .medal-swing,
+  .axo .axo-acc-medal .medal-sweep,
+  .axo .axo-acc-medal .medal-glint {
+    animation: none;
+  }
+}

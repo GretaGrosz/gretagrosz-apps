@@ -1,0 +1,705 @@
+{
+ "id": "u06",
+ "n": 6,
+ "phase": 1,
+ "level": "B1",
+ "title": "Präpositionen & Fälle",
+ "weak": true,
+ "tips": {
+  "de": "Jede Präposition bestimmt den Fall. Immer Akkusativ: durch, für, gegen, ohne, um. Immer Dativ: aus, bei, mit, nach, seit, von, zu (+ gegenüber). Genitiv (Schriftsprache): wegen, trotz, während, aufgrund, innerhalb, außerhalb, statt. Wechselpräpositionen (an, auf, hinter, in, neben, über, unter, vor, zwischen): Wo? → Dativ, Wohin? → Akkusativ. Zusammenziehungen: in dem = im, in das = ins, an dem = am, von dem = vom, zu dem = zum, zu der = zur, bei dem = beim.",
+  "en": "Every preposition decides the case. Accusative: durch, für, gegen, ohne, um. Dative: aus, bei, mit, nach, seit, von, zu. Genitive: wegen, trotz, während. Two-way prepositions: where? (location) = dative, where to? (direction) = accusative.",
+  "contrast": "English 'in the city' / 'into the city' uses two prepositions. German uses one and changes the case: in der Stadt (wo?) / in die Stadt (wohin?). Your mistake 'in die Nähe' (direction) instead of 'in der Nähe' (location) is exactly this.",
+  "table": [
+   [
+    "Akkusativ",
+    "durch, für, gegen, ohne, um"
+   ],
+   [
+    "Dativ",
+    "aus, bei, mit, nach, seit, von, zu, gegenüber"
+   ],
+   [
+    "Genitiv",
+    "wegen, trotz, während, aufgrund, innerhalb, statt"
+   ],
+   [
+    "Wechsel",
+    "an, auf, hinter, in, neben, über, unter, vor, zwischen – wo? Dat. / wohin? Akk."
+   ]
+  ],
+  "examples": [
+   "in der Nähe des Parlaments (wo? Dativ)",
+   "Wir gehen in die Stadt. – Wir sind in der Stadt.",
+   "für die Länder (Akk.) – mit den Ländern (Dat.)",
+   "wegen des Tourismus, trotz des Regens",
+   "im 20. Jahrhundert, im Internet, in Frankreich, nach Italien"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u06l1",
+   "title": "Akkusativ-Präpositionen",
+   "s": "prep.A",
+   "gen": {
+    "prepCase": 1,
+    "prepMatch": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Tourismus ist für manche ___ sehr wichtig.",
+     "h": "(das Land, Plural)",
+     "a": "Länder",
+     "y": [
+      "für + Akkusativ → kein -n",
+      "für + Dativ → -n",
+      "Plural immer -n"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Viele Schüler sind gegen ___ Handyverbot.",
+     "h": "(das)",
+     "a": "das"
+    },
+    {
+     "t": "gap",
+     "q": "Ohne ___ Computer kann man heute kaum lernen.",
+     "h": "(ein-, der Computer)",
+     "a": "einen"
+    },
+    {
+     "t": "gap",
+     "q": "Wir fahren mit dem Rad durch ___ Stadt.",
+     "h": "(die)",
+     "a": "die"
+    },
+    {
+     "t": "gap",
+     "q": "Es geht um ___ Zukunft der Jugendlichen.",
+     "h": "(die)",
+     "a": "die"
+    },
+    {
+     "t": "gap",
+     "q": "Die Gemeinde kämpft gegen ___ Lärm.",
+     "h": "(der)",
+     "a": "den"
+    },
+    {
+     "t": "gap",
+     "q": "Das Geld ist für ___ Projekt bestimmt.",
+     "h": "(unser-, das Projekt)",
+     "a": "unser"
+    },
+    {
+     "t": "mc",
+     "q": "Ich setze mich für ___ Rechte der Schüler ein.",
+     "o": [
+      "die",
+      "den",
+      "der"
+     ],
+     "a": "die"
+    },
+    {
+     "t": "mc",
+     "q": "Ohne ___ Unterstützung geht es nicht.",
+     "o": [
+      "deine",
+      "deiner",
+      "deinem"
+     ],
+     "a": "deine"
+    },
+    {
+     "t": "fix",
+     "w": "Tourismus ist für manche Ländern wichtig.",
+     "a": "Tourismus ist für manche Länder wichtig.",
+     "r": "für + Akkusativ → Länder."
+    },
+    {
+     "t": "fix",
+     "w": "Wir sind gegen dem Plan.",
+     "a": "Wir sind gegen den Plan."
+    },
+    {
+     "t": "fix",
+     "w": "Ohne einem Abschluss ist es schwer.",
+     "a": "Ohne einen Abschluss ist es schwer."
+    },
+    {
+     "t": "tr",
+     "en": "We are against the ban.",
+     "a": "Wir sind gegen das Verbot."
+    },
+    {
+     "t": "tr",
+     "en": "This is important for the students.",
+     "a": "Das ist für die Schüler wichtig.",
+     "acc": [
+      "Das ist wichtig für die Schüler."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Tourismus ist für manche Länder sehr wichtig."
+    }
+   ]
+  },
+  {
+   "id": "u06l2",
+   "title": "Dativ-Präpositionen",
+   "s": "prep.D",
+   "gen": {
+    "prepCase": 1,
+    "prepMatch": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Mit ___ Menschen kommt viel Müll.",
+     "h": "(viele)",
+     "a": "vielen"
+    },
+    {
+     "t": "gap",
+     "q": "Seit ___ Jahr gibt es das Klimaticket.",
+     "h": "(ein-, das Jahr)",
+     "a": "einem"
+    },
+    {
+     "t": "gap",
+     "q": "Nach ___ Unterricht treffen wir uns.",
+     "h": "(der)",
+     "a": "dem"
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler kommen aus ___ Ländern.",
+     "h": "(verschieden-)",
+     "a": "verschiedenen"
+    },
+    {
+     "t": "gap",
+     "q": "Ich wohne bei ___ Tante.",
+     "h": "(mein-)",
+     "a": "meiner"
+    },
+    {
+     "t": "gap",
+     "q": "Das Geschenk ist von ___ Eltern.",
+     "h": "(mein-, Plural)",
+     "a": "meinen"
+    },
+    {
+     "t": "gap",
+     "q": "Gegenüber ___ Schule ist ein Park.",
+     "h": "(die)",
+     "a": "der"
+    },
+    {
+     "t": "mc",
+     "q": "Wir fahren ___ Schule.",
+     "o": [
+      "zur",
+      "zum",
+      "zu die"
+     ],
+     "a": "zur",
+     "y": [
+      "zu + der (Dativ feminin) = zur",
+      "zu + dem = zum",
+      "zu + Akkusativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich komme gerade ___ Arzt.",
+     "o": [
+      "vom",
+      "von der",
+      "von den"
+     ],
+     "a": "vom",
+     "r": "von + dem = vom."
+    },
+    {
+     "t": "mc",
+     "q": "Er geht ___ Bahnhof.",
+     "o": [
+      "zum",
+      "zur",
+      "zu den"
+     ],
+     "a": "zum"
+    },
+    {
+     "t": "fix",
+     "w": "Mit viele Menschen kommt viel Müll.",
+     "a": "Mit vielen Menschen kommt viel Müll."
+    },
+    {
+     "t": "fix",
+     "w": "Seit ein Jahr lerne ich Deutsch.",
+     "a": "Seit einem Jahr lerne ich Deutsch."
+    },
+    {
+     "t": "fix",
+     "w": "Wir sprechen mit die Lehrerin.",
+     "a": "Wir sprechen mit der Lehrerin."
+    },
+    {
+     "t": "fix",
+     "w": "Nach die Schule gehe ich heim.",
+     "a": "Nach der Schule gehe ich heim."
+    },
+    {
+     "t": "tr",
+     "en": "I have lived in Austria for two years.",
+     "a": "Ich wohne seit zwei Jahren in Österreich.",
+     "acc": [
+      "Ich lebe seit zwei Jahren in Österreich."
+     ],
+     "r": "seit + Dativ, mit Präsens (nicht Perfekt wie im Englischen!)."
+    },
+    {
+     "t": "tr",
+     "en": "after school",
+     "a": "nach der Schule"
+    },
+    {
+     "t": "listen",
+     "a": "Seit einem Jahr gibt es an unserer Schule ein Handyverbot."
+    }
+   ]
+  },
+  {
+   "id": "u06l3",
+   "title": "Genitiv-Präpositionen",
+   "s": "prep.G",
+   "gen": {
+    "prepCase": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Wegen ___ Tourismus können sie neue Restaurants bauen.",
+     "h": "(der)",
+     "a": "des",
+     "y": [
+      "wegen + Genitiv",
+      "wegen + Dativ (nur umgangssprachlich)",
+      "wegen + Akkusativ"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Trotz ___ Regens fand die Demonstration statt.",
+     "h": "(der Regen)",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Während ___ Pandemie gab es Online-Unterricht.",
+     "h": "(die)",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Aufgrund ___ hohen Mieten ziehen viele weg.",
+     "h": "(die, Plural)",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Innerhalb ___ Woche muss der Text fertig sein.",
+     "h": "(ein-, die Woche)",
+     "a": "einer"
+    },
+    {
+     "t": "gap",
+     "q": "Statt ___ Autos nehmen wir den Zug.",
+     "h": "(das)",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Wegen des ___ fällt der Unterricht aus.",
+     "h": "(der Streik)",
+     "a": "Streiks",
+     "acc": [
+      "Streikes"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Wegen Tourismus gibt es viele Jobs.",
+     "a": "Wegen des Tourismus gibt es viele Jobs."
+    },
+    {
+     "t": "fix",
+     "w": "Trotz dem Verbot nutzen viele das Handy.",
+     "a": "Trotz des Verbots nutzen viele das Handy.",
+     "r": "In der Schularbeit: trotz + Genitiv."
+    },
+    {
+     "t": "fix",
+     "w": "Während dem Unterricht ist das Handy aus.",
+     "a": "Während des Unterrichts ist das Handy aus."
+    },
+    {
+     "t": "tr",
+     "en": "because of the rain",
+     "a": "wegen des Regens"
+    },
+    {
+     "t": "tr",
+     "en": "despite the ban",
+     "a": "trotz des Verbots",
+     "acc": [
+      "trotz des Verbotes"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "during the holidays",
+     "a": "während der Ferien"
+    },
+    {
+     "t": "listen",
+     "a": "Trotz des Regens fand die Demonstration statt."
+    }
+   ]
+  },
+  {
+   "id": "u06l4",
+   "title": "Wechselpräpositionen: wo? wohin?",
+   "s": "wechsel",
+   "gen": {
+    "wechsel": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Demonstration findet ___ Nähe des Parlaments statt.",
+     "o": [
+      "in der",
+      "in die",
+      "im"
+     ],
+     "a": "in der",
+     "y": [
+      "wo? → Dativ (Ort)",
+      "wohin? → Akkusativ (Richtung)",
+      "„in“ immer Akkusativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Viele Touristen fahren ___ Berge.",
+     "o": [
+      "in die",
+      "in den",
+      "im"
+     ],
+     "a": "in die",
+     "y": [
+      "wohin? → Akkusativ Plural: in die Berge",
+      "wo? → Dativ Plural",
+      "Dativ Singular"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir wohnen ___ Land.",
+     "o": [
+      "auf dem",
+      "auf das",
+      "aufs"
+     ],
+     "a": "auf dem",
+     "r": "Wo? auf dem Land (Dativ). Wohin? aufs Land (Akkusativ)."
+    },
+    {
+     "t": "mc",
+     "q": "Sie legt das Handy ___ Tisch.",
+     "o": [
+      "auf den",
+      "auf dem",
+      "auf der"
+     ],
+     "a": "auf den",
+     "r": "legen = Richtung (wohin?) → Akkusativ."
+    },
+    {
+     "t": "mc",
+     "q": "Das Handy liegt ___ Tisch.",
+     "o": [
+      "auf dem",
+      "auf den",
+      "auf das"
+     ],
+     "a": "auf dem",
+     "r": "liegen = Position (wo?) → Dativ."
+    },
+    {
+     "t": "mc",
+     "q": "Er hängt das Plakat ___ Wand.",
+     "o": [
+      "an die",
+      "an der",
+      "an den"
+     ],
+     "a": "an die"
+    },
+    {
+     "t": "mc",
+     "q": "Das Plakat hängt ___ Wand.",
+     "o": [
+      "an der",
+      "an die",
+      "an den"
+     ],
+     "a": "an der"
+    },
+    {
+     "t": "gap",
+     "q": "Die Demonstranten sollten sich ___ Nähe des Amtssitzes versammeln.",
+     "h": "(in + die Nähe, wo?)",
+     "a": "in der"
+    },
+    {
+     "t": "gap",
+     "q": "Ich stelle das Fahrrad ___ Haus.",
+     "h": "(vor + das Haus, wohin?)",
+     "a": "vor das"
+    },
+    {
+     "t": "gap",
+     "q": "Das Fahrrad steht ___ Haus.",
+     "h": "(vor + das Haus, wo?)",
+     "a": "vor dem"
+    },
+    {
+     "t": "gap",
+     "q": "Wir gehen heute ___ Kino.",
+     "h": "(in + das Kino)",
+     "a": "ins"
+    },
+    {
+     "t": "gap",
+     "q": "Wir sind gestern ___ Kino gewesen.",
+     "h": "(in + das Kino)",
+     "a": "im"
+    },
+    {
+     "t": "fix",
+     "w": "Die Demonstration ist in die Nähe des Parlaments.",
+     "a": "Die Demonstration ist in der Nähe des Parlaments.",
+     "r": "wo? → Dativ: in der Nähe."
+    },
+    {
+     "t": "fix",
+     "w": "Ich lege das Buch auf dem Tisch.",
+     "a": "Ich lege das Buch auf den Tisch."
+    },
+    {
+     "t": "fix",
+     "w": "Viele junge Menschen ziehen in der Stadt.",
+     "a": "Viele junge Menschen ziehen in die Stadt."
+    },
+    {
+     "t": "tr",
+     "en": "near the school",
+     "a": "in der Nähe der Schule"
+    },
+    {
+     "t": "tr",
+     "en": "We are going into the city.",
+     "a": "Wir gehen in die Stadt.",
+     "acc": [
+      "Wir fahren in die Stadt."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "We live in the city.",
+     "a": "Wir wohnen in der Stadt.",
+     "acc": [
+      "Wir leben in der Stadt."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Demonstration findet in der Nähe des Parlaments statt."
+    }
+   ]
+  },
+  {
+   "id": "u06l5",
+   "title": "Länder, Zeiten, Internet",
+   "s": "prep.wendung",
+   "gen": {
+    "wechsel": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Schüler ___ Frankreich protestieren.",
+     "o": [
+      "in",
+      "in dem",
+      "im"
+     ],
+     "a": "in",
+     "y": [
+      "Länder ohne Artikel → in Frankreich",
+      "in + dem Land",
+      "im + Land"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Viele fliegen ___ Italien.",
+     "o": [
+      "nach",
+      "in",
+      "zu"
+     ],
+     "a": "nach",
+     "r": "Länder/Städte ohne Artikel: nach (wohin?), in (wo?)."
+    },
+    {
+     "t": "mc",
+     "q": "Wir fahren ___ Schweiz.",
+     "o": [
+      "in die",
+      "nach",
+      "in der"
+     ],
+     "a": "in die",
+     "r": "Länder MIT Artikel (die Schweiz, die Türkei, die USA): in die … (wohin), in der … (wo)."
+    },
+    {
+     "t": "mc",
+     "q": "Reisen war ___ 20. Jahrhundert teurer.",
+     "o": [
+      "im",
+      "in den",
+      "in das"
+     ],
+     "a": "im"
+    },
+    {
+     "t": "mc",
+     "q": "Man kann fast alles ___ Internet lernen.",
+     "o": [
+      "im",
+      "in",
+      "auf"
+     ],
+     "a": "im"
+    },
+    {
+     "t": "mc",
+     "q": "Sie teilen ihre Fotos ___ sozialen Medien.",
+     "o": [
+      "in den",
+      "auf",
+      "in die"
+     ],
+     "a": "in den"
+    },
+    {
+     "t": "mc",
+     "q": "Die Schularbeit ist ___ Mai.",
+     "o": [
+      "im",
+      "in",
+      "am"
+     ],
+     "a": "im",
+     "r": "Monate: im Mai. Tage: am Montag. Uhrzeit: um 8 Uhr."
+    },
+    {
+     "t": "mc",
+     "q": "Wir treffen uns ___ Montag ___ acht Uhr.",
+     "o": [
+      "am … um",
+      "im … um",
+      "am … an"
+     ],
+     "a": "am … um"
+    },
+    {
+     "t": "gap",
+     "q": "Ich lebe seit drei Jahren ___ Österreich.",
+     "a": "in"
+    },
+    {
+     "t": "gap",
+     "q": "In den Ferien fahre ich ___ Ungarn.",
+     "a": "nach"
+    },
+    {
+     "t": "gap",
+     "q": "Meine Familie wohnt ___ USA.",
+     "h": "(die USA, wo?)",
+     "a": "in den"
+    },
+    {
+     "t": "gap",
+     "q": "Das passierte ___ Jahr 2020.",
+     "a": "im"
+    },
+    {
+     "t": "fix",
+     "w": "Schülern in dem Frankreich fordern bessere Lernbedingungen.",
+     "a": "Schüler in Frankreich fordern bessere Lernbedingungen."
+    },
+    {
+     "t": "fix",
+     "w": "Reisen ist heute günstiger als in den 20. Jahrhundert.",
+     "a": "Reisen ist heute günstiger als im 20. Jahrhundert."
+    },
+    {
+     "t": "fix",
+     "w": "Alle haben Zugriff auf Internet.",
+     "a": "Alle haben Zugriff auf das Internet."
+    },
+    {
+     "t": "fix",
+     "w": "Sie teilen alles auf sozialen Medien.",
+     "a": "Sie teilen alles in sozialen Medien.",
+     "r": "Im Deutschen: in den sozialen Medien / in sozialen Medien."
+    },
+    {
+     "t": "tr",
+     "en": "on the internet",
+     "a": "im Internet"
+    },
+    {
+     "t": "tr",
+     "en": "in the 20th century",
+     "a": "im 20. Jahrhundert",
+     "acc": [
+      "im zwanzigsten Jahrhundert"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Everyone flew to Italy.",
+     "a": "Alle sind nach Italien geflogen.",
+     "acc": [
+      "Alle flogen nach Italien."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Im 20. Jahrhundert war das Reisen viel teurer."
+    }
+   ]
+  }
+ ]
+}

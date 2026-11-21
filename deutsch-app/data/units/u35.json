@@ -1,0 +1,262 @@
+{
+ "id": "u35",
+ "n": 35,
+ "phase": 4,
+ "level": "C1",
+ "title": "Wortstellung C1: Mittelfeld & Vorfeld",
+ "tips": {
+  "de": "Mittelfeld-Regeln für C1: 1) Pronomen stehen vorne (direkt nach dem Verb bzw. der Konjunktion), Akkusativ-Pronomen vor Dativ-Pronomen: Ich gebe es ihm. 2) Bei zwei Nomen: meist Dativ vor Akkusativ: Ich gebe dem Lehrer den Text. 3) Bekanntes vor Neuem, „nicht“ steht vor dem, was es verneint, sonst möglichst weit hinten. 4) Reflexivpronomen früh: Heute haben sich viele Schüler beschwert. Vorfeld: Was am Satzanfang steht, wird betont oder verbindet mit dem vorigen Satz (Dieses Problem …, Daraus folgt …). Ausklammerung: Vergleiche und lange Präpositionalgruppen dürfen nach dem Verbende stehen: Er hat mehr gelernt als ich.",
+  "en": "Middle field: pronouns first (accusative before dative), then nouns (usually dative before accusative), known information before new, 'nicht' before what it negates. Starting a sentence with a linking element (Dieses Problem, Daraus) makes your text flow.",
+  "contrast": "English word order is fixed (subject–verb–object). German lets you start with almost anything, and good writers use that: begin with what links back to the previous sentence. 'Ich gebe es ihm' (it before him), the opposite of English 'I give him it'.",
+  "examples": [
+   "Ich habe es ihr gestern gegeben.",
+   "Heute haben sich viele Anrainer über den Lärm beschwert.",
+   "Dieses Problem lässt sich nur gemeinsam lösen.",
+   "Daraus folgt, dass wir handeln müssen.",
+   "Sie hat mehr gelernt als ihre Freundin."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u35l1",
+   "title": "Pronomen & Objekte im Mittelfeld",
+   "s": "wortstellung.mittelfeld",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Reihenfolge ist richtig?",
+     "o": [
+      "Ich habe es ihr gestern gegeben.",
+      "Ich habe ihr es gestern gegeben.",
+      "Ich habe gestern es ihr gegeben."
+     ],
+     "a": "Ich habe es ihr gestern gegeben.",
+     "y": [
+      "Pronomen vorne: Akkusativ (es) vor Dativ (ihr)",
+      "Dativ vor Akkusativ wie bei Nomen",
+      "Zeit zuerst"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welche Reihenfolge ist neutral?",
+     "o": [
+      "Ich zeige dem Lehrer den Text.",
+      "Ich zeige den Text ihm dem Lehrer.",
+      "Ich zeige den Lehrer dem Text."
+     ],
+     "a": "Ich zeige dem Lehrer den Text."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Reihenfolge ist richtig?",
+     "o": [
+      "Ich zeige ihn dem Lehrer.",
+      "Ich zeige dem Lehrer ihn.",
+      "Ich zeige dem ihn Lehrer."
+     ],
+     "a": "Ich zeige ihn dem Lehrer.",
+     "r": "Pronomen (ihn) vor Nomen (dem Lehrer)."
+    },
+    {
+     "t": "mc",
+     "q": "Wo steht das Reflexivpronomen?",
+     "o": [
+      "Heute haben sich viele Anrainer beschwert.",
+      "Heute haben viele sich Anrainer beschwert.",
+      "Heute haben viele Anrainer beschwert sich."
+     ],
+     "a": "Heute haben sich viele Anrainer beschwert."
+    },
+    {
+     "t": "order",
+     "a": "Die Lehrerin hat es uns gestern erklärt.",
+     "chunks": [
+      "Die Lehrerin",
+      "hat",
+      "es",
+      "uns",
+      "gestern",
+      "erklärt"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Gestern hat sie es ihm endlich gesagt.",
+     "chunks": [
+      "Gestern",
+      "hat",
+      "sie",
+      "es",
+      "ihm",
+      "endlich",
+      "gesagt"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich glaube, dass sich die Situation bald verbessert.",
+     "chunks": [
+      "Ich glaube",
+      ",",
+      "dass",
+      "sich",
+      "die Situation",
+      "bald",
+      "verbessert"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe ihm es gesagt.",
+     "a": "Ich habe es ihm gesagt."
+    },
+    {
+     "t": "fix",
+     "w": "Kannst du mir ihn geben?",
+     "a": "Kannst du ihn mir geben?"
+    },
+    {
+     "t": "tr",
+     "en": "I gave it to her yesterday.",
+     "a": "Ich habe es ihr gestern gegeben.",
+     "acc": [
+      "Gestern habe ich es ihr gegeben.",
+      "Ich gab es ihr gestern."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Lehrerin hat es uns gestern genau erklärt."
+    }
+   ]
+  },
+  {
+   "id": "u35l2",
+   "title": "nicht richtig platzieren",
+   "s": "wortstellung.negation",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Satzverneinung: „Der Staat unterstützt die Familien.“",
+     "o": [
+      "Der Staat unterstützt die Familien nicht.",
+      "Der Staat nicht unterstützt die Familien.",
+      "Der Staat unterstützt nicht die Familien."
+     ],
+     "a": "Der Staat unterstützt die Familien nicht.",
+     "r": "Ganzer Satz verneint → nicht möglichst weit hinten (vor Verbteilen am Ende)."
+    },
+    {
+     "t": "mc",
+     "q": "Teilverneinung (nicht die Familien, sondern die Firmen):",
+     "o": [
+      "Der Staat unterstützt nicht die Familien, sondern die Firmen.",
+      "Der Staat unterstützt die Familien nicht, sondern die Firmen.",
+      "Nicht der Staat unterstützt die Familien, sondern die Firmen."
+     ],
+     "a": "Der Staat unterstützt nicht die Familien, sondern die Firmen."
+    },
+    {
+     "t": "mc",
+     "q": "Wo steht „nicht“? „Ich kann heute ___ kommen.“",
+     "o": [
+      "Ich kann heute nicht kommen.",
+      "Ich kann nicht heute kommen.",
+      "Ich nicht kann heute kommen."
+     ],
+     "a": "Ich kann heute nicht kommen."
+    },
+    {
+     "t": "mc",
+     "q": "Wo steht „nicht“ bei einer Präpositionalergänzung?",
+     "o": [
+      "Er interessiert sich nicht für Politik.",
+      "Er interessiert sich für Politik nicht.",
+      "Er nicht interessiert sich für Politik."
+     ],
+     "a": "Er interessiert sich nicht für Politik.",
+     "r": "nicht steht vor festen Ergänzungen (für Politik, nach Hause, krank)."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe nicht das Buch gelesen.",
+     "a": "Ich habe das Buch nicht gelesen."
+    },
+    {
+     "t": "fix",
+     "w": "Sie fährt nach Hause nicht.",
+     "a": "Sie fährt nicht nach Hause."
+    },
+    {
+     "t": "tr",
+     "en": "He is not interested in politics.",
+     "a": "Er interessiert sich nicht für Politik."
+    },
+    {
+     "t": "listen",
+     "a": "Der Staat unterstützt nicht die Familien, sondern die Firmen."
+    }
+   ]
+  },
+  {
+   "id": "u35l3",
+   "title": "Vorfeld nutzen: Text verbinden",
+   "s": "wortstellung.vorfeld",
+   "gen": {
+    "v2Front": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welcher zweite Satz schließt am besten an? „Viele Orte leiden unter dem Massentourismus.“",
+     "o": [
+      "Dieses Problem lässt sich nur gemeinsam lösen.",
+      "Man kann nur gemeinsam dieses Problem lösen.",
+      "Lösen lässt sich nur gemeinsam dieses Problem."
+     ],
+     "a": "Dieses Problem lässt sich nur gemeinsam lösen.",
+     "r": "Bekanntes (dieses Problem) ins Vorfeld → der Text fließt."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Satzverbindung ist am elegantesten?",
+     "o": [
+      "Die Mieten steigen. Daraus folgt, dass viele aufs Land ziehen.",
+      "Die Mieten steigen. Es folgt daraus, dass viele aufs Land ziehen werden müssen.",
+      "Die Mieten steigen. Viele ziehen aufs Land daraus."
+     ],
+     "a": "Die Mieten steigen. Daraus folgt, dass viele aufs Land ziehen."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit dem Bekannten („Dieser Vorschlag“):\nViele Eltern lehnen diesen Vorschlag ab.",
+     "a": "Dieser Vorschlag wird von vielen Eltern abgelehnt.",
+     "acc": [
+      "Diesen Vorschlag lehnen viele Eltern ab."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Gerade deshalb“:\nWir müssen jetzt handeln.",
+     "a": "Gerade deshalb müssen wir jetzt handeln."
+    },
+    {
+     "t": "mc",
+     "q": "Ausklammerung: Welcher Satz ist richtig und natürlich?",
+     "o": [
+      "Sie hat mehr gelernt als ihre Freundin.",
+      "Sie hat mehr als ihre Freundin gelernt.",
+      "Beide Sätze sind richtig."
+     ],
+     "a": "Beide Sätze sind richtig.",
+     "r": "Vergleiche mit „als/wie“ dürfen nach dem Verbende stehen (Ausklammerung) – das ist oft natürlicher."
+    },
+    {
+     "t": "listen",
+     "a": "Dieses Problem lässt sich nur gemeinsam lösen."
+    }
+   ]
+  }
+ ]
+}

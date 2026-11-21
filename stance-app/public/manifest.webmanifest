@@ -1,0 +1,16 @@
+{
+  "name": "Agora",
+  "short_name": "Agora",
+  "description": "One big question a day. Take a side, argue it, practise speaking for the Matura.",
+  "id": "/stance/",
+  "start_url": "/stance/",
+  "scope": "/stance/",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "icons": [
+    { "src": "/stance/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/stance/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/stance/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

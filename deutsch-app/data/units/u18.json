@@ -1,0 +1,703 @@
+{
+ "id": "u18",
+ "n": 18,
+ "phase": 1,
+ "level": "B1",
+ "title": "Rechtschreibung: das/dass, ß, groß/klein",
+ "weak": true,
+ "tips": {
+  "de": "das/dass: „das“ ist Artikel oder Pronomen (= dieses, welches); „dass“ ist eine Konjunktion und leitet einen Nebensatz ein. Test: Kann man „welches“ oder „dieses“ einsetzen? → das. s/ss/ß: Nach kurzem Vokal ss (Fluss, muss, dass), nach langem Vokal oder Doppellaut ß (Straße, groß, heißen, Grüße). Großschreibung: alle Nomen und Nominalisierungen (das Lernen, beim Schreiben, im Folgenden, etwas Neues, alles Gute). Adjektive in festen Begriffen bleiben meist klein (die sozialen Medien). Verwechslungswörter: Staat/Stadt, wenn/wann, fordern/fördern, seid/seit, wieder/wider.",
+  "en": "das = the/that/which (article or pronoun); dass = that (conjunction). If you can replace it with 'welches/dieses', write das. ss after a short vowel, ß after a long vowel or diphthong. Capitalise all nouns, including verbs/adjectives used as nouns.",
+  "contrast": "English has one 'that' for both, so you must decide every time. English only capitalises names; German capitalises every noun: 'im Folgenden', 'das Lernen'. English 'social media' is lowercase, and in German so is the adjective: 'die sozialen Medien'.",
+  "table": [
+   [
+    "das",
+    "Das Gesetz, das neu ist, …  (= welches)"
+   ],
+   [
+    "dass",
+    "Ich glaube, dass …  (Konjunktion)"
+   ],
+   [
+    "ss",
+    "Fluss, muss, Kenntnisse, dass"
+   ],
+   [
+    "ß",
+    "Straße, groß, Grüße, heißen, außerdem"
+   ],
+   [
+    "Nominalisierung",
+    "das Lesen, im Folgenden, etwas Wichtiges"
+   ]
+  ],
+  "examples": [
+   "Ich glaube, dass das Thema wichtig ist.",
+   "Das Gesetz, das im Parlament beschlossen wurde, …",
+   "Mit freundlichen Grüßen",
+   "Ich möchte im Folgenden Stellung nehmen.",
+   "Wenn der Staat ihre Träume nicht unterstützt, …"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u18l1",
+   "title": "das oder dass?",
+   "s": "rs.dasdass",
+   "gen": {
+    "dasDass": 4
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Ich glaube, ___ das Thema wichtig ist.",
+     "o": [
+      "dass",
+      "das"
+     ],
+     "a": "dass",
+     "keepOrder": true,
+     "y": [
+      "Konjunktion, leitet Nebensatz ein",
+      "= welches",
+      "Artikel"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das Gesetz, ___ neu ist, ist umstritten.",
+     "o": [
+      "dass",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "y": [
+      "Relativpronomen = welches",
+      "Konjunktion",
+      "Artikel"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "___ ist ein gutes Argument.",
+     "o": [
+      "Das",
+      "Dass"
+     ],
+     "a": "Das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ das Handy ablenkt, weiß jeder.",
+     "o": [
+      "Dass",
+      "Das"
+     ],
+     "a": "Dass",
+     "keepOrder": true,
+     "r": "Auch am Satzanfang: Konjunktion → Dass."
+    },
+    {
+     "t": "gap",
+     "q": "Es ist wichtig, ___ wir handeln.",
+     "o": [
+      "dass",
+      "das"
+     ],
+     "a": "dass"
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe ___ Buch gelesen, ___ du mir empfohlen hast.",
+     "a": [
+      "das",
+      "das"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich hoffe, ___ ___ Wetter morgen schön ist.",
+     "a": [
+      "dass",
+      "das"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Er sagt, ___ er ___ nicht weiß.",
+     "a": [
+      "dass",
+      "das"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich glaube, das es stimmt.",
+     "a": "Ich glaube, dass es stimmt.",
+     "c": "R"
+    },
+    {
+     "t": "fix",
+     "w": "Das Handy, dass ich habe, ist alt.",
+     "a": "Das Handy, das ich habe, ist alt."
+    },
+    {
+     "t": "fix",
+     "w": "Es ist klar, das wir mehr Lehrkräfte brauchen.",
+     "a": "Es ist klar, dass wir mehr Lehrkräfte brauchen."
+    },
+    {
+     "t": "listen",
+     "a": "Ich glaube, dass das Thema für alle wichtig ist."
+    }
+   ]
+  },
+  {
+   "id": "u18l2",
+   "title": "s, ss oder ß?",
+   "s": "rs.ss",
+   "items": [
+    {
+     "t": "gap",
+     "q": "Mit freundlichen Grü___en",
+     "o": [
+      "ß",
+      "ss",
+      "s"
+     ],
+     "a": "ß",
+     "r": "Langes ü → ß."
+    },
+    {
+     "t": "gap",
+     "q": "Wir mü___en handeln.",
+     "o": [
+      "ss",
+      "ß",
+      "s"
+     ],
+     "a": "ss",
+     "r": "Kurzes ü → ss."
+    },
+    {
+     "t": "gap",
+     "q": "Die Stra___e ist gesperrt.",
+     "o": [
+      "ß",
+      "ss",
+      "s"
+     ],
+     "a": "ß"
+    },
+    {
+     "t": "gap",
+     "q": "Der Flu___ ist verschmutzt.",
+     "o": [
+      "ss",
+      "ß",
+      "s"
+     ],
+     "a": "ss"
+    },
+    {
+     "t": "gap",
+     "q": "Das ist ein gro___es Problem.",
+     "o": [
+      "ß",
+      "ss",
+      "s"
+     ],
+     "a": "ß"
+    },
+    {
+     "t": "gap",
+     "q": "Au___erdem gibt es Nachteile.",
+     "o": [
+      "ß",
+      "ss",
+      "s"
+     ],
+     "a": "ß",
+     "r": "Doppellaut au → ß."
+    },
+    {
+     "t": "gap",
+     "q": "Ich wei___ es nicht.",
+     "o": [
+      "ß",
+      "ss",
+      "s"
+     ],
+     "a": "ß"
+    },
+    {
+     "t": "gap",
+     "q": "Wir wi___en es nicht.",
+     "o": [
+      "ss",
+      "ß",
+      "s"
+     ],
+     "a": "ss"
+    },
+    {
+     "t": "gap",
+     "q": "Das Ergebni___ ist eindeutig.",
+     "o": [
+      "s",
+      "ss",
+      "ß"
+     ],
+     "a": "s",
+     "r": "-nis im Singular mit einem s, Plural: Ergebnisse."
+    },
+    {
+     "t": "gap",
+     "q": "Die Ergebni___e sind eindeutig.",
+     "o": [
+      "ss",
+      "s",
+      "ß"
+     ],
+     "a": "ss"
+    },
+    {
+     "t": "gap",
+     "q": "Wir haben einen Beschlu___ gefa___t.",
+     "a": [
+      "ss",
+      "ss"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Man darf die Ma___e an Touristen nicht vergessen.",
+     "o": [
+      "ss",
+      "ß",
+      "s"
+     ],
+     "a": "ss",
+     "r": "die Masse (kurzes a) → ss. (das Maß = langes a → ß)"
+    },
+    {
+     "t": "fix",
+     "w": "Mit freundlichen Grüssen",
+     "a": "Mit freundlichen Grüßen",
+     "r": "In Österreich schreibt man ß."
+    },
+    {
+     "t": "fix",
+     "w": "Ausserdem gibt es viele Nachteile.",
+     "a": "Außerdem gibt es viele Nachteile."
+    },
+    {
+     "t": "fix",
+     "w": "Wir muessen die Strasse sperren.",
+     "a": "Wir müssen die Straße sperren."
+    },
+    {
+     "t": "listen",
+     "a": "Außerdem müssen wir die große Straße sperren."
+    }
+   ]
+  },
+  {
+   "id": "u18l3",
+   "title": "Groß oder klein?",
+   "s": "rs.gross",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Ich möchte im ___ Stellung nehmen.",
+     "o": [
+      "Folgenden",
+      "folgenden"
+     ],
+     "a": "Folgenden",
+     "keepOrder": true,
+     "y": [
+      "Nominalisierung nach im (= in dem) → groß",
+      "Adjektiv → klein",
+      "egal"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Sie teilen alles in den ___ Medien.",
+     "o": [
+      "sozialen",
+      "Sozialen"
+     ],
+     "a": "sozialen",
+     "keepOrder": true,
+     "r": "Adjektiv vor Nomen → klein."
+    },
+    {
+     "t": "mc",
+     "q": "Beim ___ mache ich viele Fehler.",
+     "o": [
+      "Schreiben",
+      "schreiben"
+     ],
+     "a": "Schreiben",
+     "keepOrder": true,
+     "r": "beim (= bei dem) + Verb → Nomen → groß."
+    },
+    {
+     "t": "mc",
+     "q": "Ich wünsche dir alles ___.",
+     "o": [
+      "Gute",
+      "gute"
+     ],
+     "a": "Gute",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Wir haben etwas ___ gelernt.",
+     "o": [
+      "Neues",
+      "neues"
+     ],
+     "a": "Neues",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Wir treffen uns am ___.",
+     "o": [
+      "Montag",
+      "montag"
+     ],
+     "a": "Montag",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Wir treffen uns ___ um acht.",
+     "o": [
+      "montags",
+      "Montags"
+     ],
+     "a": "montags",
+     "keepOrder": true,
+     "r": "Adverb (montags, abends) → klein."
+    },
+    {
+     "t": "mc",
+     "q": "Ich spreche ___ und ___.",
+     "o": [
+      "Deutsch … Englisch",
+      "deutsch … englisch"
+     ],
+     "a": "Deutsch … Englisch"
+    },
+    {
+     "t": "gap",
+     "q": "Das ___ fällt mir schwer.",
+     "h": "(lernen)",
+     "a": "Lernen"
+    },
+    {
+     "t": "gap",
+     "q": "Zum ___ möchte ich betonen, dass …",
+     "h": "(schluss)",
+     "a": "Schluss"
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ Medien beeinflussen viele Jugendliche.",
+     "h": "(sozial)",
+     "a": "sozialen"
+    },
+    {
+     "t": "gap",
+     "q": "Das ___ ist, dass niemand zuhört.",
+     "h": "(schlimm)",
+     "a": "Schlimmste"
+    },
+    {
+     "t": "fix",
+     "w": "Ich möchte in folgende Stellung nehmen.",
+     "a": "Ich möchte im Folgenden Stellung nehmen."
+    },
+    {
+     "t": "fix",
+     "w": "Sie teilen ihre Fotos in den Sozialen Medien.",
+     "a": "Sie teilen ihre Fotos in den sozialen Medien."
+    },
+    {
+     "t": "fix",
+     "w": "Das lernen macht Spaß.",
+     "a": "Das Lernen macht Spaß."
+    },
+    {
+     "t": "fix",
+     "w": "Wir sollten auf die umwelt achten.",
+     "a": "Wir sollten auf die Umwelt achten."
+    },
+    {
+     "t": "listen",
+     "a": "Im Folgenden möchte ich zu diesem Thema Stellung nehmen."
+    }
+   ]
+  },
+  {
+   "id": "u18l4",
+   "title": "Verwechslungswörter",
+   "s": "rs.verwechslung",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wenn der ___ ihre Träume nicht unterstützen will …",
+     "o": [
+      "Staat",
+      "Stadt"
+     ],
+     "a": "Staat",
+     "keepOrder": true,
+     "y": [
+      "Staat = Land/Regierung",
+      "Stadt = Ort (Wien, Graz)",
+      "gleiche Bedeutung"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wien ist eine große ___.",
+     "o": [
+      "Stadt",
+      "Staat"
+     ],
+     "a": "Stadt",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Ich weiß nicht, ___ der Zug kommt.",
+     "o": [
+      "wann",
+      "wenn"
+     ],
+     "a": "wann",
+     "keepOrder": true,
+     "y": [
+      "wann = Frage nach der Zeit",
+      "wenn = Bedingung",
+      "beide gehen"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "___ ich Zeit habe, lese ich.",
+     "o": [
+      "Wenn",
+      "Wann"
+     ],
+     "a": "Wenn",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Ich wohne ___ drei Jahren in Österreich.",
+     "o": [
+      "seit",
+      "seid"
+     ],
+     "a": "seit",
+     "keepOrder": true,
+     "r": "seit = Zeit; seid = ihr seid (Verb sein)."
+    },
+    {
+     "t": "mc",
+     "q": "Ihr ___ alle eingeladen.",
+     "o": [
+      "seid",
+      "seit"
+     ],
+     "a": "seid",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Wir haben ___ verloren.",
+     "o": [
+      "wieder",
+      "wider"
+     ],
+     "a": "wieder",
+     "keepOrder": true,
+     "r": "wieder = noch einmal; wider = gegen (widersprechen)."
+    },
+    {
+     "t": "mc",
+     "q": "Ich muss dir ___.",
+     "o": [
+      "widersprechen",
+      "wiedersprechen"
+     ],
+     "a": "widersprechen",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Die Schüler ___ mehr Lehrkräfte.",
+     "o": [
+      "fordern",
+      "fördern"
+     ],
+     "a": "fordern",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Menschen fliegen in den Urlaub.",
+     "h": "(more and more)",
+     "o": [
+      "Immer mehr",
+      "Mehrere"
+     ],
+     "a": "Immer mehr",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Das Nomen zu „zugreifen“ heißt:",
+     "o": [
+      "der Zugriff",
+      "die Zugreife",
+      "das Zugreifen"
+     ],
+     "a": "der Zugriff"
+    },
+    {
+     "t": "mc",
+     "q": "Wie heißt die Abkürzung für GDP auf Deutsch?",
+     "o": [
+      "BIP",
+      "GDP",
+      "BNP"
+     ],
+     "a": "BIP",
+     "r": "das Bruttoinlandsprodukt (BIP)."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn der Stadt ihre Träume nicht unterstützen will …",
+     "a": "Wenn der Staat ihre Träume nicht unterstützen will …"
+    },
+    {
+     "t": "fix",
+     "w": "Auch wann ihn Italien nicht interessiert …",
+     "a": "Auch wenn ihn Italien nicht interessiert …"
+    },
+    {
+     "t": "fix",
+     "w": "Ich lerne seid zwei Jahren Deutsch.",
+     "a": "Ich lerne seit zwei Jahren Deutsch."
+    },
+    {
+     "t": "fix",
+     "w": "Schüler fördern bessere Lernbedingungen.",
+     "a": "Schüler fordern bessere Lernbedingungen."
+    },
+    {
+     "t": "listen",
+     "a": "Wenn der Staat ihre Träume nicht unterstützt, müssen sie selbst aktiv werden."
+    }
+   ]
+  },
+  {
+   "id": "u18l5",
+   "title": "Getrennt oder zusammen?",
+   "s": "rs.zusammen",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Schreibung ist richtig?",
+     "o": [
+      "Massentourismus",
+      "Massen-Tourismus",
+      "Massen Tourismus"
+     ],
+     "a": "Massentourismus"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Schreibung ist richtig?",
+     "o": [
+      "Handyverbot",
+      "Handy Verbot",
+      "Handy-verbot"
+     ],
+     "a": "Handyverbot"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Schreibung ist richtig?",
+     "o": [
+      "Einwegplastik",
+      "Einweg Plastik",
+      "Ein Weg Plastik"
+     ],
+     "a": "Einwegplastik"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Schreibung ist richtig?",
+     "o": [
+      "Social-Media-Plattform",
+      "Social Media Plattform",
+      "Socialmediaplattform"
+     ],
+     "a": "Social-Media-Plattform",
+     "r": "Englische Wortgruppen + deutsches Nomen: mit Bindestrichen durchkoppeln."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Schreibung ist richtig?",
+     "o": [
+      "auseinandersetzen",
+      "auseinander setzen"
+     ],
+     "a": "auseinandersetzen",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Welche Schreibung ist richtig?",
+     "o": [
+      "Rad fahren",
+      "radfahren",
+      "Radfahren gehen"
+     ],
+     "a": "Rad fahren",
+     "r": "Nomen + Verb meist getrennt: Rad fahren, Auto fahren. Als Nomen: das Radfahren."
+    },
+    {
+     "t": "fix",
+     "w": "Der Massen-Tourismus ist ein Problem.",
+     "a": "Der Massentourismus ist ein Problem."
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen uns mit dem Thema auseinander setzen.",
+     "a": "Wir müssen uns mit dem Thema auseinandersetzen."
+    },
+    {
+     "t": "fix",
+     "w": "Viele Schüler protestieren gegen das Handy Verbot.",
+     "a": "Viele Schüler protestieren gegen das Handyverbot."
+    },
+    {
+     "t": "listen",
+     "a": "Der Massentourismus ist für viele Orte ein großes Problem."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,583 @@
+{
+ "id": "u12",
+ "n": 12,
+ "phase": 1,
+ "level": "B1",
+ "title": "Konnektoren: Hauptsatz oder Nebensatz?",
+ "tips": {
+  "de": "Es gibt drei Gruppen. 1) Konjunktionen auf Position 0 – sie zählen nicht mit, danach normale Wortstellung: und, aber, oder, denn, sondern (ADUSO). 2) Adverbien auf Position 1 – danach sofort das Verb: deshalb, darum, daher, trotzdem, dennoch, außerdem, dann, danach, sonst, allerdings, jedoch*. 3) Subjunktionen leiten einen Nebensatz ein – Verb ans Ende: weil, da, dass, ob, wenn, obwohl, damit, sodass, während, nachdem, bevor, als, falls. Vor „aber“, „denn“, „sondern“ steht ein Beistrich.",
+  "en": "Three groups: 1) und, aber, oder, denn, sondern don't count as a position. 2) Adverbs like deshalb, trotzdem, außerdem take position 1, so the verb comes next. 3) Subordinating conjunctions like weil, dass, obwohl send the verb to the end.",
+  "contrast": "English 'because' and 'so/therefore' don't change the word order. German does: 'denn' (= because) keeps normal order, 'weil' (= because) sends the verb to the end, and 'deshalb' (= therefore) pulls the verb to position 2. Same meaning, three different word orders.",
+  "table": [
+   [
+    "Typ",
+    "Beispiel",
+    "Wortstellung"
+   ],
+   [
+    "Position 0",
+    "…, denn das Fliegen schadet dem Klima.",
+    "Subjekt – Verb"
+   ],
+   [
+    "Position 1",
+    "…. Deshalb fahre ich mit dem Zug.",
+    "Verb – Subjekt"
+   ],
+   [
+    "Nebensatz",
+    "…, weil das Fliegen dem Klima schadet.",
+    "Verb am Ende"
+   ]
+  ],
+  "examples": [
+   "Ich fahre mit dem Zug, denn das Fliegen schadet dem Klima.",
+   "Ich fahre mit dem Zug, weil das Fliegen dem Klima schadet.",
+   "Das Fliegen schadet dem Klima. Deshalb fahre ich mit dem Zug.",
+   "Es regnet. Trotzdem demonstrieren viele Schüler.",
+   "Wir brauchen nicht mehr Verbote, sondern bessere Angebote."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u12l1",
+   "title": "und, aber, oder, denn, sondern",
+   "s": "konnektor.pos0",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Ich fahre mit dem Zug, ___ das Fliegen schadet dem Klima.",
+     "o": [
+      "denn",
+      "weil",
+      "deshalb"
+     ],
+     "a": "denn",
+     "y": [
+      "denn + normale Wortstellung (Verb Position 2)",
+      "weil + normale Wortstellung",
+      "deshalb + Subjekt-Verb"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir brauchen nicht mehr Verbote, ___ bessere Angebote.",
+     "o": [
+      "sondern",
+      "aber",
+      "oder"
+     ],
+     "a": "sondern",
+     "y": [
+      "nach Verneinung: nicht …, sondern …",
+      "aber nach Verneinung",
+      "oder = Alternative"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das Handy ist praktisch, ___ es lenkt ab.",
+     "o": [
+      "aber",
+      "sondern",
+      "denn"
+     ],
+     "a": "aber"
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Ich lerne viel, denn ich will die Matura schaffen.",
+      "Ich lerne viel, denn ich die Matura schaffen will.",
+      "Ich lerne viel, denn will ich die Matura schaffen."
+     ],
+     "a": "Ich lerne viel, denn ich will die Matura schaffen."
+    },
+    {
+     "t": "gap",
+     "q": "Viele Jugendliche lesen keine Zeitung, ___ sie informieren sich online.",
+     "o": [
+      "sondern",
+      "aber",
+      "denn"
+     ],
+     "a": "sondern"
+    },
+    {
+     "t": "gap",
+     "q": "Der Tourismus bringt Geld, ___ er zerstört auch die Natur.",
+     "o": [
+      "aber",
+      "sondern",
+      "oder"
+     ],
+     "a": "aber"
+    },
+    {
+     "t": "gap",
+     "q": "Wir fahren mit dem Bus ___ wir gehen zu Fuß.",
+     "o": [
+      "oder",
+      "denn",
+      "sondern"
+     ],
+     "a": "oder"
+    },
+    {
+     "t": "komma",
+     "a": "Das Handy ist praktisch, aber es lenkt im Unterricht ab."
+    },
+    {
+     "t": "komma",
+     "a": "Ich bin nicht gegen Tourismus, sondern gegen Massentourismus."
+    },
+    {
+     "t": "komma",
+     "a": "Wir bleiben zu Hause, denn es regnet."
+    },
+    {
+     "t": "fix",
+     "w": "Ich fahre mit dem Zug, denn das Fliegen dem Klima schadet.",
+     "a": "Ich fahre mit dem Zug, denn das Fliegen schadet dem Klima.",
+     "r": "„denn“ → normale Wortstellung (Verb an Position 2)."
+    },
+    {
+     "t": "fix",
+     "w": "Ich will nicht fliegen, aber mit dem Zug fahren.",
+     "a": "Ich will nicht fliegen, sondern mit dem Zug fahren."
+    },
+    {
+     "t": "tr",
+     "en": "I take the train because flying harms the climate. (use: denn)",
+     "a": "Ich fahre mit dem Zug, denn das Fliegen schadet dem Klima.",
+     "acc": [
+      "Ich nehme den Zug, denn das Fliegen schadet dem Klima.",
+      "Ich fahre mit dem Zug, denn Fliegen schadet dem Klima.",
+      "Ich nehme den Zug, denn Fliegen schadet dem Klima."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "not more bans, but better offers",
+     "a": "nicht mehr Verbote, sondern bessere Angebote"
+    },
+    {
+     "t": "listen",
+     "a": "Wir brauchen nicht mehr Verbote, sondern bessere Angebote."
+    }
+   ]
+  },
+  {
+   "id": "u12l2",
+   "title": "deshalb, trotzdem, außerdem",
+   "s": "konnektor.adverb",
+   "gen": {
+    "adverbConnector": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Das Fliegen schadet dem Klima. Deshalb ___.",
+     "o": [
+      "fahre ich mit dem Zug",
+      "ich fahre mit dem Zug",
+      "ich mit dem Zug fahre"
+     ],
+     "a": "fahre ich mit dem Zug",
+     "y": [
+      "deshalb auf Position 1 → Verb an Position 2",
+      "deshalb wie and → Subjekt zuerst",
+      "deshalb → Verb ans Ende"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Es regnet. Trotzdem ___.",
+     "o": [
+      "demonstrieren viele Schüler",
+      "viele Schüler demonstrieren",
+      "viele Schüler demonstrieren trotzdem"
+     ],
+     "a": "demonstrieren viele Schüler"
+    },
+    {
+     "t": "mc",
+     "q": "Der Tourismus bringt Geld. Außerdem ___.",
+     "o": [
+      "schafft er Arbeitsplätze",
+      "er schafft Arbeitsplätze",
+      "er Arbeitsplätze schafft"
+     ],
+     "a": "schafft er Arbeitsplätze"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Wort passt? Der Zug ist teuer. ___ fahren viele mit dem Zug.",
+     "o": [
+      "Trotzdem",
+      "Deshalb",
+      "Außerdem"
+     ],
+     "a": "Trotzdem",
+     "r": "trotzdem = nevertheless (Gegensatz)."
+    },
+    {
+     "t": "mc",
+     "q": "Welches Wort passt? Die Mieten sind hoch. ___ ziehen viele junge Menschen aufs Land.",
+     "o": [
+      "Deshalb",
+      "Trotzdem",
+      "Sonst"
+     ],
+     "a": "Deshalb"
+    },
+    {
+     "t": "gap",
+     "q": "Wir müssen jetzt handeln, ___ ist es zu spät.",
+     "o": [
+      "sonst",
+      "deshalb",
+      "trotzdem"
+     ],
+     "a": "sonst",
+     "r": "sonst = otherwise, Position 1 → Verb folgt."
+    },
+    {
+     "t": "order",
+     "a": "Das Fliegen schadet dem Klima. Deshalb fahre ich mit dem Zug.",
+     "chunks": [
+      "Das Fliegen",
+      "schadet",
+      "dem Klima.",
+      "Deshalb",
+      "fahre",
+      "ich",
+      "mit dem Zug"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Es regnet stark. Trotzdem demonstrieren viele Schüler.",
+     "chunks": [
+      "Es",
+      "regnet",
+      "stark.",
+      "Trotzdem",
+      "demonstrieren",
+      "viele Schüler"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Die Mieten sind hoch. Deshalb viele junge Menschen ziehen aufs Land.",
+     "a": "Die Mieten sind hoch. Deshalb ziehen viele junge Menschen aufs Land."
+    },
+    {
+     "t": "fix",
+     "w": "Es regnet, trotzdem wir gehen spazieren.",
+     "a": "Es regnet, trotzdem gehen wir spazieren."
+    },
+    {
+     "t": "fix",
+     "w": "Außerdem, der Tourismus schafft Arbeitsplätze.",
+     "a": "Außerdem schafft der Tourismus Arbeitsplätze."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „deshalb“:\nDer Bus fährt selten. Viele Familien brauchen ein Auto.",
+     "a": "Der Bus fährt selten. Deshalb brauchen viele Familien ein Auto.",
+     "acc": [
+      "Der Bus fährt selten, deshalb brauchen viele Familien ein Auto."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „trotzdem“:\nDas Handyverbot ist streng. Viele Schüler finden es gut.",
+     "a": "Das Handyverbot ist streng. Trotzdem finden viele Schüler es gut.",
+     "acc": [
+      "Das Handyverbot ist streng. Trotzdem finden es viele Schüler gut.",
+      "Das Handyverbot ist streng, trotzdem finden viele Schüler es gut.",
+      "Das Handyverbot ist streng, trotzdem finden es viele Schüler gut."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Flying is cheap. Nevertheless, I take the train.",
+     "a": "Fliegen ist billig. Trotzdem fahre ich mit dem Zug.",
+     "acc": [
+      "Fliegen ist billig. Trotzdem nehme ich den Zug.",
+      "Fliegen ist günstig. Trotzdem fahre ich mit dem Zug.",
+      "Fliegen ist günstig. Trotzdem nehme ich den Zug.",
+      "Das Fliegen ist billig. Trotzdem fahre ich mit dem Zug."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Rents are high. That's why many people move to the countryside.",
+     "a": "Die Mieten sind hoch. Deshalb ziehen viele Menschen aufs Land.",
+     "acc": [
+      "Die Mieten sind hoch. Darum ziehen viele Menschen aufs Land.",
+      "Die Mieten sind hoch. Daher ziehen viele Menschen aufs Land."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Das Fliegen schadet dem Klima. Deshalb fahre ich mit dem Zug."
+    }
+   ]
+  },
+  {
+   "id": "u12l3",
+   "title": "weil, denn oder deshalb?",
+   "s": "konnektor.mix",
+   "gen": {
+    "adverbConnector": 1,
+    "weil": 2
+   },
+   "items": [
+    {
+     "t": "match",
+     "q": "Welche Wortstellung folgt?",
+     "pairs": [
+      [
+       "denn",
+       "Subjekt + Verb"
+      ],
+      [
+       "deshalb",
+       "Verb + Subjekt"
+      ],
+      [
+       "weil",
+       "Verb am Ende"
+      ],
+      [
+       "obwohl",
+       "Verb am Ende"
+      ]
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Welche Wortstellung folgt?",
+     "pairs": [
+      [
+       "aber",
+       "Subjekt + Verb"
+      ],
+      [
+       "trotzdem",
+       "Verb + Subjekt"
+      ],
+      [
+       "dass",
+       "Verb am Ende"
+      ],
+      [
+       "außerdem",
+       "Verb + Subjekt"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich lerne heute, ___ morgen die Schularbeit ist.",
+     "o": [
+      "weil",
+      "denn",
+      "deshalb"
+     ],
+     "a": "weil",
+     "y": [
+      "Verb am Ende → weil",
+      "denn → Verb am Ende",
+      "deshalb → Verb am Ende"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich lerne heute, ___ morgen ist die Schularbeit.",
+     "o": [
+      "denn",
+      "weil",
+      "obwohl"
+     ],
+     "a": "denn"
+    },
+    {
+     "t": "mc",
+     "q": "Morgen ist die Schularbeit. ___ lerne ich heute.",
+     "o": [
+      "Deshalb",
+      "Weil",
+      "Denn"
+     ],
+     "a": "Deshalb"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib denselben Inhalt mit „weil“:\nIch fahre mit dem Zug, denn das Fliegen schadet dem Klima.",
+     "a": "Ich fahre mit dem Zug, weil das Fliegen dem Klima schadet."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib denselben Inhalt mit „deshalb“:\nIch fahre mit dem Zug, weil das Fliegen dem Klima schadet.",
+     "a": "Das Fliegen schadet dem Klima. Deshalb fahre ich mit dem Zug.",
+     "acc": [
+      "Das Fliegen schadet dem Klima, deshalb fahre ich mit dem Zug."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „denn“:\nViele Schüler sind müde, weil sie zu wenig schlafen.",
+     "a": "Viele Schüler sind müde, denn sie schlafen zu wenig."
+    },
+    {
+     "t": "fix",
+     "w": "Ich bleibe zu Hause, weil ich bin krank.",
+     "a": "Ich bleibe zu Hause, weil ich krank bin."
+    },
+    {
+     "t": "fix",
+     "w": "Ich bleibe zu Hause, denn ich krank bin.",
+     "a": "Ich bleibe zu Hause, denn ich bin krank."
+    },
+    {
+     "t": "listen",
+     "a": "Ich lerne heute, weil morgen die Schularbeit ist."
+    }
+   ]
+  },
+  {
+   "id": "u12l4",
+   "title": "Konnektoren im Text",
+   "s": "konnektor.text",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welcher Konnektor passt? Viele Jugendliche nutzen TikTok. ___ verbringen sie dort zu viel Zeit.",
+     "o": [
+      "Allerdings",
+      "Denn",
+      "Weil"
+     ],
+     "a": "Allerdings",
+     "r": "allerdings = however (Einschränkung), Position 1 → Verb folgt."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Konnektor passt? Zuerst lesen wir die Angabe. ___ schreiben wir einen Plan.",
+     "o": [
+      "Danach",
+      "Obwohl",
+      "Sondern"
+     ],
+     "a": "Danach"
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Konnektor passt? Das Klimaticket ist günstig. ___ ist es in ganz Österreich gültig.",
+     "o": [
+      "Außerdem",
+      "Trotzdem",
+      "Sonst"
+     ],
+     "a": "Außerdem"
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Konnektor passt? Der Bus fährt selten. ___ nehmen viele das Auto.",
+     "o": [
+      "Daher",
+      "Außerdem",
+      "Jedoch"
+     ],
+     "a": "Daher"
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Konnektor passt? Massentourismus bringt Geld. ___ leidet die Natur.",
+     "o": [
+      "Gleichzeitig",
+      "Deshalb",
+      "Denn"
+     ],
+     "a": "Gleichzeitig"
+    },
+    {
+     "t": "gap",
+     "q": "Zunächst möchte ich die Vorteile nennen. ___ gehe ich auf die Nachteile ein.",
+     "o": [
+      "Anschließend",
+      "Obwohl",
+      "Weil"
+     ],
+     "a": "Anschließend"
+    },
+    {
+     "t": "gap",
+     "q": "Das Handy ist wichtig für die Recherche. ___ lenkt es oft ab.",
+     "o": [
+      "Andererseits",
+      "Deshalb",
+      "Daher"
+     ],
+     "a": "Andererseits"
+    },
+    {
+     "t": "order",
+     "a": "Außerdem schafft der Tourismus viele Arbeitsplätze.",
+     "chunks": [
+      "Außerdem",
+      "schafft",
+      "der Tourismus",
+      "viele Arbeitsplätze"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Allerdings leidet die Natur unter den Touristen.",
+     "chunks": [
+      "Allerdings",
+      "leidet",
+      "die Natur",
+      "unter den Touristen"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Außerdem viele Jugendliche lesen keine Zeitung.",
+     "a": "Außerdem lesen viele Jugendliche keine Zeitung."
+    },
+    {
+     "t": "fix",
+     "w": "Andererseits, das Handy lenkt ab.",
+     "a": "Andererseits lenkt das Handy ab."
+    },
+    {
+     "t": "tr",
+     "en": "However, nature suffers.",
+     "a": "Allerdings leidet die Natur.",
+     "acc": [
+      "Jedoch leidet die Natur.",
+      "Die Natur leidet jedoch."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "In addition, tourism creates jobs.",
+     "a": "Außerdem schafft der Tourismus Arbeitsplätze.",
+     "acc": [
+      "Außerdem schafft Tourismus Arbeitsplätze.",
+      "Darüber hinaus schafft der Tourismus Arbeitsplätze."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Allerdings leidet die Natur unter den vielen Touristen."
+    }
+   ]
+  }
+ ]
+}

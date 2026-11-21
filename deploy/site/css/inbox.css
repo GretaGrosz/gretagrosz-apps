@@ -1,0 +1,47 @@
+/* Greta's inbox: a plain list on the snow background, one card per message. */
+.ib { background: var(--snow); }
+.ib-main { max-width: 720px; margin: 0 auto; padding: calc(env(safe-area-inset-top) + 28px) var(--gutter) calc(env(safe-area-inset-bottom) + 48px); }
+.ib-main h1 { font-size: 34px; letter-spacing: -0.035em; }
+.ib-lock { max-width: 420px; padding-top: 12vh; }
+.ib-key { display: grid; gap: 14px; margin-top: 24px; }
+.ib-key .gfield input { background: var(--white); }
+.ib-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ib-tools { display: flex; gap: 2px; }
+.ib-ic { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--ink); cursor: pointer; }
+.ib-ic[hidden] { display: none; }
+.ib-ic svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ib-ic[aria-pressed='true'] { background: var(--ink); color: var(--white); }
+.ib-ic[aria-pressed='true'] svg { fill: currentColor; }
+@media (hover: hover) { .ib-ic:not([aria-pressed='true']):hover { background: rgba(35, 43, 61, 0.06); } }
+.ib-tabs { margin-top: 18px; background: var(--mist); }
+.ib-tabs label > span { display: flex; align-items: center; justify-content: center; gap: 6px; }
+.ib-tabs b { font-weight: 900; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ib-note { min-height: 0; margin-top: 12px; color: var(--muted); font-size: 15px; font-weight: 700; }
+.ib-note:empty { display: none; }
+.ib-list { list-style: none; display: grid; gap: 12px; margin: 16px 0 0; padding: 0; }
+.ib-msg { padding: 20px 20px 16px; border-radius: 22px; background: var(--white); box-shadow: var(--shadow-1); transition: opacity 0.25s, transform 0.3s var(--out); }
+.ib-msg.leaving { opacity: 0.4; transform: scale(0.98); }
+.ib-msg.hit { box-shadow: 0 0 0 2px var(--blue), var(--shadow-1); }
+.ib-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; font-weight: 700; color: var(--muted); }
+.ib-meta time { margin-left: auto; font-variant-numeric: tabular-nums; }
+.ib-topic { padding: 3px 10px; border-radius: 999px; background: var(--cloud); color: var(--ink); font-weight: 800; }
+.ib-topic.t-weekendink { background: #FFF1C9; color: #6B4B00; }
+.ib-topic.t-cv { background: var(--green-soft); color: #1F6B41; }
+.ib-topic.t-blank { background: #FBE3DC; color: #8A3B26; }
+.ib-sus { padding: 3px 10px; border-radius: 999px; background: #FDF1F0; color: #A3332D; font-weight: 800; }
+.ib-msg h2 { margin-top: 12px; font-size: 21px; letter-spacing: -0.025em; }
+.ib-mail { display: inline-block; margin-top: 2px; color: var(--blue); font-weight: 700; overflow-wrap: anywhere; }
+.ib-det { margin-top: 10px; font-weight: 800; color: var(--ink); }
+.ib-body { margin-top: 10px; white-space: pre-wrap; overflow-wrap: anywhere; color: var(--text); font-weight: 600; }
+.ib-logo { margin: 14px 0 0; padding: 12px; border-radius: 16px; background: var(--snow); }
+.ib-logo img { max-width: 100%; max-height: 240px; margin: 0 auto; object-fit: contain; }
+.ib-preview { margin: 14px 0 0; }
+.ib-preview img { width: 100%; aspect-ratio: 16 / 10; border-radius: 16px; object-fit: cover; }
+.ib-det a { color: var(--blue); overflow-wrap: anywhere; }
+.ib-acts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.ib-acts .btn { min-height: 44px; }
+.ib-del { color: #A3332D; }
+.ib-empty { margin-top: 48px; text-align: center; color: var(--muted); font-size: 17px; font-weight: 700; }
+.ib-more { display: flex; margin: 20px auto 0; }
+.ib-more[hidden], .ib-empty[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { .ib-msg { transition: none; } }

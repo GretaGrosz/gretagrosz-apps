@@ -1,0 +1,337 @@
+{
+ "id": "u27",
+ "n": 27,
+ "phase": 4,
+ "level": "C1",
+ "title": "Modalverben subjektiv",
+ "tips": {
+  "de": "Modalverben können auch zeigen, wie sicher der Sprecher ist oder woher eine Information stammt. Mit Infinitiv Perfekt (Partizip + haben/sein) beziehen sie sich auf die Vergangenheit. muss = fast sicher (≈ 90 %), dürfte = wahrscheinlich (≈ 75 %), kann/könnte = möglich (≈ 40–50 %), soll = man sagt / es wird berichtet, will = die Person behauptet es selbst. Beispiel: Der Minister soll von dem Skandal gewusst haben (= es wird berichtet).",
+  "en": "Modal verbs can show certainty or source: muss (must have), dürfte (probably), könnte (might), soll (is said to), will (claims to). With the past: modal + participle + haben/sein: 'Er soll es gewusst haben' = he is said to have known it.",
+  "contrast": "English 'He must have done it' = 'Er muss es getan haben' (same structure, verb group at the end). But 'soll' and 'will' are false friends here: 'Er will reich sein' = he CLAIMS to be rich, and 'Er soll reich sein' = people SAY he is rich. They do not mean 'he wants to' or 'he should'.",
+  "table": [
+   [
+    "Sicherheit",
+    "Gegenwart",
+    "Vergangenheit"
+   ],
+   [
+    "≈ 90 %",
+    "Er muss krank sein.",
+    "Er muss krank gewesen sein."
+   ],
+   [
+    "≈ 75 %",
+    "Er dürfte krank sein.",
+    "Er dürfte krank gewesen sein."
+   ],
+   [
+    "≈ 40 %",
+    "Er könnte krank sein.",
+    "Er könnte krank gewesen sein."
+   ],
+   [
+    "Gerücht",
+    "Er soll krank sein.",
+    "Er soll krank gewesen sein."
+   ],
+   [
+    "Behauptung",
+    "Er will krank sein.",
+    "Er will krank gewesen sein."
+   ]
+  ],
+  "examples": [
+   "Der Minister soll von dem Skandal gewusst haben.",
+   "Die Firma dürfte viel Geld verloren haben.",
+   "Er will den Unfall nicht gesehen haben.",
+   "Das Licht ist an – sie muss zu Hause sein.",
+   "Der Zug könnte Verspätung haben."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u27l1",
+   "title": "Wie sicher? muss, dürfte, könnte",
+   "s": "verb.modalsubj",
+   "gen": {
+    "modalSubjektiv": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Das Licht ist an – sie ___ zu Hause sein.",
+     "o": [
+      "muss",
+      "soll",
+      "will"
+     ],
+     "a": "muss",
+     "y": [
+      "muss = fast sicher (Schlussfolgerung)",
+      "muss = Pflicht",
+      "man sagt es"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Es ist erst acht Uhr. Der Zug ___ etwas Verspätung haben.",
+     "o": [
+      "könnte",
+      "will",
+      "muss unbedingt"
+     ],
+     "a": "könnte"
+    },
+    {
+     "t": "mc",
+     "q": "Die Firma ___ im letzten Jahr viel Geld verloren haben.",
+     "h": "(wahrscheinlich)",
+     "o": [
+      "dürfte",
+      "will",
+      "darf"
+     ],
+     "a": "dürfte",
+     "r": "dürfte = wahrscheinlich (Konjunktiv II von dürfen)."
+    },
+    {
+     "t": "mc",
+     "q": "Welche Form ist richtig? „It must have been difficult.“",
+     "o": [
+      "Es muss schwierig gewesen sein.",
+      "Es muss schwierig sein gewesen.",
+      "Es hat schwierig sein müssen."
+     ],
+     "a": "Es muss schwierig gewesen sein."
+    },
+    {
+     "t": "gap",
+     "q": "Sie hat nicht geantwortet. Sie ___ die Nachricht nicht gesehen ___.",
+     "h": "(muss, fast sicher)",
+     "a": [
+      "muss",
+      "haben"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Straße ist nass. Es ___ in der Nacht geregnet ___.",
+     "h": "(muss)",
+     "a": [
+      "muss",
+      "haben"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Er ___ den Termin vergessen ___.",
+     "h": "(könnte, vielleicht)",
+     "a": [
+      "könnte",
+      "haben"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Sie muss den Bus verpasst sein.",
+     "a": "Sie muss den Bus verpasst haben."
+    },
+    {
+     "t": "fix",
+     "w": "Er dürfte schon nach Hause gegangen haben.",
+     "a": "Er dürfte schon nach Hause gegangen sein."
+    },
+    {
+     "t": "tr",
+     "en": "It must have been difficult.",
+     "a": "Es muss schwierig gewesen sein.",
+     "acc": [
+      "Es muss schwer gewesen sein."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "She might have forgotten the date.",
+     "a": "Sie könnte den Termin vergessen haben.",
+     "acc": [
+      "Sie könnte das Datum vergessen haben."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Straße ist nass. Es muss in der Nacht geregnet haben."
+    }
+   ]
+  },
+  {
+   "id": "u27l2",
+   "title": "soll & will: Gerücht und Behauptung",
+   "s": "verb.modalsubj",
+   "gen": {
+    "modalSubjektiv": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "„Der Minister soll von dem Skandal gewusst haben.“ Was bedeutet das?",
+     "o": [
+      "Man berichtet, dass er davon wusste.",
+      "Er hätte davon wissen müssen.",
+      "Er behauptet, dass er davon wusste."
+     ],
+     "a": "Man berichtet, dass er davon wusste."
+    },
+    {
+     "t": "mc",
+     "q": "„Er will den Unfall nicht gesehen haben.“ Was bedeutet das?",
+     "o": [
+      "Er behauptet, dass er ihn nicht gesehen hat.",
+      "Er möchte den Unfall nicht sehen.",
+      "Man sagt, dass er ihn nicht gesehen hat."
+     ],
+     "a": "Er behauptet, dass er ihn nicht gesehen hat."
+    },
+    {
+     "t": "mc",
+     "q": "Laut Zeitung ist das Konzert ausverkauft. → Das Konzert ___ ausverkauft sein.",
+     "o": [
+      "soll",
+      "will",
+      "muss"
+     ],
+     "a": "soll"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „sollen“:\nEs wird berichtet, dass die Firma Steuern hinterzogen hat.",
+     "a": "Die Firma soll Steuern hinterzogen haben."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „wollen“:\nDer Schüler behauptet, dass er die Hausübung gemacht hat.",
+     "a": "Der Schüler will die Hausübung gemacht haben."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „sollen“:\nMan sagt, dass Hallstatt im Sommer völlig überfüllt ist.",
+     "a": "Hallstatt soll im Sommer völlig überfüllt sein."
+    },
+    {
+     "t": "fix",
+     "w": "Er will es nicht gewusst sein.",
+     "a": "Er will es nicht gewusst haben."
+    },
+    {
+     "t": "tr",
+     "en": "The minister is said to have known about it.",
+     "a": "Der Minister soll davon gewusst haben."
+    },
+    {
+     "t": "tr",
+     "en": "He claims not to have seen anything.",
+     "a": "Er will nichts gesehen haben."
+    },
+    {
+     "t": "listen",
+     "a": "Der Minister soll von dem Skandal gewusst haben."
+    }
+   ]
+  },
+  {
+   "id": "u27l3",
+   "title": "Doppelinfinitiv: hat … machen müssen",
+   "s": "verb.doppelinf",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Perfekt von „Ich musste lernen.“",
+     "o": [
+      "Ich habe lernen müssen.",
+      "Ich habe lernen gemusst.",
+      "Ich habe gemusst lernen."
+     ],
+     "a": "Ich habe lernen müssen.",
+     "y": [
+      "Modalverb + Infinitiv im Perfekt → zwei Infinitive (Ersatzinfinitiv)",
+      "Partizip gemusst",
+      "Partizip vor dem Infinitiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Perfekt von „Sie ließ das Handy reparieren.“",
+     "o": [
+      "Sie hat das Handy reparieren lassen.",
+      "Sie hat das Handy reparieren gelassen.",
+      "Sie hat das Handy gelassen reparieren."
+     ],
+     "a": "Sie hat das Handy reparieren lassen."
+    },
+    {
+     "t": "mc",
+     "q": "Im Nebensatz: „…, weil ich lange ___.“",
+     "o": [
+      "habe warten müssen",
+      "warten müssen habe",
+      "müssen warten habe"
+     ],
+     "a": "habe warten müssen",
+     "r": "Bei zwei Infinitiven steht das Hilfsverb im Nebensatz VOR den Infinitiven: …, weil ich habe warten müssen."
+    },
+    {
+     "t": "gap",
+     "q": "Wir ___ das Projekt leider abbrechen ___.",
+     "h": "(müssen, Perfekt)",
+     "a": [
+      "haben",
+      "müssen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Er hätte früher kommen ___.",
+     "h": "(sollen)",
+     "a": "sollen"
+    },
+    {
+     "t": "tf",
+     "q": "Ins Perfekt:\nWir konnten die Schularbeit nicht verschieben.",
+     "a": "Wir haben die Schularbeit nicht verschieben können."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „Ich weiß, dass …“:\nSie hat das Handy reparieren lassen.",
+     "a": "Ich weiß, dass sie das Handy hat reparieren lassen.",
+     "r": "Zwei Infinitive am Ende (reparieren lassen) → das Hilfsverb „hat“ steht im Nebensatz davor."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe lange warten gemusst.",
+     "a": "Ich habe lange warten müssen."
+    },
+    {
+     "t": "fix",
+     "w": "Du hättest das früher sagen gesollt.",
+     "a": "Du hättest das früher sagen sollen."
+    },
+    {
+     "t": "tr",
+     "en": "You should have said that earlier.",
+     "a": "Du hättest das früher sagen sollen."
+    },
+    {
+     "t": "tr",
+     "en": "We had to cancel the trip.",
+     "a": "Wir haben die Reise absagen müssen.",
+     "acc": [
+      "Wir mussten die Reise absagen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Du hättest das früher sagen sollen."
+    }
+   ]
+  }
+ ]
+}

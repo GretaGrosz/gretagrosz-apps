@@ -1,0 +1,218 @@
+{
+ "id": "u33",
+ "n": 33,
+ "phase": 4,
+ "level": "C1",
+ "title": "Relativsätze C1: wer, was, wo(r)-",
+ "tips": {
+  "de": "„was“ als Relativpronomen nach: das, etwas, nichts, alles, vieles, manches, einiges, Superlativ als Nomen (das Beste, was …) und wenn sich der Relativsatz auf den ganzen Satz bezieht (Er kam zu spät, was alle ärgerte). Mit Präposition wird daraus wo(r)-: alles, worüber wir gesprochen haben. „wer … (der)“ = jeder, der: Wer viel liest, (der) schreibt besser. „wo“ für Orte und Zeiten: die Stadt, wo / in der ich wohne; in dem Moment, wo / als … Achte auf den Fall: Wem das nicht gefällt, der soll gehen.",
+  "en": "Use 'was' after das, etwas, nichts, alles, superlatives and when referring to a whole clause ('which annoyed everyone'). With prepositions: worüber, wofür, womit. 'Wer …' = whoever / anyone who.",
+  "contrast": "English 'which' after a whole sentence ('He came late, which annoyed everyone') is 'was' in German, NOT 'das' or 'welches'. And 'everything that' = 'alles, was' (not 'alles, das').",
+  "examples": [
+   "Das ist alles, was ich weiß.",
+   "Das Beste, was du tun kannst, ist üben.",
+   "Er kam zu spät, was alle ärgerte.",
+   "Wer viel liest, schreibt besser.",
+   "Es gibt nichts, worüber ich mich mehr freue."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u33l1",
+   "title": "was & wo(r)-",
+   "s": "rel.was",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Das ist alles, ___ ich weiß.",
+     "o": [
+      "was",
+      "das",
+      "welches"
+     ],
+     "a": "was",
+     "y": [
+      "nach alles/etwas/nichts → was",
+      "Bezugswort neutral → das",
+      "welches = Standard"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das Beste, ___ du tun kannst, ist üben.",
+     "o": [
+      "was",
+      "das",
+      "der"
+     ],
+     "a": "was"
+    },
+    {
+     "t": "mc",
+     "q": "Er kam zu spät, ___ alle ärgerte.",
+     "o": [
+      "was",
+      "das",
+      "der"
+     ],
+     "a": "was",
+     "y": [
+      "bezieht sich auf den ganzen Satz → was",
+      "das Kommen → das",
+      "der Mann → der"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Es gibt nichts, ___ ich mich mehr freue.",
+     "o": [
+      "worüber",
+      "über das",
+      "über was"
+     ],
+     "a": "worüber"
+    },
+    {
+     "t": "gap",
+     "q": "Vieles, ___ in der Zeitung steht, stimmt nicht.",
+     "a": "was"
+    },
+    {
+     "t": "gap",
+     "q": "Das ist etwas, ___ ich nicht verstehe.",
+     "a": "was"
+    },
+    {
+     "t": "gap",
+     "q": "Die Mieten steigen weiter, ___ viele junge Menschen belastet.",
+     "a": "was"
+    },
+    {
+     "t": "gap",
+     "q": "Das ist alles, ___ wir gesprochen haben.",
+     "h": "(sprechen über)",
+     "a": "worüber"
+    },
+    {
+     "t": "gap",
+     "q": "Das Einzige, ___ ich mich interessiere, ist Musik.",
+     "h": "(sich interessieren für)",
+     "a": "wofür"
+    },
+    {
+     "t": "fix",
+     "w": "Das ist alles, das ich weiß.",
+     "a": "Das ist alles, was ich weiß."
+    },
+    {
+     "t": "fix",
+     "w": "Er hat die Schularbeit bestanden, das mich sehr freut.",
+     "a": "Er hat die Schularbeit bestanden, was mich sehr freut."
+    },
+    {
+     "t": "fix",
+     "w": "Es gibt nichts, über was ich mich mehr freue.",
+     "a": "Es gibt nichts, worüber ich mich mehr freue."
+    },
+    {
+     "t": "tr",
+     "en": "That is everything I know.",
+     "a": "Das ist alles, was ich weiß."
+    },
+    {
+     "t": "tr",
+     "en": "He came late, which annoyed everyone.",
+     "a": "Er kam zu spät, was alle ärgerte.",
+     "acc": [
+      "Er ist zu spät gekommen, was alle geärgert hat."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Mieten steigen weiter, was viele junge Menschen belastet."
+    }
+   ]
+  },
+  {
+   "id": "u33l2",
+   "title": "wer … (der), wo, Kasus",
+   "s": "rel.wer",
+   "gen": {
+    "relative": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ viel liest, schreibt besser.",
+     "o": [
+      "Wer",
+      "Der",
+      "Was"
+     ],
+     "a": "Wer"
+    },
+    {
+     "t": "mc",
+     "q": "Wem das nicht gefällt, ___ soll es sagen.",
+     "o": [
+      "der",
+      "wer",
+      "dem"
+     ],
+     "a": "der",
+     "r": "wem (Dativ, gefallen) … der (Nominativ, Subjekt von „soll“)."
+    },
+    {
+     "t": "mc",
+     "q": "Wen das Thema interessiert, ___ kann gern mitdiskutieren.",
+     "o": [
+      "der",
+      "den",
+      "wer"
+     ],
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "___ zu spät kommt, muss draußen warten.",
+     "a": "Wer"
+    },
+    {
+     "t": "gap",
+     "q": "In dem Moment, ___ der Lehrer kam, war es still.",
+     "h": "(Zeit)",
+     "a": "als",
+     "acc": [
+      "wo",
+      "in dem"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „Wer …, (der) …“:\nJeder, der die Angabe genau liest, macht weniger Fehler.",
+     "a": "Wer die Angabe genau liest, macht weniger Fehler.",
+     "acc": [
+      "Wer die Angabe genau liest, der macht weniger Fehler."
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Der viel übt, macht weniger Fehler.",
+     "a": "Wer viel übt, macht weniger Fehler."
+    },
+    {
+     "t": "tr",
+     "en": "Whoever reads a lot writes better.",
+     "a": "Wer viel liest, schreibt besser.",
+     "acc": [
+      "Wer viel liest, der schreibt besser."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Wer die Angabe genau liest, macht weniger Fehler."
+    }
+   ]
+  }
+ ]
+}

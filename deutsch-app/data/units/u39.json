@@ -1,0 +1,216 @@
+{
+ "id": "u39",
+ "n": 39,
+ "phase": 4,
+ "level": "C1",
+ "title": "Stil & Kohärenz C1",
+ "tips": {
+  "de": "C1-Texte sind präzise, abwechslungsreich und gut verbunden. 1) Rückverweise statt Wiederholung: dies, dieser Aspekt, Letzteres, Ersteres, Ersteres … Letzteres, derartige Maßnahmen, Ersteres. 2) Synonyme statt immer derselben Wörter: sagen → betonen, erklären, hervorheben, einräumen; zeigen → verdeutlichen, belegen, veranschaulichen; wichtig → wesentlich, entscheidend, von zentraler Bedeutung. 3) Register: Schriftsprache statt Umgangssprache (halt, eh, voll, irgendwie, so ein, cool vermeiden). 4) Präzise Verben statt machen/geben/haben: eine Entscheidung treffen, Kritik üben, einen Beitrag leisten, Maßnahmen ergreifen. 5) Abwechselnde Satzanfänge (nicht jeder Satz mit dem Subjekt).",
+  "en": "C1 writing: refer back instead of repeating (dies, Letzteres, derartige Maßnahmen), vary your verbs (betonen, verdeutlichen, belegen), avoid colloquial words (halt, eh, voll), and vary sentence openings.",
+  "contrast": "English 'the former … the latter' = 'Ersteres … Letzteres' / 'der Erstere … der Letztere'. Spoken Austrian fillers like 'halt', 'eh', 'voll' have no place in a Schularbeit. They cost you marks for Ausdruck.",
+  "examples": [
+   "Viele fordern ein Verbot, andere eine Obergrenze. Letztere halte ich für sinnvoller.",
+   "Dies verdeutlicht, wie groß das Problem ist.",
+   "Derartige Maßnahmen sind von zentraler Bedeutung.",
+   "Die Autorin hebt hervor, dass …",
+   "Daraus lässt sich ableiten, dass …"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u39l1",
+   "title": "Präzise Wörter statt Alltagssprache",
+   "s": "stil.register",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Formulierung passt in eine Erörterung?",
+     "o": [
+      "Das ist von zentraler Bedeutung.",
+      "Das ist voll wichtig.",
+      "Das ist halt irgendwie wichtig."
+     ],
+     "a": "Das ist von zentraler Bedeutung."
+    },
+    {
+     "t": "mc",
+     "q": "Ersetze „sagt“: Die Autorin ___, dass Jugendliche zu wenig schlafen.",
+     "o": [
+      "betont",
+      "redet",
+      "quatscht"
+     ],
+     "a": "betont"
+    },
+    {
+     "t": "mc",
+     "q": "Ersetze „zeigt“: Diese Studie ___ das Problem deutlich.",
+     "o": [
+      "veranschaulicht",
+      "macht",
+      "gibt"
+     ],
+     "a": "veranschaulicht"
+    },
+    {
+     "t": "mc",
+     "q": "Ersetze „machen“: eine Entscheidung ___",
+     "o": [
+      "treffen",
+      "tun",
+      "geben"
+     ],
+     "a": "treffen"
+    },
+    {
+     "t": "mc",
+     "q": "Ersetze „eh“: Das Problem ist ___ bekannt.",
+     "o": [
+      "ohnehin",
+      "halt",
+      "voll"
+     ],
+     "a": "ohnehin"
+    },
+    {
+     "t": "fix",
+     "w": "Das ist halt ein großes Problem.",
+     "a": "Das ist tatsächlich ein großes Problem.",
+     "acc": [
+      "Das ist durchaus ein großes Problem.",
+      "Das ist zweifellos ein großes Problem."
+     ],
+     "r": "„halt“ ist Umgangssprache."
+    },
+    {
+     "t": "fix",
+     "w": "Viele Leute finden das voll schlecht.",
+     "a": "Viele Leute finden das sehr schlecht.",
+     "acc": [
+      "Viele Leute finden das äußerst schlecht.",
+      "Viele Leute finden das ziemlich schlecht."
+     ],
+     "r": "„voll“ als Verstärkung ist Umgangssprache."
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere in Schriftsprache:\nDie Politiker machen halt nix gegen den Klimawandel.",
+     "a": "Die Politik unternimmt kaum etwas gegen den Klimawandel.",
+     "acc": [
+      "Die Politiker unternehmen kaum etwas gegen den Klimawandel.",
+      "Die Politiker unternehmen nichts gegen den Klimawandel.",
+      "Die Politik unternimmt nichts gegen den Klimawandel."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Diese Studie veranschaulicht das Problem sehr deutlich."
+    }
+   ]
+  },
+  {
+   "id": "u39l2",
+   "title": "Rückverweise & Verknüpfung",
+   "s": "stil.kohaerenz",
+   "items": [
+    {
+     "t": "mc",
+     "q": "„Viele fordern ein Verbot, andere eine Obergrenze. ___ halte ich für sinnvoller.“ (= die Obergrenze)",
+     "o": [
+      "Letztere",
+      "Erstere",
+      "Diese beide"
+     ],
+     "a": "Letztere"
+    },
+    {
+     "t": "mc",
+     "q": "Statt das Argument zu wiederholen: „Viele Orte sind überfüllt. ___ verdeutlicht, wie dringend das Problem ist.“",
+     "o": [
+      "Dies",
+      "Das Überfüllte",
+      "Es überfüllt"
+     ],
+     "a": "Dies"
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satzanfang verknüpft am besten mit dem vorigen Satz?",
+     "o": [
+      "Daraus lässt sich ableiten, dass …",
+      "Und dann ist es so, dass …",
+      "Also halt …"
+     ],
+     "a": "Daraus lässt sich ableiten, dass …"
+    },
+    {
+     "t": "gap",
+     "q": "Die Stadt plant eine Obergrenze. ___ Maßnahmen gibt es bereits in Venedig.",
+     "h": "(such, of this kind)",
+     "a": "Derartige",
+     "acc": [
+      "Solche",
+      "Ähnliche"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde ohne Wiederholung (mit „dies“):\nDie Mieten steigen stark. Die stark steigenden Mieten führen dazu, dass viele aufs Land ziehen.",
+     "a": "Die Mieten steigen stark. Dies führt dazu, dass viele aufs Land ziehen."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „Letzteres“:\nMan kann ein Verbot oder eine Obergrenze einführen. Die Obergrenze halte ich für sinnvoller.",
+     "a": "Man kann ein Verbot oder eine Obergrenze einführen. Letzteres halte ich für sinnvoller.",
+     "acc": [
+      "Man kann ein Verbot oder eine Obergrenze einführen. Letztere halte ich für sinnvoller."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Dies verdeutlicht, wie dringend das Problem ist."
+    }
+   ]
+  },
+  {
+   "id": "u39l3",
+   "title": "Satzanfänge variieren",
+   "s": "stil.variation",
+   "gen": {
+    "v2Front": 2,
+    "adverbConnector": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Version ist stilistisch besser?",
+     "o": [
+      "Das Fliegen ist billig. Dennoch schadet es dem Klima. Gerade deshalb sollten wir umdenken.",
+      "Das Fliegen ist billig. Das Fliegen schadet dem Klima. Wir sollten umdenken.",
+      "Fliegen ist billig und Fliegen schadet dem Klima und wir sollten umdenken."
+     ],
+     "a": "Das Fliegen ist billig. Dennoch schadet es dem Klima. Gerade deshalb sollten wir umdenken."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Angesichts dieser Entwicklung“:\nDie Regierung muss handeln.",
+     "a": "Angesichts dieser Entwicklung muss die Regierung handeln."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Nicht zuletzt“:\nDer Tourismus schafft Arbeitsplätze.",
+     "a": "Nicht zuletzt schafft der Tourismus Arbeitsplätze."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Umso wichtiger“:\nEs ist umso wichtiger, die Angabe genau zu lesen.",
+     "a": "Umso wichtiger ist es, die Angabe genau zu lesen."
+    },
+    {
+     "t": "listen",
+     "a": "Angesichts dieser Entwicklung muss die Regierung handeln."
+    }
+   ]
+  }
+ ]
+}

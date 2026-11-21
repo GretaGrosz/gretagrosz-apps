@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The suite's shared tokens; Yap's own colour is the accent (#E0244B, 4.6:1 with white) */
+:root {
+  color-scheme: light dark;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --bg: #F2F2F7; --surface: #FFFFFF; --elevated: #FFFFFF; --label: #000000; --label-2: #6C6C70; --label-3: #A1A1A6;
+  --sep: rgba(60, 60, 67, 0.29); --fill: rgba(118, 118, 128, 0.12);
+  --accent-rgb: 224 36 75; --accent: #E0244B; --accent-ink: #C81E42; --accent-soft: rgba(224, 36, 75, 0.12);
+  --red: #D70015; --green: #248A3D; --blue: #007AFF;
+  --wave-idle: rgba(60, 60, 67, 0.28); --grabber: rgba(60, 60, 67, 0.3);
+  --seg-on: #FFFFFF; --switch-off: rgba(120, 120, 128, 0.16);
+  --toast: rgba(30, 30, 32, 0.94); --toast-ink: #FFFFFF;
+  --glass-bg: rgb(250 250 252 / 0.72); --glass: saturate(180%) blur(20px); --glass-edge: inset 0 0 0 0.5px rgba(0, 0, 0, 0.08);
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000; --surface: #1C1C1E; --elevated: #2C2C2E; --label: #FFFFFF; --label-2: #AEAEB2; --label-3: #636366;
+    --sep: rgba(84, 84, 88, 0.6); --fill: rgba(118, 118, 128, 0.24);
+    --accent-ink: #E0244B; --accent-soft: rgba(255, 69, 108, 0.18);
+    --red: #FF453A; --green: #30D158; --blue: #0A84FF;
+    --wave-idle: rgba(235, 235, 245, 0.28); --grabber: rgba(235, 235, 245, 0.3);
+    --seg-on: #636366; --switch-off: rgba(120, 120, 128, 0.32);
+    --toast: rgba(242, 242, 247, 0.96); --toast-ink: #000000;
+    --glass-bg: rgb(28 28 30 / 0.72); --glass-edge: inset 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+  }
+  .text-accent { color: #FF4D6D; }
+}
+html { background: var(--bg); color: var(--label); }
+body {
+  @apply font-body antialiased;
+  background: var(--bg);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  -webkit-text-size-adjust: 100%;
+}
+button { -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+input { font-size: 17px; }
+input[type="search"]::-webkit-search-cancel-button { display: none; }
+:focus-visible { outline: 3px solid rgb(var(--accent-rgb) / 0.6); outline-offset: 2px; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Glass only where Apple uses it: bars, sheets, the mini player */
+.glass-bar {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass);
+  backdrop-filter: var(--glass);
+  box-shadow: var(--glass-edge);
+}
+.glass-sheet {
+  background: var(--bg);
+  box-shadow: 0 -1px 0 var(--sep), 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .glass-sheet { background: color-mix(in srgb, var(--bg) 92%, transparent); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass); }
+}
+/* Sheets and pages take focus as a whole when they open; only real controls get the ring */
+[tabindex="-1"]:focus, [tabindex="-1"]:focus-visible { outline: none; }
+/* Invisible hit areas: small things you can tap still get a 44-point target */
+.hit-area { position: relative; }
+.hit-area::after { content: ''; position: absolute; inset: calc(min(0px, (var(--hit-size, 44px) - 44px) / 2)); }
+.hit-y { position: relative; }
+.hit-y::after { content: ''; position: absolute; inset: -12px 0; }
+input:focus-visible { outline: none; }

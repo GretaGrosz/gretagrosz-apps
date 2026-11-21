@@ -1,0 +1,7595 @@
+// HU-Inhalte 3. Jahrgang – gleiche Struktur wie die deutschen Lerninhalte und Fragen.
+export default {
+  "lerninhalte": {
+    "unternehmensfuehrung-ueberblick": {
+      "schritte": [
+        {
+          "titel": "Mi a vállalatvezetés?",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Vállalatvezetés (menedzsment)",
+              "erklaerung": "Két dolgot jelent: azokat a SZEMÉLYEKET, akik a vállalatot vezetik (vezetők), és a vezetés FOLYAMATÁT (menedzsmentfolyamat)."
+            },
+            {
+              "type": "text",
+              "text": "Központi feladat: a vállalat sikerének biztosítása – nemcsak a mindennapokban, hanem mindenekelőtt hosszú távon és fenntarthatóan."
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "A víziótól …",
+                  "wert": "Normatív"
+                },
+                {
+                  "titel": "… a stratégián át …",
+                  "wert": "Stratégiai"
+                },
+                {
+                  "titel": "… a megvalósításig",
+                  "wert": "Operatív"
+                }
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szint",
+                "Ezzel foglalkozik …"
+              ],
+              "zeilen": [
+                [
+                  "Normatív menedzsment",
+                  "vízió, normák, értékek és célok (vállalati küldetésnyilatkozat)"
+                ],
+                [
+                  "Stratégiai menedzsment",
+                  "hosszú távú tervezés, vállalati stratégiák"
+                ],
+                [
+                  "Operatív menedzsment",
+                  "a célok és stratégiák célirányos megvalósítása"
+                ]
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Hajós példa: a kapitány biztonságban el akar jutni New Yorkba (vízió) → meghatározza a célt és az irányelveket (normatív) → az első tiszttel kidolgozza a tervet (stratégiai) → a tiszt felügyeli az utat (operatív)."
+            }
+          ]
+        },
+        {
+          "titel": "Hierarchiaszintek",
+          "blocks": [
+            {
+              "type": "pyramide",
+              "stufen": [
+                {
+                  "name": "Felső vezetés (top management)",
+                  "beispiel": "Ügyvezetés – teljes felelősség"
+                },
+                {
+                  "name": "Középvezetés (middle management)",
+                  "beispiel": "Osztályvezetés – közvetítő a felső és az alsó szint között"
+                },
+                {
+                  "name": "Alsó vezetés (lower management)",
+                  "beispiel": "Csapat-/csoportvezetés – operatív feladatok"
+                },
+                {
+                  "name": "Végrehajtó szint",
+                  "beispiel": "A munkavállalók megvalósítják a döntéseket"
+                }
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Minél magasabb a szint, annál kevesebb a vezető. Normatív + stratégiai → felső és középvezetés. Operatív → alsó vezetés. A kis üzemeknek gyakran csak 1–2 szintjük van."
+            },
+            {
+              "type": "begriff",
+              "term": "CEO, CSO, COO",
+              "erklaerung": "Chief Executive Officer (ügyvezető) · Chief Sales Officer (értékesítési vezető) · Chief Operating Officer (napi üzletmenet)."
+            }
+          ]
+        },
+        {
+          "titel": "Kommunikáció a vállalatban",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "A kommunikáció mint vezetési feladat",
+              "erklaerung": "Sikeres információcsere biztosítása a vezetők és a munkavállalók, valamint a csapatok és az osztályok között."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Sikertényező",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Világosság",
+                  "egyértelmű és érthető, nincsenek félreértések"
+                ],
+                [
+                  "Nyitottság",
+                  "nyíltan és őszintén a célokról, sikerekről, problémákról → bizalom"
+                ],
+                [
+                  "Rendszeresség",
+                  "az információk megbízhatóan és időben, rögzített csatornákon"
+                ],
+                [
+                  "Empátia",
+                  "a munkavállalók igényeinek figyelembevétele"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Digitális eszközök",
+              "erklaerung": "Microsoft Teams (chat, videokonferencia), Slack, intranet (belső platform), hírlevél-eszközök."
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Vállalatvezetés",
+          "punkte": [
+            "Vállalatvezetés = személyek (vezetők) + a vezetés folyamata",
+            "Normatív (vízió, értékek, küldetésnyilatkozat) → stratégiai (hosszú távú stratégiák) → operatív (megvalósítás)",
+            "Hierarchia: felső, közép-, alsó vezetés, végrehajtó szint (piramis)",
+            "Kommunikáció: világosság, nyitottság, rendszeresség, empátia; digitális eszközök"
+          ]
+        }
+      ]
+    },
+    "normatives-management": {
+      "schritte": [
+        {
+          "titel": "A vállalati küldetésnyilatkozat",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Normatív menedzsment",
+              "erklaerung": "Meghatározza a vállalat „játékszabályait”, hogy hosszú távon és felelősségteljesen működjön."
+            },
+            {
+              "type": "begriff",
+              "term": "Vállalati küldetésnyilatkozat (Leitbild)",
+              "erklaerung": "A vállalat írásban rögzített értelme és célja, meggyőződései és céljai. Iránymutatás a vezetés és az érintettek számára."
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "Vízió + misszió + filozófia",
+                  "wert": "Vállalati célok"
+                },
+                {
+                  "titel": "befolyásolja",
+                  "wert": "Vállalati kultúra"
+                }
+              ]
+            },
+            {
+              "type": "vergleich",
+              "frage": "A küldetésnyilatkozat funkciói:",
+              "links": {
+                "titel": "Belső hatás",
+                "punkte": [
+                  "Motiváció",
+                  "Összetartozás érzése",
+                  "A célok kommunikálása"
+                ]
+              },
+              "rechts": {
+                "titel": "Külső hatás",
+                "punkte": [
+                  "Pozitív imázs",
+                  "Hitelesség",
+                  "Vonzó az új munkavállalók számára"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "Vízió, misszió, filozófia",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Összetevő",
+                "Kérdés",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Vízió",
+                  "Hová akar eljutni a vállalat? (jövőkép)",
+                  "Instagram: „Capture and share the world’s moments.”"
+                ],
+                [
+                  "Misszió",
+                  "Miért létezik? (küldetés, haszon)",
+                  "Netflix: „To entertain the world.”"
+                ],
+                [
+                  "Vállalati filozófia",
+                  "Milyen értékek fontosak?",
+                  "Post AG: „Sárgák, zöldek, színesek vagyunk.”"
+                ],
+                [
+                  "Vállalati célok",
+                  "Mit akar elérni a jövőben?",
+                  "Piaci részesedés +7%"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Vízió = világítótorony (jövőkép). Misszió = a vállalat hozzájárulása. Nem minden vállalatnak van víziója, de mindegyiknek van missziója."
+            },
+            {
+              "type": "begriff",
+              "term": "Claim kontra szlogen",
+              "erklaerung": "Claim = hosszú távú, a missziót/USP-t fejezi ki („Bildung, die begeistert!”). Szlogen = rövidebb távú, egyes termékekre vonatkozik."
+            },
+            {
+              "type": "begriff",
+              "term": "Vállalati társadalmi felelősségvállalás (CSR)",
+              "erklaerung": "A vállalat önkéntes felelőssége a társadalom és a környezet iránt – az értékeknek konkrét intézkedésekben kell megmutatkozniuk."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "CSR-irányelv",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "ESG-kritériumok",
+                  "Environmental, Social, Governance – kötelező jelentés a nagy uniós vállalatoknak (250 főtől)"
+                ],
+                [
+                  "SDG-k",
+                  "Az ENSZ 17 fenntarthatósági célja"
+                ],
+                [
+                  "ISO 26000",
+                  "nemzetközi CSR-szabvány 7 alapelvvel"
+                ],
+                [
+                  "ENSZ Global Compact",
+                  "önkéntes paktum: 10 alapelv (emberi jogok, munka, környezet)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Vállalati célok",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "frage": "1. Az időtáv szerint:",
+              "links": {
+                "titel": "Stratégiai célok",
+                "punkte": [
+                  "Hosszú távú (kb. 5 év)",
+                  "A víziót és a missziót valósítják meg",
+                  "pl. az ügyfél-elégedettség 5 év alatt +10%"
+                ]
+              },
+              "rechts": {
+                "titel": "Operatív célok",
+                "punkte": [
+                  "Rövid és középtávú",
+                  "A stratégiai célokat valósítják meg konkrétan",
+                  "pl. a megkeresésekre 3 napon belül válaszolni"
+                ]
+              }
+            },
+            {
+              "type": "vergleich",
+              "frage": "2. A cél fajtája szerint:",
+              "links": {
+                "titel": "Pénzbeli (monetáris) célok",
+                "punkte": [
+                  "Pénzben mérhetők",
+                  "pl. árbevétel +10%"
+                ]
+              },
+              "rechts": {
+                "titel": "Nem pénzbeli célok",
+                "punkte": [
+                  "Pénzben nem mérhetők",
+                  "pl. rugalmas munkaidőmodell"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "3. Operacionalizálás",
+                "Kérdés",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "A cél tartalma",
+                  "Mit?",
+                  "A piaci részesedés növelése"
+                ],
+                [
+                  "A cél mértéke",
+                  "Mennyit?",
+                  "7%"
+                ],
+                [
+                  "Határidő",
+                  "Meddig?",
+                  "Az idei év decembere"
+                ],
+                [
+                  "Felelős",
+                  "Ki?",
+                  "Értékesítési vezető"
+                ],
+                [
+                  "A cél helye",
+                  "Hol?",
+                  "Indiai piac"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "4. A célok kapcsolata",
+                "Jelentés",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Célsemlegesség",
+                  "nem befolyásolják egymást",
+                  "ergonomikus munkahelyek ↔ logisztikai költségcsökkentés"
+                ],
+                [
+                  "Célkomplementaritás (harmónia)",
+                  "az egyik segíti a másikat",
+                  "ügyfél-elégedettség ↑ → árbevétel ↑"
+                ],
+                [
+                  "Célkonfliktus (célverseny)",
+                  "az egyik akadályozza a másikat",
+                  "munkahelyek megőrzése ↔ személyi költségek csökkentése"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Vállalati kultúra",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Vállalati kultúra",
+              "erklaerung": "Meghatározza, hogyan gondolkodnak és cselekszenek a vállalatnál: a közösen MEGÉLT és elfogadott értékek. Megmutatja, hogy a küldetésnyilatkozatot tényleg megélik-e."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Intézkedések a pozitív kultúráért"
+              ],
+              "zeilen": [
+                [
+                  "Nyílt párbeszéd minden hierarchiaszinten"
+                ],
+                [
+                  "Rituálék (közös ebédszünetek, csapatmegbeszélések, céges rendezvények)"
+                ],
+                [
+                  "Megélt munka–magánélet egyensúly (rugalmas munkaidő, home office, egészség)"
+                ],
+                [
+                  "A vezetés hitelesen példát mutat az értékekből"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Küldetésnyilatkozat",
+          "punkte": [
+            "Küldetésnyilatkozat = vízió + misszió + vállalati filozófia → vállalati célok → befolyásolja a kultúrát",
+            "Funkciók: belső hatás (motiváció) + külső hatás (imázs)",
+            "Vízió = jövőkép · misszió = küldetés/haszon · filozófia = értékek",
+            "CSR = társadalmi felelősségvállalás; ESG, SDG-k, ISO 26000, ENSZ Global Compact"
+          ]
+        },
+        {
+          "titel": "Célok és kultúra",
+          "punkte": [
+            "Stratégiai (hosszú távú) ↔ operatív (rövid/középtávú) · pénzbeli ↔ nem pénzbeli",
+            "Operacionalizálás: tartalom, mérték, határidő, felelős, hely (+ SMART)",
+            "A célok kapcsolata: semlegesség, komplementaritás, konfliktus",
+            "Vállalati kultúra = a ténylegesen megélt értékek"
+          ]
+        }
+      ]
+    },
+    "strategisches-operatives-management": {
+      "schritte": [
+        {
+          "titel": "A menedzsmentciklus",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Menedzsmentfolyamat",
+              "erklaerung": "A normatív menedzsment céljait a stratégiai és az operatív menedzsment valósítja meg – egy körforgásban."
+            },
+            {
+              "type": "zyklus",
+              "mitte": "Menedzsmentciklus",
+              "schritte": [
+                "Stratégiai + operatív tervezés",
+                "Döntés",
+                "Megvalósítás",
+                "Ellenőrzés (eltéréselemzés)"
+              ]
+            },
+            {
+              "type": "ablauf",
+              "titel": "A stratégia kidolgozása",
+              "schritte": [
+                {
+                  "titel": "A normatív menedzsment előírásai",
+                  "text": "vízió, értékek, hosszú távú célok"
+                },
+                {
+                  "titel": "Külső + belső elemzés",
+                  "text": "környezet/ágazat + belső helyzet"
+                },
+                {
+                  "titel": "Előrejelzések",
+                  "text": "jövőbeli fejlemények"
+                },
+                {
+                  "titel": "SWOT-elemzés",
+                  "text": "mindent összefoglalni"
+                },
+                {
+                  "titel": "Lehetséges stratégiák kidolgozása"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Külső elemzés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "PESTEL-elemzés (környezetelemzés)",
+              "erklaerung": "Megvizsgálja, milyen hatással van a környezet, és milyen lehetőségek és kockázatok adódnak."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Tényező",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "P – Politikai",
+                  "emelik a vámokat"
+                ],
+                [
+                  "E – Gazdasági (Economic)",
+                  "nőnek a nyersanyagköltségek"
+                ],
+                [
+                  "S – Társadalmi-kulturális",
+                  "az egészséges táplálkozás trendje"
+                ],
+                [
+                  "T – Technológiai",
+                  "a mesterséges intelligencia növeli a termelékenységet"
+                ],
+                [
+                  "E – Ökológiai",
+                  "szigorúbb környezetvédelmi előírások"
+                ],
+                [
+                  "L – Jogi (Legal)",
+                  "új minimálbér"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Öt erő modell (Porter)",
+              "erklaerung": "Ágazatelemzés: öt erő határozza meg, mennyire erős a verseny egy ágazatban."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Erő",
+                "Erős, ha …"
+              ],
+              "zeilen": [
+                [
+                  "A beszállítók alkuereje",
+                  "kevés a beszállító, nehéz váltani"
+                ],
+                [
+                  "A vevők alkuereje",
+                  "kevés vevő, könnyű váltani (árösszehasonlító oldalak)"
+                ],
+                [
+                  "Új versenytársak belépésének veszélye",
+                  "könnyű belépni a piacra, alig vannak belépési korlátok"
+                ],
+                [
+                  "Helyettesítő termékek veszélye",
+                  "valódi alternatívák (zabtej tehéntej helyett)"
+                ],
+                [
+                  "Verseny a meglévő versenytársak között",
+                  "sok hasonló kínáló, lassú piaci növekedés"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Nagy versenyintenzitás = az ágazat többnyire kevésbé nyereséges. Helyettesítők = hasonló funkciójú pótló termékek."
+            }
+          ]
+        },
+        {
+          "titel": "Belső elemzés és előrejelzések",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Belső elemzés",
+              "erklaerung": "Megvizsgálja az erősségeket és gyengeségeket (termelés, személyzet, pénzügyek, szervezet). Eszközök: belső auditok és benchmarking."
+            },
+            {
+              "type": "begriff",
+              "term": "Benchmarking",
+              "erklaerung": "Összehasonlítás a LEGJOBB versenytárssal. Az eredményt gyakran erősség-gyengeség profilként ábrázolják.",
+              "beispiel": "A Zalando az Amazonnal hasonlítja össze a visszáru-folyamatait."
+            },
+            {
+              "type": "vergleich",
+              "frage": "Előrejelzési módszerek:",
+              "links": {
+                "titel": "Forgatókönyv-technika",
+                "punkte": [
+                  "3 lehetséges jövőkép:",
+                  "Best case (pozitív)",
+                  "Realistic case (trend)",
+                  "Worst case (negatív)"
+                ]
+              },
+              "rechts": {
+                "titel": "Delphi-módszer",
+                "punkte": [
+                  "Szakértőket kérdeznek meg több körben",
+                  "A válaszokat összegzik és újraértékelik",
+                  "→ egyre pontosabb becslés"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "SWOT-elemzés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "SWOT-elemzés",
+              "erklaerung": "Összekapcsolja a lehetőségeket és veszélyeket (külső), valamint az erősségeket és gyengeségeket (belső). Ebből 4 stratégiai irány adódik."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "",
+                "Erősségek (S)",
+                "Gyengeségek (W)"
+              ],
+              "zeilen": [
+                [
+                  "Lehetőségek (O)",
+                  "S-O: az erősségek kihasználása a lehetőségek megragadására",
+                  "W-O: a gyengeségek leküzdése a lehetőségek kihasználásához"
+                ],
+                [
+                  "Veszélyek (T)",
+                  "S-T: az erősségek kihasználása a veszélyek elhárítására",
+                  "W-T: a gyengeségek csökkentése, hogy ne váljanak veszéllyé"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "S = Strengths, W = Weaknesses (belső) · O = Opportunities, T = Threats (külső)."
+            }
+          ]
+        },
+        {
+          "titel": "Stratégiák",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Versenystratégia (Porter)",
+                "Jelentés",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Költségvezető szerep",
+                  "a legalacsonyabb költségek → a legalacsonyabb árak",
+                  "KiK"
+                ],
+                [
+                  "Differenciálás",
+                  "egyedi (minőség, márka) → magasabb árak",
+                  "Gucci"
+                ],
+                [
+                  "Résstratégia",
+                  "egy piaci szegmensre összpontosítás",
+                  "Patagonia"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Portfólió (BCG)",
+                "Ajánlás"
+              ],
+              "zeilen": [
+                [
+                  "Kérdőjelek",
+                  "befektetés vagy kivonulás"
+                ],
+                [
+                  "Sztárok",
+                  "növekedési stratégia – erősen támogatni"
+                ],
+                [
+                  "Fejőstehenek",
+                  "lefölözési stratégia – „fejni”"
+                ],
+                [
+                  "Döglött kutyák",
+                  "kivonulási stratégia – kivezetni a piacról"
+                ]
+              ]
+            },
+            {
+              "type": "formel",
+              "name": "Relatív piaci részesedés",
+              "zaehler": "saját abszolút piaci részesedés",
+              "nenner": "a legnagyobb versenytárs piaci részesedése",
+              "beispiel": "> 1,0 = piacvezető"
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Növekedés (Ansoff)",
+                "meglévő célcsoport",
+                "új célcsoport"
+              ],
+              "zeilen": [
+                [
+                  "Meglévő termék",
+                  "Piacpenetráció (több reklám, mennyiségi kedvezmény)",
+                  "Piacfejlesztés (új országok, felhasználási területek)"
+                ],
+                [
+                  "Új termék",
+                  "Termékfejlesztés (Coca-Cola Zero)",
+                  "Diverzifikáció (a Coca-Cola megveszi a Costa Coffee-t)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Operatív tervezés, döntés és ellenőrzés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Operatív tervezés",
+              "erklaerung": "Részletesen: ki mit csinál, mikor, hogyan, mivel és hol? A lényege a költségvetés-készítés."
+            },
+            {
+              "type": "begriff",
+              "term": "Költségvetés-készítés (budgetálás)",
+              "erklaerung": "Meghatározza a pénzügyi erőforrásokat (kifizetések, költségek) és a kívánt eredményeket (bevételek). Részköltségvetések (anyag, személyzet, árbevétel …) → összköltségvetés. A kontrolling felügyeli a betartást."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Alulról felfelé (bottom-up)",
+                "punkte": [
+                  "A részlegvezetők részköltségvetéseket készítenek",
+                  "→ összköltségvetéssé vonják össze",
+                  "Elkülönült részlegek esetén"
+                ]
+              },
+              "rechts": {
+                "titel": "Felülről lefelé (top-down)",
+                "punkte": [
+                  "A vezetés megadja az összköltségvetést",
+                  "→ ebből vezetik le a részköltségvetéseket",
+                  "Egymástól függő részlegek esetén"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Sikeres döntések"
+              ],
+              "zeilen": [
+                [
+                  "Racionális mérlegelés"
+                ],
+                [
+                  "A magasabb szintű célok szem előtt tartása"
+                ],
+                [
+                  "Minimumkritériumok meghatározása"
+                ],
+                [
+                  "Releváns információk gyűjtése"
+                ],
+                [
+                  "Forgatókönyvek végiggondolása"
+                ],
+                [
+                  "Külső tanácsadás bevonása"
+                ],
+                [
+                  "Egyéni vagy csoportos döntés választása"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Ellenőrzés (eltéréselemzés)",
+              "erklaerung": "Az eredmények összevetése a célokkal, az eltérések okainak keresése, beavatkozás. Eredmény-, eljárás- és magatartás-ellenőrzés."
+            },
+            {
+              "type": "zyklus",
+              "mitte": "PDCA (Deming-kör)",
+              "schritte": [
+                "Plan – célok kitűzése",
+                "Do – megvalósítás",
+                "Check – ellenőrzés",
+                "Act – kiigazítás"
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "PDCA = folyamatos fejlesztés. Olyan kultúrát igényel, amely nyíltan kezeli a hibákat."
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Stratégiai tervezés",
+          "punkte": [
+            "Ciklus: tervezés → döntés → megvalósítás → ellenőrzés",
+            "Külső: PESTEL (politikai, gazdasági, társadalmi, technológiai, ökológiai, jogi) + öt erő modell",
+            "Belső: auditok, benchmarking (erősség-gyengeség profil)",
+            "Előrejelzések: forgatókönyv-technika (best/realistic/worst) · Delphi-módszer (szakértők, több kör)",
+            "SWOT: S-O, W-O, S-T, W-T stratégiák"
+          ]
+        },
+        {
+          "titel": "Stratégiák",
+          "punkte": [
+            "Porter: költségvezető szerep · differenciálás · rés",
+            "BCG: kérdőjelek, sztárok, fejőstehenek, döglött kutyák",
+            "Ansoff: piacpenetráció, piacfejlesztés, termékfejlesztés, diverzifikáció"
+          ]
+        },
+        {
+          "titel": "Operatív szint és ellenőrzés",
+          "punkte": [
+            "Költségvetés: résztervek → összköltségvetés; bottom-up ↔ top-down",
+            "Ellenőrzés = eltéréselemzés (eredmény, eljárás, magatartás)",
+            "PDCA: Plan → Do → Check → Act"
+          ]
+        }
+      ]
+    },
+    "organisieren-und-fuehren": {
+      "schritte": [
+        {
+          "titel": "Szervezeti felépítés és folyamatszervezés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Vállalati szervezet",
+              "erklaerung": "Szabályozza a vállalat FELÉPÍTÉSÉT (szervezeti felépítés) és a FOLYAMATOKAT (folyamatszervezés). A kettő szorosan összefügg."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Szervezeti felépítés",
+                "punkte": [
+                  "Struktúra: ki miért felelős?",
+                  "Feladatok → osztályok → munkakörök"
+                ]
+              },
+              "rechts": {
+                "titel": "Folyamatszervezés",
+                "punkte": [
+                  "Folyamatok: mit, milyen sorrendben, hogyan, hol?",
+                  "A meghatározott struktúrán belül"
+                ]
+              }
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "pl. kiállítási stand megtervezése",
+                  "wert": "Feladat"
+                },
+                {
+                  "titel": "több feladat",
+                  "wert": "Osztály"
+                },
+                {
+                  "titel": "az osztályon belül",
+                  "wert": "Munkakör (Stelle)"
+                }
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Munkakör",
+              "erklaerung": "A szervezeti felépítés alapeleme: azok a feladatok, amelyek EGY személy munkaterületéhez tartoznak."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Munkakörfajta",
+                "Jogkör",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Vezetői munkakör (instancia)",
+                  "vezetés, utasítás, döntés, ellenőrzés",
+                  "Ügyvezetés, osztályvezetés"
+                ],
+                [
+                  "Törzskari munkakör (stáb)",
+                  "nincs utasítási joga, tanácsot ad és támogat",
+                  "Asszisztens, kontrolling, jogi osztály"
+                ],
+                [
+                  "Végrehajtó munkakör",
+                  "csak a saját területén dönt, nem utasít",
+                  "Ügyintéző, könyvelő"
+                ]
+              ]
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Centralizáció",
+                "punkte": [
+                  "Kevés személy hoz meg minden lényeges döntést"
+                ]
+              },
+              "rechts": {
+                "titel": "Decentralizáció",
+                "punkte": [
+                  "A döntéseket sok személyre delegálják",
+                  "A vezetés csak az információcserét biztosítja"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "Irányítási rendszerek (szervezeti ábra)",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "",
+                "Egyvonalas rendszer",
+                "Többvonalas rendszer"
+              ],
+              "zeilen": [
+                [
+                  "Elv",
+                  "minden munkakörnek csak EGY felettes instanciája van",
+                  "minden munkakörnek KÉT vagy több instanciája van"
+                ],
+                [
+                  "Formák",
+                  "funkcionális (beszerzés, termelés … szerint) vagy divizionális (divíziók szerint: országok, termékek)",
+                  "Mátrixszervezet (funkciók ÉS divíziók)"
+                ],
+                [
+                  "Előnyök",
+                  "áttekinthető, egyértelmű felelősség, egyértelmű utasítási út",
+                  "rövid információs utak, gyors kommunikáció, a vezetés tehermentesítése"
+                ],
+                [
+                  "Hátrányok",
+                  "hosszú kommunikációs utak, a felső szintek leterheltsége",
+                  "ellentmondó utasítások, áttekinthetetlen, sok vezető"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Szervezeti ábra (organigram) = a szervezeti felépítés grafikus ábrázolása. Törzskari munkakörök mindkét rendszerben alkalmazhatók."
+            },
+            {
+              "type": "begriff",
+              "term": "Agilis szervezet",
+              "erklaerung": "Gyorsan tud reagálni a változásokra: vevőközpontúság (a customer journey mentén), lapos hierarchia, önszerveződő csapatok."
+            }
+          ]
+        },
+        {
+          "titel": "Folyamatszervezés és folyamatok",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Folyamat",
+              "erklaerung": "Összefüggő tevékenységek láncolata, amelyek együtt vevői hasznot teremtenek."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Folyamatfajta",
+                "Jelentés",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Üzleti folyamatok",
+                  "alaptevékenység",
+                  "Termelés, marketing, értékesítés"
+                ],
+                [
+                  "Támogató folyamatok",
+                  "az üzleti folyamatokat támogatják",
+                  "Személyügy, informatika"
+                ],
+                [
+                  "Vezetési folyamatok",
+                  "irányítás és vezetés",
+                  "Tervezési folyamatok"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Folyamatábra (flowchart)",
+              "erklaerung": "Szimbólumokkal ábrázolja a folyamatokat: kezdet/vég (lekerekített), folyamat (téglalap), döntés (rombusz), folyamatvonal (nyíl)."
+            }
+          ]
+        },
+        {
+          "titel": "Vezetéselméletek",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Munkatársak vezetése és vezetési stílus",
+              "erklaerung": "Munkatársak vezetése = a munkavállalók viselkedésének befolyásolása a célok elérése érdekében. Vezetési stílus = a vezető hosszú távú viselkedési mintája."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Elmélet",
+                "Sikertényező",
+                "Példák"
+              ],
+              "zeilen": [
+                [
+                  "Tulajdonságelméletek",
+                  "a vezető személyisége",
+                  "intelligencia, érvényesülési képesség, empátia, önbizalom"
+                ],
+                [
+                  "Viselkedéselméletek",
+                  "viselkedés (vezetési stílus)",
+                  "klasszikus vezetési stílusok, vezetési rács"
+                ],
+                [
+                  "Helyzetelméletek",
+                  "helyzettől függő viselkedés",
+                  "érettségi elmélet, Vroom–Yetton-modell"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Vezetési stílus (Lewin)",
+                "Jellemző",
+                "+",
+                "−"
+              ],
+              "zeilen": [
+                [
+                  "Autoriter",
+                  "egyedül dönt",
+                  "gyors döntések, egyértelmű hatáskörök",
+                  "túlterhelt vezetés, motiválatlan munkavállalók"
+                ],
+                [
+                  "Kooperatív (demokratikus)",
+                  "a munkavállalók részt vesznek a döntésben",
+                  "motiváció, csapatszellem",
+                  "hosszabb döntéshozatal"
+                ],
+                [
+                  "Laissez-faire",
+                  "csak problémák esetén avatkozik be",
+                  "szabadság, kreativitás",
+                  "túlterheltség, az irányítás elvesztése"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Vezetési rács (Managerial Grid)",
+              "erklaerung": "Két dimenzió 1–9-ig: feladatorientáció és emberorientáció."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Pozíció",
+                "Név",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "1.1",
+                  "Túlélő menedzsment",
+                  "alig érdeklődik a feladatok vagy az emberek iránt"
+                ],
+                [
+                  "9.1",
+                  "Parancs–engedelmesség menedzsment",
+                  "erős feladatorientáció, szigorú ellenőrzés"
+                ],
+                [
+                  "1.9",
+                  "Glaszékesztyűs (vidéki klub) menedzsment",
+                  "jó hangulat, kevés teljesítmény"
+                ],
+                [
+                  "5.5",
+                  "Szervezeti (középutas) menedzsment",
+                  "középút"
+                ],
+                [
+                  "9.9",
+                  "Csapatmenedzsment",
+                  "optimális: teljesítmény ÉS motiváció"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Helyzetelméletek és vezetési koncepciók",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Szituációs érettségi elmélet (Hersey/Blanchard)",
+              "erklaerung": "A vezetési stílus a munkavállalók érettségi szintjétől (képesség + motiváció) függ."
+            },
+            {
+              "type": "ablauf",
+              "titel": "Az alacsony érettségtől a magasig",
+              "schritte": [
+                {
+                  "titel": "Telling – irányítás",
+                  "text": "alacsony érettség: pontos előírások, ellenőrzés"
+                },
+                {
+                  "titel": "Selling – meggyőzés",
+                  "text": "alacsony–közepes érettség: a feladatok elmagyarázása, erős emberorientáció"
+                },
+                {
+                  "titel": "Participating – részvétel",
+                  "text": "közepes–magas érettség: bevonás a döntésekbe"
+                },
+                {
+                  "titel": "Delegating – delegálás",
+                  "text": "magas érettség: a feladatok átadása részletes magyarázat nélkül"
+                }
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Vroom–Yetton-modell",
+              "erklaerung": "A vezetői viselkedés a döntés minőségétől (mennyire fontos a helyes megoldás?) és a munkavállalói elfogadástól (mennyire fontos az egyetértés?) függ."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Döntésfajta",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "AI / AII – autoriter",
+                  "egyedül (AII: információk beszerzése után)"
+                ],
+                [
+                  "BI / BII – konzultációval",
+                  "egyedül, egy személlyel (BI) / a csoporttal (BII) való megbeszélés után"
+                ],
+                [
+                  "GII – csoport",
+                  "mindenki együtt dönt"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Vezetési koncepció",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Management by Delegation",
+                  "saját felelősségi terület; a vezetés csak problémák esetén avatkozik be"
+                ],
+                [
+                  "Management by Results",
+                  "csak az eredmények számítanak (előírt, ellenőrzött)"
+                ],
+                [
+                  "Management by Objectives",
+                  "a célokat KÖZÖSEN egyeztetik"
+                ],
+                [
+                  "Management by Motivation",
+                  "teljesítményösztönzők a munkavállalók igényei szerint"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Szervezet",
+          "punkte": [
+            "Szervezeti felépítés (struktúra: feladat → osztály → munkakör) + folyamatszervezés (folyamatok)",
+            "Munkakörök: instancia (vezetés), törzskar (tanácsadás, nincs utasítás), végrehajtó munkakör",
+            "Centralizáció ↔ decentralizáció",
+            "Egyvonalas rendszer (funkcionális/divizionális) ↔ többvonalas rendszer (mátrix)",
+            "Agilis: vevőközpontúság, lapos hierarchia, önszerveződő csapatok",
+            "Folyamatok: üzleti, támogató, vezetési folyamatok; folyamatábra"
+          ]
+        },
+        {
+          "titel": "Vezetés",
+          "punkte": [
+            "Tulajdonság-, viselkedés-, helyzetelméletek",
+            "Vezetési stílusok: autoriter, kooperatív, laissez-faire",
+            "Vezetési rács: 1.1, 9.1, 1.9, 5.5, 9.9 (optimális)",
+            "Érettségi elmélet: telling → selling → participating → delegating",
+            "Vroom–Yetton: döntésminőség + elfogadás → AI, AII, BI, BII, GII",
+            "Management by Delegation, Results, Objectives, Motivation"
+          ]
+        }
+      ]
+    },
+    "personalbedarfsplanung": {
+      "schritte": [
+        {
+          "titel": "A személyzeti menedzsment feladatai",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Személyzeti menedzsment (Human Resource Management, HR)",
+              "erklaerung": "A munkavállalókkal foglalkozik = a vállalat legfontosabb tőkéje (humántőke)."
+            },
+            {
+              "type": "ablauf",
+              "titel": "A feladatok áttekintése",
+              "schritte": [
+                {
+                  "titel": "Létszámtervezés",
+                  "text": "Hány, milyen képzettségű munkavállalóra van szükség, mikor és hol?"
+                },
+                {
+                  "titel": "Munkaerő-toborzás és -kiválasztás",
+                  "text": "alkalmas munkavállalók megnyerése és kiválasztása"
+                },
+                {
+                  "titel": "Személyzetfejlesztés",
+                  "text": "a munkavállalók képzése"
+                },
+                {
+                  "titel": "Létszámleépítés (elbocsátás)",
+                  "text": "munkaviszonyok megszüntetése"
+                },
+                {
+                  "titel": "A munkaerő-alkalmazás kialakítása",
+                  "text": "keret a motivált munkavégzéshez"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "A létszámigény meghatározása és fedezése",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Mennyiségi létszámigény",
+                "punkte": [
+                  "HÁNY munkavállaló?",
+                  "Ingadozik a szezon, a kiesések (betegség, gyes, felmondás), a kereslet miatt"
+                ]
+              },
+              "rechts": {
+                "titel": "Minőségi létszámigény",
+                "punkte": [
+                  "MILYEN képzettség?",
+                  "Végzettség, tapasztalat, személyiség, szociális kompetenciák",
+                  "A munkaköri leírásban szerepel"
+                ]
+              }
+            },
+            {
+              "type": "begriff",
+              "term": "Munkaköri leírás",
+              "erklaerung": "Minden fontos információt tartalmaz egy munkakörről: helye a szervezetben, célja, tevékenységek, jogkörök."
+            },
+            {
+              "type": "merke",
+              "text": "Továbbá: helyi létszámigény (hol?) és időbeli létszámigény (mikor, mennyi ideig?)."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Helyzet",
+                "Intézkedés"
+              ],
+              "zeilen": [
+                [
+                  "Igény > tényleges létszám",
+                  "Toborzás és kiválasztás VAGY személyzetfejlesztés"
+                ],
+                [
+                  "Igény < tényleges létszám",
+                  "Létszámleépítés VAGY személyzetfejlesztés (átképzés)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Toborzás",
+          "blocks": [
+            {
+              "type": "ablauf",
+              "titel": "A toborzás és kiválasztás folyamata (recruiting)",
+              "schritte": [
+                {
+                  "titel": "A követelményprofil meghatározása",
+                  "text": "általános követelmények, végzettség, személyiség, ágazati ismeretek"
+                },
+                {
+                  "titel": "Toborzás"
+                },
+                {
+                  "titel": "Előválogatás",
+                  "text": "a pályázati anyagok elemzése"
+                },
+                {
+                  "titel": "Kiválasztás",
+                  "text": "kiválasztási eljárások"
+                },
+                {
+                  "titel": "Felvétel"
+                }
+              ]
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Belső toborzás",
+                "punkte": [
+                  "Személyi mozgás nélkül: túlóra, szabadság áthelyezése, személyzetfejlesztés",
+                  "Személyi mozgással: előléptetés, áthelyezés, belső pályázat"
+                ]
+              },
+              "rechts": {
+                "titel": "Külső toborzás",
+                "punkte": [
+                  "A vállalat által: hirdetések, weboldal, állásbörzék",
+                  "Harmadik felekkel: AMS (munkaügyi szolgálat), személyzeti tanácsadók, munkaerő-kölcsönzés, állásportálok, fejvadászok"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Fogalom",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Munkaerő-kölcsönzés",
+                  "a vállalat rövid időre „kölcsönvesz” munkaerőt egy kölcsönző cégtől"
+                ],
+                [
+                  "Fejvadász",
+                  "célzottan keresi meg a magasan képzett szakembereket"
+                ],
+                [
+                  "Employer branding",
+                  "vonzó munkáltatói imázs kialakítása"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Álláshirdetés: információk a vállalatról, a pozícióról, a képzettségről, fizetés (kötelező!), a jelentkezés módja. Nemsemlegesen kell meghirdetni (egyenlő bánásmódról szóló törvény 9. §) – pl. (f/n/d)."
+            }
+          ]
+        },
+        {
+          "titel": "Előválogatás és kiválasztás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Pályázati anyagok",
+              "erklaerung": "Motivációs levél (max. 1 oldal) + önéletrajz fényképpel + bizonyítványmásolatok (iskolai bizonyítványok és munkáltatói igazolások)."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Az előválogatásnál a vállalat ellenőrzi"
+              ],
+              "zeilen": [
+                [
+                  "Teljesülnek-e a követelményprofil legfontosabb kritériumai?"
+                ],
+                [
+                  "Egyezik-e az önéletrajz és a bizonyítványok?"
+                ],
+                [
+                  "Vannak-e hézagok a pályafutásban?"
+                ],
+                [
+                  "Gyakori munkahelyváltás?"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Kiválasztási eljárás",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Videós jelentkezés",
+                  "rövid bemutatkozó videó"
+                ],
+                [
+                  "Telefonos interjú",
+                  "15–30 perc, az alapok tisztázása"
+                ],
+                [
+                  "Állásinterjú",
+                  "szinte mindig: fellépés, kommunikáció"
+                ],
+                [
+                  "Munkapróba",
+                  "gyakorlati feladatok"
+                ],
+                [
+                  "Tesztek",
+                  "pl. intelligenciatesztek"
+                ],
+                [
+                  "Assessment center (értékelőközpont)",
+                  "több jelentkező, csoportos feladatok, max. 3 nap – főleg vezetői pozíciókhoz"
+                ]
+              ]
+            },
+            {
+              "type": "ablauf",
+              "titel": "Az állásinterjú menete",
+              "schritte": [
+                {
+                  "titel": "Az interjú kezdete (légkör)"
+                },
+                {
+                  "titel": "A jelentkező bemutatkozása"
+                },
+                {
+                  "titel": "A vállalat bemutatkozása"
+                },
+                {
+                  "titel": "Önéletrajzzal kapcsolatos kérdések"
+                },
+                {
+                  "titel": "Helyzeti kérdések"
+                },
+                {
+                  "titel": "Kötetlen beszélgetés"
+                },
+                {
+                  "titel": "Az interjú lezárása"
+                }
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Nem megengedett: kérdések a pártról, vallásról, terhességről vagy betegségekről."
+            }
+          ]
+        },
+        {
+          "titel": "Felvétel és személyzetfejlesztés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Munkaviszony-igazolás (Dienstzettel)",
+              "erklaerung": "A munkaszerződés legfontosabb adatait rögzíti. Kötelező – kivéve max. 1 hónap vagy minden adatot tartalmazó írásos szerződés esetén. A munkáltató a munkába lépés előtt bejelenti az ÖGK-nál (egészségbiztosító)."
+            },
+            {
+              "type": "begriff",
+              "term": "Személyzetfejlesztés (SZF)",
+              "erklaerung": "Minden tervezett képzési és továbbképzési intézkedés a szakmai, módszertani, szociális és személyes képességek fejlesztésére."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Vállalati célok",
+                "punkte": [
+                  "képzett munkaerő biztosítása",
+                  "versenyképesség",
+                  "elégedettség és kötődés",
+                  "függetlenség a munkaerőpiactól"
+                ]
+              },
+              "rechts": {
+                "titel": "Egyéni célok",
+                "punkte": [
+                  "a személyiség kibontakoztatása",
+                  "presztízs",
+                  "karrierlehetőségek",
+                  "magasabb jövedelem"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Módszer",
+                "Példák"
+              ],
+              "zeilen": [
+                [
+                  "Into the Job (felkészítés)",
+                  "onboarding, gyakornoki program, tanoncképzés, mentor/buddy"
+                ],
+                [
+                  "On the Job (a munkahelyen)",
+                  "betanítás, coaching"
+                ],
+                [
+                  "Near the Job (a munkahely közelében)",
+                  "projektmunka, minőségi kör, visszajelző beszélgetések"
+                ],
+                [
+                  "Off the Job (a munkahelyen kívül)",
+                  "e-learning, szemináriumok, munka melletti tanulmányok"
+                ],
+                [
+                  "Along the Job (pályafutás)",
+                  "fejlesztési beszélgetések, karriertervezés"
+                ],
+                [
+                  "Out of the Job (kilépés)",
+                  "nyugdíjra való felkészítés, outplacement"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Létszámleépítés",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "A megszűnés módja",
+                "Érvényes",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Határidő lejárta",
+                  "határozott idejű",
+                  "automatikusan megszűnik"
+                ],
+                [
+                  "Megszüntetés a próbaidő alatt",
+                  "próbaidő (max. 1 hónap, tanoncoknál 3)",
+                  "bármikor, indoklás nélkül"
+                ],
+                [
+                  "Felmondás",
+                  "határozatlan idejű",
+                  "mindkét fél, indoklás nélkül, felmondási idővel és időponttal"
+                ],
+                [
+                  "Azonnali elbocsátás (Entlassung)",
+                  "mindig",
+                  "munkáltató, azonnal, súlyos kötelességszegés esetén (lopás, munkamegtagadás)"
+                ],
+                [
+                  "Azonnali kilépés (Austritt)",
+                  "mindig",
+                  "munkavállaló, azonnal, a munkáltató súlyos kötelességszegése esetén (nincs bér, zaklatás)"
+                ],
+                [
+                  "Közös megegyezéses megszüntetés",
+                  "mindig",
+                  "mindkét fél egyetért, nincsenek határidők"
+                ]
+              ]
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Munkavállalói felmondás",
+                "punkte": [
+                  "bármely hónap utolsó napjára",
+                  "felmondási idő általában 1 hónap"
+                ]
+              },
+              "rechts": {
+                "titel": "Munkáltatói felmondás (alkalmazottak)",
+                "punkte": [
+                  "a negyedév végére",
+                  "1–2. év: 6 hét",
+                  "3–5. év: 2 hónap",
+                  "6–15. év: 3 hónap",
+                  "16–25. év: 4 hónap",
+                  "26. évtől: 5 hónap"
+                ]
+              }
+            },
+            {
+              "type": "begriff",
+              "term": "A felmondás időpontja és felmondási idő",
+              "erklaerung": "Időpont = az a nap, amikor a munkaviszony megszűnik. Felmondási idő = a felmondás kézbesítése és az időpont közötti idő.",
+              "beispiel": "Felmondási idő 2 hónap, időpont márc. 31. → legkésőbb jan. 31-én kell felmondani"
+            },
+            {
+              "type": "merke",
+              "text": "Felmondási védelem: várandós anyák, gyermekgondozási szabadság, katonai/polgári szolgálat, üzemi tanácstagok, kedvezményezett fogyatékkal élők."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Igény a megszűnéskor",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Bér és különjuttatások",
+                  "az utolsó napig + időarányos különjuttatások + a ki nem vett szabadság megváltása"
+                ],
+                [
+                  "Álláskeresési napok",
+                  "munkáltatói felmondásnál: a heti munkaidő 1/5-e fizetett szabadidő"
+                ],
+                [
+                  "Munkáltatói igazolás (Dienstzeugnis)",
+                  "írásban: a munka időtartama és jellege, negatív megfogalmazások nélkül"
+                ],
+                [
+                  "Végkielégítés (MVK)",
+                  "a bruttó bér 1,53%-a havonta; kifizetés legalább 3 befizetési év után"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Tervezés és toborzás",
+          "punkte": [
+            "Létszámigény: mennyiségi (hány) + minőségi (milyen képzettség, munkaköri leírás) + helyi + időbeli",
+            "Igény > tény → toborzás vagy fejlesztés · igény < tény → leépítés vagy átképzés",
+            "Toborzás: követelményprofil → keresés → előválogatás → kiválasztás → felvétel",
+            "Belső (előléptetés, áthelyezés) ↔ külső (hirdetések, AMS, kölcsönzés, fejvadász)"
+          ]
+        },
+        {
+          "titel": "Kiválasztás és felvétel",
+          "punkte": [
+            "Anyagok: motivációs levél, önéletrajz, bizonyítványok",
+            "Eljárások: videó, telefon, állásinterjú, munkapróba, teszt, assessment center",
+            "Munkaviszony-igazolás + bejelentés az ÖGK-nál"
+          ]
+        },
+        {
+          "titel": "Fejlesztés és leépítés",
+          "punkte": [
+            "SZF-módszerek: Into, On, Near, Off, Along, Out of the Job",
+            "Megszűnés: határidő lejárta, próbaidő, felmondás, azonnali elbocsátás, azonnali kilépés, közös megegyezés",
+            "A munkáltató az alkalmazottaknak a negyedév végére mond fel; felmondási idő 6 héttől 5 hónapig",
+            "Igények: bér, különjuttatások, szabadságmegváltás, álláskeresési napok, munkáltatói igazolás, végkielégítés (MVK 1,53%)"
+          ]
+        }
+      ]
+    },
+    "personaleinsatzgestaltung": {
+      "schritte": [
+        {
+          "titel": "A jogrend hierarchiája",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Jogok és kötelezettségek",
+              "erklaerung": "A munkaviszony mindkét félnek jogokat és kötelezettségeket ad. Ezek különböző előírásokban szerepelnek – hierarchiába rendezve."
+            },
+            {
+              "type": "ablauf",
+              "titel": "Hierarchia (munkajog) – fentről lefelé",
+              "schritte": [
+                {
+                  "titel": "Uniós jog",
+                  "text": "rendeletek, irányelvek (EU)"
+                },
+                {
+                  "titel": "Nemzeti törvények",
+                  "text": "pl. alkalmazottakról szóló törvény, munkaidőtörvény, szabadságtörvény (parlament)"
+                },
+                {
+                  "titel": "Kollektív szerződés",
+                  "text": "szociális partnerek (szakszervezet + gazdasági kamara): bérezés, munkaidő egy ágazat számára"
+                },
+                {
+                  "titel": "Üzemi megállapodások",
+                  "text": "üzemi tanács + munkáltató, egy üzemen belül"
+                },
+                {
+                  "titel": "Egyéni munkaszerződés",
+                  "text": "munkavállaló + munkáltató"
+                }
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Az alsóbb szintek csak akkor térhetnek el, ha az ELŐNYÖS a munkavállalónak. A munkaszerződés szerinti fizetés lehet magasabb a kollektív szerződésben szereplőnél – de soha nem alacsonyabb."
+            }
+          ]
+        },
+        {
+          "titel": "Jogok és kötelezettségek",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Munkáltató",
+                "punkte": [
+                  "A munkabér kifizetése",
+                  "Gondoskodási kötelezettség: védelem a veszélyekkel szemben, egészség, egyenlő bánásmód, különleges védelem (fiatalok, várandósok)"
+                ]
+              },
+              "rechts": {
+                "titel": "Munkavállaló",
+                "punkte": [
+                  "Személyes munkavégzés",
+                  "Hűségkötelezettség: titoktartás, nincs ajándékelfogadás, semmi rossz hírnevet keltő, versenytilalom"
+                ]
+              }
+            },
+            {
+              "type": "merke",
+              "text": "A munkavállaló kötelezettségei = a munkáltató jogai és fordítva."
+            },
+            {
+              "type": "begriff",
+              "term": "Versenytilalom",
+              "erklaerung": "A munkavállaló engedély nélkül sem vállalkozást nem vezethet, sem ugyanabban az üzletágban nem köthet üzleteket más vállalat számára."
+            }
+          ]
+        },
+        {
+          "titel": "Munkaidő, szabadság, munkavégzési akadályoztatás",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szabály",
+                "Tartalom"
+              ],
+              "zeilen": [
+                [
+                  "Rendes munkaidő",
+                  "napi 8 óra, heti 40 óra (kollektív szerződés gyakran 38,5); kevesebb = részmunkaidő"
+                ],
+                [
+                  "Rugalmas munkaidő",
+                  "rugalmas egy törzsidőn belül"
+                ],
+                [
+                  "Túlóra",
+                  "rendes bér + 50% (éjjel, vasár-/ünnepnap 100%) vagy szabadidő"
+                ],
+                [
+                  "Maximális munkaidő",
+                  "túlórával együtt max. napi 12 óra, heti 60 óra"
+                ],
+                [
+                  "Munkaközi szünet",
+                  "6 óra felett → legalább 30 perc szünet; utána 11 óra pihenőidő"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Szabadság",
+              "erklaerung": "munkaévenként 25 munkanap (ötnapos munkahét), a 26. évtől 30. Teljes mérték 6 hónap után. A szabadság időpontja csak megegyezéssel."
+            },
+            {
+              "type": "begriff",
+              "term": "Munkavégzési akadályoztatás",
+              "erklaerung": "Betegség, baleset → azonnal jelenteni; a bért tovább fizetik. Orvosi igazolás általában 3 nap után. Rövid ideig fontos személyes okból is (esküvő, haláleset)."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Anyavédelem",
+                "punkte": [
+                  "8 hét a szülés előtt + 8 hét utána",
+                  "Teljes foglalkoztatási tilalom",
+                  "Terhességi-gyermekágyi segély (Wochengeld) az ÖGK-tól"
+                ]
+              },
+              "rechts": {
+                "titel": "(Szülői) gyermekgondozási szabadság (Karenz)",
+                "punkte": [
+                  "Ezt követően, legfeljebb a 2. születésnapig",
+                  "Nincs bér, gyermekgondozási díj az államtól",
+                  "A szülők megoszthatják"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "Üzemi együttdöntés",
+          "blocks": [
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "választják",
+                  "wert": "Minden munkavállaló"
+                },
+                {
+                  "titel": "képviseli a dolgozókat",
+                  "wert": "Üzemi tanács"
+                },
+                {
+                  "titel": "mindenki együtt",
+                  "wert": "Üzemi gyűlés"
+                }
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szerv",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Üzemi tanács",
+                  "összekötő a vezetés és a dolgozók között; 5 munkavállalótól (18 év felett)"
+                ],
+                [
+                  "Aktív választójog",
+                  "16 éves kortól"
+                ],
+                [
+                  "Passzív választójog",
+                  "18 éves kortól és 6 hónap üzemi munkaviszony után"
+                ],
+                [
+                  "Üzemi gyűlés",
+                  "az összes dolgozó, legalább évente 1×; visszahívhatja az üzemi tanácsot"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Motivációs elméletek",
+          "blocks": [
+            {
+              "type": "pyramide",
+              "stufen": [
+                {
+                  "name": "Önmegvalósítás",
+                  "beispiel": "továbbképzés, karrierlehetőségek"
+                },
+                {
+                  "name": "Elismerés",
+                  "beispiel": "dicséret, kitüntetések, prémiumok"
+                },
+                {
+                  "name": "Szociális szükségletek",
+                  "beispiel": "munkahelyi légkör, csapatrendezvények"
+                },
+                {
+                  "name": "Biztonság",
+                  "beispiel": "tisztességes bér, határozatlan idejű szerződés"
+                },
+                {
+                  "name": "Alapszükségletek",
+                  "beispiel": "italok, ebéd"
+                }
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Kéttényezős elmélet (Herzberg)",
+              "erklaerung": "Megkülönbözteti a motivátorokat (elégedettséget teremtenek) és a higiéniai tényezőket (csak az elégedetlenséget előzik meg)."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Motivátorok (belső)",
+                "punkte": [
+                  "A munka tartalma",
+                  "Teljesítmény, siker, elismerés",
+                  "Felelősség, előrelépés",
+                  "→ elégedettséghez vezetnek"
+                ]
+              },
+              "rechts": {
+                "titel": "Higiéniai tényezők (külső)",
+                "punkte": [
+                  "Munkakörnyezet",
+                  "Fizetés, munkakörülmények, munkahelyi biztonság",
+                  "Vezetési stílus, kollégák",
+                  "→ hiányuk elégedetlenséghez vezet"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Motiváló munkaszervezés",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Munkakör-rotáció",
+                  "a munkahely rendszeres cseréje"
+                ],
+                [
+                  "Munkakörbővítés",
+                  "további feladatok AZONOS követelményekkel"
+                ],
+                [
+                  "Munkakör-gazdagítás",
+                  "MAGASABB követelményű feladatok és több felelősség"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Kellemes munkahely kialakítása"
+              ],
+              "zeilen": [
+                [
+                  "Érdekes munkatartalom (rugalmas munkaidő, home office, négynapos munkahét)"
+                ],
+                [
+                  "Biztonságos, kellemes munkakörnyezet (ergonómia, balesetmegelőzés)"
+                ],
+                [
+                  "Egészségfejlesztő intézkedések (fitnesz, jóga, egészséges étkezés)"
+                ],
+                [
+                  "Üzemi szociális juttatások (nyugdíj-előtakarékosság, bérlettámogatás, gyermekfelügyelet)"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Munkajog",
+          "punkte": [
+            "Hierarchia: uniós jog → törvények → kollektív szerződés → üzemi megállapodás → egyéni szerződés; eltérés csak a munkavállaló javára",
+            "Munkáltató: bér + gondoskodási kötelezettség · munkavállaló: munkavégzés + hűségkötelezettség (versenytilalom)",
+            "Munkaidő: rendes 8 óra/40 óra; max. 12 óra/60 óra; szünet 6 órától; túlóra +50%",
+            "Szabadság: 25 munkanap (a 26. évtől 30)",
+            "Anyavédelem 8 + 8 hét; gyermekgondozási szabadság a 2. születésnapig",
+            "Üzemi tanács 5 munkavállalótól; választani 16, megválasztva lenni 18 év + 6 hónap után"
+          ]
+        },
+        {
+          "titel": "Motiváció",
+          "punkte": [
+            "Maslow: alap-, biztonsági, szociális szükségletek, elismerés, önmegvalósítás",
+            "Herzberg: motivátorok (elégedettség) ↔ higiéniai tényezők (megelőzik az elégedetlenséget)",
+            "Munkakör-rotáció, munkakörbővítés (azonos követelmény), munkakör-gazdagítás (több felelősség)",
+            "Munkahely: munkatartalom, környezet, egészség, szociális juttatások"
+          ]
+        }
+      ]
+    },
+    "personalbeurteilung": {
+      "schritte": [
+        {
+          "titel": "Generációs sokszínűség",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "A vállalatoknál akár 5 generáció is találkozik – mindegyik saját értékekkel és elvárásokkal."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Generáció",
+                "Született",
+                "Értékek",
+                "Elvárások"
+              ],
+              "zeilen": [
+                [
+                  "Baby boomerek",
+                  "1946–1964",
+                  "lojális, kötelességtudó",
+                  "biztonság, elismerés, világos hierarchia"
+                ],
+                [
+                  "X generáció",
+                  "1965–1980",
+                  "önálló, gyakorlatias",
+                  "fejlődés, munka–magánélet egyensúly"
+                ],
+                [
+                  "Y generáció",
+                  "1981–1995",
+                  "csapatorientált, technikakedvelő",
+                  "rugalmasság, értelem, lapos hierarchia"
+                ],
+                [
+                  "Z generáció",
+                  "1996–2010",
+                  "digitális, biztonságorientált",
+                  "struktúra, visszajelzés, értelem"
+                ],
+                [
+                  "Alfa generáció",
+                  "2010-től",
+                  "digitális, individualista",
+                  "beleszólás, digitális munkakörnyezet"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Sabbatical (alkotói szabadság)",
+              "erklaerung": "Hosszabb, határozott idejű és fizetés nélküli kiszakadás a munkából – főleg a fiatalabb generációk számára vonzó."
+            }
+          ]
+        },
+        {
+          "titel": "Bérezés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Munkabér",
+              "erklaerung": "A munkáért járó ellenszolgáltatás: bér (fizikai dolgozók) vagy fizetés (alkalmazottak)."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Az „igazságos” bérezés …",
+                "figyelembe veszi"
+              ],
+              "zeilen": [
+                [
+                  "teljesítményarányos",
+                  "a munka eredményét és a teljesítményt"
+                ],
+                [
+                  "követelményarányos",
+                  "a nehézséget és a ráfordítást"
+                ],
+                [
+                  "képzettségarányos",
+                  "a szükséges képzettséget"
+                ],
+                [
+                  "piackonform",
+                  "mit fizetnek mások ugyanarra a pozícióra"
+                ],
+                [
+                  "szociálisan igazságos",
+                  "családi állapot, életkor"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Bérezési forma",
+                "Jelentés",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Időbér",
+                  "bér időegységenként (óra, hónap)",
+                  "Tanár"
+                ],
+                [
+                  "Darabbér (teljesítménybér)",
+                  "a mennyiséghez kötött: darabbér vagy időnormás bér",
+                  "Idénymunkás kilogrammonként"
+                ],
+                [
+                  "Prémiumbér (teljesítménybér)",
+                  "időbér + prémium a többletteljesítményért",
+                  "Ingatlanközvetítő ingatlanonként"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szociális juttatások",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Törvényi",
+                  "a munkáltatói társadalombiztosítási járulék"
+                ],
+                [
+                  "Kollektív szerződés szerinti",
+                  "szennyezettségi pótlék, szabadság- és karácsonyi pénz"
+                ],
+                [
+                  "Önkéntes",
+                  "üzemi étkezde, céges autó"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Munkavállalói részesedés",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Teljesítményhez kötött részesedés",
+                  "bónusz különleges teljesítményért"
+                ],
+                [
+                  "Tőkerészesedés",
+                  "dolgozói részvények, munkavállalói alapítvány"
+                ],
+                [
+                  "Nyereségrészesedés",
+                  "részesedés a kifizetett nyereségből"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "„Kafetéria-rendszer”: a munkavállalók maguk választanak különböző ösztönzők közül (biztosítás, szabadság, céges autó)."
+            }
+          ]
+        },
+        {
+          "titel": "Teljesítményértékelés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Teljesítményértékelés",
+              "erklaerung": "A munkavállalók teljesítményének és potenciáljának értékelése → a lehető legjobb alkalmazás, teljesítményarányos bérezés, célzott fejlesztés, motiváció."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Forma",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "A felettes által",
+                  "a leggyakoribb forma"
+                ],
+                [
+                  "A kollégák által",
+                  "jó rálátás, de feszültségek lehetségesek"
+                ],
+                [
+                  "Önértékelés",
+                  "nagy elfogadottság, gyakran eltér a mások általi képtől"
+                ],
+                [
+                  "360°-os visszajelzés",
+                  "sok oldalról: kollégák, felettesek, vevők, beszállítók"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Eljárás",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Besorolásos eljárás",
+                  "a kritériumok besorolása egy skálán"
+                ],
+                [
+                  "… viselkedésleírással",
+                  "skála + viselkedési példák"
+                ],
+                [
+                  "Célorientált eljárás",
+                  "Elérték-e a megállapodott célokat?"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Mindig beszélgetéssel kell összekötni (értékelőlap). A munkához nem kapcsolódó tulajdonságokat nem szabad értékelni."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Értékelési hiba",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Haloeffektus (glóriahatás)",
+                  "egy feltűnő tulajdonság „beragyog” minden mást"
+                ],
+                [
+                  "Szelektív észlelés",
+                  "csak azt látjuk, ami megerősíti a saját véleményünket"
+                ],
+                [
+                  "Hasonlósági hatás",
+                  "a hozzánk hasonló embereket jobban értékeljük"
+                ],
+                [
+                  "Recency-hatás (frissességi hatás)",
+                  "a legutóbb látottat túlértékeljük"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Támogató funkciók",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Személyzeti kontrolling",
+              "erklaerung": "Az összes személyzettel kapcsolatos tevékenység tervezése, irányítása és ellenőrzése. Vizsgálja, mennyire hatékony és eredményes a személyzeti menedzsment."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Mennyiségi módszerek",
+                "punkte": [
+                  "Mutatók: jelentkezők pozíciónként, személyi költség munkavállalónként, túlórák, fluktuációs ráta, képzési költségek"
+                ]
+              },
+              "rechts": {
+                "titel": "Minőségi módszerek",
+                "punkte": [
+                  "teljesítményértékelések",
+                  "munkavállalói felmérések",
+                  "potenciálelemzések",
+                  "erősség-gyengeség elemzések"
+                ]
+              }
+            },
+            {
+              "type": "formel",
+              "name": "Személyi ráfordítás-intenzitás",
+              "zaehler": "személyi költségek · 100",
+              "nenner": "üzemi teljesítmény"
+            },
+            {
+              "type": "begriff",
+              "term": "Személyzeti adminisztráció",
+              "erklaerung": "Adminisztratív feladatok: elszámolás (bér, utazási költségek), bejelentések (évfordulók, adóhivatal), felügyelet (munkaidő, túlórák)."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Employer branding",
+                "punkte": [
+                  "A munkáltatói márka hosszú távú felépítése",
+                  "imázskampányok, tanúsítványok, értékelő portálok, munkavállalók mint márkanagykövetek"
+                ]
+              },
+              "rechts": {
+                "titel": "Személyzeti marketing",
+                "punkte": [
+                  "Konkrét megvalósítás",
+                  "karrieroldal, közösségi média, gyakornoki helyek, toborzási vásárok"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Generációk és bérezés",
+          "punkte": [
+            "Baby boomerek, X, Y, Z, alfa – eltérő értékek és elvárások",
+            "Igazságos bérezés: teljesítmény-, követelmény-, képzettségarányos, piackonform, szociálisan igazságos",
+            "Időbér · darabbér (darab-/időnormás) · prémiumbér",
+            "Szociális juttatások: törvényi, kollektív szerződés szerinti, önkéntes · munkavállalói részesedés: teljesítmény, tőke, nyereség"
+          ]
+        },
+        {
+          "titel": "Értékelés",
+          "punkte": [
+            "Felettes, kollégák, önértékelés, 360°-os visszajelzés",
+            "Besorolásos eljárás (± viselkedésleírás), célorientált",
+            "Hibák: haloeffektus, szelektív észlelés, hasonlósági hatás, recency-hatás"
+          ]
+        },
+        {
+          "titel": "Támogatás",
+          "punkte": [
+            "Személyzeti kontrolling: mennyiségi (mutatók) + minőségi (felmérések)",
+            "Személyi ráfordítás-intenzitás = személyi költségek · 100 / üzemi teljesítmény",
+            "Személyzeti adminisztráció: elszámolás, bejelentések, felügyelet",
+            "Employer branding (munkáltatói márka) → személyzeti marketing (konkrét intézkedések)"
+          ]
+        }
+      ]
+    },
+    "produktionsbetriebe": {
+      "schritte": [
+        {
+          "titel": "A termelő üzemek jelentősége",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Termelő üzem (gyártó üzem)",
+              "erklaerung": "Az ipar és a kisipar vállalatai, amelyek tárgyi javakat állítanak elő. A szekunder szektorhoz tartoznak (az építőiparral és a bányászattal együtt)."
+            },
+            {
+              "type": "begriff",
+              "term": "Bruttó hazai termék (GDP)",
+              "erklaerung": "Egy országban egy év alatt előállított összes áru és szolgáltatás összértéke."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szektor",
+                "Részesedés a GDP-ből (Ausztria)",
+                "Részesedés a foglalkoztatottakból"
+              ],
+              "zeilen": [
+                [
+                  "Primer (őstermelés)",
+                  "kb. 1%",
+                  "kb. 3%"
+                ],
+                [
+                  "Szekunder (termelés)",
+                  "kb. 28%",
+                  "kb. 25%"
+                ],
+                [
+                  "Tercier (szolgáltatás)",
+                  "kb. 71%",
+                  "kb. 71%"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Az osztrák export mintegy 70%-a a termelő szektorból származik. A termelő üzemek több mint 95%-a kis- és középvállalkozás."
+            }
+          ]
+        },
+        {
+          "titel": "A termelő üzemek csoportosítása",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "frage": "A vevők fajtája szerint:",
+              "links": {
+                "titel": "Fogyasztásicikk-gyártó üzemek",
+                "punkte": [
+                  "Tárgyi javak a fogyasztóknak (végfelhasználóknak)",
+                  "pl. bútorok, italok"
+                ]
+              },
+              "rechts": {
+                "titel": "Beruházásijavak-gyártó üzemek",
+                "punkte": [
+                  "Tárgyi javak más vállalatoknak",
+                  "pl. futószalag, robotok, acéllemezek"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szempont",
+                "Kisipari üzem",
+                "Ipari üzem"
+              ],
+              "zeilen": [
+                [
+                  "Meghatározó tényező",
+                  "anyag és munkaerő",
+                  "tárgyi eszközök (magas fix költségek)"
+                ],
+                [
+                  "Üzemméret",
+                  "kis- és középüzemek",
+                  "közép- és nagyüzemek"
+                ],
+                [
+                  "Vezetés",
+                  "tulajdonos",
+                  "menedzsment"
+                ],
+                [
+                  "Gyártás",
+                  "kevés automatizálás, kevés munkamegosztás",
+                  "magas automatizáltság, sok munkamegosztás"
+                ],
+                [
+                  "Példa",
+                  "Naturbackstube Honeder (pékség)",
+                  "backaldrin ipari pékség"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Kisipar = munkaigényes. Ipar = eszközigényes. Az elhatárolás nem mindig egyértelmű."
+            }
+          ]
+        },
+        {
+          "titel": "A termelő üzemek céljai",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Versenyképesség",
+              "erklaerung": "A termelő üzemeknek eladható, egyedi termékeket kell gyártaniuk (egyedi értékesítési pont/USP), és rugalmasan kell reagálniuk a változásokra."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Az üzemi termelés céljai"
+              ],
+              "zeilen": [
+                [
+                  "A termelési tényezők optimális felhasználása (termelékenység, gazdaságosság, jövedelmezőség)"
+                ],
+                [
+                  "Vevői elégedettség"
+                ],
+                [
+                  "Alacsony termelési költségek"
+                ],
+                [
+                  "Fenntartható és etikus termelés"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Fixköltség-degresszió",
+              "erklaerung": "Minél több darabot gyártanak, annál kisebb a darabonkénti fix költség (tömeggyártás).",
+              "beispiel": "Az IKEA hatalmas mennyiségben gyártja a Billy polcokat."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Fenntarthatóság",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "People – társadalmi",
+                  "tisztességes munkakörnyezet, egészség, továbbképzés"
+                ],
+                [
+                  "Planet – ökológiai",
+                  "megújuló energia, energiahatékonyság, kisebb vízfogyasztás"
+                ],
+                [
+                  "Profit – gazdasági",
+                  "felelős gazdálkodás: törvények, nincs korrupció, tisztességes verseny"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Telephelyválasztás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Telephely",
+              "erklaerung": "Egy üzem földrajzi helye. A telephelyválasztás fontos stratégiai döntés – hosszú távú, drága és nehezen visszafordítható."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Telephelytényezők",
+                "Példák"
+              ],
+              "zeilen": [
+                [
+                  "Beszerzési oldali",
+                  "terület, infrastruktúra, munkaerő, a beszállítók/nyersanyagok közelsége, bérleti díjak, kutatás"
+                ],
+                [
+                  "Termeléssel kapcsolatos",
+                  "jogi előírások, adók, bürokrácia, személyi költségek, támogatások"
+                ],
+                [
+                  "Értékesítés-orientált",
+                  "vevőközelség, verseny, közlekedési helyzet, imázs"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "A termelő üzemeknél főleg a beszerzési oldali és a termeléssel kapcsolatos tényezők számítanak (pl. folyó melletti fekvés a nyersanyagszállításhoz). Segédeszköz: pontozásos módszer."
+            },
+            {
+              "type": "begriff",
+              "term": "Follow-the-Customer elv",
+              "erklaerung": "A termelést oda telepítik, ahol a legfontosabb vevők vannak.",
+              "beispiel": "A voestalpine az USA-ban bővít, hogy közel legyen a teherautó-gyártókhoz, és elkerülje a vámokat."
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Termelő üzemek",
+          "punkte": [
+            "Tárgyi javakat állítanak elő (ipar, kisipar) – szekunder szektor, a GDP kb. 28%-a, az export kb. 70%-a",
+            "Fogyasztásicikk- (végfelhasználók) ↔ beruházásijavak-gyártó üzemek (vállalatok)",
+            "Kisipar (munkaigényes, tulajdonos, kicsi) ↔ ipar (eszközigényes, menedzsment, nagy, automatizált)"
+          ]
+        },
+        {
+          "titel": "Célok és telephely",
+          "punkte": [
+            "Versenyképesség USP és rugalmasság révén",
+            "Célok: optimális tényezőfelhasználás, vevői elégedettség, alacsony költségek, fenntarthatóság (People, Planet, Profit)",
+            "Fixköltség-degresszió: több darab → kisebb darabonkénti fix költség",
+            "Telephelytényezők: beszerzési oldali, termeléssel kapcsolatos, értékesítés-orientált; Follow-the-Customer"
+          ]
+        }
+      ]
+    },
+    "leistungserstellungsprozess-produktion": {
+      "schritte": [
+        {
+          "titel": "A folyamat áttekintése",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Termelés",
+              "erklaerung": "A termelési tényezőket – munkaerő, üzemi eszközök és anyagok – úgy kombinálják, hogy termékek jöjjenek létre."
+            },
+            {
+              "type": "ablauf",
+              "titel": "Teljesítményelőállítási folyamat",
+              "schritte": [
+                {
+                  "titel": "Termékinnováció",
+                  "text": "egy termék (tovább)fejlesztése"
+                },
+                {
+                  "titel": "Értékesítési tervezés",
+                  "text": "az eladható termékmennyiség becslése"
+                },
+                {
+                  "titel": "Termelési programtervezés",
+                  "text": "milyen termékek, mikor és mennyi?"
+                },
+                {
+                  "titel": "Anyagszükséglet-tervezés",
+                  "text": "a szükséges anyagok meghatározása"
+                },
+                {
+                  "titel": "Az időbeli lefolyás tervezése",
+                  "text": "a konkrét munkalépések meghatározása"
+                },
+                {
+                  "titel": "A termelés végrehajtása",
+                  "text": "a gyártási lehetőségek meghatározása"
+                }
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Ezzel párhuzamosan fut a termelési kontrolling és a minőségirányítás. A gyakorlatban egy termeléstervező és -irányító (PPS) rendszer segít (pl. SAP)."
+            }
+          ]
+        },
+        {
+          "titel": "Termékinnováció",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Termékinnováció",
+              "erklaerung": "Teljesen új terméket hoznak létre, vagy egy meglévőt továbbfejlesztenek. Kutatás-fejlesztési (K+F) befektetéseket igényel."
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "1",
+                  "wert": "Termékjavaslat"
+                },
+                {
+                  "titel": "2",
+                  "wert": "Fejlesztés (tervezés)"
+                },
+                {
+                  "titel": "3",
+                  "wert": "A termelés előkészítése"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Kísérőként: költségkontrolling (fizetések, berendezések, piackutatás)."
+            },
+            {
+              "type": "vergleich",
+              "frage": "Honnan jön az ötlet?",
+              "links": {
+                "titel": "Technology push",
+                "punkte": [
+                  "új technológia vált ki innovációt",
+                  "pl. MI → chatbotok"
+                ]
+              },
+              "rechts": {
+                "titel": "Market pull",
+                "punkte": [
+                  "vevői igény/trend vált ki innovációt",
+                  "pl. vegán termékek"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Fogalom",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Műszaki rajz",
+                  "a termék grafikus ábrázolása"
+                ],
+                [
+                  "Termékstruktúra",
+                  "fa: termék → részegységek (RE) → alkatrészek (A)"
+                ],
+                [
+                  "Darabjegyzék",
+                  "az összes részegység és alkatrész felsorolása mennyiségekkel"
+                ],
+                [
+                  "Szimultán tervezés (simultaneous engineering)",
+                  "a termék és a gyártás párhuzamos fejlesztése"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "A termelés előkészítése",
+              "erklaerung": "Munkatervezés → a termelési tényezők biztosítása → tesztek (prototípus)."
+            }
+          ]
+        },
+        {
+          "titel": "Értékesítési és termelési programtervezés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Értékesítési tervezés",
+              "erklaerung": "Megbecsüli, mely termékekből várhatóan mennyit adnak el (elsődleges szükséglet). Alap: értékesítési statisztikák, piackutatás."
+            },
+            {
+              "type": "begriff",
+              "term": "Termelési programtervezés",
+              "erklaerung": "Meghatározza: a termékek fajtáját, mennyiségét és időbeli sorrendjét. Ellenőrzi, elegendők-e a kapacitások."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Rendelésre gyártás (make to order)",
+                "punkte": [
+                  "termelés csak konkrét vevői megrendelésre",
+                  "vevői kívánságok lehetségesek",
+                  "pl. fröccsöntő gép"
+                ]
+              },
+              "rechts": {
+                "titel": "Készletre gyártás (make to stock)",
+                "punkte": [
+                  "termelés az előrejelzett eladási mennyiség szerint",
+                  "mindig szállítóképes",
+                  "pl. mosószer, italok"
+                ]
+              }
+            },
+            {
+              "type": "formel",
+              "name": "Fedezeti hozzájárulás",
+              "zaehler": "árbevétel − változó költségek",
+              "nenner": "1",
+              "beispiel": "Optimális termelési program = maximális fedezeti hozzájárulás/nyereség"
+            },
+            {
+              "type": "begriff",
+              "term": "Kapacitás",
+              "erklaerung": "Egy vállalat teljesítőképessége (berendezések, gépek, emberi munka)."
+            }
+          ]
+        },
+        {
+          "titel": "Anyagszükséglet-tervezés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Anyagszükséglet-tervezés",
+              "erklaerung": "A termelési program alapján meghatározza az anyagszükségletet, és időben biztosítja az anyagokat."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Számítás"
+              ],
+              "zeilen": [
+                [
+                  "anyagszükséglet a darabjegyzék szerint · termelési mennyiség"
+                ],
+                [
+                  "= bruttó szükséglet (összszükséglet)"
+                ],
+                [
+                  "− raktárkészlet"
+                ],
+                [
+                  "= nettó szükséglet (ténylegesen beszerzendő)"
+                ]
+              ]
+            },
+            {
+              "type": "text",
+              "text": "Példa asztalosműhely: 120 asztal · 4 asztalláb = 480 asztalláb (bruttó) − 75 raktáron = 405 asztalláb (nettó)."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Saját gyártás",
+                "punkte": [
+                  "a nettó szükségletet maguk állítják elő"
+                ]
+              },
+              "rechts": {
+                "titel": "Külső beszerzés",
+                "punkte": [
+                  "a nettó szükségletet megvásárolják"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "Időbeli tervezés",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Átfutási ütemezés",
+                "punkte": [
+                  "sorrend az elvégzendő tevékenységek szerint",
+                  "kezdő és záró időpontok meghatározása"
+                ]
+              },
+              "rechts": {
+                "titel": "Kapacitásütemezés",
+                "punkte": [
+                  "figyelembe veszi a rendelkezésre álló kapacitásokat",
+                  "kapacitásprofilok"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Átfutási idő",
+                "összetevői"
+              ],
+              "zeilen": [
+                [
+                  "Végrehajtási idő",
+                  "átállási idő (a gép előkészítése) + megmunkálási idő"
+                ],
+                [
+                  "Átmeneti idő",
+                  "várakozási idő (nem történik semmi) + szállítási idő"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "",
+                "Előre ütemezés",
+                "Visszafelé ütemezés"
+              ],
+              "zeilen": [
+                [
+                  "Menet",
+                  "a megrendelés beérkezése után azonnal indul → legkorábbi befejezési időpont",
+                  "a szállítási határidőtől visszaszámol → legkésőbbi kezdés"
+                ],
+                [
+                  "Előny",
+                  "kis időnyomás",
+                  "alacsonyabb raktározási költségek"
+                ],
+                [
+                  "Hátrány",
+                  "a készlet tőkét köt le",
+                  "nincs időtartalék"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Időrendben: sávdiagram (Gantt). Párhuzamos lépések: hálóterv. Határidő-pontosság = határidőre teljesített szállítások · 100 / összes szállítás."
+            },
+            {
+              "type": "formel",
+              "name": "Kihasználtság %-ban",
+              "zaehler": "kapacitásigény · 100",
+              "nenner": "rendelkezésre álló kapacitás"
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Alkalmazkodás túlterhelés esetén",
+                "Példák"
+              ],
+              "zeilen": [
+                [
+                  "Időbeli",
+                  "túlórák, szállítási határidők halasztása"
+                ],
+                [
+                  "Mennyiségi",
+                  "további gépek, több személyzet"
+                ],
+                [
+                  "Intenzitásbeli",
+                  "a termelékenység növelése (technológia, továbbképzés)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "A termelés végrehajtása",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Gyártási mód",
+                "Jellemző",
+                "+",
+                "−"
+              ],
+              "zeilen": [
+                [
+                  "Egyedi gyártás",
+                  "egy darab vevői kívánság szerint (óceánjáró hajó)",
+                  "pontosan a kívánság szerint, magas minőség",
+                  "magas költségek, hosszú átfutási idő"
+                ],
+                [
+                  "Sorozatgyártás",
+                  "korlátozott számú azonos/hasonló termék (autósorozat)",
+                  "alacsonyabb darabköltség",
+                  "nagy tőkeigény, kevéssé rugalmas"
+                ],
+                [
+                  "Tömeggyártás",
+                  "azonos termékek tetszőleges mennyiségben (ásványvíz)",
+                  "alacsony költségek, gyors",
+                  "az átállás drága, magas raktározási költségek"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Szervezési típus",
+                "Jellemző",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Műhelyrendszerű gyártás",
+                  "azonos tevékenységek egy műhelyben",
+                  "fémkerítés: szabás, fúrás, festés"
+                ],
+                [
+                  "Futószalagos gyártás",
+                  "állomások sorrendben, automatikus szállítás",
+                  "televíziók"
+                ],
+                [
+                  "Csoportos gyártás",
+                  "a műhely- és a futószalagos gyártás keveréke",
+                  "kanapé: váz, kárpitozás, huzat"
+                ],
+                [
+                  "Helyszíni (építési) gyártás",
+                  "mindent a felhasználás helyére visznek",
+                  "alagútépítés"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Gyártási mód = HÁNY azonos termék. Szervezési típus = HOGYAN vannak elrendezve a munkaállomások."
+            }
+          ]
+        },
+        {
+          "titel": "Termelési kontrolling és minőség",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Termelési kontrolling",
+              "erklaerung": "Saját folyamat a termeléssel párhuzamosan: elemzi az eltéréseket és a fejlesztési lehetőségeket (költségvetések, terv-tény összehasonlítások, kapacitás- és szűkkeresztmetszet-ellenőrzés)."
+            },
+            {
+              "type": "zyklus",
+              "mitte": "Szabályozókör",
+              "schritte": [
+                "Célok tervezése",
+                "Tervérték megadása",
+                "Terv-tény összehasonlítás",
+                "Problémaelemzés",
+                "Korrekciós intézkedések",
+                "Ellenőrzés"
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Minőségirányítás",
+              "erklaerung": "A középpontban a vevőorientáció áll: a minőséget rendszeresen felügyelik, elemzik és javítják."
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "Vevői kívánságok",
+                  "wert": "Vevőorientált minőség"
+                },
+                {
+                  "titel": "alapja",
+                  "wert": "Műszaki minőség"
+                },
+                {
+                  "titel": "mindkettő teljesül",
+                  "wert": "Jó termék"
+                }
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Minőségi terület",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Termék- és szolgáltatásminőség",
+                  "a végtermék/szolgáltatás minősége"
+                ],
+                [
+                  "Folyamatminőség",
+                  "hibátlan, költséghatékony előállítás"
+                ],
+                [
+                  "Rendszerminőség",
+                  "az irányítási rendszer minősége (pl. ISO 9001)"
+                ]
+              ]
+            },
+            {
+              "type": "ablauf",
+              "titel": "A minőségirányítás fokozatai (1950 óta)",
+              "schritte": [
+                {
+                  "titel": "Minőségellenőrzés",
+                  "text": "szúrópróbák a kész termékekből, a hibásak kiválogatása"
+                },
+                {
+                  "titel": "Minőségbiztosítás",
+                  "text": "a gyártási folyamat felügyelete, a hibák felismerése már a gyártás során"
+                },
+                {
+                  "titel": "Teljes körű minőségirányítás (TQM)",
+                  "text": "a vevői igényekhez igazodik, minden folyamat a minőségre irányul"
+                },
+                {
+                  "titel": "Business Excellence",
+                  "text": "a legjobb vállalatvezetés minden érintett számára, folyamatos fejlesztés"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Folyamat",
+          "punkte": [
+            "Termékinnováció → értékesítési tervezés → termelési programtervezés → anyagszükséglet-tervezés → időbeli tervezés → végrehajtás",
+            "Innováció: termékjavaslat → fejlesztés → előkészítés; technology push ↔ market pull",
+            "Termékstruktúra (termék → RE → A), darabjegyzék",
+            "Rendelésre gyártás ↔ készletre gyártás; fedezeti hozzájárulás = árbevétel − változó költségek",
+            "Nettó szükséglet = darabjegyzék · mennyiség − raktárkészlet"
+          ]
+        },
+        {
+          "titel": "Idő és végrehajtás",
+          "punkte": [
+            "Átfutási idő = átállási + megmunkálási + várakozási + szállítási idő",
+            "Előre (legkorábbi befejezés) ↔ visszafelé ütemezés (legkésőbbi kezdés)",
+            "Kapacitásütemezés: kihasználtság = igény · 100 / kínálat; alkalmazkodás időbeli, mennyiségi, intenzitásbeli",
+            "Gyártási módok: egyedi, sorozat-, tömeggyártás",
+            "Szervezési típusok: műhely-, futószalagos, csoportos, helyszíni gyártás"
+          ]
+        },
+        {
+          "titel": "Kontrolling és minőség",
+          "punkte": [
+            "Termelési kontrolling: szabályozókör terv-tény összehasonlítással",
+            "Minőség: vevőorientált + műszaki; termék-/szolgáltatás-, folyamat-, rendszerminőség (ISO 9001)",
+            "Fokozatok: minőségellenőrzés → minőségbiztosítás → TQM → Business Excellence"
+          ]
+        }
+      ]
+    },
+    "investition-finanzierung-ueberblick": {
+      "schritte": [
+        {
+          "titel": "Pénzügyi tervezés",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Pénzügyi tervezés",
+              "erklaerung": "Világos áttekintés a jelenlegi és jövőbeli tőkeszükségletről és a finanszírozási lehetőségekről. Az alapja annak, hogy a pénzt hatékonyan fektessék be."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Menedzsmentszint",
+                "Pénzügyi tervezés"
+              ],
+              "zeilen": [
+                [
+                  "Normatív",
+                  "hosszú távú pénzügyi célok meghatározása"
+                ],
+                [
+                  "Stratégiai",
+                  "költségvetés-tervezés, beruházási projektek értékelése (pl. új technológia a CO₂-csökkentéshez)"
+                ],
+                [
+                  "Operatív",
+                  "folyamatos költségellenőrzés, a likviditás biztosítása a fizetésekhez és számlákhoz"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Likviditás",
+              "erklaerung": "A vállalat képessége, hogy kifizetéseit határidőre teljesítse."
+            }
+          ]
+        },
+        {
+          "titel": "Beruházás és finanszírozás a mérlegben",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Eszközök (aktívák) = vagyon",
+                "punkte": [
+                  "Befektetett eszközök: immateriális javak, tárgyi eszközök, pénzügyi befektetések",
+                  "Forgóeszközök: készletek, követelések, pénztár, bankbetétek",
+                  "→ forrásfelhasználás = BERUHÁZÁS"
+                ]
+              },
+              "rechts": {
+                "titel": "Források (passzívák) = tőke",
+                "punkte": [
+                  "Saját tőke: betétek, nyereség, tartalékok",
+                  "Idegen tőke: céltartalékok, hitelek, kötelezettségek",
+                  "→ forráseredet = FINANSZÍROZÁS"
+                ]
+              }
+            },
+            {
+              "type": "merke",
+              "text": "Eszközök összesen = források összesen. Beruházás = MIRE használják a pénzt (eszközök). Finanszírozás = HONNAN jön a pénz (források)."
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "Honnan? (források)",
+                  "wert": "Finanszírozás"
+                },
+                {
+                  "titel": "lehetővé teszi",
+                  "wert": "→"
+                },
+                {
+                  "titel": "Mire? (eszközök)",
+                  "wert": "Beruházás"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Áttekintés",
+          "punkte": [
+            "Pénzügyi tervezés = áttekintés a tőkeszükségletről és a finanszírozási lehetőségekről; minden menedzsmentszinten",
+            "Likviditás = fizetőképesség",
+            "Mérleg: eszközök (vagyon = forrásfelhasználás = beruházás) ↔ források (tőke = forráseredet = finanszírozás)",
+            "Befektetett eszközök (hosszú távú) + forgóeszközök (rövid távú) = saját tőke + idegen tőke"
+          ]
+        }
+      ]
+    },
+    "investitionsmanagement": {
+      "schritte": [
+        {
+          "titel": "A beruházások fajtái",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Beruházás",
+              "erklaerung": "Pénzügyi eszközök felhasználása vagyon beszerzésére. A hibás döntések akár fizetésképtelenséghez (inszolvenciához) is vezethetnek."
+            },
+            {
+              "type": "vergleich",
+              "frage": "A beruházások fajtái:",
+              "links": {
+                "titel": "A beruházási jószág szerint",
+                "punkte": [
+                  "Tárgyi beruházás: fizikai (gép)",
+                  "Pénzügyi befektetés: értékpapírok",
+                  "Immateriális beruházás: szabadalmak"
+                ]
+              },
+              "rechts": {
+                "titel": "A beruházás oka szerint",
+                "punkte": [
+                  "Új beruházás: alapítás/első alkalom",
+                  "Pótló beruházás: azonos fajtájú csere",
+                  "Racionalizálási beruházás: hatékonyabb",
+                  "Bővítő beruházás: több kapacitás"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "Beruházási folyamat",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Beruházásmenedzsment",
+              "erklaerung": "A beruházások rendszeres tervezése, döntéshozatala, végrehajtása és ellenőrzése."
+            },
+            {
+              "type": "ablauf",
+              "titel": "Beruházási folyamat (példa: új tűzhely egy szállodában)",
+              "schritte": [
+                {
+                  "titel": "Beruházástervezés",
+                  "text": "az igény jelzése, döntési kritériumok meghatározása, ajánlatok bekérése"
+                },
+                {
+                  "titel": "Beruházási döntés",
+                  "text": "a beruházások értékelése, a finanszírozás ellenőrzése, vásárlási döntés"
+                },
+                {
+                  "titel": "Végrehajtás",
+                  "text": "megrendelés, kifizetés"
+                },
+                {
+                  "titel": "Ellenőrzés",
+                  "text": "elérték a célokat? korrekciók, tapasztalatok a jövőre"
+                }
+              ]
+            },
+            {
+              "type": "vergleich",
+              "frage": "Döntési kritériumok:",
+              "links": {
+                "titel": "Mennyiségi (hard facts)",
+                "punkte": [
+                  "Számokkal mérhető",
+                  "költségek, árbevétel, nyereség, tőkebefektetés, jövedelmezőség, megtérülési idő"
+                ]
+              },
+              "rechts": {
+                "titel": "Minőségi (soft facts)",
+                "punkte": [
+                  "Számokkal nem mérhető",
+                  "környezetbarát jelleg, minőség, megbízhatóság, szerviz, munkavédelem"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "titel": "Az eszközök áttekintése",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Statikus eljárás",
+                "Kérdés",
+                "Döntés a … mellett"
+              ],
+              "zeilen": [
+                [
+                  "Költség-összehasonlító számítás",
+                  "Melyik beruházás okozza a legkisebb költséget?",
+                  "legkisebb költség"
+                ],
+                [
+                  "Nyereség-összehasonlító számítás",
+                  "Melyik hozza a legnagyobb nyereséget?",
+                  "legnagyobb nyereség"
+                ],
+                [
+                  "Jövedelmezőség-összehasonlító számítás",
+                  "Melyiknek a legmagasabb a tőke hozama?",
+                  "legmagasabb jövedelmezőség"
+                ],
+                [
+                  "Megtérülési számítás",
+                  "Hol térül meg leggyorsabban a tőke?",
+                  "legrövidebb megtérülési idő"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Statikus eljárások = csak mennyiségi kritériumok, EGY időszak átlagértékeivel számolnak. Pontozásos módszer = minőségi kritériumok is."
+            }
+          ]
+        },
+        {
+          "titel": "Költség-összehasonlító számítás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Költség-összehasonlító számítás",
+              "erklaerung": "Összehasonlítja az időszakonkénti átlagos költségeket. A legkisebb költségű alternatívát választják."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Összköltség",
+                "összetevői"
+              ],
+              "zeilen": [
+                [
+                  "Folyó üzemeltetési költségek",
+                  "változó (pl. üzemanyag) + fix (biztosítás, karbantartás)"
+                ],
+                [
+                  "+ tőkeköltségek",
+                  "kalkulatív kamat + kalkulatív értékcsökkenés"
+                ],
+                [
+                  "= összköltség",
+                  "összehasonlítási alap azonos kibocsátás mellett"
+                ]
+              ]
+            },
+            {
+              "type": "formel",
+              "name": "Kalk. kamat",
+              "zaehler": "(beszerzési költség + maradványérték)",
+              "nenner": "2",
+              "faktor": "· kamatláb"
+            },
+            {
+              "type": "formel",
+              "name": "Kalk. értékcsökkenés",
+              "zaehler": "beszerzési költség − maradványérték",
+              "nenner": "hasznos élettartam"
+            },
+            {
+              "type": "formel",
+              "name": "Darabköltség",
+              "zaehler": "összköltség",
+              "nenner": "kibocsátási mennyiség",
+              "beispiel": "eltérő kibocsátási mennyiség esetén összehasonlítani"
+            },
+            {
+              "type": "formel",
+              "name": "Kritikus mennyiség",
+              "zaehler": "a fix költségek különbsége időszakonként",
+              "nenner": "a változó költségek különbsége egységenként",
+              "beispiel": "(292 500 − 221 000) / (150 − 110) = 1787,5 óra"
+            },
+            {
+              "type": "merke",
+              "text": "Kritikus mennyiség (ismeretlen kihasználtság esetén): felette az alacsonyabb változó költségű, alatta az alacsonyabb fix költségű alternatíva éri meg. Maradványérték = érték a hasznos élettartam végén."
+            }
+          ]
+        },
+        {
+          "titel": "Nyereség- és jövedelmezőség-összehasonlítás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Nyereség-összehasonlító számítás",
+              "erklaerung": "A költség-összehasonlító számítást kiegészíti a bevételekkel. Eltérő kapacitású vagy minőségű beruházásokhoz. A legnagyobb nyereség nyer."
+            },
+            {
+              "type": "formel",
+              "name": "Nyereség",
+              "zaehler": "bevételek − összköltség",
+              "nenner": "1"
+            },
+            {
+              "type": "begriff",
+              "term": "Jövedelmezőség-összehasonlító számítás",
+              "erklaerung": "A nyereség-összehasonlító számítást kiegészíti a befektetett tőkével. A legmagasabb jövedelmezőség (tőkehozam) nyer."
+            },
+            {
+              "type": "formel",
+              "name": "Jövedelmezőség",
+              "zaehler": "(nyereség + kalk. kamat) · 100",
+              "nenner": "Ø tőkebefektetés",
+              "beispiel": "Ø tőkebefektetés = (beszerzési költség + maradványérték) / 2"
+            },
+            {
+              "type": "formel",
+              "name": "Jövedelmezőség (nyereség nélkül)",
+              "zaehler": "költségmegtakarítás · 100",
+              "nenner": "Ø tőkebefektetés"
+            }
+          ]
+        },
+        {
+          "titel": "Megtérülési számítás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Megtérülési számítás",
+              "erklaerung": "Mennyi idő alatt térül meg a befektetett tőke nyereségek vagy megtakarítások révén? Minél rövidebb, annál kisebb a kockázat."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Átlagmódszer",
+                "punkte": [
+                  "Az éves visszaáramlás azonos"
+                ]
+              },
+              "rechts": {
+                "titel": "Kumulációs módszer",
+                "punkte": [
+                  "Az éves visszaáramlások eltérőek",
+                  "A visszaáramlásokat összeadják, amíg fedezik a költségeket"
+                ]
+              }
+            },
+            {
+              "type": "formel",
+              "name": "Megtérülési idő",
+              "zaehler": "beszerzési költség − maradványérték",
+              "nenner": "éves nyereség + kalk. értékcsökkenés",
+              "beispiel": "250 000 / (75 000 + 25 000) = 2,5 év"
+            },
+            {
+              "type": "formel",
+              "name": "Megtérülési idő (megtakarítás)",
+              "zaehler": "beszerzési költség − maradványérték",
+              "nenner": "éves költségmegtakarítás"
+            },
+            {
+              "type": "merke",
+              "text": "A megtérülési időnek a hasznos élettartamon belül kell lennie. A hosszú távú nyereségről azonban semmit sem mond."
+            }
+          ]
+        },
+        {
+          "titel": "Korlátok és pontozásos módszer",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "A statikus eljárások korlátja",
+                "Feloldja"
+              ],
+              "zeilen": [
+                [
+                  "Csak egy időszakot vizsgál",
+                  "dinamikus eljárások (több időszak)"
+                ],
+                [
+                  "Azonos költségeket és bevételeket feltételez",
+                  "dinamikus eljárások (kamatozás/diszkontálás)"
+                ],
+                [
+                  "Csekély kifejezőerő",
+                  "dinamikus eljárások"
+                ],
+                [
+                  "Csak hard facts",
+                  "pontozásos módszer (soft facts is)"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "A pénz időértéke",
+              "erklaerung": "Egy pénzösszeg ma többet ér, mint ugyanaz az összeg a jövőben (infláció)."
+            },
+            {
+              "type": "ablauf",
+              "titel": "Pontozásos módszer (hasznossági elemzés)",
+              "schritte": [
+                {
+                  "titel": "Kritériumok meghatározása",
+                  "text": "mennyiségi ÉS minőségi"
+                },
+                {
+                  "titel": "Kritériumok súlyozása",
+                  "text": "összesen 100%"
+                },
+                {
+                  "titel": "Az alternatívák pontozása"
+                },
+                {
+                  "titel": "pont × súly, összeadás"
+                },
+                {
+                  "titel": "A legmagasabb hasznossági érték nyer"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Alapok",
+          "punkte": [
+            "Beruházási jószág: tárgyi, pénzügyi, immateriális beruházás",
+            "Ok: új, pótló, racionalizálási, bővítő beruházás",
+            "Folyamat: tervezés → döntés → végrehajtás → ellenőrzés",
+            "Kritériumok: mennyiségi (hard facts) ↔ minőségi (soft facts)"
+          ]
+        },
+        {
+          "titel": "Statikus eljárások",
+          "punkte": [
+            "Költség-összehasonlítás: legkisebb költség; összköltség = üzemeltetési költség + kalk. kamat + kalk. értékcsökkenés",
+            "Kalk. kamat = (BK + MÉ) / 2 · kamatláb · kalk. écs. = (BK − MÉ) / hasznos élettartam",
+            "Kritikus mennyiség = Δ fix költség / Δ változó költség",
+            "Nyereség-összehasonlítás: nyereség = bevételek − összköltség",
+            "Jövedelmezőség = (nyereség + kalk. kamat) · 100 / Ø tőkebefektetés",
+            "Megtérülési idő = (BK − MÉ) / (nyereség + kalk. écs.); átlag- ↔ kumulációs módszer"
+          ]
+        },
+        {
+          "titel": "Korlátok",
+          "punkte": [
+            "Statikus: 1 időszak, állandó értékek, nincs pénz időértéke, csak hard facts",
+            "Megoldás: dinamikus eljárások + pontozásos módszer (súlyozott pontok)"
+          ]
+        }
+      ]
+    },
+    "finanzmanagement": {
+      "schritte": [
+        {
+          "titel": "Finanszírozási célok és feladatok",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Finanszírozás",
+              "erklaerung": "Annak a tőkének a tervezése és biztosítása, amelyre az üzleti tevékenység megkezdéséhez, fenntartásához és bővítéséhez szükség van."
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "Melyik beruházás?",
+                  "wert": "Beruházásmenedzsment"
+                },
+                {
+                  "titel": "összetartoznak, mint a puzzle darabjai",
+                  "wert": "+"
+                },
+                {
+                  "titel": "Hogyan fizessük?",
+                  "wert": "Pénzügyi menedzsment"
+                }
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Finanszírozási cél",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Likviditás",
+                  "a kifizetések határidőre és korlátlanul teljesíthetők"
+                ],
+                [
+                  "Jövedelmezőség",
+                  "mennyit hoz a befektetett tőke"
+                ],
+                [
+                  "Függetlenség",
+                  "magas saját tőke arány révén; különben a befektetők beleszólást akarnak"
+                ]
+              ]
+            },
+            {
+              "type": "formel",
+              "name": "Jövedelmezőség",
+              "zaehler": "nyereség",
+              "nenner": "tőkebefektetés",
+              "faktor": "· 100"
+            },
+            {
+              "type": "merke",
+              "text": "Célkonfliktus likviditás ↔ jövedelmezőség: ha sok pénzt fektetnek be (hozam ↑), esetleg hiányzik a számlákhoz (likviditás ↓) – és fordítva."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "A pénzügyi menedzsment feladatai"
+              ],
+              "zeilen": [
+                [
+                  "A folyamatos finanszírozási igény meghatározása (pénzügyi tervezés)"
+                ],
+                [
+                  "Döntés a finanszírozás módjáról"
+                ],
+                [
+                  "Pénzügyi elemzés mutatószámokkal"
+                ],
+                [
+                  "A finanszírozás lebonyolítása (kifizetések, tőkebevonás, számlák)"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "A finanszírozási formák áttekintése",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "A finanszírozási formákat 2 szempont szerint osztják fel:"
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "A tőke eredete",
+                "punkte": [
+                  "Belső finanszírozás: a saját üzemi tevékenységből",
+                  "Külső finanszírozás: külső tőkeadóktól"
+                ]
+              },
+              "rechts": {
+                "titel": "A tőkeadó jogállása",
+                "punkte": [
+                  "Saját finanszírozás: saját tőke (tulajdonosok)",
+                  "Idegen finanszírozás: idegen tőke (hitelezők)"
+                ]
+              }
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "",
+                "Belső finanszírozás",
+                "Külső finanszírozás"
+              ],
+              "zeilen": [
+                [
+                  "Saját finanszírozás",
+                  "Önfinanszírozás",
+                  "Betéti/részesedési finanszírozás, egyéb részesedési formák, támogatások"
+                ],
+                [
+                  "Vegyes forma",
+                  "Átcsoportosításos finanszírozás",
+                  "Mezzanine tőke"
+                ],
+                [
+                  "Idegen finanszírozás",
+                  "Céltartalékokból történő finanszírozás",
+                  "Hitelfinanszírozás, kötvények"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Ez a táblázat a fejezet szíve – minden finanszírozási formának pontosan egy helye van benne!"
+            }
+          ]
+        },
+        {
+          "titel": "Saját finanszírozás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Saját finanszírozás",
+              "erklaerung": "A vállalat további saját tőkéhez jut – visszatartott nyereségből (belső) vagy a tulajdonosoktól/tagoktól (külső)."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "A magas saját tőke előnyei",
+                "punkte": [
+                  "Függetlenség",
+                  "Nincs kamat",
+                  "A veszteségek könnyebben fedezhetők (kisebb a fizetésképtelenség veszélye)",
+                  "Jobb hitelképesség"
+                ]
+              },
+              "rechts": {
+                "titel": "A saját tőke adói …",
+                "punkte": [
+                  "közvetlenül részesednek",
+                  "tájékoztatáshoz van joguk",
+                  "befolyásuk van az ügyvezetésre",
+                  "részesednek a nyereségből",
+                  "viselik a kockázatot is"
+                ]
+              }
+            },
+            {
+              "type": "merke",
+              "text": "Irányérték: saját tőke arány legalább 20%."
+            },
+            {
+              "type": "vergleich",
+              "frage": "Önfinanszírozás (saját erőből):",
+              "links": {
+                "titel": "Nyílt önfinanszírozás",
+                "punkte": [
+                  "a nyereséget nem fizetik ki, a vállalatnál marad",
+                  "tőkeszámla, illetve tartalékok"
+                ]
+              },
+              "rechts": {
+                "titel": "Rejtett önfinanszírozás",
+                "punkte": [
+                  "rejtett tartalékok a mérlegkészítési szabályok miatt (eszközök alul-, források felülértékelve)",
+                  "nyereség csak feloldáskor keletkezik"
+                ]
+              }
+            },
+            {
+              "type": "begriff",
+              "term": "Betéti és részesedési finanszírozás",
+              "erklaerung": "Kívülről érkező tőke, de a tulajdonosok saját tőkéje. Betétek: egyéni vállalkozó. Részesedés: OG, KG, GesbR, GmbH, AG (részvények), szövetkezet."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Egyéb részesedési forma",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Kockázati tőke (venture capital)",
+                  "egy finanszírozó társaság saját tőkét ad fiatal vállalatoknak (többnyire 200 000 €-tól) részesedésért és beleszólásért cserébe"
+                ],
+                [
+                  "Üzleti angyalok",
+                  "tapasztalt magánszemélyek: tőke (kb. 50 000–150 000 €) + tudás + kapcsolatok"
+                ],
+                [
+                  "Közösségi finanszírozás (crowdfunding)",
+                  "sok magánszemély (a tömeg) kis összegeket fizet platformokon keresztül"
+                ],
+                [
+                  "Tőzsdére lépés (IPO)",
+                  "átalakulás AG-vé és első tőzsdei bevezetés"
+                ],
+                [
+                  "Munkavállalói részesedés",
+                  "a munkavállalók részesedést kapnak (pl. FlexKapG vállalati értékrészesedés)"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Crowdfunding-modell",
+                "Ellenszolgáltatás"
+              ],
+              "zeilen": [
+                [
+                  "Donation based (adomány)",
+                  "nincs – pénz egy jó ügyért"
+                ],
+                [
+                  "Reward based (jutalom)",
+                  "jutalom (pl. maga a termék)"
+                ],
+                [
+                  "Lending based (kölcsön)",
+                  "kamat + visszafizetés (idegen tőkének számít!)"
+                ],
+                [
+                  "Equity based (crowdinvesting)",
+                  "részesedés a vállalatban és a nyereségben"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Támogatások (szubvenciók)",
+              "erklaerung": "„Ajándékpénz” a szövetségi államtól, tartományoktól, településektől, az EU-tól vagy a WKO-tól: támogatások, kedvezményes hitelek, kezességvállalás, díjmentesség, támogatott tanácsadás. Soha nem fedezik a teljes igényt."
+            }
+          ]
+        },
+        {
+          "titel": "Átcsoportosításos finanszírozás",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Átcsoportosításos finanszírozás",
+              "erklaerung": "A saját és idegen finanszírozás keveréke: az üzemben lekötött pénzt szabadítják fel."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Fajta",
+                "Így működik",
+                "Példa"
+              ],
+              "zeilen": [
+                [
+                  "Racionalizálás",
+                  "a folyamatok optimalizálása, a megtakarított tőke felhasználása",
+                  "készletcsökkentés just-in-time révén"
+                ],
+                [
+                  "Értékcsökkenési leírás",
+                  "az értékcsökkenést beépítik az eladási árba → visszafolyik, a pótlásig felhasználható",
+                  "gép 100 000 € / 10 év = évi 10 000 €"
+                ],
+                [
+                  "Vagyon eladása",
+                  "a nem szükséges vagyon eladása",
+                  "nem használt telek eladása"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Idegen finanszírozás és hitelek",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Idegen tőke – jellemzők",
+              "erklaerung": "Csak határozott időre · kamat · a hitelezőknek nincs beleszólásuk és nem részesednek a vagyongyarapodásból · csődben a hitelezőket fizetik ki ELŐSZÖR."
+            },
+            {
+              "type": "begriff",
+              "term": "Céltartalékokból történő finanszírozás (belső)",
+              "erklaerung": "Céltartalékok várható ráfordításokra (bizonytalan, mikor és mennyi – pl. perek, garanciák, nyugdíjak). A pénz a felhasználásig rendelkezésre áll."
+            },
+            {
+              "type": "begriff",
+              "term": "Hitel",
+              "erklaerung": "Az adós (hitelfelvevő) meghatározott időre pénzt kölcsönöz a hitelezőtől. Visszafizetés + kamat."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Megkülönböztetés …",
+                "Lehetőségek"
+              ],
+              "zeilen": [
+                [
+                  "Hitelező",
+                  "magánszemélyek, bankok, állam, vállalatok (beszállítók)"
+                ],
+                [
+                  "Szolgáltatás",
+                  "pénz, áru, kezesség"
+                ],
+                [
+                  "Futamidő",
+                  "rövid lejáratú (≤ 1 év), középlejáratú (1–5), hosszú lejáratú (> 5)"
+                ],
+                [
+                  "Felhasználási cél",
+                  "befektetett eszközök, forgóeszközök, áthidaló finanszírozás, fogyasztás"
+                ],
+                [
+                  "Hitelbiztosíték",
+                  "személyi, dologi biztosíték, hitelbiztosítás"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Hitelbiztosítékok és hitelvizsgálat",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Kezesség (személyi biztosíték)",
+              "erklaerung": "Egy harmadik személy (kezes) a magánvagyonával felel a hitelért."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "A kezesség fajtája",
+                "A kezes felel …"
+              ],
+              "zeilen": [
+                [
+                  "Kártalanító kezesség",
+                  "csak az összes jogi lépés (pl. végrehajtás) utáni maradékért – korlátozott"
+                ],
+                [
+                  "Egyszerű kezesség",
+                  "ha a főadósnál a felszólítások eredménytelenek"
+                ],
+                [
+                  "Készfizető (egyetemleges) kezesség",
+                  "„kezesként és fizetőként” – a hitelező azonnal választhat – messzemenő"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Dologi biztosíték",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Tulajdonjog-fenntartás",
+                  "az áru a teljes kifizetésig az eladóé"
+                ],
+                [
+                  "Követelésengedményezés (cesszió)",
+                  "a vevőkkel szembeni követeléseket a hitelezőre engedményezik (nyíltan vagy csendben)"
+                ],
+                [
+                  "Zálogjog",
+                  "lombard (ingóságok: arany, értékpapírok) · jelzálog (ingatlanok, a telekkönyvben)"
+                ]
+              ]
+            },
+            {
+              "type": "ablauf",
+              "titel": "A hitelügyletek menete",
+              "schritte": [
+                {
+                  "titel": "Hitelkérelem",
+                  "text": "dokumentumokkal (számlakivonatok, fizetés / mérlegek, pénzügyi tervek, cégjegyzék-kivonat)"
+                },
+                {
+                  "titel": "Hitelvizsgálat",
+                  "text": "hitelképesség minősítéssel (rating): hard facts (jövedelem, vagyon) + soft facts (fizetési magatartás, vezetés)"
+                },
+                {
+                  "titel": "Hitelszerződés",
+                  "text": "a szerződés + biztosítéki okiratok aláírása"
+                },
+                {
+                  "titel": "Hitelfelügyelet",
+                  "text": "számlák, forgalom, mérlegek figyelése (korai figyelmeztető rendszer)"
+                }
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Minél jobb a hitelképesség, annál olcsóbb a hitel. Legjobb minősítés: AAA (tripla A), legrosszabb: D (nemfizetés)."
+            }
+          ]
+        },
+        {
+          "titel": "Hitelfajták",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Hitelfajta",
+                "Jellemző"
+              ],
+              "zeilen": [
+                [
+                  "Folyószámlahitel",
+                  "rövid lejáratú hitelkeret a folyószámlán, rulírozóan használható; drága (tartozási kamat, túllépési jutalék)"
+                ],
+                [
+                  "Kölcsön (Darlehen)",
+                  "hosszú lejáratú pénzösszeg, csak EGYSZER veszik igénybe; olcsóbb"
+                ],
+                [
+                  "Kezességi hitel (aval hitel)",
+                  "a bank vállal kezességet (előleg-visszafizetési, jóteljesítési garancia); jutalék 1–3%"
+                ],
+                [
+                  "Szállítói hitel",
+                  "a vevő később, a fizetési határidőn belül fizet; költség = az igénybe nem vett skontó"
+                ],
+                [
+                  "Vevői hitel",
+                  "a vevő előre fizet/előleget ad a teljesítés előtt"
+                ]
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Kölcsönök a visszafizetés szerint",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Lejáratkor egy összegben törlesztendő kölcsön",
+                  "csak kamat, visszafizetés a végén"
+                ],
+                [
+                  "Részletekben törlesztendő kölcsön",
+                  "állandó tőketörlesztés, csökkenő kamat → a részlet csökken"
+                ],
+                [
+                  "Annuitásos kölcsön",
+                  "állandó részlet (annuitás = kamat + tőketörlesztés)"
+                ]
+              ]
+            },
+            {
+              "type": "formel",
+              "name": "A skontó éves kamatlába",
+              "zaehler": "skontó %-ban",
+              "nenner": "fizetési határidő − skontóhatáridő",
+              "faktor": "· 360",
+              "beispiel": "3 / (30 − 8) · 360 = évi 49,09% → mindig vegyük igénybe a skontót!"
+            },
+            {
+              "type": "formel",
+              "name": "Kamat",
+              "zaehler": "tőke · kamatláb · napok",
+              "nenner": "36 000"
+            }
+          ]
+        },
+        {
+          "titel": "Faktoring, lízing, kötvények, mezzanine",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Faktoring",
+              "erklaerung": "Egy vállalat lejárat előtt ELADJA vevőkövetelését egy faktorbanknak → hamarabb jut pénzhez (0,2–1,5% díj levonásával). Nyílt (a vevő tud róla) vagy csendes."
+            },
+            {
+              "type": "begriff",
+              "term": "Lízing",
+              "erklaerung": "Tárgyi javak közép- vagy hosszú távú bérbeadása a tulajdonos (lízingbeadó) által. A lízingbevevő NEM lesz tulajdonos."
+            },
+            {
+              "type": "ablauf",
+              "titel": "A lízing menete",
+              "schritte": [
+                {
+                  "titel": "A lízingbevevő megegyezik a kereskedővel a tárgyról"
+                },
+                {
+                  "titel": "Adásvételi szerződés kereskedő ↔ lízingbeadó, lízingszerződés lízingbeadó ↔ lízingbevevő"
+                },
+                {
+                  "titel": "A kereskedő átadja a tárgyat a lízingbevevőnek"
+                },
+                {
+                  "titel": "A lízingbeadó kifizeti a vételárat a kereskedőnek"
+                },
+                {
+                  "titel": "A lízingbevevő rendszeresen fizeti a lízingdíjakat"
+                }
+              ]
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Lízingfajta",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Operatív lízing",
+                  "mint egy bérleti szerződés, a lízingbeadó tartja karban"
+                ],
+                [
+                  "Pénzügyi lízing",
+                  "mint a hitelfinanszírozás, gyakran vételi joggal a végén"
+                ],
+                [
+                  "Sale and lease back",
+                  "saját eszköz eladása és visszlízingelése → likviditás"
+                ]
+              ]
+            },
+            {
+              "type": "begriff",
+              "term": "Kötvények",
+              "erklaerung": "Fix kamatozású értékpapírok: a vállalat sok befektetőtől von be hosszú lejáratú idegen tőkét. Fix futamidő és kamat; drága, ezért többnyire nagyvállalatok."
+            },
+            {
+              "type": "begriff",
+              "term": "Mezzanine tőke",
+              "erklaerung": "A saját és az idegen tőke keveréke („félemelet”): nincs biztosíték, hosszú lejáratú (≥ 5 év), nyereségfüggő kamatozás, nincs beleszólás, csődben alárendelt.",
+              "beispiel": "alárendelt kölcsön, csendestársi részesedés, nyereségrészesedési kötvény"
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Célok és formák",
+          "punkte": [
+            "Finanszírozási célok: likviditás, jövedelmezőség, függetlenség (célkonfliktus likviditás ↔ jövedelmezőség)",
+            "Belső ↔ külső finanszírozás (eredet) · saját ↔ idegen finanszírozás (jogállás)",
+            "Belső + saját: önfinanszírozás · külső + saját: betétek/részesedés, kockázati tőke, üzleti angyalok, crowdfunding, tőzsdére lépés, támogatások",
+            "Vegyes formák: átcsoportosításos finanszírozás (belső), mezzanine tőke (külső)",
+            "Belső + idegen: céltartalékok · külső + idegen: hitelek, kötvények"
+          ]
+        },
+        {
+          "titel": "Saját finanszírozás",
+          "punkte": [
+            "Önfinanszírozás nyílt (visszatartott nyereség) ↔ rejtett (rejtett tartalékok)",
+            "Crowdfunding: donation, reward, lending (idegen tőke!), equity",
+            "Átcsoportosítás: racionalizálás, értékcsökkenés, vagyoneladás",
+            "Saját tőke arány ≥ 20%"
+          ]
+        },
+        {
+          "titel": "Idegen finanszírozás",
+          "punkte": [
+            "Hitelbiztosítékok: kezesség (kártalanító, egyszerű, készfizető) · tulajdonjog-fenntartás, cesszió, zálogjog (lombard, jelzálog) · hitelbiztosítás",
+            "Hitel menete: kérelem → vizsgálat (rating, hard/soft facts) → szerződés → felügyelet",
+            "Folyószámlahitel, kölcsön (lejáratkori, részletes, annuitásos), kezességi, szállítói, vevői hitel",
+            "A skontó éves kamata = skontó% / (határidő − skontóhatáridő) · 360",
+            "Faktoring (követelések eladása), lízing (bérlés, operatív/pénzügyi, sale and lease back), kötvények"
+          ]
+        }
+      ]
+    },
+    "finanzplan-analyse": {
+      "schritte": [
+        {
+          "titel": "A pénzügyi terv",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Pénzügyi terv",
+              "erklaerung": "Áttekintés a tervezett befizetésekről és kifizetésekről, valamint az ebből adódó cash flow-ról. Biztosítja a likviditást, és korán megmutatja a pénzügyi problémákat."
+            },
+            {
+              "type": "merke",
+              "text": "Egy vállalat csak akkor marad likvid, ha hosszú távon a befizetések összege NAGYOBB, mint a kifizetések összege."
+            },
+            {
+              "type": "begriff",
+              "term": "Cash flow",
+              "erklaerung": "Egy vállalat által egy adott időszakban megtermelt pénzeszköz-többlet."
+            },
+            {
+              "type": "text",
+              "text": "Alapja a résztervek (árbevétel-, anyag-, termelés-, létszámtervezés), valamint a beruházási és finanszírozási tervezés."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "A pénzügyi terv felépítése"
+              ],
+              "zeilen": [
+                [
+                  "1. Pénzeszközök nyitóállománya (pénztár + bank)"
+                ],
+                [
+                  "2. + tervezett befizetések (árbevétel, eszközeladás, hitelek, saját tőke)"
+                ],
+                [
+                  "3. − tervezett kifizetések (fizetések, anyag, energia, adók, beruházások, törlesztések)"
+                ],
+                [
+                  "4. = többlet / hiány (cash flow)"
+                ],
+                [
+                  "5. Kiegyenlítő intézkedések"
+                ],
+                [
+                  "6. = pénzeszközök záróállománya → a következő hónap nyitóállománya"
+                ]
+              ]
+            },
+            {
+              "type": "merke",
+              "text": "Befizetések és kifizetések ≠ bevételek és ráfordítások! Az értékcsökkenés pl. ráfordítás, de nem kifizetés."
+            }
+          ]
+        },
+        {
+          "titel": "Kiegyenlítő intézkedések",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Pénzeszköz-többlet esetén",
+                "punkte": [
+                  "Jövedelmező beruházások, hitelek előtörlesztése",
+                  "Tartalékképzés",
+                  "Magánkivétek/nyereségkifizetés növelése",
+                  "Rövid távú jövedelmező befektetés",
+                  "Több skontó igénybevétele"
+                ]
+              },
+              "rechts": {
+                "titel": "Pénzeszköz-hiány esetén",
+                "punkte": [
+                  "Beruházások elhalasztása",
+                  "Betétek/részesedések növelése",
+                  "Bankhitel felvétele (pl. folyószámlahitel)",
+                  "A nem szükséges vagyon eladása",
+                  "Vevői hitelek (előlegek)",
+                  "Hosszabb fizetési határidők a beszállítóknál"
+                ]
+              }
+            },
+            {
+              "type": "vergleich",
+              "frage": "Tervezési időszak:",
+              "links": {
+                "titel": "Rövid távú pénzügyi tervek",
+                "punkte": [
+                  "legfeljebb 1 év (hónapok, negyedévek)",
+                  "a likviditás biztosításának alapja"
+                ]
+              },
+              "rechts": {
+                "titel": "Hosszú távú pénzügyi tervek",
+                "punkte": [
+                  "2–6 év",
+                  "hitelképesség, tőkeszerkezet, nagy beruházások"
+                ]
+              }
+            },
+            {
+              "type": "merke",
+              "text": "Likviditási tartalék: 2–3 átlagos havi kifizetés. A tervértékeket folyamatosan össze kell vetni a tényértékekkel!"
+            }
+          ]
+        },
+        {
+          "titel": "Vagyon- és tőkeszerkezet",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Mutatószámok",
+              "erklaerung": "Tájékoztatnak a gazdasági és pénzügyi stabilitásról – korai figyelmeztető rendszer. Alap: mérleg és eredménykimutatás."
+            },
+            {
+              "type": "formel",
+              "name": "Befektetetteszköz-arány",
+              "zaehler": "befektetett eszközök · 100",
+              "nenner": "összes eszköz"
+            },
+            {
+              "type": "formel",
+              "name": "Forgóeszköz-arány",
+              "zaehler": "forgóeszközök · 100",
+              "nenner": "összes eszköz"
+            },
+            {
+              "type": "merke",
+              "text": "Befektetett + forgóeszköz-arány = 100%. Befektetetteszköz-igényes: ipar, energia. Forgóeszköz-igényes: kereskedelem, vendéglátás."
+            },
+            {
+              "type": "formel",
+              "name": "Saját tőke arány",
+              "zaehler": "saját tőke · 100",
+              "nenner": "összes forrás",
+              "beispiel": "≥ 20% rendben · ≥ 30% nagyon jó · < 10% rossz · negatív = inszolvencia veszélye"
+            },
+            {
+              "type": "formel",
+              "name": "Idegen tőke arány",
+              "zaehler": "idegen tőke · 100",
+              "nenner": "összes forrás"
+            },
+            {
+              "type": "formel",
+              "name": "Eladósodottsági együttható",
+              "zaehler": "idegen tőke",
+              "nenner": "saját tőke",
+              "beispiel": "ST : IT = 1 : 2 nagyon jó, 1 : 3 jó"
+            },
+            {
+              "type": "formel",
+              "name": "Fiktív adósságtörlesztési idő",
+              "zaehler": "idegen tőke − pénzeszközök",
+              "nenner": "operatív cash flow",
+              "beispiel": "< 3 év nagyon jó · < 5 jó · > 15 inszolvencia veszélye"
+            }
+          ]
+        },
+        {
+          "titel": "Vagyon és tőke aránya",
+          "blocks": [
+            {
+              "type": "merke",
+              "text": "Rövid lejáratú = egy éven belül esedékes. A hosszú távú vagyont hosszú távú tőkéből kell finanszírozni!"
+            },
+            {
+              "type": "formel",
+              "name": "Befektetett eszközök fedezettsége",
+              "zaehler": "(ST + hosszú lejáratú IT) · 100",
+              "nenner": "befektetett eszközök",
+              "beispiel": "≥ 100% = az aranyszabály teljesül"
+            },
+            {
+              "type": "formel",
+              "name": "Elsőfokú likviditás",
+              "zaehler": "pénzeszközök · 100",
+              "nenner": "rövid lejáratú kötelezettségek",
+              "beispiel": "cél 20–50% (készpénzlikviditás)"
+            },
+            {
+              "type": "formel",
+              "name": "Másodfokú likviditás",
+              "zaehler": "(pénzeszközök + rövid lejáratú követelések) · 100",
+              "nenner": "rövid lejáratú kötelezettségek",
+              "beispiel": "cél 100–120%"
+            },
+            {
+              "type": "formel",
+              "name": "Harmadfokú likviditás",
+              "zaehler": "(pénzeszközök + rövid lejáratú követelések + készletek) · 100",
+              "nenner": "rövid lejáratú kötelezettségek",
+              "beispiel": "cél 150–200%"
+            },
+            {
+              "type": "formel",
+              "name": "Nettó forgótőke (working capital)",
+              "zaehler": "forgóeszközök − rövid lejáratú kötelezettségek",
+              "nenner": "1",
+              "beispiel": "legyen pozitív"
+            }
+          ]
+        },
+        {
+          "titel": "Eredménygazdálkodási mutatók",
+          "blocks": [
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Operatív cash flow (közvetett)"
+              ],
+              "zeilen": [
+                [
+                  "adózott eredmény (nyereség / veszteség)"
+                ],
+                [
+                  "+ nem kifizetéssel járó ráfordítások (pl. értékcsökkenés)"
+                ],
+                [
+                  "− nem befizetéssel járó bevételek (pl. céltartalék feloldása)"
+                ],
+                [
+                  "= operatív cash flow"
+                ]
+              ]
+            },
+            {
+              "type": "formel",
+              "name": "Cash flow ráta",
+              "zaehler": "cash flow · 100",
+              "nenner": "üzemi teljesítmény",
+              "beispiel": "cél ≥ 5%, ≥ 10% nagyon jó"
+            },
+            {
+              "type": "formel",
+              "name": "Saját tőke jövedelmezősége",
+              "zaehler": "adózás előtti eredmény · 100",
+              "nenner": "saját tőke",
+              "beispiel": "jó: kb. 25%-tól (ipar), kb. 20%-tól (kereskedelem)"
+            },
+            {
+              "type": "formel",
+              "name": "Összes tőke jövedelmezősége",
+              "zaehler": "(adózás előtti eredmény + IT-kamatok) · 100",
+              "nenner": "összes forrás",
+              "beispiel": "cél ≥ 8%, > 10% jó, > 15% nagyon jó"
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Gyorsteszt",
+                "Nagyon jó",
+                "Jó",
+                "Közepes",
+                "Rossz",
+                "Inszolvencia veszélye"
+              ],
+              "zeilen": [
+                [
+                  "Saját tőke arány",
+                  "> 30%",
+                  "> 20%",
+                  "> 10%",
+                  "< 10%",
+                  "negatív"
+                ],
+                [
+                  "Adósságtörlesztési idő",
+                  "< 3 év",
+                  "< 5 év",
+                  "< 7 év",
+                  "< 15 év",
+                  "> 15 év"
+                ],
+                [
+                  "Cash flow ráta",
+                  "> 10%",
+                  "> 8%",
+                  "> 5%",
+                  "< 5%",
+                  "negatív"
+                ],
+                [
+                  "Összes tőke jövedelmezősége",
+                  "> 15%",
+                  "> 10%",
+                  "> 8%",
+                  "< 8%",
+                  "negatív"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Pénzügyi terv",
+          "punkte": [
+            "Nyitóállomány + befizetések − kifizetések = cash flow → kiegyenlítő intézkedések → záróállomány",
+            "Többlet: beruházás, tartalék, hiteltörlesztés, befektetés · hiány: hitel, betétek, beruházás halasztása, vagyoneladás",
+            "Rövid távú (≤ 1 év, likviditás) ↔ hosszú távú (2–6 év, tőkeszerkezet)"
+          ]
+        },
+        {
+          "titel": "Mutatószámok",
+          "punkte": [
+            "Befektetett/forgóeszköz-arány = BE ill. FE · 100 / összes eszköz",
+            "ST arány = ST · 100 / összes forrás (≥ 20%) · IT arány · eladósodottsági együttható = IT / ST",
+            "Fiktív adósságtörlesztési idő = (IT − pénzeszközök) / operatív cash flow",
+            "Befektetett eszközök fedezettsége = (ST + hosszú lejáratú IT) · 100 / BE ≥ 100% (aranyszabály)",
+            "Első-/másod-/harmadfokú likviditás: cél 20–50% / 100–120% / 150–200%",
+            "Nettó forgótőke = FE − rövid lejáratú kötelezettségek",
+            "Operatív cash flow = adózott eredmény + értékcsökkenés − nem befizetéssel járó bevételek",
+            "ST jövedelmezősége = AEE · 100 / ST · összes tőke jövedelmezősége = (AEE + IT-kamatok) · 100 / összes forrás"
+          ]
+        }
+      ]
+    },
+    "businessplan-3jg": {
+      "schritte": [
+        {
+          "titel": "A pénzügyi tervezés jelentősége",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Pénzügyi tervezés az üzleti tervben",
+              "erklaerung": "Az üzleti terv többi részének gondolatait SZÁMOKBAN mutatják be – reálisan és követhetően. Megmutatja, megéri-e a vállalkozás alapítása."
+            },
+            {
+              "type": "merke",
+              "text": "A vezetői összefoglaló mellett a pénzügyi tervezés az üzleti terv legfontosabb része – a tőkeadók nagyon alaposan megvizsgálják."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "A tőkeadók figyelnek …",
+                "Jelentés"
+              ],
+              "zeilen": [
+                [
+                  "Tőkeszükséglet",
+                  "mennyi, mire, honnan (saját/idegen tőke)?"
+                ],
+                [
+                  "Reális árbevétel-előrejelzések",
+                  "piackutatás és célcsoport alapján"
+                ],
+                [
+                  "Hozamelvárások",
+                  "mit hoz a beruházás?"
+                ],
+                [
+                  "Fedezeti pont elemzés (break-even)",
+                  "milyen mennyiségtől nyereséges a vállalat?"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Résztervek",
+          "blocks": [
+            {
+              "type": "text",
+              "text": "A pénzügyi tervet többnyire 3–5 évre készítik, és a következő résztervekből áll:"
+            },
+            {
+              "type": "kette",
+              "glieder": [
+                {
+                  "titel": "1",
+                  "wert": "Árbevétel-tervezés"
+                },
+                {
+                  "titel": "2",
+                  "wert": "Dologi és személyi ráfordítások"
+                },
+                {
+                  "titel": "3",
+                  "wert": "Beruházás és finanszírozás"
+                },
+                {
+                  "titel": "4",
+                  "wert": "Eredmény és likviditás"
+                }
+              ]
+            },
+            {
+              "type": "formel",
+              "name": "Tervezett árbevétel",
+              "zaehler": "nettó eladási ár · tervezett eladási mennyiség",
+              "nenner": "1",
+              "beispiel": "Kávézó: 110 vendég · 4,50 € · 300 nap = 148 500 €"
+            },
+            {
+              "type": "begriff",
+              "term": "Bruttó fedezet (Rohertrag)",
+              "erklaerung": "Árbevétel mínusz anyagjellegű ráfordítás (áruköltség)."
+            },
+            {
+              "type": "begriff",
+              "term": "Dologi és személyi ráfordítások",
+              "erklaerung": "Folyó ráfordítások (bérleti díj, biztosítás, energia, reklám, bérek + bérjárulékok, saját társadalombiztosítás) – egy évre vetítve, éves költségnövekedéssel."
+            },
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Beruházástervezés",
+                "punkte": [
+                  "Minden aktiválható kezdeti beruházás",
+                  "Éves értékcsökkenéssel (beszerzési érték / hasznos élettartam)"
+                ]
+              },
+              "rechts": {
+                "titel": "Finanszírozástervezés",
+                "punkte": [
+                  "Megfelelő finanszírozási források a tőkeszükséglethez",
+                  "saját források, támogatások, kölcsönök, folyószámlahitel"
+                ]
+              }
+            },
+            {
+              "type": "merke",
+              "text": "A bankok többnyire legalább 20%-os saját tőke arányt követelnek. Korán menj a bankba, és használd ki a támogatásokat (pl. aws)!"
+            }
+          ]
+        },
+        {
+          "titel": "Eredmény- és likviditástervezés",
+          "blocks": [
+            {
+              "type": "vergleich",
+              "links": {
+                "titel": "Eredménytervezés (terv-eredménykimutatás)",
+                "punkte": [
+                  "bevételek − ráfordítások",
+                  "= várható üzemi eredmény",
+                  "Könyvviteli nyereség"
+                ]
+              },
+              "rechts": {
+                "titel": "Likviditástervezés",
+                "punkte": [
+                  "befizetések − kifizetések",
+                  "Biztosítja a fizetőképességet",
+                  "Cash flow"
+                ]
+              }
+            },
+            {
+              "type": "merke",
+              "text": "Nyereség ≠ pénz a számlán! A hiteltörlesztés és a magánkivét = kifizetés, de nem ráfordítás. Az értékcsökkenés = ráfordítás, de nem kifizetés."
+            },
+            {
+              "type": "tabelle",
+              "spalten": [
+                "Likviditástervezés (cash flow tervezés)"
+              ],
+              "zeilen": [
+                [
+                  "Adózás előtti eredmény"
+                ],
+                [
+                  "+ értékcsökkenés (nem jár kifizetéssel)"
+                ],
+                [
+                  "− feloldott támogatások (nem járnak befizetéssel)"
+                ],
+                [
+                  "= cash flow (belső finanszírozás)"
+                ],
+                [
+                  "− beruházások ± kölcsönök + támogatások − jövedelemadó − magánkivétek"
+                ],
+                [
+                  "= a likviditás változása"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Fedezeti árbevétel (break-even)",
+          "blocks": [
+            {
+              "type": "begriff",
+              "term": "Fedezeti pont (nyereségküszöb, minimális árbevétel)",
+              "erklaerung": "Az a pont, ahol a bevételek teljesen fedezik a költségeket – se nyereség, se veszteség."
+            },
+            {
+              "type": "formel",
+              "name": "Teljes fedezeti hozzájárulás",
+              "zaehler": "árbevétel − változó költségek",
+              "nenner": "1"
+            },
+            {
+              "type": "formel",
+              "name": "Fedezeti hányad (DBU-Quote)",
+              "zaehler": "teljes fedezeti hozzájárulás · 100",
+              "nenner": "árbevétel",
+              "beispiel": "96 500 / 148 500 · 100 = 64,98%"
+            },
+            {
+              "type": "formel",
+              "name": "Fedezeti árbevétel",
+              "zaehler": "fix költségek",
+              "nenner": "fedezeti hányad",
+              "beispiel": "86 900 / 0,6498 = 133 733,46 €"
+            },
+            {
+              "type": "merke",
+              "text": "Egyéni vállalkozásoknál egy fiktív vállalkozói bér (magánkivétek + jövedelemadó) is a fix költségek közé tartozik. Ha a fix költségek nőnek, nő a fedezeti árbevétel is."
+            }
+          ]
+        }
+      ],
+      "zusammenfassung": [
+        {
+          "titel": "Pénzügyi tervezés",
+          "punkte": [
+            "A vezetői összefoglaló mellett az üzleti terv legfontosabb része",
+            "Tőkeadók: tőkeszükséglet, reális árbevétel, hozam, fedezeti pont",
+            "Résztervek: árbevétel · dologi/személyi ráfordítás · beruházás és finanszírozás · eredmény és likviditás",
+            "Tervezett árbevétel = nettó eladási ár · eladási mennyiség · bruttó fedezet = árbevétel − áruköltség",
+            "Beruházástervezés értékcsökkenéssel; finanszírozás: saját tőke ≥ 20%, támogatások"
+          ]
+        },
+        {
+          "titel": "Eredmény, likviditás, fedezeti pont",
+          "punkte": [
+            "Eredménytervezés = bevételek − ráfordítások · likviditástervezés = befizetések − kifizetések",
+            "Nyereség ≠ likviditás (értékcsökkenés, hiteltörlesztés, magánkivétek)",
+            "Fedezeti hányad = (árbevétel − változó költségek) · 100 / árbevétel",
+            "Fedezeti árbevétel = fix költségek / fedezeti hányad"
+          ]
+        }
+      ]
+    }
+  },
+  "questions": {
+    "unternehmensfuehrung-ueberblick": [
+      {
+        "question": "A tankönyv szerint mit értünk vállalatvezetés alatt?",
+        "options": [
+          "Kizárólag a vállalatot vezető személyeket, a vezetés folyamatát azonban nem",
+          "Mind a vezetőket, mind a vállalat vezetésének, irányításának folyamatát",
+          "Csak a munkavállalók operatív tevékenységeit a napi üzletmenetben",
+          "Kizárólag azokat a jogszabályokat, amelyeket a vállalatnak be kell tartania"
+        ],
+        "explanation": "A vállalatvezetés egyaránt jelenti a vezetőket (személyeket) és a vállalat vezetésének, irányításának menedzsmentfolyamatát.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy a Loopy's Candy Store számára víziót, valamint a vállalatát meghatározó normákat, értékeket és célokat gondol ki. Melyik menedzsmentszinthez tartozik ez a feladat?",
+        "options": [
+          "Operatív menedzsment",
+          "Stratégiai menedzsment",
+          "Normatív menedzsment",
+          "Alsó vezetés"
+        ],
+        "explanation": "A normatív menedzsment a vízióval, valamint a vállalatot meghatározó normákkal, értékekkel és célokkal foglalkozik.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik menedzsmentszint foglalkozik a vállalati stratégia hosszú távú tervezésével?",
+        "options": [
+          "Normatív menedzsment",
+          "Operatív menedzsment",
+          "Végrehajtó szint",
+          "Stratégiai menedzsment"
+        ],
+        "explanation": "A stratégiai menedzsment határozza meg a hosszú távú vállalati stratégiát, míg az operatív menedzsment a meghatározott célok és stratégiák célirányos megvalósításáról gondoskodik.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint melyik állítás igaz a vállalati hierarchiaszintekre?",
+        "options": [
+          "Minden vállalatnak legalább három hierarchiaszintre van szüksége",
+          "A vezetők száma minden magasabb szinttel nő",
+          "A kisebb üzemek gyakran egy vagy két hierarchiaszinttel is beérik",
+          "Az alsó vezetés viseli a teljes felelősséget az egész vállalatért"
+        ],
+        "explanation": "A kisebb üzemek gyakran egy vagy két hierarchiaszinttel is beérik, míg a nagyobb vállalatok a vezetési feladatokat többnyire három szintre (felső, közép- és alsó vezetés) osztják el.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy fióküzlet-vezetőt vesz fel a Loopy's Candy Store-ba, aki vezeti a fióküzletét, de közvetítőként is működik Loopy (ügyvezetés) és az eladók között. Melyik vezetési szintnek felel meg ez a pozíció?",
+        "options": [
+          "Felső vezetés",
+          "Középvezetés",
+          "Végrehajtó szint",
+          "Normatív menedzsment"
+        ],
+        "explanation": "A középvezetés (pl. osztály- vagy fióküzlet-vezetés) saját vezetési feladatai mellett közvetítő szerepet tölt be a felső és az alsó vezetés között.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Melyik négy sikertényezőt nevezi meg a tankönyv a jó vállalati kommunikációhoz?",
+        "options": [
+          "Világosság, nyitottság, rendszeresség, empátia",
+          "Gyorsaság, ellenőrzés, hierarchia, digitalizáció",
+          "Bizalmasság, formalitás, távolságtartás, tekintély",
+          "Kreativitás, rugalmasság, verseny, innováció"
+        ],
+        "explanation": "A jó vállalati kommunikáció négy sikertényezője a világosság, a nyitottság, a rendszeresség és az empátia.",
+        "correctIndex": 0
+      }
+    ],
+    "normatives-management": [
+      {
+        "question": "A tankönyv szerint mit értünk vállalati küldetésnyilatkozat alatt, és milyen részekből áll?",
+        "options": [
+          "Kizárólag a vállalat jogi előírásait, amelyek alapító okiratból, cégjegyzékkivonatból és szerződésekből állnak",
+          "A vállalat írásban rögzített értelmét és célját, amely vízióból, misszióból, vállalati filozófiából és célokból áll",
+          "Csak a vállalat vízióját, amelyet a missziótól, a filozófiától és a céloktól függetlenül fogalmaznak meg",
+          "Egy tisztán marketingcélú brosúrát szlogennel, logóval és termékleírásokkal, a vállalati kultúrára gyakorolt hatás nélkül"
+        ],
+        "explanation": "A küldetésnyilatkozat írásban rögzíti a vállalati tevékenység értelmét és célját, valamint az alapvető meggyőződéseket és célokat. Vízióból, misszióból, vállalati filozófiából és vállalati célokból áll, és befolyásolja a vállalati kultúrát.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Hogyan határozzák meg a vízió fogalmát a küldetésnyilatkozattal összefüggésben?",
+        "options": [
+          "Elképzelés a vállalat hosszú távú fejlődéséről, amely inspirál és hajtóerőt ad",
+          "Egy termék vagy egy akció rövid távú, figyelemfelkeltő reklámszlogenje",
+          "A napi operatív üzletmenet részletes leírása az összes munkavállaló számára",
+          "Jogszabályban előírt nyilatkozat a bankok felé a vállalat teljes finanszírozásáról"
+        ],
+        "explanation": "A vízió elképzelés arról, hogyan fejlődjön a vállalat hosszú távon. Inspirációként és hajtóerőként szolgál, hasonlóan egy világítótoronyhoz a munkavállalók számára.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Loopy a következő mondatot fogalmazza meg a Loopy's Candy Store számára: 'Kiváló minőségű, tisztességesen előállított édességekkel szeretnénk örömteli pillanatokat szerezni gyerekeknek és családoknak.' A küldetésnyilatkozat melyik összetevője ez a mondat?",
+        "options": [
+          "Vízió",
+          "Vállalati cél",
+          "Misszió",
+          "Vállalati kultúra"
+        ],
+        "explanation": "A misszió a vállalat küldetését (célját) írja le, és azt, hogy milyen hasznot nyújt a vevőknek és a társadalomnak. A vízióval ellentétben tehát nem egy elérni kívánt jövőképet, hanem a vállalat által nyújtani kívánt hozzájárulást határozza meg.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint miben különbözik a claim a (reklám)szlogentől?",
+        "options": [
+          "A claim csak egyes termékekre, a szlogen viszont hosszú távon az egész misszióra vonatkozik",
+          "A claim hosszú távú, a misszióhoz kötődik, a szlogen többnyire rövid távú, termékhez kötött",
+          "A két fogalom ugyanazt jelenti, a claim csupán a szlogen rövidebb formája",
+          "A szlogent csak az üzleti jelentésben, a claimet kizárólag a reklámban használják"
+        ],
+        "explanation": "A claim hosszú távú, és kapcsolódik a vállalat missziójához (pl. a TRAUNER Verlag 'Bildung, die begeistert!' mondata), míg a szlogen többnyire rövid távú, és egyes termékekre vonatkozik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mely alapkérdésekre ad választ a vállalati filozófia?",
+        "options": [
+          "Mekkora az árbevétel? Hány munkavállaló van? Hol van a székhely?",
+          "Mennyibe kerül a termék? Kik a versenytársak? Mekkora a piaci részesedés?",
+          "Hogyan finanszírozzák a vállalatot? Milyen a jogi formája? Ki felel?",
+          "Miben hiszünk? Mi fontos nekünk? Mit képviselünk?"
+        ],
+        "explanation": "A vállalati filozófia alapkérdései: Miben hiszünk? Mi fontos nekünk? Mit képviselünk? Magában foglalja az egymással való bánásmód alapvető értékeit és meggyőződéseit a vállalaton belül és kívül.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Mit értünk vállalati társadalmi felelősségvállalás (CSR) alatt?",
+        "options": [
+          "Felelősséget a társadalom és a környezet iránt, és önkéntes hozzájárulást a fenntarthatósághoz",
+          "Jogszabályi kötelezettséget a nyereség egy részének évenkénti kifizetésére a részvényeseknek",
+          "A vállalat belső kommunikációs stratégiáját az összes munkavállalója és az üzemi tanács irányában",
+          "A vállalati vízió szinonimáját, amelyet csak tőzsdén jegyzett konszernek használnak"
+        ],
+        "explanation": "A CSR (vállalati társadalmi felelősségvállalás) a vállalatok felelősségét jelenti a társadalom és a környezet iránt, valamint önkéntes hozzájárulásaikat a fenntartható fejlődéshez társadalmi, ökológiai és gazdasági téren.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Mit jelentenek az ESG-kritériumok betűi?",
+        "options": [
+          "Efficiency (hatékonyság), Structure (struktúra), Governance (felelős vállalatirányítás)",
+          "Economic (gazdaságosság), Safety (munkabiztonság), Growth (növekedés)",
+          "Environmental (környezet), Social (társadalom), Governance (felelős vállalatirányítás)",
+          "Environmental (környezet), Sustainability (fenntarthatóság), Growth (felelős növekedés)"
+        ],
+        "explanation": "Az ESG jelentése Environmental (környezet), Social (társadalom) és Governance (felelős vállalatirányítás). A nagyobb vállalatok (250 munkavállalótól) kötelesek e kritériumok alapján fenntarthatósági jelentést készíteni.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mik a fenntartható fejlődési célok (SDG-k)?",
+        "options": [
+          "Osztrák jogszabály 17 kötelezettséggel a vállalatalapításról",
+          "Az ENSZ 17 globális célja államok, vállalatok és polgárok számára a fenntartható jövőért",
+          "Belső ellenőrzési rendszer a tőzsdén jegyzett vállalatok pénzügyi könyveléséhez",
+          "Önkéntes uniós minőségi tanúsítvány helyben és fenntarthatóan előállított élelmiszerekhez"
+        ],
+        "explanation": "Az SDG-k az Egyesült Nemzetek (ENSZ) 17 globális célja, amelyekhez az államoknak, vállalatoknak és polgároknak igazodniuk kell, hogy közösen alakítsanak ki egy fenntartható jövőt.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mit értünk ENSZ Global Compact alatt?",
+        "options": [
+          "Kötelező uniós törvényt a vállalatok adózásáról tíz ökológiai kritérium alapján",
+          "Nemzetközi tőzsdei jegyzést, amelybe kizárólag fenntarthatóan gazdálkodó vállalatok kerülhetnek be",
+          "Az Egyesült Nemzetek tisztán marketingcélú kampányát konkrét alapelvek és minimumszabványok nélkül",
+          "Vállalatok és az ENSZ paktumát társadalmi és ökológiai minimumszabványok önkéntes betartására"
+        ],
+        "explanation": "Az ENSZ Global Compact vállalatok és az Egyesült Nemzetek közötti paktum bizonyos társadalmi és ökológiai minimumszabványok önkéntes betartására, és tíz alapelvet foglal magában az emberi jogok, a munka és a környezet témakörében.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy azt a célt tűzi ki a Loopy's Candy Store számára, hogy a következő öt évben 10%-kal növeli az ügyfél-elégedettséget. Milyen célról van szó?",
+        "options": [
+          "Operatív cél, mert rövid távú (legfeljebb egy év)",
+          "Stratégiai cél, mert hosszú távú (kb. 5 év vagy több)",
+          "Nem pénzbeli cél, amelynek ezért nem lehet időbeli vonatkozása",
+          "Célkonfliktus a vállalat alsó és felső vezetése között"
+        ],
+        "explanation": "A stratégiai céloknak hosszú távú kerete van (kb. 5 év vagy több), és a víziót és a missziót stratégiai célokká alakítják. Az operatív céloknak ezzel szemben rövid és középtávú kerete van (egy, illetve öt évig).",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy rugalmas munkaidőmodellt szeretne bevezetni a Loopy's Candy Store alkalmazottai számára. Milyen vállalati célról van szó?",
+        "options": [
+          "Pénzbeli cél, mert költségekkel jár és befolyásolja a nyereséget",
+          "Szűkebb értelemben vett stratégiai cél, mert minden alkalmazottat érint",
+          "Nem pénzbeli cél, mert pénzben nem mérhető",
+          "A cél helye a cél-operacionalizálás értelmében"
+        ],
+        "explanation": "A nem pénzbeli célok pénzben nem mérhetők, mint pl. egy rugalmas munkaidőmodell bevezetése. A pénzbeli célok ezzel szemben pénzben mérhetők, például az árbevétel növelése.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mit jelent az A betű a célmegfogalmazás SMART-képletében?",
+        "options": [
+          "Aktuális (aktuell / actual)",
+          "Vonzó (attraktiv / achievable)",
+          "Automatizált (automatisiert / automated)",
+          "Anonimizált (anonymisiert)"
+        ],
+        "explanation": "A SMART-képlet jelentése: specifikus, mérhető, vonzó (achievable), reális és határidős.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mely részeket kell beépíteni az operacionalizált célok megfogalmazásába?",
+        "options": [
+          "Csak a cél tartalmát, mértékét és határidejét, a felelősét nem",
+          "A célcsoportot, a célpiacot, a célárat, a célköltséget és a célárbevételt",
+          "A víziót, a missziót, a vállalati filozófiát, a claimet és a szlogent",
+          "A cél tartalmát, mértékét, határidejét, felelősét és helyét"
+        ],
+        "explanation": "Az operacionalizált célok öt részt tartalmaznak: a cél tartalma (mit kell elérni?), mértéke (mennyit?), határideje (meddig?), felelőse (ki a felelős?) és helye (hol?).",
+        "correctIndex": 3
+      },
+      {
+        "question": "A SONNENTOR vezetése csökkenteni szeretné a marketingköltségvetést, ugyanakkor a marketingosztálynak jelentősen növelnie kell az Instagram-elérést. Milyen célkapcsolatról van szó?",
+        "options": [
+          "Célkonfliktus (célverseny), mert az egyik cél nehezíti a másikat",
+          "Célsemlegesség, mert a két cél egyáltalán nem befolyásolja egymást",
+          "Célkomplementaritás, mert a két cél kölcsönösen segíti egymást",
+          "A cél-operacionalizálás egyik formája a SMART-képlet szerint"
+        ],
+        "explanation": "Célkonfliktus (célverseny) esetén az egyik cél elérése megnehezíti egy másik cél elérését. A csökkenő marketingköltségvetés jellemzően megnehezíti az elérés jelentős növelését.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan határozza meg a tankönyv a vállalati kultúra fogalmát?",
+        "options": [
+          "Az összes írásban rögzített vállalati cél és mutatószám összességeként",
+          "Tisztán marketingeszközként, amely kifelé pozitív imázst hivatott kelteni",
+          "Mint ami meghatározza a gondolkodást és cselekvést, a közösen megélt értékekkel együtt",
+          "Mint azt a jogi struktúrát, amelyben a vállalat szerveződik, és amelyet a cégjegyzékbe bejegyeznek"
+        ],
+        "explanation": "A vállalati kultúra meghatározza, hogyan gondolkodnak és cselekszenek egy vállalatnál. A vállalaton belül közösen megélt és elfogadott értékeket foglalja magában, és abban mutatkozik meg, hogy a küldetésnyilatkozat értékeit ténylegesen megélik-e.",
+        "correctIndex": 2
+      }
+    ],
+    "strategisches-operatives-management": [
+      {
+        "question": "A tankönyv szerint melyik sorrend írja le helyesen a menedzsmentfolyamatot a normatív menedzsmentből kiindulva?",
+        "options": [
+          "Az ellenőrzéstől az operatív tervezésen át a vízióig",
+          "A víziótól a stratégián át a konkrét megvalósításig",
+          "Az operatív tervezéstől közvetlenül a vízióig",
+          "A konkrét megvalósítástól az ellenőrzésen át a stratégiáig"
+        ],
+        "explanation": "A menedzsmentfolyamat a normatív menedzsmenttől (vízió, értékek) a stratégiai menedzsmenten (stratégia) át az operatív menedzsmentig (konkrét megvalósítás) vezet.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mit jelentenek a PESTEL-elemzés betűi a környezetelemzés keretében?",
+        "options": [
+          "Személyzeti, beszerzési, adózási, műszaki, hozamhoz kapcsolódó, logisztikai",
+          "Árpolitikai, hozamhoz kapcsolódó, stratégiai, műszaki, beszerzési, logisztikai",
+          "Politikai, gazdasági, társadalmi-kulturális, technológiai, ökológiai, jogi",
+          "Ár, bevétel, adók, hozam, likviditás"
+        ],
+        "explanation": "A PESTEL-elemzés a vállalati környezet politikai, gazdasági, társadalmi-kulturális, technológiai, ökológiai és jogi tényezőit vizsgálja.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Michael E. Porter öt erő modellje szerint melyik erő NEM áll az ágazatelemzés középpontjában?",
+        "options": [
+          "A beszállítók alkuereje",
+          "Az állami támogatások elérhetősége",
+          "Új versenytársak belépésének veszélye",
+          "Helyettesítő termékek veszélye"
+        ],
+        "explanation": "Porter öt erő modellje a beszállítók és a vevők alkuerejét, az új versenytársak és a helyettesítő termékek veszélyét, valamint a meglévő versenytársak közötti versenyt foglalja magában - az állami támogatások nem tartoznak ide.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mit értünk benchmarking alatt a belső elemzés keretében?",
+        "options": [
+          "Egy termék relatív piaci részesedésének kiszámítását a legerősebb versenytárshoz képest",
+          "Összevetést a legjobb gyakorlatú vállalatokkal a fejlesztési lehetőségek feltárásához",
+          "Szakértők megkérdezését egy témáról több névtelen körben",
+          "Egy vállalat pénzügyi és személyi erőforrásainak meghatározását"
+        ],
+        "explanation": "A benchmarking során a vállalat a legjobb gyakorlatot követő vállalatokkal hasonlítja össze magát, hogy felismerje saját erősségeit, gyengeségeit és fejlesztési lehetőségeit.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy fel szeretné mérni a Candy Store jövőbeli keresletét, és ehhez a forgatókönyv-technikát használja. Melyik három forgatókönyvet különböztetik meg jellemzően?",
+        "options": [
+          "Rövid, közép- és hosszú távú forgatókönyv",
+          "Belső, külső és normatív forgatókönyv",
+          "Pozitív, trend- és negatív forgatókönyv",
+          "Stratégiai, operatív és normatív forgatókönyv"
+        ],
+        "explanation": "A forgatókönyv-technikánál a tényadatokból kiindulva egy pozitív (best case), egy trend- (realistic case) és egy negatív forgatókönyvet (worst case) dolgoznak ki.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi jellemző a Delphi-módszerre mint előrejelzési eszközre?",
+        "options": [
+          "Csak a vállalatvezetés készíti az előrejelzést",
+          "Szakértőket kérdeznek meg egy témáról több névtelen körben",
+          "Kizárólag matematikai modelleken alapul, szakértői vélemény nélkül",
+          "Csak a már meghozott döntések ellenőrzésére használják"
+        ],
+        "explanation": "A Delphi-módszernél a releváns területek szakértőit több körben, névtelenül kérdezik meg, így a becslések a folyamat során többnyire közelednek egymáshoz.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A SWOT-elemzésben melyik kombináció az S-O stratégia (bővítési stratégia) alapja?",
+        "options": [
+          "Gyengeségek és veszélyek",
+          "Erősségek és veszélyek",
+          "Gyengeségek és lehetőségek",
+          "Erősségek és lehetőségek"
+        ],
+        "explanation": "Az S-O stratégia a saját erősségeket használja fel, hogy következetesen kiaknázza a piacon kínálkozó lehetőségeket.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Melyik állítás helyes a SWOT-elemzésről?",
+        "options": [
+          "A lehetőségek és az erősségek a külső elemzésből, a veszélyek és a gyengeségek a belső elemzésből származnak",
+          "Az erősségek és a gyengeségek a külső elemzésből, a lehetőségek és a veszélyek a belső elemzésből származnak",
+          "A lehetőségek és a veszélyek a külső elemzésből, az erősségek és a gyengeségek a belső elemzésből származnak",
+          "Mind a négy elem kizárólag a vállalat saját belső elemzéséből származik"
+        ],
+        "explanation": "A SWOT-elemzés a külső elemzést (lehetőségek és veszélyek) a belső elemzéssel (erősségek és gyengeségek) kapcsolja össze stratégiai irányokká.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy azon gondolkodik, hogy a Candy Store árait a lehető legalacsonyabban tartja, hogy több vásárlót vonzzon, mint a versenytársak. Melyik versenystratégiát követi ezzel?",
+        "options": [
+          "Termékdifferenciálási stratégia",
+          "Költségvezető stratégia",
+          "Résstratégia",
+          "Diverzifikációs stratégia"
+        ],
+        "explanation": "A költségvezető stratégia célja, hogy az ágazat legalacsonyabb költségeit érje el, és így a legkedvezőbb árakat kínálhassa.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik példa illik legjobban a differenciálási stratégiához?",
+        "options": [
+          "Egy diszkont tartósan, különösen alacsony árakon kínálja az áruit",
+          "Egy kínáló egy kis, speciális vevői célcsoportra összpontosít",
+          "Egy luxusmárka, mint a Gucci, exkluzivitással és minőséggel tűnik ki",
+          "Egy vállalat új termékekkel egy teljesen új üzleti területet nyit meg"
+        ],
+        "explanation": "A differenciálási stratégiánál a termékek vagy szolgáltatások egyediségükkel tűnnek ki a versenytársak közül, ahogy a tankönyv Gucci-példájában.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mire irányul a résstratégia?",
+        "options": [
+          "Az egész ágazat legalacsonyabb költségeire és ezáltal a legolcsóbb árakra",
+          "Egy meghatározott, többnyire kis piaci szegmensre való összpontosításra",
+          "Minél több különböző célcsoport és piaci szegmens egyidejű elérésére",
+          "A nyereség lefölözésére stagnáló vagy csökkenő piaci növekedés mellett"
+        ],
+        "explanation": "A résstratégiánál a vállalat egy meghatározott piaci szegmensre vagy célcsoportra összpontosít, ahogy a tankönyv a Patagonia példáján bemutatja.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Melyik két tengely alkotja a BCG-portfólióelemzést (piacnövekedés–piaci részesedés mátrix)?",
+        "options": [
+          "Abszolút árbevétel és nyereségalakulás",
+          "Relatív költségelőny és piacméret",
+          "Relatív piaci részesedés és piacnövekedés",
+          "Abszolút piaci részesedés és ágazati nyereség"
+        ],
+        "explanation": "A BCG-mátrix a termékeket a relatív piaci részesedés és a piacnövekedés alapján sorolja be a négy mezőbe: kérdőjelek, sztárok, fejőstehenek és döglött kutyák.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Egy termék erősen növekvő piacon van, de csak kicsi a relatív piaci részesedése. A BCG-mátrix melyik mezőjében van, és melyik stratégiát ajánlják általában?",
+        "options": [
+          "Sztár - növekedési stratégia",
+          "Kérdőjel - befektetési stratégia",
+          "Fejőstehén - lefölözési stratégia",
+          "Döglött kutya - kivonulási stratégia (visszavonulás)"
+        ],
+        "explanation": "A nagy piacnövekedés kis relatív piaci részesedéssel a kérdőjelet jellemzi; itt általában befektetési stratégiát ajánlanak a piaci részesedés növelésére.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy választékára igaz: saját piaci részesedése a gyümölcsös cukorkáknál 12%, a legerősebb versenytársé 4%. Mekkora ennek a termékcsoportnak a relatív piaci részesedése?",
+        "options": [
+          "0,33",
+          "8,0",
+          "3,0",
+          "1,2"
+        ],
+        "explanation": "A relatív piaci részesedés a saját piaci részesedés osztva a legerősebb versenytárs piaci részesedésével: 12% osztva 4%-kal = 3,0.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy a Candy Store mellett egy kávézót is nyit egy teljesen új célcsoportnak, új kínálattal. Melyik növekedési stratégiát írja le ez?",
+        "options": [
+          "Piacpenetrációs stratégia",
+          "Piacfejlesztési stratégia",
+          "Diverzifikációs stratégia",
+          "Termékfejlesztési stratégia"
+        ],
+        "explanation": "A diverzifikációs stratégiánál a vállalat új termékkel egy teljesen új célcsoportot hódít meg - a tankönyvben pl. egy bútoráruház példáján, amely a vendéglátásba terjeszkedik.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Miben különbözik a költségvetés-készítésnél az alulról felfelé (bottom-up) és a felülről lefelé (top-down) módszer?",
+        "options": [
+          "Bottom-up esetén kizárólag az ügyvezetés dönt, top-down esetén pedig az egyes részlegek önállóan",
+          "Bottom-up esetén a részlegvezetők készítik a részköltségvetéseket, top-down esetén a vezetés adja meg",
+          "Top-down esetén nincs összköltségvetés, csak az egyes részlegek egymástól független részköltségvetései",
+          "A bottom-up és a top-down csak időzítésben különbözik, a felelősségben nem"
+        ],
+        "explanation": "A bottom-up módszernél a részlegvezetők készítik el részköltségvetéseiket, amelyeket összevonnak, míg a top-down módszernél a vállalatvezetés adja meg a költségvetést, és osztja el a részköltségvetésekre.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Milyen fontos tanulságot mutat a tankönyv Netflix–Blockbuster példája a „Döntéshozatal” fejezetben?",
+        "options": [
+          "A nagy vállalatoknak soha nem kell reagálniuk a piaci változásokra, mert a vevőik hűségesek",
+          "A Blockbuster állt át elsőként a streamingre, és ezzel kiszorította a Netflixet a piacról",
+          "Egy időben meghozott, helyes döntés (átállás a streamingre) eldöntheti egy vállalat sikerét",
+          "A döntéseket lehetőleg spontán, előzetes információgyűjtés nélkül kell meghozni"
+        ],
+        "explanation": "A Netflix időben átállt a streamingre, míg a Blockbuster túl későn reagált, és végül csődöt kellett jelentenie - a példa mutatja az időben meghozott, jól átgondolt döntések jelentőségét.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Milyen sorrendben követik egymást a PDCA-ciklus (Deming-kör) fázisai?",
+        "options": [
+          "Do - Plan - Act - Check",
+          "Check - Act - Plan - Do",
+          "Plan - Do - Check - Act",
+          "Act - Check - Do - Plan"
+        ],
+        "explanation": "A PDCA-ciklus a Plan (célok kitűzése), Do (intézkedések végrehajtása), Check (a célelérés ellenőrzése) és Act (intézkedések kiigazítása) fázisokból áll, és a folyamatos fejlesztést szolgálja.",
+        "correctIndex": 2
+      }
+    ],
+    "organisieren-und-fuehren": [
+      {
+        "question": "Mit szabályoz egy vállalat folyamatszervezése a szervezeti felépítéssel szemben?",
+        "options": [
+          "Kizárólag a munkavállalók számát",
+          "A vállalati munkafolyamatokat és folyamatokat",
+          "A vállalat szerkezetét, illetve a felépítését",
+          "A vállalat hosszú távú vízióját"
+        ],
+        "explanation": "Míg a szervezeti felépítés a vállalat struktúráját szabályozza, a folyamatszervezés azt határozza meg, hogyan alakítják ki a vállalati munkafolyamatokat és folyamatokat.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint milyen sorrendben jön létre a szervezeti felépítés a feladat, az osztály és a munkakör elemekből?",
+        "options": [
+          "Munkakör, aztán osztály, aztán feladat",
+          "Osztály, aztán feladat, aztán munkakör",
+          "Feladat, aztán osztály, aztán munkakör",
+          "Mindhárom elem egyszerre, sorrend nélkül jön létre"
+        ],
+        "explanation": "A szervezeti felépítésben általában először feladatok vannak, amelyeket osztályokká vonnak össze, ezeken belül pedig több munkakör veszi át a feladatokat.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi jellemzi a vezetői munkakört (instanciát)?",
+        "options": [
+          "Semmilyen döntési vagy ellenőrzési jogköre nincs",
+          "Utasítási, döntési és ellenőrzési funkcióval rendelkezik",
+          "Tanácsot ad más munkaköröknek, de maga nem adhat utasítást",
+          "Csak a saját felelősségi területéért felel"
+        ],
+        "explanation": "A vezetői munkakörök, illetve instanciák, mint az ügyvezetés, a csapatvezetés vagy a projektvezetés, utasítási, döntési és ellenőrzési funkcióval rendelkeznek.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy asszisztenst vesz fel, aki tanácsot ad neki a döntéseknél és támogatja a minőségirányításban, de maga senkinek sem adhat utasítást. Milyen munkakörfajtáról van szó?",
+        "options": [
+          "Vezetői munkakör",
+          "Végrehajtó munkakör",
+          "Törzskari munkakör",
+          "Instancia"
+        ],
+        "explanation": "A törzskari munkakörök, például az ügyvezetés asszisztense, tanácsadó és támogató funkciót töltenek be, de nincs saját utasítási joguk.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik állítás igaz a végrehajtó munkakörre?",
+        "options": [
+          "Utasítást adhat a saját területe más munkaköreinek",
+          "Kizárólag az ügyvezetésnek ad tanácsot, maga nem dönt",
+          "Legfelső instanciaként ellenőrzi az összes többi munkakört",
+          "Csak a saját területén dönt, utasítási joga nincs"
+        ],
+        "explanation": "A végrehajtó munkakörök, mint az ügyintézők vagy a termelési dolgozók, csak a saját felelősségi területükön döntenek, más munkakörökkel szemben utasítási jog nélkül.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Mi jellemző egy vállalat magas centralizációs fokára?",
+        "options": [
+          "A döntési jogkörök széles személyi körre vannak elosztva",
+          "A lényeges döntéseket a vállalatvezetés maga hozza meg",
+          "Nincs vállalatvezetés, csak egyenrangú csapatok",
+          "Minden munkakör teljesen önállóan hozza meg döntéseit"
+        ],
+        "explanation": "Magas centralizáció esetén a vállalatvezetés a lényeges döntési jogköröket egy vagy néhány személynél összpontosítja, míg decentralizáció esetén a jogköröket nagyobb személyi körre ruházzák át.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mi az egyvonalas rendszer központi jellemzője?",
+        "options": [
+          "Minden munkakörnek több felettes instanciája van",
+          "Nincsenek vezetői munkakörök",
+          "Minden munkakörnek csak egy felettes instanciája van",
+          "Minden döntést a törzskari munkakörök hoznak meg"
+        ],
+        "explanation": "Az egyvonalas rendszerben minden munkakör csak egy felettes instanciának van alárendelve, ami egyértelmű utasítási és jelentési utakhoz vezet.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Hogyan valósítják meg a gyakorlatban gyakran a többvonalas rendszert?",
+        "options": [
+          "Tisztán egyvonalas rendszerként, törzskar nélkül",
+          "Mátrixszervezetként, funkciók és divíziók szerint",
+          "Csak egyszemélyes mikrovállalkozásokban",
+          "Kizárólag az informális szervezetben"
+        ],
+        "explanation": "A gyakorlatban a többvonalas rendszert többnyire mátrixszervezetként működtetik, amelyben minden munkakör egyszerre két szempont - funkciók és divíziók - szerint tagolódik, és két felettes instanciája van.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Melyik hátrányt tulajdonítja a tankönyv a többvonalas rendszernek?",
+        "options": [
+          "Túl hosszú kommunikációs utak a sok hierarchiaszint miatt",
+          "A vezetők túl alacsony leterheltsége",
+          "Ellentmondó utasítások és nagy koordinációs ráfordítás",
+          "A vevőorientáció hiánya a merev osztályhatárok miatt"
+        ],
+        "explanation": "Mivel a többvonalas rendszerben minden munkakörnek több felettes instanciája van, fennáll az ellentmondó utasítások veszélye, és nagy a koordinációs és vezetési ráfordítás.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi szerint tagolódik a funkcionális szervezet?",
+        "options": [
+          "Régiók, országok vagy termékcsoportok (divíziók) szerint",
+          "Funkciók, például beszerzés vagy termelés szerint",
+          "Kizárólag vevő- és célcsoportok szerint",
+          "Projektek szerint, munkakörönként két instanciával"
+        ],
+        "explanation": "A funkcionális szervezet az egyvonalas rendszerben funkcionális területek, például beszerzés, termelés vagy értékesítés szerint tagolja a vállalatot.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mi szerint tagolódik jellemzően a divizionális szervezet?",
+        "options": [
+          "Funkciók, például beszerzés, termelés és értékesítés szerint",
+          "Az osztályonkénti munkavállalói létszám szerint",
+          "Divíziók, például régiók vagy termékcsoportok szerint",
+          "Egyszerre funkciók és projektek szerint (mátrix)"
+        ],
+        "explanation": "A divizionális szervezetben a vállalatot divíziók szerint tagolják, például országok, régiók, termékcsoportok vagy vevőcsoportok szerint.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint melyik jellemző NEM tartozik az agilis szervezethez?",
+        "options": [
+          "Vevőorientáció a customer journey mentén",
+          "Merev, hosszú távra rögzített hierarchiaszintek",
+          "Lapos hierarchiák rövid döntési utakkal",
+          "Önszerveződő csapatok saját felelősséggel"
+        ],
+        "explanation": "Az agilis szervezetet éppen a merev helyett lapos hierarchia, a vevőorientáció és az önszerveződő csapatok jellemzik, hogy rugalmasan reagálhasson a változásokra.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik folyamatfajtához tartozik egy vállalat személyügyi igazgatása?",
+        "options": [
+          "Üzleti folyamat",
+          "Vezetési folyamat",
+          "Támogató folyamat",
+          "Ellenőrzési folyamat"
+        ],
+        "explanation": "A támogató folyamatok, mint a személyügy vagy az informatika, az üzleti folyamatok lebonyolítását támogatják, míg az üzleti folyamatok az alaptevékenységet (pl. termelés, értékesítés) érintik.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik szimbólumot használják a folyamatábrán döntés jelölésére?",
+        "options": [
+          "Ovális",
+          "Téglalap",
+          "Kör",
+          "Rombusz"
+        ],
+        "explanation": "A folyamatábrákon a rombusz jelöli a döntést, míg az ovális a kezdetet/véget, a téglalap pedig egy lépést, illetve folyamatot jelent.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Hogyan jön létre egy vállalatnál az informális szervezet?",
+        "options": [
+          "A vezetés által hivatalosan előírt struktúra révén",
+          "Spontán igények és személyes kapcsolatok révén",
+          "A szervezeti ábra és a munkaköri leírások révén",
+          "Jogszabályi előírások, pl. a munkajog révén"
+        ],
+        "explanation": "Az informális szervezet a munkavállalók spontán igényei és céljai, valamint személyes, nem tervezett kapcsolatai alapján jön létre - szemben a vezetés által előírt formális szervezettel.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik három kategóriába sorolhatók a vezetéselméletek?",
+        "options": [
+          "Normatív, stratégiai és operatív vezetéselméletek",
+          "Formális, informális és agilis szervezetelméletek",
+          "Tulajdonság-, viselkedés- és helyzetelméletek",
+          "Központi, decentralizált és hibrid elméletek"
+        ],
+        "explanation": "A tankönyv a vezetéselméleteket tulajdonság-, viselkedés- és helyzetelméletekre osztja aszerint, hogy melyik sikertényező áll előtérben.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik sikertényező áll a vezetés tulajdonságelméleteinek középpontjában?",
+        "options": [
+          "A vezető helyzettől függő viselkedése",
+          "A vezető bizonyos személyes tulajdonságai, pl. empátia",
+          "Kizárólag a munkavállalókkal szembeni viselkedés",
+          "A vállalat mérete és ágazata"
+        ],
+        "explanation": "A tulajdonságelméletek abból indulnak ki, hogy a vezetőknek a sikerhez bizonyos személyiségjegyekre, például intelligenciára, empátiára vagy érvényesülési képességre van szükségük.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy aktívan bevonja a Candy Store munkatársait a döntésekbe, és az új ötleteket közösen megbeszéli a csapattal. Lewin szerint melyik vezetési stílust alkalmazza?",
+        "options": [
+          "Autoriter vezetési stílus",
+          "Laissez-faire vezetési stílus",
+          "Kooperatív vezetési stílus",
+          "Szituációs vezetési stílus"
+        ],
+        "explanation": "A kooperatív vezetési stílusnál a vezető bevonja a munkavállalókat a döntésekbe, ami erősíti a csapatszellemet és az önálló kezdeményezést.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik állítás helyes a vezetési rácsról (Managerial Grid)?",
+        "options": [
+          "Kizárólag a vezető intelligenciáját és tapasztalatát méri",
+          "Hersey és Blanchard dolgozta ki érettségi modellként",
+          "Csak az autoriter és a kooperatív vezetési stílust különbözteti meg",
+          "A vezetési stílusokat feladat- és emberorientáció szerint írja le"
+        ],
+        "explanation": "A Blake és Mouton által kidolgozott vezetési rács a vezetési stílusokat a feladat- és emberorientáció alapján írja le; a 9.9-es változat (csapatmenedzsment) számít a leghatékonyabb vezetési stílusnak.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Hersey és Blanchard szituációs érettségi modellje melyik vezetési stílust ajánlja magas érettségű munkavállalók esetén?",
+        "options": [
+          "Irányítás szigorú ellenőrzéssel",
+          "Delegálás - részletes magyarázat nélkül",
+          "Meggyőzés erős feladat- és emberorientációval",
+          "Kizárólag autoriter fellépés"
+        ],
+        "explanation": "A munkavállalók magas érettségi szintje esetén - vagyis nagy képesség és pszichológiai érettség mellett - a modell a delegáló stílust ajánlja, amelynél a feladatok részletes magyarázat nélkül átadhatók.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A Vroom–Yetton döntési modell szerint melyik két szempont határozza meg a vezetői viselkedést döntési helyzetekben?",
+        "options": [
+          "Árbevétel és nyereség",
+          "Érettségi szint és motiváció",
+          "A döntés minősége és a munkavállalói elfogadás",
+          "Feladatorientáció és emberorientáció"
+        ],
+        "explanation": "A Vroom és Yetton által kidolgozott modell a vezetői viselkedést a döntés minőségéhez (a megoldás szakmai helyességéhez) és a döntés munkavállalói elfogadásához igazítja.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi jellemző a „Management by Objectives” (MbO) vezetési koncepcióra?",
+        "options": [
+          "A munkavállalók nem kapnak célokat, csak feladatokat",
+          "Csak az elért eredmények számítanak, függetlenül az odavezető úttól",
+          "A célokat és ellenőrzésüket közösen egyeztetik",
+          "A vezetők minden apróságba személyesen beavatkoznak"
+        ],
+        "explanation": "A Management by Objectives során a vezetők és a munkavállalók közösen egyeztetik a célokat, és meghatározzák, hogyan ellenőrzik azok elérését.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint melyik kompetencia tartozik a modern vezetők leadership-kompetenciái közé?",
+        "options": [
+          "Kizárólag műszaki szaktudás, mindenféle munkatársi kapcsolat nélkül",
+          "A csapattal való kommunikáció teljes mellőzése",
+          "Digitális kompetenciák az új technológiákhoz való igazodáshoz",
+          "Tisztán költségmenedzsment személyzeti felelősség nélkül"
+        ],
+        "explanation": "A tankönyv szerint a modern vezetők leadership-kompetenciái közé tartoznak többek között a digitális kompetenciák, amelyekkel az üzleti folyamatok és a kommunikáció az új technológiákhoz igazíthatók.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mit jelent az „M” a pozitív vezetés PERMA-modelljében?",
+        "options": [
+          "Motiváció pénzügyi ösztönzőkkel és bónuszokkal",
+          "Management by Objectives",
+          "A munkavállalói elégedettség rendszeres mérése",
+          "Meaning - a munka értelmének átadása"
+        ],
+        "explanation": "Az „M” a PERMA-modellben a Meaning-et jelenti: a vezetőknek értelmet kell adniuk a munkavállalók tevékenységének, hogy azok elkötelezettek legyenek és felelősséget vállaljanak.",
+        "correctIndex": 3
+      }
+    ],
+    "personalbedarfsplanung": [
+      {
+        "question": "Miben különbözik a mennyiségi és a minőségi létszámigény?",
+        "options": [
+          "A mennyiségi létszámigény a szükséges létszámra, a minőségi a szükséges képzettségre vonatkozik.",
+          "A mennyiségi létszámigény csak a vezetőkre, a minőségi csak a tanoncokra vonatkozik.",
+          "A mennyiségi igény a kollektív szerződésben, a minőségi a munkaviszony-igazolásban szerepel.",
+          "A mennyiségi létszámigény a helyi, a minőségi az időbeli igényre vonatkozik."
+        ],
+        "explanation": "A mennyiségi létszámigény megadja, hány munkavállalóra van szükség, a minőségi létszámigény pedig leírja az ehhez szükséges képzettséget, és a munkaköri leírásban jelenik meg.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Loopy megállapítja, hogy karácsony előtt sokkal több eladóra van szüksége a Candy Store-ban, mint az év többi részében. Mi okozza itt a létszámigény ingadozását?",
+        "options": [
+          "A megrendelések tartós csökkenése",
+          "Egy közelgő nyugdíjazási hullám",
+          "Szezonális, időbeli ingadozás",
+          "A kollektív szerződés szabályainak változása"
+        ],
+        "explanation": "A tankönyv szerint az időbeli ingadozások, például a karácsony körüli szezonális többletkereslet, a mennyiségi létszámigény változásának tipikus okai közé tartoznak.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mire szolgál a munkaköri leírás a létszámtervezés keretében?",
+        "options": [
+          "Jogszabályilag meghatározza a pozíció felmondási idejét.",
+          "Leírja a munkakör feladatait, felelősségeit és jogköreit.",
+          "A felvételkor helyettesíti a munkaviszony-igazolást.",
+          "Kizárólag a végkielégítés kiszámítására szolgál."
+        ],
+        "explanation": "A munkaköri leírás tartalmazza többek között a munkakör helyét a szervezetben, a célját, a tevékenységeket/felelősségeket és a jogköröket, és így kézzelfoghatóvá teszi a minőségi létszámigényt.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Ha a létszám eltér a meghatározott létszámigénytől, a létszámigény fedezésére intézkedések szükségesek. A tankönyv szerint mi a teendő, ha az igény nagyobb, mint a tényleges létszám?",
+        "options": [
+          "Kizárólag létszámleépítésre, pl. felmondásra van szükség.",
+          "Alkalmazható toborzás vagy személyzetfejlesztés.",
+          "A felmondási időket le kell rövidíteni.",
+          "Új munkaerőnél kizárólag határozott idejű próbaidők megengedettek."
+        ],
+        "explanation": "Ha az igény nagyobb a tényleges létszámnál, új munkaerőt lehet toborozni/kiválasztani, vagy a meglévő munkaerőt személyzetfejlesztéssel (pl. átképzéssel) lehet képezni. Ha az igény kisebb, létszámleépítésre van szükség.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint milyen sorrendben zajlik a toborzás és kiválasztás (recruiting) folyamata?",
+        "options": [
+          "Felvétel, toborzás, követelményprofil, kiválasztási eljárás, az anyagok elemzése",
+          "Követelményprofil, toborzás, az anyagok elemzése, kiválasztási eljárás, felvétel",
+          "A pályázati anyagok elemzése, követelményprofil, toborzás, felvétel, kiválasztási eljárás",
+          "Toborzás, felvétel, követelményprofil, kiválasztási eljárás, az anyagok elemzése"
+        ],
+        "explanation": "A toborzási folyamat lépései: a követelményprofil meghatározása, toborzás, előválogatás (a pályázati anyagok elemzése), a munkaerő kiválasztása és felvétel.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mit értünk egy munkakör követelményprofilja alatt?",
+        "options": [
+          "Az összes munkavállaló felmondási idejének áttekintését",
+          "A munkakörhöz szükséges szakmai és személyes képzettségeket",
+          "A vállalat önkéntes szociális juttatásainak jegyzékét",
+          "Egy munkakörre beérkezett összes pályázat listáját"
+        ],
+        "explanation": "A követelményprofil a munkaerő keresésének és kiválasztásának alapja, és leírja a munkakörhöz szükséges szakmai és személyes képzettségeket.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy azon gondolkodik, hogyan töltsön be egy üres állást a Candy Store-ban. Mi a különbség a belső és a külső toborzás között?",
+        "options": [
+          "Belső toborzás jogszabály szerint csak vezetői pozícióknál megengedett.",
+          "A külső toborzás kizárólag fejvadászokon vagy az AMS-en keresztül történik.",
+          "Belső toborzásnál meglévő munkatársakkal, külsőnél kívülállókkal töltik be.",
+          "A belső toborzás mindig többnapos assessment centert jelent."
+        ],
+        "explanation": "A belső toborzás a meglévő munkavállalókkal (pl. áthelyezéssel), a külső toborzás a vállalaton kívüli személyekkel fedezi az igényt.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik fogalom jelöl egy olyan vállalatot, amelytől egy üzem többnyire rövid időre kölcsönmunkásokat „kölcsönöz”?",
+        "options": [
+          "Munkaerő-kölcsönző vállalat",
+          "Személyzeti tanácsadó vállalat",
+          "Fejvadász",
+          "Munkaügyi szolgálat (AMS)"
+        ],
+        "explanation": "A munkaerő-kölcsönzésnél egy vállalat többnyire rövid időre munkaerőt (kölcsönmunkásokat) „kölcsönöz” egy munkaerő-kölcsönző vállalattól.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Mi a fejvadász feladata a külső toborzásnál?",
+        "options": [
+          "Bejelenti az új munkavállalókat az egészségbiztosítónál.",
+          "Célzottan megkeresi a magasan képzett szakembereket vagy vezetőket.",
+          "Elkészíti a munkaköri leírást a személyzeti menedzsment számára.",
+          "Ő felel a végkielégítés kiszámításáért."
+        ],
+        "explanation": "A fejvadászt azzal bízzák meg, hogy egy vállalat megbízásából célzottan keressen meg magasan képzett szakembereket vagy vezetőket, akkor is, ha azok csak passzívan keresnek új állást.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy azt szeretné, hogy a Candy Store-t vonzó munkáltatónak tartsák, így könnyebben találjon új munkavállalókat. Milyen intézkedést alkalmaz ezzel célzottan?",
+        "options": [
+          "Assessment center",
+          "Felmondási védelem",
+          "Employer branding",
+          "Létszámleépítés"
+        ],
+        "explanation": "A személyzeti marketing, illetve az employer branding intézkedései (pl. imázskampányok, juttatások) pozitív munkáltatói imázst teremtenek, és megnyerik a képzett munkaerőt.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy álláshirdetést szeretne közzétenni a Candy Store számára. Mit ír elő ehhez az egyenlő bánásmódról szóló törvény (9. §)?",
+        "options": [
+          "A hirdetésnek nemsemlegesnek kell lennie, kivéve, ha egy nem nélkülözhetetlen.",
+          "A hirdetésnek tartalmaznia kell a jelentkezők minimális életkorát.",
+          "A hirdetés legfeljebb egy hétig lehet online vagy újságban.",
+          "A hirdetés nem tartalmazhat fizetési vagy kollektív szerződéses adatot."
+        ],
+        "explanation": "Az egyenlő bánásmódról szóló törvény 9. §-a szerint az álláshirdetésnek nemsemlegesnek kell lennie, hacsak egy bizonyos nem nem a tevékenység nélkülözhetetlen feltétele.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint mi tartozik jellemzően az előválogatásnál elemzett pályázati anyagokhoz?",
+        "options": [
+          "Munkaviszony-igazolás, végkielégítési határozat és felmondólevél",
+          "Csak a táblázatos önéletrajz további dokumentumok nélkül",
+          "Motivációs levél, önéletrajz és bizonyítványmásolatok",
+          "Assessment center jegyzőkönyv és tesztkiértékelés"
+        ],
+        "explanation": "A pályázati anyagokhoz tartozik a motivációs levél, az önéletrajz (fényképpel) és a bizonyítványmásolatok (iskolai bizonyítványok és munkáltatói igazolások).",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mit értünk munkáltatói igazolás (Dienstzeugnis) alatt?",
+        "options": [
+          "Igazolást a munkaviszony időtartamáról és jellegéről, gyakran teljesítményértékeléssel",
+          "Olyan dokumentumot, amely a munkavállaló felmondási idejét és felmondási időpontját szabályozza",
+          "Igazolást a munkavállalói végkielégítési pénztárba (MVK) történt befizetésről",
+          "Az új munkavállalók egészségbiztosítónál történő bejelentésének nyomtatványát"
+        ],
+        "explanation": "A munkáltatói igazolás igazolja a munkaviszony időtartamát és jellegét, és gyakran teljesítményértékelést is tartalmaz.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint melyik állítás igaz a jó motivációs levélre?",
+        "options": [
+          "Legfeljebb egy oldal, és célzott érdeklődést, valamint megfelelő képzettséget mutat.",
+          "Legalább három oldal hosszú legyen, hogy elkötelezettséget mutasson.",
+          "Az összes korábbi munkáltatót hiánytalanul, címmel és elérhetőséggel együtt fel kell sorolnia.",
+          "Minden esetben helyettesíti az önéletrajzot és a bizonyítványmásolatokat."
+        ],
+        "explanation": "A jó motivációs levél nem hosszabb egy oldalnál, és megmutatja, hogy a jelentkező tájékozódott, célzottan jelentkezett, és rendelkezik a megfelelő képzettséggel.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint mi tartozik a táblázatos önéletrajz tartalmához?",
+        "options": [
+          "Személyes adatok, fotó, tanulmányok, tapasztalat, ismeretek, aláírás",
+          "Kizárólag az utolsó három munkáltató elérhetősége",
+          "Csak az utolsó iskolai vagy záróbizonyítvány jegyei",
+          "A leendő munkaszerződés teljes szövege a fizetéssel együtt"
+        ],
+        "explanation": "A táblázatos önéletrajz tömören tájékoztat a személyes adatokról, fényképről, tanulmányokról, szakmai tapasztalatról, képességekről és ismeretekről, valamint adott esetben hobbikról és aláírásról.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Mire kell Loopy leendő munkatársának különösen ügyelnie e-mailes jelentkezésnél?",
+        "options": [
+          "Arra, hogy a mellékletek minél nagyobbak legyenek, hogy professzionálisnak tűnjön",
+          "Arra, hogy ne adjon meg tárgyat",
+          "Komoly e-mail-címre és legfeljebb kb. 10 MB-os fájlméretre",
+          "Arra, hogy az anyagokat kizárólag Word-fájlként küldje"
+        ],
+        "explanation": "E-mailes jelentkezésnél komoly e-mail-címet kell használni, és ügyelni kell a fájlméretre (max. kb. 10 MB), hogy a jelentkezés ne kerüljön a spam mappába.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Milyen kockázatot említ a tankönyv a mesterséges intelligencia pályázatok előválogatásában való alkalmazásával kapcsolatban?",
+        "options": [
+          "A MI alapvetően nem tudja összevetni a pályázati anyagokat az álláshirdetéssel.",
+          "A torzított korábbi adatokkal tanított MI felerősítheti a diszkriminációt.",
+          "A MI-rendszerek automatikusan magasabb toborzási költségeket okoznak a vállalatoknak.",
+          "Ausztriában a törvény szerint a MI általában nem használható a pályázatok előválogatására."
+        ],
+        "explanation": "Ha a MI-t olyan történeti adatokkal tanították, amelyekben pl. rendszeresen a férfiakat részesítették előnyben, a jövőbeli kiválasztásoknál folytathatja, illetve felerősítheti ezt a diszkriminációt.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mi az assessment center mint kiválasztási eljárás jellemző vonása?",
+        "options": [
+          "Többnyire csak 15 percig tart, és kizárólag telefonon zajlik.",
+          "Több jelentkezőt egyszerre figyelnek meg különböző feladatok közben.",
+          "Csak egy írásbeli intelligenciatesztből áll, személyes kapcsolat nélkül.",
+          "Kizárólag tanoncok és gyakornokok kiválasztására használják."
+        ],
+        "explanation": "Az assessment centerbe több jelentkezőt hívnak meg egyszerre, akiket olyan feladatok közben figyelnek meg, mint a csoportos feladatok vagy esettanulmányok; többnyire egy–három napig tart, és gyakran vezetői pozíciókhoz alkalmazzák.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyvben bemutatott bevált menet szerint milyen sorrendben zajlik jellemzően egy állásinterjú?",
+        "options": [
+          "Az interjú lezárása, a jelentkező bemutatkozása, az interjú kezdete, kérdések, kötetlen beszélgetés, a vállalat bemutatkozása",
+          "Az interjú kezdete, a jelentkező bemutatkozása, a vállalat bemutatkozása, kérdések, kötetlen beszélgetés, az interjú lezárása",
+          "Kérdések, az interjú kezdete, kötetlen beszélgetés, a jelentkező bemutatkozása, a vállalat bemutatkozása, az interjú lezárása",
+          "A vállalat bemutatkozása, az interjú lezárása, az interjú kezdete, a jelentkező bemutatkozása, kérdések, kötetlen beszélgetés"
+        ],
+        "explanation": "A bevált menet: az interjú kezdete, bemutatkozás, a vállalat bemutatkozása, önéletrajzzal kapcsolatos kérdések, helyzeti kérdések, kötetlen beszélgetés, az interjú lezárása.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik kérdés lenne nem megengedett egy állásinterjún?",
+        "options": [
+          "Milyen végzettséget szerzett?",
+          "Hogyan kezelt egy nehéz feladatot az eddigi munkahelyén?",
+          "Várandós, illetve tervez-e a közeljövőben terhességet?",
+          "Miért jelentkezett a vállalatunkhoz?"
+        ],
+        "explanation": "Csak a leendő tevékenységgel összefüggő kérdések megengedettek. Nem megengedettek többek között a párt- vagy vallási hovatartozásra, terhességre vagy betegségre vonatkozó kérdések.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint mikor nem kell egy vállalatnak munkaviszony-igazolást kiállítania egy új munkavállaló felvételekor?",
+        "options": [
+          "Ha legfeljebb egy hónapig tart, vagy teljes írásos szerződés van",
+          "Ha a megállapodott próbaidő három hónapnál hosszabb",
+          "Ha a munkavállaló már korábban is dolgozott a vállalatnál",
+          "Ha prokurával járó vezetői pozícióról van szó"
+        ],
+        "explanation": "Nem kell munkaviszony-igazolást kiállítani, ha a munkaviszony legfeljebb egy hónapig tart, vagy van írásos munkaszerződés a munkaviszony-igazolás összes adatával.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan határozza meg a tankönyv a személyzetfejlesztést (SZF)?",
+        "options": [
+          "A munkaviszonyok megszüntetésére irányuló összes intézkedésként",
+          "Új, külső munkaerő kereséseként",
+          "Minden tervezett képzési és továbbképzési intézkedésként",
+          "Kizárólag a vezetők számára jogszabályban előírt továbbképzésekként"
+        ],
+        "explanation": "A személyzetfejlesztés minden tervezett képzési és továbbképzési intézkedést magában foglal az egyéni szakmai képzettséghez, valamint a szakmai, módszertani, szociális és személyes képességek fejlesztéséhez.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint melyik cél tartozik a személyzetfejlesztés vállalati (nem egyéni) céljai közé?",
+        "options": [
+          "A munkavállalók személyes jövedelmének növelése",
+          "A személyiség kibontakoztatása",
+          "A személyes presztízs növelése",
+          "Képzett munkaerőállomány biztosítása"
+        ],
+        "explanation": "Az SZF vállalati céljai közé tartozik többek között a képzett munkaerő biztosítása, a versenyképesség javítása, a munkavállalói elégedettség és a vállalathoz való kötődés. Az egyéni célok ezzel szemben pl. a személyiség kibontakoztatására, a presztízsre és a jövedelemre vonatkoznak.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy strukturált bevezető programot tart új eladójának, amelyben megismerteti a munkafolyamatokkal, a vállalati kultúrával és a szervezeti felépítéssel. Hogyan nevezik ezt az Into-the-Job intézkedést?",
+        "options": [
+          "Outplacement",
+          "Coaching",
+          "Minőségi kör",
+          "Onboarding"
+        ],
+        "explanation": "Az onboarding az új munkavállalók betanítását szolgáló intézkedéseket foglalja magában, beleértve a munkafolyamatok, a vállalati kultúra és a szervezeti felépítés megismertetését, és az Into-the-Job intézkedések közé tartozik.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Mit értünk a személyzetfejlesztés On-the-Job intézkedései alatt?",
+        "options": [
+          "Munkaidőn kívüli, munka melletti tanulmányokat",
+          "Tanulás munka közben, pl. a felettes betanítása révén",
+          "Előadásokat a nyugdíjra való felkészítés keretében",
+          "Részvételt egy többéves gyakornoki programban a pályakezdés előtt"
+        ],
+        "explanation": "Az On-the-Job intézkedések lehetővé teszik a lépésenkénti tanulást munkavégzés közben, főleg a felettesek munkahelyi betanítása és speciális kérdéseknél szükség esetén coaching révén.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik intézkedés tartozik a személyzetfejlesztés Near-the-Job intézkedései közé?",
+        "options": [
+          "Egy többhetes, esti külső e-learning tanfolyam",
+          "Nyugdíjra való felkészítés az időskori egészségről szóló előadásokkal",
+          "Részvétel egy minőségi körben a konkrét gyenge pontokról",
+          "Munka melletti továbbképzés a rendes munkaidővel párhuzamosan"
+        ],
+        "explanation": "A Near-the-Job intézkedések, mint a projektmunka, a minőségi körök és a visszajelző beszélgetések, térben, időben és tartalmilag is a munkahely közelében zajlanak.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik állítás írja le helyesen a személyzetfejlesztés Off-the-Job intézkedéseit?",
+        "options": [
+          "Kizárólag a felettesek közvetlen munkahelyi betanításáról van szó.",
+          "Olyan intézkedésekről van szó, amelyeket csak a munkából való kilépéskor alkalmaznak.",
+          "Olyan intézkedésekről van szó, amelyek kizárólag az első munkanap előtt zajlanak.",
+          "A munkahelyen kívüli tanulási lehetőségekről van szó, pl. szemináriumokról."
+        ],
+        "explanation": "Az Off-the-Job intézkedések a munkahelyen kívüli tanulási lehetőségek, pl. e-learning, képzések/szemináriumok/workshopok vagy munka melletti továbbképzés.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint melyik két intézkedésfajta tartozik a személyzetfejlesztés Out-of-the-Job intézkedései közé?",
+        "options": [
+          "Onboarding és gyakornoki program",
+          "Coaching és munkahelyi betanítás",
+          "Visszajelző beszélgetések és minőségi körök",
+          "Nyugdíjra való felkészítés és outplacement"
+        ],
+        "explanation": "Az Out-of-the-Job intézkedések megkönnyítik a munkaviszonyból való kilépést: a nyugdíjra való felkészítés a nyugdíjba vonulást, az outplacement a felmondás utáni szakmai újraorientálódást támogatja.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint a munkaviszony megszüntetésének melyik módja lehetséges csak határozatlan idejű munkaviszonyoknál?",
+        "options": [
+          "A munkaszerződés szerinti határidő lejárta",
+          "Megszüntetés a megállapodott próbaidő alatt",
+          "A felmondás",
+          "Automatikus átalakulás határozatlan idejű viszonnyá"
+        ],
+        "explanation": "Felmondás csak határozatlan idejű munkaviszonyoknál lehetséges; a határidő lejárta és a próbaidő alatti megszüntetés viszont a határozott idejű munkaviszonyokat érinti.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint általában legfeljebb mennyi próbaidő köthető ki - és mi a kivétel?",
+        "options": [
+          "Legfeljebb három hónap, kivétel: a tanoncoknak egy hónap próbaidejük van",
+          "Legfeljebb egy év, kivétel: a tanoncoknak nincs próbaidejük",
+          "Legfeljebb két hét, kivétel nélkül",
+          "Legfeljebb egy hónap, kivétel: a tanoncoknak három hónap próbaidejük van"
+        ],
+        "explanation": "Próbaidő legfeljebb egy hónapra köthető ki; a tanoncoknak három hónap próbaidejük van.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy eladója maga szeretne felmondani. A tankönyv szerint alapvetően milyen időpontra teheti ezt meg, és mennyi a felmondási idő?",
+        "options": [
+          "Csak egy naptári negyedév végére, felmondási idő: 3 hónap",
+          "Csak egy hónap 15. napjára, felmondási idő: 6 hét",
+          "Bármikor, felmondási idő nélkül",
+          "Bármely hónap végére, felmondási idő: általában egy hónap"
+        ],
+        "explanation": "A munkavállalói felmondás bármely hónap utolsó napjára közölhető; a felmondási idő általában egy hónap.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy fel szeretne mondani egy munkatársnak, aki már 8 éve dolgozik a Candy Store-ban. A tankönyvben bemutatott lépcsőzetes rendszer szerint milyen felmondási időt kell munkáltatóként betartania?",
+        "options": [
+          "6 hét",
+          "2 hónap",
+          "3 hónap",
+          "5 hónap"
+        ],
+        "explanation": "A 6–15. munkaévben a munkáltatói felmondási idő a tankönyvben bemutatott lépcsőzetes rendszer szerint 3 hónap.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint általában milyen időpontra mondhat fel a munkáltató az alkalmazottaknak, ha a kollektív szerződés másként nem rendelkezik?",
+        "options": [
+          "A hónap bármely napjára",
+          "Csak minden hónap első napjára",
+          "Csak évente egyszer, a naptári év végére",
+          "Csak egy naptári negyedév végére"
+        ],
+        "explanation": "Az alkalmazottaknak a vállalat általában csak egy naptári negyedév végére mondhat fel; a kollektív szerződés azonban minden hónap 15. vagy utolsó napját is meghatározhatja felmondási időpontként.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint melyik személycsoport élvez különleges felmondási védelmet?",
+        "options": [
+          "Minden egy évnél rövidebb ideje a vállalatnál dolgozó munkavállaló",
+          "Minden részmunkaidős",
+          "Minden 50 év feletti munkavállaló",
+          "Várandós anyák és gyermekgondozási szabadságon lévők"
+        ],
+        "explanation": "Különleges felmondási védelmet élveznek többek között a várandós anyák, a gyermekgondozási szabadságon lévők, a katonai és polgári szolgálatot teljesítők, az üzemi tanácstagok és a kedvezményezett fogyatékkal élők.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint miben különbözik az azonnali elbocsátás (Entlassung) és az azonnali kilépés (Austritt)?",
+        "options": [
+          "Azonnali elbocsátásnál a munkáltató, azonnali kilépésnél a munkavállaló szünteti meg azonnal.",
+          "Az azonnali elbocsátás és az azonnali kilépés ugyanaz, csak másként nevezik.",
+          "Az azonnali elbocsátás mindig közös megegyezéssel történik, az azonnali kilépés soha.",
+          "Azonnali kilépésnél be kell tartani a teljes felmondási időt, azonnali elbocsátásnál nem."
+        ],
+        "explanation": "Az azonnali elbocsátást a munkáltató közli azonnal a munkavállaló súlyos kötelességszegése esetén (pl. tettlegesség); az azonnali kilépést a munkavállaló jelenti be azonnal a munkáltató súlyos kötelességszegése esetén (pl. bér visszatartása).",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint mik azok az álláskeresési napok, amelyekre a munkavállalóknak a vállalat általi felmondás esetén joguk van?",
+        "options": [
+          "Egy további havi fizetés, amelyet a munkaviszony megszűnése után kapnak",
+          "Kötelező fizetés nélküli szabadság az utolsó munkanap előtti hetekben",
+          "Egyszeri prémium a különösen hosszú munkaviszonyért",
+          "Fizetett szabadidő a heti munkaidő egyötödében álláskeresésre"
+        ],
+        "explanation": "A vállalat általi felmondás esetén a munkavállalókat a heti munkaidő egyötödének megfelelő fizetett szabadidő illeti meg új állás keresésére. Saját felmondás esetén általában nincs ilyen igény.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint hogyan működik az „új végkielégítés” a munkavállalói végkielégítési pénztáron (MVK) keresztül?",
+        "options": [
+          "A munkáltató folyamatosan befizeti a bruttó bér 1,53%-át egy MVK-ba.",
+          "A végkielégítést csak azonnali elbocsátásnál fizetik ki, közös megegyezéses megszüntetésnél soha.",
+          "A munkavállaló havonta fix összeget fizet be az MVK-ba.",
+          "Határozott idejű munkaviszonynál a végkielégítés teljesen elmarad."
+        ],
+        "explanation": "Minden munkavállaló után a munkáltató folyamatosan befizeti a bruttó bér 1,53%-át egy MVK-ba; legalább három befizetési év után lehet választani a kifizetés vagy a következő munkáltatóhoz való magával vitel között.",
+        "correctIndex": 0
+      }
+    ],
+    "personaleinsatzgestaltung": [
+      {
+        "question": "A jogrend hierarchiájában a kollektív szerződés az egyéni munkaszerződés felett áll. Mikor térhet el mégis az egyéni munkaszerződés a kollektív szerződés szabályaitól?",
+        "options": [
+          "Ha az ügyvezetés és az üzemi tanács írásban hozzájárul az eltéréshez",
+          "Ha az üzemi tanács egy üzemi megállapodásban beleegyezik",
+          "Ha előnyösebb a munkavállalók számára (kedvezőbbségi elv)",
+          "Ha az eltérő szabály csak néhány hónapig, határozott ideig érvényes"
+        ],
+        "explanation": "Az alacsonyabb rangú előírások csak akkor térhetnek el a magasabb rangúaktól, ha az eltérés kedvezőbb a munkavállalók számára – ezt nevezik kedvezőbbségi elvnek.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A Loopy's Candy Store egyik munkatársa továbbadja a házi készítésű karamellcukorka titkos receptjét egy barátjának, aki konkurens üzletet akar nyitni. Melyik kötelezettséget szegi meg ezzel?",
+        "options": [
+          "Egyenlő bánásmód kötelezettsége (diszkriminációtilalom)",
+          "Gondoskodási kötelezettség (élet és egészség védelme)",
+          "Különleges védelmi kötelezettség",
+          "Hűségkötelezettség (titoktartási kötelezettség)"
+        ],
+        "explanation": "A munkavállalókat hűségkötelezettség terheli, amely többek között az üzleti titkok megőrzését is magában foglalja.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Mennyi a törvényes rendes munkaidő Ausztriában?",
+        "options": [
+          "Napi 12 óra / heti 60 óra",
+          "Napi 8 óra / heti 40 óra",
+          "Napi 10 óra / heti 50 óra",
+          "Napi 6 óra / heti 35 óra"
+        ],
+        "explanation": "A törvény napi nyolc óra, illetve heti 40 óra rendes munkaidőt ír elő, sok kollektív szerződés rövidebb munkaidőt határoz meg.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy karácsony előtt meg szeretné hosszabbítani a Loopy's Candy Store nyitvatartását, és túlórázásra kérné munkatársait. Melyik felső határt nem lépheti túl a munkaidő a túlórákkal együtt?",
+        "options": [
+          "Napi 12 óra / heti 60 óra",
+          "Napi 14 óra / heti 70 óra",
+          "Napi 10 óra / heti 50 óra",
+          "Napi 8 óra / heti 40 óra"
+        ],
+        "explanation": "A túlórákkal együtt a munkaidő nem haladhatja meg a napi tizenkét és a heti 60 órát (bizonyos foglalkozási csoportokra vonatkozó külön szabályokkal).",
+        "correctIndex": 0
+      },
+      {
+        "question": "A törvény szerint milyen napi munkaidőtől kell legalább egy munkaközi szünetet tartani, és legalább mennyi ideig kell tartania?",
+        "options": [
+          "4 óránál több munkától, legalább 15 perc",
+          "8 óránál több munkától, legalább 60 perc",
+          "6 óránál több munkától, legalább 30 perc",
+          "10 óránál több munkától, legalább 45 perc"
+        ],
+        "explanation": "Ha a napi munkaidő több mint hat óra, legalább 30 perces munkaközi szünetet kell biztosítani.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Milyen pótlék jár a munkavállalóknak, ha a túlórákat kifizetik, és nem szabadidővel váltják meg?",
+        "options": [
+          "20% vagy 40%",
+          "30% vagy 75%",
+          "25% vagy 50%",
+          "50% vagy 100%"
+        ],
+        "explanation": "A kifizetett túlórákért 50% vagy 100% pótlék jár (pl. éjszakai, ünnepnapi és vasárnapi munkáért). Alternatívaként a túlórák szabadidővel is megválthatók.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A Loopy's Candy Store egyik munkatársa 27 éve dolgozik az üzemben ötnapos munkahéttel. A törvény szerint legalább hány munkanap szabadság illeti meg?",
+        "options": [
+          "25 munkanap",
+          "30 munkanap",
+          "36 munkanap",
+          "20 munkanap"
+        ],
+        "explanation": "Ötnapos munkahét esetén alapvetően 25 munkanap szabadság jár, a 26. munkaévtől az igény 30 munkanapra nő.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A Loopy's Candy Store-ban rugalmas munkaidő-megállapodás van érvényben 9:00 és 15:00 közötti törzsidővel. Mit jelent ez a munkatársak számára?",
+        "options": [
+          "A törzsidőben mindenkinek jelen kell lennie, egyébként rugalmas a munkaidő",
+          "Csak 9 és 15 óra között dolgozhatnak, utána el kell hagyniuk az üzletet",
+          "A törzsidő helyettesíti a heti 40 órás törvényes rendes munkaidőt",
+          "A törzsidő csak a részmunkaidősökre vonatkozik, a teljes munkaidősök rugalmasan dolgoznak"
+        ],
+        "explanation": "A rugalmas munkaidő lehetővé teszi a heti munkaidő rugalmas beosztását, de a megállapodott törzsidőben minden munkatársnak jelen kell lennie.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Az anyavédelmi törvény szerint mennyi ideig áll fenn a munkavállaló nőkre teljes foglalkoztatási tilalom a szülés előtt, illetve után?",
+        "options": [
+          "2 héttel a szülés előtt és 2 héttel utána",
+          "4 héttel a szülés előtt és 4 héttel utána",
+          "8 héttel a szülés előtt és 8 héttel utána",
+          "12 héttel a szülés előtt és 12 héttel utána"
+        ],
+        "explanation": "A dolgozó nőkre a szülés előtt nyolc héttel és utána nyolc hétig teljes foglalkoztatási tilalom vonatkozik, amely közös megegyezéssel sem módosítható.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi pótolja részben a keresetkiesést a gyermekgondozási szabadság (Karenz) alatt?",
+        "options": [
+          "Terhességi-gyermekágyi segély az Osztrák Egészségpénztártól",
+          "Gyermekgondozási díj az államtól",
+          "A teljes fizetés továbbfizetése a munkáltató által",
+          "Túlórapótlék"
+        ],
+        "explanation": "A gyermekgondozási szabadság alatt nem fizetnek bért; a keresetkiesés részleges pótlására az állam gyermekgondozási díjat fizet (terhességi-gyermekágyi segély ezzel szemben az anyavédelem idején jár).",
+        "correctIndex": 1
+      },
+      {
+        "question": "Hány tartósan foglalkoztatott, 18 év feletti munkavállalótól van joga egy üzemnek üzemi tanácsra?",
+        "options": [
+          "5 munkavállaló",
+          "10 munkavállaló",
+          "20 munkavállaló",
+          "3 munkavállaló"
+        ],
+        "explanation": "Üzemi tanácsra azokban az üzemekben van jog, ahol tartósan legalább öt 18 év feletti munkavállalót foglalkoztatnak.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Melyik szint áll Maslow szükségletpiramisának legtetején?",
+        "options": [
+          "Alapszükségletek",
+          "Biztonsági szükségletek",
+          "Az elismerés és megbecsülés szükséglete",
+          "Az önmegvalósítás szükséglete"
+        ],
+        "explanation": "Maslow szükségletpiramisa az alapszükségletektől az alapnál az önmegvalósítás szükségletéig terjed a csúcson.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Herzberg kéttényezős elmélete szerint a fizetés a higiéniai tényezők közé tartozik. Mit jelent ez?",
+        "options": [
+          "A jó fizetés hosszú távon különösen erősen motivál, és így más ösztönzőket is helyettesít",
+          "A kevés fizetés elégedetlenné tesz, de a jó fizetés önmagában nem ad tartós elégedettséget",
+          "A fizetés a belső motivátorok közé tartozik, mint az elismerés és a felelősség",
+          "A higiéniai tényezők kizárólag a munka tartalmára vonatkoznak, a fizetésre nem"
+        ],
+        "explanation": "A higiéniai tényezők, mint a fizetés, hiányuk esetén elégedetlenséget okoznak, önmagukban azonban nem biztosítanak tartós elégedettséget vagy motivációt – ezt a motivátorok teszik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy a Loopy's Candy Store eladóit rendszeresen váltogatja a pénztár, a polcfeltöltés és a bonbonkészítés között, hogy elkerülje az egyhangúságot. Melyik munkahely-kialakítási intézkedésről van szó?",
+        "options": [
+          "Munkakör-gazdagítás (job enrichment)",
+          "Munkakörbővítés (job enlargement)",
+          "Munkakör-rotáció (job rotation)",
+          "Kafetéria-rendszer"
+        ],
+        "explanation": "A munkahely rendszeres cseréjét a vállalaton belül az egyhangú tevékenységek ellensúlyozására munkakör-rotációnak nevezik.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Azok az idénymunkások, akik nyáron epret szednek a Loopy's Candy Store gyümölcscukorkáihoz, a leszedett kilogrammok után kapnak fizetést. Milyen bérezési formáról van szó?",
+        "options": [
+          "Időbér",
+          "Prémiumbér",
+          "Darabbér",
+          "Nyereségrészesedés"
+        ],
+        "explanation": "A darabbérnél (itt egységenkénti bérként) a fizetés az elvégzett mennyiséghez kötődik, pl. a leszedett kiló eper mennyiségéhez.",
+        "correctIndex": 2
+      }
+    ],
+    "personalbeurteilung": [
+      {
+        "question": "A teljesítményértékelés melyik formájánál kérnek visszajelzést a kollégáktól, a felettesektől és magától az értékelt személytől, hogy minél átfogóbb képet kapjanak?",
+        "options": [
+          "Önértékelés",
+          "Besorolásos eljárás",
+          "Célmegállapodásos eljárás",
+          "360°-os visszajelzés"
+        ],
+        "explanation": "A 360°-os visszajelzés a teljes szakmai környezetből (kollégák, felettesek, önértékelés) gyűjt visszajelzéseket, és így különösen sokatmondó képet ad.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A teljesítményértékelés melyik eljárásánál ellenőrzik, hogy elérték-e a korábban közösen meghatározott célokat?",
+        "options": [
+          "Besorolásos eljárás viselkedésleírással",
+          "Célmegállapodásos eljárás",
+          "Értékelés a kollégák által",
+          "360°-os visszajelzés"
+        ],
+        "explanation": "A célmegállapodásos eljárásnál azt ellenőrzik, hogy elérték-e a közösen megállapodott célokat; kizárólag a konkrét munkateljesítményre összpontosít.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A Loopy's Candy Store egyik fióküzlet-vezetője az értékesítési beszélgetéseken rendkívül bájos és ékesszóló. Felettese ezért általánosságban kiváló munkatársnak értékeli, pedig a pénztári elszámolásai gyakran hibásak. Melyik értékelési hibáról van szó?",
+        "options": [
+          "Recency-hatás",
+          "Szelektív észlelés",
+          "Haloeffektus",
+          "Hasonlósági hatás"
+        ],
+        "explanation": "A haloeffektusnál egyetlen, különösen feltűnő tulajdonság (itt: az ékesszólás) beragyogja a teljes értékelést, holott a szakmai teljesítmény gyengébb.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Egy munkavállaló az éves teljesítményértékelése előtti utolsó két hétben különösen elkötelezetten dolgozik, bár az év többi részében inkább átlagosan teljesített. Vezetője mégis nagyon jónak értékeli. Melyik értékelési hiba lép fel itt?",
+        "options": [
+          "Haloeffektus",
+          "Recency-hatás",
+          "Hasonlósági hatás",
+          "Szelektív észlelés"
+        ],
+        "explanation": "A recency-hatásnál a legutóbb nyújtott teljesítményt az értékelésnél erősebben veszik figyelembe, mint az egész év során nyújtott teljesítményt.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Egy felettes egy új munkatársat kezdettől fogva megbízhatatlannak tart, és azóta főleg a hibáira figyel, miközben a pozitív teljesítményét nem veszi észre. Melyik értékelési hiba írja le ezt a viselkedést?",
+        "options": [
+          "Hasonlósági hatás (similar-to-me hatás)",
+          "Haloeffektus",
+          "Recency-hatás",
+          "Szelektív észlelés"
+        ],
+        "explanation": "Szelektív észlelésnél főleg azokat az információkat észleljük, amelyek egyeznek a saját, már meglévő véleményünkkel vagy elvárásunkkal.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Egy vezető pozitívabban értékel egy jelentkezőt, mert ugyanazok a hobbijai és hasonló az életstílusa, mint neki – függetlenül a tényleges teljesítményétől. Hogyan nevezik ezt az értékelési hibát?",
+        "options": [
+          "Hasonlósági hatás",
+          "Recency-hatás",
+          "Haloeffektus",
+          "Szelektív észlelés"
+        ],
+        "explanation": "A hasonlósági hatásnál az emberek pozitívabban értékelnek másokat, ha azok hasonlítanak rájuk (pl. életkorban, hobbikban vagy értékekben), gyakran tudattalanul.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Az alábbi módszerek közül melyik tartozik a személyzeti kontrolling minőségi módszerei közé?",
+        "options": [
+          "Munkavállalói felmérések és beszélgetések",
+          "Személyi költség óránként",
+          "Fluktuációs ráta",
+          "A jelentkezők száma pozíciónként"
+        ],
+        "explanation": "A minőségi módszerek nehezen mérhető szempontokat ragadnak meg, mint a vállalati kultúra vagy a motiváció, többek között teljesítményértékelésekkel, munkavállalói felmérésekkel és beszélgetésekkel, potenciálelemzésekkel és erősség-gyengeség elemzésekkel.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan számítják ki a személyi ráfordítás-intenzitás mutatót?",
+        "options": [
+          "Személyi költségek osztva a munkavállalók számával",
+          "Üzemi teljesítmény osztva a személyi költségekkel",
+          "Személyi költségek szorozva 100-zal, osztva az üzemi teljesítménnyel",
+          "Árbevétel szorozva 100-zal, osztva a személyi költségekkel"
+        ],
+        "explanation": "A személyi ráfordítás-intenzitás képlete: személyi költségek x 100 / üzemi teljesítmény, és megmutatja, hogy az üzemi teljesítmény hány százalékát fordítják személyi költségekre.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mit jelent a személyzeti kontrollingban használt EBITDA mutató?",
+        "options": [
+          "Earnings before interest, taxes, depreciation and amortization",
+          "Employee Benefits including Training, Development and Allowances",
+          "European Business Index for Trade and Administration",
+          "Effective Business Income Tax Deduction Amount"
+        ],
+        "explanation": "Az EBITDA jelentése „Earnings before interest, taxes, depreciation and amortization”, vagyis a kamatok, adók és értékcsökkenés előtti eredmény.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Loopynak be kell nyújtania alkalmazottai havi béradó-bevallását az adóhivatalnál. A személyzeti adminisztráció melyik feladatához tartozik ez?",
+        "options": [
+          "Elszámolási feladat",
+          "Bejelentési feladat",
+          "Felügyeleti feladat",
+          "Személyzeti kontrolling"
+        ],
+        "explanation": "A bejelentési feladatok magukban foglalják a belső bejelentéseket (pl. évfordulók) és a külső bejelentéseket, mint a béradó-bevallás az adóhivatalnál.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyvben bemutatott modell szerint mi a fő különbség az employer branding és a személyzeti marketing között?",
+        "options": [
+          "Az employer branding hosszú távon felépíti a munkáltatói márkát, a személyzeti marketing a gyakorlatban valósítja meg",
+          "Az employer branding csak a vezetőket, a személyzeti marketing csak a tanoncokat és a diákokat célozza",
+          "Az employer branding törvényi kötelezettség, a személyzeti marketing önkéntes többletszolgáltatás",
+          "A személyzeti marketing hosszú távon felépíti a munkáltatói márkát, az employer branding a gyakorlatban valósítja meg"
+        ],
+        "explanation": "Az employer branding a vonzó munkáltatói márka hosszú távú felépítésének minden intézkedését magában foglalja, a személyzeti marketing pedig e márka gyakorlati megvalósítása konkrét intézkedésekkel, mint a karrieroldalak vagy a toborzási rendezvények.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint milyen platformon tájékozódhatnak a potenciális jelentkezők egy vállalat jelenlegi és volt munkatársainak tapasztalatairól (pl. kununu)?",
+        "options": [
+          "Online álláshirdetési portál",
+          "Munkáltató-értékelő platform",
+          "Kollektív szerződés",
+          "Személyzeti kontrolling eszköz"
+        ],
+        "explanation": "A munkáltató-értékelő platformokon, mint a kununu, az érdeklődők megtudhatják, hogyan értékelik a jelenlegi és volt munkatársak a fizetést, a juttatásokat vagy a munka–magánélet egyensúlyt.",
+        "correctIndex": 1
+      }
+    ],
+    "produktionsbetriebe": [
+      {
+        "question": "Hogyan nevezik az ipar és a kisipar azon vállalatait, amelyek tárgyi javakat állítanak elő?",
+        "options": [
+          "Termelő üzemek",
+          "Kereskedelmi üzemek",
+          "Szolgáltató üzemek",
+          "Beruházási üzemek"
+        ],
+        "explanation": "Az ipar és a kisipar tárgyi javakat előállító vállalatait termelő üzemeknek vagy gyártó üzemeknek nevezik.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint mely gazdasági területek tartoznak a termelő szférához (szekunder szektor)?",
+        "options": [
+          "Csak az ipar, a kisipar és az építőipar nélkül",
+          "Az ipar, a kisipar és az építőipar",
+          "A kereskedelem, a kisipar és a közlekedés",
+          "A mezőgazdaság, az erdészet és a halászat"
+        ],
+        "explanation": "A termelő szférához (szekunder szektor) tartozik minden termékeket előállító vállalat (ipar és kisipar), valamint az építőipar.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopyt érdekli a szekunder szektor gazdasági jelentősége Ausztriában. A tankönyv szerint a bruttó hazai termék mekkora részét állítják elő a szekunder szektorban?",
+        "options": [
+          "Kb. 71%",
+          "Valamivel több mint 1%",
+          "Kb. 28%",
+          "Kb. 50%"
+        ],
+        "explanation": "Ausztriában a bruttó hazai termék mintegy 28%-át a szekunder szektorban állítják elő, a tercier szektorra kb. 71%, a primer szektorra valamivel több mint 1% jut.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint hogyan alakult az elmúlt évtizedekben a szekunder szektorban foglalkoztatottak aránya Ausztriában?",
+        "options": [
+          "Erősen nőtt, és most 50% felett van",
+          "Évtizedek óta állandóan kb. 71%-on maradt",
+          "Erősen csökkent, és ma 5% alatt van",
+          "Folyamatosan csökkent, jelenleg kb. 25%"
+        ],
+        "explanation": "A szekunder szektorban foglalkoztatottak aránya az elmúlt évtizedekben folyamatosan csökkent, és jelenleg kb. 25%.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint körülbelül hány termelő üzem van Ausztriában, és ezek mekkora része kis- és középvállalkozás?",
+        "options": [
+          "Kb. 80 000 üzem, ebből több mint 95%",
+          "Kb. 8000 üzem, ebből nagyjából 50%",
+          "Kb. 800 000 üzem, ebből mindössze 10%",
+          "Kb. 20 000 üzem, ebből körülbelül 70%"
+        ],
+        "explanation": "Ausztriában több mint 80 000 termelő üzem van, ezek több mint 95%-a kis- és középvállalkozás.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint az osztrák export mekkora része származik a termelő szektorból?",
+        "options": [
+          "Kb. 30%",
+          "Kb. 70%",
+          "Kb. 50%",
+          "Kb. 90%"
+        ],
+        "explanation": "Az osztrák export mintegy 70%-a a termelő szektorból származik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy azt olvassa a tankönyvben, hogy Ausztria mint ipari telephely az utóbbi időben veszített vonzerejéből. Milyen okokat neveznek meg többek között?",
+        "options": [
+          "Túl alacsony energiaköltségek és túl alacsony adóteher",
+          "Csökkenő bérköltségek, kisebb bürokrácia és szakemberek túlkínálata",
+          "Magasabb munka- és energiaköltségek, bürokrácia, adóteher és szakemberhiány",
+          "Túl sok elérhető munkaerő és túl alacsony bérek az iparban"
+        ],
+        "explanation": "A tankönyv okként többek között a megnövekedett munka- és energiaköltségeket, a nagy bürokratikus terhet, az adóterhet, valamint a képzett munkaerő hiányát nevezi meg.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint mely két szempont alapján csoportosítják főként a termelő üzemeket?",
+        "options": [
+          "A jogi forma fajtája és a vállalat mérete",
+          "A telephely fajtája és a tulajdonosi szerkezet fajtája",
+          "Az árbevétel nagysága és a munkavállalók száma",
+          "A vevő fajtája és az ágazat/tevékenység fajtája"
+        ],
+        "explanation": "A termelő üzemeket többek között a vevő fajtája és az ágazat/tevékenység fajtája szerint lehet csoportosítani.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A Loopy's Candy Store végfogyasztóknak gyárt édességeket, de egy töltőgépet is vásárol egy másik vállalattól. Hogyan nevezik helyesen a két érintett üzemtípust?",
+        "options": [
+          "A Loopy's Candy Store fogyasztásicikk-gyártó üzem, a gépgyártó beruházásijavak-gyártó üzem",
+          "A Loopy's Candy Store beruházásijavak-gyártó üzem, a gépgyártó fogyasztásicikk-gyártó üzem",
+          "Mindkettő fogyasztásicikk-gyártó üzem",
+          "Mindkettő beruházásijavak-gyártó üzem"
+        ],
+        "explanation": "A fogyasztásicikk-gyártó üzemek végfelhasználóknak állítanak elő tárgyi javakat, a beruházásijavak-gyártó üzemek más vállalatoknak, pl. gépeket és berendezéseket.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint melyik jellemző különbözteti meg jellemzően az ipari üzemet a kisipari üzemtől?",
+        "options": [
+          "Az ipari üzemek automatizáltsága alacsonyabb, és inkább munkaerő-igényesen termelnek",
+          "Az ipari üzemek több tárgyi eszközt használnak, és magasak a fix költségeik",
+          "Az ipari üzemeket többnyire személyesen a tulajdonos vezeti",
+          "Az ipari üzemek mindig kisüzemek"
+        ],
+        "explanation": "Az ipari üzemeket többek között a tárgyi eszközök nagyobb használata, a magas fix költségek és a magasabb automatizáltság jellemzi; a kisipari üzemek inkább több anyagot és munkaerőt használnak, és gyakran a tulajdonos vezeti őket.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik négy célt követik jellemzően a termelő üzemek a termelésük során?",
+        "options": [
+          "Nagy készletek, sok telephely, magas reklámkiadások és a lehető legnagyobb létszám",
+          "Csak a nyereség maximalizálása bármi áron, akár a környezet és a vevők rovására is",
+          "Optimális tényezőfelhasználás, vevői elégedettség, alacsony költségek, fenntartható és etikus termelés",
+          "Maximális árbevétel, minél több termékváltozat, magas kapacitáskihasználás és gyors növekedés"
+        ],
+        "explanation": "A tankönyv az üzemi termelés céljaiként a termelési tényezők optimális felhasználását, a vevői elégedettséget, az alacsony termelési költségeket, valamint a fenntartható és etikus termelést nevezi meg.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint melyik három mutatóval ellenőrizhető a termelési tényezők optimális felhasználása?",
+        "options": [
+          "Likviditás, saját tőke arány és eladósodottság",
+          "Piaci részesedés, árbevétel-növekedés és fedezeti hozzájárulás",
+          "Átfutási idő, átállási idő és kapacitáskihasználás",
+          "Termelékenység, gazdaságosság és jövedelmezőség"
+        ],
+        "explanation": "A termelési tényezők optimális felhasználása a termelékenység, a gazdaságosság és a jövedelmezőség mutatóival ellenőrizhető.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Hogyan határozza meg a tankönyv egy üzem „telephelyét”?",
+        "options": [
+          "Az a földrajzi hely, ahol egy üzem tevékenységei folynak",
+          "Az a jogi forma, amelyben egy vállalat a tevékenységét végzi",
+          "Egy vállalat munkavállalóinak teljes száma",
+          "Az a márkanév, amelyen egy vállalat megjelenik a piacon"
+        ],
+        "explanation": "Egy üzem telephelye az a földrajzi hely, ahol tevékenységei folynak; a tevékenységtől függően megkülönböztetnek pl. termelési, kutatási, igazgatási és értékesítési telephelyet.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv a telephelytényezők melyik három fajtáját különbözteti meg?",
+        "options": [
+          "Helyi, regionális, nemzeti és nemzetközi telephelytényezők",
+          "Beszerzési, termelési és értékesítési oldali telephelytényezők",
+          "Adójogi, munkajogi és társadalompolitikai jellegű telephelytényezők",
+          "Rövid, közép- és hosszú távú telephelytényezők"
+        ],
+        "explanation": "A tankönyv beszerzési oldali, termeléssel kapcsolatos és értékesítés-orientált telephelytényezőket különböztet meg.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint a voestalpine 70 millió eurót fektet be jeffersonville-i (USA) telephelyének bővítésébe. Milyen elvet követ ezzel a vállalat?",
+        "options": [
+          "Just-in-time elv",
+          "Make-to-stock elv",
+          "Follow-the-Customer elv",
+          "Business-Excellence elv"
+        ],
+        "explanation": "A stratégiailag fontos piacokon, mint az USA, végrehajtott telephelybővítéssel a voestalpine folytatja „Follow-the-Customer elvét”, hogy gyorsabban és hatékonyabban szállíthasson az ottani vevőknek.",
+        "correctIndex": 2
+      }
+    ],
+    "leistungserstellungsprozess-produktion": [
+      {
+        "question": "A tankönyv szerint mi történik egy vállalat termelésében?",
+        "options": [
+          "A munkaerőt, az üzemi eszközöket és az anyagokat termékekké kombinálják",
+          "A késztermékeket becsomagolják, raktározzák és kiszállítják a vevőknek",
+          "Beszerzik a nyersanyagokat, és biztosítják az új gépekhez szükséges pénzeszközöket",
+          "Megtervezik az új termékek reklámját, és megszervezik az értékesítést"
+        ],
+        "explanation": "A termelésben a termelési tényezőket – munkaerő, üzemi eszközök és anyagok – úgy kombinálják, hogy termékek jöjjenek létre.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan határozza meg a tankönyv a „folyamat” fogalmát?",
+        "options": [
+          "Egy gép vagy berendezés kapacitásának szinonimája",
+          "Időben egymást követő és összefüggő tevékenységekből álló lefolyás",
+          "Egyszeri, elszigetelt tevékenység, amely nem kapcsolódik másokhoz",
+          "Egy üzemen belüli tetszőleges, egymástól független tevékenységek összessége"
+        ],
+        "explanation": "A folyamat olyan lefolyás megnevezése, amely időben egymást követő és összefüggő tevékenységekből áll.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mit értünk termékinnováció alatt?",
+        "options": [
+          "A termékkínálat leszűkítését egyetlen, különösen sikeresnek bizonyult termékre",
+          "Egy meglévő termék változatlan értékesítését új néven",
+          "Teljesen új terméket hoznak létre, vagy egy meglévőt továbbfejlesztenek",
+          "Egy meglévő termék első külföldi értékesítését"
+        ],
+        "explanation": "Termékinnováció során teljesen új terméket hoznak létre, vagy egy meglévő terméket továbbfejlesztenek.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint melyik három szakaszban zajlik általában az innovációs folyamat?",
+        "options": [
+          "Piacelemzés, reklámkampány (promóció), az új termék piaci bevezetése",
+          "Beszerzés, az anyagok tárolása, kiszállítás a vevőknek",
+          "Gyártás (termelés), minőségellenőrzés, értékesítés a vevőknek",
+          "Termékjavaslat, fejlesztés (tervezés), a termelés előkészítése"
+        ],
+        "explanation": "Az innovációs folyamat általában a termékjavaslat, a fejlesztés (tervezés) és a termelés előkészítése szakaszokban zajlik, folyamatos költségkontrolling kíséretében.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A Loopy's Candy Store egyre több vásárlója kérdez cukormentes édességeket, ezért Loopy új választékot fejleszt. Melyik innovációs stratégia írja le ezt az eljárást?",
+        "options": [
+          "Market pull stratégia",
+          "Technology push stratégia",
+          "Szimultán tervezés",
+          "Business Excellence stratégia"
+        ],
+        "explanation": "A market pull stratégiánál a piacon eddig ki nem elégített vevői kívánságok vagy új trendek váltják ki az innovatív termékeket.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Milyen példát hoz a tankönyv a technology push stratégiára?",
+        "options": [
+          "A vevők növekvő érdeklődése a vegán és növényi alapú élelmiszerek iránt",
+          "A vevők egyre erősebb igénye az egyedileg tervezett, fenntartható bútorok iránt",
+          "Az olcsóbb árak iránti növekvő kereslet a kereskedelemben",
+          "A mesterséges intelligencia, amely virtuális asszisztensekhez és chatbotokhoz vezetett"
+        ],
+        "explanation": "A technology push stratégiánál új technológiák váltják ki az innovatív termékeket, ahogy a tankönyv a mesterséges intelligencia példáján mutatja.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint hogyan nevezik azt a grafikus faábrázolást, amely egy termék részegységekből és alkatrészekből álló szerkezetét mutatja?",
+        "options": [
+          "Darabjegyzék",
+          "Kapacitásprofil",
+          "Termékstruktúra",
+          "Műszaki rajz"
+        ],
+        "explanation": "A termékstruktúra grafikus fa segítségével szemlélteti a termék szerkezeti felépítését.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint mit értünk darabjegyzék alatt?",
+        "options": [
+          "A termék részegységekből és alkatrészekből álló grafikus faábrázolását",
+          "Az összes munkalépés felsorolását darabonkénti megmunkálási időkkel",
+          "A fejlesztési költségek terv-tény összehasonlítását",
+          "Az összes részegység és alkatrész felsorolását mennyiségekkel együtt"
+        ],
+        "explanation": "A műszaki rajz, illetve a termékstruktúra alapján készül el a darabjegyzék, amely az összes részegységet és alkatrészt mennyiségekkel együtt felsorolja.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint hogyan nevezik a termékek és a gyártási eljárások párhuzamos fejlesztését, amely lerövidíti a fejlesztési időt?",
+        "options": [
+          "Külső beszerzés",
+          "Fixköltség-degresszió",
+          "Szimultán tervezés",
+          "Visszafelé ütemezés"
+        ],
+        "explanation": "A termékek és a gyártási eljárások párhuzamos fejlesztését szimultán tervezésnek nevezik; lerövidíti a fejlesztési időt és a piacra jutás idejét.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Egy autógyártó egy új modellnél 1,5 milliárd euró fejlesztési költséggel számol 1 millió autó várható eladása mellett (1500 euró autónként). Ha ehelyett csak 100 000 autót adnak el, a költség autónként 15 000 euróra nő. A tankönyv szerint milyen hatást mutat ez a példa?",
+        "options": [
+          "Méretgazdaságosság",
+          "Fixköltség-degresszió",
+          "Piaci telítettség",
+          "Visszafelé ütemezés"
+        ],
+        "explanation": "Kisebb eladási mennyiség mellett a darabonkénti fix költségek jelentősen nőnek – ez a fixköltség-degresszió hatását mutatja, vagyis a darabonkénti fix költség csökkenését a termelési mennyiség növekedésével.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mit határoznak meg az értékesítési tervezésben, és hogyan nevezik a tervezett eladási mennyiséget?",
+        "options": [
+          "Mely termékekből mennyit lehet várhatóan eladni; ezt a mennyiséget elsődleges szükségletnek nevezik",
+          "Mely anyagokból mennyit kell beszerezni; ezt a mennyiséget nettó szükségletnek nevezik",
+          "Mely termékekből mennyi van raktáron; ezt a mennyiséget bruttó szükségletnek nevezik",
+          "Mely termékekből mennyit lehet várhatóan eladni; ezt a mennyiséget másodlagos szükségletnek nevezik"
+        ],
+        "explanation": "Az értékesítési tervezésben megbecsülik, mely termékekből mennyit lehet várhatóan eladni. Ezt a tervezett eladási mennyiséget elsődleges szükségletnek nevezik.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint melyik három döntést hozzák meg a termelési programtervezésben?",
+        "options": [
+          "Telephely, jogi forma és tőkeszerkezet",
+          "A termékek fajtája, mennyisége és időbeli sorrendje",
+          "A reklámköltségvetés nagysága, az értékesítési csatorna és az árképzés",
+          "Beszállítók kiválasztása, fizetési feltételek és engedmények"
+        ],
+        "explanation": "A termelési programtervezésben meghatározzák a termékek fajtáját, mennyiségét és a termelés időbeli sorrendjét.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A Loopy's Candy Store az egyedileg tervezett ajándékdobozokat csak akkor gyártja, ha egy vevő ténylegesen megrendeli, míg a standard cukorkákat készletre gyártja az üzleti eladásra. Hogyan nevezik a termelési programtervezés e két fajtáját?",
+        "options": [
+          "Mindkettő készletre gyártás (make to stock)",
+          "Ajándékdobozok: készletre gyártás (make to stock); standard cukorkák: rendelésre gyártás (make to order)",
+          "Ajándékdobozok: rendelésre gyártás (make to order); standard cukorkák: készletre gyártás (make to stock)",
+          "Mindkettő rendelésre gyártás (make to order)"
+        ],
+        "explanation": "Rendelésre gyártásnál a termelés csak vevői megrendelés esetén történik, készletre gyártásnál az előrejelzett eladási mennyiségek alapján készletre termelnek, hogy mindig szállítóképesek legyenek.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint mikor érik el az optimális termelési programot?",
+        "options": [
+          "Ha egyszerre minél több különböző terméket gyártanak, és ehhez minden kapacitást teljesen kihasználnak",
+          "Ha maximalizálják a raktárkészleteket, hogy mindig szállítóképesek legyenek",
+          "Ha a kapacitások teljesen ki vannak használva, és a lehető legtöbbet termelik készletre",
+          "Ha maximális a fedezeti hozzájárulás, kihasználják a kapacitásokat, és csak annyit termelnek, amennyit el lehet adni"
+        ],
+        "explanation": "A vállalatok olyan optimális termelési programot igyekeznek kialakítani, amely maximalizálja a fedezeti hozzájárulást vagy a nyereséget, a kapacitások kihasználása mellett, anélkül, hogy többet termelnének, mint amennyit el lehet adni.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Egy asztalosműhely 100 asztalt gyárt megrendelésre és 20 asztalt készletre. 1 asztalhoz 4 asztallábtartó kell (a bruttó szükséglet tehát 480 darab), a raktárban már 95 asztallábtartó van. A tankönyv szerint mennyi az asztallábtartók nettó szükséglete?",
+        "options": [
+          "480 darab",
+          "95 darab",
+          "385 darab",
+          "575 darab"
+        ],
+        "explanation": "A nettó szükséglet a bruttó szükséglet mínusz a raktárkészlet: 480 - 95 = 385 asztallábtartó.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint miben különbözik az átfutási ütemezés és a kapacitásütemezés?",
+        "options": [
+          "A kapacitásütemezés a munkalépések sorrendjét követi, az átfutási ütemezés ezen felül a rendelkezésre álló kapacitásokat is figyelembe veszi",
+          "A két eljárás azonos, csak a nevükben különböznek",
+          "Mindkét eljárás kizárólag a vevői kívánságokat és a szállítási határidőket veszi figyelembe",
+          "Az átfutási ütemezés a munkalépések sorrendjét követi, a kapacitásütemezés ezen felül a rendelkezésre álló kapacitásokat is figyelembe veszi"
+        ],
+        "explanation": "Az átfutási ütemezésnél a munkalépések sorrendje az elvégzendő tevékenységek sorrendjén alapul, a kapacitásütemezésnél ezen felül a rendelkezésre álló kapacitások terhelését is figyelembe veszik.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint melyik két részből áll az átfutási idő?",
+        "options": [
+          "Végrehajtási idő (átállási és megmunkálási idő) és átmeneti idő (várakozási és szállítási idő)",
+          "Beszerzési idő (rendelési és szállítási idő) és értékesítési idő (eladás és kiszállítás)",
+          "Átállási idő (a gépek beállítása) és megmunkálási idő (a tényleges gyártás)",
+          "Tervezési idő (vázlatkészítés és átvizsgálás) és ellenőrzési idő (mérés és tesztelés)"
+        ],
+        "explanation": "Az átfutási idő a végrehajtási időből (átállási idő + megmunkálási idő) és az átmeneti időből (várakozási idő + szállítási idő) áll.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint milyen hátránya van a visszafelé ütemezésnek az előre ütemezéssel szemben?",
+        "options": [
+          "Magasabb raktározási költségek a korán elkészülő termékek miatt",
+          "Túl hosszú átfutási idők a nagy időtartalékok miatt",
+          "Kis időtartalék a befejezési és a szállítási határidő között",
+          "Több lekötött tőke a korán beszerzett anyagok miatt"
+        ],
+        "explanation": "A visszafelé ütemezésnél a szállítási határidőtől visszaszámolják, mikor kell legkésőbb elkezdeni a termelést; hátránya a kis időtartalék a befejezési és a szállítási határidő között, előnye az alacsonyabb raktározási költség.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Milyen példát hoz a tankönyv az egyedi gyártásra?",
+        "options": [
+          "Az ásványvíz palackozása",
+          "Televíziók gyártása futószalagon",
+          "Egy bizonyos autósorozat gyártása",
+          "Egy óceánjáró hajó építése"
+        ],
+        "explanation": "Az egyedi gyártás példájaként a tankönyv egy óceánjáró hajó építését nevezi meg, amelynél egyetlen darabot megrendelésre, pontos előírások szerint állítanak elő.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint mi a tömeggyártás jellemző vonása?",
+        "options": [
+          "Egyetlen darab gyártása pontos vevői előírások szerint, pl. egy óceánjáró hajó",
+          "Azonos termékek gyártása tetszőlegesen nagy darabszámban, alacsony termelési költséggel",
+          "Kizárólag a felhasználás helyén zajló gyártás, pl. egy híd építésénél",
+          "Előre pontosan meghatározott, korlátozott számú termék gyártása, pl. egy autósorozat"
+        ],
+        "explanation": "Tömeggyártásnál azonos termékeket gyártanak tetszőlegesen nagy darabszámban, alacsony termelési költséggel és az automatizálásnak köszönhetően gyors átfutási idővel, pl. az ásványvíz palackozása.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mi a műhelyrendszerű gyártás jellemző vonása?",
+        "options": [
+          "Minden munkaállomást automatizált szállítórendszer köt össze egymással",
+          "A gyártóberendezéseket a felhasználás helyére szállítják, pl. egy építkezésre",
+          "Az azonos jellegű tevékenységeket külön üzemen belüli műhelyekben végzik",
+          "Az állandóan ismétlődő mozdulatok miatt egyhangú a munka a futószalagnál"
+        ],
+        "explanation": "A műhelyrendszerű gyártásnál az azonos jellegű tevékenységeket üzemen belüli műhelyekben végzik, ahogy a tankönyv egy fémkerítés példáján mutatja.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Hogyan írja le a tankönyv a termelési kontrollingot?",
+        "options": [
+          "Olyan osztályként, amely kizárólag a késztermékek értékesítéséért felel",
+          "Egyszeri végellenőrzésként, amely csak a teljes termelés lezárása után zajlik, és kiszűri a hibákat",
+          "Tisztán könyvelési funkcióként, amely csak az év végén rögzíti a termelési költségeket",
+          "A teljesítményelőállítással párhuzamosan futó saját folyamatként, amely eltéréseket és fejlesztési lehetőségeket elemez"
+        ],
+        "explanation": "A termelési kontrolling saját folyamat, amely a tényleges teljesítményelőállítással párhuzamosan fut, és elemzi annak eltéréseit, illetve fejlesztési lehetőségeit.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A Glanzer Cosmetics GmbH-nál egy új töltőberendezés átfutási ideje a tervérték szerint darabonként 5 perc. Az első tesztüzemben azonban 6 perc 30 másodpercet mérnek. A tankönyv szerint mit mutat az újabb tesztüzem a korrekciós intézkedések után?",
+        "options": [
+          "Pontosan 5 perc",
+          "6 perc 10 másodperc",
+          "5 perc 20 másodperc",
+          "4 perc 50 másodperc"
+        ],
+        "explanation": "A korrekciós intézkedések (a várakozási idők csökkentése, a tervérték kiigazítása) után az újabb tesztüzem 5 perc 20 másodperces átfutási időt mutat.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint mi áll a minőségirányítás középpontjában?",
+        "options": [
+          "A vevőorientáció: a termékek és folyamatok a vevők követelményeihez igazodnak",
+          "A költségorientáció: a termékek és folyamatok a lehető legalacsonyabb előállítási költségekhez igazodnak",
+          "A technológiaorientáció: a termékek a műszakilag megvalósíthatóhoz igazodnak",
+          "Kizárólag a késztermékek ellenőrzése a termelés végén"
+        ],
+        "explanation": "A minőségirányítás középpontjában a vevőorientáció áll: a termékeket és folyamatokat úgy alakítják ki, hogy megfeleljenek a vevők követelményeinek és kívánságainak.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan írja le a tankönyv a vevőorientált és a műszaki minőség összjátékát?",
+        "options": [
+          "Csak a műszaki minőség, vagyis a mérhető termékjellemzők számítanak egy termék sikerében",
+          "A vevőorientált és a műszaki minőség kizárja egymást",
+          "A tankönyv csak a vevőorientált minőséggel foglalkozik",
+          "Mindkettőnek teljesülnie kell, és együtt adják egy jó termék alapját"
+        ],
+        "explanation": "A vevőorientált minőségnek (a vevők kívánságai és elvárásai) és a műszaki minőségnek (objektív, mérhető termékjellemzők) egyaránt teljesülnie kell, és együtt adják egy jó termék alapját.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Melyik három minőségi területet nevezi meg a tankönyv a Glanzer Cosmetics GmbH példáján?",
+        "options": [
+          "Marketingminőség, személyzeti minőség és pénzügyi minőség",
+          "Telephely- és beszállítói minőség, logisztikai minőség és rendszerminőség",
+          "Termékminőség, árminőség és csomagolásminőség",
+          "Termék- és szolgáltatásminőség, folyamatminőség és rendszerminőség"
+        ],
+        "explanation": "A minőségi területek közé tartozik a termék- és szolgáltatásminőség, a folyamatminőség és a rendszerminőség.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A Coca-Colának 2024 októberében Ausztriában 28 millió üveg Coca-Colát és Fantát kellett visszahívnia, mert egy hibás szita miatt kis fémdarabok kerülhettek az italokba. A tankönyv szerint a rossz minőség melyik következményét szemlélteti ez a példa?",
+        "options": [
+          "Növekvő nyereség",
+          "Nagyobb vevői elégedettség",
+          "Csökkenő anyagköltségek",
+          "Termék-visszahívás"
+        ],
+        "explanation": "A rossz minőség többek között termék-visszahíváshoz, imázsromláshoz, valamint az eladások, az árbevétel és a nyereség csökkenéséhez vezethet, ahogy a Coca-Cola példája mutatja.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Melyik négy fejlődési fokozatát nevezi meg a tankönyv a minőségirányításnak?",
+        "options": [
+          "Minőségellenőrzés, minőségbiztosítás, teljes körű minőségirányítás és Business Excellence",
+          "Minőségtervezés, minőségszabályozás, minőségvizsgálat és a minőség folyamatos javítása",
+          "Minőségellenőrzés, ISO 9001 szerinti tanúsítás, lean menedzsment és Six Sigma",
+          "Csak egyetlen fokozat, amely az 1950-es évek óta változatlanul érvényes"
+        ],
+        "explanation": "Az iparosodott tömeggyártás során alakultak ki a minőségellenőrzés, a minőségbiztosítás, a teljes körű minőségirányítás és végül a Business Excellence fokozatai.",
+        "correctIndex": 0
+      }
+    ],
+    "investition-finanzierung-ueberblick": [
+      {
+        "question": "A tankönyv szerint mit nyújt egy vállalat pénzügyi tervezése?",
+        "options": [
+          "Kizárólag az éves beszámoló, azon belül a mérleg és az eredménykimutatás elkészítésére szolgál",
+          "Csak a múltbeli pénzáramokat mutatja, a jövőbeli tőkeszükségletet nem becsüli meg",
+          "Áttekintést nyújt a jelenlegi és jövőbeli tőkeszükségletről és a finanszírozási lehetőségekről",
+          "Feleslegessé teszi a mérlegkészítést"
+        ],
+        "explanation": "A tankönyv szerint a pénzügyi tervezés áttekintést nyújt a jelenlegi és jövőbeli tőkeszükségletről, valamint a finanszírozási lehetőségekről, és így az alapja annak, hogy a pénzügyi eszközöket hatékonyan használják fel beruházásokra.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mely menedzsmentszinteken zajlik egy vállalat pénzügyi tervezése?",
+        "options": [
+          "Minden menedzsmentszinten, a normatívtól az operatív menedzsmentig",
+          "Kizárólag stratégiai szinten, mert mindig hosszú távú költségvetésekről szól",
+          "Kizárólag operatív szinten, mert csak a folyamatos költségellenőrzést érinti",
+          "Csak normatív és stratégiai szinten, az operatív menedzsmentben nem"
+        ],
+        "explanation": "A pénzügyi tervezés minden menedzsmentszinten alkalmazható: a normatív menedzsmentben hosszú távú pénzügyi célokat határoznak meg, a stratégiai menedzsmentben költségvetést terveznek, az operatív menedzsmentben pedig folyamatos költségellenőrzés történik.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Egy vállalat a fizetésekhez és a beszállítói számlákhoz szükséges likviditás pénzügyi biztosítását tervezi. A tankönyvi példa szerint melyik menedzsmentszinthez tartozik ez a pénzügyi tervezés?",
+        "options": [
+          "A normatív menedzsmenthez, mert hosszú távú célokról van szó",
+          "A stratégiai menedzsmenthez, mert költségvetés-tervezésről van szó",
+          "Egyik menedzsmentszinthez sem, mert a fizetések nem tartoznak a pénzügyi tervezéshez",
+          "Az operatív menedzsmenthez, mert a folyamatos költségellenőrzésről van szó"
+        ],
+        "explanation": "A tankönyv az operatív pénzügyi tervezés példájaként pontosan ezt az esetet hozza: a pénzügyi tervezést a fizetésekhez, beszállítói számlákhoz stb. szükséges likviditás biztosítására.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Egy vállalat a CO2-csökkentést szolgáló új technológiákba tervezett beruházáshoz többéves finanszírozást rendel. A tankönyvi példa szerint milyen pénzügyi tervezésről van szó?",
+        "options": [
+          "Operatív pénzügyi tervezés",
+          "Stratégiai pénzügyi tervezés",
+          "Normatív pénzügyi tervezés",
+          "Rövid távú likviditástervezés"
+        ],
+        "explanation": "A stratégiai pénzügyi tervezés példájaként a tankönyv a CO2-csökkentést szolgáló új technológiákba történő beruházás pénzügyi tervezését nevezi meg, mert itt hosszú távú finanszírozási döntést hoznak.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint hogyan függ össze a beruházás és a finanszírozás egy vállalat mérlegében?",
+        "options": [
+          "A beruházás a forrásoldalt (forráseredet), a finanszírozás az eszközoldalt (forrásfelhasználás) érinti",
+          "A beruházás és a finanszírozás a mérlegben teljesen független egymástól",
+          "A beruházás az eszközoldalt (forrásfelhasználás), a finanszírozás a forrásoldalt (forráseredet) érinti",
+          "Csak a finanszírozás hat a mérlegre, a beruházás nem"
+        ],
+        "explanation": "A beruházás a mérleg eszközoldalán jelenik meg (vagyon = forrásfelhasználás), a forrásoldal pedig azt mutatja, miből finanszírozták ezeket a vagyonelemeket (tőke = forráseredet). A beruházás és a finanszírozás így a mérlegegyenlőségen keresztül szorosan összefügg.",
+        "correctIndex": 2
+      }
+    ],
+    "investitionsmanagement": [
+      {
+        "question": "Hogyan határozzák meg a „beruházás” fogalmát a beruházásmenedzsmentben?",
+        "options": [
+          "Pénzügyi eszközök felhasználása vagyon beszerzésére",
+          "Pénzügyi eszközök előteremtése saját vagy idegen tőkéből",
+          "Vagyontárgyak eladása a likviditás javítására",
+          "Hitelfelvétel a folyó üzemeltetési költségek finanszírozására"
+        ],
+        "explanation": "A tankönyv szerint a beruházás a pénzügyi eszközök felhasználása vagyon beszerzésére. Magának a pénzügyi eszközöknek az előteremtését ezzel szemben finanszírozásnak nevezik.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Loopy a Loopy's Candy Store túl sok tőkéjét fektette egy túlméretezett csomagológépbe, és most nem tudja kifizetni beszállítói számláit. Hogyan nevezik a fizetésképtelenség e állapotát?",
+        "options": [
+          "Felszámolás (likvidáció)",
+          "Inszolvencia",
+          "Amortizáció (megtérülés)",
+          "Recesszió"
+        ],
+        "explanation": "Az inszolvencia egy vállalat fizetésképtelenségét jelenti: a fizetési kötelezettségeket már nem tudja teljesíteni. A hibás beruházási döntések a legrosszabb esetben inszolvenciához vezethetnek.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mit értünk „beruházásmenedzsment” alatt?",
+        "options": [
+          "Kizárólag egy beruházás tőkeköltségeinek ellenőrzését és dokumentálását a végrehajtás után",
+          "Saját és idegen tőke előteremtését új beruházási projektekhez",
+          "A beruházások rendszeres tervezését, döntéshozatalát, végrehajtását és ellenőrzését",
+          "A vállalat forgóeszközei közé tartozó értékpapírok folyamatos értékelését"
+        ],
+        "explanation": "A tankönyv szerint a beruházásmenedzsment a beruházások rendszeres tervezését, döntéshozatalát, végrehajtását és ellenőrzését foglalja magában a vállalati beruházási folyamat keretében. Egy beruházási projekt irányítását beruházásmenedzsmentnek nevezik.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy a Loopy's Candy Store fölösleges pénzét értékpapírokba fekteti. A beruházási jószág szerint milyen beruházásról van szó?",
+        "options": [
+          "Tárgyi beruházás",
+          "Immateriális beruházás",
+          "Bővítő beruházás",
+          "Pénzügyi befektetés"
+        ],
+        "explanation": "A beruházási jószág szerint megkülönböztetünk tárgyi beruházást (fizikai vagyontárgyak, pl. gép), pénzügyi befektetést (pénzügyi vagyontárgyak, pl. értékpapírok) és immateriális beruházást (nem fizikai vagyontárgyak, pl. szabadalmak). Az értékpapírok tehát pénzügyi befektetésnek számítanak.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy a Loopy's Candy Store régi, lassú csomagológépét egy új, sokkal hatékonyabb modellre cseréli, hogy növelje a termelékenységet. Milyen beruházási okról van szó?",
+        "options": [
+          "Racionalizálási beruházás",
+          "Pótló beruházás",
+          "Új beruházás",
+          "Bővítő beruházás"
+        ],
+        "explanation": "A racionalizálási beruházás egy régi berendezést új, hatékonyabb beruházási tárggyal vált fel. Ez különbözteti meg a puszta pótló beruházástól, amelynél egy már nem használható berendezést csupán egy azonos fajtájúval cserélnek le.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv ábrája szerint milyen sorrendben zajlik a beruházási folyamat négy szakasza?",
+        "options": [
+          "Beruházási döntés – beruházástervezés – ellenőrzés – végrehajtás",
+          "Beruházástervezés – beruházási döntés – végrehajtás – ellenőrzés",
+          "Végrehajtás – beruházástervezés – beruházási döntés – ellenőrzés",
+          "Ellenőrzés – végrehajtás – beruházási döntés – beruházástervezés"
+        ],
+        "explanation": "A beruházási folyamat általában a beruházástervezés, a beruházási döntés, a végrehajtás és az ellenőrzés szakaszaiban zajlik, ahogy a tankönyv az ever grün szálloda tűzhelyvásárlásának példáján bemutatja.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik tevékenység tartozik a beruházási folyamat „beruházástervezés” szakaszához?",
+        "options": [
+          "A vásárlási döntés meghozatala",
+          "A megrendelés leadása",
+          "Ajánlatok bekérése",
+          "Tapasztalatok gyűjtése a jövőre"
+        ],
+        "explanation": "A beruházástervezéshez tartozik a beruházási igény jelzése, a döntési kritériumok meghatározása és az ajánlatok bekérése. A vásárlási döntés a beruházási döntéshez, a megrendelés a végrehajtáshoz tartozik.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy két új hűtővitrint fontolgat a Loopy's Candy Store számára, és többek között a „beszerzési költség” és a „környezetbarát jelleg” kritériumai alapján hasonlítja össze őket. Hogyan nevezik helyesen ezt a két kritériumfajtát?",
+        "options": [
+          "Mindkettő mennyiségi kritérium",
+          "Beszerzési költség = minőségi, környezetbarát jelleg = mennyiségi",
+          "Mindkettő minőségi kritérium",
+          "Beszerzési költség = mennyiségi, környezetbarát jelleg = minőségi"
+        ],
+        "explanation": "A mennyiségi kritériumok (hard facts) számokkal mérhető tényezők, mint a költségek, az árbevétel vagy a jövedelmezőség. A minőségi kritériumok (soft facts) számokkal nem mérhető tényezők, mint a környezetbarát jelleg vagy a piaci pozíció.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A statikus beruházás-gazdaságossági számítások közül melyik kulcskérdésre ad választ a jövedelmezőség-összehasonlító számítás?",
+        "options": [
+          "Melyik beruházásnak a legmagasabb a lekötött tőke hozama?",
+          "Melyik beruházás okozza a legkisebb költséget?",
+          "Melyik beruházás hozza a legnagyobb nyereséget?",
+          "Melyik beruházásnál térül meg leggyorsabban a befektetett tőke?"
+        ],
+        "explanation": "Az öt statikus eljárás mindegyike saját kulcskérdésre felel: költség-összehasonlítás (legkisebb költség), nyereség-összehasonlítás (legnagyobb nyereség), jövedelmezőség-összehasonlítás (legmagasabb tőkehozam), megtérülési számítás (leggyorsabb visszaáramlás) és pontozásos módszer (legtöbb pont).",
+        "correctIndex": 0
+      },
+      {
+        "question": "Melyik két költségblokkból áll a költség-összehasonlító számításban figyelembe vett összköltség?",
+        "options": [
+          "Beszerzési költség és eladási ár",
+          "Folyó üzemeltetési költségek és tőkeköltségek",
+          "A saját tőke költsége és az idegen tőke költsége",
+          "Fix költségek és fedezeti hozzájárulás"
+        ],
+        "explanation": "A költség-összehasonlító számítás figyelembe veszi a beruházás folyó üzemeltetési költségeit (változó és fix üzemeltetési költségek) és tőkeköltségeit (kalkulatív kamat és kalkulatív értékcsökkenés).",
+        "correctIndex": 1
+      },
+      {
+        "question": "Hogyan számítják ki a kalkulatív értékcsökkenést a költség-összehasonlító számításban?",
+        "options": [
+          "(beszerzési költség + maradványérték) : 2 × kamatláb",
+          "(beszerzési költség + maradványérték) : hasznos élettartam",
+          "(beszerzési költség − maradványérték) : hasznos élettartam",
+          "beszerzési költség × kamatláb : hasznos élettartam"
+        ],
+        "explanation": "A kalkulatív értékcsökkenés a beszerzési érték és a maradványérték különbsége, elosztva a hasznos élettartamra: (beszerzési költség − maradványérték) : hasznos élettartam.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy költség-összehasonlító számítással két céges autót hasonlít össze a Loopy's Candy Store kiszállításaihoz. Az A autó beszerzési költsége 31 250,00 EUR, maradványértéke 5 év után 10 200,00 EUR. A kalkulatív kamatláb évi 5%. Mennyi az évi kalkulatív kamat?",
+        "options": [
+          "781,25 EUR",
+          "2072,50 EUR",
+          "1562,50 EUR",
+          "1036,25 EUR"
+        ],
+        "explanation": "Kalkulatív kamat = (beszerzési költség + maradványérték) : 2 × kamatláb = (31 250,00 + 10 200,00) : 2 × 5% = 20 725,00 × 5% = 1036,25 EUR. Az értékek a tankönyv két céges autót (C5 Tourer és C5 limuzin) összehasonlító példájából származnak.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy költség-összehasonlító számítással két járműmodellt hasonlít össze a Loopy's Candy Store bonbonjainak kiszállításához. Évi 35 000 km mellett az A modell összköltsége 14 469,38 EUR, a B modellé a magasabb beszerzési költség ellenére csak 13 491,79 EUR. Melyik modellt válassza Loopy?",
+        "options": [
+          "A B modellt, mert alacsonyabb az összköltsége",
+          "Az A modellt, mert alacsonyabb a beszerzési költsége",
+          "Mindkettőt egyformán, mert a költség-összehasonlítás végösszege azonos",
+          "Az A modellt, mert a benzines járművek alapvetően olcsóbbak"
+        ],
+        "explanation": "A költség-összehasonlító számításnál a legkisebb összköltségű alternatívát választják. Bár a B modell beszerzési költsége magasabb, éves összköltsége 13 491,79 EUR-val alacsonyabb, mint az A modell 14 469,38 EUR-ja (tankönyvi példa: egy biztosító flottájának C5 Tourer és C5 limuzin összehasonlítása).",
+        "correctIndex": 0
+      },
+      {
+        "question": "Loopy azon gondolkodik, melyik új csomagológépet vegye meg a Loopy's Candy Store számára. Az 1. gép fix költsége (kalk. értékcsökkenés + kamat) évi 221 000,00 EUR, változó költsége gépóránként 150,00 EUR; a 2. gép fix költsége 292 500,00 EUR, változó költsége gépóránként 110,00 EUR. Mennyi a kritikus mennyiség?",
+        "options": [
+          "1030,00 óra",
+          "1787,50 óra",
+          "2500,00 óra",
+          "625,00 óra"
+        ],
+        "explanation": "Kritikus mennyiség = a fix költségek különbsége : a változó költségek különbsége = (292 500,00 − 221 000,00) : (150,00 − 110,00) = 71 500,00 : 40,00 = 1787,50 óra. E kihasználtság alatt az 1. gép olcsóbb, felette a 2. gép (értékek a tankönyv két nyomdagépes példájából).",
+        "correctIndex": 1
+      },
+      {
+        "question": "Melyik hátrányt tulajdonítja a tankönyv a költség-összehasonlító számításnak?",
+        "options": [
+          "Túl sok adatot vesz figyelembe, ezért kisebb vállalkozások számára túl munkaigényes",
+          "Csak akkor alkalmazható, ha a pontos kihasználtság előre ismert",
+          "Csak egy időszak átlagértékeit veszi figyelembe, és a bevételeket nem",
+          "Kizárólag minőségi kritériumokat vesz figyelembe, például a környezetbarát jelleget"
+        ],
+        "explanation": "A tankönyv szerint hátrányai közé tartozik, hogy csak egy időszak átlagértékeit használja, az eltérő bevételeket nem veszi figyelembe, és a pénz időértékét sem számítja bele.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mivel bővíti ki a nyereség-összehasonlító számítás a költség-összehasonlító számítást?",
+        "options": [
+          "A munkavállalói elégedettség figyelembevételével",
+          "A befektetett tőke figyelembevételével",
+          "A megtérülési idő figyelembevételével",
+          "A bevételek figyelembevételével"
+        ],
+        "explanation": "A nyereség-összehasonlító számítás a bevételekkel bővíti a költség-összehasonlító számítást: nyereség = bevételek − összköltség. Többek között akkor alkalmazzák, ha a beruházási javak kapacitása vagy minősége eltér.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Loopy azon gondolkodik, hogy kisebb vagy nagyobb mértékben alakítsa át a Loopy's Candy Store-t. Kis változat: költség 250 000,00 EUR, folyó üzemeltetési költség 75 000,00 EUR/év, hasznos élettartam 10 év, kamatláb 4%, árbevétel 180 000,00 EUR. Nagy változat: költség 600 000,00 EUR, folyó üzemeltetési költség 186 000,00 EUR/év, hasznos élettartam 6 év, kamatláb 4%, árbevétel 430 000,00 EUR. A nyereség-összehasonlító számítás szerint mekkora éves nyereséget hoz a nagy változat?",
+        "options": [
+          "132 000,00 EUR",
+          "75 000,00 EUR",
+          "98 000,00 EUR",
+          "144 000,00 EUR"
+        ],
+        "explanation": "Nyereség = bevételek − (kalk. kamat + kalk. értékcsökkenés + folyó üzemeltetési költség) = 430 000,00 − (12 000,00 + 100 000,00 + 186 000,00) = 132 000,00 EUR. A kis változat ehhez képest csak 75 000,00 EUR nyereséget hoz (tankönyvi példa: az ever grün szálloda szobafelújítása).",
+        "correctIndex": 0
+      },
+      {
+        "question": "Mi a jövedelmezőség kiszámításának képlete a jövedelmezőség-összehasonlító számításban?",
+        "options": [
+          "Jövedelmezőség = (nyereség + kalkulatív értékcsökkenés) : beszerzési költség × 100",
+          "Jövedelmezőség = (nyereség + kalkulatív kamat) : átlagos tőkebefektetés × 100",
+          "Jövedelmezőség = bevételek : (összköltség + kalkulatív kamat) × 100",
+          "Jövedelmezőség = átlagos tőkebefektetés : (nyereség + kalkulatív kamat) × 100"
+        ],
+        "explanation": "Jövedelmezőség = (nyereség + kalkulatív kamat) : átlagos tőkebefektetés × 100, ahol az átlagos tőkebefektetés = (beszerzési költség + maradványérték) : 2.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A Loopy's Candy Store kis átalakítási változatára (költség 250 000,00 EUR, nyereség 75 000,00 EUR, kalk. kamat 5000,00 EUR) a jövedelmezőség-összehasonlító számítás 64%-ot ad, a nagy változatra (költség 600 000,00 EUR, nyereség 132 000,00 EUR, kalk. kamat 12 000,00 EUR) csak 48%-ot. Milyen következtetést von le ebből helyesen Loopy?",
+        "options": [
+          "A jövedelmezőség-összehasonlítás pontosan megerősíti a nyereség-összehasonlítás eredményét",
+          "A kis változat mindenképpen a rosszabb választás, mert kisebb abszolút nyereséget hoz",
+          "A nagy változat több nyereséget hoz, de a kicsi jobban kamatoztatja a befektetett tőkét",
+          "A nagy változat jövedelmezőbb, mert az abszolút nyeresége csaknem kétszer akkora"
+        ],
+        "explanation": "A nyereség-összehasonlítással ellentétben, ahol a nagy változat 132 000,00 EUR-val jobban szerepel, a jövedelmezőség-összehasonlítás a kis változatra 64%-kal jobb eredményt ad, mint a nagyra 48%-kal, mert a befektetett tőkét is figyelembe veszi.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Milyen további előnyt nyújt a jövedelmezőség-összehasonlító számítás a nyereség-összehasonlítóval szemben?",
+        "options": [
+          "Diszkontálással figyelembe veszi a pénz időértékét",
+          "Nincs szüksége költség- és bevételi adatokra, ezért gyorsabb",
+          "Azt is megmutatja, hány év alatt térül meg teljesen a befektetett tőke",
+          "Jól összehasonlíthatók az eltérő tőkebefektetésű beruházások"
+        ],
+        "explanation": "Mivel a jövedelmezőség-összehasonlító számítás a nyereséget a befektetett tőkéhez viszonyítja, az eltérő nagyságú tőkebefektetést igénylő beruházások is jól összehasonlíthatók vele.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A megtérülési számítás melyik két módszerét különbözteti meg a tankönyv?",
+        "options": [
+          "Átlagmódszer és kumulációs módszer",
+          "Nettó jelenérték-módszer és annuitásmódszer",
+          "Költség-összehasonlító és nyereség-összehasonlító módszer",
+          "Közvetlen és közvetett módszer"
+        ],
+        "explanation": "A megtérülési számításnál megkülönböztetik az átlagmódszert (az éves visszaáramlás azonos) és a kumulációs módszert (az éves visszaáramlás eltérő).",
+        "correctIndex": 0
+      },
+      {
+        "question": "A Loopy's Candy Store kis átalakítási változatára igaz: költség 250 000,00 EUR, éves nyereség 75 000,00 EUR, kalkulatív értékcsökkenés 25 000,00 EUR. Hány év a megtérülés az átlagmódszer szerint?",
+        "options": [
+          "3,33 év",
+          "2,50 év",
+          "10,00 év",
+          "1,50 év"
+        ],
+        "explanation": "Megtérülési idő = (beszerzési költség − maradványérték) : (éves nyereség + kalkulatív értékcsökkenés) = 250 000,00 : (75 000,00 + 25 000,00) = 250 000,00 : 100 000,00 = 2,50 év (tankönyvi példa: az ever grün szálloda szobafelújítása, négycsillagos kategória).",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint az alábbi állítások közül melyik írja le helyesen a statikus beruházás-gazdaságossági számítások egyik korlátját?",
+        "options": [
+          "Mindig több időszakot vizsgálnak a teljes hasznos élettartam alatt",
+          "Kizárólag minőségi kritériumokat vesznek figyelembe, költségeket és bevételeket nem",
+          "Csak egy időszakot vizsgálnak, és azt a többire nézve reprezentatívnak tekintik",
+          "Kamatozással vagy diszkontálással figyelembe veszik a pénz időértékét"
+        ],
+        "explanation": "A statikus eljárások egyik korlátja, hogy csak egy időszakot vizsgálnak, és azt a teljes hasznos élettartamra reprezentatívnak tekintik. Ezt a gyengeséget csak a több időszakos dinamikus eljárások oldják fel, amelyek figyelembe veszik a pénz időértékét.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi különbözteti meg leginkább a pontozásos módszert a többi statikus beruházás-gazdaságossági számítástól?",
+        "options": [
+          "Kizárólag hard factseket vesz figyelembe, és pontokkal értékeli őket",
+          "Kizárólag a két beruházási alternatíva közötti kritikus mennyiséget számítja ki",
+          "Csak minőségi kritériumokat értékel, a költségeket tudatosan figyelmen kívül hagyja",
+          "Mennyiségi és minőségi kritériumokat kombinál, és pontokkal értékeli őket"
+        ],
+        "explanation": "A pontozásos módszer a beruházási döntéseknél mennyiségi és minőségi kritériumokat egyaránt figyelembe vesz, amelyeket pontokkal értékelnek. A legmagasabb pontszámú alternatívát választják.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint mi a pontozásos módszer alkalmazásának első lépése?",
+        "options": [
+          "A döntési kritériumok meghatározása a beruházások értékeléséhez",
+          "Az egyes kritériumok pontjainak megszorzása a súlyokkal",
+          "A súlyozott pontok összeadása beruházásonként egy végösszeggé",
+          "A kritériumok értékelése minden beruházásnál 1-től 5-ig terjedő skálán"
+        ],
+        "explanation": "A pontozásos módszer első lépése a döntési kritériumok meghatározása. Ezt követi a súlyozás, az értékelés, a szorzás és a pontok összeadása.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Két elektromos szállítójármű pontozásos összehasonlításánál a Loopy's Candy Store számára az A jármű súlyozott összpontszáma 2,6, a B járműé 3,15 (értékelési skála kritériumonként 1–5 pont). Melyik járművet válassza Loopy?",
+        "options": [
+          "Az A járművet, mert a pontozásos módszernél a költség-összehasonlításhoz hasonlóan az alacsonyabb érték a jobb",
+          "A B járművet, mert a legmagasabb pontszámú alternatíva felel meg legjobban a követelményeknek",
+          "Egyiket sem, mert a 0,55 pontos különbség túl kicsi a döntéshez",
+          "Az A járművet, mert alacsonyabb a beszerzési költsége, az összpontszámtól függetlenül"
+        ],
+        "explanation": "A pontozásos módszernél a legmagasabb súlyozott összpontszámú alternatívát választják. 3,15 ponttal a 2,6 ponttal szemben a B jármű felel meg a számítás szerint legjobban a követelményeknek (értékek a tankönyv egy szálloda két elektromos transzferbuszát összehasonlító példájából).",
+        "correctIndex": 1
+      }
+    ],
+    "finanzmanagement": [
+      {
+        "question": "Mit értünk az üzemgazdaságtanban a „finanszírozás” fogalma alatt?",
+        "options": [
+          "Az üzleti tevékenység megkezdéséhez, fenntartásához és bővítéséhez szükséges tőke tervezése és biztosítása.",
+          "Az elért nyereség felosztása a vállalat tulajdonosai között az üzleti év végén.",
+          "Az összes pénzmozgás folyamatos rögzítése a könyvelésben és a vállalat eredménykimutatásának elkészítése.",
+          "A beruházási alternatívák kiválasztása és értékelése költség- vagy nyereség-összehasonlító számítás segítségével."
+        ],
+        "explanation": "Finanszírozás alatt annak a tőkének (pénzeszközöknek) a tervezését és biztosítását értjük, amelyre egy vállalat üzleti tevékenységének megkezdéséhez, fenntartásához és bővítéséhez szükség van.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Melyik három központi finanszírozási célt nevezi meg a tankönyv?",
+        "options": [
+          "Növekedés, árbevétel és piaci részesedés",
+          "Likviditás, jövedelmezőség és függetlenség",
+          "Hatékonyság, eredményesség és fenntarthatóság",
+          "Hitelképesség, biztonság és pénzügyi rugalmasság"
+        ],
+        "explanation": "A vállalatok finanszírozási céljai szorosan összefüggnek a vállalati célokkal. Megkülönböztetjük a likviditást, a jövedelmezőséget és a függetlenséget.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy biztosítani szeretné, hogy a Candy Store mindig határidőre ki tudja fizetni az összes nyitott számlát. Melyik finanszírozási célt követi ezzel elsősorban?",
+        "options": [
+          "Jövedelmezőség",
+          "Függetlenség",
+          "Likviditás",
+          "Hitelképesség"
+        ],
+        "explanation": "Likviditás alatt egy vállalat azon képességét értjük, hogy fizetési kötelezettségeinek határidőre és korlátlanul eleget tud tenni.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint melyik képlettel számítják ki egy vállalat jövedelmezőségét?",
+        "options": [
+          "Jövedelmezőség = árbevétel ÷ tőkebefektetés × 100",
+          "Jövedelmezőség = tőkebefektetés ÷ nyereség × 100",
+          "Jövedelmezőség = nyereség − tőkebefektetés",
+          "Jövedelmezőség = nyereség ÷ tőkebefektetés × 100"
+        ],
+        "explanation": "A jövedelmezőség megmutatja, milyen mértékben kamatozik a teljesítményelőállításhoz befektetett tőke a vállalatban: jövedelmezőség = nyereség ÷ tőkebefektetés × 100.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Az osztrák ATSS nyomtatottáramkör-gyártó nagy összegeket fektetett új gyártóberendezésekbe, és az előző évben 10% hozamot ért el. Mivel az árbevétel a vártnál alacsonyabb volt, a vállalatnak likvid eszközök hiányában drága bankhitelt kellett felvennie az új berendezéshez. Milyen célkonfliktust mutat ez a példa?",
+        "options": [
+          "Célkonfliktus a likviditás és a jövedelmezőség között",
+          "Célkonfliktus a függetlenség és a hitelképesség között",
+          "Célkonfliktus a saját és az idegen finanszírozás között",
+          "Célkonfliktus a belső és a külső finanszírozás között"
+        ],
+        "explanation": "Ha túl sok likvid eszközt fektetnek be, nő ugyan a jövedelmezőség, de az eszközök esetleg más célokra hiányoznak - ha viszont túl sok likvid eszközt tartanak vissza, elmaradnak a megtermelhető hozamok. A példa szerint egy ilyen likviditás–jövedelmezőség célkonfliktus akár drága idegen finanszírozást is szükségessé tehet.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint melyik három központi feladatot foglalja magában a pénzügyi menedzsment?",
+        "options": [
+          "Az eladási árak meghatározása, a reklám tervezése és az értékesítés irányítása",
+          "A folyamatos finanszírozási igény meghatározása, a finanszírozási mód kiválasztása és lebonyolítása",
+          "A létszámigény tervezése, a termelés irányítása és a termékminőség ellenőrzése",
+          "A mérleg és az eredménykimutatás elkészítése, az adóbevallások beadása és a havi bérszámfejtés elvégzése"
+        ],
+        "explanation": "A pénzügyi menedzsment központi feladatai a folyamatos finanszírozási igény meghatározása pénzügyi tervezéssel, a megfelelő finanszírozási forma kiválasztása, valamint a finanszírozás lebonyolítása (a fizetések megszervezése és a tőkebevonás).",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy az édességek eladásából visszatartott nyereséget közvetlenül visszaforgatja az üzletébe ahelyett, hogy kifizetné magának. Milyen finanszírozási formát alkalmaz ezzel?",
+        "options": [
+          "Hitelfinanszírozás",
+          "Részesedési finanszírozás",
+          "Önfinanszírozás",
+          "Támogatásból történő finanszírozás"
+        ],
+        "explanation": "Önfinanszírozásnál a vállalat saját, ki nem fizetett nyereségéből jut további saját tőkéhez - ez a belső finanszírozásból eredő saját finanszírozás egyik formája.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A Tischlerei Hölzinger GmbH 1982-ben 200 000,00 EUR-ért vásárolt egy telket, amelyet azóta ezen a beszerzési értéken tartanak nyilván a mérlegben. Ma a telek piaci értéke 1 500 000,00 EUR. Mekkora a telekben rejlő rejtett tartalék?",
+        "options": [
+          "200 000,00 EUR",
+          "500 000,00 EUR",
+          "1 500 000,00 EUR",
+          "1 300 000,00 EUR"
+        ],
+        "explanation": "A rejtett tartalék a tényleges piaci érték és a mérlegben szereplő alacsonyabb könyv szerinti érték különbsége: 1 500 000,00 EUR − 200 000,00 EUR = 1 300 000,00 EUR. Nyereségként csak a telek eladásakor válik láthatóvá (rejtett önfinanszírozás).",
+        "correctIndex": 3
+      },
+      {
+        "question": "Mit értünk kockázatitőke-társaság (venture capital) alatt?",
+        "options": [
+          "Olyan finanszírozó társaságot, amely fiatal vállalatoknak saját tőkét ad (többnyire 200 000,00 EUR felett), rögzített visszafizetés és kamat nélkül.",
+          "Olyan bankot, amely fiatal vállalatoknak kizárólag rövid lejáratú folyószámlahiteleket nyújt, szokásos biztosítékok ellenében és normál kamattal.",
+          "Olyan magánszemélyt, aki kisebb összegekkel (kb. 50 000,00–150 000,00 EUR) száll be egy fiatal vállalatba.",
+          "Olyan állami támogatási szervet, amely vissza nem térítendő támogatást nyújt startupoknak, és ellenőrzi annak rendeltetésszerű felhasználását."
+        ],
+        "explanation": "A kockázatitőke-társaság olyan finanszírozó társaság, amely egy fiatal vállalatnak saját tőkét (többnyire 200 000,00 EUR felett) bocsát rendelkezésre rögzített visszafizetés, illetve kamatozás nélkül, és ezért tájékoztatási, ellenőrzési és beleszólási jogokat kap.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Miben különbözik az üzleti angyal a kockázatitőke-társaságtól?",
+        "options": [
+          "Az üzleti angyal kizárólag tőzsdén jegyzett vállalatokba fektet, fiatal startupokba soha.",
+          "Az üzleti angyal magánszemély, nem finanszírozó társaság, és többnyire kisebb összegeket fektet be.",
+          "Az üzleti angyal kizárólag idegen tőkét bocsát rendelkezésre hitelek formájában, részesedést nem kap.",
+          "Az üzleti angyal a kockázatitőke-társasággal ellentétben mindig fix kamatot követel."
+        ],
+        "explanation": "Az üzleti angyal a kockázatitőke-társasághoz hasonlóan közvetlenül részesedik a vállalatban, de magánszemély, nem finanszírozó társaság; az üzleti angyalok általában kisebb összegeket (kb. 50 000,00–150 000,00 EUR) fektetnek be, mint a kockázatitőke-társaságok.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy megállapodik egy üzleti angyallal, hogy az 60 000,00 EUR-t fektet be a Candy Store bővítésébe, és cserébe a vállalati részesedés 25%-át kapja. Milyen finanszírozásról van szó?",
+        "options": [
+          "Idegen finanszírozás az üzleti angyal magánkölcsönével",
+          "Belső finanszírozás önfinanszírozással, a visszatartott nyereségből",
+          "Saját finanszírozás egy üzleti angyal részesedésével",
+          "Idegen finanszírozás kötvénykibocsátással"
+        ],
+        "explanation": "Az üzleti angyal közvetlenül fektet be, és cserébe részesedést kap a vállalatban - ez egy új társtulajdonos általi saját finanszírozásnak (külső finanszírozás) felel meg, akárcsak a tankönyvi példában a 25%-os részesedésért adott 60 000,00 EUR.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A közösségi finanszírozás (crowdfunding) melyik formája számít a mérlegben idegen tőkének, mert a befektetők kamatot kapnak érte?",
+        "options": [
+          "Donation-based crowdfunding",
+          "Reward-based crowdfunding",
+          "Equity-based crowdfunding",
+          "Lending-based crowdfunding"
+        ],
+        "explanation": "A lending-based crowdfundingnál („pénz kamatért”) a befektetők kamatot kapnak a befektetésükért, ezért idegen tőkének számít - szemben az equity-based crowdfundinggal, amely saját tőkének minősül.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Mit értünk „going public” (tőzsdére lépés) alatt?",
+        "options": [
+          "A részvénytársasággá (AG) alakulást és a tőzsdére lépést első részvénykibocsátással (IPO)",
+          "Egy vállalat GmbH-vá (kft.-vé) alakítását és új tagok felvételét",
+          "Egy vállalati kötvény első tőzsdei kibocsátását, hogy a vállalat idegen tőkéhez jusson hozzá",
+          "Több folyószámlahitel egyidejű felvételét különböző bankoknál"
+        ],
+        "explanation": "A going public egy vállalat AG-vé alakítását és az azt követő tőzsdére lépést jelenti, vagyis a részvények első kibocsátását (Initial Public Offering, IPO), amellyel friss saját tőke áramlik a vállalatba.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan jellemzi a tankönyv a támogatásokat (szubvenciókat)?",
+        "options": [
+          "Közintézmények kedvezményes kamatozású hiteleiként, amelyeket néhány év múlva vissza kell fizetni",
+          "Közintézmények által kifizetett „ajándékpénzként”, amelyet nem kell visszafizetni",
+          "Üzleti angyalok tőkebetéteiként, amelyekért részesedést kapnak",
+          "Az állam által vállalatok finanszírozására kibocsátott kötvényekként"
+        ],
+        "explanation": "A támogatások (szubvenciók) „ajándékpénzt” jelentenek, amelyet a szövetségi állam, a tartományok, a települések, az EU vagy a gazdasági kamara fizet ki a vállalatoknak; csak a rendeltetésszerű felhasználást ellenőrzik, de soha nem fedezik a teljes tőkeszükségletet.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik jellemző igaz az idegen tőkére?",
+        "options": [
+          "Időbeli korlát nélkül és kamatfizetés nélkül áll a vállalat rendelkezésére.",
+          "A tőkeadók közvetlenül részesednek a sikerből, és beleszólási joguk van.",
+          "Egy meghatározott időpontban vissza kell fizetni, és kamatot kell fizetni érte.",
+          "Fizetésképtelenség esetén a hitelezők ugyanúgy viselik a teljes veszteségkockázatot, mint a saját tőke adói."
+        ],
+        "explanation": "Az idegen tőke csak határozott ideig áll a vállalat rendelkezésére, egy meghatározott időpontban vissza kell fizetni, és a hitelfelvevőknek eredménytől független kamatot kell fizetniük érte; a hitelezőknek általában nincs beleszólásuk, és csőd esetén korlátozottabb veszteségkockázatot viselnek, mint a saját tőke adói.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Miért írja le a tankönyv a céltartalékokból történő finanszírozás hatását nehezen tervezhetőnek?",
+        "options": [
+          "Mert a céltartalékok mindig azonnal, teljes összegben kifizetéshez vezetnek harmadik felek felé.",
+          "Mert céltartalékot csak már leírt eszközökre szabad képezni.",
+          "Mert céltartalékot csak az adóhivatal jóváhagyásával szabad képezni.",
+          "Mert nem világos, milyen összegben, illetve mikor válik egy céltartalék kifizetéssé."
+        ],
+        "explanation": "A vállalatok várható ráfordításokra képeznek céltartalékot, amelyek oka ugyan ismert, de nem világos, milyen összegben, illetve mikor veszik igénybe a céltartalékot jövőbeli kötelezettségek rendezésére - ezért a hosszú távú finanszírozáshoz sorolják.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Melyik öt szempontot nevezi meg a tankönyv a hitelfajták megkülönböztetésére?",
+        "options": [
+          "Hitelező, a hitelező szolgáltatása, futamidő, felhasználási cél és hitelbiztosíték",
+          "Kamatláb, a hitel pénzneme, a hitelfelvevő hitelképessége, törlesztési mód és régió",
+          "A hitelfelvevő ágazata, jogi forma, létszám, hitelösszeg és kamatrögzítés",
+          "Hitelező, hitelösszeg, kamatláb, felhasználási cél és a visszafizetés módja"
+        ],
+        "explanation": "A hitelekre különböző okokból és igények miatt van szükség. Ennek megfelelően a nyújtott hitelfajták is eltérőek, és a hitelező, a hitelező szolgáltatása, a futamidő, a felhasználási cél és a hitelbiztosíték szerint különböztethetők meg.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint hogyan osztják fel a hitelek futamidejét?",
+        "options": [
+          "rövid lejáratú 5 évig, középlejáratú 5-10 év, hosszú lejáratú több mint 10 év",
+          "rövid lejáratú 1 évig, középlejáratú 1-5 év, hosszú lejáratú több mint 5 év",
+          "rövid lejáratú 3 hónapig, középlejáratú 3-12 hónap, hosszú lejáratú 1 év felett",
+          "rövid lejáratú 2 évig, középlejáratú 2-8 év, hosszú lejáratú 8 év felett"
+        ],
+        "explanation": "A futamidő szerint megkülönböztetünk rövid lejáratú (1 évig), középlejáratú (1-5 év) és hosszú lejáratú (több mint 5 év) hiteleket.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv alapvetően melyik három fajtára osztja a hitelbiztosítékokat?",
+        "options": [
+          "Kezesség, követelésengedményezés (cesszió) és jelzálog",
+          "Személyi biztosítékok, dologi biztosítékok és tulajdonjog-fenntartás",
+          "Személyi biztosítékok, dologi biztosítékok és hitelbiztosítás",
+          "Folyószámlahitel, kölcsön és kezességi hitel"
+        ],
+        "explanation": "Sok hitelnél a hitelintézet biztosítékot kér. Ezek feloszthatók hitelbiztosítékokra - személyi biztosítékokra (pl. kezesség) és dologi biztosítékokra (pl. tulajdonjog-fenntartás, cesszió, zálogjog) bontva - valamint hitelbiztosításra.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik kezességfajta a legmesszebbmenő a hitelező számára, mert szabadon választhat, hogy először a kezestől vagy a főadóstól követel fizetést?",
+        "options": [
+          "Kártalanító kezesség",
+          "Egyszerű kezesség",
+          "Személyi biztosíték általában",
+          "Készfizető kezesség"
+        ],
+        "explanation": "A készfizető kezességnél („a kezes mint fizető”) a hitelező választhat, kitől követel először fizetést - így messzebbmenő, mint az egyszerű kezesség (ahol előbb a főadóst kell perelni) és a kártalanító kezesség (korlátozott, csak a végrehajtás után fennmaradó összegért felel).",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint melyik dologi biztosíték nyújtja a hitelezőnek a legnagyobb biztonságot, míg a tulajdonjog-fenntartás a legkisebbet?",
+        "options": [
+          "Zálogjog",
+          "Követelésengedményezés (cesszió)",
+          "Kezesség",
+          "Hitelbiztosítás"
+        ],
+        "explanation": "A dologi biztosítékok átruházásának mértéke a tulajdonjog-fenntartástól (legkisebb biztonság) a követelésengedményezésen (cesszió) át a zálogjogig terjed, amely a legnagyobb biztonságot nyújtja.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Hogyan különbözteti meg a tankönyv a hitelképesség vizsgálatánál a hard factseket és a soft factseket?",
+        "options": [
+          "A hard facts személyes tulajdonságok, mint a fizetési magatartás, a soft facts anyagi tényezők, mint a jövedelem és a vagyon.",
+          "A hard facts anyagi tényezők, mint a jövedelem vagy a vagyon, a soft facts személyes tulajdonságok, mint a fizetési magatartás.",
+          "A hard facts kizárólag hitelfelvevő vállalatokra, a soft facts kizárólag magánszemélyekre vonatkoznak.",
+          "A törvény szerint a hard facts kötelezően vizsgálandók, a soft facts viszont nem vehetők figyelembe a hitelvizsgálatnál."
+        ],
+        "explanation": "A hard facts anyagi jellemzőkön alapuló tényezők, pl. a havi jövedelem, illetve a nyereség- és vagyoni helyzet. A soft facts személyes jellemzőkön alapuló tényezők, pl. a korábbi fizetési magatartás, a hitelesség vagy a szakmai képzettség.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint milyen sorrendben zajlik a hitelügyletek lebonyolítása a hitelintézetekkel?",
+        "options": [
+          "Hitelszerződés - hitelkérelem - hitelvizsgálat - hitelfelügyelet",
+          "Hitelvizsgálat - hitelkérelem - hitelfelügyelet - hitelszerződés",
+          "Hitelkérelem - hitelvizsgálat - hitelszerződés - hitelfelügyelet",
+          "Hitelfelügyelet - hitelszerződés - hitelvizsgálat - hitelkérelem"
+        ],
+        "explanation": "A hitelügyletek lebonyolítása négy lépésben zajlik: először az adós hitelkérelmet nyújt be, majd a bank megvizsgálja a dokumentumokat és a hitelképességet (hitelvizsgálat), ezt követően aláírják a hitelszerződést és a biztosítéki okiratokat (hitelszerződés), végül a hitelintézet folyamatosan figyeli a hitelképességet (hitelfelügyelet).",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi jellemzi a folyószámlahitelt?",
+        "options": [
+          "Hosszú lejáratú beruházási hitel, amelyet sok éven át egyenlő havi részletekben törlesztenek",
+          "Egyszerre, teljes összegben kifizetett hitel a befektetett eszközök hosszú távú finanszírozására",
+          "Rövid lejáratú hitel, amelyet kizárólag folyószámlával nem rendelkező magánszemélyek kapnak",
+          "Rövid lejáratú, rulírozó hitelkeret a folyószámlán a likviditási szűk keresztmetszetek áthidalására"
+        ],
+        "explanation": "A folyószámlahitel meghatározott összegű, rövid lejáratú pénzhitel: a folyószámla tulajdonosa a megállapodott hitelkeretet bármikor, rulírozóan igénybe veheti. Főleg áthidaló finanszírozásként szolgál a rövid távú likviditási szűk keresztmetszetek áthidalására.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv a visszafizetés módja szerint melyik három kölcsönfajtát különbözteti meg?",
+        "options": [
+          "Végtörlesztéses, részlettörlesztéses és annuitásos kölcsön",
+          "Folyószámlahitel, szállítói hitel és vevői hitel",
+          "Rövid, közép- és hosszú lejáratú, fix kamatozású bankkölcsön",
+          "Kártalanító kezesség, garanciahitel és aval hitel"
+        ],
+        "explanation": "A kölcsönöket a visszafizetés módja szerint különböztetik meg: a lejáratkor törlesztendő kölcsönnél a futamidő alatt nincs törlesztés, és a teljes összeget a végén fizetik vissza; a részletekben törlesztendő kölcsönnél a tőketörlesztés állandó, a kamatrész csökken; az annuitásos kölcsönnél a havi teher (annuitás) állandó, a tőketörlesztés nő, a kamatrész csökken.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Az ever.grün szálloda egy elektromos transzferbusz megvásárlásához 42 000,00 EUR összegű, évi 6,5% kamatozású, 10 éves futamidejű annuitásos kölcsönt vesz fel. A törlesztési terv szerint az 1. évben a kamat 2639,27 EUR, a tőketörlesztés 3083,61 EUR. Mekkora az annuitás (éves összteher) az 1. évben?",
+        "options": [
+          "2639,27 EUR",
+          "5722,82 EUR",
+          "3083,61 EUR",
+          "38 916,39 EUR"
+        ],
+        "explanation": "Az annuitás a kamat és a tőketörlesztés összege: 2639,27 EUR + 3083,61 EUR = 5722,82 EUR. Annuitásos kölcsönnél ez az éves összteher a teljes futamidő alatt állandó.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mi a kezességi hitel?",
+        "options": [
+          "A hitelező azonnal kifizet egy pénzösszeget a hitelfelvevőnek, amelyet havi részletekben kell visszafizetni.",
+          "A hitelező lejárat előtt, díj ellenében megvásárolja a hitelfelvevő harmadik személyekkel szembeni követeléseit.",
+          "A hitelező pénz kifizetése nélkül kezességet vállal ügyfele harmadik személyekkel szembeni kötelezettségeiért.",
+          "A hitelező díj ellenében használatra átengedi a gazdasági javakat a hitelfelvevőnek, anélkül hogy eladná azokat."
+        ],
+        "explanation": "Kezességi hitelnél a hitelező (többnyire egy hitelintézet) kezességet vállal ügyfele harmadik személyekkel szembeni kötelezettségeiért - csak tényleges igénybevétel esetén válik belőle pénzhitel. Példák az előleg-visszafizetési garancia és a szavatossági garancia.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Loopy csomagolóanyagot rendel egy beszállítótól, és az árut azonnal megkapja, de a számlát a megállapodott fizetési határidő szerint csak néhány hét múlva kell kifizetnie. Milyen finanszírozási formát használ ezzel tudtán kívül?",
+        "options": [
+          "Vevői hitel",
+          "Folyószámlahitel",
+          "Kezességi hitel",
+          "Szállítói hitel"
+        ],
+        "explanation": "Szállítói hitelnél a vevő már leszállított árut, illetve elvégzett szolgáltatást kap, de csak később, a biztosított fizetési határidőn belül fizet. Az eladó gyakran skontót ad a gyorsabb fizetés ösztönzésére.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Egy beszállító a következő fizetési feltételeket kínálja: „8 nap 3% skontó, 30 nap nettó.” Ha a skontót nem veszik igénybe, a számítás szerint (éves kamatláb = skontó %-ban ÷ (fizetési határidő − skontóhatáridő napokban) × 360) az éves kamatláb körülbelül:",
+        "options": [
+          "évi 49,09%",
+          "évi 3,00%",
+          "évi 36,00%",
+          "évi 24,55%"
+        ],
+        "explanation": "Éves kamatláb = 3 ÷ (30 − 8) × 360 = 3 ÷ 22 × 360 ≈ évi 49,09%. A skontóról való lemondás tehát számszerűen nagyon drága - többnyire drágább, mint egy bankhitel a skontós fizetés előfinanszírozására.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Mit értünk faktoring alatt?",
+        "options": [
+          "A vállalat hosszú lejáratú hitelt vesz fel a saját bankjánál, és biztosítékként a bankra engedményezi vevőköveteléseit.",
+          "A vállalat lejárat előtt eladja vevőköveteléseit egy faktorbanknak, és így hamarabb jut a pénzhez, díjak levonásával.",
+          "A vállalat folyamatos díj ellenében ingó gazdasági javakat ad bérbe más vállalatoknak.",
+          "A vállalat hosszabb fizetési határidőt ad vevőinek, és így maga finanszírozza vásárlásaikat."
+        ],
+        "explanation": "Faktoringnál egy vállalat lejárat előtt eladja vevőkkel szembeni követeléseit egy faktorbanknak, és így hamarabb jut hozzá a nyitott követeléshez - a faktorbank díjainak levonásával. Megkülönböztetünk nyílt faktoringot (a vevőt tájékoztatják) és csendes faktoringot (a vevő nem tud róla).",
+        "correctIndex": 1
+      },
+      {
+        "question": "Mi a fő különbség az operatív és a pénzügyi lízing között?",
+        "options": [
+          "Operatív lízingnél mindig a lízingbevevő viseli az összes karbantartási és kockázati költséget, mint egy tulajdonos.",
+          "A pénzügyi lízing az operatív lízinggel ellentétben bármikor rövid határidővel és kötbér nélkül felmondható.",
+          "Főleg a lízingbevevő jogaiban és kötelezettségeiben különböznek, pl. a karbantartás és a kockázatviselés terén.",
+          "Az operatív lízing bérleti szerződésnek, a pénzügyi lízing viszont a tankönyv szerint klasszikus hitelnek számít."
+        ],
+        "explanation": "A lízing nem hitel, hanem gazdasági javak díj ellenében történő használatba adásáról szóló szerződés. Az operatív és a pénzügyi lízing főleg a lízingbevevő jogaiban és kötelezettségeiben különbözik, például a karbantartás, a felmondhatóság és a kockázatviselés tekintetében.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Mi jellemzi a mezzanine tőkét?",
+        "options": [
+          "Rövid lejáratú folyószámla-finanszírozás, amelyet fizetésképtelenségkor minden más idegen tőke előtt elégítenek ki",
+          "Üzleti angyalok tiszta saját tőkéje teljes beleszólási joggal, amelyet fizetésképtelenségkor legutoljára elégítenek ki",
+          "Biztosított, különösen alacsony, fix kamatozású hitel, amelyet mindig elsőbbséggel fizetnek vissza",
+          "A saját és idegen finanszírozás keveréke nyereségfüggő kamatozással, fizetésképtelenségkor alárendelt"
+        ],
+        "explanation": "A mezzanine tőke a saját és az idegen finanszírozás keveréke: általában kevesebb biztosítékot igényel, hosszú távra bocsátják rendelkezésre, kamatozása nyereségfüggő, és fizetési nehézségek (fizetésképtelenség) esetén csak az idegen tőke kielégítése után jogosult (alárendelt tőke) - pl. alárendelt kölcsön, csendestársi részesedés vagy alárendelt kötvény formájában.",
+        "correctIndex": 3
+      }
+    ],
+    "finanzplan-analyse": [
+      {
+        "question": "A tankönyv szerint ahhoz, hogy egy vállalat hosszú távon likvid maradjon, hosszú távon igaznak kell lennie, hogy...",
+        "options": [
+          "a kifizetések összege hosszú távon is nagyobb a befizetések összegénél",
+          "a befizetések összege nagyobb vagy egyenlő a kifizetések összegével",
+          "a saját tőke minden évben nagyobb az idegen tőkénél",
+          "a cash flow állandóan nulla"
+        ],
+        "explanation": "Egy vállalat csak akkor marad likvid, ha hosszú távon igaz: a befizetések összege nagyobb vagy egyenlő a kifizetések összegével. Ellenkező esetben hiány keletkezik, amelyet ki kell egyenlíteni.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Hogyan határozza meg a cash flow-t „A pénzügyi terv és a pénzügyi elemzés” fejezet?",
+        "options": [
+          "az összes nyitott vevőkövetelés összegeként egy időszak végén",
+          "a vállalat eredménykimutatás szerinti nyereségeként",
+          "egy adott időszakban megtermelt pénzeszköz-többletként",
+          "a befektetett és a forgóeszközök különbségeként"
+        ],
+        "explanation": "A cash flow egy vállalat által egy adott időszakban megtermelt pénzeszköz-többlet, és fontos korai figyelmeztető eszköz.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik intézkedést ajánlja a tankönyv pénzeszköz-többlet esetén a pénzügyi tervben?",
+        "options": [
+          "A fizetési határidők meghosszabbítása a beszállítóknál",
+          "Egy további bankhitel felvétele",
+          "A beszállítói skontók fokozottabb igénybevétele",
+          "A nem szükséges vagyontárgyak eladása"
+        ],
+        "explanation": "Pénzeszköz-többlet esetén többek között fokozottabban igénybe lehet venni a beszállítói skontót. A meghosszabbított fizetési határidők, a további hitelek és a vagyoneladás ezzel szemben hiány esetén alkalmazott intézkedések.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Melyik kiegyenlítő intézkedést nevezi meg a tankönyv fenyegető pénzeszköz-hiány esetén?",
+        "options": [
+          "A magánkivétek növelése",
+          "Nyílt tartalékok képzése",
+          "A fölösleges eszközök rövid távú befektetése",
+          "Egy további bankhitel felvétele"
+        ],
+        "explanation": "Hiány esetén többek között bankhitelt lehet felvenni. A megnövelt magánkivétek, a tartalékképzés és a pénzbefektetés ezzel szemben többlet esetén jellemző intézkedések.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv szerint mekkora legyen egy vállalat ésszerű likviditási tartaléka?",
+        "options": [
+          "egy-két átlagos napi kifizetés",
+          "két-három átlagos havi kifizetés",
+          "hat-tizenkét átlagos havi kifizetés",
+          "pontosan a saját tőke összege"
+        ],
+        "explanation": "A tankönyv szerint két-három átlagos havi kifizetésnek megfelelő likviditási tartalék segít tompítani a tervezési hibák vagy előre nem látható események okozta válságokat.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Milyen célt szolgálnak a tankönyv szerint két-hat évet átfogó hosszú távú pénzügyi tervek?",
+        "options": [
+          "főként a rövid távú likviditás és a vállalat napi fizetőképességének a biztosítását",
+          "a hitelképesség biztosítását, valamint a tőkeszerkezet és a beruházások tervezését",
+          "a számlaegyenlegek és a nyitott vevőszámlák napi figyelését",
+          "a havi áfa-előleg bevallásának és a bérjárulékoknak a kiszámítását"
+        ],
+        "explanation": "A hosszú távú pénzügyi tervek (két-hat év) a hitelképesség biztosítását, a tőkeszerkezet tervezését és a nagyobb beruházási projektek összehangolását szolgálják, míg a rövid távú tervek főleg a likviditást biztosítják.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy pénzügyi tervet készít a Candy Store számára a negyedik negyedévre. A tankönyvi példában a rendelkezésre álló folyószámlahitel...",
+        "options": [
+          "80 000,00 EUR",
+          "14 000,00 EUR",
+          "40 000,00 EUR",
+          "4000,00 EUR"
+        ],
+        "explanation": "A „Pénzügyi terv” esettanulmányban a rendelkezésre álló folyószámlahitel 40 000,00 EUR; a rövid távú hiányok kiegyenlítésére használható.",
+        "correctIndex": 2
+      },
+      {
+        "question": "Ugyanebben az esettanulmányban az előírás szerint a pénzeszközök nyitóállománya a hónap elején nem eshet egy bizonyos összeg alá. Mekkora ez az összeg?",
+        "options": [
+          "83 000,00 EUR",
+          "5000,00 EUR",
+          "55 000,00 EUR",
+          "14 000,00 EUR"
+        ],
+        "explanation": "A pénzeszközök nyitóállománya minden hónap elején nem eshet 14 000,00 EUR alá, hogy a likviditás biztosított maradjon.",
+        "correctIndex": 3
+      },
+      {
+        "question": "A tankönyv mely négy csoportba sorolja a pénzügyi elemzéshez kiválasztott mutatószámokat?",
+        "options": [
+          "Árbevételmutatók, költségmutatók, nyereségmutatók és veszteségmutatók",
+          "Vagyonszerkezet, tőkeszerkezet, eredménygazdálkodási mutatók, a vagyon és a tőke kapcsolata",
+          "Likviditási mutatók, jövedelmezőségi mutatók, növekedési és piaci mutatók",
+          "Létszámszerkezet, költségszerkezet, pénzügyi mutatók, valamint az árbevétel és a költségek kapcsolata"
+        ],
+        "explanation": "A tankönyv megkülönbözteti a vagyonszerkezet és a tőkeszerkezet mutatóit, az eredménygazdálkodási mutatókat, valamint a vagyon és a tőke kapcsolatának mutatóit.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik állítás helyes a befektetetteszköz-arányról?",
+        "options": [
+          "Befektetetteszköz-arány = forgóeszközök / összes eszköz × 100",
+          "A kereskedelmi vállalatok jellemzően forgóeszköz-igényesnek számítanak",
+          "A magas befektetetteszköz-arány mindig növeli a vállalat rugalmasságát",
+          "A befektetetteszköz-arányt ágazattól függetlenül mindig ugyanúgy ítélik meg"
+        ],
+        "explanation": "A kereskedelmi vállalatok, a textilágazat, a vendéglátás vagy a magas követelésarányú hitelintézetek forgóeszköz-igényesek, míg pl. az ipari vagy energiavállalatok befektetetteszköz-igényesek. A képlet: befektetett eszközök / összes eszköz × 100.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint milyen saját tőke aránytól számít egy vállalat nagyon jól tőkésítettnek?",
+        "options": [
+          "5%-tól",
+          "10%-tól",
+          "20%-tól",
+          "30%-tól"
+        ],
+        "explanation": "A saját tőke aránynak legalább 20%-nak kell lennie, 30%-tól nagyon jónak számít. A 10% alatti arány kritikus, a negatív arány az inszolvencia veszélyét jelenti.",
+        "correctIndex": 3
+      },
+      {
+        "question": "Hogyan számítják ki az eladósodottsági együtthatót, és milyen ökölszabályt említ a tankönyv?",
+        "options": [
+          "Idegen tőke / saját tőke; az 1 : 2 arány ma már nagyon jónak számít",
+          "Saját tőke / idegen tőke; a 2 : 1 arány ma már kritikusnak számít",
+          "Idegen tőke / összes forrás; a 100% feletti érték nagyon jónak számít",
+          "Saját tőke / összes forrás; a 20% alatti érték nagyon jónak számít"
+        ],
+        "explanation": "Eladósodottsági együttható = idegen tőke / saját tőke. Korábban az 1:1 volt a cél, ma már az 1:2 is nagyon jónak, az 1:3 jónak számít.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Milyen fiktív adósságtörlesztési időt minősít a tankönyv „nagyon jónak”?",
+        "options": [
+          "3 év alatt",
+          "7 év alatt",
+          "15 év alatt",
+          "15 év felett"
+        ],
+        "explanation": "A 3 év alatti fiktív adósságtörlesztési idő nagyon jó, az 5 év alatti jó. A gyorsteszt-táblázat szerint 15 évtől nő az inszolvencia veszélye.",
+        "correctIndex": 0
+      },
+      {
+        "question": "Mit mond az „arany finanszírozási szabály” a befektetett eszközök fedezettségéről?",
+        "options": [
+          "A befektetett eszközök fedezettségének legalább 100%-nak kell lennie",
+          "A saját tőkének mindig nagyobbnak kell lennie az idegen tőkénél",
+          "Az elsőfokú likviditásnak mindig 100%-nak kell lennie",
+          "A rövid lejáratú kötelezettségek soha nem haladhatják meg a forgóeszközök 50%-át"
+        ],
+        "explanation": "A befektetett eszközök fedezettsége = (saját tőke + hosszú lejáratú idegen tőke) / befektetett eszközök × 100 legalább 100% legyen – ez felel meg az arany finanszírozási szabálynak.",
+        "correctIndex": 0
+      },
+      {
+        "question": "A tankönyv szerint milyen sávban legyen ideális esetben az elsőfokú likviditás (készpénzlikviditás)?",
+        "options": [
+          "0% és 10% között",
+          "20% és 50% között",
+          "100% és 120% között",
+          "150% és 200% között"
+        ],
+        "explanation": "Elsőfokú likviditás = pénzeszközök / rövid lejáratú kötelezettségek × 100. A 20% és 50% közötti értékekre kell törekedni; 100%-nál az összes rövid lejáratú adósságot azonnal fedeznék a likvid eszközök.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Milyen célértéket ad meg a tankönyv a harmadfokú likviditásra?",
+        "options": [
+          "50%–100%",
+          "100%–120%",
+          "150%–200%",
+          "pontosan 300%"
+        ],
+        "explanation": "A tankönyv szerint a harmadfokú likviditás (pénzeszközök + rövid lejáratú követelések + készletek, osztva a rövid lejáratú kötelezettségekkel) 150% és 200% között legyen.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint hogyan számítják ki a nettó forgótőkét (working capital)?",
+        "options": [
+          "Saját tőke mínusz rövid lejáratú kötelezettségek",
+          "Forgóeszközök (aktív időbeli elhatárolások nélkül) mínusz rövid lejáratú kötelezettségek",
+          "Befektetett eszközök mínusz hosszú lejáratú idegen tőke",
+          "Forgóeszközök (aktív időbeli elhatárolásokkal együtt) mínusz hosszú lejáratú kötelezettségek"
+        ],
+        "explanation": "Nettó forgótőke = forgóeszközök (aktív időbeli elhatárolások nélkül) − rövid lejáratú kötelezettségek. A pozitív érték azt mutatja, hogy a forgóeszközök egy részét hosszú távon finanszírozzák.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy a Candy Store-hoz átveszi a tankönyvi példa mérlegadatait (saját tőke 558 000,00 EUR, összes forrás 1 166 000,00 EUR). Mekkora a saját tőke arány?",
+        "options": [
+          "kb. 87,39%",
+          "kb. 52,14%",
+          "kb. 47,86%",
+          "kb. 103,43%"
+        ],
+        "explanation": "Saját tőke arány = saját tőke / összes forrás × 100 = 558 000,00 / 1 166 000,00 × 100 ≈ 47,86%. Az 52,14% az idegen tőke aránynak, a 87,39% a befektetetteszköz-aránynak, a 103,43% pedig a befektetett eszközök fedezettségének felel meg ugyanebben a példában.",
+        "correctIndex": 2
+      }
+    ],
+    "businessplan-3jg": [
+      {
+        "question": "A tankönyv szerint milyen helyet foglal el a pénzügyi tervezés az üzleti terven belül?",
+        "options": [
+          "Csak egy választható, a tőkeadók számára kevéssé fontos melléklet",
+          "A vezetői összefoglaló mellett az üzleti terv legfontosabb része",
+          "Teljesen helyettesíti a vezetői összefoglalót, ezért mindig az elején áll",
+          "A bankok számára kevésbé fontos, mint a marketingtervezés"
+        ],
+        "explanation": "A tankönyv szerint a vezetői összefoglaló mellett a pénzügyi tervezés az üzleti terv legfontosabb része, mert a lehetséges tőkeadók ezt a területet különösen alaposan megvizsgálják.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint a tőkeadók többek között mire figyelnek különösen a pénzügyi tervezésnél?",
+        "options": [
+          "kizárólag a tervezett üzlethelyiség berendezésére és fekvésére",
+          "a tőkeszükségletre, arra, hogy mire kell, és honnan származik a tőke",
+          "a vállalat közösségi médiás követőinek számára",
+          "minél magasabb árbevétel-előrejelzésre, függetlenül attól, mennyire reális"
+        ],
+        "explanation": "A tőkeadók, például bankok vagy üzleti angyalok, többek között a tőkeszükségletet, a reális árbevétel-előrejelzéseket, a hozamelvárásokat és a fedezeti pont elemzést vizsgálják.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint mit állapítanak meg a fedezeti pont elemzéssel (break-even)?",
+        "options": [
+          "az évente fizetendő áfa és jövedelemadó összegét",
+          "milyen kibocsátási mennyiségnél fedezik a bevételek az összes költséget",
+          "hány munkavállaló szükséges a tervezett mennyiséghez",
+          "milyen eladási ár mellett éri el a vállalat a lehető legnagyobb nyereséget"
+        ],
+        "explanation": "A fedezeti pont elemzéssel megállapítják, milyen kibocsátási mennyiségnél, illetve árbevételnél fedezik a bevételek a költségeket, így a vállalat nyereségesen működik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint melyik négy résztervet tartalmazza általában az üzleti terv pénzügyi terve?",
+        "options": [
+          "Marketingtervezés, telephelytervezés, létszám- és képzéstervezés, adótervezés",
+          "Árbevétel, dologi és személyi ráfordítások, beruházás és finanszírozás, eredmény és likviditás",
+          "SWOT-elemzés, célcsoport-elemzés, versenytárs-elemzés, telephelyelemzés",
+          "Mérlegtervezés, eredménykimutatás-tervezés, adó- és járuléktervezés, kiszállási és utódlási tervezés"
+        ],
+        "explanation": "A pénzügyi terv általában árbevétel-tervezésből, a dologi és személyi ráfordítások tervezéséből, beruházás- és finanszírozástervezésből, valamint eredmény- és likviditástervezésből áll.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint általában milyen időszakra készítik az üzleti terv pénzügyi tervét?",
+        "options": [
+          "egy hónapra",
+          "három-öt évre",
+          "tíz-húsz évre",
+          "csak a folyó negyedévre"
+        ],
+        "explanation": "A tankönyv szerint az üzleti terv pénzügyi tervét általában három-öt éves tervezési időtávra készítik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint hogyan számítják ki a tervezett árbevételt?",
+        "options": [
+          "Fix költségek osztva a fedezeti hozzájárulással",
+          "Nettó eladási ár szorozva a tervezett eladási mennyiséggel",
+          "Áruköltség szorozva a tervezett nyitvatartási napok számával",
+          "Saját tőke szorozva a forgási sebességgel"
+        ],
+        "explanation": "Tervezett árbevétel = nettó eladási ár × tervezett eladási mennyiség. A tervezett árbevételt reálisan kell megállapítani, mert sok további résztervbe beépül.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy a Candy Store első üzleti évére nyitvatartási naponként 110 vásárlóval, évi 300 nyitvatartási nappal és vásárlónként átlagosan 4,50 EUR költéssel tervez – a tankönyvi példához hasonlóan. Mekkora a tervezett árbevétel?",
+        "options": [
+          "110 000,00 EUR",
+          "148 500,00 EUR",
+          "156 978,00 EUR",
+          "135 000,00 EUR"
+        ],
+        "explanation": "Tervezett árbevétel = 110 vásárló × 300 nyitvatartási nap × 4,50 EUR = 148 500,00 EUR (1. üzleti év). A 156 978,00 EUR a 2. üzleti év értéke a vásárlószám-növekedés és az áremelés után.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyvi példa milyen éves növekedési rátákkal számol a vásárlószám, illetve az árak esetében az első három üzleti évben?",
+        "options": [
+          "10% vásárlónövekedés és 5% infláció",
+          "4% vásárlónövekedés és 2% infláció",
+          "2% vásárlónövekedés és 4% infláció",
+          "0% vásárlónövekedés és 3% infláció"
+        ],
+        "explanation": "Az esettanulmányban óvatosan évi 4%-os vásárlónövekedéssel becsülnek, az eladási áraknál pedig 2%-os inflációval számolnak.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint hogyan kezelik a könyvelésben a kapott, vissza nem fizetendő támogatásokat (pl. 8000,00 EUR beruházásokra)?",
+        "options": [
+          "a beérkezés évében azonnal, teljes összegben bevételként könyvelik",
+          "a hasznos élettartamra elosztva egyéb bevételként számolják el",
+          "közvetlenül levonják a saját tőkéből, elosztás nélkül",
+          "soha nem jelennek meg az eredménykimutatásban"
+        ],
+        "explanation": "A könyvelésben a támogatásokat a hasznos élettartamra elosztják, és évente arányosan (a példában 8000,00 EUR / 5 év = 1600,00 EUR) „egyéb bevételként” számolják el.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint hitelnyújtáskor a bankok általában legalább milyen saját tőke arányt követelnek?",
+        "options": [
+          "5%",
+          "10%",
+          "20%",
+          "50%"
+        ],
+        "explanation": "A tankönyv szerint a saját tőke fontos az idegen tőke megszerzéséhez. Hitelnyújtáskor a bankok többnyire legalább 20%-os saját tőke arányt követelnek.",
+        "correctIndex": 2
+      },
+      {
+        "question": "A tankönyv szerint hogyan számítják ki a folyószámlahitel kamatait?",
+        "options": [
+          "kizárólag az adott hónapban ténylegesen igénybe vett hitelösszegre",
+          "a teljes hitelkeretre, akkor is, ha nem használják ki teljesen",
+          "kizárólag a vállalat előző évi nyeresége alapján",
+          "folyószámlahitelnél általában nem kell kamatot fizetni"
+        ],
+        "explanation": "A tankönyv szerint a folyószámlahitel kamatköltségét a teljes hitelkeretre számítják, még akkor is, ha a hitelt nem használják ki teljesen.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint miben különbözik alapvetően az eredménytervezés és a likviditástervezés?",
+        "options": [
+          "Tartalmilag azonosak, csak a tervezési időszakban különböznek",
+          "Az eredménytervezés a bevételeket és ráfordításokat, a likviditástervezés a pénzmozgásokat mutatja",
+          "Az eredménytervezés a pénzmozgásokat, a likviditástervezés a bevételeket és ráfordításokat mutatja",
+          "Az eredménytervezést csak egyszer, az alapításkor készítik el"
+        ],
+        "explanation": "Az eredménytervezés (terv-eredménykimutatás) a bevételeket és a ráfordításokat állítja szembe, míg a likviditástervezés azt mutatja, van-e elegendő pénzeszköz a folyó kötelezettségekhez – a könyvviteli nyereség nem jelent automatikusan pénzeszközt.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Milyen példát hoz a tankönyv arra, hogy kifizetés történik anélkül, hogy könyvviteli ráfordítás keletkezne?",
+        "options": [
+          "egy gép vagy egy épület éves értékcsökkenési leírása",
+          "egy hitel visszafizetése, illetve egy magánkivét",
+          "áru eladása halasztott fizetéssel",
+          "egyéb bevételek könyvelése"
+        ],
+        "explanation": "A tankönyv szerint egy hitel visszafizetésekor, valamint magánkivétkor kifizetés történik, de könyvviteli ráfordítás nem keletkezik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Hogyan határozza meg a tankönyv a minimális árbevételt (fedezeti pontot)?",
+        "options": [
+          "azt az árbevételt, amelynél a lehető legnagyobb nyereséget érik el",
+          "azt a pontot, ahol nem keletkezik se nyereség, se veszteség",
+          "az első teljes eladási hónap árbevételét",
+          "az ágazat átlagos éves árbevételét"
+        ],
+        "explanation": "A minimális árbevétel (fedezeti pont/nyereségküszöb) azt a pontot jelöli, ahol a bevételek teljesen fedezik a költségeket, és nem keletkezik se nyereség, se veszteség.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint hogyan számítják ki a fedezeti hányadot (DBU-Quote)?",
+        "options": [
+          "Fix költségek / árbevétel × 100",
+          "Fedezeti hozzájárulás / árbevétel × 100",
+          "Árbevétel / fix költségek × 100",
+          "Változó költségek / fedezeti hozzájárulás × 100"
+        ],
+        "explanation": "Fedezeti hányad = fedezeti hozzájárulás / árbevétel × 100. A fedezeti árbevétel ezután a fix költségek / fedezeti hányad képletből adódik.",
+        "correctIndex": 1
+      },
+      {
+        "question": "Loopy a Candy Store-ra (a tankönyv kávézós példájához hasonlóan) 86 900,00 EUR fix költség és 64,98%-os fedezeti hányad mellett kiszámítja a fedezeti árbevételt. Milyen összeg adódik?",
+        "options": [
+          "86 900,00 EUR",
+          "kb. 133 733,46 EUR",
+          "kb. 148 500,00 EUR",
+          "kb. 96 500,00 EUR"
+        ],
+        "explanation": "Fedezeti árbevétel = fix költségek / fedezeti hányad = 86 900,00 / 0,6498 ≈ 133 733,46 EUR. Csak ettől az árbevételtől fedezettek a magánkivétek és a jövedelemadó is.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A tankönyv szerint egyéni vállalkozásoknál mi tartozik a fedezetipont-számításba beszámított fix költségek közé?",
+        "options": [
+          "egy fiktív vállalkozói bér, amely a magánkivéteket és a jövedelemadót nem tartalmazza",
+          "egy fiktív vállalkozói bér, amely a magánkivéteket és a jövedelemadót tartalmazza",
+          "csak az értékcsökkenés",
+          "a következő három üzleti évben várható nyereségnövekedés"
+        ],
+        "explanation": "Egyéni vállalkozásoknál és személyegyesítő társaságoknál gyakran fiktív vállalkozói bért számolnak, amely a tulajdonosok megélhetési költségeit (magánkivétek) és jövedelemadóját foglalja magában.",
+        "correctIndex": 1
+      },
+      {
+        "question": "A Bäckerei Laurent-Gerhard GmbH példájában 20 000,00 EUR értékű sütőket és konyhai berendezéseket 10 éves hasznos élettartam alatt írnak le. Mekkora az éves értékcsökkenés?",
+        "options": [
+          "20 000,00 EUR",
+          "4000,00 EUR",
+          "2000,00 EUR",
+          "1000,00 EUR"
+        ],
+        "explanation": "Éves értékcsökkenés = beszerzési érték / hasznos élettartam = 20 000,00 EUR / 10 év = 2000,00 EUR.",
+        "correctIndex": 2
+      }
+    ]
+  }
+}

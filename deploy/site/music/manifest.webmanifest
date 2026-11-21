@@ -1,0 +1,16 @@
+{
+  "name": "Tape",
+  "short_name": "Tape",
+  "description": "Your own music player that works offline.",
+  "id": "/music/",
+  "start_url": "/music/",
+  "scope": "/music/",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#F2F2F7",
+  "icons": [
+    { "src": "/music/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/music/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/music/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

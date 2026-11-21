@@ -1,0 +1,254 @@
+{
+ "id": "u31",
+ "n": 31,
+ "phase": 4,
+ "level": "C1",
+ "title": "Konnektoren C1",
+ "tips": {
+  "de": "Für C1 brauchst du präzisere Konnektoren (alle mit Verb am Ende): indem (= wie? durch …), sodass / so …, dass (Folge), zumal (zusätzlicher Grund), wohingegen / während (Gegensatz), ohne dass / ohne … zu (fehlende Folge), anstatt dass / anstatt … zu (Alternative), sofern / vorausgesetzt, dass (Bedingung), je nachdem, ob/wie (Abhängigkeit), insofern als (Einschränkung), seitdem, solange, bis. Adverbien auf Position 1 (Verb folgt): folglich, demnach, somit, dennoch, hingegen, zudem, ferner.",
+  "en": "C1 connectors are more precise: indem (by …ing), sodass (so that, result), zumal (especially since), wohingegen (whereas), ohne dass (without), anstatt dass (instead of), sofern (provided that). Adverbs like folglich, dennoch, zudem take position 1, so the verb follows.",
+  "contrast": "English 'by doing' = German 'indem man … tut' (a full clause). English 'without anybody noticing' = 'ohne dass es jemand bemerkt'. English 'whereas' = 'wohingegen' (subordinate, verb last), but 'hingegen' (adverb, verb second).",
+  "examples": [
+   "Man kann Müll vermeiden, indem man Mehrwegflaschen verwendet.",
+   "Die Städte wachsen, wohingegen viele Dörfer schrumpfen.",
+   "Ich bleibe zu Hause, zumal ich ohnehin müde bin.",
+   "Er hat das Handy benutzt, ohne dass es jemand bemerkt hat.",
+   "Die Mieten steigen. Folglich ziehen viele aufs Land."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u31l1",
+   "title": "indem, sodass, zumal, wohingegen",
+   "s": "konnektor.c1",
+   "gen": {
+    "konnC1": 4
+   },
+   "items": [
+    {
+     "t": "tf",
+     "q": "Verbinde mit „indem“:\nMan kann Energie sparen. Man fährt mit dem Rad.",
+     "a": "Man kann Energie sparen, indem man mit dem Rad fährt."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „sodass“:\nEs kamen zu viele Touristen. Die Straßen wurden gesperrt.",
+     "a": "Es kamen zu viele Touristen, sodass die Straßen gesperrt wurden.",
+     "acc": [
+      "Es kamen zu viele Touristen, so dass die Straßen gesperrt wurden."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „wohingegen“:\nDie Städte wachsen. Viele Dörfer schrumpfen.",
+     "a": "Die Städte wachsen, wohingegen viele Dörfer schrumpfen."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „zumal“:\nDas Handyverbot ist sinnvoll. Die Noten sind schlechter geworden.",
+     "a": "Das Handyverbot ist sinnvoll, zumal die Noten schlechter geworden sind."
+    },
+    {
+     "t": "mc",
+     "q": "„Wie kann man Fehler vermeiden?“ – Man kann Fehler vermeiden, ___ man die Endkontrolle macht.",
+     "o": [
+      "indem",
+      "sodass",
+      "wohingegen"
+     ],
+     "a": "indem"
+    },
+    {
+     "t": "fix",
+     "w": "Man spart Geld, indem man fährt mit dem Rad.",
+     "a": "Man spart Geld, indem man mit dem Rad fährt."
+    },
+    {
+     "t": "fix",
+     "w": "Die Städte wachsen, hingegen viele Dörfer schrumpfen.",
+     "a": "Die Städte wachsen, wohingegen viele Dörfer schrumpfen.",
+     "r": "hingegen ist ein Adverb (Verb folgt): Viele Dörfer hingegen schrumpfen. Für einen Nebensatz: wohingegen."
+    },
+    {
+     "t": "tr",
+     "en": "You can save energy by taking the train.",
+     "a": "Man kann Energie sparen, indem man mit dem Zug fährt.",
+     "acc": [
+      "Man kann Energie sparen, indem man den Zug nimmt."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Man kann Müll vermeiden, indem man Mehrwegflaschen verwendet."
+    }
+   ]
+  },
+  {
+   "id": "u31l2",
+   "title": "ohne dass, anstatt dass, sofern, je nachdem",
+   "s": "konnektor.c1",
+   "gen": {
+    "konnC1": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Er hat das Handy benutzt, ___ es jemand bemerkt hat.",
+     "o": [
+      "ohne dass",
+      "ohne zu",
+      "anstatt"
+     ],
+     "a": "ohne dass",
+     "y": [
+      "anderes Subjekt im Nebensatz → ohne dass",
+      "gleiches Subjekt → ohne … zu",
+      "anstatt = Alternative"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Er ging, ___ sich zu verabschieden.",
+     "o": [
+      "ohne",
+      "ohne dass",
+      "sofern"
+     ],
+     "a": "ohne",
+     "r": "gleiches Subjekt → ohne … zu."
+    },
+    {
+     "t": "mc",
+     "q": "___ die Regierung handelt, wird nur diskutiert.",
+     "o": [
+      "Anstatt dass",
+      "Anstatt zu",
+      "Sofern"
+     ],
+     "a": "Anstatt dass"
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „ohne dass“:\nDie Mieten sind gestiegen. Die Löhne sind nicht gestiegen.",
+     "a": "Die Mieten sind gestiegen, ohne dass die Löhne gestiegen sind."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „anstatt … zu“:\nViele fahren mit dem Auto. Sie könnten den Bus nehmen.",
+     "a": "Viele fahren mit dem Auto, anstatt den Bus zu nehmen.",
+     "acc": [
+      "Anstatt den Bus zu nehmen, fahren viele mit dem Auto."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „sofern“:\nWir fahren mit dem Zug. Er ist pünktlich.",
+     "a": "Wir fahren mit dem Zug, sofern er pünktlich ist."
+    },
+    {
+     "t": "fix",
+     "w": "Er ging, ohne dass er sich zu verabschieden.",
+     "a": "Er ging, ohne sich zu verabschieden."
+    },
+    {
+     "t": "tr",
+     "en": "He left without saying goodbye.",
+     "a": "Er ging, ohne sich zu verabschieden.",
+     "acc": [
+      "Er ist gegangen, ohne sich zu verabschieden."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Depending on the weather, we will go hiking.",
+     "a": "Je nachdem, wie das Wetter ist, gehen wir wandern.",
+     "acc": [
+      "Je nach Wetter gehen wir wandern."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Er hat das Handy benutzt, ohne dass es jemand bemerkt hat."
+    }
+   ]
+  },
+  {
+   "id": "u31l3",
+   "title": "folglich, dennoch, zudem, hingegen",
+   "s": "konnektor.adverb",
+   "gen": {
+    "adverbConnector": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Mieten steigen. Folglich ___.",
+     "o": [
+      "ziehen viele aufs Land",
+      "viele ziehen aufs Land",
+      "viele aufs Land ziehen"
+     ],
+     "a": "ziehen viele aufs Land"
+    },
+    {
+     "t": "mc",
+     "q": "Das Fliegen schadet dem Klima. ___ fliegen immer mehr Menschen.",
+     "o": [
+      "Dennoch",
+      "Folglich",
+      "Zudem"
+     ],
+     "a": "Dennoch"
+    },
+    {
+     "t": "mc",
+     "q": "Das Klimaticket ist günstig. ___ gilt es in ganz Österreich.",
+     "o": [
+      "Zudem",
+      "Dennoch",
+      "Hingegen"
+     ],
+     "a": "Zudem"
+    },
+    {
+     "t": "mc",
+     "q": "Die Städte wachsen. Viele Dörfer ___ schrumpfen.",
+     "o": [
+      "hingegen",
+      "wohingegen",
+      "folglich"
+     ],
+     "a": "hingegen",
+     "r": "hingegen kann auch nach dem Subjekt stehen: Viele Dörfer hingegen schrumpfen."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „somit“:\nAlle Argumente sind genannt. Ich komme zum Schluss.",
+     "a": "Alle Argumente sind genannt. Somit komme ich zum Schluss."
+    },
+    {
+     "t": "fix",
+     "w": "Die Mieten steigen. Folglich viele ziehen aufs Land.",
+     "a": "Die Mieten steigen. Folglich ziehen viele aufs Land."
+    },
+    {
+     "t": "fix",
+     "w": "Zudem, das Ticket ist günstig.",
+     "a": "Zudem ist das Ticket günstig."
+    },
+    {
+     "t": "tr",
+     "en": "Nevertheless, more and more people fly.",
+     "a": "Dennoch fliegen immer mehr Menschen.",
+     "acc": [
+      "Trotzdem fliegen immer mehr Menschen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Das Fliegen schadet dem Klima. Dennoch fliegen immer mehr Menschen."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+node_modules
+dist
+.tools
+BOOKS/
+.DS_Store
+.env*
+.wrangler/
+.dev.vars
+
+
+# Personal Claude Code settings
+.claude/settings.local.json
+
+# Private: CV (copy it here by hand on each computer before deploying)
+worker/private/
+# Personal docs and notes stay in the private repo
+docs/
+reports/
+research_notes/

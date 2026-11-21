@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; -webkit-tap-highlight-color: transparent; }
+html, body { background: #f4f6f5; color: #1c2430; }
+@media (prefers-color-scheme: dark) { html, body { background: #0e1311; color: #e7ece9; } }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif; overscroll-behavior-y: none; }
+button { touch-action: manipulation; }
+.safe-b { padding-bottom: calc(env(safe-area-inset-bottom) + 0.75rem); }
+.safe-t { padding-top: calc(env(safe-area-inset-top) + 0.5rem); }
+@media (hover: hover) {
+  a.card, button.card { transition: transform .15s ease, box-shadow .15s ease; }
+  a.card:hover, button.card:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(16, 60, 40, .08); }
+}
+kbd { font: 600 11px/1 ui-monospace, monospace; padding: 2px 5px; border-radius: 5px; border: 1px solid rgba(0,0,0,.15); border-bottom-width: 2px; }
+
+@layer components {
+  .card { @apply rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 dark:bg-[#18201c] dark:ring-white/10; }
+  .btn { @apply inline-flex min-h-[48px] items-center justify-center rounded-2xl px-5 font-semibold transition active:scale-[.98] disabled:opacity-40; }
+  
+  .btn-primary { @apply btn bg-brand text-white hover:brightness-105 shadow-[0_4px_0_#0f7353] active:translate-y-[2px] active:shadow-[0_2px_0_#0f7353]; }
+  .btn-ghost { @apply btn bg-black/5 text-ink dark:bg-white/10 dark:text-[#e7ece9]; }
+  .btn-gold { @apply btn bg-gold text-white shadow-[0_4px_0_#b07b0e]; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full bg-black/5 px-3 py-1 text-sm font-medium dark:bg-white/10; }
+  .muted { @apply text-ink-soft dark:text-[#9aa7a0]; }
+  .input { @apply w-full rounded-xl border border-black/10 bg-white px-3 py-3 text-lg outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 dark:border-white/15 dark:bg-[#111816]; }
+  .h1 { @apply text-2xl font-bold tracking-tight; }
+  .h2 { @apply text-lg font-bold; }
+  .en { @apply mt-1 text-sm italic text-ink-soft dark:text-[#9aa7a0]; }
+}

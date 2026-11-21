@@ -1,0 +1,55 @@
+/* Yap: the feed's Catch up card and the Catch up player, in the app's light look (yap-app/src/index.css):
+   iOS grey, white cards, Yap red #E0244B. All in cqw. */
+.sc-yap { --y-acc: #E0244B; --y-sec: #6C6C70; --y-ter: #A1A1A6; background: #F2F2F7; color: #000; cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+.sc-yap .y-all { position: absolute; inset: 0; overflow: hidden; }
+.sc-yap .y-all * { hyphens: manual; -webkit-hyphens: manual; }
+.sc-yap .y-all > * { position: absolute; will-change: transform, opacity; }
+.sc-yap svg { display: block; width: 100%; height: 100%; }
+.sc-yap p { margin: 0; }
+
+.sc-yap .y-feed { inset: 0; }
+.sc-yap .y-feed > * { position: absolute; }
+.sc-yap .y-logo { left: 6cqw; top: 4.4cqw; font-size: 6cqw; font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
+.sc-yap .y-logo b { color: var(--y-acc); }
+.sc-yap .y-cu { left: 5cqw; right: 5cqw; top: 14cqw; height: 17cqw; display: flex; align-items: center; gap: 3.4cqw; padding: 0 3.6cqw; border-radius: 4.4cqw; background: #fff; }
+.sc-yap .y-pbtn { position: relative; flex: none; width: 11cqw; height: 11cqw; padding: 3.2cqw 2.8cqw 3.2cqw 3.6cqw; border-radius: 50%; background: var(--y-acc); color: #fff; box-sizing: border-box; will-change: transform; }
+.sc-yap .y-tap { position: absolute; left: 50%; top: 50%; width: 11cqw; height: 11cqw; border-radius: 50%; background: rgba(224, 36, 75, 0.3); opacity: 0; }
+.sc-yap .y-cu b { display: block; font-size: 4.2cqw; font-weight: 700; }
+.sc-yap .y-cu small { display: block; margin-top: 0.4cqw; font-size: 2.8cqw; color: var(--y-sec); }
+.sc-yap .y-dq { left: 5cqw; right: 5cqw; top: 34cqw; padding: 3.4cqw 3.6cqw; border-radius: 4.4cqw; background: #fff; }
+.sc-yap .y-cap { display: block; font-size: 2.3cqw; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--y-acc); }
+.sc-yap .y-dq b { display: block; margin-top: 1cqw; font-size: 3.6cqw; line-height: 1.2; font-weight: 700; }
+
+.sc-yap .y-player { inset: 0; background: #F2F2F7; }
+.sc-yap .y-player > * { position: absolute; }
+.sc-yap .y-chev { left: 5cqw; top: 4cqw; width: 4cqw; height: 4cqw; }
+.sc-yap .y-top { left: 0; right: 0; top: 3cqw; text-align: center; }
+.sc-yap .y-top b { display: block; font-size: 3cqw; font-weight: 600; }
+.sc-yap .y-top small { position: relative; display: block; height: 3cqw; font-size: 2.3cqw; color: var(--y-sec); }
+.sc-yap .y-top small span { position: absolute; left: 0; right: 0; will-change: transform, opacity; }
+.sc-yap .y-speed { right: 5cqw; top: 4cqw; font-size: 2.8cqw; font-weight: 600; }
+.sc-yap .y-who { left: 6cqw; top: 13cqw; display: flex; align-items: center; gap: 3cqw; }
+.sc-yap .y-av { display: grid; place-items: center; width: 11cqw; height: 11cqw; border-radius: 50%; background: #E5E5EA; box-shadow: 0 0 0 0.6cqw #F2F2F7, 0 0 0 1cqw var(--y-acc); font-size: 6cqw; line-height: 1; }
+.sc-yap .y-who b { display: block; font-size: 3.6cqw; font-weight: 700; }
+.sc-yap .y-who small { display: block; font-size: 2.5cqw; color: var(--y-sec); }
+.sc-yap .y-cap-text { left: 6cqw; right: 6cqw; top: 28cqw; font-size: 4.6cqw; line-height: 1.22; font-weight: 700; color: var(--y-ter); letter-spacing: -0.02em; }
+.sc-yap .y-cap-text .said { color: #000; }
+.sc-yap .y-cap-text .now { color: var(--y-acc); }
+.sc-yap .y-bar { left: 6cqw; right: 6cqw; top: 45cqw; height: 0.9cqw; border-radius: 0.45cqw; background: #D1D1D6; overflow: hidden; }
+.sc-yap .y-bar i { display: block; height: 100%; width: 0; background: #000; border-radius: 0.45cqw; }
+.sc-yap .y-times { left: 6cqw; right: 6cqw; top: 47cqw; display: flex; justify-content: space-between; font-size: 2.2cqw; color: var(--y-sec); font-variant-numeric: tabular-nums; }
+.sc-yap .y-ctl { left: 0; right: 0; top: 51.5cqw; display: flex; align-items: center; justify-content: center; gap: 12cqw; }
+.sc-yap .y-prev, .sc-yap .y-next { display: block; width: 4.2cqw; height: 4.2cqw; }
+.sc-yap .y-next { transform: scaleX(-1); }
+.sc-yap .y-pp { position: relative; width: 10cqw; height: 10cqw; border-radius: 50%; background: #000; color: #fff; }
+.sc-yap .y-pp i { position: absolute; left: 2.8cqw; top: 2.8cqw; width: 4.4cqw; height: 4.4cqw; }
+.sc-yap .y-hold { left: 6cqw; right: 6cqw; top: 65cqw; height: 9cqw; border-radius: 4.5cqw; background: var(--y-acc); color: #fff; will-change: transform; transition: background 0.2s; }
+.sc-yap .y-hold.on { background: #C81E42; }
+.sc-yap .y-hold > span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 1.6cqw; font-size: 3cqw; font-weight: 600; white-space: nowrap; will-change: opacity; }
+.sc-yap .y-hold svg { width: 3.4cqw; height: 3.4cqw; flex: none; }
+.sc-yap .y-rec { width: 1.8cqw; height: 1.8cqw; border-radius: 50%; background: #fff; }
+.sc-yap .y-wave { display: flex; align-items: center; gap: 0.5cqw; height: 4cqw; }
+.sc-yap .y-wave i { width: 0.6cqw; height: 12%; border-radius: 0.3cqw; background: rgba(255, 255, 255, 0.85); }
+.sc-yap .y-hold.sent { background: #000; }
+.sc-yap .y-ok { width: 3.4cqw; height: 3.4cqw; }
+@media (prefers-reduced-motion: reduce) { .sc-yap { cursor: default; } }

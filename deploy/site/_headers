@@ -1,0 +1,18 @@
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/img/*
+  Cache-Control: public, max-age=604800
+/*/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/*/icon-*
+  Cache-Control: public, max-age=604800
+/inbox/*
+  X-Robots-Tag: noindex
+  Cache-Control: no-store
+/*/sw.js
+  Cache-Control: no-cache
+/goblin/*
+  X-Robots-Tag: noindex
+/files/clipgoblin.zip
+  X-Robots-Tag: noindex
+  Cache-Control: no-cache

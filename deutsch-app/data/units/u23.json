@@ -1,0 +1,266 @@
+{
+ "id": "u23",
+ "n": 23,
+ "phase": 2,
+ "level": "B2",
+ "title": "Zweiteilige Konnektoren",
+ "tips": {
+  "de": "Zweiteilige Konnektoren verbinden zwei Elemente elegant: sowohl … als auch (beides), nicht nur … sondern auch (beides, Betonung auf dem zweiten), weder … noch (keines von beiden), entweder … oder (eines von beiden), einerseits … andererseits (zwei Seiten), zwar … aber (Einschränkung), je … desto/umso (Verhältnis). Achtung: Vor „sondern auch“, „aber“ und „desto“ steht ein Beistrich. Bei „je“ steht das Verb am Ende, nach „desto + Komparativ“ folgt sofort das Verb. „Einerseits“ und „andererseits“ stehen meist auf Position 1 → Verb folgt.",
+  "en": "Two-part connectors: sowohl … als auch (both … and), nicht nur … sondern auch (not only … but also), weder … noch (neither … nor), entweder … oder (either … or), einerseits … andererseits (on the one hand … on the other), zwar … aber (admittedly … but), je … desto (the … the).",
+  "contrast": "English 'the more …, the better …' = 'je mehr …, desto besser …' – with the verb at the END of the je-part and right after 'desto + adjective'. 'Not only … but also' needs a comma before 'sondern'.",
+  "examples": [
+   "Das Thema betrifft sowohl einzelne Menschen als auch unsere Gesellschaft.",
+   "Der Tourismus bringt nicht nur Geld, sondern auch Probleme.",
+   "Einerseits schafft der Tourismus Arbeitsplätze, andererseits leidet die Natur.",
+   "Je mehr Touristen kommen, desto mehr Müll entsteht.",
+   "Wir haben weder Zeit noch Geld."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u23l1",
+   "title": "sowohl, nicht nur, weder, entweder",
+   "s": "konnektor.zweiteilig",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Das Thema betrifft sowohl einzelne Menschen ___ unsere Gesellschaft.",
+     "o": [
+      "als auch",
+      "und auch",
+      "sondern auch"
+     ],
+     "a": "als auch"
+    },
+    {
+     "t": "mc",
+     "q": "Der Tourismus bringt nicht nur Geld, ___ Probleme.",
+     "o": [
+      "sondern auch",
+      "aber auch",
+      "als auch"
+     ],
+     "a": "sondern auch"
+    },
+    {
+     "t": "mc",
+     "q": "Wir haben weder Zeit ___ Geld.",
+     "o": [
+      "noch",
+      "oder",
+      "nicht"
+     ],
+     "a": "noch"
+    },
+    {
+     "t": "mc",
+     "q": "Entweder wir handeln jetzt, ___ es ist zu spät.",
+     "o": [
+      "oder",
+      "noch",
+      "sondern"
+     ],
+     "a": "oder"
+    },
+    {
+     "t": "gap",
+     "q": "Sowohl Schüler ___ Lehrkräfte sind gegen die Reform.",
+     "a": "als auch"
+    },
+    {
+     "t": "gap",
+     "q": "Das Handy ist nicht nur praktisch, ___ auch gefährlich.",
+     "a": "sondern"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Familien können sich ___ ein Auto noch einen Urlaub leisten.",
+     "a": "weder"
+    },
+    {
+     "t": "gap",
+     "q": "___ fährt man mit dem Zug, oder man nimmt den Bus.",
+     "a": "Entweder"
+    },
+    {
+     "t": "komma",
+     "a": "Der Tourismus bringt nicht nur Geld, sondern auch viele Probleme."
+    },
+    {
+     "t": "fix",
+     "w": "Das betrifft sowohl Schüler und auch Lehrer.",
+     "a": "Das betrifft sowohl Schüler als auch Lehrer."
+    },
+    {
+     "t": "fix",
+     "w": "Er hat weder Zeit oder Geld.",
+     "a": "Er hat weder Zeit noch Geld."
+    },
+    {
+     "t": "fix",
+     "w": "Das ist nicht nur teuer aber auch schlecht.",
+     "a": "Das ist nicht nur teuer, sondern auch schlecht.",
+     "r": "nicht nur …, sondern auch (mit Beistrich)."
+    },
+    {
+     "t": "tr",
+     "en": "This affects both students and teachers.",
+     "a": "Das betrifft sowohl Schüler als auch Lehrer.",
+     "acc": [
+      "Das betrifft sowohl Schüler als auch Lehrkräfte.",
+      "Das betrifft sowohl Schülerinnen und Schüler als auch Lehrkräfte."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Tourism brings not only money but also problems.",
+     "a": "Der Tourismus bringt nicht nur Geld, sondern auch Probleme.",
+     "acc": [
+      "Tourismus bringt nicht nur Geld, sondern auch Probleme."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Tourismus bringt nicht nur Geld, sondern auch viele Probleme."
+    }
+   ]
+  },
+  {
+   "id": "u23l2",
+   "title": "einerseits, zwar, je … desto",
+   "s": "konnektor.zweiteilig",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Einerseits ___ der Tourismus Arbeitsplätze, andererseits leidet die Natur.",
+     "o": [
+      "schafft",
+      "der Tourismus schafft",
+      "schafft der Tourismus"
+     ],
+     "a": "schafft",
+     "r": "Einerseits auf Position 1 → Verb folgt (hier steht das Subjekt schon im Satz)."
+    },
+    {
+     "t": "mc",
+     "q": "Je mehr Touristen kommen, ___ mehr Müll entsteht.",
+     "o": [
+      "desto",
+      "als",
+      "so"
+     ],
+     "a": "desto"
+    },
+    {
+     "t": "mc",
+     "q": "Je früher man beginnt, desto ___.",
+     "o": [
+      "besser ist es",
+      "besser es ist",
+      "es ist besser"
+     ],
+     "a": "besser ist es",
+     "y": [
+      "nach desto + Komparativ → Verb",
+      "Verb am Ende",
+      "Subjekt zuerst"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Zwar ist das Fliegen billig, ___ es schadet dem Klima.",
+     "o": [
+      "aber",
+      "sondern",
+      "doch auch"
+     ],
+     "a": "aber"
+    },
+    {
+     "t": "order",
+     "a": "Je mehr Touristen kommen, desto mehr Müll entsteht.",
+     "chunks": [
+      "Je mehr Touristen",
+      "kommen",
+      ",",
+      "desto mehr Müll",
+      "entsteht"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Einerseits schafft der Tourismus Arbeitsplätze, andererseits leidet die Natur.",
+     "chunks": [
+      "Einerseits",
+      "schafft",
+      "der Tourismus",
+      "Arbeitsplätze",
+      ",",
+      "andererseits",
+      "leidet",
+      "die Natur"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Zwar ist das Fliegen billig, aber es schadet dem Klima.",
+     "chunks": [
+      "Zwar",
+      "ist",
+      "das Fliegen",
+      "billig",
+      ",",
+      "aber",
+      "es",
+      "schadet",
+      "dem Klima"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Je mehr man liest, desto man schreibt besser.",
+     "a": "Je mehr man liest, desto besser schreibt man."
+    },
+    {
+     "t": "fix",
+     "w": "Einerseits der Tourismus bringt Geld, andererseits zerstört er die Natur.",
+     "a": "Einerseits bringt der Tourismus Geld, andererseits zerstört er die Natur."
+    },
+    {
+     "t": "fix",
+     "w": "Je mehr man übt desto weniger Fehler macht man.",
+     "a": "Je mehr man übt, desto weniger Fehler macht man."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „je … desto“:\nMan liest viel. Man schreibt gut.",
+     "a": "Je mehr man liest, desto besser schreibt man.",
+     "acc": [
+      "Je mehr man liest, umso besser schreibt man."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „einerseits … andererseits“:\nDas Handy hilft beim Lernen. Das Handy lenkt ab.",
+     "a": "Einerseits hilft das Handy beim Lernen, andererseits lenkt es ab.",
+     "acc": [
+      "Einerseits hilft das Handy beim Lernen, andererseits lenkt das Handy ab."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The more tourists come, the more rubbish there is.",
+     "a": "Je mehr Touristen kommen, desto mehr Müll gibt es.",
+     "acc": [
+      "Je mehr Touristen kommen, umso mehr Müll gibt es.",
+      "Je mehr Touristen kommen, desto mehr Müll entsteht."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Einerseits schafft der Tourismus Arbeitsplätze, andererseits leidet die Natur."
+    }
+   ]
+  }
+ ]
+}

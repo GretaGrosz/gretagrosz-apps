@@ -1,0 +1,235 @@
+/* The first thing a new person sees (WelcomeIntro.jsx). Only transform, opacity and one clip-path wipe animate.
+   Beats (ms from mount):
+     0–480      the blank card springs in (grey window, an empty label line)
+     260–700    the axolotl rises over the edge holding a camera
+     720 / 920 / 1120   guitar, bread, book pop up in front of it (JS)
+     1340–1860  the props go, it drops onto the edge, happy, gills flick (JS)
+     1400–1900  BURST: card wipes to the accent, window to warm peach, the card pops and tilts like the icon,
+                glow blooms behind it, two rings pulse out, twelve sparks spray outward
+     1560–1980  "Blank" stamps into the label strip, three sparks settle in the picture
+     2650       onDone
+   Everything is drawn on a 300x360 stage that scales up on bigger screens. */
+
+.wi {
+  --s: 1;
+  position: relative;
+  width: 100%;
+  height: calc(360px * var(--s));
+  /* the stage is scaled with transform, so its layout box stays 300x360: the root reserves the scaled height */
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@media (max-height: 680px) { .wi { --s: 0.88; } }
+/* Small phones: a touch smaller, and the spray may not push the page sideways */
+@media (max-width: 359px) { .wi { --s: 0.88; overflow-x: clip; } }
+@media (min-width: 640px) and (min-height: 760px) { .wi { --s: 1.18; } }
+@media (min-width: 1024px) and (min-height: 860px) { .wi { --s: 1.4; } }
+.wi:focus-visible .wi-card { outline: 3px solid rgb(var(--accent-ink)); outline-offset: 5px; }
+
+.wi-stage {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 300px;
+  height: 360px;
+  margin-left: -150px;
+  transform: scale(var(--s));
+  transform-origin: 50% 0;
+}
+
+/* ---------- behind the card: glow, rings, spray ---------- */
+.wi-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 340px;
+  height: 340px;
+  margin: -170px 0 0 -170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(240 143 126 / 0.55) 0%, rgb(184 90 67 / 0.28) 38%, rgb(184 90 67 / 0) 68%);
+  animation: wi-glow 0.9s cubic-bezier(0.22, 1, 0.36, 1) 1.4s both;
+}
+:root[data-theme='dark'] .wi-glow { background: radial-gradient(circle, rgb(240 128 102 / 0.42) 0%, rgb(210 100 75 / 0.16) 36%, rgb(184 90 67 / 0) 62%); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .wi-glow { background: radial-gradient(circle, rgb(240 128 102 / 0.42) 0%, rgb(210 100 75 / 0.16) 36%, rgb(184 90 67 / 0) 62%); }
+}
+@keyframes wi-glow {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.wi-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 260px;
+  height: 260px;
+  margin: -130px 0 0 -130px;
+  border-radius: 50%;
+  border: 3px solid rgb(240 143 126 / 0.9);
+  opacity: 0;
+  animation: wi-ring 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1.42s both;
+}
+.wi-ring-2 { border-width: 2px; border-color: rgb(242 181 68 / 0.85); animation-delay: 1.56s; }
+@keyframes wi-ring {
+  0% { opacity: 0; transform: scale(0.55); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.3); }
+}
+
+.wi-fly {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: visible;
+  opacity: 0;
+  animation: wi-fly 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(1.42s + var(--i) * 0.012s);
+}
+@keyframes wi-fly {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.3) rotate(0deg); }
+  12% { opacity: 1; }
+  70% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1) rotate(var(--r)); }
+  100% { opacity: 0; transform: translate(calc(var(--dx) * 1.06), calc(var(--dy) * 1.06 + 10px)) scale(0.6) rotate(var(--r)); }
+}
+
+/* ---------- the card: a little photo frame, like the app icon ---------- */
+.wi-tilt {
+  position: absolute;
+  left: 40px;
+  top: 55px;
+  width: 220px;
+  transform: rotate(-4deg);
+  animation: wi-burst 0.62s cubic-bezier(0.34, 1.56, 0.64, 1) 1.38s both;
+}
+@keyframes wi-burst {
+  0% { transform: rotate(0deg) scale(1); }
+  35% { transform: rotate(-5deg) scale(1.08); }
+  100% { transform: rotate(-4deg) scale(1); }
+}
+
+.wi-card {
+  position: relative;
+  padding: 12px 12px 0;
+  border-radius: 28px;
+  background: rgb(var(--card));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 14px 40px rgba(0, 0, 0, 0.1);
+  animation: wi-card-in 0.5s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+:root[data-theme='dark'] .wi-card { box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.1), 0 14px 40px rgba(0, 0, 0, 0.6); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .wi-card { box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.1), 0 14px 40px rgba(0, 0, 0, 0.6); }
+}
+@keyframes wi-card-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.88); }
+  to { opacity: 1; transform: none; }
+}
+
+/* The colour: wipes out from behind the axolotl */
+.wi-face {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(165deg, #d2735b 0%, #b85a43 55%, #a54e39 100%);
+  clip-path: circle(0% at 50% 42%);
+  animation: wi-wipe 0.56s cubic-bezier(0.22, 1, 0.36, 1) 1.4s both;
+}
+@keyframes wi-wipe {
+  from { clip-path: circle(0% at 50% 42%); }
+  to { clip-path: circle(85% at 50% 42%); }
+}
+
+.wi-window {
+  position: relative;
+  height: 178px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: rgb(var(--mist));
+  isolation: isolate;
+  /* Safari: keep the rounded clip while children animate */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+.wi-fill {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 70%, #fff3ec 0%, #fde3d8 45%, #f8cdbd 100%);
+  clip-path: circle(0% at 50% 72%);
+  animation: wi-wipe-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 1.36s both;
+}
+@keyframes wi-wipe-in {
+  from { clip-path: circle(0% at 50% 72%); }
+  to { clip-path: circle(110% at 50% 72%); }
+}
+
+.wi-rest {
+  position: absolute;
+  overflow: visible;
+  animation: wi-rest 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(1.6s + var(--i) * 0.08s);
+}
+@keyframes wi-rest {
+  from { opacity: 0; transform: scale(0.2) rotate(-60deg); }
+  to { opacity: 1; transform: none; }
+}
+
+/* The axolotl rises from behind the window's bottom edge (viewBox y 172 sits on it), overshoots, settles */
+.wi-axo {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  width: 190px;
+  height: 190px;
+  margin-left: -95px;
+  line-height: 0;
+  animation: wi-rise 0.46s cubic-bezier(0.2, 0.8, 0.3, 1) 0.26s both;
+}
+@keyframes wi-rise {
+  0% { transform: translateY(170px); }
+  65% { transform: translateY(-8px); animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+  84% { transform: translateY(2px); animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+  100% { transform: translateY(0); }
+}
+.wi-axo-in { transform-origin: 50% 90%; }
+
+/* ---------- the label strip: empty line, then the wordmark ---------- */
+.wi-strip {
+  position: relative;
+  display: flex;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+}
+.wi-blankline {
+  position: absolute;
+  width: 84px;
+  height: 10px;
+  border-radius: 5px;
+  background: rgb(var(--mist));
+  animation: wi-line-out 0.2s ease-in 1.42s both;
+}
+@keyframes wi-line-out { to { opacity: 0; transform: scaleX(0.4); } }
+
+.wi-word {
+  position: relative;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(90, 30, 15, 0.25);
+  animation: wi-word 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.56s both;
+}
+@keyframes wi-word {
+  from { opacity: 0; transform: translateY(10px) scale(0.6); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Reduced motion: everything already in its final place; the component fades the whole thing in */
+.wi-still .wi-glow, .wi-still .wi-tilt, .wi-still .wi-card, .wi-still .wi-face, .wi-still .wi-fill,
+.wi-still .wi-rest, .wi-still .wi-axo, .wi-still .wi-word { animation: none; }
+.wi-still .wi-fly, .wi-still .wi-ring, .wi-still .wi-blankline { display: none; }
+.wi-still .wi-face { clip-path: none; }
+.wi-still .wi-fill { clip-path: none; }

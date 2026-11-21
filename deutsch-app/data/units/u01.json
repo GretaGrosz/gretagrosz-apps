@@ -1,0 +1,1286 @@
+{
+ "id": "u01",
+ "n": 1,
+ "phase": 1,
+ "level": "A2",
+ "title": "Genus & Artikel",
+ "tips": {
+  "de": "Jedes Nomen hat ein Genus: maskulin (der), feminin (die) oder neutral (das). Im Plural heißt der Artikel immer „die“. Viele Endungen verraten das Genus. Bei zusammengesetzten Nomen bestimmt das letzte Wort den Artikel: das Handy + das Verbot = das Handyverbot.",
+  "en": "Every German noun has a gender: masculine (der), feminine (die) or neuter (das). In the plural the article is always 'die'. Many endings tell you the gender. In compound nouns the last part decides.",
+  "contrast": "English has only 'the' and 'a', so you never had to learn gender. In German, gender changes the article AND later the adjective endings. So always learn nouns with the article: not 'Lösung', but 'die Lösung'.",
+  "table": [
+   [
+    "immer die",
+    "-ung, -heit, -keit, -schaft, -ion, -tät, -ik, -ie"
+   ],
+   [
+    "immer das",
+    "-chen, -lein (Verkleinerung)"
+   ],
+   [
+    "meistens das",
+    "-um, -ment, -nis, -ma"
+   ],
+   [
+    "meistens der",
+    "-ismus, -ling, -or, -ist, -ent, Personen auf -er"
+   ]
+  ],
+  "examples": [
+   "die Digitalisierung, die Freiheit, die Möglichkeit",
+   "das Mädchen, das Museum, das Argument",
+   "der Tourismus, der Lehrling, der Journalist",
+   "das Handy + das Verbot → das Handyverbot",
+   "der Massentourismus, die Umweltverschmutzung"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u01l1",
+   "title": "die-Endungen",
+   "s": "genus",
+   "gen": {
+    "genus": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ Digitalisierung",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "y": [
+      "Endung -ung → immer feminin",
+      "Endung -ung → meistens neutral",
+      "keine Regel"
+     ],
+     "r": "Alle Nomen auf -ung sind feminin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Meinungsfreiheit",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "y": [
+      "letztes Wort „Freiheit“: -heit → feminin",
+      "erstes Wort „Meinung“ bestimmt das Genus",
+      "keine Regel"
+     ],
+     "r": "Zusammengesetztes Nomen: das letzte Wort (die Freiheit) bestimmt den Artikel."
+    },
+    {
+     "t": "mc",
+     "q": "___ Gerechtigkeit",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "-keit → immer feminin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Wirtschaft",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "-schaft → immer feminin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Diskussion",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "-ion → immer feminin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Mobilität",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "-tät → immer feminin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Politik",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "-ik → feminin (die Politik, die Kritik, die Technik)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Demokratie",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "-ie → feminin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Umweltverschmutzung",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "Letztes Wort: die Verschmutzung (-ung)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Jugendarbeitslosigkeit",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "Letztes Wort: die Arbeitslosigkeit (-keit)."
+    },
+    {
+     "t": "gap",
+     "q": "___ Entscheidung der Regierung war umstritten.",
+     "a": "Die",
+     "o": [
+      "Die",
+      "Der",
+      "Das"
+     ],
+     "r": "die Entscheidung (-ung)."
+    },
+    {
+     "t": "gap",
+     "q": "___ Gesellschaft verändert sich durch das Internet.",
+     "a": "Die",
+     "o": [
+      "Die",
+      "Der",
+      "Das"
+     ],
+     "r": "die Gesellschaft (-schaft)."
+    },
+    {
+     "t": "gap",
+     "q": "Ich finde ___ Lösung gut.",
+     "a": "die",
+     "o": [
+      "die",
+      "den",
+      "das"
+     ],
+     "r": "die Lösung (-ung), Akkusativ feminin bleibt „die“."
+    },
+    {
+     "t": "gap",
+     "q": "___ Sicherheit im Internet ist ein wichtiges Thema.",
+     "a": "Die",
+     "o": [
+      "Die",
+      "Der",
+      "Das"
+     ],
+     "r": "die Sicherheit (-heit)."
+    },
+    {
+     "t": "gap",
+     "q": "___ Situation an vielen Schulen ist schwierig.",
+     "a": "Die",
+     "o": [
+      "Die",
+      "Der",
+      "Das"
+     ],
+     "r": "die Situation (-ion)."
+    },
+    {
+     "t": "match",
+     "q": "Welcher Artikel passt?",
+     "pairs": [
+      [
+       "Nachhaltigkeit",
+       "die"
+      ],
+      [
+       "Museum",
+       "das"
+      ],
+      [
+       "Journalist",
+       "der"
+      ],
+      [
+       "Generation",
+       "die"
+      ]
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Welcher Artikel passt?",
+     "pairs": [
+      [
+       "Herausforderung",
+       "die"
+      ],
+      [
+       "Mädchen",
+       "das"
+      ],
+      [
+       "Lehrling",
+       "der"
+      ],
+      [
+       "Kommunikation",
+       "die"
+      ]
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Der Digitalisierung verändert die Schule.",
+     "a": "Die Digitalisierung verändert die Schule.",
+     "r": "die Digitalisierung (-ung) → Nominativ: Die."
+    },
+    {
+     "t": "fix",
+     "w": "Das Meinung der Schüler ist wichtig.",
+     "a": "Die Meinung der Schüler ist wichtig.",
+     "r": "die Meinung (-ung)."
+    },
+    {
+     "t": "fix",
+     "w": "Der Freiheit ist ein hohes Gut.",
+     "a": "Die Freiheit ist ein hohes Gut.",
+     "r": "die Freiheit (-heit)."
+    },
+    {
+     "t": "tr",
+     "en": "Freedom of opinion is important.",
+     "a": "Die Meinungsfreiheit ist wichtig.",
+     "acc": [
+      "Meinungsfreiheit ist wichtig."
+     ],
+     "r": "die Meinungsfreiheit. Abstrakte Nomen stehen oft mit Artikel."
+    },
+    {
+     "t": "tr",
+     "en": "The solution is difficult.",
+     "a": "Die Lösung ist schwierig.",
+     "acc": [
+      "Die Lösung ist schwer."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The discussion was interesting.",
+     "a": "Die Diskussion war interessant."
+    },
+    {
+     "t": "listen",
+     "a": "Die Digitalisierung ist eine große Herausforderung."
+    },
+    {
+     "t": "listen",
+     "a": "Die Gesellschaft braucht eine Lösung."
+    }
+   ]
+  },
+  {
+   "id": "u01l2",
+   "title": "das- und der-Endungen",
+   "s": "genus",
+   "gen": {
+    "genus": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ Argument",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "y": [
+      "Endung -ment → meistens neutral",
+      "Endung -ment → feminin",
+      "keine Regel"
+     ],
+     "r": "-ment → meistens das (das Argument, das Medikament, das Parlament)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Gymnasium",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "-um → meistens das."
+    },
+    {
+     "t": "mc",
+     "q": "___ Ergebnis",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "-nis → meistens das (Ausnahme: die Erlaubnis, die Kenntnis)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Thema",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "-ma → meistens das (das Thema, das Klima, das Problem*). *Problem endet anders, ist aber auch neutral."
+    },
+    {
+     "t": "mc",
+     "q": "___ Problem",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "das Problem – auswendig lernen (wie English 'problem' hat es kein Genus-Signal)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Mädchen",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "y": [
+      "-chen → immer neutral",
+      "Mädchen sind weiblich → die",
+      "keine Regel"
+     ],
+     "r": "-chen → immer das, auch bei Personen."
+    },
+    {
+     "t": "mc",
+     "q": "___ Tourismus",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "-ismus → immer maskulin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Journalist",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "-ist → maskulin (der Journalist, der Polizist)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Lehrling",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "-ling → maskulin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Faktor",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "-or → maskulin (der Faktor, der Direktor)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Student",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "-ent (Person) → maskulin."
+    },
+    {
+     "t": "mc",
+     "q": "___ Internet",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "das Internet – mit Artikel: im Internet, auf das Internet."
+    },
+    {
+     "t": "mc",
+     "q": "___ Handy",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "das Handy."
+    },
+    {
+     "t": "mc",
+     "q": "___ Klima",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "r": "das Klima (-ma)."
+    },
+    {
+     "t": "gap",
+     "q": "___ Argument ist überzeugend.",
+     "a": "Das",
+     "o": [
+      "Das",
+      "Der",
+      "Die"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wir diskutieren über ___ Thema.",
+     "a": "das",
+     "o": [
+      "das",
+      "den",
+      "die"
+     ],
+     "r": "das Thema, Akkusativ neutral = das."
+    },
+    {
+     "t": "gap",
+     "q": "___ Massentourismus ist ein Problem.",
+     "a": "Der",
+     "o": [
+      "Der",
+      "Die",
+      "Das"
+     ],
+     "r": "der Tourismus → der Massentourismus."
+    },
+    {
+     "t": "gap",
+     "q": "Viele Schüler nutzen ___ Internet jeden Tag.",
+     "a": "das",
+     "o": [
+      "das",
+      "den",
+      "die"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Die Ergebnis der Umfrage ist eindeutig.",
+     "a": "Das Ergebnis der Umfrage ist eindeutig.",
+     "r": "das Ergebnis (-nis)."
+    },
+    {
+     "t": "fix",
+     "w": "Die Tourismus bringt Geld.",
+     "a": "Der Tourismus bringt Geld.",
+     "r": "der Tourismus (-ismus)."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe Zugriff auf Internet.",
+     "a": "Ich habe Zugriff auf das Internet.",
+     "r": "Internet braucht immer einen Artikel: auf das Internet / im Internet.",
+     "s": "genus.internet"
+    },
+    {
+     "t": "tr",
+     "en": "The argument is good.",
+     "a": "Das Argument ist gut."
+    },
+    {
+     "t": "tr",
+     "en": "The internet is important for young people.",
+     "a": "Das Internet ist für junge Menschen wichtig.",
+     "acc": [
+      "Das Internet ist wichtig für junge Menschen.",
+      "Das Internet ist für Jugendliche wichtig.",
+      "Das Internet ist wichtig für Jugendliche."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Das Thema betrifft die ganze Gesellschaft."
+    }
+   ]
+  },
+  {
+   "id": "u01l3",
+   "title": "Zusammengesetzte Nomen",
+   "s": "genus.kompositum",
+   "gen": {
+    "genus": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "das Handy + das Verbot → ___ Handyverbot",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true,
+     "y": [
+      "Das letzte Wort bestimmt das Genus",
+      "Das erste Wort bestimmt das Genus",
+      "Zusammengesetzte Nomen sind immer neutral"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "die Masse + der Tourismus → ___ Massentourismus",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "y": [
+      "Das letzte Wort bestimmt das Genus",
+      "Das erste Wort bestimmt das Genus",
+      "Zusammengesetzte Nomen sind immer feminin"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "die Schule + der Protest → ___ Schulprotest",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "das Klima + der Schutz → ___ Klimaschutz",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "der Bildschirm + die Zeit → ___ Bildschirmzeit",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "die Zeitung + der Artikel → ___ Zeitungsartikel",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "der Urlaub + das Foto → ___ Urlaubsfoto",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "der Lehrer + der Mangel → ___ Lehrermangel",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "die Wahl + das Recht → ___ Wahlrecht",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "die Klasse + das Zimmer → ___ Klassenzimmer",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "einweg + das Plastik → ___ Einwegplastik",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "das Amt + der Sitz → ___ Amtssitz",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "die Ferien + der Job → ___ Ferienjob",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "das Leben + die Mittel → ___ Lebensmittel (Plural)",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "Plural: immer die."
+    },
+    {
+     "t": "gap",
+     "q": "___ Handyverbot an Schulen wird viel diskutiert.",
+     "a": "Das",
+     "o": [
+      "Das",
+      "Der",
+      "Die"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "___ Lernbedingungen in Frankreich sind schlecht.",
+     "a": "Die",
+     "o": [
+      "Die",
+      "Der",
+      "Das"
+     ],
+     "r": "Plural → die."
+    },
+    {
+     "t": "gap",
+     "q": "___ Klimaschutz geht uns alle an.",
+     "a": "Der",
+     "o": [
+      "Der",
+      "Die",
+      "Das"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich lese ___ Zeitungsartikel über den Streik.",
+     "a": "den",
+     "o": [
+      "den",
+      "die",
+      "das"
+     ],
+     "r": "der Artikel → Akkusativ: den Zeitungsartikel."
+    },
+    {
+     "t": "fix",
+     "w": "Die Massentourismus ruiniert manche Städte.",
+     "a": "Der Massentourismus ruiniert manche Städte.",
+     "r": "Das letzte Wort entscheidet: der Tourismus → der Massentourismus."
+    },
+    {
+     "t": "fix",
+     "w": "Der Wahlrecht ab 16 ist in Österreich normal.",
+     "a": "Das Wahlrecht ab 16 ist in Österreich normal.",
+     "r": "das Recht → das Wahlrecht."
+    },
+    {
+     "t": "fix",
+     "w": "Die Schulprotest war friedlich.",
+     "a": "Der Schulprotest war friedlich."
+    },
+    {
+     "t": "fix",
+     "w": "Massen-Tourismus ist ein Problem.",
+     "a": "Massentourismus ist ein Problem.",
+     "r": "Zusammengesetzte Nomen schreibt man in einem Wort.",
+     "s": "rs.zusammen"
+    },
+    {
+     "t": "tr",
+     "en": "The ban on mobile phones is useful.",
+     "a": "Das Handyverbot ist sinnvoll.",
+     "acc": [
+      "Das Handyverbot ist nützlich."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Climate protection is important.",
+     "a": "Der Klimaschutz ist wichtig.",
+     "acc": [
+      "Klimaschutz ist wichtig."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Massentourismus ist in Hallstatt ein großes Problem."
+    }
+   ]
+  },
+  {
+   "id": "u01l4",
+   "title": "ein, eine, kein",
+   "s": "artikel.ein",
+   "gen": {
+    "genus": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Wir brauchen ___ Lösung.",
+     "a": "eine",
+     "o": [
+      "eine",
+      "ein",
+      "einen"
+     ],
+     "y": [
+      "die Lösung → feminin → eine",
+      "der Lösung → maskulin → einen",
+      "das Lösung → neutral → ein"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Das ist ___ wichtiges Argument.",
+     "a": "ein",
+     "o": [
+      "ein",
+      "eine",
+      "einen"
+     ],
+     "r": "das Argument → ein."
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt ___ einfache Antwort.",
+     "a": "keine",
+     "o": [
+      "keine",
+      "kein",
+      "keinen"
+     ],
+     "r": "die Antwort → keine. „es gibt“ + Akkusativ."
+    },
+    {
+     "t": "gap",
+     "q": "Viele Schüler haben ___ Computer zu Hause.",
+     "a": "keinen",
+     "o": [
+      "keinen",
+      "kein",
+      "keine"
+     ],
+     "r": "der Computer → Akkusativ: keinen."
+    },
+    {
+     "t": "gap",
+     "q": "Das ist ___ Problem.",
+     "a": "kein",
+     "o": [
+      "kein",
+      "keine",
+      "keinen"
+     ],
+     "r": "das Problem → kein."
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler wollen ___ überfüllten Klassen mehr.",
+     "a": "keine",
+     "h": "(nicht + Klassen)",
+     "o": [
+      "keine",
+      "nicht",
+      "kein"
+     ],
+     "y": [
+      "Nomen verneint man mit „kein“",
+      "Nomen verneint man mit „nicht“",
+      "Plural verneint man nicht"
+     ],
+     "r": "Ein Nomen ohne Artikel verneint man mit kein-, nicht mit nicht."
+    },
+    {
+     "t": "mc",
+     "q": "Wie verneint man „Wir haben Zeit.“?",
+     "o": [
+      "Wir haben keine Zeit.",
+      "Wir haben nicht Zeit.",
+      "Wir haben kein Zeit."
+     ],
+     "a": "Wir haben keine Zeit.",
+     "r": "Nomen mit „ein“ oder ohne Artikel → kein-. English 'no time' = keine Zeit."
+    },
+    {
+     "t": "mc",
+     "q": "Wie verneint man „Das ist eine gute Idee.“?",
+     "o": [
+      "Das ist keine gute Idee.",
+      "Das ist nicht eine gute Idee.",
+      "Das ist kein gute Idee."
+     ],
+     "a": "Das ist keine gute Idee."
+    },
+    {
+     "t": "fix",
+     "w": "Es gibt nicht genug Lehrkräfte und nicht Computer.",
+     "a": "Es gibt nicht genug Lehrkräfte und keine Computer.",
+     "r": "Nomen ohne Artikel → kein: keine Computer."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe eine Problem mit dem Text.",
+     "a": "Ich habe ein Problem mit dem Text.",
+     "r": "das Problem → ein Problem."
+    },
+    {
+     "t": "fix",
+     "w": "Das ist ein gute Frage.",
+     "a": "Das ist eine gute Frage.",
+     "r": "die Frage → eine."
+    },
+    {
+     "t": "fix",
+     "w": "Sie können keines Computers benutzen.",
+     "a": "Sie können keine Computer benutzen.",
+     "r": "Akkusativ Plural: keine Computer."
+    },
+    {
+     "t": "tr",
+     "en": "There is no simple solution.",
+     "a": "Es gibt keine einfache Lösung."
+    },
+    {
+     "t": "tr",
+     "en": "We have no time.",
+     "a": "Wir haben keine Zeit."
+    },
+    {
+     "t": "tr",
+     "en": "That is not a problem.",
+     "a": "Das ist kein Problem."
+    },
+    {
+     "t": "tr",
+     "en": "Many families have no car.",
+     "a": "Viele Familien haben kein Auto."
+    },
+    {
+     "t": "order",
+     "a": "In manchen Schulen gibt es keine Computer.",
+     "extra": [
+      "nicht",
+      "keinen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Das ist keine gute Lösung.",
+     "extra": [
+      "nicht",
+      "kein"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Es gibt keine einfache Antwort auf diese Frage."
+    },
+    {
+     "t": "listen",
+     "a": "Viele Schüler haben keinen eigenen Computer."
+    }
+   ]
+  },
+  {
+   "id": "u01l5",
+   "title": "Schularbeit-Wörter",
+   "s": "genus",
+   "gen": {
+    "genus": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ Überschrift",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "die Überschrift (die Schrift)."
+    },
+    {
+     "t": "mc",
+     "q": "___ Leserbrief",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "der Brief → der Leserbrief."
+    },
+    {
+     "t": "mc",
+     "q": "___ Erörterung",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Kommentar",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Angabe",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Arbeitsauftrag",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "der Auftrag."
+    },
+    {
+     "t": "mc",
+     "q": "___ Einleitung",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Schluss",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Hauptteil",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true,
+     "r": "der Teil → der Hauptteil."
+    },
+    {
+     "t": "mc",
+     "q": "___ Gegenargument",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Beispiel",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "das",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Grußformel",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Redaktion",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Wortanzahl",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "die",
+     "keepOrder": true,
+     "r": "die Anzahl → die Wortanzahl."
+    },
+    {
+     "t": "mc",
+     "q": "___ Appell",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "___ Standpunkt",
+     "o": [
+      "der",
+      "die",
+      "das"
+     ],
+     "a": "der",
+     "keepOrder": true
+    },
+    {
+     "t": "gap",
+     "q": "Jede Erörterung braucht ___ Überschrift.",
+     "a": "eine",
+     "o": [
+      "eine",
+      "einen",
+      "ein"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Lies ___ Angabe genau!",
+     "a": "die",
+     "o": [
+      "die",
+      "den",
+      "das"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Im Schluss formuliere ich ___ Appell.",
+     "a": "einen",
+     "o": [
+      "einen",
+      "eine",
+      "ein"
+     ],
+     "r": "der Appell → Akkusativ: einen."
+    },
+    {
+     "t": "gap",
+     "q": "___ Leserbrief geht an die Redaktion.",
+     "a": "Der",
+     "o": [
+      "Der",
+      "Die",
+      "Das"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Der Einleitung ist zu lang.",
+     "a": "Die Einleitung ist zu lang."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe die Überschrift vergessen und das Schluss ist kurz.",
+     "a": "Ich habe die Überschrift vergessen und der Schluss ist kurz."
+    },
+    {
+     "t": "tr",
+     "en": "The title is missing.",
+     "a": "Die Überschrift fehlt."
+    },
+    {
+     "t": "tr",
+     "en": "The introduction is good, but the conclusion is too short.",
+     "a": "Die Einleitung ist gut, aber der Schluss ist zu kurz."
+    },
+    {
+     "t": "listen",
+     "a": "Jede Erörterung braucht eine Überschrift."
+    }
+   ]
+  }
+ ]
+}

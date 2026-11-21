@@ -1,0 +1,41 @@
+{
+  "name": "bw-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "sh scripts/sync-site.sh && wrangler deploy",
+    "site": "node scripts/serve.mjs 4321",
+    "sync": "sh scripts/sync-site.sh",
+    "build:yap": "vite build yap-app",
+    "seed:yap": "node yap-app/scripts/make-seed.mjs",
+    "build:stance": "vite build stance-app",
+    "build:music": "vite build music-app",
+    "build:bwbuddy": "vite build --base /bwbuddy/ --outDir deploy/site/bwbuddy --emptyOutDir",
+    "build:deca": "cd vocab-app && vite build --base /tenaday/ --outDir ../deploy/site/tenaday --emptyOutDir",
+    "build:blank": "cd hobby-app && vite build --base /blank/ --outDir ../deploy/site/blank --emptyOutDir",
+    "build:qed": "cd regional-app && vite build --base /regional/ --outDir ../deploy/site/regional --emptyOutDir",
+    "test:blank": "node --test --import ./hobby-app/tests/loader.mjs 'hobby-app/tests/*.test.mjs'",
+    "build:deutsch": "cd deutsch-app && vite build --outDir ../deploy/site/deutsch --emptyOutDir",
+    "test:deutsch": "cd deutsch-app && node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.18.0",
+    "framer-motion": "^11.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.6",
+    "wrangler": "^4.151.0"
+  }
+}

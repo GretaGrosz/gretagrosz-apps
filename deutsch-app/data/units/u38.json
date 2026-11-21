@@ -1,0 +1,274 @@
+{
+ "id": "u38",
+ "n": 38,
+ "phase": 4,
+ "level": "C1",
+ "title": "Wortbildung",
+ "tips": {
+  "de": "Präfixe verändern die Bedeutung. Untrennbar (be-, emp-, ent-, er-, ge-, miss-, ver-, zer-): verstehen, erreichen, entwickeln – Partizip ohne ge-. Trennbar (ab-, an-, auf-, aus-, ein-, mit-, vor-, zu- …): anfangen, aufhören – betont auf dem Präfix. Manche gibt es beides (durch-, über-, um-, unter-, wieder-): übersetzen (Text, untrennbar) – übersetzen (mit der Fähre, trennbar), wiederholen (lernen, untrennbar) – wieder holen (zurückbringen). Fugen-s in Komposita: nach -ung, -heit, -keit, -schaft, -ion, -tät: Bildungsweg, Gesundheitssystem, Arbeitslosigkeitsquote. Suffixe: -bar/-lich (Fähigkeit), -los (ohne), -haft, -ig, -isch.",
+  "en": "Inseparable prefixes (be-, ver-, er-, ent-…) never split and have no ge- in the participle. Separable ones split and carry the stress. Some prefixes work both ways with different meanings (übersetzen = translate / ferry across). Compounds often add -s- after -ung/-heit/-keit/-ion: Bildungssystem.",
+  "contrast": "English phrasal verbs ('give up', 'find out') are like German separable verbs, but the German prefix goes to the END of the clause. Watch the participle: verstanden (no ge-), but angefangen (ge- in the middle).",
+  "examples": [
+   "Ich habe den Text übersetzt. (untrennbar)",
+   "Wir wiederholen die Regeln vor der Schularbeit.",
+   "Das Gesundheitssystem steht unter Druck.",
+   "Diese Lösung ist kostenlos und umsetzbar.",
+   "Der Unterricht fällt heute aus."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u38l1",
+   "title": "trennbar oder untrennbar?",
+   "s": "wort.praefix",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Partizip II von „verstehen“:",
+     "o": [
+      "verstanden",
+      "geverstanden",
+      "verstehen"
+     ],
+     "a": "verstanden",
+     "y": [
+      "untrennbares Präfix ver- → kein ge-",
+      "immer ge-",
+      "Infinitiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Partizip II von „anfangen“:",
+     "o": [
+      "angefangen",
+      "geanfangen",
+      "anfangen"
+     ],
+     "a": "angefangen"
+    },
+    {
+     "t": "mc",
+     "q": "Partizip II von „entwickeln“:",
+     "o": [
+      "entwickelt",
+      "geentwickelt",
+      "entgewickelt"
+     ],
+     "a": "entwickelt"
+    },
+    {
+     "t": "mc",
+     "q": "„Ich ___ den Text ins Deutsche.“ (translate)",
+     "o": [
+      "übersetze",
+      "setze … über",
+      "übergesetzt"
+     ],
+     "a": "übersetze",
+     "r": "übersetzen (translate) ist untrennbar; übersetzen (mit der Fähre) ist trennbar: Wir setzen über."
+    },
+    {
+     "t": "mc",
+     "q": "„Wir ___ die Regeln vor der Schularbeit.“ (revise)",
+     "o": [
+      "wiederholen",
+      "holen … wieder",
+      "wiedergeholt"
+     ],
+     "a": "wiederholen"
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe den Artikel ins Englische ___.",
+     "h": "(übersetzen, translate)",
+     "a": "übersetzt"
+    },
+    {
+     "t": "gap",
+     "q": "Die Firma hat ein neues Produkt ___.",
+     "h": "(entwickeln)",
+     "a": "entwickelt"
+    },
+    {
+     "t": "gap",
+     "q": "Der Unterricht ist heute ___.",
+     "h": "(ausfallen)",
+     "a": "ausgefallen"
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe den Text geübersetzt.",
+     "a": "Ich habe den Text übersetzt."
+    },
+    {
+     "t": "fix",
+     "w": "Wir haben die Grammatik wiedergeholt.",
+     "a": "Wir haben die Grammatik wiederholt."
+    },
+    {
+     "t": "listen",
+     "a": "Wir wiederholen die wichtigsten Regeln vor der Schularbeit."
+    }
+   ]
+  },
+  {
+   "id": "u38l2",
+   "title": "Komposita & Fugen-s",
+   "s": "wort.kompositum",
+   "items": [
+    {
+     "t": "mc",
+     "q": "die Gesundheit + das System →",
+     "o": [
+      "das Gesundheitssystem",
+      "das Gesundheitsystem",
+      "der Gesundheitssystem"
+     ],
+     "a": "das Gesundheitssystem",
+     "y": [
+      "nach -heit Fugen-s; Genus vom letzten Wort",
+      "kein Fugen-s",
+      "Genus vom ersten Wort"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "die Bildung + der Weg →",
+     "o": [
+      "der Bildungsweg",
+      "der Bildungweg",
+      "die Bildungsweg"
+     ],
+     "a": "der Bildungsweg"
+    },
+    {
+     "t": "mc",
+     "q": "die Information + die Quelle →",
+     "o": [
+      "die Informationsquelle",
+      "die Informationquelle",
+      "die Informationenquelle"
+     ],
+     "a": "die Informationsquelle"
+    },
+    {
+     "t": "mc",
+     "q": "die Sicherheit + der Abstand →",
+     "o": [
+      "der Sicherheitsabstand",
+      "der Sicherheitabstand",
+      "die Sicherheitsabstand"
+     ],
+     "a": "der Sicherheitsabstand"
+    },
+    {
+     "t": "mc",
+     "q": "die Schule + das Jahr →",
+     "o": [
+      "das Schuljahr",
+      "das Schulejahr",
+      "das Schulsjahr"
+     ],
+     "a": "das Schuljahr",
+     "r": "Nach -e fällt das e oft weg (Schule → Schul-)."
+    },
+    {
+     "t": "gap",
+     "q": "Der ___ ist angespannt.",
+     "h": "(Arbeit + der Markt, Kompositum)",
+     "a": "Arbeitsmarkt",
+     "r": "Arbeit + s + Markt: der Arbeitsmarkt."
+    },
+    {
+     "t": "fix",
+     "w": "Das Gesundheitsystem ist überlastet.",
+     "a": "Das Gesundheitssystem ist überlastet."
+    },
+    {
+     "t": "listen",
+     "a": "Das Gesundheitssystem steht unter großem Druck."
+    }
+   ]
+  },
+  {
+   "id": "u38l3",
+   "title": "Suffixe: -bar, -los, -haft, -ig, -isch",
+   "s": "wort.suffix",
+   "items": [
+    {
+     "t": "mc",
+     "q": "ohne Kosten →",
+     "o": [
+      "kostenlos",
+      "kostbar",
+      "kostig"
+     ],
+     "a": "kostenlos"
+    },
+    {
+     "t": "mc",
+     "q": "kann umgesetzt werden →",
+     "o": [
+      "umsetzbar",
+      "umsetzlos",
+      "umsetzhaft"
+     ],
+     "a": "umsetzbar"
+    },
+    {
+     "t": "mc",
+     "q": "wie ein Vorbild →",
+     "o": [
+      "vorbildlich",
+      "vorbildbar",
+      "vorbildig"
+     ],
+     "a": "vorbildlich"
+    },
+    {
+     "t": "mc",
+     "q": "bezogen auf die Politik →",
+     "o": [
+      "politisch",
+      "politig",
+      "politlich"
+     ],
+     "a": "politisch"
+    },
+    {
+     "t": "mc",
+     "q": "„kostbar“ bedeutet:",
+     "o": [
+      "sehr wertvoll",
+      "kostet nichts",
+      "kann gekostet werden"
+     ],
+     "a": "sehr wertvoll"
+    },
+    {
+     "t": "gap",
+     "q": "Der Vorschlag ist leider nicht ___.",
+     "h": "(kann nicht finanziert werden → -bar)",
+     "a": "finanzierbar"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Jugendliche fühlen sich ___.",
+     "h": "(ohne Hilfe → -los)",
+     "a": "hilflos"
+    },
+    {
+     "t": "gap",
+     "q": "Das Verhalten der Touristen war ___.",
+     "h": "(wie ein Skandal → -ös)",
+     "a": "skandalös"
+    },
+    {
+     "t": "listen",
+     "a": "Der Vorschlag ist kostenlos und leicht umsetzbar."
+    }
+   ]
+  }
+ ]
+}

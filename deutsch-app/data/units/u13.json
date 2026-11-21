@@ -1,0 +1,802 @@
+{
+ "id": "u13",
+ "n": 13,
+ "phase": 1,
+ "level": "B1",
+ "title": "Nebensätze: Verb ans Ende",
+ "weak": true,
+ "tips": {
+  "de": "Nach dass, weil, da, ob, wenn, falls, obwohl, damit, sodass, während, nachdem, bevor, als, seit, bis steht ein Nebensatz: Das konjugierte Verb steht GANZ AM ENDE. Bei mehreren Verben steht das konjugierte zuletzt: … dass man im Internet alles lernen kann. Trennbare Verben werden wieder zusammengeschrieben: … weil das Handy ablenkt. Vor dem Nebensatz steht immer ein Beistrich. Steht der Nebensatz vorne, ist er Position 1 – dann kommt sofort das Verb des Hauptsatzes: „Weil es regnet, bleiben wir zu Hause.“ (Verb, Verb).",
+  "en": "After dass, weil, ob, wenn, obwohl … the finite verb goes to the very END of the clause. With several verbs, the finite one is last. A comma always separates the clauses. If the subordinate clause comes first, the main clause starts with its verb: 'Weil …, bleiben wir …'.",
+  "contrast": "This is your #1 mistake. English: 'that it is hard' / 'because I am ill' keeps subject-verb order. German: 'dass es schwer ist' / 'weil ich krank bin'. Trick: when you write dass/weil/wenn/ob/obwohl, mentally 'park' the verb and only put it down when the clause ends, just before the comma or full stop.",
+  "table": [
+   [
+    "Hauptsatz",
+    "Es ist schwer, den Tourismus zu begrenzen."
+   ],
+   [
+    "dass-Satz",
+    "Ich finde, dass es schwer ist, den Tourismus zu begrenzen."
+   ],
+   [
+    "mit Modalverb",
+    "…, weil man im Internet fast alles lernen kann."
+   ],
+   [
+    "Perfekt",
+    "…, dass alle nach Italien geflogen sind."
+   ],
+   [
+    "Nebensatz vorne",
+    "Wenn der Staat die Träume nicht unterstützt, müssen sie selbst aktiv werden."
+   ]
+  ],
+  "examples": [
+   "Ich finde, dass es schwer ist, den Massentourismus zu begrenzen.",
+   "Ich hoffe, dass mein Argument zum Nachdenken anregen kann.",
+   "Wenn man in den sozialen Medien sieht, dass alle nach Italien geflogen sind, möchte man auch dorthin.",
+   "Es wird darüber diskutiert, ob beliebte Urlaubsorte Obergrenzen brauchen.",
+   "Obwohl das Fliegen dem Klima schadet, fliegen immer mehr Menschen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u13l1",
+   "title": "dass-Sätze",
+   "s": "wortstellung.ns",
+   "gen": {
+    "dassClause": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Ich finde, dass es schwer ist, den Massentourismus zu begrenzen.",
+      "Ich finde, dass es ist schwer, den Massentourismus zu begrenzen.",
+      "Ich finde dass es schwer ist den Massentourismus zu begrenzen."
+     ],
+     "a": "Ich finde, dass es schwer ist, den Massentourismus zu begrenzen.",
+     "y": [
+      "dass → Verb ans Ende; Beistriche vor dass und vor der Infinitivgruppe",
+      "dass → Verb an Position 2",
+      "Keine Beistriche nötig"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Es ist immer einfacher, anderen die Schuld zuzuschieben.",
+      "Es ist immer einfacher, der Schuld an anderen zu werfen.",
+      "Es ist einfacher immer, anderen die Schuld zuschieben."
+     ],
+     "a": "Es ist immer einfacher, anderen die Schuld zuzuschieben."
+    },
+    {
+     "t": "mc",
+     "q": "Ich hoffe, dass mein Argument zum Nachdenken ___.",
+     "o": [
+      "anregen kann",
+      "kann anregen",
+      "anregen"
+     ],
+     "a": "anregen kann",
+     "y": [
+      "Mehrere Verben: das konjugierte (kann) ganz am Ende",
+      "Modalverb zuerst",
+      "kein konjugiertes Verb nötig"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Viele glauben, dass alle Jugendlichen nur am Handy ___.",
+     "o": [
+      "sind",
+      "sein",
+      "seien sind"
+     ],
+     "a": "sind"
+    },
+    {
+     "t": "order",
+     "a": "Ich finde, dass es schwer ist.",
+     "chunks": [
+      "Ich finde",
+      ",",
+      "dass",
+      "es",
+      "schwer",
+      "ist"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich hoffe, dass mein Argument zum Nachdenken anregen kann.",
+     "chunks": [
+      "Ich hoffe",
+      ",",
+      "dass",
+      "mein Argument",
+      "zum Nachdenken",
+      "anregen",
+      "kann"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Man sieht in den sozialen Medien, dass alle nach Italien geflogen sind.",
+     "chunks": [
+      "Man sieht",
+      "in den sozialen Medien",
+      ",",
+      "dass",
+      "alle",
+      "nach Italien",
+      "geflogen",
+      "sind"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Es ist klar, dass das Handy viele Schüler ablenkt.",
+     "chunks": [
+      "Es ist klar",
+      ",",
+      "dass",
+      "das Handy",
+      "viele Schüler",
+      "ablenkt"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich denke, dass es ist schwer.",
+     "a": "Ich denke, dass es schwer ist.",
+     "r": "dass → Verb ans Ende."
+    },
+    {
+     "t": "fix",
+     "w": "dass mein Argument zum Nachdenken anregen und zu einer Diskussion beitragen.",
+     "a": "dass mein Argument zum Nachdenken anregen und zu einer Diskussion beitragen kann.",
+     "r": "Es fehlt das konjugierte Verb am Ende."
+    },
+    {
+     "t": "fix",
+     "w": "Es ist klar, dass immer mehr Menschen fliegen in den Urlaub.",
+     "a": "Es ist klar, dass immer mehr Menschen in den Urlaub fliegen."
+    },
+    {
+     "t": "fix",
+     "w": "Viele meinen, dass die Schule bereitet die Schüler nicht vor.",
+     "a": "Viele meinen, dass die Schule die Schüler nicht vorbereitet."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „Ich bin der Meinung, dass …“:\nDer Staat muss mehr Lehrkräfte einstellen.",
+     "a": "Ich bin der Meinung, dass der Staat mehr Lehrkräfte einstellen muss."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „Es stimmt, dass …“:\nDas Fliegen ist heute billiger als früher.",
+     "a": "Es stimmt, dass das Fliegen heute billiger als früher ist.",
+     "acc": [
+      "Es stimmt, dass das Fliegen heute billiger ist als früher."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „Ich finde, dass …“:\nMan kann im Internet fast alles lernen.",
+     "a": "Ich finde, dass man im Internet fast alles lernen kann."
+    },
+    {
+     "t": "tr",
+     "en": "I think that it is difficult.",
+     "a": "Ich denke, dass es schwierig ist.",
+     "acc": [
+      "Ich denke, dass es schwer ist.",
+      "Ich finde, dass es schwer ist.",
+      "Ich finde, dass es schwierig ist.",
+      "Ich glaube, dass es schwer ist.",
+      "Ich glaube, dass es schwierig ist."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I hope that my letter can start a discussion.",
+     "a": "Ich hoffe, dass mein Brief eine Diskussion anregen kann.",
+     "acc": [
+      "Ich hoffe, dass mein Brief eine Diskussion auslösen kann.",
+      "Ich hoffe, dass mein Brief eine Diskussion starten kann."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Many people believe that young people don't read.",
+     "a": "Viele Menschen glauben, dass Jugendliche nicht lesen.",
+     "acc": [
+      "Viele glauben, dass Jugendliche nicht lesen.",
+      "Viele Menschen glauben, dass junge Menschen nicht lesen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Ich finde, dass es schwer ist, den Massentourismus zu begrenzen."
+    }
+   ]
+  },
+  {
+   "id": "u13l2",
+   "title": "weil, da, obwohl",
+   "s": "wortstellung.ns",
+   "gen": {
+    "weil": 2,
+    "obwohl": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Viele Schüler sind müde, weil sie zu wenig schlafen.",
+      "Viele Schüler sind müde, weil sie schlafen zu wenig.",
+      "Viele Schüler sind müde weil sie zu wenig schlafen."
+     ],
+     "a": "Viele Schüler sind müde, weil sie zu wenig schlafen."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Obwohl das Fliegen dem Klima schadet, fliegen immer mehr Menschen.",
+      "Obwohl das Fliegen schadet dem Klima, immer mehr Menschen fliegen.",
+      "Obwohl das Fliegen dem Klima schadet, immer mehr Menschen fliegen."
+     ],
+     "a": "Obwohl das Fliegen dem Klima schadet, fliegen immer mehr Menschen.",
+     "y": [
+      "Nebensatz vorne = Position 1 → dann Verb, Verb",
+      "Hauptsatz immer mit Subjekt",
+      "Nebensatz vorne → kein Beistrich"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Da die Mieten so hoch sind, ___ viele junge Menschen bei ihren Eltern.",
+     "o": [
+      "wohnen",
+      "sie wohnen",
+      "wohnen sie"
+     ],
+     "a": "wohnen"
+    },
+    {
+     "t": "order",
+     "a": "Viele kommen nach Hallstatt, weil sie die Fotos auf Instagram gesehen haben.",
+     "chunks": [
+      "Viele kommen",
+      "nach Hallstatt",
+      ",",
+      "weil",
+      "sie",
+      "die Fotos",
+      "auf Instagram",
+      "gesehen",
+      "haben"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Obwohl das Wetter schlecht war, kamen viele Schüler zur Demonstration.",
+     "chunks": [
+      "Obwohl",
+      "das Wetter",
+      "schlecht",
+      "war",
+      ",",
+      "kamen",
+      "viele Schüler",
+      "zur Demonstration"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Weil es zu wenige Lehrkräfte gibt, fällt oft Unterricht aus.",
+     "chunks": [
+      "Weil",
+      "es",
+      "zu wenige Lehrkräfte",
+      "gibt",
+      ",",
+      "fällt",
+      "oft",
+      "Unterricht",
+      "aus"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich bleibe zu Hause, weil ich habe Fieber.",
+     "a": "Ich bleibe zu Hause, weil ich Fieber habe."
+    },
+    {
+     "t": "fix",
+     "w": "Obwohl es regnet, wir gehen zur Demonstration.",
+     "a": "Obwohl es regnet, gehen wir zur Demonstration.",
+     "s": "wortstellung.verbverb"
+    },
+    {
+     "t": "fix",
+     "w": "Da die Mieten steigen, viele ziehen aufs Land.",
+     "a": "Da die Mieten steigen, ziehen viele aufs Land.",
+     "s": "wortstellung.verbverb"
+    },
+    {
+     "t": "fix",
+     "w": "Viele fliegen, obwohl sie wissen die Folgen.",
+     "a": "Viele fliegen, obwohl sie die Folgen kennen.",
+     "r": "Verb ans Ende; „die Folgen kennen“ (wissen + Nebensatz, kennen + Nomen)."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „weil“:\nDie Altstadt ist überfüllt. Täglich kommen tausende Touristen.",
+     "a": "Die Altstadt ist überfüllt, weil täglich tausende Touristen kommen."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Obwohl“:\nIch gehe zur Demonstration, obwohl meine Eltern skeptisch sind.",
+     "a": "Obwohl meine Eltern skeptisch sind, gehe ich zur Demonstration."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Weil“:\nViele Schüler sind müde, weil sie zu lange am Handy sind.",
+     "a": "Weil sie zu lange am Handy sind, sind viele Schüler müde.",
+     "acc": [
+      "Weil viele Schüler zu lange am Handy sind, sind sie müde."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Because it is raining, we stay at home.",
+     "a": "Weil es regnet, bleiben wir zu Hause.",
+     "acc": [
+      "Da es regnet, bleiben wir zu Hause.",
+      "Weil es regnet, bleiben wir daheim."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Although the train is expensive, I take it.",
+     "a": "Obwohl der Zug teuer ist, nehme ich ihn.",
+     "acc": [
+      "Obwohl der Zug teuer ist, fahre ich damit.",
+      "Obwohl der Zug teuer ist, fahre ich mit ihm."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Obwohl das Fliegen dem Klima schadet, fliegen immer mehr Menschen."
+    }
+   ]
+  },
+  {
+   "id": "u13l3",
+   "title": "wenn, falls, ob, als",
+   "s": "wortstellung.ns",
+   "gen": {
+    "wenn": 2,
+    "obClause": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ der Staat ihre Träume nicht unterstützen will, müssen sie selbst aktiv werden.",
+     "o": [
+      "Wenn",
+      "Wann",
+      "Ob"
+     ],
+     "a": "Wenn",
+     "y": [
+      "wenn = Bedingung",
+      "wann = Frage nach der Zeit",
+      "ob = whether"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Es wird darüber diskutiert, ___ Urlaubsorte Obergrenzen brauchen.",
+     "o": [
+      "ob",
+      "wenn",
+      "dass ob"
+     ],
+     "a": "ob",
+     "r": "ob = whether (ja/nein-Frage im Nebensatz)."
+    },
+    {
+     "t": "mc",
+     "q": "___ ich zehn Jahre alt war, zogen wir nach Österreich.",
+     "o": [
+      "Als",
+      "Wenn",
+      "Wann"
+     ],
+     "a": "Als",
+     "r": "als = einmalig in der Vergangenheit; wenn = immer wieder / Gegenwart / Zukunft."
+    },
+    {
+     "t": "mc",
+     "q": "Immer ___ ich Instagram öffne, sehe ich Urlaubsfotos.",
+     "o": [
+      "wenn",
+      "als",
+      "wann"
+     ],
+     "a": "wenn"
+    },
+    {
+     "t": "mc",
+     "q": "Weißt du, ___ die Schularbeit ist?",
+     "o": [
+      "wann",
+      "wenn",
+      "als"
+     ],
+     "a": "wann",
+     "r": "wann = indirekte Frage nach der Zeit."
+    },
+    {
+     "t": "mc",
+     "q": "Auch ___ einen Italien gar nicht interessiert, will man hin.",
+     "o": [
+      "wenn",
+      "wann",
+      "ob"
+     ],
+     "a": "wenn"
+    },
+    {
+     "t": "order",
+     "a": "Wenn man Instagram öffnet, sieht man viele Urlaubsfotos.",
+     "chunks": [
+      "Wenn",
+      "man",
+      "Instagram",
+      "öffnet",
+      ",",
+      "sieht",
+      "man",
+      "viele Urlaubsfotos"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich frage mich, ob das Handyverbot sinnvoll ist.",
+     "chunks": [
+      "Ich frage mich",
+      ",",
+      "ob",
+      "das Handyverbot",
+      "sinnvoll",
+      "ist"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Falls sie ihre Träume erreichen, sind sie ein Vorbild.",
+     "chunks": [
+      "Falls",
+      "sie",
+      "ihre Träume",
+      "erreichen",
+      ",",
+      "sind",
+      "sie",
+      "ein Vorbild"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Auch wann ihn Italien gar nicht interessiert …",
+     "a": "Auch wenn ihn Italien gar nicht interessiert …"
+    },
+    {
+     "t": "fix",
+     "w": "Wann ich Zeit habe, lese ich.",
+     "a": "Wenn ich Zeit habe, lese ich."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn ich klein war, wohnten wir in Ungarn.",
+     "a": "Als ich klein war, wohnten wir in Ungarn."
+    },
+    {
+     "t": "fix",
+     "w": "Es wird diskutiert, ob Urlaubsorte brauchen Obergrenzen.",
+     "a": "Es wird diskutiert, ob Urlaubsorte Obergrenzen brauchen."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Wenn“:\nMan sollte die Quelle prüfen, wenn man eine Nachricht im Internet liest.",
+     "a": "Wenn man eine Nachricht im Internet liest, sollte man die Quelle prüfen."
+    },
+    {
+     "t": "tr",
+     "en": "If the state does not support their dreams, they have to act themselves.",
+     "a": "Wenn der Staat ihre Träume nicht unterstützt, müssen sie selbst aktiv werden.",
+     "acc": [
+      "Wenn der Staat ihre Träume nicht unterstützt, müssen sie selbst handeln."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I wonder whether the ban makes sense.",
+     "a": "Ich frage mich, ob das Verbot sinnvoll ist.",
+     "acc": [
+      "Ich frage mich, ob das Verbot Sinn macht.",
+      "Ich frage mich, ob das Verbot Sinn ergibt."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "When I was ten, we moved to Austria.",
+     "a": "Als ich zehn war, zogen wir nach Österreich.",
+     "acc": [
+      "Als ich zehn Jahre alt war, zogen wir nach Österreich.",
+      "Als ich zehn war, sind wir nach Österreich gezogen.",
+      "Als ich zehn Jahre alt war, sind wir nach Österreich gezogen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Wenn man Instagram öffnet, sieht man sofort viele Urlaubsfotos."
+    }
+   ]
+  },
+  {
+   "id": "u13l4",
+   "title": "damit, sodass, nachdem, bevor, während",
+   "s": "wortstellung.ns",
+   "gen": {
+    "conjClause": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Der Staat muss mehr Lehrkräfte einstellen, ___ die Klassen kleiner werden.",
+     "o": [
+      "damit",
+      "sodass",
+      "obwohl"
+     ],
+     "a": "damit",
+     "r": "damit = so that (Ziel/Zweck)."
+    },
+    {
+     "t": "mc",
+     "q": "Es kamen so viele Touristen, ___ die Straßen gesperrt wurden.",
+     "o": [
+      "dass",
+      "damit",
+      "ob"
+     ],
+     "a": "dass",
+     "r": "so …, dass = Folge."
+    },
+    {
+     "t": "mc",
+     "q": "___ ich die Angabe gelesen hatte, begann ich zu schreiben.",
+     "o": [
+      "Nachdem",
+      "Bevor",
+      "Während"
+     ],
+     "a": "Nachdem"
+    },
+    {
+     "t": "mc",
+     "q": "___ du abgibst, mach die Endkontrolle!",
+     "o": [
+      "Bevor",
+      "Nachdem",
+      "Damit"
+     ],
+     "a": "Bevor"
+    },
+    {
+     "t": "mc",
+     "q": "___ die einen protestieren, schauen die anderen zu.",
+     "o": [
+      "Während",
+      "Damit",
+      "Sodass"
+     ],
+     "a": "Während",
+     "r": "während = while (Gleichzeitigkeit oder Gegensatz)."
+    },
+    {
+     "t": "order",
+     "a": "Wir müssen handeln, damit die Natur geschützt wird.",
+     "chunks": [
+      "Wir müssen handeln",
+      ",",
+      "damit",
+      "die Natur",
+      "geschützt",
+      "wird"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Bevor du abgibst, solltest du die Endkontrolle machen.",
+     "chunks": [
+      "Bevor",
+      "du",
+      "abgibst",
+      ",",
+      "solltest",
+      "du",
+      "die Endkontrolle",
+      "machen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Beispielsweise sollten die Demonstrationen in der Nähe des Amtssitzes stattfinden, damit der Verkehr nicht blockiert wird.",
+     "chunks": [
+      "Beispielsweise",
+      "sollten",
+      "die Demonstrationen",
+      "in der Nähe des Amtssitzes",
+      "stattfinden",
+      ",",
+      "damit",
+      "der Verkehr",
+      "nicht",
+      "blockiert",
+      "wird"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen sparen, damit wir können einen Urlaub machen.",
+     "a": "Wir müssen sparen, damit wir einen Urlaub machen können."
+    },
+    {
+     "t": "fix",
+     "w": "Nachdem sie hat gegessen, ging sie.",
+     "a": "Nachdem sie gegessen hatte, ging sie."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „damit“:\nDie Gemeinde baut Radwege. Mehr Menschen fahren mit dem Rad.",
+     "a": "Die Gemeinde baut Radwege, damit mehr Menschen mit dem Rad fahren."
+    },
+    {
+     "t": "tr",
+     "en": "We must act so that nature is protected.",
+     "a": "Wir müssen handeln, damit die Natur geschützt wird."
+    },
+    {
+     "t": "tr",
+     "en": "Before you hand it in, read the task again.",
+     "a": "Bevor du abgibst, lies die Angabe noch einmal.",
+     "acc": [
+      "Bevor du es abgibst, lies die Angabe noch einmal.",
+      "Bevor du abgibst, lies die Aufgabe noch einmal."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Bevor du abgibst, solltest du die Endkontrolle machen."
+    }
+   ]
+  },
+  {
+   "id": "u13l5",
+   "title": "Mehrere Nebensätze",
+   "s": "wortstellung.ns",
+   "gen": {
+    "conjClause": 2,
+    "dassClause": 2
+   },
+   "items": [
+    {
+     "t": "order",
+     "a": "Man möchte auch dorthin fliegen, wenn man in den sozialen Medien sieht, dass alle nach Italien geflogen sind.",
+     "chunks": [
+      "Man möchte",
+      "auch dorthin",
+      "fliegen",
+      ",",
+      "wenn",
+      "man",
+      "in den sozialen Medien",
+      "sieht",
+      ",",
+      "dass",
+      "alle",
+      "nach Italien",
+      "geflogen",
+      "sind"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich glaube, dass viele Jugendliche protestieren, weil sie sich Sorgen machen.",
+     "chunks": [
+      "Ich glaube",
+      ",",
+      "dass",
+      "viele Jugendliche",
+      "protestieren",
+      ",",
+      "weil",
+      "sie",
+      "sich Sorgen",
+      "machen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Es gibt Länder, in denen Kinder keine Computer benutzen können.",
+     "chunks": [
+      "Es gibt Länder",
+      ",",
+      "in denen",
+      "Kinder",
+      "keine Computer",
+      "benutzen",
+      "können"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "dass wenn man die Sozialen Medien öffnet, möchte er auch hin",
+     "a": "dass man auch dorthin möchte, wenn man die sozialen Medien öffnet",
+     "r": "Einen Nebensatz zu Ende bringen, dann den nächsten. Bei „man“ bleiben."
+    },
+    {
+     "t": "tf",
+     "q": "Bau einen Satz (Hauptsatz + wenn-Satz + dass-Satz):\nMan möchte auch dorthin fliegen. / Man sieht in den sozialen Medien … / Alle sind nach Italien geflogen.",
+     "a": "Man möchte auch dorthin fliegen, wenn man in den sozialen Medien sieht, dass alle nach Italien geflogen sind."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde: Ich finde … / Es ist schwer … / Man begrenzt den Massentourismus richtig.",
+     "a": "Ich finde, dass es schwer ist, den Massentourismus richtig zu begrenzen."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit „weil“ und „dass“:\nViele protestieren. Sie wollen, … Die Regierung handelt.",
+     "a": "Viele protestieren, weil sie wollen, dass die Regierung handelt."
+    },
+    {
+     "t": "tr",
+     "en": "I think that many people fly because it is cheap.",
+     "a": "Ich denke, dass viele Menschen fliegen, weil es billig ist.",
+     "acc": [
+      "Ich glaube, dass viele Menschen fliegen, weil es billig ist.",
+      "Ich denke, dass viele Menschen fliegen, weil es günstig ist.",
+      "Ich glaube, dass viele Menschen fliegen, weil es günstig ist.",
+      "Ich finde, dass viele Menschen fliegen, weil es billig ist."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "When you see that everyone has flown to Italy, you want to go there too.",
+     "a": "Wenn man sieht, dass alle nach Italien geflogen sind, möchte man auch dorthin.",
+     "acc": [
+      "Wenn man sieht, dass alle nach Italien geflogen sind, will man auch dorthin.",
+      "Wenn man sieht, dass alle nach Italien geflogen sind, möchte man auch dorthin fliegen.",
+      "Wenn man sieht, dass alle nach Italien geflogen sind, will man auch dorthin fliegen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Ich glaube, dass viele Jugendliche protestieren, weil sie sich Sorgen um ihre Zukunft machen."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,479 @@
+{
+ "id": "u14",
+ "n": 14,
+ "phase": 1,
+ "level": "B2",
+ "title": "Relativsätze",
+ "tips": {
+  "de": "Ein Relativsatz beschreibt ein Nomen genauer. Das Relativpronomen bekommt Genus und Zahl vom Bezugswort, den Fall aber vom Verb oder der Präposition im Relativsatz. Formen: der/die/das/die (Nom.), den/die/das/die (Akk.), dem/der/dem/denen (Dat.), dessen/deren/dessen/deren (Gen.). Mit Präposition: in dem, mit der, für die, in denen … Das Verb steht am Ende, und vor (und nach) dem Relativsatz steht ein Beistrich. Statt „wo“ verwendet man in der Schriftsprache besser „in dem / in der / in denen“.",
+  "en": "Relative pronouns take gender/number from the noun they refer to, but the case from their role in the relative clause. The verb goes to the end, and commas go around the clause. In writing, prefer 'in denen' over 'wo' for places.",
+  "contrast": "English 'who/which/that' hardly changes, and you can often leave it out ('the book I read'). German can never leave it out and must choose the right form: 'das Buch, das ich lese'. 'Es gibt Länder, wo …' is spoken German. Write 'Es gibt Länder, in denen …'.",
+  "table": [
+   [
+    "",
+    "m",
+    "f",
+    "n",
+    "Plural"
+   ],
+   [
+    "Nom.",
+    "der",
+    "die",
+    "das",
+    "die"
+   ],
+   [
+    "Akk.",
+    "den",
+    "die",
+    "das",
+    "die"
+   ],
+   [
+    "Dat.",
+    "dem",
+    "der",
+    "dem",
+    "denen"
+   ],
+   [
+    "Gen.",
+    "dessen",
+    "deren",
+    "dessen",
+    "deren"
+   ]
+  ],
+  "examples": [
+   "Es gibt Länder, in denen Kinder in Zelten lernen.",
+   "Die Schüler, die protestieren, fordern mehr Lehrkräfte.",
+   "Das sind Argumente, die berücksichtigt werden sollten.",
+   "Der Lehrer, dem wir vertrauen, hilft uns.",
+   "Hallstatt ist ein Ort, dessen Altstadt überfüllt ist."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u14l1",
+   "title": "der, die, das, den",
+   "s": "rel",
+   "gen": {
+    "relative": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Schüler, ___ protestieren, können das auch.",
+     "o": [
+      "die",
+      "denen",
+      "den"
+     ],
+     "a": "die",
+     "y": [
+      "Plural + Nominativ (Subjekt im Relativsatz)",
+      "Plural + Dativ",
+      "maskulin Akkusativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das ist der Artikel, ___ ich gelesen habe.",
+     "o": [
+      "den",
+      "der",
+      "dem"
+     ],
+     "a": "den",
+     "y": [
+      "maskulin + Akkusativ (ich habe ihn gelesen)",
+      "maskulin + Nominativ",
+      "maskulin + Dativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Meinungen und Argumente, ___ berücksichtigt werden sollten",
+     "o": [
+      "die",
+      "denen",
+      "der"
+     ],
+     "a": "die"
+    },
+    {
+     "t": "mc",
+     "q": "Das Gesetz, ___ im Parlament beschlossen wurde, ist umstritten.",
+     "o": [
+      "das",
+      "dass",
+      "dem"
+     ],
+     "a": "das"
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin, ___ uns Deutsch unterrichtet, ist streng.",
+     "a": "die"
+    },
+    {
+     "t": "gap",
+     "q": "Der Radweg, ___ die Gemeinde plant, ist zu schmal.",
+     "a": "den"
+    },
+    {
+     "t": "gap",
+     "q": "Das Handy, ___ ich mir gekauft habe, war teuer.",
+     "a": "das"
+    },
+    {
+     "t": "gap",
+     "q": "Die Touristen, ___ nach Hallstatt kommen, machen viele Fotos.",
+     "a": "die"
+    },
+    {
+     "t": "gap",
+     "q": "Der Politiker, ___ alle kritisieren, tritt zurück.",
+     "a": "den"
+    },
+    {
+     "t": "komma",
+     "a": "Die Schüler, die protestieren, fordern mehr Lehrkräfte."
+    },
+    {
+     "t": "komma",
+     "a": "Das ist ein Argument, das man nicht vergessen darf."
+    },
+    {
+     "t": "fix",
+     "w": "Meinungen und Argumente die berücksichtigt werden sollten",
+     "a": "Meinungen und Argumente, die berücksichtigt werden sollten",
+     "s": "komma.rel",
+     "c": "B"
+    },
+    {
+     "t": "fix",
+     "w": "Der Artikel, der ich gelesen habe, ist interessant.",
+     "a": "Der Artikel, den ich gelesen habe, ist interessant."
+    },
+    {
+     "t": "fix",
+     "w": "Die Schüler, die protestieren, können auch.",
+     "a": "Die Schüler, die protestieren, können das auch."
+    },
+    {
+     "t": "tr",
+     "en": "the students who are protesting",
+     "a": "die Schüler, die protestieren",
+     "acc": [
+      "die Schülerinnen und Schüler, die protestieren"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "the article I read",
+     "a": "der Artikel, den ich gelesen habe",
+     "acc": [
+      "der Artikel, den ich las"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Schüler, die protestieren, fordern bessere Lernbedingungen."
+    }
+   ]
+  },
+  {
+   "id": "u14l2",
+   "title": "dem, denen, dessen, deren",
+   "s": "rel",
+   "gen": {
+    "relative": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Der Lehrer, ___ wir vertrauen, hilft uns.",
+     "o": [
+      "dem",
+      "den",
+      "der"
+     ],
+     "a": "dem",
+     "y": [
+      "maskulin + Dativ (vertrauen + Dativ)",
+      "maskulin + Akkusativ",
+      "maskulin + Nominativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Kinder, ___ wir helfen, lernen in Zelten.",
+     "o": [
+      "denen",
+      "den",
+      "die"
+     ],
+     "a": "denen",
+     "y": [
+      "Plural + Dativ → denen",
+      "Plural Dativ → den",
+      "Plural Nominativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Hallstatt ist ein Ort, ___ Altstadt überfüllt ist.",
+     "o": [
+      "dessen",
+      "deren",
+      "der"
+     ],
+     "a": "dessen",
+     "y": [
+      "der Ort (maskulin) + Genitiv → dessen",
+      "feminin Genitiv → deren",
+      "Nominativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Schülerin, ___ Text gewonnen hat, ist aus Ungarn.",
+     "o": [
+      "deren",
+      "dessen",
+      "die"
+     ],
+     "a": "deren"
+    },
+    {
+     "t": "gap",
+     "q": "Die Jugendlichen, ___ die Politik nicht zuhört, sind frustriert.",
+     "a": "denen"
+    },
+    {
+     "t": "gap",
+     "q": "Das Kind, ___ Eltern keinen Computer haben, lernt in der Bibliothek.",
+     "a": "dessen"
+    },
+    {
+     "t": "gap",
+     "q": "Die Firma, ___ Produkte nachhaltig sind, ist erfolgreich.",
+     "a": "deren"
+    },
+    {
+     "t": "gap",
+     "q": "Die Freundin, ___ ich den Brief geschickt habe, antwortet nicht.",
+     "a": "der"
+    },
+    {
+     "t": "fix",
+     "w": "Die Kinder, den wir helfen, lernen in Zelten.",
+     "a": "Die Kinder, denen wir helfen, lernen in Zelten."
+    },
+    {
+     "t": "fix",
+     "w": "Hallstatt ist ein Ort, deren Altstadt überfüllt ist.",
+     "a": "Hallstatt ist ein Ort, dessen Altstadt überfüllt ist."
+    },
+    {
+     "t": "tr",
+     "en": "the people we help",
+     "a": "die Menschen, denen wir helfen"
+    },
+    {
+     "t": "tr",
+     "en": "a town whose old town is overcrowded",
+     "a": "ein Ort, dessen Altstadt überfüllt ist",
+     "acc": [
+      "eine Stadt, deren Altstadt überfüllt ist"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Kinder, denen wir helfen, lernen in Zelten."
+    }
+   ]
+  },
+  {
+   "id": "u14l3",
+   "title": "Mit Präposition: in denen statt wo",
+   "s": "rel.prep",
+   "gen": {
+    "relative": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Es gibt Länder, ___ Kinder in Zelten lernen.",
+     "o": [
+      "in denen",
+      "wo die",
+      "in die"
+     ],
+     "a": "in denen",
+     "y": [
+      "in + Dativ Plural (wo?) → in denen",
+      "wo ist Schriftsprache",
+      "in + Akkusativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das ist die Schule, ___ ich gehe.",
+     "o": [
+      "in die",
+      "in der",
+      "wo"
+     ],
+     "a": "in die",
+     "r": "Wohin gehe ich? → in die (Akkusativ)."
+    },
+    {
+     "t": "mc",
+     "q": "Das ist die Schule, ___ ich lerne.",
+     "o": [
+      "in der",
+      "in die",
+      "die"
+     ],
+     "a": "in der"
+    },
+    {
+     "t": "mc",
+     "q": "Das Thema, ___ wir diskutieren, ist wichtig.",
+     "o": [
+      "über das",
+      "über dem",
+      "worüber das"
+     ],
+     "a": "über das",
+     "r": "diskutieren über + Akkusativ → über das."
+    },
+    {
+     "t": "gap",
+     "q": "Der Freund, ___ ich telefoniert habe, kommt morgen.",
+     "h": "(mit)",
+     "a": "mit dem"
+    },
+    {
+     "t": "gap",
+     "q": "Die Probleme, ___ wir sprechen, betreffen alle.",
+     "h": "(über)",
+     "a": "über die"
+    },
+    {
+     "t": "gap",
+     "q": "Das Projekt, ___ sich die Klasse engagiert, hilft Flüchtlingen.",
+     "h": "(für)",
+     "a": "für das"
+    },
+    {
+     "t": "gap",
+     "q": "Die Stadt, ___ ich wohne, ist sehr teuer.",
+     "h": "(in)",
+     "a": "in der"
+    },
+    {
+     "t": "fix",
+     "w": "Es gibt Ländern, wo Kindern in Zelten lernen.",
+     "a": "Es gibt Länder, in denen Kinder in Zelten lernen."
+    },
+    {
+     "t": "fix",
+     "w": "Das ist die Schule, wo ich lerne.",
+     "a": "Das ist die Schule, in der ich lerne.",
+     "r": "Schriftsprache: in der statt wo."
+    },
+    {
+     "t": "fix",
+     "w": "Der Freund, mit den ich spreche, ist nett.",
+     "a": "Der Freund, mit dem ich spreche, ist nett."
+    },
+    {
+     "t": "order",
+     "a": "Es gibt Länder, in denen Kinder keine Computer benutzen können.",
+     "extra": [
+      "wo"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "There are countries where children learn in tents.",
+     "a": "Es gibt Länder, in denen Kinder in Zelten lernen."
+    },
+    {
+     "t": "tr",
+     "en": "the topic we are talking about",
+     "a": "das Thema, über das wir sprechen",
+     "acc": [
+      "das Thema, worüber wir sprechen"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Es gibt Länder, in denen Kinder in Zelten lernen."
+    }
+   ]
+  },
+  {
+   "id": "u14l4",
+   "title": "Relativsätze bauen",
+   "s": "rel",
+   "gen": {
+    "relative": 3
+   },
+   "items": [
+    {
+     "t": "tf",
+     "q": "Verbinde mit einem Relativsatz:\nDie Schüler fordern mehr Lehrkräfte. Die Schüler protestieren.",
+     "a": "Die Schüler, die protestieren, fordern mehr Lehrkräfte."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit einem Relativsatz:\nIch habe einen Artikel gelesen. Der Artikel war interessant.",
+     "a": "Ich habe einen Artikel gelesen, der interessant war.",
+     "acc": [
+      "Der Artikel, den ich gelesen habe, war interessant."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit einem Relativsatz:\nWir helfen den Kindern. Die Kinder haben keine Schule.",
+     "a": "Wir helfen den Kindern, die keine Schule haben."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit einem Relativsatz:\nEs gibt Orte. In diesen Orten leben mehr Touristen als Einwohner.",
+     "a": "Es gibt Orte, in denen mehr Touristen als Einwohner leben."
+    },
+    {
+     "t": "tf",
+     "q": "Verbinde mit einem Relativsatz:\nDas ist die Lehrerin. Ich habe ihr meinen Text gegeben.",
+     "a": "Das ist die Lehrerin, der ich meinen Text gegeben habe."
+    },
+    {
+     "t": "order",
+     "a": "Die Lehrerin, der ich meinen Text gegeben habe, ist sehr streng.",
+     "chunks": [
+      "Die Lehrerin",
+      ",",
+      "der",
+      "ich",
+      "meinen Text",
+      "gegeben",
+      "habe",
+      ",",
+      "ist",
+      "sehr streng"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Artikel, den ich gestern gelesen habe, war sehr interessant."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+/* Small pages: /contact/ and the 404 page. */
+.simple { min-height: calc(100svh - 160px); padding: calc(var(--nav-h) + clamp(56px, 8vw, 104px)) 0 clamp(72px, 9vw, 120px); }
+.simple h1 { font-size: var(--t-h1); letter-spacing: -0.045em; }
+.simple .lead { margin-top: 18px; color: var(--text); }
+.simple .narrow { max-width: 640px; }
+
+/* Contact: the same form as the sheet, on the page */
+.cs-page { margin-top: clamp(28px, 4vw, 40px); }
+.cs-page .gs-form { margin-top: 0; }
+.cs-page .gs-acts .btn { flex: 0 1 auto; min-width: 200px; }
+.cs-page .gs-alt { justify-content: flex-start; }
+.cs-page .gs-done { justify-items: start; text-align: left; padding: 8px 0 0; }
+
+/* 404: every app one tap away */
+.nf-apps { list-style: none; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; max-width: 760px; margin: clamp(36px, 5vw, 56px) 0 0; padding: 0; }
+.nf-apps a { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 10px 4px; border-radius: 20px; font-size: 15px; font-weight: 800; color: var(--ink); text-align: center; -webkit-tap-highlight-color: transparent; }
+.nf-apps .app-icon { --s: 72px; transition: transform 0.4s var(--spring); }
+.nf-apps a:active .app-icon { transform: scale(0.93); }
+@media (hover: hover) { .nf-apps a:hover .app-icon { transform: translateY(-4px); } }
+.nf-home { margin-top: clamp(36px, 5vw, 56px); }
+@media (max-width: 640px) {
+  .nf-apps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .nf-apps .app-icon { --s: 64px; }
+  .cs-page .gs-acts .btn { flex: 1 1 auto; }
+}
+
+/* Impressum and Datenschutz: long text, easy to read */
+.legal h2 { margin-top: clamp(32px, 4vw, 44px); font-size: 22px; letter-spacing: -0.02em; }
+.legal h3 { margin-top: 22px; font-size: 17px; }
+.legal p, .legal li { margin-top: 10px; font-size: 17px; line-height: 1.6; color: var(--text); }
+.legal ul { margin-top: 6px; padding-left: 22px; }
+.legal a { text-decoration: underline; }
+.legal .todo { background: #fff3c4; border-radius: 6px; padding: 0 4px; color: var(--ink); }
+.legal .stand { margin-top: 40px; font-size: 15px; }

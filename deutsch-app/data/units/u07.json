@@ -1,0 +1,769 @@
+{
+ "id": "u07",
+ "n": 7,
+ "phase": 1,
+ "level": "B1",
+ "title": "Adjektivdeklination",
+ "weak": true,
+ "tips": {
+  "de": "Die Adjektivendung hängt vom Artikel davor ab. 1) Nach der-Wörtern (der, dieser, jeder, alle, manche*): -e oder -en. Im Plural und in allen Dativ/Genitiv-Formen immer -en. 2) Nach ein-Wörtern (ein, kein, mein …): wie nach der-Wörtern, außer wo das ein-Wort keine Endung hat (Nom. m: ein neuer Plan; Nom./Akk. n: ein neues Gesetz). 3) Ohne Artikel (auch nach viele, einige, mehrere, Zahlen): Das Adjektiv übernimmt die Endung des Artikels (guter Unterricht, mit vielen neuen Regeln).",
+  "en": "The adjective ending depends on what comes before it. After der-words: mostly -e/-en (plural always -en). After ein-words: the adjective shows the gender where 'ein' can't (ein neuer, ein neues). With no article: the adjective takes the article's ending itself.",
+  "contrast": "English adjectives never change: 'the new law, a new law, new laws'. In German, you need to know three things first: which article type, which case, which gender/number. A quick rule that saves most points: after die/den/der/des in the plural, and in every dative or genitive, it's always -en. 'die verschiedenen Aspekte', 'mit vielen Menschen'.",
+  "table": [
+   [
+    "",
+    "maskulin",
+    "feminin",
+    "neutral",
+    "Plural"
+   ],
+   [
+    "der-Wort Nom.",
+    "der neue",
+    "die neue",
+    "das neue",
+    "die neuen"
+   ],
+   [
+    "der-Wort Akk.",
+    "den neuen",
+    "die neue",
+    "das neue",
+    "die neuen"
+   ],
+   [
+    "ein-Wort Nom.",
+    "ein neuer",
+    "eine neue",
+    "ein neues",
+    "keine neuen"
+   ],
+   [
+    "ein-Wort Akk.",
+    "einen neuen",
+    "eine neue",
+    "ein neues",
+    "keine neuen"
+   ],
+   [
+    "Dativ (alle)",
+    "-en",
+    "-en",
+    "-en",
+    "-en (ohne Artikel: -en)"
+   ],
+   [
+    "ohne Artikel Nom.",
+    "guter",
+    "gute",
+    "gutes",
+    "gute"
+   ]
+  ],
+  "examples": [
+   "die verschiedenen Aspekte dieses Themas",
+   "keine überfüllten Klassen",
+   "mit vielen Menschen",
+   "unser eigenes Leben",
+   "ein neues Gesetz – das neue Gesetz – neue Gesetze"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u07l1",
+   "title": "Nach der, die, das",
+   "s": "adj",
+   "gen": {
+    "adjDer": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "die ___ Aspekte dieses Themas",
+     "h": "(verschieden)",
+     "o": [
+      "verschiedenen",
+      "verschiedene",
+      "verschiedener"
+     ],
+     "a": "verschiedenen",
+     "y": [
+      "der-Wort + Plural → immer -en",
+      "Plural → -e",
+      "Genitiv → -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Der ___ Lehrplan ist umstritten.",
+     "h": "(neu)",
+     "o": [
+      "neue",
+      "neuen",
+      "neuer"
+     ],
+     "a": "neue",
+     "y": [
+      "der-Wort, Nominativ maskulin → -e",
+      "maskulin → immer -en",
+      "ohne Artikel → -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir diskutieren über den ___ Lehrplan.",
+     "h": "(neu)",
+     "o": [
+      "neuen",
+      "neue",
+      "neuer"
+     ],
+     "a": "neuen",
+     "y": [
+      "der-Wort, Akkusativ maskulin → -en",
+      "Nominativ → -e",
+      "ohne Artikel → -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das ___ Gesetz gilt ab Jänner.",
+     "h": "(neu)",
+     "o": [
+      "neue",
+      "neues",
+      "neuen"
+     ],
+     "a": "neue"
+    },
+    {
+     "t": "mc",
+     "q": "Die Schüler kritisieren die ___ Regel.",
+     "h": "(streng)",
+     "o": [
+      "strenge",
+      "strengen",
+      "strenger"
+     ],
+     "a": "strenge"
+    },
+    {
+     "t": "mc",
+     "q": "Mit dem ___ Gesetz sind nicht alle zufrieden.",
+     "h": "(neu)",
+     "o": [
+      "neuen",
+      "neue",
+      "neuem"
+     ],
+     "a": "neuen",
+     "y": [
+      "Dativ → immer -en",
+      "neutral → -e",
+      "Dativ neutral → -em"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ Klassen sind ein großes Problem.",
+     "h": "(überfüllt)",
+     "a": "überfüllten"
+    },
+    {
+     "t": "gap",
+     "q": "Ich gehe auf die ___ Argumente ein.",
+     "h": "(wichtigst-)",
+     "a": "wichtigsten"
+    },
+    {
+     "t": "gap",
+     "q": "Die Meinung der ___ Generation ist wichtig.",
+     "h": "(jung)",
+     "a": "jungen"
+    },
+    {
+     "t": "gap",
+     "q": "Dieser ___ Trend ist gefährlich.",
+     "h": "(neu)",
+     "a": "neue"
+    },
+    {
+     "t": "gap",
+     "q": "Jeder ___ Schüler bekommt ein Tablet.",
+     "h": "(neu)",
+     "a": "neue"
+    },
+    {
+     "t": "gap",
+     "q": "Alle ___ Menschen haben die gleichen Rechte.",
+     "h": "(jung)",
+     "a": "jungen",
+     "r": "Nach „alle“ → wie nach der-Wörtern: -en."
+    },
+    {
+     "t": "fix",
+     "w": "die verschiedene Aspekte dieses Themas",
+     "a": "die verschiedenen Aspekte dieses Themas"
+    },
+    {
+     "t": "fix",
+     "w": "Wir sprechen über den aktuelle Streik.",
+     "a": "Wir sprechen über den aktuellen Streik."
+    },
+    {
+     "t": "fix",
+     "w": "Die soziale Medien beeinflussen uns.",
+     "a": "Die sozialen Medien beeinflussen uns."
+    },
+    {
+     "t": "fix",
+     "w": "In den sozialen Medien sieht man die schöne Urlaubsfotos.",
+     "a": "In den sozialen Medien sieht man die schönen Urlaubsfotos."
+    },
+    {
+     "t": "tr",
+     "en": "the different aspects",
+     "a": "die verschiedenen Aspekte"
+    },
+    {
+     "t": "tr",
+     "en": "on social media",
+     "a": "in den sozialen Medien"
+    },
+    {
+     "t": "listen",
+     "a": "Ich gehe auf die verschiedenen Aspekte dieses Themas ein."
+    }
+   ]
+  },
+  {
+   "id": "u07l2",
+   "title": "Nach ein, kein, mein",
+   "s": "adj",
+   "gen": {
+    "adjEin": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Das ist ein ___ Argument.",
+     "h": "(gut)",
+     "o": [
+      "gutes",
+      "gute",
+      "guten"
+     ],
+     "a": "gutes",
+     "y": [
+      "ein ohne Endung, neutral → Adjektiv zeigt es: -es",
+      "nach ein immer -e",
+      "Akkusativ → -en"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ein ___ Radweg wird gebaut.",
+     "h": "(neu)",
+     "o": [
+      "neuer",
+      "neue",
+      "neuen"
+     ],
+     "a": "neuer",
+     "y": [
+      "ein ohne Endung, maskulin Nominativ → -er",
+      "nach ein → -e",
+      "maskulin → -en"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir brauchen einen ___ Radweg.",
+     "h": "(neu)",
+     "o": [
+      "neuen",
+      "neuer",
+      "neue"
+     ],
+     "a": "neuen"
+    },
+    {
+     "t": "mc",
+     "q": "Es gibt keine ___ Klassen mehr.",
+     "h": "(überfüllt)",
+     "o": [
+      "überfüllten",
+      "überfüllte",
+      "überfüllter"
+     ],
+     "a": "überfüllten",
+     "y": [
+      "kein-Wort im Plural → -en",
+      "Plural ohne Artikel → -e",
+      "Genitiv → -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Verantwortung für unser ___ Leben",
+     "h": "(eigen)",
+     "o": [
+      "eigenes",
+      "eigene",
+      "eigenen"
+     ],
+     "a": "eigenes",
+     "y": [
+      "unser ohne Endung, neutral Akkusativ → -es",
+      "nach unser → -e",
+      "Akkusativ → -en"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Sie ist mit ihrer ___ Note zufrieden.",
+     "h": "(gut)",
+     "o": [
+      "guten",
+      "gute",
+      "guter"
+     ],
+     "a": "guten"
+    },
+    {
+     "t": "gap",
+     "q": "Das ist eine ___ Lösung.",
+     "h": "(einfach)",
+     "a": "einfache"
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe einen ___ Vorschlag.",
+     "h": "(konkret)",
+     "a": "konkreten"
+    },
+    {
+     "t": "gap",
+     "q": "Mein ___ Argument ist, dass …",
+     "h": "(wichtigst-)",
+     "a": "wichtigstes"
+    },
+    {
+     "t": "gap",
+     "q": "Wir haben keinen ___ Computer.",
+     "h": "(eigen)",
+     "a": "eigenen"
+    },
+    {
+     "t": "gap",
+     "q": "Sie hat ein ___ Smartphone.",
+     "h": "(teuer)",
+     "a": "teures",
+     "r": "teuer → teur- + Endung (das e fällt weg)."
+    },
+    {
+     "t": "gap",
+     "q": "Das ist kein ___ Thema.",
+     "h": "(neu)",
+     "a": "neues"
+    },
+    {
+     "t": "fix",
+     "w": "Es gibt keine überfüllte Klassen.",
+     "a": "Es gibt keine überfüllten Klassen."
+    },
+    {
+     "t": "fix",
+     "w": "Das ist ein wichtige Thema.",
+     "a": "Das ist ein wichtiges Thema."
+    },
+    {
+     "t": "fix",
+     "w": "Verantwortung für unsere eigenes Leben übernehmen",
+     "a": "Verantwortung für unser eigenes Leben übernehmen"
+    },
+    {
+     "t": "fix",
+     "w": "Er hat einen gute Idee.",
+     "a": "Er hat eine gute Idee."
+    },
+    {
+     "t": "tr",
+     "en": "That is an important argument.",
+     "a": "Das ist ein wichtiges Argument."
+    },
+    {
+     "t": "tr",
+     "en": "We need a new solution.",
+     "a": "Wir brauchen eine neue Lösung."
+    },
+    {
+     "t": "tr",
+     "en": "no overcrowded classes",
+     "a": "keine überfüllten Klassen"
+    },
+    {
+     "t": "listen",
+     "a": "Wir brauchen keine überfüllten Klassen, sondern mehr Lehrkräfte."
+    }
+   ]
+  },
+  {
+   "id": "u07l3",
+   "title": "Ohne Artikel, viele, einige",
+   "s": "adj",
+   "gen": {
+    "adjNull": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Mit ___ Menschen kommt viel Müll.",
+     "h": "(viel)",
+     "o": [
+      "vielen",
+      "viele",
+      "vieler"
+     ],
+     "a": "vielen",
+     "y": [
+      "mit + Dativ Plural → -en",
+      "Plural → -e",
+      "Genitiv → -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir brauchen ___ Lehrkräfte.",
+     "h": "(gut, ohne Artikel)",
+     "o": [
+      "gute",
+      "guten",
+      "guter"
+     ],
+     "a": "gute",
+     "y": [
+      "ohne Artikel, Akkusativ Plural → -e",
+      "Plural immer -en",
+      "Genitiv Plural → -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "___ Unterricht ist wichtig.",
+     "h": "(gut, ohne Artikel)",
+     "o": [
+      "Guter",
+      "Gute",
+      "Guten"
+     ],
+     "a": "Guter"
+    },
+    {
+     "t": "mc",
+     "q": "Wir trinken ___ Wasser.",
+     "h": "(kalt)",
+     "o": [
+      "kaltes",
+      "kalte",
+      "kalten"
+     ],
+     "a": "kaltes"
+    },
+    {
+     "t": "mc",
+     "q": "Viele ___ Menschen ziehen in die Stadt.",
+     "h": "(jung)",
+     "o": [
+      "junge",
+      "jungen",
+      "junger"
+     ],
+     "a": "junge",
+     "r": "Nach „viele“ (Nom./Akk.) → -e, wie ohne Artikel."
+    },
+    {
+     "t": "mc",
+     "q": "Mit viel ___ Geduld geht es.",
+     "h": "(groß)",
+     "o": [
+      "großer",
+      "große",
+      "großen"
+     ],
+     "a": "großer",
+     "r": "„viel“ ohne Endung → Adjektiv trägt die Endung: Dativ feminin -er."
+    },
+    {
+     "t": "gap",
+     "q": "Einige ___ Schulen haben schon ein Handyverbot.",
+     "h": "(österreichisch)",
+     "a": "österreichische"
+    },
+    {
+     "t": "gap",
+     "q": "In ___ Ländern lernen Kinder in Zelten.",
+     "h": "(arm, Dativ Plural)",
+     "a": "armen"
+    },
+    {
+     "t": "gap",
+     "q": "Das ist ein Problem ___ Gesellschaften.",
+     "h": "(modern, Genitiv Plural)",
+     "a": "moderner"
+    },
+    {
+     "t": "gap",
+     "q": "Mehrere ___ Studien zeigen das.",
+     "h": "(aktuell)",
+     "a": "aktuelle"
+    },
+    {
+     "t": "gap",
+     "q": "Wir wünschen uns ___ Klassen.",
+     "h": "(klein)",
+     "a": "kleinere",
+     "acc": [
+      "kleine"
+     ],
+     "r": "Akkusativ Plural ohne Artikel: -e (kleine / kleinere)."
+    },
+    {
+     "t": "fix",
+     "w": "Mit viele Menschen kommt viele Müll.",
+     "a": "Mit vielen Menschen kommt viel Müll.",
+     "r": "„viel“ vor unzählbaren Nomen ohne Endung: viel Müll."
+    },
+    {
+     "t": "fix",
+     "w": "Wir brauchen bessere Lernbedingungen und mehrere Lehrkräfte.",
+     "a": "Wir brauchen bessere Lernbedingungen und mehr Lehrkräfte.",
+     "r": "mehr = more (Menge), mehrere = several."
+    },
+    {
+     "t": "fix",
+     "w": "Gute Unterricht ist wichtig.",
+     "a": "Guter Unterricht ist wichtig."
+    },
+    {
+     "t": "tr",
+     "en": "with many people",
+     "a": "mit vielen Menschen"
+    },
+    {
+     "t": "tr",
+     "en": "Good teachers are important.",
+     "a": "Gute Lehrer sind wichtig.",
+     "acc": [
+      "Gute Lehrkräfte sind wichtig.",
+      "Gute Lehrerinnen und Lehrer sind wichtig."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Mit vielen Menschen kommt viel Müll."
+    }
+   ]
+  },
+  {
+   "id": "u07l4",
+   "title": "Adjektive als Nomen",
+   "s": "adj.nomen",
+   "gen": {
+    "adjEnding": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Viele ___ haben Angst vor der Zukunft.",
+     "h": "(jugendlich → Nomen)",
+     "o": [
+      "Jugendliche",
+      "Jugendlichen",
+      "jugendliche"
+     ],
+     "a": "Jugendliche",
+     "y": [
+      "ohne Artikel, Nominativ Plural → -e; als Nomen groß",
+      "Plural immer -en",
+      "Adjektiv → klein"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die ___ wollen mitbestimmen.",
+     "h": "(jugendlich → Nomen)",
+     "o": [
+      "Jugendlichen",
+      "Jugendliche",
+      "Jugendlicher"
+     ],
+     "a": "Jugendlichen"
+    },
+    {
+     "t": "mc",
+     "q": "Wenn sie nicht den ___ Probleme machen …",
+     "h": "(unschuldig → Nomen)",
+     "o": [
+      "Unschuldigen",
+      "Unschuldige",
+      "unschuldigen"
+     ],
+     "a": "Unschuldigen"
+    },
+    {
+     "t": "mc",
+     "q": "Ein ___ hat mir geholfen.",
+     "h": "(bekannt → Nomen, maskulin)",
+     "o": [
+      "Bekannter",
+      "Bekannte",
+      "Bekannten"
+     ],
+     "a": "Bekannter"
+    },
+    {
+     "t": "gap",
+     "q": "Die Rechte der ___ müssen geschützt werden.",
+     "h": "(arbeitslos → Nomen, Plural)",
+     "a": "Arbeitslosen"
+    },
+    {
+     "t": "gap",
+     "q": "Das ___ ist, dass niemand zuhört.",
+     "h": "(schlimm → Nomen)",
+     "a": "Schlimmste",
+     "r": "Nominalisierte Adjektive schreibt man groß."
+    },
+    {
+     "t": "gap",
+     "q": "Wir müssen etwas ___ tun.",
+     "h": "(sinnvoll → Nomen)",
+     "a": "Sinnvolles",
+     "r": "etwas/nichts/viel + Adjektiv → groß mit -es: etwas Sinnvolles."
+    },
+    {
+     "t": "fix",
+     "w": "Viele jugendliche nutzen TikTok.",
+     "a": "Viele Jugendliche nutzen TikTok."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn sie nicht für die Unschuldige Probleme machen …",
+     "a": "Wenn sie nicht den Unschuldigen Probleme machen …"
+    },
+    {
+     "t": "fix",
+     "w": "Ich wünsche dir alles gute.",
+     "a": "Ich wünsche dir alles Gute."
+    },
+    {
+     "t": "tr",
+     "en": "Young people want to have a say.",
+     "a": "Jugendliche wollen mitbestimmen.",
+     "acc": [
+      "Die Jugendlichen wollen mitbestimmen.",
+      "Junge Menschen wollen mitbestimmen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "something new",
+     "a": "etwas Neues"
+    },
+    {
+     "t": "listen",
+     "a": "Viele Jugendliche wollen etwas Sinnvolles tun."
+    }
+   ]
+  },
+  {
+   "id": "u07l5",
+   "title": "Endungs-Mix",
+   "s": "adj",
+   "gen": {
+    "adjEnding": 4
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Wir fordern ___ Klassen und ___ Lehrkräfte.",
+     "h": "(klein → Komparativ, gut ausgebildet)",
+     "a": [
+      "kleinere",
+      "gut ausgebildete"
+     ],
+     "r": "Akkusativ Plural ohne Artikel → -e."
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ Mieten sind für ___ Familien ein Problem.",
+     "h": "(hoch, jung)",
+     "a": [
+      "hohen",
+      "junge"
+     ],
+     "r": "hoch → hoh- + Endung. „für junge Familien“: Akkusativ ohne Artikel → -e."
+    },
+    {
+     "t": "gap",
+     "q": "Aus ___ Sicht ist das ein ___ Fehler.",
+     "h": "(mein, groß)",
+     "a": [
+      "meiner",
+      "großer"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Das ___ Handyverbot hat viele ___ Seiten.",
+     "h": "(neu, positiv)",
+     "a": [
+      "neue",
+      "positive"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Die verschiedenen Aspekte dieses Themas sind wichtig.",
+     "extra": [
+      "verschiedene"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Wir brauchen keine überfüllten Klassen.",
+     "extra": [
+      "überfüllte"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Das ist ein wichtiges Argument.",
+     "extra": [
+      "wichtige"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Social media has a big influence on young people.",
+     "a": "Soziale Medien haben einen großen Einfluss auf junge Menschen.",
+     "acc": [
+      "Die sozialen Medien haben einen großen Einfluss auf junge Menschen.",
+      "Soziale Medien haben großen Einfluss auf junge Menschen.",
+      "Soziale Medien haben einen großen Einfluss auf Jugendliche."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The new rule has many advantages.",
+     "a": "Die neue Regel hat viele Vorteile."
+    },
+    {
+     "t": "listen",
+     "a": "Die neuen Regeln haben viele positive Seiten."
+    }
+   ]
+  }
+ ]
+}

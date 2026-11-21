@@ -1,0 +1,604 @@
+{
+ "id": "u09",
+ "n": 9,
+ "phase": 1,
+ "level": "A2",
+ "title": "Verben: Präsens, trennbar, Modalverben",
+ "tips": {
+  "de": "Im Präsens hat jede Person eine eigene Endung: ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen. Manche Verben ändern in der du- und er-Form den Vokal (lesen → du liest, fahren → er fährt, nehmen → er nimmt). Trennbare Verben schicken die Vorsilbe ans Satzende: Ich rufe dich morgen an. Modalverben (können, müssen, dürfen, sollen, wollen, mögen/möchten) stehen auf Position 2, das zweite Verb kommt als Infinitiv ans Ende: Wir müssen mehr für das Klima tun.",
+  "en": "Each person has its own ending. Some verbs change their vowel in du/er forms. Separable verbs split: the prefix goes to the end. Modal verbs are in position 2 and the main verb goes to the end as an infinitive.",
+  "contrast": "English: 'We must do more for the climate.' Both verbs are together. German makes a bracket (Satzklammer): 'Wir müssen mehr für das Klima tun.' Everything else goes between the modal and the infinitive. Separable verbs work the same way: 'Ich rufe dich morgen an.'",
+  "table": [
+   [
+    "",
+    "lesen",
+    "fahren",
+    "können",
+    "anrufen"
+   ],
+   [
+    "ich",
+    "lese",
+    "fahre",
+    "kann",
+    "rufe … an"
+   ],
+   [
+    "du",
+    "liest",
+    "fährst",
+    "kannst",
+    "rufst … an"
+   ],
+   [
+    "er/sie/es",
+    "liest",
+    "fährt",
+    "kann",
+    "ruft … an"
+   ],
+   [
+    "wir",
+    "lesen",
+    "fahren",
+    "können",
+    "rufen … an"
+   ],
+   [
+    "ihr",
+    "lest",
+    "fahrt",
+    "könnt",
+    "ruft … an"
+   ],
+   [
+    "sie/Sie",
+    "lesen",
+    "fahren",
+    "können",
+    "rufen … an"
+   ]
+  ],
+  "examples": [
+   "Er liest jeden Tag die Zeitung.",
+   "Die Schüler nehmen an der Demonstration teil.",
+   "Wir müssen mehr für den Klimaschutz tun.",
+   "Viele Familien können sich keinen Urlaub leisten.",
+   "Der Zug kommt um acht Uhr an."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u09l1",
+   "title": "Präsens & Vokalwechsel",
+   "s": "verb.praesens",
+   "gen": {
+    "present": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Er ___ jeden Tag die Zeitung.",
+     "h": "(lesen)",
+     "o": [
+      "liest",
+      "lest",
+      "lesen"
+     ],
+     "a": "liest"
+    },
+    {
+     "t": "mc",
+     "q": "Sie ___ mit dem Rad zur Schule.",
+     "h": "(fahren, Singular)",
+     "o": [
+      "fährt",
+      "fahrt",
+      "fährst"
+     ],
+     "a": "fährt"
+    },
+    {
+     "t": "mc",
+     "q": "Du ___ zu viel Zeit am Handy.",
+     "h": "(verbringen)",
+     "o": [
+      "verbringst",
+      "verbringt",
+      "verbringe"
+     ],
+     "a": "verbringst"
+    },
+    {
+     "t": "mc",
+     "q": "Der Staat ___ die Familien.",
+     "h": "(unterstützen)",
+     "o": [
+      "unterstützt",
+      "unterstützen",
+      "unterstützst"
+     ],
+     "a": "unterstützt"
+    },
+    {
+     "t": "gap",
+     "q": "Wer ___ mir bei der Hausübung?",
+     "h": "(helfen)",
+     "a": "hilft"
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin ___ die Texte.",
+     "h": "(korrigieren)",
+     "a": "korrigiert"
+    },
+    {
+     "t": "gap",
+     "q": "Was ___ du davon?",
+     "h": "(halten)",
+     "a": "hältst"
+    },
+    {
+     "t": "gap",
+     "q": "Mein Bruder ___ viel Fleisch.",
+     "h": "(essen)",
+     "a": "isst"
+    },
+    {
+     "t": "gap",
+     "q": "___ du die Antwort?",
+     "h": "(wissen)",
+     "a": "Weißt"
+    },
+    {
+     "t": "gap",
+     "q": "Ihr ___ die Regeln genau.",
+     "h": "(kennen)",
+     "a": "kennt"
+    },
+    {
+     "t": "gap",
+     "q": "Der Tourismus ___ Arbeitsplätze.",
+     "h": "(schaffen)",
+     "a": "schafft"
+    },
+    {
+     "t": "fix",
+     "w": "Er lest gern Krimis.",
+     "a": "Er liest gern Krimis."
+    },
+    {
+     "t": "fix",
+     "w": "Sie fahrt jeden Tag mit dem Bus.",
+     "a": "Sie fährt jeden Tag mit dem Bus."
+    },
+    {
+     "t": "fix",
+     "w": "Diese Probleme sind wichtig, da die sowohl einzelne Menschen als auch die Gesellschaft betrifft.",
+     "a": "Diese Probleme sind wichtig, da sie sowohl einzelne Menschen als auch die Gesellschaft betreffen.",
+     "r": "„sie“ (Plural) → Verb Plural: betreffen."
+    },
+    {
+     "t": "tr",
+     "en": "She reads the newspaper every day.",
+     "a": "Sie liest jeden Tag die Zeitung.",
+     "acc": [
+      "Sie liest die Zeitung jeden Tag."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "He takes the bus.",
+     "a": "Er nimmt den Bus."
+    },
+    {
+     "t": "listen",
+     "a": "Er liest jeden Tag die Zeitung im Internet."
+    }
+   ]
+  },
+  {
+   "id": "u09l2",
+   "title": "Trennbare Verben",
+   "s": "verb.trennbar",
+   "gen": {
+    "present": 2
+   },
+   "items": [
+    {
+     "t": "order",
+     "a": "Die Schüler nehmen an der Demonstration teil.",
+     "extra": [
+      "teilnehmen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich rufe dich morgen an.",
+     "extra": [
+      "anrufe"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Der Zug kommt um acht Uhr an."
+    },
+    {
+     "t": "order",
+     "a": "Das Handy lenkt viele Schüler vom Lernen ab."
+    },
+    {
+     "t": "gap",
+     "q": "Wann ___ die Schule ___?",
+     "h": "(anfangen)",
+     "a": [
+      "fängt",
+      "an"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Viele Jugendliche ___ zu viel Geld für Kleidung ___.",
+     "h": "(ausgeben)",
+     "a": [
+      "geben",
+      "aus"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich ___ mich gut auf die Schularbeit ___.",
+     "h": "(vorbereiten)",
+     "a": [
+      "bereite",
+      "vor"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Jeder ___ etwas zum Klimaschutz ___.",
+     "h": "(beitragen)",
+     "a": [
+      "trägt",
+      "bei"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Der Unterricht ___ heute ___.",
+     "h": "(ausfallen)",
+     "a": [
+      "fällt",
+      "aus"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wir ___ euch zur Party ___.",
+     "h": "(einladen)",
+     "a": [
+      "laden",
+      "ein"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich anrufe dich morgen.",
+     "a": "Ich rufe dich morgen an.",
+     "s": "satzbau.trennbar"
+    },
+    {
+     "t": "fix",
+     "w": "Die Schüler teilnehmen an der Demonstration.",
+     "a": "Die Schüler nehmen an der Demonstration teil."
+    },
+    {
+     "t": "tr",
+     "en": "The students take part in the protest.",
+     "a": "Die Schüler nehmen an dem Protest teil.",
+     "acc": [
+      "Die Schüler nehmen am Protest teil.",
+      "Die Schüler nehmen an der Demonstration teil."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The lesson starts at eight.",
+     "a": "Der Unterricht fängt um acht an.",
+     "acc": [
+      "Der Unterricht fängt um acht Uhr an.",
+      "Der Unterricht beginnt um acht.",
+      "Der Unterricht beginnt um acht Uhr."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Viele Schüler nehmen am Freitag an der Demonstration teil."
+    }
+   ]
+  },
+  {
+   "id": "u09l3",
+   "title": "Modalverben & Satzklammer",
+   "s": "verb.modal",
+   "gen": {
+    "present": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wir ___ mehr für das Klima tun.",
+     "o": [
+      "müssen",
+      "muss",
+      "müsst"
+     ],
+     "a": "müssen"
+    },
+    {
+     "t": "mc",
+     "q": "Man ___ im Internet fast alles lernen.",
+     "o": [
+      "kann",
+      "können",
+      "kannst"
+     ],
+     "a": "kann"
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Wir müssen mehr für das Klima tun.",
+      "Wir müssen tun mehr für das Klima.",
+      "Wir müssen mehr tun für das Klima."
+     ],
+     "a": "Wir müssen mehr für das Klima tun.",
+     "y": [
+      "Modalverb Position 2, Infinitiv ans Ende (Satzklammer)",
+      "Wie im Englischen: Verben zusammen",
+      "Infinitiv nach dem Objekt egal"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Du ___ hier nicht rauchen.",
+     "h": "(not allowed)",
+     "o": [
+      "darfst",
+      "musst",
+      "kannst"
+     ],
+     "a": "darfst",
+     "r": "nicht dürfen = not allowed. nicht müssen = not have to (!)."
+    },
+    {
+     "t": "mc",
+     "q": "Du ___ heute nicht kommen – es gibt keinen Unterricht.",
+     "h": "(don't have to)",
+     "o": [
+      "musst",
+      "darfst",
+      "sollst"
+     ],
+     "a": "musst",
+     "r": "nicht müssen = don't have to. Achtung: English 'must not' = nicht dürfen!"
+    },
+    {
+     "t": "order",
+     "a": "Viele Familien können sich keinen Urlaub leisten."
+    },
+    {
+     "t": "order",
+     "a": "Der Staat sollte die Bildung stärker fördern."
+    },
+    {
+     "t": "order",
+     "a": "Wir wollen nach der Matura im Ausland studieren."
+    },
+    {
+     "t": "order",
+     "a": "Schulproteste können wirkliche Änderungen bewirken."
+    },
+    {
+     "t": "gap",
+     "q": "Die Regierung ___ endlich handeln.",
+     "h": "(müssen)",
+     "a": "muss"
+    },
+    {
+     "t": "gap",
+     "q": "___ du mir helfen?",
+     "h": "(können)",
+     "a": "Kannst"
+    },
+    {
+     "t": "gap",
+     "q": "Ihr ___ das Handy in der Pause benutzen.",
+     "h": "(dürfen)",
+     "a": "dürft"
+    },
+    {
+     "t": "gap",
+     "q": "Ich ___ später Medizin studieren.",
+     "h": "(möchten)",
+     "a": "möchte"
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen tun mehr für die Umwelt.",
+     "a": "Wir müssen mehr für die Umwelt tun.",
+     "s": "satzbau.klammer"
+    },
+    {
+     "t": "fix",
+     "w": "Man kann lernen fast alles im Internet.",
+     "a": "Man kann fast alles im Internet lernen.",
+     "s": "satzbau.klammer"
+    },
+    {
+     "t": "fix",
+     "w": "Er will zu studieren Medizin.",
+     "a": "Er will Medizin studieren.",
+     "r": "Nach Modalverben: Infinitiv ohne „zu“, am Ende.",
+     "s": "satzbau.klammer"
+    },
+    {
+     "t": "tr",
+     "en": "We must do more for the climate.",
+     "a": "Wir müssen mehr für das Klima tun.",
+     "acc": [
+      "Wir müssen mehr für den Klimaschutz tun."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "You must not use your phone in class.",
+     "a": "Du darfst das Handy im Unterricht nicht benutzen.",
+     "acc": [
+      "Du darfst im Unterricht das Handy nicht benutzen.",
+      "Ihr dürft das Handy im Unterricht nicht benutzen.",
+      "Du darfst dein Handy im Unterricht nicht benutzen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Many families cannot afford a holiday.",
+     "a": "Viele Familien können sich keinen Urlaub leisten."
+    },
+    {
+     "t": "listen",
+     "a": "Der Staat sollte die Bildung stärker fördern."
+    }
+   ]
+  },
+  {
+   "id": "u09l4",
+   "title": "fordern, fördern & Co.",
+   "s": "wort.verb",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Schüler ___ bessere Lernbedingungen.",
+     "h": "(= verlangen)",
+     "o": [
+      "fordern",
+      "fördern"
+     ],
+     "a": "fordern",
+     "keepOrder": true,
+     "y": [
+      "fordern = verlangen (demand)",
+      "fördern = unterstützen (support)",
+      "beide bedeuten dasselbe"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Der Staat soll talentierte Schüler ___.",
+     "h": "(= unterstützen)",
+     "o": [
+      "fordern",
+      "fördern"
+     ],
+     "a": "fördern",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Schulproteste können Änderungen ___.",
+     "o": [
+      "bewirken",
+      "fördern",
+      "machen"
+     ],
+     "a": "bewirken"
+    },
+    {
+     "t": "mc",
+     "q": "Die Regierung will die Lehre stärker ___.",
+     "o": [
+      "fördern",
+      "fordern"
+     ],
+     "a": "fördern",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Die Gewerkschaft ___ höhere Löhne.",
+     "o": [
+      "fordert",
+      "fördert"
+     ],
+     "a": "fordert",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Ich ___ einen Brief an die Redaktion.",
+     "o": [
+      "schreibe",
+      "mache",
+      "nehme"
+     ],
+     "a": "schreibe"
+    },
+    {
+     "t": "mc",
+     "q": "Wir ___ eine Entscheidung.",
+     "o": [
+      "treffen",
+      "machen",
+      "nehmen"
+     ],
+     "a": "treffen",
+     "r": "eine Entscheidung treffen (nicht machen)."
+    },
+    {
+     "t": "mc",
+     "q": "Er ___ an der Diskussion teil.",
+     "o": [
+      "nimmt",
+      "macht",
+      "gibt"
+     ],
+     "a": "nimmt"
+    },
+    {
+     "t": "fix",
+     "w": "Schülern in Frankreich fördern bessere Lernbedingungen.",
+     "a": "Schüler in Frankreich fordern bessere Lernbedingungen."
+    },
+    {
+     "t": "fix",
+     "w": "Auf der einen Seite können Proteste Änderungen fördern.",
+     "a": "Auf der einen Seite können Proteste Änderungen bewirken."
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen eine Entscheidung machen.",
+     "a": "Wir müssen eine Entscheidung treffen."
+    },
+    {
+     "t": "tr",
+     "en": "The students demand smaller classes.",
+     "a": "Die Schüler fordern kleinere Klassen."
+    },
+    {
+     "t": "tr",
+     "en": "The state should support young families.",
+     "a": "Der Staat sollte junge Familien unterstützen.",
+     "acc": [
+      "Der Staat sollte junge Familien fördern.",
+      "Der Staat soll junge Familien unterstützen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Schüler fordern, dass der Staat die Bildung stärker fördert."
+    }
+   ]
+  }
+ ]
+}

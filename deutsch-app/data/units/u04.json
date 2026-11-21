@@ -1,0 +1,821 @@
+{
+ "id": "u04",
+ "n": 4,
+ "phase": 1,
+ "level": "A2",
+ "title": "Pronomen: Personal, Reflexiv, Possessiv",
+ "weak": true,
+ "tips": {
+  "de": "Personalpronomen ändern sich nach dem Fall: ich – mich – mir, er – ihn – ihm, sie – sie – ihr, wir – uns – uns, sie – sie – ihnen. Reflexivpronomen zeigen auf das Subjekt zurück: ich wasche mich, er/sie/man interessiert sich. Possessivartikel (mein, dein, sein, ihr, unser, euer, ihr/Ihr) bekommen die Endung vom Nomen dahinter – genau wie „ein“: ihr Traum, ihren Traum (Akk.), ihrem Traum (Dat.), ihre Träume (Plural).",
+  "en": "Personal pronouns change with the case, as in English he/him. Reflexive pronouns refer back to the subject (sich = himself/herself/themselves). Possessives (mein, sein, ihr …) take the ending of the noun they stand before, like 'ein'.",
+  "contrast": "In English 'their dreams' never changes. In German the possessive changes with the case and number of the NOUN: ihre Träume (Akk. Plural), mit ihren Träumen (Dat. Plural). Your mistake 'ihrem Träume' mixed a dative ending with a plural noun. First decide the noun's case and number, then add the ending.",
+  "table": [
+   [
+    "",
+    "ich",
+    "du",
+    "er",
+    "sie",
+    "es",
+    "wir",
+    "ihr",
+    "sie/Sie"
+   ],
+   [
+    "Akk.",
+    "mich",
+    "dich",
+    "ihn",
+    "sie",
+    "es",
+    "uns",
+    "euch",
+    "sie/Sie"
+   ],
+   [
+    "Dat.",
+    "mir",
+    "dir",
+    "ihm",
+    "ihr",
+    "ihm",
+    "uns",
+    "euch",
+    "ihnen/Ihnen"
+   ],
+   [
+    "Reflexiv",
+    "mich/mir",
+    "dich/dir",
+    "sich",
+    "sich",
+    "sich",
+    "uns",
+    "euch",
+    "sich"
+   ],
+   [
+    "Possessiv",
+    "mein-",
+    "dein-",
+    "sein-",
+    "ihr-",
+    "sein-",
+    "unser-",
+    "euer-",
+    "ihr-/Ihr-"
+   ]
+  ],
+  "examples": [
+   "Falls sie ihre Träume erreichen …",
+   "Wenn der Staat ihre Träume nicht unterstützen will …",
+   "Verantwortung für unser eigenes Leben übernehmen",
+   "Die Schüler setzen sich für den Klimaschutz ein.",
+   "Ich helfe ihr. Ich frage ihn."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u04l1",
+   "title": "Personalpronomen",
+   "s": "pron.personal",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Ich frage ___ (der Lehrer → Pronomen).",
+     "o": [
+      "ihn",
+      "ihm",
+      "er"
+     ],
+     "a": "ihn",
+     "y": [
+      "fragen + Akkusativ (wen?) → ihn",
+      "fragen + Dativ → ihm",
+      "Nominativ → er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich helfe ___ (die Freundin → Pronomen).",
+     "o": [
+      "ihr",
+      "sie",
+      "ihnen"
+     ],
+     "a": "ihr",
+     "y": [
+      "helfen + Dativ, feminin → ihr",
+      "Akkusativ feminin → sie",
+      "Dativ Plural → ihnen"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir danken ___ (die Lehrkräfte → Pronomen).",
+     "o": [
+      "ihnen",
+      "sie",
+      "ihr"
+     ],
+     "a": "ihnen",
+     "y": [
+      "danken + Dativ Plural → ihnen",
+      "Akkusativ Plural → sie",
+      "Dativ feminin Singular → ihr"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das Handyverbot gefällt ___ nicht. (ich)",
+     "o": [
+      "mir",
+      "mich",
+      "ich"
+     ],
+     "a": "mir"
+    },
+    {
+     "t": "mc",
+     "q": "Kannst du ___ morgen anrufen? (wir)",
+     "o": [
+      "uns",
+      "wir",
+      "unser"
+     ],
+     "a": "uns"
+    },
+    {
+     "t": "mc",
+     "q": "Ich habe ___ gestern gesehen. (die Schüler)",
+     "o": [
+      "sie",
+      "ihnen",
+      "ihr"
+     ],
+     "a": "sie"
+    },
+    {
+     "t": "gap",
+     "q": "Der Artikel interessiert ___ sehr.",
+     "h": "(ich)",
+     "a": "mich",
+     "r": "interessieren + Akkusativ."
+    },
+    {
+     "t": "gap",
+     "q": "Kannst du ___ den Text erklären?",
+     "h": "(ich)",
+     "a": "mir",
+     "r": "jemandem (Dat.) etwas (Akk.) erklären."
+    },
+    {
+     "t": "gap",
+     "q": "Ich gebe ___ das Buch zurück.",
+     "h": "(er)",
+     "a": "ihm"
+    },
+    {
+     "t": "gap",
+     "q": "Wir haben ___ gestern getroffen.",
+     "h": "(sie, Plural)",
+     "a": "sie"
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin glaubt ___ nicht.",
+     "h": "(wir)",
+     "a": "uns",
+     "r": "jemandem glauben + Dativ."
+    },
+    {
+     "t": "gap",
+     "q": "Auch wenn ___ Italien gar nicht interessiert …",
+     "h": "(man → Akkusativ)",
+     "a": "einen",
+     "r": "man → Akkusativ: einen, Dativ: einem."
+    },
+    {
+     "t": "fix",
+     "w": "Auch wenn ihm Italien gar nicht interessiert …",
+     "a": "Auch wenn ihn Italien gar nicht interessiert …",
+     "r": "interessieren + Akkusativ: ihn (nicht ihm)."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe ihm gefragt.",
+     "a": "Ich habe ihn gefragt.",
+     "r": "fragen + Akkusativ."
+    },
+    {
+     "t": "fix",
+     "w": "Kannst du mich helfen?",
+     "a": "Kannst du mir helfen?",
+     "r": "helfen + Dativ."
+    },
+    {
+     "t": "fix",
+     "w": "Das gefällt mich.",
+     "a": "Das gefällt mir."
+    },
+    {
+     "t": "tr",
+     "en": "I help her.",
+     "a": "Ich helfe ihr."
+    },
+    {
+     "t": "tr",
+     "en": "I ask him.",
+     "a": "Ich frage ihn."
+    },
+    {
+     "t": "tr",
+     "en": "Can you help us?",
+     "a": "Kannst du uns helfen?",
+     "acc": [
+      "Können Sie uns helfen?",
+      "Könnt ihr uns helfen?"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Kannst du mir den Text erklären?"
+    }
+   ]
+  },
+  {
+   "id": "u04l2",
+   "title": "Reflexivpronomen",
+   "s": "pron.reflexiv",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Viele Jugendliche interessieren ___ für Politik.",
+     "o": [
+      "sich",
+      "ihnen",
+      "sie"
+     ],
+     "a": "sich",
+     "y": [
+      "3. Person Plural reflexiv → sich",
+      "Dativ Plural → ihnen",
+      "Akkusativ Plural → sie"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich bereite ___ auf die Schularbeit vor.",
+     "o": [
+      "mich",
+      "mir",
+      "sich"
+     ],
+     "a": "mich"
+    },
+    {
+     "t": "mc",
+     "q": "Wir beschäftigen ___ mit dem Thema.",
+     "o": [
+      "uns",
+      "sich",
+      "unsere"
+     ],
+     "a": "uns"
+    },
+    {
+     "t": "mc",
+     "q": "Du musst ___ entscheiden.",
+     "o": [
+      "dich",
+      "dir",
+      "sich"
+     ],
+     "a": "dich"
+    },
+    {
+     "t": "mc",
+     "q": "Man sollte ___ kritisch mit dem Thema auseinandersetzen.",
+     "o": [
+      "sich",
+      "man",
+      "einen"
+     ],
+     "a": "sich"
+    },
+    {
+     "t": "mc",
+     "q": "Ich kann ___ das nicht vorstellen.",
+     "o": [
+      "mir",
+      "mich",
+      "sich"
+     ],
+     "a": "mir",
+     "y": [
+      "sich (Dat.) etwas (Akk.) vorstellen → mir",
+      "Akkusativ → mich",
+      "3. Person → sich"
+     ],
+     "r": "Wenn schon ein Akkusativobjekt da ist (das), steht das Reflexivpronomen im Dativ: Ich stelle mir das vor."
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler setzen ___ für den Klimaschutz ein.",
+     "a": "sich"
+    },
+    {
+     "t": "gap",
+     "q": "Ich freue ___ auf die Ferien.",
+     "a": "mich"
+    },
+    {
+     "t": "gap",
+     "q": "Wir müssen ___ an die Regeln halten.",
+     "a": "uns"
+    },
+    {
+     "t": "gap",
+     "q": "Hast du ___ schon für eine Schule entschieden?",
+     "a": "dich"
+    },
+    {
+     "t": "gap",
+     "q": "Sie können ___ selbst weiterentwickeln.",
+     "a": "sich"
+    },
+    {
+     "t": "gap",
+     "q": "Ich wünsche ___ mehr Zeit für Hobbys.",
+     "a": "mir",
+     "r": "sich (Dat.) etwas wünschen."
+    },
+    {
+     "t": "fix",
+     "w": "Ich interessiere mir für Musik.",
+     "a": "Ich interessiere mich für Musik."
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen sich besser vorbereiten.",
+     "a": "Wir müssen uns besser vorbereiten."
+    },
+    {
+     "t": "fix",
+     "w": "Die Jugendlichen informieren ihnen im Internet.",
+     "a": "Die Jugendlichen informieren sich im Internet."
+    },
+    {
+     "t": "tr",
+     "en": "I am interested in politics.",
+     "a": "Ich interessiere mich für Politik."
+    },
+    {
+     "t": "tr",
+     "en": "We are preparing for the test.",
+     "a": "Wir bereiten uns auf die Schularbeit vor.",
+     "acc": [
+      "Wir bereiten uns auf den Test vor.",
+      "Wir bereiten uns auf die Prüfung vor."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "They can develop themselves.",
+     "a": "Sie können sich weiterentwickeln.",
+     "acc": [
+      "Sie können sich entwickeln.",
+      "Sie können sich selbst weiterentwickeln.",
+      "Sie können sich selbst entwickeln."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Viele Jugendliche interessieren sich für Politik."
+    }
+   ]
+  },
+  {
+   "id": "u04l3",
+   "title": "Possessiv: Akkusativ & Plural",
+   "s": "poss",
+   "gen": {
+    "possessive": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Falls sie ___ Träume erreichen …",
+     "o": [
+      "ihre",
+      "ihrem",
+      "ihren"
+     ],
+     "a": "ihre",
+     "y": [
+      "Akkusativ Plural → ihre",
+      "Dativ → ihrem",
+      "Akkusativ maskulin Singular → ihren"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wenn der Staat ___ Träume nicht unterstützen will …",
+     "o": [
+      "ihre",
+      "ihrem",
+      "ihren"
+     ],
+     "a": "ihre"
+    },
+    {
+     "t": "mc",
+     "q": "Sie teilen ___ Urlaube in den sozialen Medien.",
+     "o": [
+      "ihre",
+      "ihr",
+      "ihren"
+     ],
+     "a": "ihre"
+    },
+    {
+     "t": "mc",
+     "q": "Er erreicht ___ Ziel.",
+     "o": [
+      "sein",
+      "seinen",
+      "seine"
+     ],
+     "a": "sein",
+     "y": [
+      "das Ziel: Akkusativ neutral → sein (ohne Endung)",
+      "Akkusativ maskulin → seinen",
+      "feminin → seine"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Schülerin verwirklicht ___ Traum.",
+     "o": [
+      "ihren",
+      "ihre",
+      "ihrem"
+     ],
+     "a": "ihren",
+     "y": [
+      "der Traum: Akkusativ maskulin → ihren",
+      "Plural → ihre",
+      "Dativ → ihrem"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir übernehmen Verantwortung für ___ eigenes Leben.",
+     "o": [
+      "unser",
+      "unsere",
+      "unseren"
+     ],
+     "a": "unser",
+     "y": [
+      "das Leben: Akkusativ neutral → unser",
+      "feminin → unsere",
+      "maskulin → unseren"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Jugendlichen vertreten ___ Meinung.",
+     "h": "(ihr-)",
+     "a": "ihre"
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe ___ Text schon abgegeben.",
+     "h": "(mein-)",
+     "a": "meinen"
+    },
+    {
+     "t": "gap",
+     "q": "Hast du ___ Handy dabei?",
+     "h": "(dein-)",
+     "a": "dein"
+    },
+    {
+     "t": "gap",
+     "q": "Wir präsentieren ___ Projekt.",
+     "h": "(unser-)",
+     "a": "unser"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Schüler vergessen ___ Hausübungen.",
+     "h": "(ihr-)",
+     "a": "ihre"
+    },
+    {
+     "t": "fix",
+     "w": "Falls sie ihrem Traume erreichen …",
+     "a": "Falls sie ihre Träume erreichen …",
+     "r": "Akkusativ Plural: ihre Träume."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn der Staat ihrem Träume nicht unterstützen will …",
+     "a": "Wenn der Staat ihre Träume nicht unterstützen will …"
+    },
+    {
+     "t": "fix",
+     "w": "Verantwortung für unsere eigenes Leben übernehmen",
+     "a": "Verantwortung für unser eigenes Leben übernehmen",
+     "r": "das Leben → unser (keine Endung im Akk. neutral)."
+    },
+    {
+     "t": "fix",
+     "w": "Sie haben es geschafft, ihrem Traum zu verwirklichen.",
+     "a": "Sie haben es geschafft, ihren Traum zu verwirklichen."
+    },
+    {
+     "t": "tr",
+     "en": "They reach their goals.",
+     "a": "Sie erreichen ihre Ziele."
+    },
+    {
+     "t": "tr",
+     "en": "She follows her dream.",
+     "a": "Sie folgt ihrem Traum.",
+     "r": "folgen + Dativ."
+    },
+    {
+     "t": "tr",
+     "en": "We take responsibility for our own life.",
+     "a": "Wir übernehmen Verantwortung für unser eigenes Leben."
+    },
+    {
+     "t": "listen",
+     "a": "Falls sie ihre Träume erreichen, sind sie glücklich."
+    }
+   ]
+  },
+  {
+   "id": "u04l4",
+   "title": "Possessiv: Dativ & Genitiv",
+   "s": "poss",
+   "gen": {
+    "possessive": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Schüler sprechen mit ___ Eltern.",
+     "o": [
+      "ihren",
+      "ihre",
+      "ihrer"
+     ],
+     "a": "ihren",
+     "y": [
+      "mit + Dativ Plural → ihren",
+      "Akkusativ Plural → ihre",
+      "Dativ feminin → ihrer"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Er wohnt noch bei ___ Mutter.",
+     "o": [
+      "seiner",
+      "seine",
+      "seinem"
+     ],
+     "a": "seiner"
+    },
+    {
+     "t": "mc",
+     "q": "Sie ist mit ___ Ergebnis zufrieden.",
+     "o": [
+      "ihrem",
+      "ihren",
+      "ihrer"
+     ],
+     "a": "ihrem"
+    },
+    {
+     "t": "mc",
+     "q": "Die Meinung ___ Freundin ist mir wichtig.",
+     "o": [
+      "meiner",
+      "meine",
+      "meinem"
+     ],
+     "a": "meiner",
+     "y": [
+      "Genitiv feminin → meiner",
+      "Nominativ feminin",
+      "Dativ maskulin"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wir sind stolz auf ___ Schule.",
+     "o": [
+      "unsere",
+      "unserer",
+      "unser"
+     ],
+     "a": "unsere",
+     "r": "stolz auf + Akkusativ."
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe mit ___ Lehrerin gesprochen.",
+     "h": "(mein-)",
+     "a": "meiner"
+    },
+    {
+     "t": "gap",
+     "q": "Die Kinder spielen mit ___ Freunden.",
+     "h": "(ihr-)",
+     "a": "ihren"
+    },
+    {
+     "t": "gap",
+     "q": "Er erzählt von ___ Praktikum.",
+     "h": "(sein-)",
+     "a": "seinem"
+    },
+    {
+     "t": "gap",
+     "q": "Wir danken ___ Lehrkräften.",
+     "h": "(unser-)",
+     "a": "unseren"
+    },
+    {
+     "t": "gap",
+     "q": "Die Zukunft ___ Kinder ist ihnen wichtig.",
+     "h": "(ihr-, Genitiv Plural)",
+     "a": "ihrer"
+    },
+    {
+     "t": "fix",
+     "w": "Er spricht mit seine Freunde.",
+     "a": "Er spricht mit seinen Freunden."
+    },
+    {
+     "t": "fix",
+     "w": "Ich wohne bei meinem Eltern.",
+     "a": "Ich wohne bei meinen Eltern."
+    },
+    {
+     "t": "fix",
+     "w": "Sie hilft ihre Schwester.",
+     "a": "Sie hilft ihrer Schwester."
+    },
+    {
+     "t": "tr",
+     "en": "She talks to her teachers.",
+     "a": "Sie spricht mit ihren Lehrern.",
+     "acc": [
+      "Sie spricht mit ihren Lehrerinnen.",
+      "Sie spricht mit ihren Lehrkräften."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I live with my parents.",
+     "a": "Ich wohne bei meinen Eltern.",
+     "acc": [
+      "Ich lebe bei meinen Eltern."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Schüler sprechen mit ihren Eltern über die Zukunft."
+    }
+   ]
+  },
+  {
+   "id": "u04l5",
+   "title": "sein oder ihr? + Gemischt",
+   "s": "poss",
+   "gen": {
+    "possessive": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Schülerin hat ___ Handy vergessen.",
+     "o": [
+      "ihr",
+      "sein",
+      "ihre"
+     ],
+     "a": "ihr",
+     "y": [
+      "Besitzerin weiblich → ihr-; das Handy → ohne Endung",
+      "Besitzer männlich → sein",
+      "feminin → ihre"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Der Schüler hat ___ Handy vergessen.",
+     "o": [
+      "sein",
+      "ihr",
+      "seine"
+     ],
+     "a": "sein"
+    },
+    {
+     "t": "mc",
+     "q": "Die Schüler haben ___ Handys abgegeben.",
+     "o": [
+      "ihre",
+      "seine",
+      "ihr"
+     ],
+     "a": "ihre",
+     "r": "Besitzer Plural → ihr-; Akk. Plural → ihre."
+    },
+    {
+     "t": "mc",
+     "q": "Das Kind spielt mit ___ Freunden.",
+     "o": [
+      "seinen",
+      "ihren",
+      "seine"
+     ],
+     "a": "seinen",
+     "r": "das Kind → sein-."
+    },
+    {
+     "t": "mc",
+     "q": "Jeder ist für ___ Leben verantwortlich.",
+     "o": [
+      "sein",
+      "ihr",
+      "seines"
+     ],
+     "a": "sein"
+    },
+    {
+     "t": "gap",
+     "q": "Frau Huber, ist das ___ Tasche?",
+     "h": "(Höflichkeitsform)",
+     "a": "Ihre",
+     "r": "Höflich: Ihr- (groß)."
+    },
+    {
+     "t": "gap",
+     "q": "Die Firma verkauft ___ Produkte online.",
+     "h": "(Besitzer: die Firma)",
+     "a": "ihre"
+    },
+    {
+     "t": "gap",
+     "q": "Österreich schützt ___ Natur.",
+     "h": "(Besitzer: das Land)",
+     "a": "seine"
+    },
+    {
+     "t": "fix",
+     "w": "Die Lehrerin korrigiert seine Texte.",
+     "a": "Die Lehrerin korrigiert ihre Texte.",
+     "r": "Besitzerin weiblich → ihr-."
+    },
+    {
+     "t": "fix",
+     "w": "Der Staat muss ihre Bürger schützen.",
+     "a": "Der Staat muss seine Bürger schützen.",
+     "r": "der Staat → sein-."
+    },
+    {
+     "t": "fix",
+     "w": "Manche unsere reichsten Menschen haben keine Matura.",
+     "a": "Manche der reichsten Menschen haben keine Matura."
+    },
+    {
+     "t": "tr",
+     "en": "The state must support its citizens.",
+     "a": "Der Staat muss seine Bürger unterstützen.",
+     "acc": [
+      "Der Staat muss seine Bürgerinnen und Bürger unterstützen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The company sells its products online.",
+     "a": "Die Firma verkauft ihre Produkte online.",
+     "acc": [
+      "Das Unternehmen verkauft seine Produkte online."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Staat muss seine Bürger schützen."
+    }
+   ]
+  }
+ ]
+}

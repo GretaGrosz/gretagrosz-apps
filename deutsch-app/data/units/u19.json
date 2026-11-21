@@ -1,0 +1,402 @@
+{
+ "id": "u19",
+ "n": 19,
+ "phase": 2,
+ "level": "B2",
+ "title": "Passiv",
+ "tips": {
+  "de": "Vorgangspassiv: werden + Partizip II – wichtig ist die Handlung, nicht wer sie macht: Das Gesetz wird beschlossen. Präteritum: wurde beschlossen. Perfekt: ist beschlossen worden (nicht „geworden“!). Mit Modalverb: muss beschlossen werden. Im Nebensatz steht „werden“ am Ende: …, dass das Gesetz beschlossen wird. Den Handelnden nennt man mit „von“ + Dativ (von der Regierung) oder „durch“ + Akkusativ (Mittel). Zustandspassiv: sein + Partizip II – das Ergebnis: Die Straße ist gesperrt.",
+  "en": "Passive = werden + past participle. Past: wurde + participle. Perfect: ist + participle + worden. With modal: muss + participle + werden. 'by' = von + dative. Zustandspassiv (state): sein + participle.",
+  "contrast": "English uses 'to be' for the passive ('The law is passed'). German uses 'werden' ('Das Gesetz wird beschlossen'). 'Das Gesetz ist beschlossen' means it HAS BEEN passed (a state). Also: in the passive perfect it's 'worden', not 'geworden'.",
+  "table": [
+   [
+    "Präsens",
+    "Das Gesetz wird beschlossen."
+   ],
+   [
+    "Präteritum",
+    "Das Gesetz wurde beschlossen."
+   ],
+   [
+    "Perfekt",
+    "Das Gesetz ist beschlossen worden."
+   ],
+   [
+    "Modalverb",
+    "Das Gesetz muss beschlossen werden."
+   ],
+   [
+    "Zustand",
+    "Das Gesetz ist beschlossen."
+   ]
+  ],
+  "examples": [
+   "In Österreich wurde das Wahlalter auf 16 gesenkt.",
+   "Einwegplastik ist in der EU verboten worden.",
+   "Die Zahl der Touristen muss begrenzt werden.",
+   "Die Altstadt wird jeden Tag von tausenden Touristen besucht.",
+   "Die Straße ist wegen der Demonstration gesperrt."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u19l1",
+   "title": "Passiv Präsens & Präteritum",
+   "s": "passiv",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Das Gesetz ___ im Parlament beschlossen.",
+     "o": [
+      "wird",
+      "ist",
+      "hat"
+     ],
+     "a": "wird",
+     "y": [
+      "Vorgangspassiv: werden + Partizip",
+      "sein + Partizip = Vorgang",
+      "haben + Partizip = Passiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "In Österreich ___ das Wahlalter 2007 auf 16 gesenkt.",
+     "o": [
+      "wurde",
+      "wird",
+      "war"
+     ],
+     "a": "wurde"
+    },
+    {
+     "t": "mc",
+     "q": "Die Texte ___ von der Lehrerin korrigiert.",
+     "o": [
+      "werden",
+      "wird",
+      "sind worden"
+     ],
+     "a": "werden"
+    },
+    {
+     "t": "mc",
+     "q": "Die Altstadt wird jeden Tag ___ tausenden Touristen besucht.",
+     "o": [
+      "von",
+      "durch",
+      "bei"
+     ],
+     "a": "von",
+     "r": "Handelnde Person: von + Dativ."
+    },
+    {
+     "t": "gap",
+     "q": "Im Sommer ___ viele Fotos ___.",
+     "h": "(machen, Passiv Präsens)",
+     "a": [
+      "werden",
+      "gemacht"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Schule ___ 1950 ___.",
+     "h": "(bauen, Passiv Präteritum)",
+     "a": [
+      "wurde",
+      "gebaut"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "In Österreich ___ viel Müll ___.",
+     "h": "(trennen, Passiv Präsens)",
+     "a": [
+      "wird",
+      "getrennt"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Demonstranten ___ von der Polizei ___.",
+     "h": "(kontrollieren, Passiv Präteritum)",
+     "a": [
+      "wurden",
+      "kontrolliert"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Forme ins Passiv um:\nDas Parlament beschließt das Gesetz.",
+     "a": "Das Gesetz wird vom Parlament beschlossen.",
+     "acc": [
+      "Das Gesetz wird von dem Parlament beschlossen.",
+      "Das Gesetz wird beschlossen."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Forme ins Passiv um:\nTausende Touristen besuchen Hallstatt.",
+     "a": "Hallstatt wird von tausenden Touristen besucht."
+    },
+    {
+     "t": "tf",
+     "q": "Forme ins Passiv um (Präteritum):\nDie Regierung senkte das Wahlalter.",
+     "a": "Das Wahlalter wurde von der Regierung gesenkt.",
+     "acc": [
+      "Das Wahlalter wurde gesenkt."
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Das Gesetz ist im Parlament beschlossen.",
+     "a": "Das Gesetz wird im Parlament beschlossen.",
+     "r": "Vorgang (passiert gerade) → werden."
+    },
+    {
+     "t": "fix",
+     "w": "Hallstatt wird durch viele Touristen besucht.",
+     "a": "Hallstatt wird von vielen Touristen besucht.",
+     "r": "Personen → von + Dativ."
+    },
+    {
+     "t": "tr",
+     "en": "The law was passed.",
+     "a": "Das Gesetz wurde beschlossen.",
+     "acc": [
+      "Das Gesetz wurde verabschiedet."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The texts are corrected by the teacher.",
+     "a": "Die Texte werden von der Lehrerin korrigiert.",
+     "acc": [
+      "Die Texte werden vom Lehrer korrigiert.",
+      "Die Texte werden von dem Lehrer korrigiert."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "In Österreich wurde das Wahlalter auf 16 Jahre gesenkt."
+    }
+   ]
+  },
+  {
+   "id": "u19l2",
+   "title": "Perfekt, Modalverben, Nebensatz",
+   "s": "passiv",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Einwegplastik ist in der EU verboten ___.",
+     "o": [
+      "worden",
+      "geworden",
+      "werden"
+     ],
+     "a": "worden",
+     "y": [
+      "Passiv Perfekt: ist + Partizip + worden",
+      "geworden = Vollverb werden",
+      "Infinitiv"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Zahl der Touristen muss begrenzt ___.",
+     "o": [
+      "werden",
+      "worden",
+      "wird"
+     ],
+     "a": "werden"
+    },
+    {
+     "t": "mc",
+     "q": "Ich hoffe, dass mein Brief ___.",
+     "o": [
+      "veröffentlicht wird",
+      "wird veröffentlicht",
+      "veröffentlicht worden"
+     ],
+     "a": "veröffentlicht wird"
+    },
+    {
+     "t": "gap",
+     "q": "Die Straße ___ wegen der Demonstration gesperrt ___.",
+     "h": "(Passiv Perfekt)",
+     "a": [
+      "ist",
+      "worden"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Der Unterricht sollte besser ___ ___.",
+     "h": "(planen, Passiv mit Modalverb)",
+     "a": [
+      "geplant",
+      "werden"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Viele glauben, dass zu wenig für das Klima ___ ___.",
+     "h": "(tun, Passiv Präsens im Nebensatz)",
+     "a": [
+      "getan",
+      "wird"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Viele fordern, dass die Meinung der Schüler ___ ___ ___.",
+     "h": "(hören, Passiv + muss im Nebensatz)",
+     "a": [
+      "gehört",
+      "werden",
+      "muss"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Forme ins Passiv um:\nMan muss die Natur schützen.",
+     "a": "Die Natur muss geschützt werden."
+    },
+    {
+     "t": "tf",
+     "q": "Forme ins Passiv um:\nMan hat das Handyverbot eingeführt.",
+     "a": "Das Handyverbot ist eingeführt worden."
+    },
+    {
+     "t": "tf",
+     "q": "Forme ins Passiv um:\nMan sollte mehr Lehrkräfte einstellen.",
+     "a": "Es sollten mehr Lehrkräfte eingestellt werden.",
+     "acc": [
+      "Mehr Lehrkräfte sollten eingestellt werden."
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Das Gesetz ist beschlossen geworden.",
+     "a": "Das Gesetz ist beschlossen worden."
+    },
+    {
+     "t": "fix",
+     "w": "Die Natur muss geschützt worden.",
+     "a": "Die Natur muss geschützt werden."
+    },
+    {
+     "t": "fix",
+     "w": "Ich hoffe, dass mein Brief wird veröffentlicht.",
+     "a": "Ich hoffe, dass mein Brief veröffentlicht wird."
+    },
+    {
+     "t": "tr",
+     "en": "Nature must be protected.",
+     "a": "Die Natur muss geschützt werden."
+    },
+    {
+     "t": "tr",
+     "en": "Single-use plastic has been banned.",
+     "a": "Einwegplastik ist verboten worden.",
+     "acc": [
+      "Einwegplastik wurde verboten."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I hope that my letter will be published.",
+     "a": "Ich hoffe, dass mein Brief veröffentlicht wird."
+    },
+    {
+     "t": "listen",
+     "a": "Die Zahl der Touristen muss dringend begrenzt werden."
+    }
+   ]
+  },
+  {
+   "id": "u19l3",
+   "title": "Zustandspassiv & Passiv im Text",
+   "s": "passiv.zustand",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Straße ___ gesperrt. (Zustand: man kann nicht durchfahren)",
+     "o": [
+      "ist",
+      "wird",
+      "wurde"
+     ],
+     "a": "ist"
+    },
+    {
+     "t": "mc",
+     "q": "Die Straße ___ gerade gesperrt. (Vorgang: die Polizei macht es jetzt)",
+     "o": [
+      "wird",
+      "ist",
+      "hat"
+     ],
+     "a": "wird"
+    },
+    {
+     "t": "mc",
+     "q": "Das Geschäft ___ am Sonntag geschlossen.",
+     "o": [
+      "ist",
+      "wird",
+      "hat"
+     ],
+     "a": "ist"
+    },
+    {
+     "t": "gap",
+     "q": "Der öffentliche Verkehr ___ in Österreich gut ausgebaut.",
+     "a": "ist"
+    },
+    {
+     "t": "gap",
+     "q": "Der Text ___ schon korrigiert – du kannst ihn abholen.",
+     "a": "ist"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib sachlich im Passiv (für eine Zusammenfassung):\nDie Autorin kritisiert das Handyverbot.",
+     "a": "Das Handyverbot wird von der Autorin kritisiert."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib im Passiv:\nMan diskutiert seit Jahren über dieses Thema.",
+     "a": "Über dieses Thema wird seit Jahren diskutiert.",
+     "acc": [
+      "Seit Jahren wird über dieses Thema diskutiert."
+     ],
+     "r": "Unpersönliches Passiv: ohne Subjekt."
+    },
+    {
+     "t": "tr",
+     "en": "The shop is closed on Sundays.",
+     "a": "Das Geschäft ist am Sonntag geschlossen.",
+     "acc": [
+      "Das Geschäft ist sonntags geschlossen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "This topic has been discussed for years.",
+     "a": "Über dieses Thema wird seit Jahren diskutiert.",
+     "acc": [
+      "Seit Jahren wird über dieses Thema diskutiert."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Über dieses Thema wird seit Jahren heftig diskutiert."
+    }
+   ]
+  }
+ ]
+}

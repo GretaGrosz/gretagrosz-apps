@@ -1,0 +1,275 @@
+{
+ "id": "u21",
+ "n": 21,
+ "phase": 2,
+ "level": "B2",
+ "title": "Konjunktiv I & indirekte Rede",
+ "tips": {
+  "de": "In Zusammenfassung und Textanalyse gibt man Aussagen anderer mit Konjunktiv I wieder – so zeigt man Distanz. Bildung: Infinitivstamm + -e (er habe, sie komme, man könne, es gebe, sie müsse). „sein“ ist unregelmäßig: er sei, sie seien. Wichtig ist vor allem die 3. Person Singular. Ist der Konjunktiv I gleich wie der Indikativ (meist im Plural: sie haben), nimmt man Konjunktiv II (sie hätten) oder würde. Vergangenheit: habe/sei + Partizip (Die Autorin meint, die Regierung habe versagt). Redeeinleitung: Die Autorin meint/behauptet/betont/kritisiert, dass … oder ohne dass: Die Autorin meint, die Schule sei …",
+  "en": "In summaries and text analyses, report other people's statements in Konjunktiv I: er sei, sie habe, es gebe, man könne. If it looks the same as the normal form (mostly plural), use Konjunktiv II instead.",
+  "contrast": "English reported speech shifts the tense ('She said the school was…'). German keeps the tense but changes the mood: 'Sie sagt, die Schule sei…'. It sounds formal, and that's exactly what a Zusammenfassung needs.",
+  "table": [
+   [
+    "Indikativ",
+    "Konjunktiv I (3. Person)"
+   ],
+   [
+    "ist",
+    "sei"
+   ],
+   [
+    "hat",
+    "habe"
+   ],
+   [
+    "kann",
+    "könne"
+   ],
+   [
+    "muss",
+    "müsse"
+   ],
+   [
+    "gibt",
+    "gebe"
+   ],
+   [
+    "kommt",
+    "komme"
+   ],
+   [
+    "sie haben (Plural)",
+    "sie hätten (Ersatz)"
+   ]
+  ],
+  "examples": [
+   "Die Autorin meint, die Schule bereite die Jugendlichen zu wenig auf das Leben vor.",
+   "Laut dem Artikel gebe es zu wenige Lehrkräfte.",
+   "Der Experte betont, ein Handyverbot sei sinnvoll.",
+   "Sie kritisiert, dass die Politik zu langsam reagiere.",
+   "Die Schüler sagen, sie hätten keine Zeit."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u21l1",
+   "title": "sei, habe, gebe",
+   "s": "konj1",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Der Experte betont, ein Handyverbot ___ sinnvoll.",
+     "o": [
+      "sei",
+      "ist",
+      "wäre"
+     ],
+     "a": "sei"
+    },
+    {
+     "t": "mc",
+     "q": "Die Autorin meint, es ___ zu wenige Lehrkräfte.",
+     "o": [
+      "gebe",
+      "gibt",
+      "gäbe es"
+     ],
+     "a": "gebe"
+    },
+    {
+     "t": "mc",
+     "q": "Laut dem Artikel ___ die Regierung kein Konzept.",
+     "o": [
+      "habe",
+      "hat",
+      "hätten"
+     ],
+     "a": "habe"
+    },
+    {
+     "t": "mc",
+     "q": "Der Bürgermeister sagt, man ___ die Busse begrenzen.",
+     "o": [
+      "müsse",
+      "muss",
+      "müssen"
+     ],
+     "a": "müsse"
+    },
+    {
+     "t": "mc",
+     "q": "Die Schüler sagen, sie ___ keine Zeit.",
+     "o": [
+      "hätten",
+      "haben",
+      "habe"
+     ],
+     "a": "hätten",
+     "y": [
+      "Konj. I (haben) = Indikativ → Ersatz Konj. II",
+      "Indikativ ist korrekt",
+      "Singular"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Autorin behauptet, die Schule ___ die Jugendlichen nicht gut vor.",
+     "h": "(vorbereiten)",
+     "a": "bereite"
+    },
+    {
+     "t": "gap",
+     "q": "Der Minister erklärt, die Reform ___ bald.",
+     "h": "(kommen)",
+     "a": "komme"
+    },
+    {
+     "t": "gap",
+     "q": "Sie kritisiert, man ___ das Problem nicht lösen.",
+     "h": "(können)",
+     "a": "könne"
+    },
+    {
+     "t": "gap",
+     "q": "Der Autor meint, Jugendliche ___ zu viel Zeit am Handy ___.",
+     "h": "(verbringen, Plural → würde-Ersatzform)",
+     "a": [
+      "würden",
+      "verbringen"
+     ],
+     "r": "Konj. I im Plural = Indikativ (verbringen) → Ersatz: würden + Infinitiv (oder verbrächten)."
+    },
+    {
+     "t": "gap",
+     "q": "Laut der Studie ___ die Mieten stark gestiegen.",
+     "h": "(sein, Plural)",
+     "a": "seien"
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Die Autorin meint, …):\n„Die Schule ist zu streng.“",
+     "a": "Die Autorin meint, die Schule sei zu streng.",
+     "acc": [
+      "Die Autorin meint, dass die Schule zu streng sei."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Der Experte sagt, …):\n„Es gibt eine einfache Lösung.“",
+     "a": "Der Experte sagt, es gebe eine einfache Lösung.",
+     "acc": [
+      "Der Experte sagt, dass es eine einfache Lösung gebe."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Die Bürgermeisterin betont, …):\n„Wir müssen handeln.“",
+     "a": "Die Bürgermeisterin betont, sie müssten handeln.",
+     "acc": [
+      "Die Bürgermeisterin betont, man müsse handeln.",
+      "Die Bürgermeisterin betont, dass sie handeln müssten."
+     ],
+     "r": "Pronomen anpassen: wir → sie; müssen (Plural) → Ersatzform müssten."
+    },
+    {
+     "t": "fix",
+     "w": "Die Autorin meint, die Schule ist zu streng.",
+     "a": "Die Autorin meint, die Schule sei zu streng."
+    },
+    {
+     "t": "fix",
+     "w": "Der Experte sagt, es gibt zu viele Touristen.",
+     "a": "Der Experte sagt, es gebe zu viele Touristen."
+    },
+    {
+     "t": "listen",
+     "a": "Die Autorin meint, die Schule bereite die Jugendlichen zu wenig auf das Leben vor."
+    }
+   ]
+  },
+  {
+   "id": "u21l2",
+   "title": "Redeeinleitung & Vergangenheit",
+   "s": "konj1",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Autorin meint, die Regierung ___ versagt.",
+     "o": [
+      "habe",
+      "hat",
+      "hätte"
+     ],
+     "a": "habe"
+    },
+    {
+     "t": "mc",
+     "q": "Laut dem Artikel ___ die Proteste friedlich verlaufen.",
+     "o": [
+      "seien",
+      "sind",
+      "sei"
+     ],
+     "a": "seien"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Verb passt nicht als Redeeinleitung?",
+     "o": [
+      "finden",
+      "behaupten",
+      "betonen",
+      "kritisieren"
+     ],
+     "a": "finden",
+     "r": "„finden“ drückt eher die eigene Meinung aus."
+    },
+    {
+     "t": "gap",
+     "q": "Sie berichtet, die Stadt ___ eine Obergrenze ___.",
+     "h": "(einführen, Vergangenheit)",
+     "a": [
+      "habe",
+      "eingeführt"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Der Text erklärt, die Touristen ___ schon früh am Morgen ___.",
+     "h": "(ankommen, Vergangenheit)",
+     "a": [
+      "seien",
+      "angekommen"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib als Satz für eine Zusammenfassung (Der Autor betont, …):\n„Das Fliegen ist zu billig geworden.“",
+     "a": "Der Autor betont, das Fliegen sei zu billig geworden.",
+     "acc": [
+      "Der Autor betont, dass das Fliegen zu billig geworden sei."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib als Satz für eine Zusammenfassung (Laut der Autorin …):\n„Viele Jugendliche haben Angst vor der Zukunft.“",
+     "a": "Laut der Autorin hätten viele Jugendliche Angst vor der Zukunft."
+    },
+    {
+     "t": "tr",
+     "en": "The author claims that the school is too strict.",
+     "a": "Die Autorin behauptet, die Schule sei zu streng.",
+     "acc": [
+      "Der Autor behauptet, die Schule sei zu streng.",
+      "Die Autorin behauptet, dass die Schule zu streng sei.",
+      "Der Autor behauptet, dass die Schule zu streng sei."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Autor betont, das Fliegen sei viel zu billig geworden."
+    }
+   ]
+  }
+ ]
+}

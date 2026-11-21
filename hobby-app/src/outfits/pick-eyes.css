@@ -1,0 +1,167 @@
+/* idle motion for the store-only eyes items: heart shades, 3D cinema specs, cucumber spa, shell patch, hero mask */
+
+/* ---------- shared twinkles (each item keys its own keyframes) ---------- */
+.axo .axo-acc-heartshades .hs-twinkle,
+.axo .axo-acc-cinema3d .c3-twinkle,
+.axo .axo-acc-cucumberspa .cu-twinkle,
+.axo .axo-acc-shellpatch .sp-glint,
+.axo .axo-acc-heromask .hm-glint {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+/* ---------- heart shades: sparkles twinkle, a little heart floats up and pops ---------- */
+.axo .axo-acc-heartshades .hs-twinkle {
+  animation: acc-heartshades-twinkle 3.2s ease-in-out infinite backwards;
+  animation-delay: calc(var(--i, 0) * 0.9s);
+}
+
+@keyframes acc-heartshades-twinkle {
+  0%, 100% { transform: scale(0.35) rotate(0deg); opacity: 0.2; }
+  40% { transform: scale(1.1) rotate(45deg); opacity: 1; }
+  70% { transform: scale(0.6) rotate(70deg); opacity: 0.6; }
+}
+
+.axo .axo-acc-heartshades .hs-float {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-heartshades-float 4.2s ease-out infinite backwards;
+}
+
+@keyframes acc-heartshades-float {
+  0% { transform: translate(0, 10px) scale(0.3); opacity: 0; }
+  12% { opacity: 1; }
+  40% { transform: translate(-2px, 2px) scale(1); }
+  70% { transform: translate(2px, -6px) scale(1); opacity: 1; }
+  78% { transform: translate(2px, -7px) scale(1.5); opacity: 0; }
+  100% { transform: translate(2px, -7px) scale(1.5); opacity: 0; }
+}
+
+/* ---------- 3D cinema specs: the fish swims out of the screen and back ---------- */
+.axo .axo-acc-cinema3d .c3-fish {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-cinema3d-fish 3.8s ease-in-out infinite;
+}
+
+@keyframes acc-cinema3d-fish {
+  0%, 100% { transform: translate(-3px, 3px) scale(0.75) rotate(0deg); }
+  45% { transform: translate(2px, -2px) scale(1.18) rotate(-8deg); }
+  55% { transform: translate(2px, -2px) scale(1.18) rotate(6deg); }
+}
+
+.axo .axo-acc-cinema3d .c3-twinkle {
+  animation: acc-cinema3d-twinkle 3.8s ease-in-out infinite;
+}
+
+@keyframes acc-cinema3d-twinkle {
+  0%, 30%, 70%, 100% { transform: scale(0.2); opacity: 0; }
+  50% { transform: scale(1.1) rotate(45deg); opacity: 1; }
+}
+
+/* ---------- cucumber spa: slices settle, a cool drop trickles, calm twinkles ---------- */
+.axo .axo-acc-cucumberspa .cu-slice {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-cucumberspa-settle 5s ease-in-out infinite;
+}
+.axo .axo-acc-cucumberspa .cu-slice-r { animation-delay: -2.5s; }
+
+@keyframes acc-cucumberspa-settle {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(6deg) translate(0, 0.6px); }
+}
+
+.axo .axo-acc-cucumberspa .cu-drop {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: acc-cucumberspa-drop 4.6s ease-in infinite backwards;
+}
+
+@keyframes acc-cucumberspa-drop {
+  0% { transform: translate(0, -6px) scale(0.4); opacity: 0; }
+  15% { transform: translate(0, -5px) scale(1); opacity: 1; }
+  60% { transform: translate(-1px, 6px) scale(1, 1.1); opacity: 1; }
+  75%, 100% { transform: translate(-1px, 10px) scale(0.6); opacity: 0; }
+}
+
+.axo .axo-acc-cucumberspa .cu-twinkle {
+  animation: acc-cucumberspa-twinkle 4s ease-in-out infinite backwards;
+  animation-delay: calc(var(--i, 0) * 1.3s);
+}
+
+@keyframes acc-cucumberspa-twinkle {
+  0%, 100% { transform: scale(0.3); opacity: 0.15; }
+  50% { transform: scale(1) rotate(45deg); opacity: 1; }
+}
+
+/* ---------- shell patch: now and then the shell lifts for a sneaky peek ---------- */
+.axo .axo-acc-shellpatch .sp-lift {
+  transform-box: view-box;
+  transform-origin: 120px 64px;
+  animation: acc-shellpatch-peek 6.5s ease-in-out infinite;
+}
+
+@keyframes acc-shellpatch-peek {
+  0%, 62%, 92%, 100% { transform: rotate(0deg); }
+  70%, 82% { transform: rotate(-38deg); }
+  86% { transform: rotate(3deg); }
+}
+
+.axo .axo-acc-shellpatch .sp-glint {
+  animation: acc-shellpatch-glint 6.5s ease-in-out infinite backwards;
+}
+
+@keyframes acc-shellpatch-glint {
+  0%, 20%, 40%, 100% { transform: scale(0.2); opacity: 0; }
+  30% { transform: scale(1.15) rotate(45deg); opacity: 1; }
+}
+
+/* ---------- hero mask: ribbons flap in the current ---------- */
+.axo .axo-acc-heromask .hm-tail {
+  transform-box: view-box;
+  transform-origin: 48px 87px;
+  animation: acc-heromask-flap 1.6s ease-in-out infinite;
+}
+.axo .axo-acc-heromask .hm-tail-2 { animation-delay: -0.5s; }
+
+@keyframes acc-heromask-flap {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
+
+.axo .axo-acc-heromask .hm-glint {
+  animation: acc-heromask-glint 5s ease-in-out infinite backwards;
+}
+
+@keyframes acc-heromask-glint {
+  0%, 70%, 100% { transform: scale(0.2); opacity: 0; }
+  80% { transform: scale(1.15) rotate(45deg); opacity: 1; }
+  90% { transform: scale(0.2) rotate(90deg); opacity: 0; }
+}
+
+.axo[data-axo-paused] .axo-acc-heartshades .hs-twinkle,
+.axo[data-axo-paused] .axo-acc-heartshades .hs-float,
+.axo[data-axo-paused] .axo-acc-cinema3d .c3-fish,
+.axo[data-axo-paused] .axo-acc-cinema3d .c3-twinkle,
+.axo[data-axo-paused] .axo-acc-cucumberspa .cu-slice,
+.axo[data-axo-paused] .axo-acc-cucumberspa .cu-drop,
+.axo[data-axo-paused] .axo-acc-cucumberspa .cu-twinkle,
+.axo[data-axo-paused] .axo-acc-shellpatch .sp-lift,
+.axo[data-axo-paused] .axo-acc-shellpatch .sp-glint,
+.axo[data-axo-paused] .axo-acc-heromask .hm-tail,
+.axo[data-axo-paused] .axo-acc-heromask .hm-glint { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc-heartshades .hs-twinkle,
+  .axo .axo-acc-heartshades .hs-float,
+  .axo .axo-acc-cinema3d .c3-fish,
+  .axo .axo-acc-cinema3d .c3-twinkle,
+  .axo .axo-acc-cucumberspa .cu-slice,
+  .axo .axo-acc-cucumberspa .cu-drop,
+  .axo .axo-acc-cucumberspa .cu-twinkle,
+  .axo .axo-acc-shellpatch .sp-lift,
+  .axo .axo-acc-shellpatch .sp-glint,
+  .axo .axo-acc-heromask .hm-tail,
+  .axo .axo-acc-heromask .hm-glint { animation: none; }
+}

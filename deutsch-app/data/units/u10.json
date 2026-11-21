@@ -1,0 +1,457 @@
+{
+ "id": "u10",
+ "n": 10,
+ "phase": 1,
+ "level": "B1",
+ "title": "Vergangenheit: Perfekt, Präteritum, Plusquamperfekt",
+ "tips": {
+  "de": "Perfekt (mündlich und in Briefen): haben/sein + Partizip II am Satzende: Ich habe den Artikel gelesen. Mit „sein“: Verben der Bewegung (gehen, fahren, fliegen) und der Veränderung (werden, wachsen, sterben) sowie sein und bleiben. Präteritum (Schriftsprache, Berichte, Erzählungen): er lernte, er ging, er war, er hatte. Plusquamperfekt (vor einer anderen Vergangenheit): hatte/war + Partizip II: Nachdem sie die Angabe gelesen hatte, begann sie zu schreiben.",
+  "en": "Perfekt = haben/sein + past participle at the end of the clause. Use sein for movement and change of state. Präteritum is the written past (reports, stories). Plusquamperfekt = past perfect (had done).",
+  "contrast": "English always uses 'have' ('I have gone'). German uses 'sein' for movement and change: 'Ich bin gefahren', 'Die Preise sind gestiegen'. Also, English 'I went' (simple past) often becomes German Perfekt in speech ('ich bin gegangen'), but Präteritum in written reports.",
+  "table": [
+   [
+    "Infinitiv",
+    "Präteritum",
+    "Perfekt"
+   ],
+   [
+    "lernen",
+    "lernte",
+    "hat gelernt"
+   ],
+   [
+    "gehen",
+    "ging",
+    "ist gegangen"
+   ],
+   [
+    "fliegen",
+    "flog",
+    "ist geflogen"
+   ],
+   [
+    "steigen",
+    "stieg",
+    "ist gestiegen"
+   ],
+   [
+    "bringen",
+    "brachte",
+    "hat gebracht"
+   ]
+  ],
+  "examples": [
+   "Alle sind nach Italien geflogen.",
+   "Die Mieten sind stark gestiegen.",
+   "Die Regierung hat das Gesetz beschlossen.",
+   "Im Jahr 2020 schlossen alle Schulen.",
+   "Nachdem die Schüler protestiert hatten, reagierte die Regierung."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u10l1",
+   "title": "Perfekt mit haben oder sein",
+   "s": "perf",
+   "gen": {
+    "perfect": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Alle ___ nach Italien geflogen.",
+     "o": [
+      "sind",
+      "haben"
+     ],
+     "a": "sind",
+     "keepOrder": true,
+     "y": [
+      "fliegen = Bewegung → sein",
+      "fliegen hat ein Objekt → haben",
+      "immer haben"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Preise ___ stark gestiegen.",
+     "o": [
+      "sind",
+      "haben"
+     ],
+     "a": "sind",
+     "keepOrder": true,
+     "y": [
+      "steigen = Veränderung → sein",
+      "Preise → haben",
+      "immer haben"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Regierung ___ das Gesetz beschlossen.",
+     "o": [
+      "hat",
+      "ist"
+     ],
+     "a": "hat",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Wir ___ lange in der Schule geblieben.",
+     "o": [
+      "sind",
+      "haben"
+     ],
+     "a": "sind",
+     "keepOrder": true,
+     "r": "bleiben → sein."
+    },
+    {
+     "t": "mc",
+     "q": "Er ___ mit dem Auto in die Stadt gefahren.",
+     "o": [
+      "ist",
+      "hat"
+     ],
+     "a": "ist",
+     "keepOrder": true
+    },
+    {
+     "t": "mc",
+     "q": "Ich ___ den Artikel gelesen.",
+     "o": [
+      "habe",
+      "bin"
+     ],
+     "a": "habe",
+     "keepOrder": true
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler ___ vor dem Parlament ___.",
+     "h": "(protestieren)",
+     "a": [
+      "haben",
+      "protestiert"
+     ],
+     "r": "Verben auf -ieren: Partizip ohne ge- (protestiert)."
+    },
+    {
+     "t": "gap",
+     "q": "Der Tourismus ___ stark ___.",
+     "h": "(wachsen)",
+     "a": [
+      "ist",
+      "gewachsen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich ___ meine Hausübung ___.",
+     "h": "(vergessen)",
+     "a": [
+      "habe",
+      "vergessen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Was ___ in der Pause ___?",
+     "h": "(passieren)",
+     "a": [
+      "ist",
+      "passiert"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Sie ___ die Matura mit Auszeichnung ___.",
+     "h": "(bestehen)",
+     "a": [
+      "hat",
+      "bestanden"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wir ___ um sechs Uhr ___.",
+     "h": "(aufstehen)",
+     "a": [
+      "sind",
+      "aufgestanden"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Alle haben nach Italien geflogen.",
+     "a": "Alle sind nach Italien geflogen."
+    },
+    {
+     "t": "fix",
+     "w": "Die Mieten haben gestiegen.",
+     "a": "Die Mieten sind gestiegen."
+    },
+    {
+     "t": "fix",
+     "w": "Er hat gestern spät nach Hause gekommen.",
+     "a": "Er ist gestern spät nach Hause gekommen."
+    },
+    {
+     "t": "fix",
+     "w": "Die Schüler haben geprotestiert.",
+     "a": "Die Schüler haben protestiert.",
+     "r": "Verben auf -ieren bilden das Partizip ohne ge-: protestiert, diskutiert, kritisiert."
+    },
+    {
+     "t": "tr",
+     "en": "Everyone flew to Italy.",
+     "a": "Alle sind nach Italien geflogen."
+    },
+    {
+     "t": "tr",
+     "en": "Prices have risen.",
+     "a": "Die Preise sind gestiegen."
+    },
+    {
+     "t": "tr",
+     "en": "I have read the article.",
+     "a": "Ich habe den Artikel gelesen."
+    },
+    {
+     "t": "listen",
+     "a": "Die Mieten sind in den letzten Jahren stark gestiegen."
+    }
+   ]
+  },
+  {
+   "id": "u10l2",
+   "title": "Präteritum (Schriftsprache)",
+   "s": "verb.praet",
+   "gen": {
+    "preterite": 3
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Im Jahr 2020 ___ alle Schulen.",
+     "h": "(schließen)",
+     "a": "schlossen"
+    },
+    {
+     "t": "gap",
+     "q": "Der Minister ___ eine Reform an.",
+     "h": "(kündigen … an)",
+     "a": "kündigte"
+    },
+    {
+     "t": "gap",
+     "q": "Früher ___ Reisen viel teurer.",
+     "h": "(sein)",
+     "a": "war"
+    },
+    {
+     "t": "gap",
+     "q": "Die Demonstranten ___ bessere Bedingungen.",
+     "h": "(fordern)",
+     "a": "forderten"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Menschen ___ keinen Computer.",
+     "h": "(haben)",
+     "a": "hatten"
+    },
+    {
+     "t": "gap",
+     "q": "Der Bürgermeister ___ mit den Anrainern.",
+     "h": "(sprechen)",
+     "a": "sprach"
+    },
+    {
+     "t": "gap",
+     "q": "Die Polizei ___ die Straße.",
+     "h": "(sperren)",
+     "a": "sperrte"
+    },
+    {
+     "t": "gap",
+     "q": "Er ___ nicht, was er sagen sollte.",
+     "h": "(wissen)",
+     "a": "wusste"
+    },
+    {
+     "t": "match",
+     "q": "Infinitiv → Präteritum",
+     "pairs": [
+      [
+       "gehen",
+       "ging"
+      ],
+      [
+       "bringen",
+       "brachte"
+      ],
+      [
+       "denken",
+       "dachte"
+      ],
+      [
+       "kommen",
+       "kam"
+      ]
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Infinitiv → Präteritum",
+     "pairs": [
+      [
+       "finden",
+       "fand"
+      ],
+      [
+       "nehmen",
+       "nahm"
+      ],
+      [
+       "schreiben",
+       "schrieb"
+      ],
+      [
+       "werden",
+       "wurde"
+      ]
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Im Jahr 2020 schließten alle Schulen.",
+     "a": "Im Jahr 2020 schlossen alle Schulen."
+    },
+    {
+     "t": "fix",
+     "w": "Früher gab es weniger Touristen und die Natur war sauberer und die Menschen gehten öfter zu Fuß.",
+     "a": "Früher gab es weniger Touristen und die Natur war sauberer und die Menschen gingen öfter zu Fuß."
+    },
+    {
+     "t": "tr",
+     "en": "In 2020 all schools closed.",
+     "a": "Im Jahr 2020 schlossen alle Schulen.",
+     "acc": [
+      "2020 schlossen alle Schulen.",
+      "Im Jahr 2020 wurden alle Schulen geschlossen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Travelling was more expensive.",
+     "a": "Reisen war teurer.",
+     "acc": [
+      "Das Reisen war teurer."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Im Jahr 2020 schlossen alle Schulen in Österreich."
+    }
+   ]
+  },
+  {
+   "id": "u10l3",
+   "title": "Plusquamperfekt & Zeitenfolge",
+   "s": "verb.plusq",
+   "gen": {
+    "perfect": 1,
+    "preterite": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Nachdem sie die Angabe gelesen ___, begann sie zu schreiben.",
+     "o": [
+      "hatte",
+      "hat",
+      "war"
+     ],
+     "a": "hatte",
+     "y": [
+      "Vorvergangenheit: hatte + Partizip",
+      "Perfekt: hat + Partizip",
+      "lesen → sein"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Als wir ankamen, ___ der Zug schon abgefahren.",
+     "o": [
+      "war",
+      "hatte",
+      "ist"
+     ],
+     "a": "war"
+    },
+    {
+     "t": "mc",
+     "q": "Nachdem die Schüler protestiert ___, reagierte die Regierung.",
+     "o": [
+      "hatten",
+      "haben",
+      "waren"
+     ],
+     "a": "hatten"
+    },
+    {
+     "t": "gap",
+     "q": "Er bestand die Prüfung, weil er viel ___ ___.",
+     "h": "(lernen, Plusquamperfekt)",
+     "a": [
+      "gelernt",
+      "hatte"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Nachdem der Streik ___ ___, normalisierte sich der Verkehr.",
+     "h": "(enden, Plusquamperfekt)",
+     "a": [
+      "geendet",
+      "hatte"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Bevor das Klimaticket eingeführt ___, fuhren weniger Menschen mit dem Zug.",
+     "h": "(werden, Präteritum)",
+     "a": "wurde"
+    },
+    {
+     "t": "fix",
+     "w": "Nachdem sie gegessen hat, ging sie ins Kino.",
+     "a": "Nachdem sie gegessen hatte, ging sie ins Kino.",
+     "r": "nachdem + Plusquamperfekt, wenn der Hauptsatz im Präteritum steht."
+    },
+    {
+     "t": "fix",
+     "w": "Als ich ankam, hatte der Unterricht schon begonnen hat.",
+     "a": "Als ich ankam, hatte der Unterricht schon begonnen.",
+     "s": "verb.plusq"
+    },
+    {
+     "t": "tr",
+     "en": "After she had read the task, she began to write.",
+     "a": "Nachdem sie die Angabe gelesen hatte, begann sie zu schreiben.",
+     "acc": [
+      "Nachdem sie die Aufgabe gelesen hatte, begann sie zu schreiben.",
+      "Nachdem sie die Angabe gelesen hatte, fing sie an zu schreiben."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Nachdem die Schüler protestiert hatten, reagierte die Regierung."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "id": "u29",
+ "n": 29,
+ "phase": 4,
+ "level": "C1",
+ "title": "Passiversatz: ist zu lösen, lässt sich lösen, lösbar",
+ "tips": {
+  "de": "Statt eines Passivs mit Modalverb verwendet man in der Schriftsprache oft: 1) sein + zu + Infinitiv (= kann/muss … werden): Die Angabe ist genau zu lesen. 2) sich lassen + Infinitiv (= kann … werden): Das Problem lässt sich lösen. 3) Adjektive auf -bar / -lich (= kann … werden): lösbar, vermeidbar, verständlich. 4) man: Man kann das Problem lösen. 5) bekommen/erhalten + Partizip II (Rezipientenpassiv): Die Schüler bekommen die Texte zurückgegeben. Bei trennbaren Verben steht „zu“ in der Mitte: vorherzusagen, abzugeben.",
+  "en": "Formal German replaces passives with modals by: sein + zu (must/can be done), sich lassen (can be done), -bar/-lich adjectives (-able), or man. 'Die Angabe ist zu lesen' = the task must be read.",
+  "contrast": "English '-able' maps onto -bar: solvable = lösbar, avoidable = vermeidbar. But 'Das ist zu lösen' looks like English 'is to be solved' and can mean 'must' OR 'can', depending on context. 'nicht zu lösen' = cannot be solved.",
+  "table": [
+   [
+    "Passiv",
+    "Das Problem kann gelöst werden."
+   ],
+   [
+    "sein + zu",
+    "Das Problem ist zu lösen."
+   ],
+   [
+    "sich lassen",
+    "Das Problem lässt sich lösen."
+   ],
+   [
+    "-bar",
+    "Das Problem ist lösbar."
+   ],
+   [
+    "man",
+    "Man kann das Problem lösen."
+   ]
+  ],
+  "examples": [
+   "Die Angabe ist genau zu lesen.",
+   "Der Massentourismus lässt sich kaum begrenzen.",
+   "Die Folgen sind kaum vorhersehbar.",
+   "Die Mieten sind für viele nicht mehr bezahlbar.",
+   "Die Hausübung ist bis Freitag abzugeben."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u29l1",
+   "title": "sein + zu",
+   "s": "passiv.ersatz",
+   "gen": {
+    "passivErsatz": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "„Die Angabe ist genau zu lesen.“ bedeutet:",
+     "o": [
+      "Die Angabe muss genau gelesen werden.",
+      "Die Angabe ist genau gelesen worden.",
+      "Die Angabe liest sich genau."
+     ],
+     "a": "Die Angabe muss genau gelesen werden."
+    },
+    {
+     "t": "mc",
+     "q": "„Dieses Problem ist nicht zu lösen.“ bedeutet:",
+     "o": [
+      "Dieses Problem kann nicht gelöst werden.",
+      "Dieses Problem muss nicht gelöst werden.",
+      "Dieses Problem wurde nicht gelöst."
+     ],
+     "a": "Dieses Problem kann nicht gelöst werden."
+    },
+    {
+     "t": "gap",
+     "q": "Die Hausübung ist bis Freitag ___.",
+     "h": "(abgeben)",
+     "a": "abzugeben"
+    },
+    {
+     "t": "gap",
+     "q": "Die Folgen sind kaum ___.",
+     "h": "(vorhersagen)",
+     "a": "vorherzusagen"
+    },
+    {
+     "t": "gap",
+     "q": "Die Regeln sind unbedingt ___.",
+     "h": "(einhalten)",
+     "a": "einzuhalten"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „sein + zu“:\nDer Text muss bis morgen korrigiert werden.",
+     "a": "Der Text ist bis morgen zu korrigieren."
+    },
+    {
+     "t": "fix",
+     "w": "Die Hausübung ist bis Freitag zu abgeben.",
+     "a": "Die Hausübung ist bis Freitag abzugeben."
+    },
+    {
+     "t": "fix",
+     "w": "Das Problem ist zu gelöst.",
+     "a": "Das Problem ist zu lösen."
+    },
+    {
+     "t": "tr",
+     "en": "The rules must be followed.",
+     "a": "Die Regeln sind einzuhalten.",
+     "acc": [
+      "Die Regeln müssen eingehalten werden."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Angabe ist vor dem Schreiben genau zu lesen."
+    }
+   ]
+  },
+  {
+   "id": "u29l2",
+   "title": "sich lassen & -bar/-lich",
+   "s": "passiv.ersatz",
+   "gen": {
+    "passivErsatz": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Der Massentourismus ___ sich kaum begrenzen.",
+     "o": [
+      "lässt",
+      "ist",
+      "wird"
+     ],
+     "a": "lässt"
+    },
+    {
+     "t": "mc",
+     "q": "Die Mieten sind für viele nicht mehr ___.",
+     "h": "(können nicht bezahlt werden)",
+     "o": [
+      "bezahlbar",
+      "zu bezahlt",
+      "bezahlend"
+     ],
+     "a": "bezahlbar"
+    },
+    {
+     "t": "mc",
+     "q": "Der Text ist gut ___.",
+     "h": "(kann gut verstanden werden)",
+     "o": [
+      "verständlich",
+      "verstehbar",
+      "verstanden"
+     ],
+     "a": "verständlich",
+     "r": "Manche Verben bilden -lich statt -bar: verständlich, unvermeidlich."
+    },
+    {
+     "t": "match",
+     "q": "Verb → Adjektiv",
+     "pairs": [
+      [
+       "lösen",
+       "lösbar"
+      ],
+      [
+       "vermeiden",
+       "vermeidbar"
+      ],
+      [
+       "verstehen",
+       "verständlich"
+      ],
+      [
+       "erreichen",
+       "erreichbar"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Viele Fehler ___ sich mit einer Endkontrolle ___.",
+     "h": "(vermeiden)",
+     "a": [
+      "lassen",
+      "vermeiden"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Der Klimawandel ist nicht mehr ___.",
+     "h": "(umkehren → -bar)",
+     "a": "umkehrbar"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „sich lassen“:\nDiese Frage kann leicht beantwortet werden.",
+     "a": "Diese Frage lässt sich leicht beantworten."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit einem Adjektiv auf -bar:\nDas Ziel kann erreicht werden.",
+     "a": "Das Ziel ist erreichbar."
+    },
+    {
+     "t": "fix",
+     "w": "Das Problem lässt sich lösen werden.",
+     "a": "Das Problem lässt sich lösen."
+    },
+    {
+     "t": "tr",
+     "en": "The problem can be solved.",
+     "a": "Das Problem lässt sich lösen.",
+     "acc": [
+      "Das Problem ist lösbar.",
+      "Das Problem ist zu lösen.",
+      "Das Problem kann gelöst werden."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Viele Fehler lassen sich mit einer Endkontrolle vermeiden."
+    }
+   ]
+  },
+  {
+   "id": "u29l3",
+   "title": "bekommen-Passiv & Stilwahl",
+   "s": "passiv.mix",
+   "gen": {
+    "passivErsatz": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "„Die Schüler bekommen die Texte zurückgegeben.“ bedeutet:",
+     "o": [
+      "Man gibt den Schülern die Texte zurück.",
+      "Die Schüler geben die Texte zurück.",
+      "Die Schüler haben die Texte bekommen."
+     ],
+     "a": "Man gibt den Schülern die Texte zurück."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „bekommen“ (Rezipientenpassiv):\nMan schenkt den Jugendlichen ein Klimaticket.",
+     "a": "Die Jugendlichen bekommen ein Klimaticket geschenkt."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „man“:\nDie Busse sind zu begrenzen.",
+     "a": "Man muss die Busse begrenzen.",
+     "acc": [
+      "Man sollte die Busse begrenzen."
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welche Form passt am besten in eine sachliche Erörterung?",
+     "o": [
+      "Diese Entwicklung lässt sich nicht aufhalten.",
+      "Diese Entwicklung kann man halt nicht aufhalten.",
+      "Diese Entwicklung, die kann keiner aufhalten."
+     ],
+     "a": "Diese Entwicklung lässt sich nicht aufhalten."
+    },
+    {
+     "t": "tr",
+     "en": "This development cannot be stopped.",
+     "a": "Diese Entwicklung lässt sich nicht aufhalten.",
+     "acc": [
+      "Diese Entwicklung ist nicht aufzuhalten.",
+      "Diese Entwicklung kann nicht aufgehalten werden."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Schüler bekommen die Texte nächste Woche zurückgegeben."
+    }
+   ]
+  }
+ ]
+}

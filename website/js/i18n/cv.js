@@ -1,0 +1,115 @@
+// CV page: German. Austrian CV conventions (Lebenslauf, Ausbildung, Berufserfahrung, Sprachkenntnisse,
+// Kenntnisse), Greta writes in the first person.
+I18N.add({
+  // Page
+  'CV · Greta Grosz': 'Lebenslauf · Greta Grosz',
+  'Greta Grosz’s CV: business and finance student (BHAK) in Austria, looking for a banking internship.':
+    'Lebenslauf von Greta Grosz: Schülerin einer BHAK in Österreich, auf der Suche nach einem Pflichtpraktikum im Bankwesen.',
+  'Download PDF': 'PDF herunterladen',
+  'Print': 'Drucken',
+  'Portrait of Greta Grosz': 'Porträt von Greta Grosz',
+  'QR code: gretagrosz.com': 'QR-Code: gretagrosz.com',
+
+  // Sidebar
+  'Contact': 'Kontakt',
+  'Website': 'Website',
+  'Lives in': 'Wohnort',
+  'Austria': 'Österreich',
+  'Born': 'Geboren',
+  '2009, United Kingdom': '2009, Großbritannien',
+  'Languages': 'Sprachkenntnisse',
+  'English': 'Englisch',
+  'Native · C1 Euroexam': 'Muttersprache · C1 Euroexam',
+  'Hungarian': 'Ungarisch',
+  'Native': 'Muttersprache',
+  'German': 'Deutsch',
+  'Skills': 'Kenntnisse',
+  'Excel (intermediate)': 'Excel (gute Kenntnisse)',
+  'Word & PowerPoint': 'Word & PowerPoint',
+  'Accounting basics': 'Grundlagen Rechnungswesen',
+  'SAP basics': 'SAP-Grundkenntnisse',
+  'Data analysis': 'Datenanalyse',
+  'AI productivity tools': 'KI-Tools für die Arbeit',
+  'Strengths': 'Persönliche Stärken',
+  'Analytical thinking': 'Analytisches Denken',
+  'Structured work': 'Strukturiertes Arbeiten',
+  'Teamwork': 'Teamfähigkeit',
+  'Presenting': 'Präsentieren',
+  'Reliability': 'Zuverlässigkeit',
+
+  // Header
+  'Curriculum vitae': 'Lebenslauf',
+  'Business & finance student (BHAK), Austria': 'Schülerin an einer BHAK in Österreich · Wirtschaft & Finanzen',
+  'Looking for a banking internship (Pflichtpraktikum)': 'Auf der Suche nach einem Pflichtpraktikum im Bankwesen',
+  'Message me': 'Nachricht',
+  'gretagrosz.com/contact': 'gretagrosz.com/contact',
+  'Copy as text': 'Als Text kopieren',
+  'Copied': 'Kopiert',
+
+  // Download PDF form
+  'Download my CV': 'Meinen Lebenslauf herunterladen',
+  'My full CV has my phone number and date of birth, so I share it with people who are hiring. Tell me who you are and the PDF downloads straight away.':
+    'Mein vollständiger Lebenslauf enthält Telefonnummer und Geburtsdatum, deshalb teile ich ihn mit Personen, die Praktikumsplätze vergeben. Sagen Sie mir kurz, wer Sie sind, dann startet der Download sofort.',
+  'Your name': 'Ihr Name',
+  'Work email': 'Berufliche E-Mail',
+  'Company or organisation': 'Unternehmen oder Organisation',
+  'Only I see these details, and I use them only to get back to you.': 'Nur ich sehe diese Angaben und nutze sie nur, um mich bei Ihnen zu melden.',
+  'Your download has started.': 'Der Download hat begonnen.',
+  'Thanks, {name}. The PDF is in German, the language I study in.': 'Vielen Dank, {name}!',
+  'Download again': 'Erneut herunterladen',
+  'Please add your name.': 'Bitte geben Sie Ihren Namen an.',
+  'Please check your email address.': 'Bitte prüfen Sie die E-Mail-Adresse.',
+  'Add your company or organisation.': 'Bitte geben Sie Ihr Unternehmen oder Ihre Organisation an.',
+  'Too many requests from this connection. Try again in a few minutes.': 'Zu viele Anfragen von dieser Verbindung. Bitte in ein paar Minuten erneut versuchen.',
+  'No connection. Try again when you are online.': 'Keine Verbindung. Bitte erneut versuchen, sobald Sie online sind.',
+  'That did not go through. Please try again, or message me on LinkedIn.': 'Das hat nicht geklappt. Bitte erneut versuchen oder mir auf LinkedIn schreiben.',
+
+  // Education
+  'Education': 'Ausbildung',
+  'Since 2026': 'Seit 2026',
+  'Bundeshandelsakademie (BHAK)': 'Bundeshandelsakademie (BHAK)',
+  'Business and finance, taught in German.': 'Wirtschaft und Finanzen, Unterrichtssprache Deutsch.',
+  'Bilingual business school (HAK)': 'Zweisprachige Handelsakademie (HAK)',
+  'Hungary': 'Ungarn',
+  'Bilingual school': 'Zweisprachige Schule',
+  'Until 2021': 'Bis 2021',
+  'School in England': 'Schule in England',
+  'United Kingdom': 'Großbritannien',
+
+  // Experience
+  'Experience': 'Berufserfahrung',
+  'Virtual': 'Virtuell',
+  'Forage Virtual Experience Programmes': 'Forage Virtual Experience Programme',
+  'Quantitative Research: hands-on financial analysis.': 'Quantitative Research: praktische Finanzanalyse.',
+  'Financial Services: banking simulation and processes.': 'Financial Services: Banksimulation und Bankprozesse.',
+  'Ongoing': 'Laufend',
+  'June 2025, July 2026': 'Juni 2025, Juli 2026',
+  'August 2026': 'August 2026',
+  'Packaging': 'Mitarbeit in der Verpackung',
+  'PEZ factory': 'PEZ Fabrik',
+  'Research support': 'Unterstützung in der Forschung',
+  'Research and lab work, data entry and documentation.': 'Forschung und Laborarbeit, Dateneingabe und Dokumentation.',
+  'Summer 2024': 'Sommer 2024',
+  'Summer job': 'Ferialjob',
+  'Running the till, selling ice cream, preparing fast food.': 'Kassa, Eisverkauf und Zubereitung von Fast Food.',
+  'Every summer, one week': 'Jeden Sommer eine Woche',
+  'Volunteer': 'Ehrenamtliche Betreuerin',
+  'Children’s summer camp': 'Sommercamp für Kinder',
+  'Looking after children, group activities, organising the day.': 'Kinderbetreuung, Gruppenaktivitäten, Tagesablauf organisieren.',
+
+  // Own business (rows inside Experience)
+  'Weekend Ink': 'Weekend Ink',
+  'My own small business': 'Eigenes Kleinunternehmen',
+  'Custom temporary tattoos I design for festivals, events and teams, sold at events.':
+    'Temporäre Tattoos, individuell von mir gestaltet, für Festivals, Events und Teams; Verkauf direkt vor Ort.',
+  'Clothing, sold online': 'Kleidung, online verkauft',
+  'I sew or pick out each piece, then photograph, list and ship it on time.': 'Selbst genäht oder ausgesucht; Fotos, Inserate und pünktlicher Versand.',
+
+  // Projects
+  'Projects': 'Projekte',
+  'July 2026': 'Juli 2026',
+  'Market research: how Austria’s banks compete for Gen Z': 'Marktanalyse: Wie Österreichs Banken um die Gen Z werben',
+  'A written analysis in German, and an Excel calculator built from it that recommends a youth account by weighted score.':
+    'Eine schriftliche Analyse auf Deutsch und ein darauf aufbauender Excel-Rechner, der per gewichteter Bewertung ein Jugendkonto empfiehlt.',
+  'Live': 'Online',
+})

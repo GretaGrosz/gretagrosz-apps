@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The suite's shared tokens. Stance's accent is the indigo of its icon, deep enough for white text (6.9:1). */
+:root {
+  color-scheme: light dark;
+  --bg: 242 242 247;
+  --surface: 255 255 255;
+  --fg: 0 0 0;
+  --fg2: 108 108 112;      /* 4.7:1 on #F2F2F7, 5.2:1 on white */
+  --fg3: 138 138 142;      /* placeholders and hints only */
+  --fill: 118 118 128;
+  --line: 60 60 67; --line-a: 0.2;
+  --accent: 72 68 212;     /* buttons, side one, links */
+  --accent-ink: 72 68 212; /* accent used as text */
+  --danger: 215 0 21;
+  --glass-bg: rgb(250 250 252 / 0.84);
+  --glass-edge: inset 0 0 0 0.5px rgba(0, 0, 0, 0.08);
+  --sheet-bg: rgb(242 242 247 / 0.94);
+  --spring: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: 0 0 0;
+    --surface: 28 28 30;
+    --fg: 255 255 255;
+    --fg2: 174 174 178;
+    --fg3: 142 142 147;
+    --line: 84 84 88; --line-a: 0.65;
+    --accent: 94 92 230;
+    --accent-ink: 150 148 255;
+    --danger: 255 69 58;
+    --glass-bg: rgb(28 28 30 / 0.82);
+    --glass-edge: inset 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+    --sheet-bg: rgb(28 28 30 / 0.94);
+  }
+}
+
+html, body { background: rgb(var(--bg)); }
+body {
+  @apply font-body text-fg antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  -webkit-text-size-adjust: 100%;
+}
+button { -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+input, textarea, select { font-size: 16px; }
+::selection { background: rgb(var(--accent) / 0.25); }
+
+@layer base {
+  :focus-visible { outline: 3px solid rgb(var(--accent) / 0.6); outline-offset: 2px; }
+  :focus:not(:focus-visible) { outline: none; }
+}
+
+@layer components {
+  /* Glass is for what content scrolls under: the tab bar, nav bars, sheets and floating bars. Never cards. */
+  .glass {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: var(--glass-edge);
+  }
+  /* Sheets: glass, but opaque enough that what's behind never tints the text */
+  .glass-sheet { background: var(--sheet-bg); }
+  /* Cards: a solid surface, the iOS grouped look */
+  .card { background: rgb(var(--surface)); }
+  .serif { font-family: ui-serif, 'New York', Georgia, serif; }
+  /* Long words and pasted links wrap instead of running off the card */
+  .prose-wrap { overflow-wrap: anywhere; }
+  /* German compounds hyphenate instead of breaking mid-letter; English wraps whole words */
+  :lang(de) .prose-wrap, .prose-wrap:lang(de) { hyphens: auto; -webkit-hyphens: auto; }
+}
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: rgb(var(--surface)); }
+}

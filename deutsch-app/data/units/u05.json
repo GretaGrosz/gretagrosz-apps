@@ -1,0 +1,357 @@
+{
+ "id": "u05",
+ "n": 5,
+ "phase": 1,
+ "level": "B1",
+ "title": "n-Deklination",
+ "tips": {
+  "de": "Einige maskuline Nomen bekommen in allen Fällen außer dem Nominativ Singular die Endung -(e)n: der Mensch – den/dem/des Menschen. Das betrifft vor allem Personen und Tiere auf -e (der Kollege, der Experte, der Junge), auf -ent, -ant, -ist, -at, -oge (der Student, der Demonstrant, der Journalist, der Kandidat, der Psychologe) und einige andere (der Mensch, der Nachbar, der Herr → den Herrn).",
+  "en": "A group of masculine nouns (mostly people) add -(e)n in every case except nominative singular: der Student → den/dem/des Studenten. In the genitive they take -n, not -s.",
+  "contrast": "English never changes the noun ('the student / to the student'). German usually only changes the article, but these nouns change too. Typical Schularbeit nouns: Mensch, Experte, Kollege, Demonstrant, Journalist, Präsident, Kunde, Nachbar.",
+  "table": [
+   [
+    "",
+    "Singular",
+    "Plural"
+   ],
+   [
+    "Nom.",
+    "der Mensch",
+    "die Menschen"
+   ],
+   [
+    "Akk.",
+    "den Menschen",
+    "die Menschen"
+   ],
+   [
+    "Dat.",
+    "dem Menschen",
+    "den Menschen"
+   ],
+   [
+    "Gen.",
+    "des Menschen",
+    "der Menschen"
+   ]
+  ],
+  "examples": [
+   "Die Polizei befragt den Demonstranten.",
+   "Ich gebe dem Kunden die Rechnung.",
+   "Die Meinung des Experten ist klar.",
+   "Sehr geehrter Herr Bürgermeister! – Ich schreibe Herrn Huber.",
+   "Jeder Mensch braucht Bildung – das Recht jedes Menschen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u05l1",
+   "title": "Wer gehört dazu?",
+   "s": "ndekl",
+   "gen": {
+    "nDekl": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zur n-Deklination?",
+     "o": [
+      "der Student",
+      "der Lehrer",
+      "der Computer"
+     ],
+     "a": "der Student",
+     "y": [
+      "maskulin, Person, Endung -ent",
+      "alle Personen",
+      "Endung -er"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zur n-Deklination?",
+     "o": [
+      "der Experte",
+      "der Fehler",
+      "der Bürger"
+     ],
+     "a": "der Experte"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zur n-Deklination?",
+     "o": [
+      "der Journalist",
+      "der Leser",
+      "der Freund"
+     ],
+     "a": "der Journalist"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört NICHT zur n-Deklination?",
+     "o": [
+      "der Schüler",
+      "der Kollege",
+      "der Präsident"
+     ],
+     "a": "der Schüler",
+     "r": "der Schüler – den Schüler – des Schülers (normal)."
+    },
+    {
+     "t": "match",
+     "q": "Nominativ → Akkusativ",
+     "pairs": [
+      [
+       "der Mensch",
+       "den Menschen"
+      ],
+      [
+       "der Kunde",
+       "den Kunden"
+      ],
+      [
+       "der Lehrer",
+       "den Lehrer"
+      ],
+      [
+       "der Herr",
+       "den Herrn"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Polizei befragt den ___.",
+     "h": "(der Demonstrant)",
+     "a": "Demonstranten"
+    },
+    {
+     "t": "gap",
+     "q": "Ich gebe dem ___ die Rechnung.",
+     "h": "(der Kunde)",
+     "a": "Kunden"
+    },
+    {
+     "t": "gap",
+     "q": "Die Meinung des ___ ist eindeutig.",
+     "h": "(der Experte)",
+     "a": "Experten",
+     "r": "Genitiv n-Deklination: -n, kein -s."
+    },
+    {
+     "t": "gap",
+     "q": "Kennst du den neuen ___?",
+     "h": "(der Kollege)",
+     "a": "Kollegen"
+    },
+    {
+     "t": "gap",
+     "q": "Wir schreiben einen Brief an ___ Huber und an den ___.",
+     "h": "(der Herr; der Präsident)",
+     "a": [
+      "Herrn",
+      "Präsidenten"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Die Zeitung interviewt den Student.",
+     "a": "Die Zeitung interviewt den Studenten."
+    },
+    {
+     "t": "fix",
+     "w": "Die Meinung des Expertes ist wichtig.",
+     "a": "Die Meinung des Experten ist wichtig."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe mit dem Nachbar gesprochen.",
+     "a": "Ich habe mit dem Nachbarn gesprochen."
+    },
+    {
+     "t": "fix",
+     "w": "Jeder Menschen hat Rechte.",
+     "a": "Jeder Mensch hat Rechte.",
+     "r": "Nominativ Singular: ohne -en."
+    },
+    {
+     "t": "tr",
+     "en": "The police question the protester.",
+     "a": "Die Polizei befragt den Demonstranten.",
+     "acc": [
+      "Die Polizei befragt die Demonstrantin."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "the opinion of the expert",
+     "a": "die Meinung des Experten",
+     "acc": [
+      "die Meinung der Expertin"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Zeitung hat den Experten interviewt."
+    }
+   ]
+  },
+  {
+   "id": "u05l2",
+   "title": "n-Deklination im Satz",
+   "s": "ndekl",
+   "gen": {
+    "nDekl": 3,
+    "nounPhraseCase": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Viele Firmen suchen einen ___.",
+     "h": "(der Praktikant)",
+     "a": "Praktikanten"
+    },
+    {
+     "t": "gap",
+     "q": "Der Arzt hilft dem ___.",
+     "h": "(der Patient)",
+     "a": "Patienten"
+    },
+    {
+     "t": "gap",
+     "q": "Die Rechte des ___ müssen geschützt werden.",
+     "h": "(der Mensch)",
+     "a": "Menschen"
+    },
+    {
+     "t": "gap",
+     "q": "Wir wählen einen neuen ___.",
+     "h": "(der Präsident)",
+     "a": "Präsidenten"
+    },
+    {
+     "t": "gap",
+     "q": "Die Stadt informiert die ___ über den Lärm.",
+     "h": "(der Anrainer, Plural)",
+     "a": "Anrainer",
+     "r": "„der Anrainer“ ist ein normales Nomen (nicht n-Deklination)."
+    },
+    {
+     "t": "gap",
+     "q": "Ich schreibe ___ Huber einen Brief.",
+     "h": "(der Herr, Dativ)",
+     "a": "Herrn",
+     "r": "der Herr → dem Herrn (Singular ohne -e-), Plural: die Herren."
+    },
+    {
+     "t": "fix",
+     "w": "Der Kandidat hat dem Journalist geantwortet.",
+     "a": "Der Kandidat hat dem Journalisten geantwortet."
+    },
+    {
+     "t": "fix",
+     "w": "Wir haben den Tourist nach dem Weg gefragt.",
+     "a": "Wir haben den Touristen nach dem Weg gefragt."
+    },
+    {
+     "t": "fix",
+     "w": "Das Leben eines Soldats ist gefährlich.",
+     "a": "Das Leben eines Soldaten ist gefährlich."
+    },
+    {
+     "t": "tr",
+     "en": "We asked the tourist.",
+     "a": "Wir haben den Touristen gefragt.",
+     "acc": [
+      "Wir fragten den Touristen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The doctor helps the patient.",
+     "a": "Der Arzt hilft dem Patienten.",
+     "acc": [
+      "Die Ärztin hilft dem Patienten."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Der Arzt hat dem Patienten geholfen."
+    }
+   ]
+  },
+  {
+   "id": "u05l3",
+   "title": "Gemischt & Endlos",
+   "s": "ndekl",
+   "gen": {
+    "nDekl": 3,
+    "nounPhraseCase": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Form ist richtig?",
+     "o": [
+      "die Aufgabe des Kollegen",
+      "die Aufgabe des Kolleges",
+      "die Aufgabe des Kollege"
+     ],
+     "a": "die Aufgabe des Kollegen"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Form ist richtig?",
+     "o": [
+      "mit dem Nachbarn",
+      "mit dem Nachbar",
+      "mit dem Nachbars"
+     ],
+     "a": "mit dem Nachbarn"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Form ist richtig?",
+     "o": [
+      "für den Kunden",
+      "für den Kunde",
+      "für dem Kunden"
+     ],
+     "a": "für den Kunden"
+    },
+    {
+     "t": "order",
+     "a": "Die Polizei hat den Demonstranten festgenommen.",
+     "extra": [
+      "Demonstrant"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich vertraue dem Experten.",
+     "extra": [
+      "Experte"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Every person needs education.",
+     "a": "Jeder Mensch braucht Bildung."
+    },
+    {
+     "t": "tr",
+     "en": "the rights of every person",
+     "a": "die Rechte jedes Menschen",
+     "acc": [
+      "die Rechte eines jeden Menschen"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Rechte jedes Menschen müssen geschützt werden."
+    }
+   ]
+  }
+ ]
+}

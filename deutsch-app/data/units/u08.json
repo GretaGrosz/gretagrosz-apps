@@ -1,0 +1,424 @@
+{
+ "id": "u08",
+ "n": 8,
+ "phase": 1,
+ "level": "B1",
+ "title": "Komparativ & Superlativ",
+ "tips": {
+  "de": "Komparativ: Adjektiv + -er (billig → billiger), oft mit Umlaut (alt → älter, groß → größer). Vergleich mit „als“: Reisen ist heute billiger als früher. Gleichheit mit „so … wie“: Der Zug ist so schnell wie das Auto. Superlativ: am + -sten (am billigsten) oder vor einem Nomen: der/die/das billigste. Unregelmäßig: gut – besser – am besten, viel – mehr – am meisten, gern – lieber – am liebsten, hoch – höher – am höchsten.",
+  "en": "Comparative: -er (+ often an umlaut), with 'als' (than). Equality: so … wie (as … as). Superlative: am …sten or der/die/das …ste. German never uses 'more/most + adjective': 'more expensive' = teurer.",
+  "contrast": "English says 'more interesting', 'most important'. German always uses the ending: interessanter, am wichtigsten. Also: 'than' = als, not 'wie' or 'dann'. And if two adjectives are compared, BOTH need -er: einfacher und günstiger.",
+  "table": [
+   [
+    "Grundform",
+    "Komparativ",
+    "Superlativ"
+   ],
+   [
+    "günstig",
+    "günstiger",
+    "am günstigsten"
+   ],
+   [
+    "groß",
+    "größer",
+    "am größten"
+   ],
+   [
+    "gut",
+    "besser",
+    "am besten"
+   ],
+   [
+    "viel",
+    "mehr",
+    "am meisten"
+   ],
+   [
+    "hoch",
+    "höher",
+    "am höchsten"
+   ]
+  ],
+  "examples": [
+   "Reisen ist heute einfacher und günstiger als im 20. Jahrhundert.",
+   "Der Zug ist umweltfreundlicher als das Flugzeug.",
+   "Die Mieten sind fast so hoch wie in München.",
+   "Das wichtigste Argument ist …",
+   "Am meisten leiden die Anrainer."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u08l1",
+   "title": "Komparativ mit als",
+   "s": "komp.comp",
+   "gen": {
+    "comparison": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Reisen ist heute einfacher und ___ als im 20. Jahrhundert.",
+     "h": "(günstig)",
+     "o": [
+      "günstiger",
+      "günstige",
+      "mehr günstig"
+     ],
+     "a": "günstiger",
+     "y": [
+      "Beide Adjektive im Komparativ: -er",
+      "nur das erste Adjektiv steigern",
+      "mit „mehr“ steigern"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Der Zug ist umweltfreundlicher ___ das Flugzeug.",
+     "o": [
+      "als",
+      "wie",
+      "dann"
+     ],
+     "a": "als",
+     "y": [
+      "Komparativ + als",
+      "Komparativ + wie",
+      "than = dann"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Mieten in Wien sind ___ als früher.",
+     "h": "(hoch)",
+     "o": [
+      "höher",
+      "hocher",
+      "mehr hoch"
+     ],
+     "a": "höher"
+    },
+    {
+     "t": "mc",
+     "q": "Online-Shopping ist ___ als der Einkauf im Geschäft.",
+     "h": "(bequem)",
+     "o": [
+      "bequemer",
+      "mehr bequem",
+      "bequemmer"
+     ],
+     "a": "bequemer"
+    },
+    {
+     "t": "gap",
+     "q": "Kinder lernen heute ___ mit Tablets als mit Büchern.",
+     "h": "(viel → Komparativ)",
+     "a": "mehr"
+    },
+    {
+     "t": "gap",
+     "q": "Die Luft am Land ist ___ als in der Stadt.",
+     "h": "(gut)",
+     "a": "besser"
+    },
+    {
+     "t": "gap",
+     "q": "Junge Menschen sind oft ___ als ältere.",
+     "h": "(kritisch)",
+     "a": "kritischer"
+    },
+    {
+     "t": "gap",
+     "q": "Der Klimawandel ist ___ als viele denken.",
+     "h": "(gefährlich)",
+     "a": "gefährlicher"
+    },
+    {
+     "t": "gap",
+     "q": "Mein Bruder ist zwei Jahre ___ als ich.",
+     "h": "(alt)",
+     "a": "älter"
+    },
+    {
+     "t": "gap",
+     "q": "Ich lese ___ E-Books als gedruckte Bücher.",
+     "h": "(gern → Komparativ)",
+     "a": "lieber"
+    },
+    {
+     "t": "fix",
+     "w": "Reisen ist heute einfacher und günstige als früher.",
+     "a": "Reisen ist heute einfacher und günstiger als früher."
+    },
+    {
+     "t": "fix",
+     "w": "Der Zug ist schneller wie das Auto.",
+     "a": "Der Zug ist schneller als das Auto.",
+     "r": "Komparativ + als."
+    },
+    {
+     "t": "fix",
+     "w": "Das ist mehr interessant als der Film.",
+     "a": "Das ist interessanter als der Film."
+    },
+    {
+     "t": "fix",
+     "w": "Die Preise sind hocher als letztes Jahr.",
+     "a": "Die Preise sind höher als letztes Jahr."
+    },
+    {
+     "t": "tr",
+     "en": "The train is cheaper than the plane.",
+     "a": "Der Zug ist billiger als das Flugzeug.",
+     "acc": [
+      "Der Zug ist günstiger als das Flugzeug.",
+      "Zugfahren ist billiger als Fliegen.",
+      "Zugfahren ist günstiger als Fliegen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Travelling is easier than before.",
+     "a": "Reisen ist einfacher als früher.",
+     "acc": [
+      "Das Reisen ist einfacher als früher.",
+      "Reisen ist leichter als früher."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Reisen ist heute einfacher und günstiger als im 20. Jahrhundert."
+    }
+   ]
+  },
+  {
+   "id": "u08l2",
+   "title": "so … wie / Superlativ",
+   "s": "komp.sup",
+   "gen": {
+    "comparison": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Der Bus ist so teuer ___ der Zug.",
+     "o": [
+      "wie",
+      "als",
+      "so"
+     ],
+     "a": "wie",
+     "y": [
+      "Gleichheit: so … wie",
+      "Komparativ: als",
+      "so … so"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das ist das ___ Argument.",
+     "h": "(wichtig)",
+     "o": [
+      "wichtigste",
+      "wichtigsten",
+      "meist wichtige"
+     ],
+     "a": "wichtigste"
+    },
+    {
+     "t": "mc",
+     "q": "Im Sommer ist Hallstatt ___ voll.",
+     "h": "(Superlativ)",
+     "o": [
+      "am vollsten",
+      "am vollesten",
+      "meisten voll"
+     ],
+     "a": "am vollsten"
+    },
+    {
+     "t": "mc",
+     "q": "Wer leidet ___ unter dem Lärm?",
+     "h": "(viel)",
+     "o": [
+      "am meisten",
+      "am mehrsten",
+      "am viel"
+     ],
+     "a": "am meisten"
+    },
+    {
+     "t": "gap",
+     "q": "Hallstatt ist einer der ___ Orte Österreichs.",
+     "h": "(bekannt)",
+     "a": "bekanntesten",
+     "r": "einer der + Superlativ im Genitiv Plural: -en."
+    },
+    {
+     "t": "gap",
+     "q": "Manche der ___ Menschen haben keine Matura.",
+     "h": "(reich)",
+     "a": "reichsten"
+    },
+    {
+     "t": "gap",
+     "q": "Mit dem Rad kommt man in der Stadt ___ ans Ziel.",
+     "h": "(schnell)",
+     "a": "am schnellsten"
+    },
+    {
+     "t": "gap",
+     "q": "Das ist die ___ Lösung.",
+     "h": "(gut)",
+     "a": "beste"
+    },
+    {
+     "t": "gap",
+     "q": "Die Preise sind fast so ___ wie in München.",
+     "h": "(hoch)",
+     "a": "hoch"
+    },
+    {
+     "t": "gap",
+     "q": "Der ___ Berg Österreichs ist der Großglockner.",
+     "h": "(hoch)",
+     "a": "höchste"
+    },
+    {
+     "t": "fix",
+     "w": "Das ist der meist wichtige Punkt.",
+     "a": "Das ist der wichtigste Punkt."
+    },
+    {
+     "t": "fix",
+     "w": "Er ist so groß als sein Vater.",
+     "a": "Er ist so groß wie sein Vater."
+    },
+    {
+     "t": "fix",
+     "w": "Am meistens Müll entsteht im Sommer.",
+     "a": "Am meisten Müll entsteht im Sommer."
+    },
+    {
+     "t": "tr",
+     "en": "the most important argument",
+     "a": "das wichtigste Argument"
+    },
+    {
+     "t": "tr",
+     "en": "The bus is as expensive as the train.",
+     "a": "Der Bus ist so teuer wie der Zug."
+    },
+    {
+     "t": "tr",
+     "en": "one of the most beautiful places",
+     "a": "einer der schönsten Orte",
+     "acc": [
+      "einer der schönsten Plätze"
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Das wichtigste Argument ist der Schutz der Umwelt."
+    }
+   ]
+  },
+  {
+   "id": "u08l3",
+   "title": "immer mehr, je … desto",
+   "s": "komp",
+   "gen": {
+    "comparison": 1
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "___ Menschen benutzen das Flugzeug.",
+     "h": "(more and more)",
+     "o": [
+      "Immer mehr",
+      "Mehrere",
+      "Mehr und mehr"
+     ],
+     "a": "Immer mehr",
+     "y": [
+      "immer mehr = eine Entwicklung",
+      "mehrere = einige",
+      "mehr und mehr ist kein gutes Deutsch"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Die Mieten werden ___.",
+     "h": "(higher and higher)",
+     "o": [
+      "immer höher",
+      "mehr und mehr hoch",
+      "höher und höher"
+     ],
+     "a": "immer höher"
+    },
+    {
+     "t": "mc",
+     "q": "Je mehr man liest, ___ besser schreibt man.",
+     "o": [
+      "desto",
+      "als",
+      "dann"
+     ],
+     "a": "desto"
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt ___ Elektroautos auf unseren Straßen.",
+     "h": "(more and more)",
+     "a": "immer mehr"
+    },
+    {
+     "t": "gap",
+     "q": "Der Druck auf die Schüler wird ___.",
+     "h": "(greater and greater)",
+     "a": "immer größer"
+    },
+    {
+     "t": "gap",
+     "q": "Je früher man beginnt, ___ einfacher ist es.",
+     "a": "desto",
+     "acc": [
+      "umso"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "dass mehrere Menschen Flugzeuge benutzen",
+     "a": "dass immer mehr Menschen Flugzeuge benutzen",
+     "r": "Entwicklung → immer mehr."
+    },
+    {
+     "t": "fix",
+     "w": "Je mehr Touristen kommen, als mehr Müll gibt es.",
+     "a": "Je mehr Touristen kommen, desto mehr Müll gibt es.",
+     "r": "je … desto (umso): Im je-Satz steht das Verb am Ende, nach desto + Komparativ kommt das Verb."
+    },
+    {
+     "t": "tr",
+     "en": "More and more people fly.",
+     "a": "Immer mehr Menschen fliegen."
+    },
+    {
+     "t": "tr",
+     "en": "The rents are getting higher and higher.",
+     "a": "Die Mieten werden immer höher.",
+     "acc": [
+      "Die Mieten steigen immer weiter."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Immer mehr Menschen teilen ihre Urlaube in den sozialen Medien."
+    }
+   ]
+  }
+ ]
+}

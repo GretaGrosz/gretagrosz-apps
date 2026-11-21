@@ -1,0 +1,450 @@
+[
+ {
+  "id": "leserbrief",
+  "name": "Leserbrief",
+  "short": "Reaktion auf einen Zeitungsartikel, an die Redaktion.",
+  "addressee": "die Redaktion der Zeitung (nicht die Lehrerin!)",
+  "bauplan": [
+   [
+    "Betreff",
+    "z. B. „Betreff: Ihr Artikel „Handyverbot an Schulen“ vom 12. März 2027“ – kurz und konkret."
+   ],
+   [
+    "Anrede",
+    "„Sehr geehrte Damen und Herren,“ (mit Beistrich, danach klein weiter)."
+   ],
+   [
+    "Bezug auf den Artikel",
+    "Titel, Zeitung, Datum, Autor/in: „In Ihrem Artikel „…“ vom … berichten Sie über …“"
+   ],
+   [
+    "Eigene Position",
+    "Klar sagen, ob du zustimmst oder widersprichst – schon in der Einleitung."
+   ],
+   [
+    "Argumente mit Beispielen",
+    "2–3 Argumente, jedes mit Begründung und Beispiel, logisch verbunden."
+   ],
+   [
+    "Schluss / Appell",
+    "Zusammenfassen und an die Leser/Verantwortlichen appellieren."
+   ],
+   [
+    "Grußformel",
+    "„Mit freundlichen Grüßen“ (ohne Beistrich)."
+   ],
+   [
+    "Name, Ort",
+    "Vor- und Nachname, Ort (z. B. „Greta Grosz, Wien“)."
+   ]
+  ],
+  "redemittel": {
+   "Bezug nehmen": [
+    "In Ihrem Artikel „…“ vom … berichten Sie über …",
+    "Mit großem Interesse habe ich Ihren Artikel „…“ gelesen.",
+    "Ich beziehe mich auf Ihren Beitrag „…“, der am … erschienen ist.",
+    "Als Schülerin bin ich von diesem Thema direkt betroffen.",
+    "Ihr Artikel hat mich zum Nachdenken angeregt, weshalb ich Ihnen schreibe."
+   ],
+   "Schluss": [
+    "Ich hoffe, dass mein Brief zu einer offenen Diskussion beiträgt.",
+    "Ich würde mich freuen, wenn Sie meinen Brief veröffentlichen.",
+    "Abschließend möchte ich an alle Verantwortlichen appellieren, …",
+    "Vielen Dank für Ihre Aufmerksamkeit."
+   ]
+  },
+  "musts": [
+   "Anrede an die Redaktion: Sehr geehrte Damen und Herren,",
+   "Bezug auf Artikel (Titel, Zeitung, Datum)",
+   "Grußformel + Name + Ort",
+   "Betreff"
+  ],
+  "mistakes": [
+   "Anrede „Sehr geehrte Frau Professorin“ – falsche Adressatin!",
+   "Kein Bezug auf den Artikel",
+   "Grußformel mit Beistrich („Mit freundlichen Grüßen,“)"
+  ]
+ },
+ {
+  "id": "eroerterung",
+  "name": "Erörterung",
+  "short": "Ein Thema von mehreren Seiten durchdenken und begründet urteilen.",
+  "addressee": "allgemeine Leserschaft (sachlich, keine Anrede)",
+  "bauplan": [
+   [
+    "Überschrift",
+    "Pflicht! Am besten als Frage oder Thema: „Handyverbot an Schulen – sinnvoll oder überholt?“"
+   ],
+   [
+    "Einleitung",
+    "Hinführung zum Thema (aktueller Anlass, Zahl, Frage) und Überleitung zur Fragestellung."
+   ],
+   [
+    "Hauptteil: Pro",
+    "Argumente mit Behauptung – Begründung – Beispiel."
+   ],
+   [
+    "Hauptteil: Kontra",
+    "Gegenargumente ebenso aufbauen (dialektisch) oder nur eine Seite (linear)."
+   ],
+   [
+    "Abwägung",
+    "Argumente gewichten: Welche sind stärker und warum?"
+   ],
+   [
+    "Schluss",
+    "Eigene begründete Meinung, evtl. Ausblick oder Lösungsvorschlag."
+   ]
+  ],
+  "redemittel": {
+   "Einleitung": [
+    "In den letzten Jahren wird immer häufiger darüber diskutiert, ob …",
+    "Laut einer aktuellen Studie …",
+    "Die Frage, ob …, beschäftigt viele Menschen.",
+    "Im Folgenden möchte ich Argumente für und gegen … abwägen."
+   ],
+   "Abwägung": [
+    "Wägt man die Argumente ab, so zeigt sich, dass …",
+    "Besonders schwer wiegt meiner Meinung nach das Argument, dass …",
+    "Obwohl einiges dafür spricht, überwiegen die Nachteile."
+   ]
+  },
+  "musts": [
+   "Überschrift",
+   "Einleitung mit Hinführung",
+   "Argumente mit Begründung und Beispiel",
+   "Schluss mit eigener Meinung"
+  ],
+  "mistakes": [
+   "Überschrift vergessen – siehe Angabe!",
+   "Argumente ohne Beispiele",
+   "Neue Argumente erst im Schluss"
+  ]
+ },
+ {
+  "id": "kommentar",
+  "name": "Kommentar",
+  "short": "Meinungsbetonter Zeitungstext: pointiert, subjektiv, gut begründet.",
+  "addressee": "Zeitungsleser/innen",
+  "bauplan": [
+   [
+    "Überschrift",
+    "Pflicht! Gerne zugespitzt oder mit Wortspiel."
+   ],
+   [
+    "Einstieg",
+    "Aufhänger: aktuelles Ereignis, Zitat, provokante Frage."
+   ],
+   [
+    "Darstellung des Problems",
+    "Kurz erklären, worum es geht (Fakten)."
+   ],
+   [
+    "Argumentation",
+    "Eigene Meinung klar vertreten, Gegenpositionen entkräften."
+   ],
+   [
+    "Schluss",
+    "Pointe, Forderung oder Ausblick."
+   ],
+   [
+    "Name",
+    "Verfasser/in unter dem Text."
+   ]
+  ],
+  "redemittel": {
+   "Einstieg": [
+    "Es ist schon erstaunlich: …",
+    "Wer heute … sieht, fragt sich, …",
+    "Wieder einmal wird darüber gestritten, ob …"
+   ],
+   "Pointe": [
+    "Es ist höchste Zeit, dass …",
+    "Am Ende bleibt die Frage: …",
+    "Eines ist klar: …"
+   ]
+  },
+  "musts": [
+   "Überschrift",
+   "klare eigene Meinung",
+   "Bezug zu einem aktuellen Anlass",
+   "Name"
+  ],
+  "mistakes": [
+   "zu neutral – ein Kommentar braucht eine klare Position",
+   "Überschrift fehlt"
+  ]
+ },
+ {
+  "id": "meinungsrede",
+  "name": "Meinungsrede",
+  "short": "Rede vor Publikum, die überzeugen will.",
+  "addressee": "das Publikum (z. B. Mitschüler/innen, Eltern, Gemeinderat)",
+  "bauplan": [
+   [
+    "Anrede",
+    "„Sehr geehrte Damen und Herren, liebe Mitschülerinnen und Mitschüler!“"
+   ],
+   [
+    "Einstieg",
+    "Aufmerksamkeit wecken: Frage, Zahl, persönliches Erlebnis."
+   ],
+   [
+    "Anlass und Thema",
+    "Warum stehe ich hier? Was ist das Thema?"
+   ],
+   [
+    "Argumente",
+    "2–3 Argumente, Publikum direkt ansprechen (Sie/ihr, wir)."
+   ],
+   [
+    "Schluss / Appell",
+    "Aufruf zum Handeln."
+   ],
+   [
+    "Dank",
+    "„Vielen Dank für Ihre Aufmerksamkeit!“"
+   ]
+  ],
+  "redemittel": {
+   "Publikum ansprechen": [
+    "Stellen Sie sich einmal vor, …",
+    "Kennen Sie das nicht auch?",
+    "Ich bin heute hier, weil …",
+    "Liebe Mitschülerinnen und Mitschüler, wir alle wissen, dass …"
+   ],
+   "Appell": [
+    "Deshalb fordere ich Sie auf, …",
+    "Lassen Sie uns gemeinsam …!",
+    "Es liegt an uns, …",
+    "Vielen Dank für Ihre Aufmerksamkeit!"
+   ]
+  },
+  "musts": [
+   "Anrede des Publikums",
+   "direkte Ansprache",
+   "Appell",
+   "Dank am Schluss"
+  ],
+  "mistakes": [
+   "Wie ein Aufsatz geschrieben – ohne Publikum anzusprechen",
+   "Kein Appell"
+  ]
+ },
+ {
+  "id": "offenerbrief",
+  "name": "Offener Brief",
+  "short": "Brief an eine Person/Institution, der öffentlich gemacht wird.",
+  "addressee": "eine bestimmte Person oder Institution (z. B. Bildungsminister/in, Bürgermeister/in) – und die Öffentlichkeit",
+  "bauplan": [
+   [
+    "Überschrift",
+    "„Offener Brief an …“"
+   ],
+   [
+    "Anrede",
+    "Konkrete Person: „Sehr geehrter Herr Bundesminister …,“ / „Sehr geehrte Frau Bürgermeisterin …,“"
+   ],
+   [
+    "Anlass",
+    "Warum schreibe ich? Bezug auf Entscheidung/Problem."
+   ],
+   [
+    "Problem und Argumente",
+    "Sachlich, mit Belegen und Beispielen."
+   ],
+   [
+    "Forderungen",
+    "Konkrete Vorschläge oder Forderungen."
+   ],
+   [
+    "Schluss",
+    "Bitte um Reaktion, Appell."
+   ],
+   [
+    "Grußformel + Name",
+    "„Mit freundlichen Grüßen“, Name, Funktion (z. B. Schulsprecherin)."
+   ]
+  ],
+  "redemittel": {
+   "Anlass": [
+    "Ich wende mich mit diesem offenen Brief an Sie, weil …",
+    "Mit Sorge beobachte ich, dass …",
+    "Im Namen vieler Schülerinnen und Schüler möchte ich …"
+   ],
+   "Forderungen": [
+    "Ich fordere Sie daher auf, …",
+    "Konkret schlage ich vor, …",
+    "Ich bitte Sie eindringlich, …",
+    "Ich hoffe auf eine baldige Antwort."
+   ]
+  },
+  "musts": [
+   "Überschrift „Offener Brief an …“",
+   "persönliche Anrede der Adressatin/des Adressaten",
+   "konkrete Forderungen",
+   "Grußformel + Name"
+  ],
+  "mistakes": [
+   "Anrede „Sehr geehrte Damen und Herren“, obwohl eine bestimmte Person gemeint ist",
+   "Keine konkreten Forderungen"
+  ]
+ },
+ {
+  "id": "empfehlung",
+  "name": "Empfehlung",
+  "short": "Etwas (Buch, Film, Projekt, Reiseziel …) begründet empfehlen oder davon abraten.",
+  "addressee": "die Zielgruppe aus der Angabe (z. B. Leser/innen der Schülerzeitung)",
+  "bauplan": [
+   [
+    "Überschrift",
+    "Neugierig machend."
+   ],
+   [
+    "Einleitung",
+    "Was wird empfohlen? Für wen?"
+   ],
+   [
+    "Beschreibung",
+    "Wichtigste Informationen (Inhalt, Ort, Preis …)."
+   ],
+   [
+    "Bewertung",
+    "Stärken und Schwächen mit Begründung."
+   ],
+   [
+    "Empfehlung",
+    "Klare Empfehlung für eine bestimmte Zielgruppe (oft mit Konjunktiv II)."
+   ]
+  ],
+  "redemittel": {
+   "Empfehlen": [
+    "Ich kann … allen empfehlen, die …",
+    "Besonders lohnt sich … für …",
+    "Wer …, sollte unbedingt …",
+    "Ich würde … auf jeden Fall weiterempfehlen.",
+    "Es wäre schade, … zu verpassen."
+   ],
+   "Einschränken": [
+    "Weniger geeignet ist … für …",
+    "Ein kleiner Kritikpunkt ist, dass …",
+    "Allerdings sollte man wissen, dass …"
+   ]
+  },
+  "musts": [
+   "Überschrift",
+   "Zielgruppe nennen",
+   "Begründete Bewertung",
+   "klare Empfehlung"
+  ],
+  "mistakes": [
+   "Nur Inhaltsangabe, keine Bewertung",
+   "Zielgruppe fehlt"
+  ]
+ },
+ {
+  "id": "zusammenfassung",
+  "name": "Zusammenfassung",
+  "short": "Den Inhalt eines Textes knapp und sachlich wiedergeben.",
+  "addressee": "Leser/innen, die den Text nicht kennen",
+  "bauplan": [
+   [
+    "Einleitungssatz",
+    "Textsorte, Titel, Autor/in, Quelle, Datum, Thema in einem Satz."
+   ],
+   [
+    "Hauptteil",
+    "Wichtigste Aussagen in logischer Reihenfolge, eigene Worte."
+   ],
+   [
+    "Indirekte Rede",
+    "Meinungen des Autors im Konjunktiv I: „Die Autorin meint, die Schule sei …“"
+   ],
+   [
+    "Keine eigene Meinung",
+    "Sachlich, Präsens, keine Zitate, keine Wertung."
+   ]
+  ],
+  "redemittel": {
+   "Einleitungssatz": [
+    "In dem Artikel „…“ von …, erschienen am … in …, geht es um …",
+    "Der Text „…“ behandelt das Thema …",
+    "Die Autorin beschäftigt sich in ihrem Beitrag mit der Frage, ob …"
+   ],
+   "Wiedergeben": [
+    "Der Autor weist darauf hin, dass …",
+    "Laut der Autorin sei …",
+    "Zunächst erklärt der Verfasser, …",
+    "Außerdem betont er, dass …",
+    "Abschließend stellt die Autorin fest, dass …"
+   ]
+  },
+  "musts": [
+   "Einleitungssatz mit Titel, Autor, Quelle, Thema",
+   "Präsens",
+   "indirekte Rede (Konjunktiv I)",
+   "keine eigene Meinung"
+  ],
+  "mistakes": [
+   "Eigene Meinung eingebaut",
+   "Zitate statt eigener Worte",
+   "Präteritum statt Präsens"
+  ]
+ },
+ {
+  "id": "textanalyse",
+  "name": "Textanalyse",
+  "short": "Inhalt, Aufbau, Sprache und Wirkung eines Textes untersuchen.",
+  "addressee": "Leser/innen, die den Text verstehen wollen",
+  "bauplan": [
+   [
+    "Einleitung",
+    "Textsorte, Titel, Autor/in, Quelle, Thema, Intention."
+   ],
+   [
+    "Inhalt kurz",
+    "Kernaussagen knapp zusammenfassen."
+   ],
+   [
+    "Aufbau",
+    "Gliederung des Textes, Argumentationsstruktur."
+   ],
+   [
+    "Sprache",
+    "Stilmittel mit Beispiel und Wirkung (Zitat + Zeilenangabe)."
+   ],
+   [
+    "Intention und Wirkung",
+    "Was will der Text erreichen? Gelingt das?"
+   ],
+   [
+    "Schluss",
+    "Zusammenfassende Bewertung."
+   ]
+  ],
+  "redemittel": {
+   "Analysieren": [
+    "Der Text lässt sich in … Abschnitte gliedern.",
+    "Auffällig ist die Verwendung von …",
+    "Durch die rhetorische Frage in Zeile … wird der Leser …",
+    "Die Autorin verwendet zahlreiche Adjektive, um …",
+    "Dies unterstreicht die Absicht, …"
+   ],
+   "Wirkung": [
+    "Dadurch wirkt der Text …",
+    "Der Leser fühlt sich direkt angesprochen.",
+    "Die Wortwahl verstärkt den Eindruck, dass …"
+   ]
+  },
+  "musts": [
+   "Einleitung mit Textdaten",
+   "Sprache mit Belegen (Zitat + Zeile)",
+   "Wirkung erklärt",
+   "Präsens"
+  ],
+  "mistakes": [
+   "Nur Inhalt nacherzählt",
+   "Stilmittel genannt, aber Wirkung nicht erklärt"
+  ]
+ }
+]

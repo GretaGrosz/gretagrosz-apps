@@ -1,0 +1,70 @@
+/* idle motion for the eyes accessories: snorkel bubbles, monocle glint and moustache twitch, pixel shine sweep */
+
+/* ---------- snorkel: bubbles bob out of the tube and pop ---------- */
+.axo .axo-acc-snorkel .snk-bub {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-snorkel-bubble 3.6s ease-out infinite backwards;
+  animation-delay: calc(var(--i, 0) * 1.1s);
+}
+
+@keyframes acc-snorkel-bubble {
+  0% { transform: translate(0, var(--dy, 0px)) scale(0.3); opacity: 0; }
+  8% { opacity: 1; }
+  30% { transform: translate(-2px, calc(var(--dy, 0px) - 9px)) scale(0.9); }
+  52% { transform: translate(2px, calc(var(--dy, 0px) - 20px)) scale(1); opacity: 1; }
+  58% { transform: translate(2px, calc(var(--dy, 0px) - 21px)) scale(1.6); opacity: 0; }
+  100% { transform: translate(2px, calc(var(--dy, 0px) - 21px)) scale(1.6); opacity: 0; }
+}
+
+/* ---------- monocle: a glint, and the moustache curls twitch now and then ---------- */
+.axo .axo-acc-monocle .mon-glint {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: acc-monocle-glint 5s ease-in-out infinite backwards;
+}
+
+@keyframes acc-monocle-glint {
+  0%, 70%, 100% { transform: scale(0.2) rotate(0deg); opacity: 0; }
+  78% { transform: scale(1.15) rotate(45deg); opacity: 1; }
+  88% { transform: scale(0.2) rotate(90deg); opacity: 0; }
+}
+
+.axo .axo-acc-monocle .mon-stache {
+  transform-box: fill-box;
+  animation: acc-monocle-twitch 6.5s ease-in-out infinite;
+}
+.axo .axo-acc-monocle .mon-stache-r { transform-origin: 0% 60%; --tw: -14deg; }
+.axo .axo-acc-monocle .mon-stache-l { transform-origin: 100% 60%; --tw: 14deg; animation-delay: 0.08s; }
+
+@keyframes acc-monocle-twitch {
+  0%, 40%, 58%, 100% { transform: none; }
+  44% { transform: rotate(var(--tw)); }
+  48% { transform: none; }
+  52% { transform: rotate(var(--tw)); }
+}
+
+/* ---------- pixel shades: a stepped shine sweeps across ---------- */
+.axo .axo-acc-pixel .pix-sweep-col {
+  opacity: 0;
+  animation: acc-pixel-sweep 7s steps(1, end) infinite;
+  animation-delay: calc(2s + var(--i, 0) * 40ms);
+}
+
+@keyframes acc-pixel-sweep {
+  0% { opacity: 0.9; }
+  1.2% { opacity: 0.35; }
+  2.4%, 100% { opacity: 0; }
+}
+
+.axo[data-axo-paused] .axo-acc-snorkel .snk-bub,
+.axo[data-axo-paused] .axo-acc-monocle .mon-glint,
+.axo[data-axo-paused] .axo-acc-monocle .mon-stache,
+.axo[data-axo-paused] .axo-acc-pixel .pix-sweep-col { animation-play-state: paused; }
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc-snorkel .snk-bub,
+  .axo .axo-acc-monocle .mon-glint,
+  .axo .axo-acc-monocle .mon-stache,
+  .axo .axo-acc-pixel .pix-sweep-col { animation: none; }
+}

@@ -1,0 +1,39 @@
+// Cloudflare deploy for gretagrosz.com: one Worker serving deploy/site/
+// (homepage at /, apps at /bwbuddy/ /blank/ /tenaday/ /regional/ /yap/ /stance/ /deutsch/).
+// Static files are served first; worker/index.js only answers the Yap API (/yap/api/*), the Stance API (/stance/api/*) and the site API (/api/site/*, worker/site.js) from D1. Unknown paths get website/404.html.
+// Push notifications (Yap and Stance) need the VAPID_PRIVATE secret (wrangler secret put VAPID_PRIVATE; locally .dev.vars).
+// Settings copied from the dashboard upload. Deploy with: npm run deploy
+{
+  "name": "gretagrosz-apps",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./deploy/site",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // PDFs imported by the Worker (worker/private/, not public): the CV, handed out by worker/site.js
+  // Blank's reminders go out every 5 minutes (worker/blank-reminders.js). Cron triggers are free on the Workers Free plan.
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "rules": [{ "type": "Data", "globs": ["**/*.pdf"], "fallthrough": true }],
+  // Workers AI: Whisper captions and transcripts, and the coach in Stance's The Minute
+  "ai": { "binding": "AI", "remote": true },
+  // Blank's photos for people with an account (worker/blank-account.js). Private: only the Worker reads it.
+  "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "blank-photos" }],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "yap",
+      "database_id": "1793f016-b057-428a-824a-af90548b7ab3",
+      "migrations_dir": "worker/migrations"
+    },
+    {
+      "binding": "STANCE_DB",
+      "database_name": "stance",
+      "database_id": "bb27538f-ea1d-4d35-b137-65d28f64d44d",
+      "migrations_dir": "worker/stance-migrations"
+    }
+  ]
+}

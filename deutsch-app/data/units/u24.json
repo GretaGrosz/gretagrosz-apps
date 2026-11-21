@@ -1,0 +1,356 @@
+{
+ "id": "u24",
+ "n": 24,
+ "phase": 2,
+ "level": "B2",
+ "title": "Nominalstil & Funktionsverbgefüge",
+ "weak": true,
+ "tips": {
+  "de": "Funktionsverbgefüge sind feste Verbindungen aus Nomen + Verb, die in der Schriftsprache sehr häufig sind: Stellung nehmen (zu), eine Entscheidung treffen, in Betracht ziehen, zur Verfügung stellen, Kritik üben (an), einen Beitrag leisten (zu), Maßnahmen ergreifen, eine Rolle spielen, Rücksicht nehmen (auf), Verantwortung übernehmen, in Frage kommen/stellen, zum Ausdruck bringen, eine Lösung finden. Das Verb ist fest – man kann es nicht durch ein anderes ersetzen. Nominalstil (die Einführung des Verbots statt „dass man das Verbot einführt“) wirkt sachlich, aber übertreib es nicht.",
+  "en": "Function-verb phrases are fixed noun + verb pairs used in formal writing: Stellung nehmen, eine Entscheidung treffen, Maßnahmen ergreifen. The verb is fixed, so translating from English often gives the wrong verb.",
+  "contrast": "English 'make a decision' → German 'eine Entscheidung TREFFEN' (not machen). 'take responsibility' → 'Verantwortung ÜBERNEHMEN'. 'take a position' → 'Stellung NEHMEN'. 'take measures' → 'Maßnahmen ERGREIFEN'. Learn the verb with the noun.",
+  "table": [
+   [
+    "Nomen",
+    "Verb"
+   ],
+   [
+    "Stellung",
+    "nehmen (zu + Dat.)"
+   ],
+   [
+    "eine Entscheidung",
+    "treffen"
+   ],
+   [
+    "Maßnahmen",
+    "ergreifen / setzen"
+   ],
+   [
+    "Kritik",
+    "üben (an + Dat.)"
+   ],
+   [
+    "einen Beitrag",
+    "leisten (zu + Dat.)"
+   ],
+   [
+    "zur Verfügung",
+    "stellen"
+   ],
+   [
+    "in Betracht",
+    "ziehen"
+   ]
+  ],
+  "examples": [
+   "Im Folgenden möchte ich zu diesem Thema Stellung nehmen.",
+   "Die Regierung muss endlich Maßnahmen ergreifen.",
+   "Jeder kann einen Beitrag zum Klimaschutz leisten.",
+   "Die Schule stellt allen Schülern Laptops zur Verfügung.",
+   "Man sollte auch andere Lösungen in Betracht ziehen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u24l1",
+   "title": "Feste Verben",
+   "s": "fvg",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Ich möchte zu diesem Thema Stellung ___.",
+     "o": [
+      "nehmen",
+      "geben",
+      "machen"
+     ],
+     "a": "nehmen"
+    },
+    {
+     "t": "mc",
+     "q": "Wir müssen eine Entscheidung ___.",
+     "o": [
+      "treffen",
+      "machen",
+      "nehmen"
+     ],
+     "a": "treffen"
+    },
+    {
+     "t": "mc",
+     "q": "Die Regierung muss endlich Maßnahmen ___.",
+     "o": [
+      "ergreifen",
+      "machen",
+      "tun"
+     ],
+     "a": "ergreifen"
+    },
+    {
+     "t": "mc",
+     "q": "Viele Bürger üben Kritik ___ der Regierung.",
+     "o": [
+      "an",
+      "über",
+      "gegen"
+     ],
+     "a": "an"
+    },
+    {
+     "t": "mc",
+     "q": "Jeder kann einen Beitrag zum Klimaschutz ___.",
+     "o": [
+      "leisten",
+      "machen",
+      "geben"
+     ],
+     "a": "leisten"
+    },
+    {
+     "t": "mc",
+     "q": "Die Schule stellt allen Schülern Laptops zur ___.",
+     "o": [
+      "Verfügung",
+      "Hilfe",
+      "Benutzung"
+     ],
+     "a": "Verfügung"
+    },
+    {
+     "t": "mc",
+     "q": "Man sollte auch andere Lösungen in Betracht ___.",
+     "o": [
+      "ziehen",
+      "nehmen",
+      "stellen"
+     ],
+     "a": "ziehen"
+    },
+    {
+     "t": "mc",
+     "q": "Soziale Medien spielen eine große ___.",
+     "o": [
+      "Rolle",
+      "Bedeutung",
+      "Wichtigkeit"
+     ],
+     "a": "Rolle"
+    },
+    {
+     "t": "mc",
+     "q": "Wir sollten mehr Rücksicht ___ ältere Menschen nehmen.",
+     "o": [
+      "auf",
+      "für",
+      "an"
+     ],
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Jeder sollte Verantwortung für sein Leben ___.",
+     "a": "übernehmen"
+    },
+    {
+     "t": "gap",
+     "q": "Die Schüler bringen ihren Ärger ___ Ausdruck.",
+     "h": "(zu + dem)",
+     "a": "zum"
+    },
+    {
+     "t": "gap",
+     "q": "Ein Handyverbot kommt für mich nicht in ___.",
+     "a": "Frage"
+    },
+    {
+     "t": "gap",
+     "q": "Die Proteste haben einiges in Bewegung ___.",
+     "a": "gebracht",
+     "acc": [
+      "gesetzt"
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Welches Verb gehört dazu?",
+     "pairs": [
+      [
+       "eine Entscheidung",
+       "treffen"
+      ],
+      [
+       "Stellung",
+       "nehmen"
+      ],
+      [
+       "Maßnahmen",
+       "ergreifen"
+      ],
+      [
+       "einen Beitrag",
+       "leisten"
+      ]
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Welches Verb gehört dazu?",
+     "pairs": [
+      [
+       "Verantwortung",
+       "übernehmen"
+      ],
+      [
+       "Kritik",
+       "üben"
+      ],
+      [
+       "in Betracht",
+       "ziehen"
+      ],
+      [
+       "zur Verfügung",
+       "stellen"
+      ]
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "möchte ich in folgende Stellung nehmen",
+     "a": "möchte ich im Folgenden Stellung nehmen"
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen eine Entscheidung machen.",
+     "a": "Wir müssen eine Entscheidung treffen."
+    },
+    {
+     "t": "fix",
+     "w": "Jeder sollte Verantwortung nehmen.",
+     "a": "Jeder sollte Verantwortung übernehmen."
+    },
+    {
+     "t": "fix",
+     "w": "Die Politik muss Maßnahmen machen.",
+     "a": "Die Politik muss Maßnahmen ergreifen.",
+     "acc": [
+      "Die Politik muss Maßnahmen setzen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "We have to make a decision.",
+     "a": "Wir müssen eine Entscheidung treffen."
+    },
+    {
+     "t": "tr",
+     "en": "The government must take measures.",
+     "a": "Die Regierung muss Maßnahmen ergreifen.",
+     "acc": [
+      "Die Regierung muss Maßnahmen setzen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "In the following, I will take a position on this topic.",
+     "a": "Im Folgenden nehme ich zu diesem Thema Stellung.",
+     "acc": [
+      "Im Folgenden möchte ich zu diesem Thema Stellung nehmen.",
+      "Im Folgenden werde ich zu diesem Thema Stellung nehmen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Regierung muss endlich wirksame Maßnahmen ergreifen."
+    }
+   ]
+  },
+  {
+   "id": "u24l2",
+   "title": "Nominalstil",
+   "s": "stil.nominal",
+   "items": [
+    {
+     "t": "tf",
+     "q": "Schreib im Nominalstil:\nwenn man das Verbot einführt → bei der …",
+     "a": "bei der Einführung des Verbots",
+     "acc": [
+      "bei der Einführung des Verbotes"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib im Nominalstil:\nweil die Mieten steigen → wegen …",
+     "a": "wegen der steigenden Mieten",
+     "acc": [
+      "wegen des Anstiegs der Mieten"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib im Nominalstil:\nnachdem die Regierung entschieden hatte → nach …",
+     "a": "nach der Entscheidung der Regierung"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib im Nominalstil:\num die Natur zu schützen → zum …",
+     "a": "zum Schutz der Natur"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Verb (Verbalstil):\nNach der Veröffentlichung des Artikels gab es Proteste.",
+     "a": "Nachdem der Artikel veröffentlicht worden war, gab es Proteste.",
+     "acc": [
+      "Nachdem der Artikel veröffentlicht wurde, gab es Proteste."
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zu „entscheiden“?",
+     "o": [
+      "die Entscheidung",
+      "der Entscheid",
+      "das Entscheiden"
+     ],
+     "a": "die Entscheidung",
+     "r": "In Österreich/Schweiz gibt es auch „der Entscheid“, im Text ist „die Entscheidung“ am häufigsten."
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zu „zugreifen“?",
+     "o": [
+      "der Zugriff",
+      "die Zugreife",
+      "das Zugreif"
+     ],
+     "a": "der Zugriff"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zu „begrenzen“?",
+     "o": [
+      "die Begrenzung",
+      "die Begrenze",
+      "das Begrenz"
+     ],
+     "a": "die Begrenzung"
+    },
+    {
+     "t": "mc",
+     "q": "Welches Nomen gehört zu „schützen“?",
+     "o": [
+      "der Schutz",
+      "die Schützung",
+      "das Schützen"
+     ],
+     "a": "der Schutz"
+    },
+    {
+     "t": "listen",
+     "a": "Nach der Einführung des Verbots sank die Zahl der Touristen."
+    }
+   ]
+  }
+ ]
+}

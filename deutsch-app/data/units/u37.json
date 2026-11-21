@@ -1,0 +1,258 @@
+{
+ "id": "u37",
+ "n": 37,
+ "phase": 4,
+ "level": "C1",
+ "title": "Nominalisierung & Verbalisierung",
+ "tips": {
+  "de": "C1 heißt: zwischen Verbalstil (lebendig, verständlich) und Nominalstil (knapp, sachlich) wechseln können. Nebensatz → Präpositionalgruppe: weil … → wegen/aufgrund + Gen.; obwohl … → trotz + Gen.; wenn … → bei + Dat.; nachdem … → nach + Dat.; bevor … → vor + Dat.; damit/um … zu → zur/zum + Nomen; indem … → durch + Akk.; während … → während + Gen. Das Subjekt wird oft zum Genitiv (die Regierung entscheidet → die Entscheidung der Regierung), das Akkusativobjekt auch (man schützt die Natur → der Schutz der Natur).",
+  "en": "Switch between verbal style (clear, lively) and nominal style (compact, formal). Each conjunction has a matching preposition: weil → wegen, obwohl → trotz, wenn → bei, nachdem → nach, damit → zur/zum, indem → durch.",
+  "contrast": "English also nominalises ('the protection of nature'), but German does it much more in formal texts and uses the genitive instead of 'of'. Don't overdo it: a Schularbeit text full of nouns sounds stiff. Mix both styles.",
+  "table": [
+   [
+    "Verbalstil",
+    "Nominalstil"
+   ],
+   [
+    "weil die Mieten steigen",
+    "wegen der steigenden Mieten"
+   ],
+   [
+    "obwohl es Kritik gab",
+    "trotz der Kritik"
+   ],
+   [
+    "wenn man das Verbot einführt",
+    "bei der Einführung des Verbots"
+   ],
+   [
+    "damit die Natur geschützt wird",
+    "zum Schutz der Natur"
+   ],
+   [
+    "indem man Müll vermeidet",
+    "durch die Vermeidung von Müll"
+   ]
+  ],
+  "examples": [
+   "Nach der Veröffentlichung des Artikels gab es Proteste.",
+   "Zum Schutz der Natur wurde eine Obergrenze eingeführt.",
+   "Durch die Vermeidung von Einwegplastik lässt sich viel Müll sparen.",
+   "Bei schlechtem Wetter fällt die Veranstaltung aus.",
+   "Trotz der Kritik hielt die Regierung an der Reform fest."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u37l1",
+   "title": "Nebensatz → Nominalstil",
+   "s": "stil.nominal",
+   "items": [
+    {
+     "t": "tf",
+     "q": "Nominalstil (wegen):\nWeil die Nachfrage steigt, werden mehr Busse eingesetzt.",
+     "a": "Wegen der steigenden Nachfrage werden mehr Busse eingesetzt.",
+     "acc": [
+      "Aufgrund der steigenden Nachfrage werden mehr Busse eingesetzt."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Nominalstil (bei):\nWenn es schlechtes Wetter gibt, fällt die Veranstaltung aus.",
+     "a": "Bei schlechtem Wetter fällt die Veranstaltung aus."
+    },
+    {
+     "t": "tf",
+     "q": "Nominalstil (nach):\nNachdem der Artikel veröffentlicht worden war, gab es Proteste.",
+     "a": "Nach der Veröffentlichung des Artikels gab es Proteste."
+    },
+    {
+     "t": "tf",
+     "q": "Nominalstil (zum):\nDamit die Natur geschützt wird, wurde eine Obergrenze eingeführt.",
+     "a": "Zum Schutz der Natur wurde eine Obergrenze eingeführt."
+    },
+    {
+     "t": "tf",
+     "q": "Nominalstil (durch):\nIndem man Einwegplastik vermeidet, spart man viel Müll.",
+     "a": "Durch die Vermeidung von Einwegplastik spart man viel Müll.",
+     "acc": [
+      "Durch die Vermeidung von Einwegplastik lässt sich viel Müll sparen."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Nominalstil (trotz):\nObwohl viele protestierten, wurde das Gesetz beschlossen.",
+     "a": "Trotz der Proteste wurde das Gesetz beschlossen.",
+     "acc": [
+      "Trotz vieler Proteste wurde das Gesetz beschlossen.",
+      "Trotz der vielen Proteste wurde das Gesetz beschlossen."
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Konjunktion → Präposition",
+     "pairs": [
+      [
+       "weil",
+       "wegen"
+      ],
+      [
+       "obwohl",
+       "trotz"
+      ],
+      [
+       "nachdem",
+       "nach"
+      ],
+      [
+       "indem",
+       "durch"
+      ]
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Zum Schutz der Natur wurde eine Obergrenze eingeführt."
+    }
+   ]
+  },
+  {
+   "id": "u37l2",
+   "title": "Nominalstil → Nebensatz",
+   "s": "stil.verbal",
+   "items": [
+    {
+     "t": "tf",
+     "q": "Verbalstil (weil):\nAufgrund der hohen Mieten ziehen viele weg.",
+     "a": "Weil die Mieten hoch sind, ziehen viele weg.",
+     "acc": [
+      "Da die Mieten hoch sind, ziehen viele weg.",
+      "Viele ziehen weg, weil die Mieten hoch sind."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbalstil (wenn):\nBei Regen findet der Unterricht drinnen statt.",
+     "a": "Wenn es regnet, findet der Unterricht drinnen statt."
+    },
+    {
+     "t": "tf",
+     "q": "Verbalstil (obwohl):\nTrotz des Verbots benutzen viele das Handy.",
+     "a": "Obwohl es verboten ist, benutzen viele das Handy.",
+     "acc": [
+      "Obwohl das Handy verboten ist, benutzen viele es.",
+      "Obwohl es ein Verbot gibt, benutzen viele das Handy."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbalstil (nachdem):\nNach der Entscheidung der Regierung protestierten viele.",
+     "a": "Nachdem die Regierung entschieden hatte, protestierten viele.",
+     "acc": [
+      "Nachdem die Regierung entschieden hatte, haben viele protestiert."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Verbalstil (damit):\nZur Verbesserung der Luft wurden mehr Radwege gebaut.",
+     "a": "Damit die Luft besser wird, wurden mehr Radwege gebaut.",
+     "acc": [
+      "Um die Luft zu verbessern, wurden mehr Radwege gebaut."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Wenn es regnet, findet der Unterricht drinnen statt."
+    }
+   ]
+  },
+  {
+   "id": "u37l3",
+   "title": "Nominalisierungen bilden",
+   "s": "stil.nominal",
+   "items": [
+    {
+     "t": "match",
+     "q": "Verb → Nomen",
+     "pairs": [
+      [
+       "entscheiden",
+       "die Entscheidung"
+      ],
+      [
+       "schützen",
+       "der Schutz"
+      ],
+      [
+       "steigen",
+       "der Anstieg"
+      ],
+      [
+       "verzichten",
+       "der Verzicht"
+      ]
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Verb → Nomen",
+     "pairs": [
+      [
+       "einführen",
+       "die Einführung"
+      ],
+      [
+       "vermeiden",
+       "die Vermeidung"
+      ],
+      [
+       "fordern",
+       "die Forderung"
+      ],
+      [
+       "zunehmen",
+       "die Zunahme"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Nomen zu „sinken“:",
+     "o": [
+      "der Rückgang",
+      "die Sinkung",
+      "das Sinken (nur so)"
+     ],
+     "a": "der Rückgang",
+     "r": "Oft gibt es ein eigenes Nomen: die Preise sinken → der Rückgang der Preise (auch: das Sinken der Preise)."
+    },
+    {
+     "t": "mc",
+     "q": "Nomen zu „ankommen“:",
+     "o": [
+      "die Ankunft",
+      "die Ankommung",
+      "der Ankunft"
+     ],
+     "a": "die Ankunft"
+    },
+    {
+     "t": "gap",
+     "q": "Der ___ der Mieten belastet junge Familien.",
+     "h": "(steigen)",
+     "a": "Anstieg"
+    },
+    {
+     "t": "gap",
+     "q": "Die ___ von Plastik ist ein wichtiges Ziel.",
+     "h": "(vermeiden)",
+     "a": "Vermeidung"
+    },
+    {
+     "t": "listen",
+     "a": "Der Anstieg der Mieten belastet viele junge Familien."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,380 @@
+{
+ "id": "u15",
+ "n": 15,
+ "phase": 1,
+ "level": "B2",
+ "title": "Infinitiv mit zu, um … zu",
+ "tips": {
+  "de": "Nach vielen Verben, Nomen und Adjektiven folgt eine Infinitivgruppe mit „zu“: Es ist wichtig, die Angabe genau zu lesen. „zu“ + Infinitiv steht AM ENDE der Gruppe. Bei trennbaren Verben steht „zu“ in der Mitte: vorzubereiten, zuzuschieben, einzustellen. um … zu = Zweck (in order to), ohne … zu = without …ing, statt … zu = instead of …ing. Nach Modalverben (können, müssen …) und nach werden steht KEIN „zu“. Beistrich: vor um/ohne/statt … zu immer; nach „es ist wichtig“, „darauf“, „daran“ … ebenfalls.",
+  "en": "Many expressions take an infinitive group with 'zu' at the END. With separable verbs, 'zu' goes inside (vorzubereiten). um … zu = in order to; ohne … zu = without -ing; statt … zu = instead of -ing. No 'zu' after modal verbs.",
+  "contrast": "English puts 'to' at the start: 'It is important to read the task carefully.' German puts 'zu + verb' at the very end: 'Es ist wichtig, die Angabe genau zu lesen.' English 'without asking' (-ing) becomes 'ohne zu fragen'.",
+  "examples": [
+   "Es ist wichtig, sich kritisch mit dem Thema auseinanderzusetzen.",
+   "Letztendlich kommt es darauf an, eine Lösung zu finden.",
+   "Sie haben es geschafft, ihre Träume zu verwirklichen.",
+   "Viele lernen, um eine gute Note zu bekommen.",
+   "Viele teilen Beiträge, ohne die Quelle zu prüfen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u15l1",
+   "title": "zu + Infinitiv am Ende",
+   "s": "inf.zu",
+   "gen": {
+    "infZu": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Es ist wichtig, die Angabe genau ___.",
+     "o": [
+      "zu lesen",
+      "lesen",
+      "zu liest"
+     ],
+     "a": "zu lesen"
+    },
+    {
+     "t": "mc",
+     "q": "Es ist leicht, anderen die Schuld ___.",
+     "o": [
+      "zuzuschieben",
+      "zu zuschieben",
+      "zuschieben zu"
+     ],
+     "a": "zuzuschieben",
+     "y": [
+      "trennbares Verb: zu in der Mitte",
+      "zu immer vor dem Verb",
+      "zu nach dem Verb"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Ich habe vor, mich gut auf die Schularbeit ___.",
+     "o": [
+      "vorzubereiten",
+      "zu vorbereiten",
+      "vorbereiten"
+     ],
+     "a": "vorzubereiten"
+    },
+    {
+     "t": "mc",
+     "q": "Wir müssen mehr für das Klima ___.",
+     "o": [
+      "tun",
+      "zu tun",
+      "getan"
+     ],
+     "a": "tun",
+     "y": [
+      "nach Modalverb kein zu",
+      "immer zu + Infinitiv",
+      "Partizip"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Sie haben es geschafft, ihre Träume ___.",
+     "h": "(verwirklichen)",
+     "a": "zu verwirklichen"
+    },
+    {
+     "t": "gap",
+     "q": "Es ist notwendig, mehr Lehrkräfte ___.",
+     "h": "(einstellen)",
+     "a": "einzustellen"
+    },
+    {
+     "t": "gap",
+     "q": "Viele versuchen, weniger Zeit am Handy ___.",
+     "h": "(verbringen)",
+     "a": "zu verbringen"
+    },
+    {
+     "t": "gap",
+     "q": "Es macht Spaß, an Projekten ___.",
+     "h": "(teilnehmen)",
+     "a": "teilzunehmen"
+    },
+    {
+     "t": "gap",
+     "q": "Ich habe keine Lust, früh ___.",
+     "h": "(aufstehen)",
+     "a": "aufzustehen"
+    },
+    {
+     "t": "gap",
+     "q": "Es ist schwer, den Massentourismus richtig ___.",
+     "h": "(begrenzen)",
+     "a": "zu begrenzen"
+    },
+    {
+     "t": "fix",
+     "w": "Es ist einfacher, der Schuld an anderen zu werfen.",
+     "a": "Es ist einfacher, anderen die Schuld zuzuschieben.",
+     "s": "kollok"
+    },
+    {
+     "t": "fix",
+     "w": "Er will zu studieren Medizin.",
+     "a": "Er will Medizin studieren."
+    },
+    {
+     "t": "fix",
+     "w": "Es ist wichtig, zu lesen die Angabe genau.",
+     "a": "Es ist wichtig, die Angabe genau zu lesen."
+    },
+    {
+     "t": "fix",
+     "w": "Ich versuche, mich besser zu vorbereiten.",
+     "a": "Ich versuche, mich besser vorzubereiten."
+    },
+    {
+     "t": "tr",
+     "en": "It is important to read the task carefully.",
+     "a": "Es ist wichtig, die Angabe genau zu lesen.",
+     "acc": [
+      "Es ist wichtig, die Aufgabe genau zu lesen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "They managed to make their dreams come true.",
+     "a": "Sie haben es geschafft, ihre Träume zu verwirklichen."
+    },
+    {
+     "t": "tr",
+     "en": "It is easier to blame others.",
+     "a": "Es ist einfacher, anderen die Schuld zu geben.",
+     "acc": [
+      "Es ist einfacher, anderen die Schuld zuzuschieben.",
+      "Es ist leichter, anderen die Schuld zu geben.",
+      "Es ist leichter, anderen die Schuld zuzuschieben."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Es ist wichtig, sich gut auf die Schularbeit vorzubereiten."
+    }
+   ]
+  },
+  {
+   "id": "u15l2",
+   "title": "um, ohne, statt … zu",
+   "s": "inf.um",
+   "gen": {
+    "infZu": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Ich lerne jeden Tag, ___ weniger Fehler zu machen.",
+     "o": [
+      "um",
+      "damit",
+      "für"
+     ],
+     "a": "um",
+     "y": [
+      "um … zu = Zweck, gleiches Subjekt",
+      "damit + zu",
+      "für + Infinitiv wie English 'for'"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Viele teilen Beiträge, ___ die Quelle zu prüfen.",
+     "o": [
+      "ohne",
+      "um",
+      "statt"
+     ],
+     "a": "ohne"
+    },
+    {
+     "t": "mc",
+     "q": "___ mit dem Auto zu fahren, nehmen wir das Rad.",
+     "o": [
+      "Statt",
+      "Um",
+      "Ohne"
+     ],
+     "a": "Statt"
+    },
+    {
+     "t": "mc",
+     "q": "Der Staat baut Radwege, ___ mehr Menschen Rad fahren.",
+     "o": [
+      "damit",
+      "um",
+      "um zu"
+     ],
+     "a": "damit",
+     "r": "Verschiedene Subjekte (der Staat / mehr Menschen) → damit. Gleiches Subjekt → um … zu."
+    },
+    {
+     "t": "gap",
+     "q": "Viele Jugendliche jobben, ___ sich ein Handy ___ kaufen.",
+     "a": [
+      "um",
+      "zu"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Er ging, ___ ein Wort ___ sagen.",
+     "a": [
+      "ohne",
+      "zu"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wir sparen Geld, ___ im Sommer nach Italien ___ fahren.",
+     "a": [
+      "um",
+      "zu"
+     ]
+    },
+    {
+     "t": "komma",
+     "a": "Ich lerne jeden Tag, um bei der Schularbeit weniger Fehler zu machen."
+    },
+    {
+     "t": "komma",
+     "a": "Viele teilen Beiträge, ohne die Quelle zu prüfen."
+    },
+    {
+     "t": "fix",
+     "w": "Ich lerne für eine gute Note zu bekommen.",
+     "a": "Ich lerne, um eine gute Note zu bekommen.",
+     "r": "English 'for' → German um … zu."
+    },
+    {
+     "t": "fix",
+     "w": "Er spart, um ein Auto kaufen.",
+     "a": "Er spart, um ein Auto zu kaufen."
+    },
+    {
+     "t": "fix",
+     "w": "Sie ging ohne zu sagen etwas.",
+     "a": "Sie ging, ohne etwas zu sagen."
+    },
+    {
+     "t": "tr",
+     "en": "I study in order to pass the Matura.",
+     "a": "Ich lerne, um die Matura zu bestehen.",
+     "acc": [
+      "Ich lerne, um die Matura zu schaffen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Many share posts without checking the source.",
+     "a": "Viele teilen Beiträge, ohne die Quelle zu prüfen.",
+     "acc": [
+      "Viele teilen Posts, ohne die Quelle zu prüfen.",
+      "Viele teilen Beiträge, ohne die Quelle zu überprüfen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Instead of flying, we take the train.",
+     "a": "Statt zu fliegen, nehmen wir den Zug.",
+     "acc": [
+      "Anstatt zu fliegen, nehmen wir den Zug.",
+      "Statt zu fliegen, fahren wir mit dem Zug.",
+      "Anstatt zu fliegen, fahren wir mit dem Zug."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Viele teilen Beiträge, ohne die Quelle zu prüfen."
+    }
+   ]
+  },
+  {
+   "id": "u15l3",
+   "title": "Infinitivgruppen in Argumenten",
+   "s": "inf.zu",
+   "gen": {
+    "infZu": 2,
+    "commaItem": 1
+   },
+   "items": [
+    {
+     "t": "order",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden.",
+     "chunks": [
+      "Letztendlich",
+      "kommt",
+      "es",
+      "darauf an",
+      ",",
+      "eine Lösung",
+      "zu",
+      "finden"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ist es wichtig, sich kritisch mit dem Thema auseinanderzusetzen?",
+     "chunks": [
+      "Ist",
+      "es",
+      "wichtig",
+      ",",
+      "sich",
+      "kritisch",
+      "mit dem Thema",
+      "auseinanderzusetzen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Jeder sollte versuchen, Verantwortung für das eigene Leben zu übernehmen.",
+     "chunks": [
+      "Jeder",
+      "sollte",
+      "versuchen",
+      ",",
+      "Verantwortung",
+      "für das eigene Leben",
+      "zu",
+      "übernehmen"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Forme um: „Es ist wichtig, dass man die Quellen prüft.“ → Es ist wichtig, …",
+     "a": "Es ist wichtig, die Quellen zu prüfen."
+    },
+    {
+     "t": "tf",
+     "q": "Forme um: „Ich hoffe, dass ich die Matura schaffe.“ → Ich hoffe, …",
+     "a": "Ich hoffe, die Matura zu schaffen."
+    },
+    {
+     "t": "tf",
+     "q": "Forme um: „Sie lernt viel, damit sie eine gute Note bekommt.“ → … um …",
+     "a": "Sie lernt viel, um eine gute Note zu bekommen."
+    },
+    {
+     "t": "tr",
+     "en": "In the end, it is all about finding a solution.",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden.",
+     "acc": [
+      "Letztendlich geht es darum, eine Lösung zu finden."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden."
+    }
+   ]
+  }
+ ]
+}

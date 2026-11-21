@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+
+/* The suite's shared tokens (gretagrosz.com apps). Per app only the accent changes. */
+:root {
+  color-scheme: light dark;
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --bg: #F2F2F7;
+  --surface: #FFFFFF;
+  --surface-2: #FFFFFF;
+  --label: #000000;
+  --label-2: #6C6C70;
+  --tertiary: rgba(60, 60, 67, 0.3);
+  --sep: rgba(60, 60, 67, 0.29);
+  --fill: rgba(118, 118, 128, 0.12);
+  --accent: #0066D6;
+  --on-accent: #FFFFFF;
+  --link: #0066D6;
+  --tint: rgba(0, 102, 214, 0.12);
+  --r-card: 20px;
+  --r-control: 12px;
+  --glass-bg: rgb(250 250 252 / 0.78);
+  --glass: saturate(180%) blur(20px);
+  --glass-edge: inset 0 0 0 0.5px rgba(0, 0, 0, 0.08);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur: 200ms;
+  /* iOS colours, the higher-contrast set so white text and text on white both read */
+  --blue: #0066D6;
+  --green: #248A3D;
+  --orange: #C93400;
+  --pink: #D30F45;
+  --purple: #8944AB;
+  --indigo: #3634A3;
+  --red: #D70015;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #1C1C1E;
+    --surface-2: #2C2C2E;
+    --label: #FFFFFF;
+    --label-2: #AEAEB2;
+    --tertiary: rgba(235, 235, 245, 0.3);
+    --sep: rgba(84, 84, 88, 0.6);
+    --fill: rgba(118, 118, 128, 0.24);
+    --link: #409CFF;
+    --tint: rgba(64, 156, 255, 0.18);
+    --glass-bg: rgb(28 28 30 / 0.78);
+    --glass-edge: inset 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+    --blue: #409CFF;
+    --green: #30D158;
+    --orange: #FF9F0A;
+    --pink: #FF375F;
+    --purple: #BF5AF2;
+    --indigo: #7D7AFF;
+    --red: #FF453A;
+  }
+}
+
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--label);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+button { -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: 2px; border-radius: 8px; }
+input, textarea, select { font-size: 17px; }
+sub, sup { font-size: 0.72em; line-height: 0; }
+
+/* Text styles: SF does its own tracking */
+.large-title { font-size: 34px; line-height: 41px; font-weight: 700; }
+.title1 { font-size: 28px; line-height: 34px; font-weight: 700; }
+.title2 { font-size: 22px; line-height: 28px; font-weight: 700; }
+.title3 { font-size: 20px; line-height: 25px; font-weight: 600; }
+.headline { font-size: 17px; line-height: 22px; font-weight: 600; }
+.body { font-size: 17px; line-height: 22px; }
+.callout { font-size: 16px; line-height: 21px; }
+.subhead { font-size: 15px; line-height: 20px; }
+.footnote { font-size: 13px; line-height: 18px; color: var(--label-2); }
+.caption { font-size: 12px; line-height: 16px; color: var(--label-2); }
+.section-header { font-size: 13px; line-height: 18px; font-weight: 400; color: var(--label-2); text-transform: uppercase; padding: 0 16px; margin: 28px 0 7px; }
+.secondary { color: var(--label-2); }
+.problem { white-space: pre-line; font-size: 17px; line-height: 26px; overflow-wrap: break-word; }
+
+/* Solid surfaces. Glass is only for bars and sheets. */
+.card { background: var(--surface); border-radius: var(--r-card); }
+.group { background: var(--surface); border-radius: var(--r-card); overflow: hidden; }
+.row { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 11px 16px; width: 100%; text-align: left; position: relative; transition: background-color 0.15s; }
+.group > .row + .row::before, .group > * + .row::before { content: ''; position: absolute; top: 0; left: var(--inset, 16px); right: 0; height: 0.5px; background: var(--sep); }
+button.row:active, a.row:active, label.row:active { background: var(--fill); }
+button.row:disabled { cursor: default; }
+.badge-fill { background: var(--badge); }
+@media (prefers-color-scheme: dark) { .badge-fill { background: color-mix(in srgb, var(--badge) 78%, black); } }
+
+/* Buttons: flat, like iOS */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 22px; border-radius: 999px; font-size: 17px; font-weight: 600; transition: transform 0.15s var(--ease), opacity 0.2s, background-color 0.2s; }
+.btn:active { transform: scale(0.97); opacity: 0.85; }
+.btn:disabled { opacity: 0.35; pointer-events: none; }
+.btn-filled { background: var(--accent); color: var(--on-accent); }
+.btn-tinted { background: var(--tint); color: var(--link); }
+.btn-gray { background: var(--fill); color: var(--label); }
+.btn-purple { background: var(--purple); color: #FFFFFF; }
+.btn-destructive { background: var(--red); color: #FFFFFF; }
+.link { color: var(--link); font-size: 17px; }
+.press { transition: transform 0.15s var(--ease); }
+.press:active { transform: scale(0.98); }
+
+.field { background: var(--surface); border-radius: var(--r-control); border: 2px solid transparent; transition: border-color 0.2s; }
+
+/* Bars */
+.navbar { position: sticky; top: 0; z-index: 20; transition: box-shadow 0.2s, background-color 0.2s; }
+.navbar.flat { background: var(--bg); }
+.navbar.scrolled { background: var(--glass-bg); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass); box-shadow: 0 0.5px 0 var(--sep); }
+@media (min-width: 1024px) { .navbar.flat { background: transparent; } }
+/* The tab bar floats: a capsule of glass above the bottom edge */
+.tabbar {
+  position: fixed; left: 16px; right: 16px; bottom: max(12px, env(safe-area-inset-bottom)); z-index: 30;
+  max-width: 420px; margin: 0 auto; border-radius: 999px; padding: 2px 8px;
+  background: rgb(250 250 252 / 0.9); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass);
+  box-shadow: var(--glass-edge), 0 8px 24px -10px rgba(0, 0, 0, 0.25);
+}
+.sheet { background: var(--bg); }
+@media (prefers-color-scheme: dark) { .tabbar { background: rgb(28 28 30 / 0.9); } .sheet { background: #1C1C1E; --surface: #2C2C2E; --surface-2: #3A3A3C; } }
+.bar { background: var(--glass-bg); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass); box-shadow: 0 -0.5px 0 var(--sep); }
+
+/* Laptop: a sidebar instead of the tab bar */
+.sidebar { position: fixed; top: 0; bottom: 0; left: 0; width: 240px; z-index: 25; flex-direction: column; gap: 2px; padding: 16px 12px; border-right: 0.5px solid var(--sep); background: var(--glass-bg); -webkit-backdrop-filter: var(--glass); backdrop-filter: var(--glass); }
+.sidebar-item { display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 12px; border-radius: 10px; font-size: 17px; color: var(--label); text-align: left; transition: background-color 0.15s; }
+.sidebar-item:hover { background: var(--fill); }
+.sidebar-item[data-active] { background: var(--tint); color: var(--link); font-weight: 600; }
+@media (min-width: 1024px) { .app-main { padding-left: 240px; } }
+
+/* Segmented control */
+.segmented { display: flex; background: var(--fill); border-radius: 12px; padding: 3px; }
+.segmented button { flex: 1; min-width: 0; height: 38px; border-radius: 9px; font-size: 14px; padding: 0 4px; font-weight: 500; color: var(--label); transition: background-color 0.2s, box-shadow 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.segmented button.on { background: var(--surface-2); box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 3px 1px rgba(0, 0, 0, 0.04); font-weight: 600; }
+
+/* Little things */
+.spinner { width: 16px; height: 16px; border-radius: 999px; border: 2px solid rgba(255, 255, 255, 0.4); border-top-color: #FFFFFF; animation: spin 0.8s linear infinite; }
+.spinner-dark { width: 22px; height: 22px; border-color: var(--fill); border-top-color: var(--label-2); }
+.typing-dot { animation: typing 1s var(--ease) infinite; }
+.ring-arc { transition: stroke-dashoffset 0.9s var(--ease); }
+.bar-fill { transition: width 0.6s var(--ease); }
+.recovery { max-width: 420px; margin: 0 auto; padding: max(64px, env(safe-area-inset-top)) 24px 48px; }
+
+/* Screen transitions */
+@keyframes push-in { from { transform: translateX(24%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pop-in { from { transform: translateX(-10%); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes num-out { to { transform: translateY(-110%); opacity: 0; } }
+@keyframes num-in { 0% { transform: translateY(110%); opacity: 0; } 70% { transform: translateY(-6%); opacity: 1; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes pop { 0% { transform: scale(0.88); opacity: 0; } 60% { transform: scale(1.03); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes fall { 0% { transform: translateY(-10vh) rotate(0); opacity: 1; } 100% { transform: translateY(110vh) rotate(600deg); opacity: 0.9; } }
+@keyframes rise { 0% { transform: translateY(8px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-7px); } 75% { transform: translateX(7px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes typing { 0%, 100% { opacity: 0.35; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+.push-in { animation: push-in 0.3s var(--ease) both; }
+.pop-in { animation: pop-in 0.26s var(--ease) both; }
+.fade-in { animation: fade-in 0.2s ease both; }
+.sheet-up { animation: sheet-up 0.32s cubic-bezier(0.2, 0.9, 0.25, 1) both; }
+.num-out { animation: num-out 0.35s cubic-bezier(0.5, 0, 0.75, 0) 0.35s forwards; }
+.num-in { opacity: 0; animation: num-in 0.5s var(--ease) 0.6s forwards; }
+.pop { animation: pop 0.32s var(--ease) both; }
+.rise { animation: rise 0.28s var(--ease) both; }
+.shake { animation: shake 0.24s ease-in-out 2; }
+.confetti-piece { position: fixed; top: 0; width: 8px; height: 12px; border-radius: 3px; opacity: 0; animation: fall 2s ease-in forwards; pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .push-in, .pop-in, .fade-in, .sheet-up, .rise, .pop, .shake, .typing-dot { animation: none; }
+  .num-out { animation: none; opacity: 0; }
+  .num-in { animation: none; opacity: 1; }
+  .confetti-piece { display: none; }
+  .ring-arc, .bar-fill, .btn, .press { transition: none; }
+  .spinner { animation-duration: 1.6s; }
+}
+
+/* Utilities last, so a class like h-11 or justify-start on a .btn wins */
+@tailwind utilities;

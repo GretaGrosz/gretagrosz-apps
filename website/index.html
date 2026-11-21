@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Greta Grosz</title>
+<meta name="description" content="Greta Grosz, 17: business and finance student in Austria, born in the UK, raised in Hungary. Market research on how banks win Gen Z, six apps she built and the temporary tattoos and clothes she makes and sells." />
+<meta property="og:title" content="Greta Grosz" />
+<meta property="og:description" content="Greta Grosz, 17: business and finance student in Austria, born in the UK, raised in Hungary. Market research on how banks win Gen Z, six apps she built and the temporary tattoos and clothes she makes and sells." />
+<meta property="og:url" content="https://gretagrosz.com/" />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+<link rel="apple-touch-icon" href="/img/favicon.svg" />
+<link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/home.css" />
+<script>
+  // Hide the page for a moment if it will be shown in German, so English never flashes first
+  try { var l = localStorage.getItem('lang') } catch (e) {}
+  if (l === 'de' || (l !== 'en' && (navigator.languages || [navigator.language]).some(function (x) { return /^de\b/i.test(x) }))) document.documentElement.classList.add('i18n-wait')
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="me" href="/" aria-current="page"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="30" fill="#232B3D"/><g transform="translate(16 16) scale(.68)" fill="none" stroke="#D9E0EA" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M36.48 21 A32 32 0 0 1 81.88 52.79 Q81 61 72 61 L46 61"/><path d="M63.52 79 A32 32 0 0 1 18.12 47.21 Q19 39 28 39 L54 39"/></g></svg><span class="name">Greta<span class="last"> Grosz</span></span></a>
+  <div class="links"><a href="/finance/">Finance</a><a href="/apps/">Apps</a><a href="/business/">Business</a></div>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div>
+</nav>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-title"><span class="ln hero-in" style="--i:1">Banks are competing for my generation.</span> <span class="ln accent hero-in" style="--i:2">I researched how.</span></h1>
+      <p class="lead hero-lead hero-in" style="--i:3"><span class="me">I’m Greta Grosz, 17.</span> I study business and finance at a BHAK in Austria, in German, my third language.</p>
+      <div class="hero-cta hero-in" style="--i:4">
+        <a class="btn" href="/finance/">See my finance work</a>
+        <a class="btn soft" href="https://www.linkedin.com/in/greta-grosz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4V9.75Z"/></svg>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="jr snow" id="journey" aria-labelledby="jr-title">
+  <div class="jr-stage">
+    <div class="jr-map" aria-hidden="true" data-no-i18n><svg id="jr-svg"></svg></div>
+    <div class="wrap jr-ui">
+      <h2 class="jr-title" id="jr-title">How I got here.</h2>
+      <div class="jr-story">
+        <ol class="jr-chs">
+          <li class="jr-ch">
+            <p class="when">2009</p>
+            <h3>Born in the UK.</h3>
+            <p>English is my first language. I went to school in England.</p>
+          </li>
+          <li class="jr-ch">
+            <p class="when">Age 12 · 2021</p>
+            <h3>Moved to Hungary.</h3>
+            <p>Hungarian is my other native language. A bilingual school first, then at 14 a bilingual business school (HAK).</p>
+          </li>
+          <li class="jr-ch">
+            <p class="when">Age 17 · 2026</p>
+            <h3>Moved to Austria, alone.</h3>
+            <p>Now I study business and finance at a BHAK, a business academy, in German.</p>
+          </li>
+        </ol>
+        <div class="jr-steps" aria-hidden="true"><button type="button" tabindex="-1" data-step="0">2009</button><button type="button" tabindex="-1" data-step="1">2021</button><button type="button" tabindex="-1" data-step="2">2026</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work section" id="work">
+  <div class="wrap">
+    <h2 class="sec-title rv">What I do.</h2>
+    <div class="work-links">
+      <a class="wcard wlink card rv" href="/finance/"><span class="link">See my finance work</span></a>
+      <a class="wcard wlink card rv" href="/apps/" style="--d:1"><span class="link">See my apps</span></a>
+      <a class="wcard wlink card rv" href="/business/" style="--d:2"><span class="link">See my business</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact section" id="contact">
+  <div class="wrap">
+    <div class="contact-card rv">
+      <span class="peek peek-c" aria-hidden="true"><img src="/img/mascot-coral.webp" width="300" height="194" alt="" loading="lazy" decoding="async" /></span>
+      <h2>Let’s talk.</h2>
+      <p class="lead">Questions about my research, my apps or my business? Write to me.</p>
+      <div class="contact-actions" data-contact></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="me"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="30" fill="#232B3D"/><g transform="translate(16 16) scale(.68)" fill="none" stroke="#D9E0EA" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M36.48 21 A32 32 0 0 1 81.88 52.79 Q81 61 72 61 L46 61"/><path d="M63.52 79 A32 32 0 0 1 18.12 47.21 Q19 39 28 39 L54 39"/></g></svg>Greta Grosz</span>
+    <nav aria-label="Footer">
+      <a href="/finance/">Finance</a>
+      <a href="/apps/">Apps</a>
+      <a href="/business/">Business</a>
+      <a href="/cv/">CV</a>
+      <a href="https://www.linkedin.com/in/greta-grosz" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a class="gob" href="/goblin/">goblin</a>
+    </nav>
+    <span>© <span data-year>2026</span> · Made by Greta in Austria</span>
+  </div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/i18n/home.js"></script>
+<script src="/js/home.js"></script>
+<script src="/js/site.js"></script>
+</body>
+</html>

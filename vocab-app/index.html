@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Deca" />
+    <title>Deca</title>
+    <meta name="description" content="10 new words a day in English, German, Spanish, French or Italian, and your own school vocab list planned to the test date." />
+    <link rel="canonical" href="https://gretagrosz.com/tenaday/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Greta Grosz" />
+    <meta property="og:title" content="Deca" />
+    <meta property="og:description" content="10 new words a day, and your own vocab list planned to the test date." />
+    <meta property="og:url" content="https://gretagrosz.com/tenaday/" />
+    <meta property="og:image" content="https://gretagrosz.com/tenaday/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <style>
+      html { background: #f2f2f7; }
+      @media (prefers-color-scheme: dark) { html { background: #000; } }
+    </style>
+    <script>
+      // Same UI language as gretagrosz.com (localStorage 'lang'), set before the first paint
+      try { var l = localStorage.getItem('lang'); if (l === 'de' || l === 'en') document.documentElement.lang = l } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

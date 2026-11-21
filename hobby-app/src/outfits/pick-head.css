@@ -1,0 +1,144 @@
+/* Idle motion for the store-only hats (src/outfits/box-head.jsx): small, slow, mostly waiting around between moves. */
+
+.axo .axo-acc .bh-cater,
+.axo .axo-acc .bh-twinkle,
+.axo .axo-acc .bh-steam > path,
+.axo .axo-acc .bh-lid,
+.axo .axo-acc .bh-tag,
+.axo .axo-acc .bh-flame,
+.axo .axo-acc .bh-note,
+.axo .axo-acc .bh-cup,
+.axo .axo-acc .bh-drop,
+.axo .axo-acc .bh-cloud {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+/* sparkles twinkle on the toadstool, the cake and the viking helmet */
+.axo .axo-acc-toadstool .bh-twinkle { animation: acc-toadstool-twinkle 3.4s ease-in-out infinite; }
+.axo .axo-acc-cake .bh-twinkle { animation: acc-cake-twinkle 3s ease-in-out infinite; }
+.axo .axo-acc-cake .bh-twinkle-2 { animation-delay: -1.5s; }
+.axo .axo-acc-viking .bh-twinkle { animation: acc-viking-twinkle 3.8s ease-in-out infinite; }
+
+/* toadstool: the caterpillar scrunches up and stretches out */
+.axo .axo-acc-toadstool .bh-cater { transform-origin: 0% 100%; animation: acc-toadstool-inch 3s ease-in-out infinite; }
+
+@keyframes acc-toadstool-inch {
+  0%, 40%, 100% { transform: scale(1, 1); }
+  55% { transform: scale(0.86, 1.12); }
+  70% { transform: scale(1.04, 0.96); }
+}
+@keyframes acc-toadstool-twinkle {
+  0%, 55%, 100% { transform: scale(0.2); opacity: 0; }
+  70% { transform: scale(1.15) rotate(30deg); opacity: 1; }
+  85% { transform: scale(0.3) rotate(60deg); opacity: 0; }
+}
+@keyframes acc-cake-twinkle {
+  0%, 55%, 100% { transform: scale(0.2); opacity: 0; }
+  70% { transform: scale(1.15) rotate(30deg); opacity: 1; }
+  85% { transform: scale(0.3) rotate(60deg); opacity: 0; }
+}
+@keyframes acc-viking-twinkle {
+  0%, 55%, 100% { transform: scale(0.2); opacity: 0; }
+  70% { transform: scale(1.15) rotate(30deg); opacity: 1; }
+  85% { transform: scale(0.3) rotate(60deg); opacity: 0; }
+}
+
+/* teapot: steam puffs from the spout, the lid rattles now and then, the tag swings */
+.axo .axo-acc-teapot .bh-steam > path { opacity: 0; animation: acc-teapot-steam 3s ease-out infinite; }
+.axo .axo-acc-teapot .bh-steam > path:nth-child(2) { animation-delay: -1.5s; }
+.axo .axo-acc-teapot .bh-lid { transform-origin: 50% 100%; animation: acc-teapot-rattle 4.4s ease-in-out infinite; }
+.axo .axo-acc-teapot .bh-tag { transform-origin: 100% 0%; animation: acc-teapot-swing 3.2s ease-in-out infinite; }
+
+@keyframes acc-teapot-steam {
+  0% { transform: translateY(6px) scaleY(0.6); opacity: 0; }
+  30% { opacity: 0.9; }
+  100% { transform: translateY(-7px) scaleY(1.1); opacity: 0; }
+}
+@keyframes acc-teapot-rattle {
+  0%, 72%, 100% { transform: translateY(0) rotate(0deg); }
+  76% { transform: translateY(-1.6px) rotate(-6deg); }
+  80% { transform: translateY(0) rotate(0deg); }
+  84% { transform: translateY(-1.4px) rotate(6deg); }
+  88% { transform: translateY(0) rotate(0deg); }
+}
+@keyframes acc-teapot-swing {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(6deg); }
+}
+
+/* cake: the candle flickers */
+.axo .axo-acc-cake .bh-flame { transform-origin: 50% 100%; animation: acc-cake-flicker 1.6s ease-in-out infinite; }
+
+@keyframes acc-cake-flicker {
+  0%, 100% { transform: scale(1, 1) rotate(-3deg); }
+  25% { transform: scale(0.92, 1.1) rotate(4deg); }
+  50% { transform: scale(1.06, 0.92) rotate(-2deg); }
+  75% { transform: scale(0.96, 1.06) rotate(3deg); }
+}
+
+/* headphones: the cups thump to the beat, notes drift up and away */
+.axo .axo-acc-headphones .bh-cup { animation: acc-headphones-thump 0.9s ease-in-out infinite; }
+.axo .axo-acc-headphones .bh-note { opacity: 0; animation: acc-headphones-note 3.6s ease-out infinite; }
+.axo .axo-acc-headphones .bh-note-2 { animation-delay: -1.2s; }
+.axo .axo-acc-headphones .bh-note-3 { animation-delay: -2.4s; }
+
+@keyframes acc-headphones-thump {
+  0%, 100% { transform: scale(1); }
+  12% { transform: scale(1.07); }
+  30% { transform: scale(0.99); }
+}
+@keyframes acc-headphones-note {
+  0% { transform: translate(0, 6px) rotate(-8deg) scale(0.6); opacity: 0; }
+  20% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(2px, -8px) rotate(8deg) scale(1); opacity: 0; }
+}
+
+/* rain cloud: bobs sleepily, drops fall off the edges */
+.axo .axo-acc-raincloud .bh-cloud { animation: acc-raincloud-bob 3.8s ease-in-out infinite; }
+.axo .axo-acc-raincloud .bh-drop { opacity: 0; animation: acc-raincloud-drip 2.4s ease-in infinite; }
+.axo .axo-acc-raincloud .bh-drop-2 { animation-delay: -0.8s; }
+.axo .axo-acc-raincloud .bh-drop-3 { animation-delay: -1.6s; }
+
+@keyframes acc-raincloud-bob {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1.4px) scale(1.02, 0.98); }
+}
+@keyframes acc-raincloud-drip {
+  0% { transform: translateY(-4px) scale(0.5); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(9px) scale(0.9); opacity: 0; }
+}
+
+.axo[data-axo-paused] .axo-acc .bh-cater,
+.axo[data-axo-paused] .axo-acc .bh-twinkle,
+.axo[data-axo-paused] .axo-acc .bh-steam > path,
+.axo[data-axo-paused] .axo-acc .bh-lid,
+.axo[data-axo-paused] .axo-acc .bh-tag,
+.axo[data-axo-paused] .axo-acc .bh-flame,
+.axo[data-axo-paused] .axo-acc .bh-note,
+.axo[data-axo-paused] .axo-acc .bh-cup,
+.axo[data-axo-paused] .axo-acc .bh-drop,
+.axo[data-axo-paused] .axo-acc .bh-cloud {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc .bh-cater,
+  .axo .axo-acc .bh-twinkle,
+  .axo .axo-acc .bh-steam > path,
+  .axo .axo-acc .bh-lid,
+  .axo .axo-acc .bh-tag,
+  .axo .axo-acc .bh-flame,
+  .axo .axo-acc .bh-note,
+  .axo .axo-acc .bh-cup,
+  .axo .axo-acc .bh-drop,
+  .axo .axo-acc .bh-cloud {
+    animation: none;
+  }
+  .axo .axo-acc-teapot .bh-steam > path,
+  .axo .axo-acc-headphones .bh-note,
+  .axo .axo-acc-raincloud .bh-drop { opacity: 0.85; }
+}

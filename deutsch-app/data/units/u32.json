@@ -1,0 +1,205 @@
+{
+ "id": "u32",
+ "n": 32,
+ "phase": 4,
+ "level": "C1",
+ "title": "Präpositionen C1 (Schriftsprache)",
+ "tips": {
+  "de": "In anspruchsvollen Texten stehen viele Präpositionen mit Genitiv: anhand, mithilfe, infolge, aufgrund, hinsichtlich, bezüglich, angesichts, ungeachtet, zugunsten, mangels, seitens, innerhalb, außerhalb, oberhalb. Mit Dativ: gemäß, entgegen, zufolge (nachgestellt: einer Studie zufolge), samt, gegenüber (oft nachgestellt: dem Vorschlag gegenüber). Steht ein Nomen im Plural ohne Artikel und Adjektiv, weicht man bei Genitivpräpositionen oft auf „von“ aus: mangels Beweisen / aufgrund von Problemen.",
+  "en": "Formal German uses many genitive prepositions: anhand (using), infolge (as a result of), hinsichtlich (with regard to), angesichts (in view of), ungeachtet (regardless of), zugunsten (in favour of), mangels (for lack of). Dative: gemäß, entgegen, zufolge (after the noun: 'einer Studie zufolge').",
+  "contrast": "English has one 'according to'. German has 'laut' (+ Dat/Gen, before), 'zufolge' (+ Dat, AFTER the noun: 'der Studie zufolge') and 'gemäß' (according to a rule). Some prepositions come after the noun, which English never does.",
+  "examples": [
+   "Einer aktuellen Studie zufolge schlafen Jugendliche zu wenig.",
+   "Anhand eines Beispiels möchte ich das verdeutlichen.",
+   "Angesichts der steigenden Mieten fordern viele eine Reform.",
+   "Ungeachtet aller Kritik hält die Regierung an ihrem Plan fest.",
+   "Gemäß der Hausordnung sind Handys im Unterricht verboten."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u32l1",
+   "title": "Genitiv-Präpositionen",
+   "s": "prep.c1",
+   "gen": {
+    "prepC1": 4
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Anhand ___ Beispiels möchte ich das verdeutlichen.",
+     "h": "(ein-)",
+     "a": "eines"
+    },
+    {
+     "t": "gap",
+     "q": "Angesichts ___ steigenden Mieten fordern viele eine Reform.",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Infolge ___ Streiks fielen viele Züge aus.",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Hinsichtlich ___ Kosten gibt es noch Fragen.",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Mithilfe ___ App lernen viele Schüler.",
+     "h": "(ein-)",
+     "a": "einer"
+    },
+    {
+     "t": "gap",
+     "q": "Zugunsten ___ Umwelt verzichtet die Gemeinde auf den Neubau.",
+     "a": "der"
+    },
+    {
+     "t": "fix",
+     "w": "Angesichts den hohen Mieten ziehen viele weg.",
+     "a": "Angesichts der hohen Mieten ziehen viele weg."
+    },
+    {
+     "t": "fix",
+     "w": "Anhand einem Beispiel erkläre ich das.",
+     "a": "Anhand eines Beispiels erkläre ich das."
+    },
+    {
+     "t": "tr",
+     "en": "in view of the rising rents",
+     "a": "angesichts der steigenden Mieten"
+    },
+    {
+     "t": "tr",
+     "en": "regardless of all criticism",
+     "a": "ungeachtet aller Kritik"
+    },
+    {
+     "t": "listen",
+     "a": "Angesichts der steigenden Mieten fordern viele junge Menschen eine Reform."
+    }
+   ]
+  },
+  {
+   "id": "u32l2",
+   "title": "zufolge, gemäß, entgegen, laut",
+   "s": "prep.c1",
+   "gen": {
+    "prepC1": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wo steht „zufolge“?",
+     "o": [
+      "Einer Studie zufolge schlafen Jugendliche zu wenig.",
+      "Zufolge einer Studie schlafen Jugendliche zu wenig.",
+      "Einer Studie schlafen zufolge Jugendliche zu wenig."
+     ],
+     "a": "Einer Studie zufolge schlafen Jugendliche zu wenig.",
+     "r": "zufolge steht nach dem Nomen (Dativ)."
+    },
+    {
+     "t": "mc",
+     "q": "___ allen Erwartungen stiegen die Preise weiter.",
+     "o": [
+      "Entgegen",
+      "Gemäß",
+      "Zufolge"
+     ],
+     "a": "Entgegen"
+    },
+    {
+     "t": "mc",
+     "q": "___ der Hausordnung sind Handys verboten.",
+     "o": [
+      "Gemäß",
+      "Entgegen",
+      "Ungeachtet"
+     ],
+     "a": "Gemäß"
+    },
+    {
+     "t": "gap",
+     "q": "Dem Bericht ___ ist die Arbeitslosigkeit gesunken.",
+     "h": "(according to, nachgestellt)",
+     "a": "zufolge"
+    },
+    {
+     "t": "gap",
+     "q": "Laut ___ Umfrage sind viele Schüler gestresst.",
+     "h": "(ein-)",
+     "a": "einer"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „zufolge“:\nLaut einer Studie lesen Jugendliche weniger.",
+     "a": "Einer Studie zufolge lesen Jugendliche weniger."
+    },
+    {
+     "t": "fix",
+     "w": "Zufolge der Studie lesen Jugendliche weniger.",
+     "a": "Der Studie zufolge lesen Jugendliche weniger."
+    },
+    {
+     "t": "tr",
+     "en": "According to a study, young people sleep too little.",
+     "a": "Einer Studie zufolge schlafen Jugendliche zu wenig.",
+     "acc": [
+      "Laut einer Studie schlafen Jugendliche zu wenig."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Einer Studie zufolge schlafen viele Jugendliche zu wenig."
+    }
+   ]
+  },
+  {
+   "id": "u32l3",
+   "title": "Präpositionen im Text",
+   "s": "prep.c1",
+   "gen": {
+    "prepC1": 2,
+    "prepCase": 1
+   },
+   "items": [
+    {
+     "t": "tf",
+     "q": "Schreib im Nominalstil mit „aufgrund“:\nWeil die Nachfrage hoch war, wurden mehr Züge eingesetzt.",
+     "a": "Aufgrund der hohen Nachfrage wurden mehr Züge eingesetzt."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „trotz“:\nObwohl es viel Kritik gab, wurde das Gesetz beschlossen.",
+     "a": "Trotz der vielen Kritik wurde das Gesetz beschlossen.",
+     "acc": [
+      "Trotz der Kritik wurde das Gesetz beschlossen.",
+      "Trotz vieler Kritik wurde das Gesetz beschlossen."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „mangels“:\nWeil es keine Beweise gab, wurde das Verfahren eingestellt.",
+     "a": "Mangels Beweisen wurde das Verfahren eingestellt.",
+     "acc": [
+      "Mangels Beweise wurde das Verfahren eingestellt."
+     ],
+     "r": "mangels + Nomen im Plural ohne Artikel → oft Dativ: mangels Beweisen."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „während“:\nAls die Pandemie war, gab es Online-Unterricht.",
+     "a": "Während der Pandemie gab es Online-Unterricht."
+    },
+    {
+     "t": "listen",
+     "a": "Trotz der vielen Kritik wurde das Gesetz beschlossen."
+    }
+   ]
+  }
+ ]
+}

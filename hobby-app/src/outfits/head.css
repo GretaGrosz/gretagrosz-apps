@@ -1,0 +1,158 @@
+/* Idle motion for the hats (src/outfits/head.jsx): small, slow, and mostly waiting around between moves. */
+
+.axo .axo-acc .hd-lily,
+.axo .axo-acc .hd-glint,
+.axo .axo-acc .hd-frog-lid,
+.axo .axo-acc .hd-frog-throat,
+.axo .axo-acc .hd-stalk,
+.axo .axo-acc .hd-twinkle,
+.axo .axo-acc .hd-tent,
+.axo .axo-acc .hd-jelly-bell,
+.axo .axo-acc .hd-jelly-glow,
+.axo .axo-acc .hd-brush,
+.axo .axo-acc .hd-flower,
+.axo .axo-acc .hd-steam > path {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+/* lily pad: the flower bobs, a glint winks on the droplet */
+.axo .axo-acc-lilypad .hd-lily { transform-origin: 50% 100%; animation: acc-lilypad-bob 3.6s ease-in-out infinite; }
+.axo .axo-acc-lilypad .hd-glint { animation: acc-lilypad-glint 4.2s ease-in-out infinite; }
+
+@keyframes acc-lilypad-bob {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg) translateY(-0.6px); }
+}
+@keyframes acc-lilypad-glint {
+  0%, 62%, 100% { transform: scale(0.2) rotate(0deg); opacity: 0; }
+  74% { transform: scale(1.1) rotate(45deg); opacity: 1; }
+  86% { transform: scale(0.4) rotate(90deg); opacity: 0; }
+}
+
+/* frog: blinks now and then, throat puffs */
+.axo .axo-acc-frog .hd-frog-lid { transform-origin: 50% 0%; animation: acc-frog-blink 5.2s linear infinite; }
+.axo .axo-acc-frog .hd-frog-throat { transform-origin: 50% 20%; animation: acc-frog-puff 3.4s ease-in-out infinite; }
+
+@keyframes acc-frog-blink {
+  0%, 89.9%, 97.1%, 100% { transform: scaleY(0); opacity: 0; }
+  90%, 97% { opacity: 1; }
+  93%, 94% { transform: scaleY(1); opacity: 1; }
+}
+@keyframes acc-frog-puff {
+  0%, 52%, 100% { transform: scale(1); }
+  62% { transform: scale(1.5, 1.7); }
+  70% { transform: scale(1.12); }
+  76% { transform: scale(1.4, 1.55); }
+  86% { transform: scale(1); }
+}
+
+/* snail: eye stalks wiggle, a little out of step */
+.axo .axo-acc-snail .hd-stalk { transform-origin: 50% 100%; animation: acc-snail-stalk 2.6s ease-in-out infinite; }
+.axo .axo-acc-snail .hd-stalk-r { animation-delay: -0.9s; animation-duration: 2.3s; }
+
+@keyframes acc-snail-stalk {
+  0%, 100% { transform: rotate(-9deg); }
+  50% { transform: rotate(9deg) scaleY(1.06); }
+}
+
+/* shell crown: a pearl sparkle twinkles */
+.axo .axo-acc-shellcrown .hd-twinkle { animation: acc-shellcrown-twinkle 3.4s ease-in-out infinite; }
+
+@keyframes acc-shellcrown-twinkle {
+  0%, 55%, 100% { transform: scale(0.2); opacity: 0; }
+  70% { transform: scale(1.15) rotate(30deg); opacity: 1; }
+  85% { transform: scale(0.3) rotate(60deg); opacity: 0; }
+}
+
+/* jellyfish: the bell pulses like it's swimming, tentacles drift, the glow breathes */
+.axo .axo-acc-jelly .hd-jelly-bell { transform-origin: 50% 100%; animation: acc-jelly-pulse 2.8s ease-in-out infinite; }
+.axo .axo-acc-jelly .hd-jelly-glow { animation: acc-jelly-glow 2.8s ease-in-out infinite; }
+.axo .axo-acc-jelly .hd-tent-l { transform-origin: 100% 0%; animation: acc-jelly-sway 3.2s ease-in-out infinite; }
+.axo .axo-acc-jelly .hd-tent-r { transform-origin: 0% 0%; animation: acc-jelly-sway 3.2s ease-in-out infinite reverse; }
+
+.axo .axo-acc-jelly .hd-twinkle { animation: acc-jelly-twinkle 3s ease-in-out infinite; }
+.axo .axo-acc-jelly .hd-twinkle-2 { animation-delay: -1.5s; }
+
+@keyframes acc-jelly-twinkle {
+  0%, 50%, 100% { transform: scale(0.2); opacity: 0; }
+  68% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+  84% { transform: scale(0.3) rotate(90deg); opacity: 0; }
+}
+@keyframes acc-jelly-pulse {
+  0%, 100% { transform: scale(1); }
+  30% { transform: scale(1.06, 0.92); }
+  55% { transform: scale(0.97, 1.04); }
+}
+@keyframes acc-jelly-glow {
+  0%, 100% { opacity: 0.55; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+@keyframes acc-jelly-sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* painter: the brush gives a little flick every so often */
+.axo .axo-acc-painter .hd-brush { transform-origin: 0% 100%; animation: acc-painter-flick 5s ease-in-out infinite; }
+
+@keyframes acc-painter-flick {
+  0%, 70%, 100% { transform: rotate(0deg); }
+  76% { transform: rotate(-5deg); }
+  83% { transform: rotate(3deg); }
+  90% { transform: rotate(-1deg); }
+}
+
+/* swim cap: the big rubber flower wobbles */
+.axo .axo-acc-swimcap .hd-flower { animation: acc-swimcap-wobble 3s ease-in-out infinite; }
+
+@keyframes acc-swimcap-wobble {
+  0%, 100% { transform: rotate(-8deg) scale(1); }
+  25% { transform: rotate(6deg) scale(1.05, 0.96); }
+  50% { transform: rotate(-4deg) scale(0.97, 1.03); }
+  75% { transform: rotate(9deg) scale(1.03); }
+}
+
+/* sourdough: fresh out of the oven, steam curls up */
+.axo .axo-acc-loaf .hd-steam > path { opacity: 0; animation: acc-loaf-steam 3.6s ease-out infinite; }
+.axo .axo-acc-loaf .hd-steam > path:nth-child(2) { animation-delay: -1.2s; }
+.axo .axo-acc-loaf .hd-steam > path:nth-child(3) { animation-delay: -2.4s; }
+
+@keyframes acc-loaf-steam {
+  0% { transform: translateY(8px) scaleY(0.6); opacity: 0; }
+  30% { opacity: 0.9; }
+  100% { transform: translateY(-8px) scaleY(1.1); opacity: 0; }
+}
+
+.axo[data-axo-paused] .axo-acc .hd-lily,
+.axo[data-axo-paused] .axo-acc .hd-glint,
+.axo[data-axo-paused] .axo-acc .hd-frog-lid,
+.axo[data-axo-paused] .axo-acc .hd-frog-throat,
+.axo[data-axo-paused] .axo-acc .hd-stalk,
+.axo[data-axo-paused] .axo-acc .hd-twinkle,
+.axo[data-axo-paused] .axo-acc .hd-tent,
+.axo[data-axo-paused] .axo-acc .hd-jelly-bell,
+.axo[data-axo-paused] .axo-acc .hd-jelly-glow,
+.axo[data-axo-paused] .axo-acc .hd-brush,
+.axo[data-axo-paused] .axo-acc .hd-flower,
+.axo[data-axo-paused] .axo-acc .hd-steam > path {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-acc .hd-lily,
+  .axo .axo-acc .hd-glint,
+  .axo .axo-acc .hd-frog-lid,
+  .axo .axo-acc .hd-frog-throat,
+  .axo .axo-acc .hd-stalk,
+  .axo .axo-acc .hd-twinkle,
+  .axo .axo-acc .hd-tent,
+  .axo .axo-acc .hd-jelly-bell,
+  .axo .axo-acc .hd-jelly-glow,
+  .axo .axo-acc .hd-brush,
+  .axo .axo-acc .hd-flower,
+  .axo .axo-acc .hd-steam > path {
+    animation: none;
+  }
+  .axo .axo-acc-loaf .hd-steam > path { opacity: 0.8; }
+}

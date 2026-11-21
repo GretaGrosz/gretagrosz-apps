@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Tape" />
+    <title>Tape</title>
+    <meta name="description" content="Your own music player that works offline. Add songs from your device and play them anywhere, no internet needed." />
+    <link rel="canonical" href="https://gretagrosz.com/music/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tape" />
+    <meta property="og:description" content="Your own music player that works offline. Add songs from your device and play them anywhere, no internet needed." />
+    <meta property="og:url" content="https://gretagrosz.com/music/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/music/icon-32.png" />
+    <link rel="apple-touch-icon" href="/music/icon-180.png" />
+    <link rel="manifest" href="/music/manifest.webmanifest" />
+    <script>
+      // The saved theme before anything draws (src/themes.js)
+      try { document.documentElement.dataset.theme = localStorage.getItem('tape-theme') || 'classic' } catch (e) { document.documentElement.dataset.theme = 'classic' }
+    </script>
+    <style>
+      html { background: #F2F2F7; color: #000; }
+      @media (prefers-color-scheme: dark) { html { background: #000; color: #fff; } }
+      html[data-theme='dream'] { background: #FFE3F1; } html[data-theme='blocks'] { background: #C6C6C6; }
+      html[data-theme='neon'] { background: #0B0221; } html[data-theme='ocean'] { background: #E3F2F7; }
+      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+  </body>
+</html>

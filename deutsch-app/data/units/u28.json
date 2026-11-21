@@ -1,0 +1,288 @@
+{
+ "id": "u28",
+ "n": 28,
+ "phase": 4,
+ "level": "C1",
+ "title": "Konjunktiv II: als ob, Wünsche, Kritik",
+ "tips": {
+  "de": "Irreale Vergleiche: als ob / als wenn + Konjunktiv II (Verb am Ende) oder „als“ + Konjunktiv II direkt danach: Er tut so, als ob er alles wüsste / als wüsste er alles. Irreale Wünsche: Wenn ich doch mehr Zeit hätte! / Hätte ich doch mehr Zeit! Kritik an der Vergangenheit: Du hättest früher anfangen sollen. Fast passiert: Beinahe wäre ich zu spät gekommen. Höflich & vorsichtig formulieren (C1-Stil): Ich würde sagen …, Es wäre zu überlegen, ob …, Man könnte einwenden, dass …",
+  "en": "'As if' = als ob + Konjunktiv II at the end, or als + Konjunktiv II immediately. Wishes: Wenn ich doch … hätte! Criticism: Du hättest … sollen (you should have). 'Almost': Beinahe wäre ich …",
+  "contrast": "English 'as if he knew' uses the past tense. German uses Konjunktiv II ('wüsste'), and with 'als' alone the verb jumps right after it: 'als wüsste er'. 'You should have' is NOT 'du solltest haben' but 'du hättest … sollen' (two infinitives at the end).",
+  "examples": [
+   "Er tut so, als wüsste er alles.",
+   "Die Regierung handelt, als ob es keinen Klimawandel gäbe.",
+   "Hätte ich doch früher mit dem Lernen begonnen!",
+   "Du hättest die Angabe genauer lesen sollen.",
+   "Beinahe hätte ich die Überschrift vergessen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u28l1",
+   "title": "als ob / als + Konjunktiv II",
+   "s": "konj2.alsob",
+   "gen": {
+    "alsOb": 4
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Er tut so, als ob er alles ___.",
+     "o": [
+      "wüsste",
+      "weiß",
+      "gewusst"
+     ],
+     "a": "wüsste"
+    },
+    {
+     "t": "mc",
+     "q": "Er tut so, als ___ er alles.",
+     "o": [
+      "wüsste",
+      "ob wüsste",
+      "weiß"
+     ],
+     "a": "wüsste",
+     "y": [
+      "„als“ allein → Verb direkt danach",
+      "als ob → Verb direkt danach",
+      "Indikativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Sie sieht aus, als ___ sie die ganze Nacht nicht geschlafen.",
+     "o": [
+      "hätte",
+      "habe",
+      "hat"
+     ],
+     "a": "hätte"
+    },
+    {
+     "t": "order",
+     "a": "Die Regierung handelt, als gäbe es keinen Klimawandel.",
+     "chunks": [
+      "Die Regierung handelt",
+      ",",
+      "als",
+      "gäbe",
+      "es",
+      "keinen Klimawandel"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Viele leben, als ob die Erde unendlich viele Ressourcen hätte.",
+     "chunks": [
+      "Viele leben",
+      ",",
+      "als ob",
+      "die Erde",
+      "unendlich viele Ressourcen",
+      "hätte"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Er tut so, als ob er alles weiß.",
+     "a": "Er tut so, als ob er alles wüsste.",
+     "r": "Irrealer Vergleich → Konjunktiv II."
+    },
+    {
+     "t": "fix",
+     "w": "Es klingt, als die Entscheidung wäre schon gefallen.",
+     "a": "Es klingt, als wäre die Entscheidung schon gefallen."
+    },
+    {
+     "t": "tr",
+     "en": "He talks as if he were an expert.",
+     "a": "Er spricht, als wäre er ein Experte.",
+     "acc": [
+      "Er spricht, als ob er ein Experte wäre.",
+      "Er redet, als wäre er ein Experte.",
+      "Er redet, als ob er ein Experte wäre.",
+      "Er spricht so, als wäre er ein Experte.",
+      "Er spricht so, als ob er ein Experte wäre."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Touristen benehmen sich, als gehörte ihnen die Stadt."
+    }
+   ]
+  },
+  {
+   "id": "u28l2",
+   "title": "Wünsche & Kritik",
+   "s": "konj2.wunsch",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Irrealer Wunsch: „___ ich doch mehr Zeit!“",
+     "o": [
+      "Hätte",
+      "Habe",
+      "Hatte"
+     ],
+     "a": "Hätte"
+    },
+    {
+     "t": "mc",
+     "q": "„Wenn ich doch früher angefangen ___!“",
+     "o": [
+      "hätte",
+      "habe",
+      "würde"
+     ],
+     "a": "hätte"
+    },
+    {
+     "t": "mc",
+     "q": "„You should have read the task.“",
+     "o": [
+      "Du hättest die Angabe lesen sollen.",
+      "Du solltest die Angabe gelesen haben.",
+      "Du hast die Angabe lesen sollen."
+     ],
+     "a": "Du hättest die Angabe lesen sollen.",
+     "y": [
+      "Kritik an der Vergangenheit: hätte + Infinitiv + sollen",
+      "sollte + Infinitiv Perfekt",
+      "Perfekt Indikativ"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "„I almost missed the train.“",
+     "o": [
+      "Beinahe hätte ich den Zug verpasst.",
+      "Beinahe habe ich den Zug verpasst.",
+      "Fast ich hätte den Zug verpasst."
+     ],
+     "a": "Beinahe hätte ich den Zug verpasst."
+    },
+    {
+     "t": "gap",
+     "q": "Die Regierung ___ früher handeln ___.",
+     "h": "(Kritik: hätte … sollen)",
+     "a": [
+      "hätte",
+      "sollen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wenn ich das nur ___ ___!",
+     "h": "(wissen, Vergangenheit)",
+     "a": [
+      "gewusst",
+      "hätte"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Fast ___ ich die Überschrift ___.",
+     "h": "(vergessen)",
+     "a": [
+      "hätte",
+      "vergessen"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere als irrealen Wunsch mit „doch“:\nIch habe nicht genug geschlafen.",
+     "a": "Hätte ich doch genug geschlafen!",
+     "acc": [
+      "Wenn ich doch genug geschlafen hätte!"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere als Kritik (hätte … sollen):\nDie Stadt hat die Touristenzahl nicht begrenzt.",
+     "a": "Die Stadt hätte die Touristenzahl begrenzen sollen."
+    },
+    {
+     "t": "fix",
+     "w": "Du solltest früher anfangen haben.",
+     "a": "Du hättest früher anfangen sollen."
+    },
+    {
+     "t": "tr",
+     "en": "If only I had known that!",
+     "a": "Wenn ich das nur gewusst hätte!",
+     "acc": [
+      "Hätte ich das nur gewusst!",
+      "Hätte ich das doch gewusst!",
+      "Wenn ich das doch gewusst hätte!"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The government should have acted earlier.",
+     "a": "Die Regierung hätte früher handeln sollen."
+    },
+    {
+     "t": "listen",
+     "a": "Hätte ich doch früher mit dem Lernen begonnen!"
+    }
+   ]
+  },
+  {
+   "id": "u28l3",
+   "title": "Vorsichtig formulieren (C1-Stil)",
+   "s": "konj2.stil",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welche Formulierung ist vorsichtiger und typisch für eine Erörterung?",
+     "o": [
+      "Man könnte einwenden, dass …",
+      "Das ist falsch, weil …",
+      "Jeder weiß, dass …"
+     ],
+     "a": "Man könnte einwenden, dass …"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Formulierung ist höflich-distanziert?",
+     "o": [
+      "Es wäre zu überlegen, ob …",
+      "Man muss sofort …",
+      "Ich will, dass …"
+     ],
+     "a": "Es wäre zu überlegen, ob …"
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere vorsichtiger mit „wäre“:\nEs ist sinnvoll, die Busse zu begrenzen.",
+     "a": "Es wäre sinnvoll, die Busse zu begrenzen."
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere vorsichtiger mit „würde“:\nIch sage, dass die Vorteile überwiegen.",
+     "a": "Ich würde sagen, dass die Vorteile überwiegen."
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere mit „könnte“:\nMan wendet ein, dass Verbote wenig bringen.",
+     "a": "Man könnte einwenden, dass Verbote wenig bringen."
+    },
+    {
+     "t": "tr",
+     "en": "It would be worth considering whether a ban makes sense.",
+     "a": "Es wäre zu überlegen, ob ein Verbot sinnvoll ist.",
+     "acc": [
+      "Es wäre zu überlegen, ob ein Verbot sinnvoll wäre.",
+      "Es wäre zu überlegen, ob ein Verbot Sinn macht."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Man könnte einwenden, dass Verbote wenig bringen."
+    }
+   ]
+  }
+ ]
+}

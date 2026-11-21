@@ -1,0 +1,659 @@
+{
+ "id": "u11",
+ "n": 11,
+ "phase": 1,
+ "level": "B1",
+ "title": "Hauptsatz: Verb an Position 2",
+ "weak": true,
+ "tips": {
+  "de": "Im deutschen Hauptsatz steht das konjugierte Verb IMMER an Position 2. Position 1 kann das Subjekt sein, aber auch ein anderes Satzglied (Zeit, Ort, „Meiner Meinung nach“, „Auf der anderen Seite“, ein Objekt …). Dann kommt das Subjekt NACH dem Verb (Inversion). Kein Beistrich nach dem ersten Satzglied! Weitere Verbteile (Infinitiv, Partizip, Vorsilbe) stehen am Ende (Satzklammer). Im Mittelfeld gilt meist: Zeit – Grund – Art – Ort (TeKaMoLo). „nicht“ steht vor dem, was verneint wird, oft am Ende; Nomen verneint man mit „kein“.",
+  "en": "In a German main clause the finite verb is ALWAYS in position 2. If something other than the subject comes first, the subject moves behind the verb. No comma after the first element! Other verb parts go to the end.",
+  "contrast": "This is your biggest English habit. English: 'On the other hand, all students have access …' – comma, then subject, then verb. German: 'Auf der anderen Seite haben alle Schüler Zugriff …' – no comma, verb immediately, then the subject. Think of position 1 as ONE box, whatever its size, and the verb must come right after it.",
+  "table": [
+   [
+    "Position 1",
+    "Position 2 (Verb)",
+    "Mittelfeld",
+    "Ende"
+   ],
+   [
+    "Alle Schüler",
+    "haben",
+    "heute Zugriff auf das Internet",
+    "–"
+   ],
+   [
+    "Auf der anderen Seite",
+    "haben",
+    "alle Schüler Zugriff auf das Internet",
+    "–"
+   ],
+   [
+    "Meiner Meinung nach",
+    "sollte",
+    "der Staat die Bildung stärker",
+    "fördern"
+   ],
+   [
+    "Gestern",
+    "sind",
+    "viele Schüler zur Demonstration",
+    "gegangen"
+   ]
+  ],
+  "examples": [
+   "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+   "Meiner Meinung nach ist das Handyverbot sinnvoll.",
+   "Beispielsweise sollten die Demonstrationen in der Nähe des Amtssitzes stattfinden.",
+   "Heutzutage verbringen Jugendliche viel Zeit am Handy.",
+   "Ich fahre morgen wegen des Streiks mit dem Rad zur Schule. (Te-Ka-Mo-Lo)"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u11l1",
+   "title": "Inversion nach Position 1",
+   "s": "wortstellung.v2",
+   "gen": {
+    "v2Front": 3
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+      "Auf der anderen Seite, alle Schüler haben Zugriff auf das Internet.",
+      "Auf der anderen Seite alle Schüler haben Zugriff auf das Internet."
+     ],
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+     "y": [
+      "Verb an Position 2, dann Subjekt, kein Beistrich",
+      "Subjekt immer vor dem Verb",
+      "Nach einem Adverbial kommt ein Beistrich"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Meiner Meinung nach ist das falsch.",
+      "Meiner Meinung nach, das ist falsch.",
+      "Meiner Meinung nach das ist falsch."
+     ],
+     "a": "Meiner Meinung nach ist das falsch."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Heute gehen viele Schüler auf die Straße.",
+      "Heute viele Schüler gehen auf die Straße.",
+      "Heute, viele Schüler gehen auf die Straße."
+     ],
+     "a": "Heute gehen viele Schüler auf die Straße."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Beispielsweise sollten die Demonstrationen in der Nähe des Amtssitzes stattfinden.",
+      "Beispielsweise die Demonstrationen sollten in der Nähe des Amtssitzes stattfinden.",
+      "Beispielsweise, die Demonstrationen sollten stattfinden in der Nähe des Amtssitzes."
+     ],
+     "a": "Beispielsweise sollten die Demonstrationen in der Nähe des Amtssitzes stattfinden."
+    },
+    {
+     "t": "order",
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+     "chunks": [
+      "Auf der anderen Seite",
+      "haben",
+      "alle Schüler",
+      "Zugriff auf das Internet"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Meiner Meinung nach sollte der Staat die Bildung fördern.",
+     "chunks": [
+      "Meiner Meinung nach",
+      "sollte",
+      "der Staat",
+      "die Bildung",
+      "fördern"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "In Österreich dürfen Jugendliche mit 16 wählen.",
+     "chunks": [
+      "In Österreich",
+      "dürfen",
+      "Jugendliche",
+      "mit 16",
+      "wählen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Leider verbringen viele Jugendliche zu viel Zeit am Handy.",
+     "chunks": [
+      "Leider",
+      "verbringen",
+      "viele Jugendliche",
+      "zu viel Zeit am Handy"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Im Sommer kommen täglich tausende Touristen nach Hallstatt.",
+     "chunks": [
+      "Im Sommer",
+      "kommen",
+      "täglich",
+      "tausende Touristen",
+      "nach Hallstatt"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Auf der anderen Seite, alle Schüler haben Zugriff auf das Internet.",
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+     "r": "Kein Beistrich, Verb sofort nach Position 1."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Auf der anderen Seite“:\nAlle Schüler haben Zugriff auf das Internet.",
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Meiner Meinung nach“:\nDas Handyverbot ist sinnvoll.",
+     "a": "Meiner Meinung nach ist das Handyverbot sinnvoll."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Heutzutage“:\nViele Menschen teilen ihre Urlaube online.",
+     "a": "Heutzutage teilen viele Menschen ihre Urlaube online."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Außerdem“:\nDer Tourismus schafft Arbeitsplätze.",
+     "a": "Außerdem schafft der Tourismus Arbeitsplätze."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Laut einer Studie“:\nJugendliche schlafen zu wenig.",
+     "a": "Laut einer Studie schlafen Jugendliche zu wenig."
+    },
+    {
+     "t": "tr",
+     "en": "On the other hand, all students have access to the internet.",
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+     "acc": [
+      "Auf der anderen Seite haben alle Schüler Zugang zum Internet."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "In my opinion, the state should support education.",
+     "a": "Meiner Meinung nach sollte der Staat die Bildung unterstützen.",
+     "acc": [
+      "Meiner Meinung nach sollte der Staat die Bildung fördern.",
+      "Meiner Meinung nach soll der Staat die Bildung fördern.",
+      "Meiner Meinung nach soll der Staat die Bildung unterstützen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "Unfortunately, many young people sleep too little.",
+     "a": "Leider schlafen viele Jugendliche zu wenig.",
+     "acc": [
+      "Leider schlafen viele junge Menschen zu wenig."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet."
+    }
+   ]
+  },
+  {
+   "id": "u11l2",
+   "title": "Satzklammer",
+   "s": "wortstellung.klammer",
+   "gen": {
+    "v2Front": 2
+   },
+   "items": [
+    {
+     "t": "order",
+     "a": "Wir haben gestern lange über das Thema diskutiert.",
+     "chunks": [
+      "Wir",
+      "haben",
+      "gestern",
+      "lange",
+      "über das Thema",
+      "diskutiert"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Gestern haben wir lange über das Thema diskutiert.",
+     "chunks": [
+      "Gestern",
+      "haben",
+      "wir",
+      "lange",
+      "über das Thema",
+      "diskutiert"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Die Schule sollte die Schüler besser auf das Leben vorbereiten.",
+     "chunks": [
+      "Die Schule",
+      "sollte",
+      "die Schüler",
+      "besser",
+      "auf das Leben",
+      "vorbereiten"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Man kann im Internet fast alles lernen.",
+     "chunks": [
+      "Man",
+      "kann",
+      "im Internet",
+      "fast alles",
+      "lernen"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Die Regierung hat das Gesetz im Sommer beschlossen.",
+     "chunks": [
+      "Die Regierung",
+      "hat",
+      "das Gesetz",
+      "im Sommer",
+      "beschlossen"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Viele Menschen haben ihre Urlaubsfotos auf Instagram geteilt.",
+      "Viele Menschen haben geteilt ihre Urlaubsfotos auf Instagram.",
+      "Viele Menschen ihre Urlaubsfotos haben auf Instagram geteilt."
+     ],
+     "a": "Viele Menschen haben ihre Urlaubsfotos auf Instagram geteilt.",
+     "y": [
+      "Hilfsverb Position 2, Partizip ans Ende",
+      "Partizip direkt nach dem Hilfsverb",
+      "Verb am Ende"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe gelesen den Artikel gestern.",
+     "a": "Ich habe den Artikel gestern gelesen.",
+     "r": "Partizip ans Ende."
+    },
+    {
+     "t": "fix",
+     "w": "Die Stadt will bauen einen neuen Radweg.",
+     "a": "Die Stadt will einen neuen Radweg bauen."
+    },
+    {
+     "t": "fix",
+     "w": "Wir müssen finden eine Lösung.",
+     "a": "Wir müssen eine Lösung finden."
+    },
+    {
+     "t": "tr",
+     "en": "We have discussed the topic.",
+     "a": "Wir haben das Thema diskutiert.",
+     "acc": [
+      "Wir haben über das Thema diskutiert."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "The city wants to build a new bike path.",
+     "a": "Die Stadt will einen neuen Radweg bauen.",
+     "acc": [
+      "Die Stadt möchte einen neuen Radweg bauen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "You can learn almost everything on the internet.",
+     "a": "Man kann im Internet fast alles lernen.",
+     "acc": [
+      "Man kann fast alles im Internet lernen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Schule sollte die Schüler besser auf das Leben vorbereiten."
+    }
+   ]
+  },
+  {
+   "id": "u11l3",
+   "title": "Mittelfeld: TeKaMoLo",
+   "s": "wortstellung.mittelfeld",
+   "items": [
+    {
+     "t": "order",
+     "a": "Ich fahre morgen wegen des Streiks mit dem Rad zur Schule.",
+     "chunks": [
+      "Ich",
+      "fahre",
+      "morgen",
+      "wegen des Streiks",
+      "mit dem Rad",
+      "zur Schule"
+     ],
+     "r": "Temporal (wann?) – Kausal (warum?) – Modal (wie?) – Lokal (wo/wohin?)."
+    },
+    {
+     "t": "order",
+     "a": "Viele Touristen kommen im Sommer mit dem Bus nach Hallstatt.",
+     "chunks": [
+      "Viele Touristen",
+      "kommen",
+      "im Sommer",
+      "mit dem Bus",
+      "nach Hallstatt"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Wir treffen uns heute nach der Schule im Park.",
+     "chunks": [
+      "Wir",
+      "treffen",
+      "uns",
+      "heute",
+      "nach der Schule",
+      "im Park"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Die Schüler protestieren seit Wochen friedlich vor dem Ministerium.",
+     "chunks": [
+      "Die Schüler",
+      "protestieren",
+      "seit Wochen",
+      "friedlich",
+      "vor dem Ministerium"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welche Reihenfolge ist am natürlichsten?",
+     "o": [
+      "Sie fährt jeden Tag mit dem Zug nach Wien.",
+      "Sie fährt nach Wien mit dem Zug jeden Tag.",
+      "Sie fährt mit dem Zug nach Wien jeden Tag."
+     ],
+     "a": "Sie fährt jeden Tag mit dem Zug nach Wien.",
+     "y": [
+      "Zeit – Art – Ort (TeKaMoLo)",
+      "Ort – Art – Zeit wie im Englischen",
+      "egal"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Wo steht das Pronomen?",
+     "o": [
+      "Ich gebe es dir morgen.",
+      "Ich gebe dir es morgen.",
+      "Ich gebe morgen dir es."
+     ],
+     "a": "Ich gebe es dir morgen.",
+     "r": "Pronomen stehen früh im Mittelfeld: Akkusativ-Pronomen vor Dativ-Pronomen."
+    },
+    {
+     "t": "tr",
+     "en": "I go to school by bike every day.",
+     "a": "Ich fahre jeden Tag mit dem Rad zur Schule.",
+     "acc": [
+      "Ich fahre jeden Tag mit dem Fahrrad zur Schule.",
+      "Jeden Tag fahre ich mit dem Rad zur Schule.",
+      "Jeden Tag fahre ich mit dem Fahrrad zur Schule."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "She goes to Vienna by train tomorrow.",
+     "a": "Sie fährt morgen mit dem Zug nach Wien.",
+     "acc": [
+      "Morgen fährt sie mit dem Zug nach Wien."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Ich fahre morgen wegen des Streiks mit dem Rad zur Schule."
+    }
+   ]
+  },
+  {
+   "id": "u11l4",
+   "title": "Verneinung: nicht oder kein?",
+   "s": "wortstellung.negation",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wir brauchen ___ überfüllten Klassen.",
+     "o": [
+      "keine",
+      "nicht",
+      "nicht die"
+     ],
+     "a": "keine",
+     "y": [
+      "Nomen ohne Artikel → kein-",
+      "Nomen → nicht",
+      "immer nicht"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Das Handyverbot ist ___ sinnvoll.",
+     "o": [
+      "nicht",
+      "kein",
+      "keine"
+     ],
+     "a": "nicht"
+    },
+    {
+     "t": "mc",
+     "q": "Ich habe ___ Zeit.",
+     "o": [
+      "keine",
+      "nicht",
+      "kein"
+     ],
+     "a": "keine"
+    },
+    {
+     "t": "mc",
+     "q": "Sie kommt heute ___.",
+     "o": [
+      "nicht",
+      "kein",
+      "keine"
+     ],
+     "a": "nicht"
+    },
+    {
+     "t": "mc",
+     "q": "Wo steht „nicht“? Der Staat unterstützt die Familien ___.",
+     "o": [
+      "… die Familien nicht.",
+      "… nicht die Familien.",
+      "Der Staat nicht unterstützt …"
+     ],
+     "a": "… die Familien nicht.",
+     "r": "„nicht“ verneint den ganzen Satz → meist am Ende (vor dem Verbteil am Ende)."
+    },
+    {
+     "t": "order",
+     "a": "Wenn der Staat ihre Träume nicht unterstützen will, müssen sie selbst aktiv werden.",
+     "chunks": [
+      "Wenn",
+      "der Staat",
+      "ihre Träume",
+      "nicht",
+      "unterstützen",
+      "will",
+      ",",
+      "müssen",
+      "sie",
+      "selbst",
+      "aktiv werden"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Viele Jugendliche lesen keine Zeitung mehr.",
+     "extra": [
+      "nicht"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich kann heute leider nicht kommen.",
+     "chunks": [
+      "Ich",
+      "kann",
+      "heute",
+      "leider",
+      "nicht",
+      "kommen"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Wir wollen nicht überfüllte Klassen.",
+     "a": "Wir wollen keine überfüllten Klassen.",
+     "r": "Nomen verneint man mit „kein“."
+    },
+    {
+     "t": "fix",
+     "w": "Ich habe nicht einen Computer.",
+     "a": "Ich habe keinen Computer."
+    },
+    {
+     "t": "fix",
+     "w": "Er nicht kommt heute.",
+     "a": "Er kommt heute nicht."
+    },
+    {
+     "t": "tr",
+     "en": "We don't need a ban.",
+     "a": "Wir brauchen kein Verbot."
+    },
+    {
+     "t": "tr",
+     "en": "The state does not support the families.",
+     "a": "Der Staat unterstützt die Familien nicht."
+    },
+    {
+     "t": "tr",
+     "en": "Many young people don't read newspapers.",
+     "a": "Viele Jugendliche lesen keine Zeitung.",
+     "acc": [
+      "Viele Jugendliche lesen keine Zeitungen.",
+      "Viele junge Menschen lesen keine Zeitung.",
+      "Viele junge Menschen lesen keine Zeitungen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Viele Jugendliche lesen keine Zeitung mehr."
+    }
+   ]
+  },
+  {
+   "id": "u11l5",
+   "title": "V2-Mix",
+   "s": "wortstellung.v2",
+   "gen": {
+    "v2Front": 4
+   },
+   "items": [
+    {
+     "t": "fix",
+     "w": "Beispielsweise in der Nähe des Sitzes die Demonstranten sollten protestieren.",
+     "a": "Beispielsweise sollten die Demonstranten in der Nähe des Sitzes protestieren.",
+     "s": "wortstellung.v2"
+    },
+    {
+     "t": "fix",
+     "w": "Heutzutage, viele Menschen fliegen in den Urlaub.",
+     "a": "Heutzutage fliegen viele Menschen in den Urlaub."
+    },
+    {
+     "t": "fix",
+     "w": "Zum Beispiel man kann mit dem Zug fahren.",
+     "a": "Zum Beispiel kann man mit dem Zug fahren."
+    },
+    {
+     "t": "fix",
+     "w": "Deshalb ich bin gegen das Verbot.",
+     "a": "Deshalb bin ich gegen das Verbot."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Zum Beispiel“:\nMan kann öfter mit dem Zug fahren.",
+     "a": "Zum Beispiel kann man öfter mit dem Zug fahren."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Seit einigen Jahren“:\nImmer mehr Menschen fliegen in den Urlaub.",
+     "a": "Seit einigen Jahren fliegen immer mehr Menschen in den Urlaub."
+    },
+    {
+     "t": "tf",
+     "q": "Beginne mit „Aus Sicht der Wirtschaft“:\nDer Tourismus ist eine Goldmine.",
+     "a": "Aus Sicht der Wirtschaft ist der Tourismus eine Goldmine."
+    },
+    {
+     "t": "tr",
+     "en": "For example, one can take the train.",
+     "a": "Zum Beispiel kann man den Zug nehmen.",
+     "acc": [
+      "Zum Beispiel kann man mit dem Zug fahren.",
+      "Beispielsweise kann man den Zug nehmen.",
+      "Beispielsweise kann man mit dem Zug fahren."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "From the point of view of the economy, tourism is a gold mine.",
+     "a": "Aus Sicht der Wirtschaft ist der Tourismus eine Goldmine.",
+     "acc": [
+      "Aus Sicht der Wirtschaft ist Tourismus eine Goldmine."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Zum Beispiel kann man öfter mit dem Zug fahren."
+    }
+   ]
+  }
+ ]
+}

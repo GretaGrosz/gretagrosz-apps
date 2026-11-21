@@ -1,0 +1,391 @@
+{
+ "id": "u20",
+ "n": 20,
+ "phase": 2,
+ "level": "B2",
+ "title": "Konjunktiv II",
+ "tips": {
+  "de": "Der Konjunktiv II drückt Wünsche, irreale Bedingungen, höfliche Bitten und Empfehlungen aus. Meist: würde + Infinitiv (Ich würde mehr lesen). Bei sein, haben, werden, Modalverben und einigen häufigen Verben die eigene Form: wäre, hätte, würde, könnte, müsste, sollte, dürfte, wüsste, käme, gäbe. Irreale Bedingung: Wenn ich mehr Zeit hätte, würde ich mich engagieren. Vergangenheit: hätte/wäre + Partizip II (Wenn ich gelernt hätte, hätte ich bestanden). Empfehlung: Man sollte … / Es wäre sinnvoll, … zu …",
+  "en": "Konjunktiv II = would/could/should: wishes, unreal conditions, polite requests and recommendations. Mostly würde + infinitive. Special forms for common verbs: wäre, hätte, könnte, sollte, müsste, gäbe.",
+  "contrast": "English 'If I had more time, I would…' maps directly: 'Wenn ich mehr Zeit hätte, würde ich…'. But the word order changes: the verb goes to the end of the wenn-clause, and the main clause starts with the verb. Don't put 'würde' in the wenn-clause with haben/sein: 'wenn ich Zeit hätte', not 'wenn ich Zeit haben würde'.",
+  "table": [
+   [
+    "sein",
+    "wäre"
+   ],
+   [
+    "haben",
+    "hätte"
+   ],
+   [
+    "können",
+    "könnte"
+   ],
+   [
+    "sollen",
+    "sollte"
+   ],
+   [
+    "müssen",
+    "müsste"
+   ],
+   [
+    "es gibt",
+    "es gäbe"
+   ],
+   [
+    "andere",
+    "würde + Infinitiv"
+   ]
+  ],
+  "examples": [
+   "Wenn ich mehr Zeit hätte, würde ich mich ehrenamtlich engagieren.",
+   "Es wäre sinnvoll, die Zahl der Touristen zu begrenzen.",
+   "Die Regierung sollte mehr Lehrkräfte einstellen.",
+   "Könnten Sie meinen Brief bitte veröffentlichen?",
+   "Wenn es mehr Busse gäbe, würden weniger Menschen mit dem Auto fahren."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u20l1",
+   "title": "würde, wäre, hätte",
+   "s": "konj2",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wenn ich mehr Zeit ___, würde ich mehr lesen.",
+     "o": [
+      "hätte",
+      "habe",
+      "würde haben"
+     ],
+     "a": "hätte",
+     "y": [
+      "haben → hätte (eigene Form, nicht würde haben)",
+      "Indikativ reicht",
+      "würde + haben"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Es ___ schön, wenn die Schule später beginnen würde.",
+     "o": [
+      "wäre",
+      "ist",
+      "würde"
+     ],
+     "a": "wäre"
+    },
+    {
+     "t": "mc",
+     "q": "Wenn es mehr Busse ___, würden weniger Menschen Auto fahren.",
+     "o": [
+      "gäbe",
+      "gibt",
+      "geben würde"
+     ],
+     "a": "gäbe"
+    },
+    {
+     "t": "mc",
+     "q": "Ich ___ gern im Ausland studieren.",
+     "o": [
+      "würde",
+      "werde",
+      "wäre"
+     ],
+     "a": "würde"
+    },
+    {
+     "t": "gap",
+     "q": "Wenn ich Bürgermeisterin ___, ___ ich mehr Radwege bauen.",
+     "h": "(sein, werden)",
+     "a": [
+      "wäre",
+      "würde"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wenn wir weniger fliegen ___, ___ es dem Klima besser gehen.",
+     "h": "(werden → Konjunktiv II, zweimal)",
+     "a": [
+      "würden",
+      "würde"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wenn ich Geld ___, ___ ich ein Klimaticket kaufen.",
+     "h": "(haben, werden)",
+     "a": [
+      "hätte",
+      "würde"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "An deiner Stelle ___ ich früher mit dem Lernen beginnen.",
+     "h": "(werden)",
+     "a": "würde"
+    },
+    {
+     "t": "order",
+     "a": "Wenn ich mehr Zeit hätte, würde ich mich ehrenamtlich engagieren.",
+     "chunks": [
+      "Wenn",
+      "ich",
+      "mehr Zeit",
+      "hätte",
+      ",",
+      "würde",
+      "ich",
+      "mich",
+      "ehrenamtlich",
+      "engagieren"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Es wäre besser, wenn alle mit dem Zug fahren würden.",
+     "chunks": [
+      "Es",
+      "wäre",
+      "besser",
+      ",",
+      "wenn",
+      "alle",
+      "mit dem Zug",
+      "fahren",
+      "würden"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Wenn ich Zeit haben würde, ich würde helfen.",
+     "a": "Wenn ich Zeit hätte, würde ich helfen."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn es mehr Lehrkräfte gibt, wären die Klassen kleiner.",
+     "a": "Wenn es mehr Lehrkräfte gäbe, wären die Klassen kleiner."
+    },
+    {
+     "t": "tr",
+     "en": "If I had more time, I would read more.",
+     "a": "Wenn ich mehr Zeit hätte, würde ich mehr lesen."
+    },
+    {
+     "t": "tr",
+     "en": "It would be nice if school started later.",
+     "a": "Es wäre schön, wenn die Schule später beginnen würde.",
+     "acc": [
+      "Es wäre schön, wenn die Schule später anfangen würde.",
+      "Es wäre schön, wenn der Unterricht später beginnen würde."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "If there were more buses, fewer people would drive.",
+     "a": "Wenn es mehr Busse gäbe, würden weniger Menschen Auto fahren.",
+     "acc": [
+      "Wenn es mehr Busse gäbe, würden weniger Menschen mit dem Auto fahren."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Wenn ich mehr Zeit hätte, würde ich mich ehrenamtlich engagieren."
+    }
+   ]
+  },
+  {
+   "id": "u20l2",
+   "title": "Empfehlungen & höfliche Bitten",
+   "s": "konj2.empf",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Die Regierung ___ mehr Lehrkräfte einstellen.",
+     "h": "(Empfehlung)",
+     "o": [
+      "sollte",
+      "soll",
+      "solle"
+     ],
+     "a": "sollte"
+    },
+    {
+     "t": "mc",
+     "q": "___ Sie meinen Brief bitte veröffentlichen?",
+     "h": "(höflich)",
+     "o": [
+      "Könnten",
+      "Können",
+      "Konnten"
+     ],
+     "a": "Könnten"
+    },
+    {
+     "t": "mc",
+     "q": "Es ___ sinnvoll, die Zahl der Busse zu begrenzen.",
+     "o": [
+      "wäre",
+      "würde",
+      "hätte"
+     ],
+     "a": "wäre"
+    },
+    {
+     "t": "mc",
+     "q": "Ich ___ allen empfehlen, das Buch zu lesen.",
+     "o": [
+      "würde",
+      "werde",
+      "wäre"
+     ],
+     "a": "würde"
+    },
+    {
+     "t": "gap",
+     "q": "Man ___ die Angabe zweimal lesen.",
+     "h": "(sollen, Empfehlung)",
+     "a": "sollte"
+    },
+    {
+     "t": "gap",
+     "q": "___ ich Sie etwas fragen?",
+     "h": "(dürfen, höflich)",
+     "a": "Dürfte"
+    },
+    {
+     "t": "gap",
+     "q": "Es ___ besser, wenn wir früher anfangen ___.",
+     "h": "(sein, werden)",
+     "a": [
+      "wäre",
+      "würden"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Wir ___ uns freuen, wenn Sie antworten ___.",
+     "h": "(werden, werden)",
+     "a": [
+      "würden",
+      "würden"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere höflicher:\nVeröffentlichen Sie meinen Brief!",
+     "a": "Könnten Sie meinen Brief bitte veröffentlichen?",
+     "acc": [
+      "Würden Sie meinen Brief bitte veröffentlichen?",
+      "Könnten Sie bitte meinen Brief veröffentlichen?",
+      "Würden Sie bitte meinen Brief veröffentlichen?"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere als Empfehlung mit „sollte“:\nDie Stadt baut mehr Radwege.",
+     "a": "Die Stadt sollte mehr Radwege bauen."
+    },
+    {
+     "t": "tf",
+     "q": "Formuliere mit „Es wäre sinnvoll, … zu …“:\nMan begrenzt die Zahl der Touristen.",
+     "a": "Es wäre sinnvoll, die Zahl der Touristen zu begrenzen."
+    },
+    {
+     "t": "tr",
+     "en": "The government should hire more teachers.",
+     "a": "Die Regierung sollte mehr Lehrkräfte einstellen.",
+     "acc": [
+      "Die Regierung sollte mehr Lehrer einstellen."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I would recommend this book to everyone.",
+     "a": "Ich würde dieses Buch allen empfehlen.",
+     "acc": [
+      "Ich würde allen dieses Buch empfehlen.",
+      "Ich würde dieses Buch jedem empfehlen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Könnten Sie meinen Leserbrief bitte veröffentlichen?"
+    }
+   ]
+  },
+  {
+   "id": "u20l3",
+   "title": "Konjunktiv II der Vergangenheit",
+   "s": "konj2.verg",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wenn ich mehr gelernt ___, hätte ich die Schularbeit geschafft.",
+     "o": [
+      "hätte",
+      "würde",
+      "habe"
+     ],
+     "a": "hätte"
+    },
+    {
+     "t": "mc",
+     "q": "Wenn der Zug pünktlich gewesen ___, wäre ich nicht zu spät gekommen.",
+     "o": [
+      "wäre",
+      "hätte",
+      "war"
+     ],
+     "a": "wäre"
+    },
+    {
+     "t": "gap",
+     "q": "Wenn wir die Angabe genau gelesen ___, ___ wir die Überschrift nicht vergessen.",
+     "a": [
+      "hätten",
+      "hätten"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich ___ gern mitgekommen, aber ich war krank.",
+     "a": "wäre"
+    },
+    {
+     "t": "gap",
+     "q": "Du ___ das früher sagen sollen.",
+     "a": "hättest"
+    },
+    {
+     "t": "fix",
+     "w": "Wenn ich mehr gelernt habe, hätte ich bestanden.",
+     "a": "Wenn ich mehr gelernt hätte, hätte ich bestanden."
+    },
+    {
+     "t": "fix",
+     "w": "Wenn ich früher aufgestanden hätte, wäre ich pünktlich gewesen.",
+     "a": "Wenn ich früher aufgestanden wäre, wäre ich pünktlich gewesen.",
+     "r": "aufstehen → sein: wäre aufgestanden."
+    },
+    {
+     "t": "tr",
+     "en": "If I had read the task, I would not have forgotten the title.",
+     "a": "Wenn ich die Angabe gelesen hätte, hätte ich die Überschrift nicht vergessen.",
+     "acc": [
+      "Hätte ich die Angabe gelesen, hätte ich die Überschrift nicht vergessen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Wenn ich die Angabe genau gelesen hätte, hätte ich die Überschrift nicht vergessen."
+    }
+   ]
+  }
+ ]
+}

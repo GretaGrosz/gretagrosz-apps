@@ -1,0 +1,52 @@
+/* BW Buddy: Home with the grade forecast and today's plan, and the quiz sheet. The app's own look:
+   system font, iOS greys, its blue accent (src/index.css). All in cqw. */
+.sc-bwbuddy { --bw-acc: #2563EB; --bw-sec: rgba(60, 60, 67, 0.6); --bw-sep: rgba(60, 60, 67, 0.16); --bw-green: #34C759; background: #F2F2F7; color: #000; cursor: pointer; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif; letter-spacing: -0.01em; -webkit-font-smoothing: antialiased; }
+.sc-bwbuddy .bw-all { position: absolute; inset: 0; overflow: hidden; }
+.sc-bwbuddy .bw-all * { hyphens: manual; -webkit-hyphens: manual; }
+.sc-bwbuddy .bw-all > * { position: absolute; will-change: transform, opacity; }
+.sc-bwbuddy .bw-all svg { display: block; width: 100%; height: 100%; }
+
+.sc-bwbuddy .bw-card { left: 5cqw; top: 4cqw; width: 90cqw; height: 47cqw; border-radius: 4.4cqw; background: #fff; }
+.sc-bwbuddy .bw-card > * { position: absolute; }
+.sc-bwbuddy .bw-eye { left: 4.4cqw; top: 3.6cqw; font-size: 2.3cqw; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--bw-acc); white-space: nowrap; }
+.sc-bwbuddy .bw-card > .bw-chev { right: 3.6cqw; top: 3.2cqw; width: 3cqw; height: 3cqw; color: #C7C7CC; }
+.sc-bwbuddy .bw-title { left: 4.4cqw; top: 7cqw; font-size: 3.6cqw; font-weight: 600; }
+.sc-bwbuddy .bw-tile { left: 4.4cqw; top: 12.8cqw; width: 13cqw; height: 13cqw; border-radius: 3cqw; background: var(--bw-acc); overflow: hidden; will-change: transform; }
+.sc-bwbuddy .bw-g { position: absolute; inset: 0; display: grid; place-items: center; font-size: 8cqw; font-weight: 700; color: #fff; will-change: transform, opacity; }
+.sc-bwbuddy .bw-gn { left: 21cqw; top: 14.2cqw; width: 60cqw; height: 5.2cqw; }
+.sc-bwbuddy .bw-gn b { position: absolute; left: 0; top: 0; font-size: 4.4cqw; font-weight: 700; white-space: nowrap; will-change: opacity; }
+.sc-bwbuddy .bw-sub { left: 21cqw; top: 20.4cqw; font-size: 2.8cqw; color: var(--bw-sec); white-space: nowrap; }
+.sc-bwbuddy .bw-pct { font-variant-numeric: tabular-nums; }
+.sc-bwbuddy .bw-gap { left: 4.4cqw; top: 29cqw; width: 80cqw; height: 4cqw; }
+.sc-bwbuddy .bw-gap b { position: absolute; left: 0; top: 0; font-size: 2.9cqw; font-weight: 600; white-space: nowrap; will-change: opacity; }
+.sc-bwbuddy .bw-row { left: 4.4cqw; right: 4.4cqw; top: 33.6cqw; display: flex; justify-content: space-between; font-size: 2.9cqw; white-space: nowrap; will-change: transform, opacity; }
+.sc-bwbuddy .bw-st { color: var(--bw-sec); font-variant-numeric: tabular-nums; }
+.sc-bwbuddy .bw-btn { left: 4.4cqw; right: 4.4cqw; top: 38.6cqw; height: 6.4cqw; border-radius: 3.2cqw; background: var(--bw-acc); color: #fff; display: flex; align-items: center; justify-content: center; gap: 1.6cqw; font-size: 3cqw; font-weight: 600; white-space: nowrap; will-change: transform; }
+.sc-bwbuddy .bw-btn svg { width: 3.4cqw; height: 3.4cqw; flex: none; }
+.sc-bwbuddy .bw-tap { position: absolute; left: 50%; top: 50%; width: 8cqw; height: 8cqw; border-radius: 50%; background: rgba(255, 255, 255, 0.45); opacity: 0; }
+
+.sc-bwbuddy .bw-head { left: 8.6cqw; right: 8.6cqw; top: 54.2cqw; display: flex; justify-content: space-between; font-size: 2.5cqw; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; color: var(--bw-sec); }
+.sc-bwbuddy .bw-count { text-transform: none; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.sc-bwbuddy .bw-list { left: 5cqw; top: 58.4cqw; width: 90cqw; border-radius: 4.4cqw; background: #fff; overflow: hidden; }
+.sc-bwbuddy .bw-item { display: flex; align-items: center; gap: 3cqw; height: 9.6cqw; padding: 0 3.6cqw; }
+.sc-bwbuddy .bw-item + .bw-item { box-shadow: inset 0 0.15cqw 0 var(--bw-sep); }
+.sc-bwbuddy .bw-ic { flex: none; width: 6cqw; height: 6cqw; padding: 1.2cqw; border-radius: 1.6cqw; background: var(--bw-acc); color: #fff; box-sizing: border-box; transition: background 0.2s; will-change: transform; }
+.sc-bwbuddy .bw-ic.done { background: var(--bw-green); }
+.sc-bwbuddy .bw-item span { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.sc-bwbuddy .bw-item b { font-size: 3.1cqw; font-weight: 400; white-space: nowrap; }
+.sc-bwbuddy .bw-item small { font-size: 2.5cqw; color: var(--bw-sec); }
+.sc-bwbuddy .bw-item .bw-chev { flex: none; width: 2.8cqw; height: 2.8cqw; color: #C7C7CC; }
+
+.sc-bwbuddy .bw-sheet { left: 0; right: 0; top: 18cqw; bottom: -4cqw; border-radius: 5cqw 5cqw 0 0; background: #fff; box-shadow: 0 -1cqw 5cqw rgba(0, 0, 0, 0.12); }
+.sc-bwbuddy .bw-sheet > * { position: absolute; }
+.sc-bwbuddy .bw-grab { left: 50%; top: 1.6cqw; width: 8cqw; height: 0.9cqw; margin-left: -4cqw; border-radius: 0.5cqw; background: #D1D1D6; }
+.sc-bwbuddy .bw-q-eye { left: 8cqw; top: 6cqw; font-size: 2.5cqw; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: var(--bw-acc); }
+.sc-bwbuddy .bw-q { left: 8cqw; right: 8cqw; top: 9.6cqw; margin: 0; font-size: 4.2cqw; font-weight: 600; line-height: 1.25; }
+.sc-bwbuddy .bw-opt { left: 8cqw; right: 8cqw; height: 8cqw; display: flex; align-items: center; justify-content: space-between; padding: 0 3.4cqw; border-radius: 2.8cqw; background: #F2F2F7; font-size: 3.3cqw; transition: background 0.2s, box-shadow 0.2s; }
+.sc-bwbuddy .bw-opt:nth-of-type(1) { top: 22cqw; }
+.sc-bwbuddy .bw-opt:nth-of-type(2) { top: 32cqw; }
+.sc-bwbuddy .bw-opt:nth-of-type(3) { top: 42cqw; }
+.sc-bwbuddy .bw-opt.on { background: rgba(52, 199, 89, 0.14); box-shadow: inset 0 0 0 0.4cqw var(--bw-green); }
+.sc-bwbuddy .bw-right { display: flex; align-items: center; gap: 1cqw; color: #248A3D; font-size: 2.9cqw; font-weight: 600; will-change: transform, opacity; }
+.sc-bwbuddy .bw-right svg { width: 3.2cqw; height: 3.2cqw; }
+@media (prefers-reduced-motion: reduce) { .sc-bwbuddy { cursor: default; } }

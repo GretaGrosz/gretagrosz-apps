@@ -1,0 +1,504 @@
+{
+ "id": "u25",
+ "n": 25,
+ "phase": 2,
+ "level": "B2",
+ "title": "Kollokationen & Redemittel",
+ "weak": true,
+ "tips": {
+  "de": "Kollokationen sind Wörter, die „zusammengehören“: Änderungen bewirken, Verantwortung übernehmen, Kritik üben, Probleme lösen, Fragen aufwerfen, Bedenken äußern, ein Ziel erreichen, Träume verwirklichen, jemandem die Schuld zuschieben, einen Kompromiss finden, Vorurteile abbauen. Redemittel helfen, Texte zu gliedern: Einleitung, Argument einleiten, Gegenargument, Beispiel, Überleitung, Schluss. Viele Redemittel lösen einen Nebensatz aus (… dass + Verb am Ende).",
+  "en": "Collocations are word combinations that belong together. Use the natural verb for each noun. Phrases for structuring arguments make texts sound like a Schularbeit, but watch the word order they trigger (dass → verb last; Außerdem → verb second).",
+  "contrast": "Word-for-word translation from English gives wrong collocations: 'bring about changes' ≠ 'Änderungen fördern' → 'Änderungen bewirken'. 'On the other hand' = 'Auf der anderen Seite' (not 'An'). 'In my opinion' = 'Meiner Meinung nach'.",
+  "examples": [
+   "Schulproteste können wirkliche Änderungen bewirken.",
+   "Dem ist entgegenzuhalten, dass …",
+   "Ein weiteres Argument ist, dass …",
+   "Zusammenfassend lässt sich sagen, dass …",
+   "Es ist immer einfacher, anderen die Schuld zuzuschieben."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u25l1",
+   "title": "Kollokationen",
+   "s": "kollok",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Schulproteste können wirkliche Änderungen ___.",
+     "o": [
+      "bewirken",
+      "fördern",
+      "machen"
+     ],
+     "a": "bewirken"
+    },
+    {
+     "t": "mc",
+     "q": "Sie haben es geschafft, ihre Träume zu ___.",
+     "o": [
+      "verwirklichen",
+      "machen",
+      "realisieren lassen"
+     ],
+     "a": "verwirklichen"
+    },
+    {
+     "t": "mc",
+     "q": "Es ist einfacher, anderen die Schuld ___.",
+     "o": [
+      "zuzuschieben",
+      "zu werfen",
+      "zu machen"
+     ],
+     "a": "zuzuschieben"
+    },
+    {
+     "t": "mc",
+     "q": "Viele Eltern ___ Bedenken gegen das Handyverbot.",
+     "o": [
+      "äußern",
+      "sagen",
+      "machen"
+     ],
+     "a": "äußern"
+    },
+    {
+     "t": "mc",
+     "q": "Der Artikel ___ wichtige Fragen auf.",
+     "o": [
+      "wirft",
+      "stellt",
+      "bringt"
+     ],
+     "a": "wirft",
+     "r": "Fragen aufwerfen = raise questions."
+    },
+    {
+     "t": "mc",
+     "q": "Wir müssen einen Kompromiss ___.",
+     "o": [
+      "finden",
+      "machen",
+      "treffen"
+     ],
+     "a": "finden"
+    },
+    {
+     "t": "mc",
+     "q": "Bildung hilft, Vorurteile ___.",
+     "o": [
+      "abzubauen",
+      "wegzumachen",
+      "zu senken"
+     ],
+     "a": "abzubauen"
+    },
+    {
+     "t": "mc",
+     "q": "Wie sagt man „to raise awareness“?",
+     "o": [
+      "das Bewusstsein schärfen",
+      "das Bewusstsein heben",
+      "Bewusstsein machen"
+     ],
+     "a": "das Bewusstsein schärfen"
+    },
+    {
+     "t": "gap",
+     "q": "Die Regierung sollte die Sorgen der Jugend ernst ___.",
+     "a": "nehmen"
+    },
+    {
+     "t": "gap",
+     "q": "Mit unserem Projekt wollen wir ein Zeichen ___.",
+     "a": "setzen"
+    },
+    {
+     "t": "gap",
+     "q": "Wer Fake News teilt, ___ großen Schaden an.",
+     "a": "richtet"
+    },
+    {
+     "t": "gap",
+     "q": "Die Gemeinde hat eine Obergrenze für Busse ___.",
+     "h": "(festlegen)",
+     "a": "festgelegt",
+     "acc": [
+      "eingeführt"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Auf einer Seite können Proteste Änderungen fördern.",
+     "a": "Auf der einen Seite können Proteste Änderungen bewirken."
+    },
+    {
+     "t": "fix",
+     "w": "Es ist immer einfacher, der Schuld an anderen zu werfen.",
+     "a": "Es ist immer einfacher, anderen die Schuld zuzuschieben."
+    },
+    {
+     "t": "fix",
+     "w": "Der Artikel stellt wichtige Fragen auf.",
+     "a": "Der Artikel wirft wichtige Fragen auf."
+    },
+    {
+     "t": "tr",
+     "en": "Protests can bring about real changes.",
+     "a": "Proteste können wirkliche Änderungen bewirken.",
+     "acc": [
+      "Proteste können echte Änderungen bewirken.",
+      "Proteste können wirkliche Veränderungen bewirken.",
+      "Proteste können echte Veränderungen bewirken."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "It is easier to blame others.",
+     "a": "Es ist einfacher, anderen die Schuld zuzuschieben.",
+     "acc": [
+      "Es ist einfacher, anderen die Schuld zu geben.",
+      "Es ist leichter, anderen die Schuld zuzuschieben.",
+      "Es ist leichter, anderen die Schuld zu geben."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Schulproteste können wirkliche Änderungen bewirken."
+    }
+   ]
+  },
+  {
+   "id": "u25l2",
+   "title": "Redemittel: Einleitung & Argument",
+   "s": "redemittel",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wie leitet man ein zweites Argument ein?",
+     "o": [
+      "Ein weiteres Argument ist, dass …",
+      "Ein anderes Argument ist, das …",
+      "Noch ein Argument ist …, weil"
+     ],
+     "a": "Ein weiteres Argument ist, dass …"
+    },
+    {
+     "t": "mc",
+     "q": "Wie leitet man ein Gegenargument ein?",
+     "o": [
+      "Dem ist entgegenzuhalten, dass …",
+      "Gegen das ist zu sagen das …",
+      "Aber, man kann sagen …"
+     ],
+     "a": "Dem ist entgegenzuhalten, dass …"
+    },
+    {
+     "t": "mc",
+     "q": "Wie beginnt man eine Einleitung?",
+     "o": [
+      "In den letzten Jahren wird immer häufiger darüber diskutiert, ob …",
+      "In den letzten Jahren man diskutiert, ob …",
+      "Seit Jahren, es wird diskutiert ob …"
+     ],
+     "a": "In den letzten Jahren wird immer häufiger darüber diskutiert, ob …"
+    },
+    {
+     "t": "order",
+     "a": "Ein weiteres Argument ist, dass der Tourismus Arbeitsplätze schafft.",
+     "chunks": [
+      "Ein weiteres Argument",
+      "ist",
+      ",",
+      "dass",
+      "der Tourismus",
+      "Arbeitsplätze",
+      "schafft"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Dem ist entgegenzuhalten, dass viele Jugendliche sich für Politik interessieren.",
+     "chunks": [
+      "Dem ist entgegenzuhalten",
+      ",",
+      "dass",
+      "viele Jugendliche",
+      "sich",
+      "für Politik",
+      "interessieren"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Hinzu kommt, dass das Fliegen dem Klima schadet.",
+     "chunks": [
+      "Hinzu kommt",
+      ",",
+      "dass",
+      "das Fliegen",
+      "dem Klima",
+      "schadet"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "___ spricht vor allem, dass das Handy ablenkt.",
+     "h": "(for it speaks …)",
+     "a": "Dafür"
+    },
+    {
+     "t": "gap",
+     "q": "Ein gutes ___ dafür ist Hallstatt.",
+     "a": "Beispiel"
+    },
+    {
+     "t": "gap",
+     "q": "Das zeigt sich zum Beispiel ___, dass viele Orte überfüllt sind.",
+     "a": "daran"
+    },
+    {
+     "t": "fix",
+     "w": "Ein weiteres Argument ist, dass der Tourismus schafft Arbeitsplätze.",
+     "a": "Ein weiteres Argument ist, dass der Tourismus Arbeitsplätze schafft."
+    },
+    {
+     "t": "fix",
+     "w": "Dem ist entgegenzuhalten dass viele Jugendliche informiert sind.",
+     "a": "Dem ist entgegenzuhalten, dass viele Jugendliche informiert sind."
+    },
+    {
+     "t": "tr",
+     "en": "Another argument is that flying is cheap.",
+     "a": "Ein weiteres Argument ist, dass das Fliegen billig ist.",
+     "acc": [
+      "Ein weiteres Argument ist, dass Fliegen billig ist.",
+      "Ein weiteres Argument ist, dass das Fliegen günstig ist.",
+      "Ein weiteres Argument ist, dass Fliegen günstig ist."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Dem ist entgegenzuhalten, dass sich viele Jugendliche sehr wohl informieren."
+    }
+   ]
+  },
+  {
+   "id": "u25l3",
+   "title": "Redemittel: Schluss & Überleitung",
+   "s": "redemittel",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wie beginnt man den Schluss?",
+     "o": [
+      "Zusammenfassend lässt sich sagen, dass …",
+      "Zusammenfassend, man kann sagen, dass …",
+      "Am Ende ich sage, dass …"
+     ],
+     "a": "Zusammenfassend lässt sich sagen, dass …"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Überleitung passt? „Neben den Vorteilen ___ es auch Nachteile.“",
+     "o": [
+      "gibt",
+      "es gibt",
+      "geben"
+     ],
+     "a": "gibt"
+    },
+    {
+     "t": "mc",
+     "q": "Wägt man die Argumente ab, ___.",
+     "o": [
+      "so überwiegen die Vorteile",
+      "die Vorteile überwiegen",
+      "so die Vorteile überwiegen"
+     ],
+     "a": "so überwiegen die Vorteile"
+    },
+    {
+     "t": "order",
+     "a": "Zusammenfassend lässt sich sagen, dass ein Handyverbot sinnvoll ist.",
+     "chunks": [
+      "Zusammenfassend",
+      "lässt",
+      "sich",
+      "sagen",
+      ",",
+      "dass",
+      "ein Handyverbot",
+      "sinnvoll",
+      "ist"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Abschließend möchte ich betonen, dass jeder Verantwortung übernehmen sollte.",
+     "chunks": [
+      "Abschließend",
+      "möchte",
+      "ich",
+      "betonen",
+      ",",
+      "dass",
+      "jeder",
+      "Verantwortung",
+      "übernehmen",
+      "sollte"
+     ]
+    },
+    {
+     "t": "order",
+     "a": "Ich hoffe, dass mein Brief zum Nachdenken anregt.",
+     "chunks": [
+      "Ich hoffe",
+      ",",
+      "dass",
+      "mein Brief",
+      "zum Nachdenken",
+      "anregt"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Zusammenfassend, man kann sagen, dass es Vorteile gibt.",
+     "a": "Zusammenfassend kann man sagen, dass es Vorteile gibt."
+    },
+    {
+     "t": "fix",
+     "w": "Abschließend ich möchte betonen, dass …",
+     "a": "Abschließend möchte ich betonen, dass …"
+    },
+    {
+     "t": "fix",
+     "w": "Alles in allem bin ich der Meinung, dass das Verbot ist sinnvoll.",
+     "a": "Alles in allem bin ich der Meinung, dass das Verbot sinnvoll ist."
+    },
+    {
+     "t": "tr",
+     "en": "In conclusion, it can be said that the ban makes sense.",
+     "a": "Zusammenfassend lässt sich sagen, dass das Verbot sinnvoll ist."
+    },
+    {
+     "t": "tr",
+     "en": "All in all, I believe that we have to act.",
+     "a": "Alles in allem bin ich der Meinung, dass wir handeln müssen.",
+     "acc": [
+      "Alles in allem glaube ich, dass wir handeln müssen.",
+      "Alles in allem bin ich der Ansicht, dass wir handeln müssen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Zusammenfassend lässt sich sagen, dass die Vorteile überwiegen."
+    }
+   ]
+  },
+  {
+   "id": "u25l4",
+   "title": "Textsorten-Formeln",
+   "s": "textsorte",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wie beginnt ein Leserbrief?",
+     "o": [
+      "Sehr geehrte Damen und Herren,",
+      "Sehr geehrte Frau Professorin,",
+      "Liebe Zeitung!"
+     ],
+     "a": "Sehr geehrte Damen und Herren,"
+    },
+    {
+     "t": "mc",
+     "q": "Was braucht eine Erörterung ganz oben?",
+     "o": [
+      "eine Überschrift",
+      "eine Anrede",
+      "eine Grußformel"
+     ],
+     "a": "eine Überschrift"
+    },
+    {
+     "t": "mc",
+     "q": "Wie endet ein Leserbrief?",
+     "o": [
+      "Mit freundlichen Grüßen",
+      "Mit freundlichen Grüßen,",
+      "Liebe Grüße!"
+     ],
+     "a": "Mit freundlichen Grüßen"
+    },
+    {
+     "t": "mc",
+     "q": "Wie endet eine Meinungsrede?",
+     "o": [
+      "Vielen Dank für Ihre Aufmerksamkeit!",
+      "Mit freundlichen Grüßen",
+      "Ende."
+     ],
+     "a": "Vielen Dank für Ihre Aufmerksamkeit!"
+    },
+    {
+     "t": "mc",
+     "q": "Wie beginnt ein offener Brief an den Bildungsminister?",
+     "o": [
+      "Sehr geehrter Herr Bundesminister,",
+      "Sehr geehrte Damen und Herren,",
+      "Hallo Herr Minister!"
+     ],
+     "a": "Sehr geehrter Herr Bundesminister,"
+    },
+    {
+     "t": "mc",
+     "q": "Wie bezieht man sich im Leserbrief auf den Artikel?",
+     "o": [
+      "In Ihrem Artikel „…“ vom 12. März berichten Sie über …",
+      "Ich habe einen Artikel gelesen.",
+      "Der Artikel war interessant."
+     ],
+     "a": "In Ihrem Artikel „…“ vom 12. März berichten Sie über …"
+    },
+    {
+     "t": "mc",
+     "q": "Welche Zeitform verwendet man in einer Zusammenfassung?",
+     "o": [
+      "Präsens",
+      "Präteritum",
+      "Perfekt"
+     ],
+     "a": "Präsens"
+    },
+    {
+     "t": "fix",
+     "w": "Sehr geehrte Frau Professorin, in Ihrem Artikel …",
+     "a": "Sehr geehrte Damen und Herren, in Ihrem Artikel …",
+     "c": "T"
+    },
+    {
+     "t": "fix",
+     "w": "Mit freundlichen Grüßen, Greta",
+     "a": "Mit freundlichen Grüßen Greta",
+     "c": "B"
+    },
+    {
+     "t": "tr",
+     "en": "Dear Sir or Madam, (letter to the editor)",
+     "a": "Sehr geehrte Damen und Herren,"
+    },
+    {
+     "t": "tr",
+     "en": "Thank you for your attention!",
+     "a": "Vielen Dank für Ihre Aufmerksamkeit!"
+    },
+    {
+     "t": "listen",
+     "a": "Sehr geehrte Damen und Herren, in Ihrem Artikel berichten Sie über das Handyverbot."
+    }
+   ]
+  }
+ ]
+}

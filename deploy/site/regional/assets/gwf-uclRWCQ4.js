@@ -1,0 +1,799 @@
+const e=[{id:"GWF-2015-1",comp:"GWF",year:2015,n:1,area:"N",title:"GCD chain triples",qDe:`Man bestimme alle Tripel (a, b, c) positiver ganzer Zahlen, für die die Bedingungen
+
+ggT(a, 20) = b,   ggT(b, 15) = c   und   ggT(a, c) = 5
+
+gelten.`,q:`Determine all triples (a, b, c) of positive integers for which the conditions
+
+gcd(a, 20) = b,   gcd(b, 15) = c   and   gcd(a, c) = 5
+
+hold.`,techniques:["gcd","case analysis"],difficulty:1,answer:"c = 5 always; b = 5 if a is an odd multiple of 5, b = 10 if a ≡ 10 (mod 20), b = 20 if 20 ∣ a. So (a, b, c) = (10t − 5, 5, 5), (20t − 10, 10, 5) or (20t, 20, 5) with t a positive integer.",hints:["Which values can b take at all, given that b = gcd(a, 20)? And which values can c take?","c divides 15 and 5 divides c, so c is 5 or 15. Can c be 15 when b divides 20?","Once c = 5, you get 5 ∣ a. Now split according to how many factors 2 the number a has."],rubric:[["Shows c = 5 (c ∣ 15, 5 ∣ c, and c = 15 is impossible because b ∣ 20)",2],["Deduces 5 ∣ a and b ∈ {5, 10, 20}",2],["Correct case split by the power of 2 in a, giving all three families",3],["Checks that every listed triple really satisfies all three conditions",1]],solution:`From gcd(a, c) = 5 we get 5 ∣ c, and from gcd(b, 15) = c we get c ∣ 15. Hence c ∈ {5, 15}. If c = 15, then 15 ∣ b; but b = gcd(a, 20) divides 20, which is not divisible by 3. So c = 5.
+
+Now gcd(a, 5) = 5 means 5 ∣ a. Then b = gcd(a, 20) is a multiple of 5 that divides 20, so b ∈ {5, 10, 20}, and in each case gcd(b, 15) = 5 = c holds automatically. Which value b takes depends only on the power of 2 in a:
+
+• a odd, i.e. a = 10t − 5: gcd(a, 20) = 5, so b = 5.
+
+• a ≡ 2 (mod 4), i.e. a = 20t − 10: gcd(a, 20) = 10, so b = 10.
+
+• 4 ∣ a, i.e. a = 20t: gcd(a, 20) = 20, so b = 20.
+
+Conversely, each such triple works: gcd(a, 20) = b by the case distinction, gcd(b, 15) = 5 = c, and gcd(a, 5) = 5 since 5 ∣ a.
+
+Answer: (a, b, c) = (10t − 5, 5, 5), (20t − 10, 10, 5) or (20t, 20, 5), where t is any positive integer.`,pitfalls:["Listing a few numerical examples instead of describing all (infinitely many) triples.","Forgetting to rule out c = 15 (and c = 1, c = 3) explicitly."]},{id:"GWF-2015-2",comp:"GWF",year:2015,n:2,area:"A",title:"One of three is at most 1",qDe:`Es seien x, y und z positive reelle Zahlen mit x + y + z = 3.
+
+Man beweise, dass mindestens eine der drei Zahlen
+
+x(x + y − z),   y(y + z − x)   oder   z(z + x − y)
+
+kleiner oder gleich 1 ist.`,q:`Let x, y and z be positive real numbers with x + y + z = 3.
+
+Prove that at least one of the three numbers
+
+x(x + y − z),   y(y + z − x)   or   z(z + x − y)
+
+is less than or equal to 1.`,techniques:["contradiction","HM-AM"],difficulty:2,answer:null,hints:["Assume the opposite: all three numbers are greater than 1.","Divide each of these inequalities by the positive variable in front, e.g. x + y − z > 1/x. What happens when you add all three?","Adding gives 3 > 1/x + 1/y + 1/z. Compare with (x + y + z)(1/x + 1/y + 1/z) ≥ 9."],rubric:[["Sets up a proof by contradiction and rewrites as x + y − z > 1/x etc.",2],["Adds the three inequalities to obtain 3 > 1/x + 1/y + 1/z",3],["Contradiction via HM-AM or Cauchy-Schwarz using x + y + z = 3",3]],solution:`Suppose, for contradiction, that all three numbers are greater than 1. Since x, y, z > 0 we may divide:
+
+x + y − z > 1/x,   y + z − x > 1/y,   z + x − y > 1/z.
+
+The left-hand sides add up to x + y + z = 3, so adding the three inequalities gives
+
+3 > 1/x + 1/y + 1/z.
+
+On the other hand, by the Cauchy-Schwarz inequality (equivalently HM ≤ AM), (x + y + z)(1/x + 1/y + 1/z) ≥ 9, so 1/x + 1/y + 1/z ≥ 9/3 = 3. This contradicts the previous line. Hence at least one of the three numbers is at most 1.
+
+Remark: the statement is sharp — for x = y = z = 1 all three numbers equal 1.`,pitfalls:["Assuming the brackets x + y − z etc. are positive (they need not be; the division argument does not need it).","Trying to show that all three numbers are ≤ 1, which is false (x = y = 1.4, z = 0.2 gives x(x + y − z) = 3.64)."]},{id:"GWF-2015-3",comp:"GWF",year:2015,n:3,area:"K",title:"Averaging down to 2",qDe:`Gegeben ist eine natürliche Zahl n ≥ 3. Auf einer Tafel stehen die Zahlen 1, 2, 3, …, n. In jedem Spielzug wählt man zwei Zahlen aus und ersetzt sie durch ihr arithmetisches Mittel. Dies geschieht so lange, bis nur mehr eine Zahl auf der Tafel steht.
+
+Man bestimme die kleinste ganze Zahl, die man durch eine geeignete Folge von Spielzügen am Ende erreichen kann.`,q:`Let n ≥ 3 be a natural number. The numbers 1, 2, 3, …, n are written on a board. In each move one chooses two numbers and replaces them by their arithmetic mean. This is repeated until only one number is left on the board.
+
+Determine the smallest integer that can be obtained at the end by a suitable sequence of moves.`,techniques:["invariant","induction","construction + bound"],difficulty:2,answer:"2 (for every n ≥ 3)",hints:["Why can the final number never be 1 (or smaller)?","Try small n. From 1, 2, 3 you can reach 2. How can you shrink the top end of the list 1, 2, …, n step by step without touching the small numbers?","Average n − 2 and n to get a second copy of n − 1, then average the two copies: the board becomes 1, 2, …, n − 3, n − 1. Now repeat with the two largest numbers."],rubric:[["Lower bound: the final number is greater than 1 (all numbers stay ≥ 1 and some number is always > 1)",2],["Correct construction reaching 2 for every n ≥ 3",5],["Clear statement of the answer 2",1]],solution:`Answer: 2.
+
+Lower bound. The mean of two numbers ≥ 1 is ≥ 1, so all numbers on the board are always ≥ 1. Moreover, at every moment some number on the board is greater than 1: this is true at the start, and a move either does not touch such a number, or replaces it together with a number ≥ 1 by a mean that is again greater than 1. Hence the final number is greater than 1, and no integer smaller than 2 can be reached.
+
+Construction. Claim: for every m ≥ 3, the board 1, 2, …, m − 2, m (that is, 1, …, m − 2 together with m) can be reduced to 2. For m = 3 the board is 1, 3, and averaging gives 2. For m ≥ 4, average m − 2 and m to get m − 1; the board becomes 1, 2, …, m − 3, m − 1, which is the same kind of board with m − 1 in place of m. By induction we reach 2.
+
+For the original board 1, 2, …, n: average n − 2 and n to obtain a second copy of n − 1, then average the two copies of n − 1. The board is now 1, 2, …, n − 3, n − 1, i.e. the board from the claim with m = n − 1 (for n = 3 it is already just the number 2). Hence 2 can be reached for every n ≥ 3.`,pitfalls:["Giving only the construction or only the lower bound — both halves are needed.","Assuming the final number is the average of all numbers; it depends heavily on the order of the moves."]},{id:"GWF-2015-4",comp:"GWF",year:2015,n:4,area:"G",title:"Isosceles triangle, circle BIU",qDe:`Es sei ABC ein gleichschenkeliges Dreieck mit AC = BC und ∠ACB < 60°. Wir bezeichnen den Inkreismittelpunkt und den Umkreismittelpunkt mit I bzw. U. Der Umkreis des Dreiecks BIU schneidet den Schenkel BC ein zweites Mal im Punkt D.
+
+(a) Man beweise, dass die Geraden AC und DI parallel sind.
+
+(b) Man beweise, dass die Geraden UD und IB aufeinander normal stehen.`,q:`Let ABC be an isosceles triangle with AC = BC and ∠ACB < 60°. Denote the incentre by I and the circumcentre by U. The circumcircle of triangle BIU meets the leg BC a second time at the point D.
+
+(a) Prove that the lines AC and DI are parallel.
+
+(b) Prove that the lines UD and IB are perpendicular.`,techniques:["angle chasing","cyclic quadrilateral","inscribed angle theorem"],difficulty:3,answer:null,hints:["Write α = ∠CAB = ∠ABC and γ = ∠ACB. Both I and U lie on the symmetry axis through C. In which order? (This is where γ < 60° is used.)","For (a): compute ∠BUI from the central angle ∠BUC = 2α, then transfer it to D using the circle through B, I, U, D.","For (b): compute ∠UDB from the same circle (∠UDB = ∠BIG with G the midpoint of AB) and look at the triangle formed by BD, BI and DU."],rubric:[["Locates I and U on the symmetry axis with U between C and I (uses γ < 60°)",1],["(a) ∠BUI = γ via the central angle ∠BUC = 2α",2],["(a) ∠BDI = ∠BUI, hence DI ∥ AC",2],["(b) ∠UDB = 90° − α/2 from the cyclic quadrilateral",2],["(b) Angle sum in the triangle formed by BD, BI, DU gives the right angle",1]],solution:`Let α = ∠CAB = ∠ABC, γ = ∠ACB and let G be the midpoint of AB. Since γ < 60°, we have α = 90° − γ/2 > 60° > γ, and α < 90°.
+
+Position of I and U. Both lie on the axis of symmetry CG. As a point X moves along CG from C to G, the angle ∠XBC grows from 0 to α. Triangle UBC is isosceles with ∠UCB = γ/2, so ∠UBC = γ/2, while ∠IBC = α/2 > γ/2. Hence the order on the axis is C, U, I, G (U strictly between C and I).
+
+(a) Since α < 90°, the central angle over BC is ∠BUC = 2α. Because U lies between C and I, ∠BUI = 180° − ∠BUC = 180° − 2α = γ. The points U and D lie on the same side of the line BI (U lies on segment CI, D on segment BC, and C is on that side). So, in the circle through B, I, U, D, the inscribed angles over BI are equal: ∠BDI = ∠BUI = γ = ∠BCA. As D lies on BC, these are corresponding angles, so DI ∥ CA.
+
+(b) The line BU separates C from I (U is an interior point of segment CI), and D lies on C's side; so D and I are on opposite sides of BU, and in the cyclic quadrilateral BDUI we get ∠UDB = 180° − ∠UIB. Since I lies between U and G, ∠UIB = 180° − ∠BIG, and in the right triangle BGI we have ∠BIG = 90° − ∠IBG = 90° − α/2. Hence ∠UDB = 90° − α/2.
+
+Let F be the intersection of the lines DU and BI. In triangle BDF, ∠DBF = ∠CBI = α/2 and ∠BDF = 90° − α/2, so ∠BFD = 180° − α/2 − (90° − α/2) = 90°. Thus UD ⊥ IB.`,pitfalls:["Using inscribed angles without checking on which side of the chord the points lie (the order C, U, I on the axis matters).","Not using the hypothesis ∠ACB < 60° at all — it is exactly what fixes the order of U and I."]},{id:"GWF-2016-1",comp:"GWF",year:2016,n:1,area:"N",title:"k² − 2016 = 3ⁿ",qDe:`Man bestimme alle positiven ganzen Zahlen k und n, die die Gleichung
+
+k² − 2016 = 3ⁿ
+
+erfüllen.`,q:`Determine all positive integers k and n satisfying the equation
+
+k² − 2016 = 3ⁿ.`,techniques:["modular arithmetic","factorisation"],difficulty:2,answer:"(k, n) = (45, 2)",hints:["Factor 2016 = 2⁵ · 3² · 7 and look at the equation modulo 3.","Show 3 ∣ k, hence 9 ∣ k², hence n ≥ 2; then divide the whole equation by 9.","After dividing you get m² − 224 = 3ⁿ⁻² with k = 3m. Look at this modulo 3."],rubric:[["Shows 3 ∣ k and n ≥ 2",2],["Reduces to m² − 224 = 3ⁿ⁻² and proves n = 2 by working modulo 3",4],["Finds k = 45 and checks the solution",2]],solution:`Since 3 ∣ 2016 and 3 ∣ 3ⁿ, we get 3 ∣ k², hence 3 ∣ k and 9 ∣ k². As 2016 = 9 · 224, it follows that 9 ∣ 3ⁿ, i.e. n ≥ 2. Write k = 3m and divide by 9:
+
+m² − 224 = 3ⁿ⁻².
+
+Now 224 ≡ 2 (mod 3) and m² ≡ 0 or 1 (mod 3), so m² − 224 ≡ 1 or 2 (mod 3); it is not divisible by 3. Hence 3ⁿ⁻² is not divisible by 3, which forces n = 2. Then m² = 225, m = 15 and k = 45.
+
+Check: 45² − 2016 = 2025 − 2016 = 9 = 3². So the only solution is (k, n) = (45, 2).
+
+(Alternative: modulo 4 one gets k² ≡ (−1)ⁿ, so n = 2t is even and (k − 3ᵗ)(k + 3ᵗ) = 2016; checking the factor pairs of 2016 into two even factors again gives only k = 45, t = 1.)`,pitfalls:["Finding (45, 2) by trial without proving there are no further solutions — this earns very little.","In the factor-pair approach: forgetting that both factors must be even, or overlooking a pair."]},{id:"GWF-2016-2",comp:"GWF",year:2016,n:2,area:"A",title:"(a + 2)(b + 2) ≥ cd",qDe:`Es seien a, b, c und d reelle Zahlen mit a² + b² + c² + d² = 4.
+
+Man beweise, dass die Ungleichung
+
+(a + 2)(b + 2) ≥ cd
+
+gilt, und man gebe vier Zahlen a, b, c und d an, für die Gleichheit gilt.`,q:`Let a, b, c and d be real numbers with a² + b² + c² + d² = 4.
+
+Prove that the inequality
+
+(a + 2)(b + 2) ≥ cd
+
+holds, and give four numbers a, b, c and d for which equality holds.`,techniques:["SOS","substitution","equality case"],difficulty:2,answer:"Equality e.g. for a = b = −1, c = d = 1 (in general exactly when a + b = −2 and c = d, together with a² + b² + c² + d² = 4).",hints:["Expand the left side. Where can you use a² + b² + c² + d² = 4 to replace the constant 4?","cd ≤ (c² + d²)/2, and c² + d² = 4 − a² − b².","Everything should collapse to a perfect square in a + b. When is it zero?"],rubric:[["Uses the constraint to replace the constant and brings everything to one side",2],["Writes the difference as (a + b + 2)² + (c − d)² (or an equivalent square/AM-GM argument)",4],["Gives a valid equality case and checks the constraint",2]],solution:`Expanding, we must show ab + 2a + 2b + 4 − cd ≥ 0. Multiply by 2 and write 2 · 4 = 4 + (a² + b² + c² + d²), using the condition once:
+
+2ab + 4a + 4b + 8 − 2cd = 2ab + 4a + 4b + 4 + a² + b² + c² + d² − 2cd.
+
+Rearranging,
+
+= (a² + 2ab + b² + 4a + 4b + 4) + (c² − 2cd + d²) = (a + b + 2)² + (c − d)² ≥ 0.
+
+This proves the inequality. Equality holds exactly when a + b = −2 and c = d (with the constraint). For example a = b = −1, c = d = 1: then a² + b² + c² + d² = 4 and (a + 2)(b + 2) = 1 · 1 = 1 = cd.`,pitfalls:["Giving an equality example that violates a² + b² + c² + d² = 4.","Treating a, b, c, d as positive (a + 2 can be negative; the square argument needs no sign assumptions)."]},{id:"GWF-2016-3",comp:"GWF",year:2016,n:3,area:"K",title:"Differences of 47 and 2016",qDe:`Anlässlich der 47. Mathematik-Olympiade 2016 stehen die Zahlen 47 und 2016 auf der Tafel. Alice und Bob spielen folgendes Spiel: Sie sind abwechselnd am Zug, wobei Alice beginnt. Wer am Zug ist, wählt zwei auf der Tafel stehende Zahlen a und b mit a > b, deren Differenz a − b noch nicht auf der Tafel steht, und schreibt diese Differenz zusätzlich auf die Tafel. Das Spiel endet, wenn kein Zug mehr möglich ist. Wer den letzten Zug gemacht hat, gewinnt.
+
+Man beweise, dass Bob jedenfalls gewinnt, egal wie die beiden spielen.`,q:`On the occasion of the 47th Mathematical Olympiad 2016, the numbers 47 and 2016 are written on the board. Alice and Bob play the following game: they move alternately, Alice starts. The player to move chooses two numbers a and b on the board with a > b whose difference a − b is not yet on the board, and additionally writes this difference on the board. The game ends when no move is possible. Whoever made the last move wins.
+
+Prove that Bob wins in any case, no matter how the two play.`,techniques:["invariant","extremal principle","game strategy"],difficulty:2,answer:null,hints:["Do not look for a strategy — show that the length of the game does not depend on the moves.","Which numbers are on the board at the end? The final set is closed under taking positive differences. Look at its smallest element.","Show the smallest final number divides 47 and 2016, so it is 1; then show every number from 1 to 2016 is on the board, and count the moves."],rubric:[["Shows the game terminates and the final set is closed under positive differences",1],["Proves 1 is on the board at the end (the minimum divides every element; gcd(47, 2016) = 1)",3],["Proves that all of 1, 2, …, 2016 are on the board at the end",2],["Concludes: exactly 2014 moves, so Bob makes the last move",2]],solution:`We show that the game always ends with exactly the numbers 1, 2, …, 2016 on the board. Then exactly 2016 − 2 = 2014 numbers have been written, i.e. the game lasts 2014 moves. Alice makes the moves with odd numbers, Bob those with even numbers, so Bob makes the last move and wins.
+
+The game ends: every number written is a positive integer smaller than 2016 and is written at most once, so there are at most 2014 moves.
+
+Let M be the set of numbers on the board at the end. It contains 47 and 2016, consists of positive integers ≤ 2016, and is closed under positive differences: if a > b are in M, then a − b ∈ M (otherwise another move would be possible).
+
+Step 1: 1 ∈ M. Let m be the smallest element of M and x ∈ M. Subtracting m repeatedly, x − m, x − 2m, … stay in M as long as they are positive. If m did not divide x, this would eventually produce the remainder of x modulo m, a positive element of M smaller than m — impossible. So m divides every element of M, in particular 47 and 2016. Since 47 is a prime that does not divide 2016, m = 1.
+
+Step 2: M = {1, 2, …, 2016}. Otherwise let g be the largest number in {1, …, 2016} that is not in M. Then g < 2016, so g + 1 ∈ M, and (g + 1) − 1 = g ∈ M by closure — a contradiction.
+
+Hence every game lasts exactly 2014 moves and Bob always wins.`,pitfalls:["Playing through one particular game and concluding that Bob wins — the claim is about every possible game.","Showing the final set is {1, …, 2016} but not converting this into the exact number of moves (2014)."]},{id:"GWF-2016-4",comp:"GWF",year:2016,n:4,area:"G",title:"Tangents, bisector and five points",qDe:`Es sei ABC ein Dreieck mit AC > AB und dem Umkreismittelpunkt U. Die Tangenten an den Umkreis in den Punkten A und B schneiden einander im Punkt T. Die Symmetrale der Seite BC schneidet die Seite AC im Punkt S.
+
+Man zeige:
+
+(a) Die Punkte A, B, S, T und U liegen auf einem Kreis.
+
+(b) Die Gerade ST ist parallel zur Seite BC.`,q:`Let ABC be a triangle with AC > AB and circumcentre U. The tangents to the circumcircle at the points A and B meet at the point T. The perpendicular bisector of the side BC meets the side AC at the point S.
+
+Show:
+
+(a) The points A, B, S, T and U lie on a circle.
+
+(b) The line ST is parallel to the side BC.`,techniques:["cyclic quadrilateral","inscribed angle theorem","angle chasing"],difficulty:2,answer:null,hints:["Which circle passes through A, B, T and U? Look at the angles at A and B.","Triangle BSC is isosceles. Compute ∠ASB and compare it with the central angle ∠AUB.","For (b): TA = TB, so T is the midpoint of an arc AB of the new circle. What does that say about the line ST?"],rubric:[["A, B, T, U concyclic (right angles at A and B, Thales)",2],["∠ASB = 2γ = ∠AUB, hence S lies on the same circle; the two circles coincide",3],["(b) TA = TB, so ST bisects ∠ASB and ∠AST = γ",2],["Conclusion ST ∥ BC with correct orientation",1]],solution:`Let γ = ∠ACB and β = ∠ABC. From AC > AB we get β > γ; in particular γ < 90°.
+
+(a) The tangents are perpendicular to the radii: ∠UAT = ∠UBT = 90°. By Thales, A and B lie on the circle k₁ with diameter UT.
+
+Since S lies on the perpendicular bisector of BC, SB = SC and ∠SBC = ∠SCB = γ. Because β > γ, the ray BS lies inside the angle ABC, so S lies between A and C. The angle ∠ASB is an exterior angle of triangle BSC, hence ∠ASB = 2γ. On the other hand, since γ < 90°, the central angle is ∠AUB = 2γ, and U lies on the same side of AB as C, as does S. So S and U see the segment AB under the same angle from the same side; hence A, B, S, U are concyclic. This circle and k₁ share the three points A, B, U, so they coincide: A, B, S, T, U lie on one circle.
+
+(b) TA = TB (equal tangent segments), so the chords TA and TB of this circle are equal and T is the midpoint of an arc AB. T lies on the other side of AB than C (the tangents at A and B meet beyond AB because γ < 90°), while S lies on C's side; so T is the midpoint of the arc AB not containing S. Equal chords subtend equal inscribed angles, hence ∠AST = ∠TSB, i.e. ST bisects ∠ASB and ∠AST = γ.
+
+The ray ST lies inside the angle ASB, i.e. on the same side of line AC as B. Since S lies on CA, the angles ∠AST and ∠ACB are corresponding angles with respect to the line AC, both equal to γ. Therefore ST ∥ CB.`,pitfalls:["Showing only four of the points concyclic and forgetting to merge the two circles.","Not explaining why S lies between A and C (this is where AC > AB, i.e. β > γ, is used)."]},{id:"GWF-2017-1",comp:"GWF",year:2017,n:1,area:"A",title:"Nine squares, three summands",qDe:`Es seien x₁, x₂, …, x₉ nicht negative reelle Zahlen, für die gilt:
+
+x₁² + x₂² + … + x₉² ≥ 25
+
+Man beweise, dass es drei dieser Zahlen gibt, deren Summe mindestens 5 ist.`,q:`Let x₁, x₂, …, x₉ be non-negative real numbers such that
+
+x₁² + x₂² + … + x₉² ≥ 25.
+
+Prove that there are three of these numbers whose sum is at least 5.`,techniques:["extremal principle","size bounds"],difficulty:2,answer:null,hints:["Which three numbers should you take? Sort the numbers.","Let s be the sum of the three largest numbers. Try to prove x₁² + … + x₉² ≤ s².","Split the sorted numbers into three blocks of three and use xᵢ² ≤ (largest number of its block) · xᵢ."],rubric:[["Idea: take the three largest numbers (sorting / extremal choice)",2],["Bounds each block of three by (largest element of the block) · s",3],["Combines to x₁² + … + x₉² ≤ s² and concludes s ≥ 5",3]],solution:`Sort the numbers so that x₁ ≥ x₂ ≥ … ≥ x₉ ≥ 0, and let s = x₁ + x₂ + x₃ be the sum of the three largest. We show x₁² + … + x₉² ≤ s²; together with the hypothesis this gives s² ≥ 25, i.e. s ≥ 5.
+
+Split the numbers into the blocks (x₁, x₂, x₃), (x₄, x₅, x₆), (x₇, x₈, x₉). In each block every element is at most the first one, and each block sum is at most s (no three of the numbers have a larger sum than the three largest). Therefore
+
+x₁² + x₂² + x₃² ≤ x₁(x₁ + x₂ + x₃) = x₁ · s,
+x₄² + x₅² + x₆² ≤ x₄(x₄ + x₅ + x₆) ≤ x₄ · s,
+x₇² + x₈² + x₉² ≤ x₇(x₇ + x₈ + x₉) ≤ x₇ · s.
+
+Adding and using x₄ ≤ x₂ and x₇ ≤ x₃:
+
+x₁² + … + x₉² ≤ s(x₁ + x₄ + x₇) ≤ s(x₁ + x₂ + x₃) = s².
+
+Hence 25 ≤ s², so s ≥ 5: the three largest numbers have sum at least 5. (The bound is sharp: x₁ = 5 and all other numbers 0.)`,pitfalls:["Using x₁² + … + x₉² ≤ (x₁ + … + x₉)², which only bounds the sum of all nine numbers.","Averaging arguments (QM-AM) — they bound an average triple, which can be far below 5."]},{id:"GWF-2017-2",comp:"GWF",year:2017,n:2,area:"G",title:"Perpendicular diagonals and the circumcentre",qDe:`Es sei ABCD ein konvexes Sehnenviereck mit dem Umkreismittelpunkt U, in dem die Diagonalen aufeinander normal stehen. Es sei g die Gerade, die man erhält, wenn man die Diagonale AC an der Winkelsymmetrale von ∠BAD spiegelt.
+
+Man zeige, dass der Punkt U auf der Geraden g liegt.`,q:`Let ABCD be a convex cyclic quadrilateral with circumcentre U in which the diagonals are perpendicular. Let g be the line obtained by reflecting the diagonal AC in the angle bisector of ∠BAD.
+
+Show that the point U lies on the line g.`,techniques:["angle chasing","inscribed angle theorem","isogonal lines"],difficulty:2,answer:null,hints:["Look only at triangle ABD. What is the line AC in this triangle?","Reflecting in the bisector of ∠BAD means: g makes the same angle with AD as AC makes with AB. So you must show ∠DAU = ∠BAC.","Compute ∠BAC from the right triangle ABX (X the intersection of the diagonals) and ∠DAU from the isosceles triangle AUD with central angle 2∠ABD."],rubric:[["Recognises AC as the altitude from A in triangle ABD and reformulates the goal as ∠DAU = ∠BAC",3],["∠BAC = 90° − ∠ABD from the right triangle ABX",2],["∠DAU = 90° − ∠ABD from the isosceles triangle AUD and the central angle",2],["Concludes with the correct orientation (both rays inside ∠BAD)",1]],solution:`Let X be the intersection of the diagonals. Since ABCD is convex, X lies on the segment BD, and AC ⊥ BD, so AX is the altitude from A in triangle ABD. As its foot lies inside BD, the angles ∠ABD and ∠ADB are acute.
+
+The reflection in the bisector of ∠BAD swaps the rays AB and AD. Hence g is the line through A that lies inside the angle BAD and makes the angle ∠BAX with the ray AD. So it suffices to show that the ray AU also lies inside ∠BAD and makes the angle ∠BAX with AD.
+
+In the right triangle ABX: ∠BAX = 90° − ∠ABX = 90° − ∠ABD.
+
+Since ∠ABD is acute, the centre U lies on the same side of AD as B, and the central angle over AD is ∠AUD = 2∠ABD. Triangle AUD is isosceles (UA = UD), so ∠DAU = (180° − 2∠ABD)/2 = 90° − ∠ABD.
+
+Thus ∠DAU = ∠BAX ≤ ∠BAD, with U on B's side of AD, so the ray AU is the reflection of the ray AX = AC. Therefore U lies on g.
+
+(In other words: in any triangle the altitude and the line to the circumcentre from the same vertex are symmetric with respect to the angle bisector.)`,pitfalls:["Confusing the angle bisector of ∠BAD with the perpendicular bisector of BD.","Drawing a symmetric figure (kite or square) and reading the result off the picture."]},{id:"GWF-2017-3",comp:"GWF",year:2017,n:3,area:"K",title:"Three numbers, forced moves",qDe:`Auf der Tafel stehen die drei natürlichen Zahlen 2000, 17 und n. Anna und Berta spielen folgendes Spiel: Anna beginnt, dann sind sie abwechselnd am Zug. Ein Zug besteht darin, eine der drei Zahlen auf der Tafel durch den Betrag der Differenz der beiden anderen Zahlen zu ersetzen. Dabei ist kein Zug erlaubt, bei dem sich keine der drei Zahlen verändert. Wer an der Reihe ist und keinen erlaubten Zug mehr machen kann, hat verloren.
+
+• Man beweise, dass das Spiel für jedes n irgendwann zu Ende geht.
+
+• Wer gewinnt, wenn n = 2017 ist?`,q:`The three natural numbers 2000, 17 and n are written on the board. Anna and Berta play the following game: Anna starts, then they move alternately. A move consists of replacing one of the three numbers on the board by the absolute value of the difference of the other two numbers. A move in which none of the three numbers changes is not allowed. The player whose turn it is and who cannot make an allowed move loses.
+
+• Prove that the game ends at some point for every n.
+
+• Who wins if n = 2017?`,techniques:["invariant","game strategy","Euclidean algorithm"],difficulty:3,answer:"Anna wins (all moves are forced and the game lasts 125 moves).",hints:["Look at the board right after any move: what relation do the three numbers satisfy?","If the board shows p, q and p + q, which replacements actually change a number? So how many moves are possible?","For n = 2017 = 2000 + 17 every move is forced from the start; the game is the subtractive Euclidean algorithm on 2000 and 17. Count the moves carefully (2000 = 117 · 17 + 11)."],rubric:[["Observes that after any move one number is the sum of the other two",2],["Shows that from then on at most one move is possible and the largest number decreases, so the game ends",2],["For n = 2017: correct count of the forced moves (125)",3],["Correct winner: Anna",1]],solution:`Key observation. After a move that replaces z by |x − y|, the board shows x, y and |x − y|; the largest of them is the sum of the other two. So after every move the board has the form p, q, p + q with p, q ≥ 0.
+
+From a board p, q, p + q there is at most one allowed move: replacing p by |(p + q) − q| = p, or q by |(p + q) − p| = q, changes nothing; the only possible move replaces p + q by |p − q|, and it is allowed iff |p − q| ≠ p + q, i.e. iff p > 0 and q > 0. The new board p, q, |p − q| is again of the same form, and its sum is smaller than before.
+
+Termination. After the first move, every move is forced and strictly decreases the sum of the three non-negative integers on the board. So the game ends after finitely many moves, for every n. It ends exactly when one of the numbers becomes 0, i.e. with a board a, a, 0; the player who writes the 0 makes the last move and wins.
+
+n = 2017. Since 2017 = 2000 + 17, already the initial board has the form p, q, p + q, so every move is forced. The moves are:
+
+Moves 1 to 117: the largest number is repeatedly reduced by 17: 2017 → 1983, then 2000 → 1966, 1983 → 1949, and so on; after move j the two large numbers are 2000 − 17(j − 1) and 2000 − 17j. Since 2000 = 117 · 17 + 11, move 117 produces 11, and the board is 28, 17, 11.
+
+Then: move 118: 28 → 6 (board 6, 17, 11); move 119: 17 → 5 (6, 5, 11); move 120: 11 → 1 (6, 5, 1); move 121: 6 → 4 (4, 5, 1); move 122: 5 → 3 (4, 3, 1); move 123: 4 → 2 (2, 3, 1); move 124: 3 → 1 (2, 1, 1); move 125: 2 → 0 (0, 1, 1).
+
+The game lasts 125 moves. As 125 is odd, Anna makes the last move, and Berta cannot move. Anna wins.`,pitfalls:['Arguing termination only with "the numbers get smaller" — the first move can increase a number, so the argument must start after the first move.',"Off-by-one errors in counting the 125 moves, which flips the winner."]},{id:"GWF-2017-4",comp:"GWF",year:2017,n:4,area:"N",title:"n = a² + b² with divisors",qDe:`Man bestimme alle natürlichen Zahlen n ≥ 2, für die
+
+n = a² + b²
+
+gilt, wobei a der kleinste von 1 verschiedene Teiler von n und b ein beliebiger Teiler von n ist.`,q:`Determine all natural numbers n ≥ 2 for which
+
+n = a² + b²
+
+holds, where a is the smallest divisor of n different from 1 and b is any divisor of n.`,techniques:["parity","divisibility","case analysis"],difficulty:1,answer:"n = 8 and n = 20",hints:["What can a be? Start with the parity of n.","If n is odd, all its divisors are odd. What is the parity of a² + b² then?","With a = 2 you get n = b² + 4 and b ∣ n. What must b divide?"],rubric:[["Shows n must be even, hence a = 2",3],["Derives b ∣ 4 from b ∣ n = b² + 4",3],["Checks the three cases and states n = 8, 20",2]],solution:`Let a be the smallest divisor of n greater than 1.
+
+n is even: if n were odd, then all its divisors, in particular a and b, would be odd, and a² + b² would be even — a contradiction. Hence 2 ∣ n and a = 2, so n = b² + 4.
+
+Since b ∣ n and b ∣ b², we get b ∣ n − b² = 4, so b ∈ {1, 2, 4}.
+
+• b = 1: n = 5 is odd — impossible (its smallest divisor > 1 is 5, not 2).
+
+• b = 2: n = 8. Its smallest divisor > 1 is 2, and 2 ∣ 8. Valid.
+
+• b = 4: n = 20. Its smallest divisor > 1 is 2, and 4 ∣ 20. Valid.
+
+Answer: n = 8 and n = 20.`,pitfalls:["Missing the case b = 4 (b may be larger than a).","Not checking that the candidates really have 2 as their smallest divisor and b as a divisor."]},{id:"GWF-2018-1",comp:"GWF",year:2018,n:1,area:"A",title:"Two fractions versus 2/(1 + ab)",qDe:`Es seien a und b nichtnegative reelle Zahlen mit a + b < 2.
+
+Man beweise die folgende Ungleichung:
+
+1/(1 + a²) + 1/(1 + b²) ≤ 2/(1 + ab)
+
+Für welche a, b gilt Gleichheit?`,q:`Let a and b be non-negative real numbers with a + b < 2.
+
+Prove the following inequality:
+
+1/(1 + a²) + 1/(1 + b²) ≤ 2/(1 + ab)
+
+For which a, b does equality hold?`,techniques:["SOS","AM-GM","equality case"],difficulty:2,answer:"Equality holds exactly for a = b (with 0 ≤ a < 1).",hints:["Where is the condition a + b < 2 needed? What does it tell you about ab?","Compare each fraction with 1/(1 + ab) separately: 1/(1 + ab) − 1/(1 + a²) = ?","The whole difference factors as (a − b)²(1 − ab) divided by a positive denominator."],rubric:[["Notes ab < 1 (from a + b < 2 via AM-GM)",1],["Correct algebraic manipulation towards a common expression",3],["Factorises the difference as (a − b)²(1 − ab)/(positive) and concludes",3],["Equality case a = b",1]],solution:`By AM-GM, ab ≤ ((a + b)/2)² < 1, so 1 − ab > 0; all denominators are positive.
+
+Consider the difference D = 2/(1 + ab) − 1/(1 + a²) − 1/(1 + b²) and split it:
+
+1/(1 + ab) − 1/(1 + a²) = (a² − ab)/((1 + ab)(1 + a²)) = a(a − b)/((1 + ab)(1 + a²)),
+1/(1 + ab) − 1/(1 + b²) = b(b − a)/((1 + ab)(1 + b²)).
+
+Hence
+
+D = (a − b)/(1 + ab) · [a/(1 + a²) − b/(1 + b²)] = (a − b)/(1 + ab) · (a + ab² − b − a²b)/((1 + a²)(1 + b²)).
+
+Since a + ab² − b − a²b = (a − b) − ab(a − b) = (a − b)(1 − ab), we obtain
+
+D = (a − b)²(1 − ab) / ((1 + ab)(1 + a²)(1 + b²)) ≥ 0,
+
+because 1 − ab > 0. This proves the inequality. Equality holds iff (a − b)² = 0, i.e. iff a = b (any 0 ≤ a < 1, so that a + b < 2).`,pitfalls:["Not using a + b < 2: without it the inequality can fail (a = 2, b = 3 gives 0.3 > 2/7).","Multiplying everything out into a degree-4 polynomial and not spotting the factor (a − b)²."]},{id:"GWF-2018-2",comp:"GWF",year:2018,n:2,area:"G",title:"Equilateral triangle CSE",qDe:`Es seien k ein Kreis mit Radius r und AB eine Sehne von k mit AB > r. Weiters sei S jener Punkt auf der Sehne AB, für den AS = r gilt. Die Streckensymmetrale von BS schneide den Kreis k in den Punkten C und D. Die Gerade durch die Punkte D und S schneide k in einem weiteren Punkt E.
+
+Man beweise, dass das Dreieck CSE gleichseitig ist.`,q:`Let k be a circle with radius r and AB a chord of k with AB > r. Let S be the point on the chord AB with AS = r. The perpendicular bisector of BS meets the circle k at the points C and D. The line through D and S meets k at a further point E.
+
+Prove that the triangle CSE is equilateral.`,techniques:["power of a point","similar triangles","inscribed angle theorem","reflection"],difficulty:3,answer:null,hints:["C and D lie on the perpendicular bisector of BS. What does that give for CS and CB, and for the angles at D?","Show CS = CB = CE. Then C is the centre of a circle through B, S and E, and it remains to show ∠SCE = 60°.","Prove AE = AS = r (power of the point S gives SA · SB = SD · SE, hence similar triangles). A chord of length r subtends an inscribed angle of 30°."],rubric:[["CS = CB (perpendicular bisector) and CE = CB (DC bisects ∠EDB, equal inscribed angles)",3],["AE = AS = r (similar triangles via the power of S, or an angle chase)",2],["∠ABE = 30° from the chord AE = r",1],["∠SCE = 60° in the circle with centre C; conclusion",2]],solution:`Step 1: CS = CB = CE. The line CD is the perpendicular bisector of BS, so the reflection in CD swaps B and S and fixes C and D. Hence CS = CB and ∠CDS = ∠CDB. Since S lies inside k, it lies between D and E, so ∠CDE = ∠CDS = ∠CDB. Equal inscribed angles in k stand on equal chords, so CE = CB. Thus C is the centre of a circle k₂ through B, S and E.
+
+Step 2: AE = r. S is inside k, so by the power of a point SA · SB = SD · SE, i.e. SA/SD = SE/SB. Moreover ∠ASE = ∠DSB (vertical angles, as A, S, B and D, S, E are collinear with S between). By SAS similarity, triangle SAE is similar to triangle SDB (A ↔ D, E ↔ B), so AE/DB = SA/SD. Since D lies on the perpendicular bisector of BS, DB = DS; hence AE = SA = r.
+
+Step 3: ∠ABE = 30°. The chord AE has length r, so triangle (centre of k), A, E is equilateral and the arc AE has 60°. Every point of k on the minor arc AE is at distance at most AE = r from A, but AB > r; so B lies on the major arc and the inscribed angle is ∠ABE = 30°.
+
+Step 4: In circle k₂ (centre C), ∠SBE = ∠ABE = 30° is an inscribed angle over the chord SE (S lies on segment AB). An acute inscribed angle corresponds to the central angle twice as large, so ∠SCE = 60°. Triangle CSE is isosceles (CS = CE) with apex angle 60°, hence equilateral.`,pitfalls:["Proving only that the triangle is isosceles — a 60° angle (or the third side) is still needed.","Equating inscribed angles without checking that the points lie on the same arc."]},{id:"GWF-2018-3",comp:"GWF",year:2018,n:3,area:"K",title:"Three-term progressions",qDe:"Man bestimme für jede natürliche Zahl n ≥ 3 die Anzahl aₙ der dreielementigen Teilmengen von {1, 2, …, n}, in denen ein Element das arithmetische Mittel der beiden anderen Elemente ist.",q:"For every natural number n ≥ 3, determine the number aₙ of three-element subsets of {1, 2, …, n} in which one element is the arithmetic mean of the other two.",techniques:["counting","parity"],difficulty:1,answer:"aₙ = ⌊n/2⌋ · ⌊(n − 1)/2⌋, i.e. k(k − 1) for n = 2k and k² for n = 2k + 1 (equivalently ⌊(n − 1)²/4⌋).",hints:["If one element is the mean of the other two, what do the three elements form?","Sort the sets by their common difference d. How many sets with difference d are there in {1, …, n}?","Add up n − 2d over all admissible d, separately for n even and n odd."],rubric:[["Reformulates as 3-term arithmetic progressions and classifies by the common difference d",3],["Counts n − 2d progressions for each d, with the correct range of d",2],["Evaluates the sum correctly in both parity cases",3]],solution:`If y is the mean of x and z with x < z, then x < y < z and y − x = z − y: the set is an arithmetic progression {m, m + d, m + 2d} with d ≥ 1. It is determined by its smallest element m and the difference d, where 1 ≤ m and m + 2d ≤ n. For a fixed d there are n − 2d choices of m, and d can be 1, 2, …, ⌊(n − 1)/2⌋. Hence aₙ is the sum of n − 2d over these d.
+
+• n = 2k: d = 1, …, k − 1 gives the terms 2k − 2, 2k − 4, …, 2, whose sum is 2(1 + 2 + … + (k − 1)) = k(k − 1).
+
+• n = 2k + 1: d = 1, …, k gives the terms 2k − 1, 2k − 3, …, 1, the sum of the first k odd numbers, which is k².
+
+Both cases are covered by aₙ = ⌊n/2⌋ · ⌊(n − 1)/2⌋ (= ⌊(n − 1)²/4⌋). Check: a₃ = 1, a₄ = 2, a₅ = 4, a₆ = 6.`,pitfalls:["Counting ordered triples, or counting each set twice (once with d and once with −d).","Wrong upper limit for the difference d (it is ⌊(n − 1)/2⌋)."]},{id:"GWF-2018-4",comp:"GWF",year:2018,n:4,area:"N",title:"Few divisors in a row",qDe:`Für eine natürliche Zahl n ≥ 2 sei d(n) die Anzahl der positiven Teiler von n.
+
+Man bestimme alle natürlichen Zahlen n ≥ 3, für die
+
+d(n − 1) + d(n) + d(n + 1) ≤ 8
+
+gilt.`,q:`For a natural number n ≥ 2 let d(n) be the number of positive divisors of n.
+
+Determine all natural numbers n ≥ 3 for which
+
+d(n − 1) + d(n) + d(n + 1) ≤ 8
+
+holds.`,techniques:["divisor counting","case analysis","modular arithmetic"],difficulty:2,answer:"n = 3, 4, 6",hints:["Compute the sum for n = 3, …, 9 first. Which numbers have very few divisors?","An even number k ≥ 6 has at least 4 divisors. What does this mean for odd n?","For even n, one of n − 1, n, n + 1 is a multiple of 3. Distinguish where it is."],rubric:[["Checks small cases and finds 3, 4, 6",2],["Excludes odd n ≥ 7 (both neighbours are even)",2],["Excludes even n ≥ 8 using divisibility by 3 (and by 6)",4]],solution:`Small cases: n = 3: 2 + 2 + 3 = 7; n = 4: 2 + 3 + 2 = 7; n = 5: 3 + 2 + 4 = 9; n = 6: 2 + 4 + 2 = 8; n = 7: 4 + 2 + 4 = 10. So 3, 4, 6 are solutions and 5, 7 are not.
+
+Useful facts: d(k) ≥ 2 for every k ≥ 2; an even k ≥ 6 has the four distinct divisors 1, 2, k/2, k, so d(k) ≥ 4; a multiple k ≥ 6 of 3 has the distinct divisors 1, 3, k, so d(k) ≥ 3.
+
+Odd n ≥ 7: n − 1 and n + 1 are even and ≥ 6, so the sum is at least 4 + 2 + 4 = 10 > 8.
+
+Even n ≥ 8: d(n) ≥ 4. One of n − 1, n, n + 1 is divisible by 3.
+
+• If 3 ∣ n − 1 or 3 ∣ n + 1, that number is ≥ 7, so it has at least 3 divisors, and the sum is at least 3 + 4 + 2 = 9 > 8.
+
+• If 3 ∣ n, then 6 ∣ n and n ≥ 12, so 1, 2, 3, n/3, n/2, n are six distinct divisors, and the sum is at least 2 + 6 + 2 = 10 > 8.
+
+Hence the solutions are exactly n = 3, 4 and 6.`,pitfalls:["Stopping after the small cases without proving that larger n fail.","Using d(n) ≥ 6 for multiples of 6 without noting this needs n ≥ 12 (n = 6 itself is a solution)."]},{id:"GWF-2019-1",comp:"GWF",year:2019,n:1,area:"A",title:"(xy − 10)² ≥ 64",qDe:`Es seien x und y reelle Zahlen mit (x + 1)(y + 2) = 8.
+
+Man beweise:
+
+(xy − 10)² ≥ 64.
+
+Man bestimme weiters alle Paare (x, y) reeller Zahlen, für die Gleichheit gilt.`,q:`Let x and y be real numbers with (x + 1)(y + 2) = 8.
+
+Prove:
+
+(xy − 10)² ≥ 64.
+
+Furthermore, determine all pairs (x, y) of real numbers for which equality holds.`,techniques:["substitution","SOS","equality case"],difficulty:1,answer:"Equality exactly for (x, y) = (1, 2) and (x, y) = (−3, −6).",hints:["Substitute u = x + 1 and v = y + 2, so that uv = 8.","Express xy − 10 in u and v — it becomes very simple.","(2u + v)² − 8uv is a perfect square. In the equality case, remember that u and v may be negative."],rubric:[["Substitution u = x + 1, v = y + 2 (or equivalent) and xy − 10 = −(2u + v)",3],["(2u + v)² = (2u − v)² + 8uv ≥ 64",3],["Both equality pairs (1, 2) and (−3, −6)",2]],solution:`Put u = x + 1 and v = y + 2, so uv = 8. Then
+
+xy = (u − 1)(v − 2) = uv − 2u − v + 2 = 10 − (2u + v),
+
+so xy − 10 = −(2u + v) and
+
+(xy − 10)² = (2u + v)² = (2u − v)² + 8uv = (2u − v)² + 64 ≥ 64.
+
+Equality holds iff v = 2u. Together with uv = 8 this gives 2u² = 8, so u = 2, v = 4 or u = −2, v = −4. Hence (x, y) = (1, 2) or (x, y) = (−3, −6). Check: (1 + 1)(2 + 2) = 8 and 1 · 2 − 10 = −8; (−3 + 1)(−6 + 2) = 8 and (−3)(−6) − 10 = 8.`,pitfalls:["Using AM-GM on 2u + v as if u and v were positive — they can both be negative, which gives the second equality pair.","Stating only (1, 2) as the equality case."]},{id:"GWF-2019-2",comp:"GWF",year:2019,n:2,area:"G",title:"Pentagon with AB = BD",qDe:`Das konvexe Fünfeck ABCDE besitzt einen Umkreis und es gilt AB = BD. Der Punkt P sei der Schnittpunkt der Diagonalen AC und BE. Die Geraden BC und DE schneiden einander im Punkt Q.
+
+Man beweise, dass die Gerade PQ parallel zur Diagonalen AD ist.`,q:`The convex pentagon ABCDE has a circumcircle, and AB = BD. Let P be the intersection of the diagonals AC and BE. The lines BC and DE meet at the point Q.
+
+Prove that the line PQ is parallel to the diagonal AD.`,techniques:["cyclic quadrilateral","inscribed angle theorem","angle chasing"],difficulty:3,answer:null,hints:["Translate AB = BD into equal inscribed angles: which angles stand on the chords AB and BD?","Show ∠BED = ∠ACB. What does this say about the four points P, C, Q, E?","In the circle through P, C, Q, E compare ∠EQP with ∠ECA, and then ∠ECA with ∠EDA in the big circle."],rubric:[["Uses AB = BD to get ∠BED = ∠BAD = ∠ADB = ∠ACB",3],["Proves that P, C, Q, E are concyclic",2],["Transfers angles: ∠EQP = ∠ECA = ∠EDA",2],["Concludes PQ ∥ AD",1]],solution:`Position of Q. Lines BC and ED meet beyond C and D (on the far side from A) iff ∠BCD + ∠CDE > 180°. By inscribed angles, ∠BCD = 180° − ∠BAD and ∠CDE = 180° − ∠CBE, so this means ∠BAD + ∠CBE < 180°, i.e. arc BCD + arc CDE < 360° (arcs not containing the vertex). Since AB = BD, arc AB = arc BCD = arc BC + arc CD, and the condition becomes arc CD < arc AB + arc EA, which is true. So C lies between B and Q, and D between E and Q.
+
+Equal angles. In the isosceles triangle ABD (AB = BD) we have ∠BAD = ∠ADB. By the inscribed angle theorem, ∠BED = ∠BAD (both on chord BD, E and A on the same arc) and ∠ACB = ∠ADB (both on chord AB). Hence ∠BED = ∠ACB.
+
+Cyclic quadrilateral. Since P lies on segment EB and Q on ray ED, ∠PEQ = ∠BED. Since P lies on segment CA and C lies between B and Q, ∠QCP = 180° − ∠BCA. So ∠QCP + ∠PEQ = 180°, and the quadrilateral PCQE is cyclic.
+
+Parallel lines. In this circle, ∠EQP = ∠ECP (both on chord EP). Since P lies on CA, ∠ECP = ∠ECA, and in the circumcircle of the pentagon ∠ECA = ∠EDA (both on chord EA). Hence ∠EQP = ∠EDA. As D lies on the ray EQ, the lines QP and DA make equal corresponding angles with the line EQ, so PQ ∥ AD.`,pitfalls:["Assuming the position of Q from the sketch without any justification.","Mixing up which arc an inscribed angle stands on (e.g. using ∠BED = ∠BCD)."]},{id:"GWF-2019-3",comp:"GWF",year:2019,n:3,area:"K",title:"A ±1 grid with zero sum",qDe:`Es sei n ≥ 2 eine natürliche Zahl.
+
+Auf eine Tafel wird ein n × n-Raster gezeichnet und jedes Feld mit einer der Zahlen −1 bzw. +1 beschriftet. Anschließend werden die n Zeilen- und auch die n Spaltensummen berechnet und die Summe Sₙ aller dieser 2n Summen bestimmt.
+
+(a) Man zeige: Für keine ungerade Zahl n gibt es eine Beschriftung mit Sₙ = 0.
+
+(b) Man zeige: Ist n eine gerade Zahl, so gibt es mindestens sechs verschiedene Beschriftungen mit Sₙ = 0.`,q:`Let n ≥ 2 be a natural number.
+
+An n × n grid is drawn on a board and each cell is labelled with one of the numbers −1 or +1. Then the n row sums and also the n column sums are computed, and the sum Sₙ of all these 2n sums is determined.
+
+(a) Show: for no odd number n is there a labelling with Sₙ = 0.
+
+(b) Show: if n is even, there are at least six different labellings with Sₙ = 0.`,techniques:["double counting","parity","construction"],difficulty:1,answer:null,hints:["How often is each cell counted in Sₙ?","Sₙ is twice the sum of all entries. When can a sum of n² terms ±1 be 0?","For even n you just need half of the cells to be +1. In how many ways can you choose them?"],rubric:[["Observes Sₙ = 2 · (sum of all entries)",3],["(a) Parity argument for odd n",2],["(b) At least six labellings for even n (count C(n², n²/2) ≥ 6 or six explicit, different examples)",3]],solution:`Every cell lies in exactly one row and exactly one column, so it is counted exactly twice in Sₙ. Hence Sₙ = 2T, where T is the sum of all n² entries, and Sₙ = 0 iff T = 0, i.e. iff exactly half of the entries are +1.
+
+(a) If n is odd, n² is odd. A sum of an odd number of terms ±1 is odd, so T ≠ 0 and therefore Sₙ ≠ 0.
+
+(b) If n is even, n² is even, and every labelling with exactly n²/2 entries equal to +1 (and the rest −1) has T = 0, hence Sₙ = 0. There are C(n², n²/2) such labellings (choose the cells with +1). Since n² ≥ 4 and the central binomial coefficients C(2m, m) increase with m, this number is at least C(4, 2) = 6. (For instance, for n = 2 the six labellings are given by the six ways to choose which two of the four cells carry +1.)`,pitfalls:["Proving (b) only for n = 2.",'Listing six "different" labellings that coincide for small n (e.g. checkerboard versus left/right halves for n = 2 must be checked).']},{id:"GWF-2019-4",comp:"GWF",year:2019,n:4,area:"N",title:"2019 divisors below 128⁹⁷",qDe:"Man bestimme alle natürlichen Zahlen n, die kleiner als 128⁹⁷ sind und genau 2019 Teiler haben.",q:"Determine all natural numbers n that are smaller than 128⁹⁷ and have exactly 2019 divisors.",techniques:["divisor counting","size bounds"],difficulty:2,answer:"n = 2⁶⁷² · 3², 2⁶⁷² · 5², 2⁶⁷² · 7², 2⁶⁷² · 11²",hints:["Use the divisor-count formula d(n) = (e₁ + 1)(e₂ + 1)⋯ and factor 2019.","2019 = 3 · 673 (both prime). Which exponent patterns are possible? Write 128⁹⁷ as a power of 2.","The huge exponent 672 must sit on the prime 2. How large can the second prime be?"],rubric:[["Divisor-count formula and 2019 = 3 · 673 give the shapes p²⁰¹⁸ and p⁶⁷² q²",3],["Rewrites 128⁹⁷ = 2⁶⁷⁹ and excludes p²⁰¹⁸ and p ≥ 3",3],["Finds q ∈ {3, 5, 7, 11}",2]],solution:`If n = p₁^e₁ ⋯ p_k^e_k, then d(n) = (e₁ + 1)⋯(e_k + 1). Since 2019 = 3 · 673 with 3 and 673 prime, either n = p²⁰¹⁸ for a prime p, or n = p⁶⁷² q² with distinct primes p and q.
+
+The bound is 128⁹⁷ = (2⁷)⁹⁷ = 2⁶⁷⁹.
+
+• n = p²⁰¹⁸ ≥ 2²⁰¹⁸ > 2⁶⁷⁹: impossible.
+
+• n = p⁶⁷² q² with p ≥ 3: n > 3⁶⁷² = 9³³⁶ > 8³³⁶ = 2¹⁰⁰⁸ > 2⁶⁷⁹: impossible.
+
+• So p = 2 and n = 2⁶⁷² q² < 2⁶⁷⁹ iff q² < 2⁷ = 128 iff q ≤ 11. With q an odd prime: q ∈ {3, 5, 7, 11}.
+
+Hence there are exactly four such numbers: 2⁶⁷² · 9, 2⁶⁷² · 25, 2⁶⁷² · 49 and 2⁶⁷² · 121.`,pitfalls:["Misreading the bound: it is 128 to the power 97, i.e. 2⁶⁷⁹.","Allowing q = 2 (that would be 2⁶⁷⁴ with only 675 divisors)."]},{id:"GWF-2020-1",comp:"GWF",year:2020,n:1,area:"A",title:"Telescoping product equation",qDe:`Man bestimme alle positiven ganzen Zahlen a, für die die Gleichung
+
+(1 + 1/x) · (1 + 1/(x + 1)) ⋯ (1 + 1/(x + a)) = a − x
+
+mindestens eine ganzzahlige Lösung für x hat.
+
+Für jedes solche a gebe man die entsprechenden Lösungen an.`,q:`Determine all positive integers a for which the equation
+
+(1 + 1/x) · (1 + 1/(x + 1)) ⋯ (1 + 1/(x + a)) = a − x
+
+has at least one integer solution x.
+
+For each such a, give the corresponding solutions.`,techniques:["telescoping","quadratic discriminant","factorisation"],difficulty:2,answer:"Only a = 7, with the integer solutions x = 2 and x = 4.",hints:["Write each factor 1 + 1/(x + i) as a single fraction.","The product telescopes to (x + a + 1)/x. Now you have a quadratic equation in x.","For integer roots the discriminant (a − 3)² − 12 must be a perfect square: a difference of two squares equals 12."],rubric:[["Telescopes the product to (x + a + 1)/x (noting the excluded values of x)",3],["Quadratic equation and the condition that its discriminant is a perfect square",2],["Solves (a − 3)² − m² = 12 to get a = 7",2],["Solutions x = 2 and x = 4 for a = 7, checked",1]],solution:`The left side is defined for x ∉ {0, −1, …, −a}. Since 1 + 1/(x + i) = (x + i + 1)/(x + i), the product telescopes:
+
+(x + 1)/x · (x + 2)/(x + 1) ⋯ (x + a + 1)/(x + a) = (x + a + 1)/x.
+
+So the equation is (x + a + 1)/x = a − x, i.e. x + a + 1 = ax − x², i.e.
+
+x² − (a − 1)x + (a + 1) = 0.
+
+For an integer root the discriminant D = (a − 1)² − 4(a + 1) = (a − 3)² − 12 must be a perfect square m² with m ≥ 0. Then (a − 3 − m)(a − 3 + m) = 12. The two factors differ by 2m, so they have the same parity; as their product is 12, both are even: they are 2 and 6, or −6 and −2. This gives a − 3 = 4 or a − 3 = −4, and since a > 0, a = 7 (with m = 2).
+
+For a = 7 the equation is x² − 6x + 8 = 0, so x = 2 or x = 4. Both are admissible, and indeed (2 + 8)/2 = 5 = 7 − 2 and (4 + 8)/4 = 3 = 7 − 4.
+
+Answer: only a = 7, with the solutions x = 2 and x = 4.`,pitfalls:["Forgetting the excluded values x = 0, −1, …, −a (here they do not occur, but this must be checked).","Overlooking the negative factor pair of 12, which gives a = −1 and has to be discarded explicitly."]},{id:"GWF-2020-2",comp:"GWF",year:2020,n:2,area:"K",title:"Closest digit permutations",qDe:`Die Menge M besteht aus allen 7-stelligen positiven ganzen Zahlen, die (in Dezimalschreibweise) jede der Ziffern 1, 3, 4, 6, 7, 8 und 9 genau einmal enthalten.
+
+(a) Man bestimme die kleinste positive Differenz d von zwei Zahlen aus M.
+
+(b) Wie viele Paare (x, y) mit x und y aus M gibt es, für die x − y = d gilt?`,q:`The set M consists of all 7-digit positive integers which (in decimal notation) contain each of the digits 1, 3, 4, 6, 7, 8 and 9 exactly once.
+
+(a) Determine the smallest positive difference d of two numbers from M.
+
+(b) How many pairs (x, y) with x and y in M are there such that x − y = d?`,techniques:["modular arithmetic","counting","case analysis"],difficulty:2,answer:"(a) d = 9; (b) 480 pairs.",hints:["What is the digit sum of every number in M? What does that imply modulo 9?","d = 9 is attainable. For (b): what happens to the last digit, and to the tens digit, when you add 9 to y?","Adding 9 lowers the units digit by 1 and adds 1 to the tens digit. Since x and y use the same digits, the last two digits must simply be swapped."],rubric:[["(a) Digit sum 38 ⇒ all elements ≡ 2 (mod 9) ⇒ 9 divides every difference",2],["(a) Example with difference 9",1],["(b) Analysis of the units digit and the carry",2],["(b) Shows the last two digits of y are consecutive digits 34, 67, 78 or 89 and get swapped",2],["(b) Count 4 · 5! = 480",1]],solution:`(a) Every number in M has digit sum 1 + 3 + 4 + 6 + 7 + 8 + 9 = 38, so it is ≡ 38 ≡ 2 (mod 9). Hence the difference of two elements of M is divisible by 9, so d ≥ 9. Since 1346798 − 1346789 = 9, we get d = 9.
+
+(b) Let x = y + 9 with x, y ∈ M, and let u be the units digit of y. As u ≥ 1, u + 9 ≥ 10, so the units digit of x is u − 1 and there is a carry of 1 into the tens place. The digit u − 1 must be allowed, so u ∈ {4, 7, 8, 9} (u = 1, 3, 6 would give 0, 2, 5).
+
+Let t be the tens digit of y. If t = 9, the tens digit of x would be 0, which is impossible. So t ≤ 8, the carry stops there, x has tens digit t + 1, and all other digits of x and y agree. Since x and y consist of the same seven digits, the last two digits must satisfy {t + 1, u − 1} = {t, u}; as t + 1 ≠ t, this forces t + 1 = u. So y ends in t, t + 1 and x ends in t + 1, t: the last two digits are consecutive and swapped.
+
+The allowed endings (t, t + 1) with both digits in the set are 34, 67, 78 and 89, and every such swap indeed gives difference (10(t + 1) + t) − (10t + t + 1) = 9. For each ending, the first five digits are the other five digits in any order: 5! = 120 possibilities. In total there are 4 · 120 = 480 pairs.`,pitfalls:["Guessing d from the last digits only (d = 1 or 2 is impossible because of the mod 9 argument).","Counting endings such as 13 or 46: swapping them changes the number by 18, not 9."]},{id:"GWF-2020-3",comp:"GWF",year:2020,n:3,area:"G",title:"Concyclic C, I, S, T",qDe:`Gegeben sei ein Dreieck ABC mit AB < AC. Der Inkreismittelpunkt des Dreiecks sei I. Die Streckensymmetrale der Seite BC schneide die Winkelsymmetrale von ∠BAC im Punkt S und die Winkelsymmetrale von ∠CBA im Punkt T.
+
+Man beweise, dass die Punkte C, I, S und T auf einem Kreis liegen.`,q:`Let ABC be a triangle with AB < AC, and let I be its incentre. The perpendicular bisector of the side BC meets the angle bisector of ∠BAC at the point S and the angle bisector of ∠CBA at the point T.
+
+Prove that the points C, I, S and T lie on a circle.`,techniques:["incenter-excenter lemma","angle chasing","cyclic quadrilateral"],difficulty:2,answer:null,hints:["Where do the bisector from A and the perpendicular bisector of BC meet? Think of the circumcircle.","S is the midpoint of the arc BC, so ∠BCS = ∠BAS = α/2. Compute ∠CST.","Compute ∠CIT as an exterior angle of triangle BIC and compare with ∠CST."],rubric:[["S lies on the circumcircle (midpoint of arc BC), hence ∠BCS = α/2",2],["∠CST = 90° − α/2 (right triangle at the midpoint of BC)",2],["∠CIT = β/2 + γ/2 = 90° − α/2 (exterior angle of triangle BIC; I lies between B and T)",2],["Concludes concyclicity by the converse of the inscribed angle theorem",2]],solution:`Let α, β, γ be the angles of the triangle and M the midpoint of BC.
+
+S on the circumcircle. The bisector of ∠BAC meets the circumcircle again at the midpoint of the arc BC not containing A; this point is equidistant from B and C, so it lies on the perpendicular bisector of BC. As AB ≠ AC, the two lines are different and meet only once, so this point is S. In particular ∠BCS = ∠BAS = α/2 (inscribed angles on chord BS).
+
+Angle at S. In the right triangle CMS (SM ⊥ BC), ∠CSM = 90° − ∠MCS = 90° − α/2. Since T also lies on the line SM, ∠CST = 90° − α/2.
+
+Angle at I. The incircle touches BC at a point at distance s − b from B, where s is the semiperimeter; since s − b = (a + c − b)/2 < a/2 because c < b, the point I is closer to B than the perpendicular bisector is. Hence on the bisector of ∠CBA, the point I lies between B and T. So ∠CIT is the exterior angle at I of triangle BIC:
+
+∠CIT = ∠IBC + ∠ICB = β/2 + γ/2 = 90° − α/2.
+
+Conclusion. ∠CST = ∠CIT, and S and I lie on the same side of the line CT; by the converse of the inscribed angle theorem, C, I, S, T lie on a circle.`,pitfalls:['Not knowing (or not proving) that S lies on the circumcircle — cite or prove the "South pole" lemma.',"Using a figure with AB > AC, where T lies between B and I and the angles change."]},{id:"GWF-2020-4",comp:"GWF",year:2020,n:4,area:"N",title:"p² = q² + rⁿ",qDe:`Man bestimme alle Quadrupel (p, q, r, n) von Primzahlen p, q, r und positiven ganzen Zahlen n, für die
+
+p² = q² + rⁿ
+
+erfüllt ist.`,q:`Determine all quadruples (p, q, r, n) of prime numbers p, q, r and positive integers n for which
+
+p² = q² + rⁿ
+
+holds.`,techniques:["factorisation","modular arithmetic","case analysis"],difficulty:2,answer:"(p, q, r, n) = (3, 2, 5, 1) and (5, 3, 2, 4)",hints:["Factor p² − q².","Both p − q and p + q are powers of r. Distinguish p − q = 1 from p − q being a positive power of r.","If r divides both factors, then r divides 2p and 2q. For r = 2 you end up with two odd primes 2ᵏ − 1 and 2ᵏ + 1 — look at them modulo 3."],rubric:[["Factorisation (p − q)(p + q) = rⁿ with both factors powers of r",2],["Case p − q = 1 gives (3, 2, 5, 1)",2],["Case r odd with r ∣ p − q excluded",1],["Case r = 2 reduced to primes around a power of 2, giving (5, 3, 2, 4)",3]],solution:`We have (p − q)(p + q) = rⁿ with p > q, so p − q = rⁱ and p + q = rʲ with 0 ≤ i < j and i + j = n.
+
+Case i = 0: p − q = 1. The only primes differing by 1 are 2 and 3, so p = 3, q = 2 and rⁿ = 9 − 4 = 5, i.e. r = 5, n = 1.
+
+Case i ≥ 1: r divides both p − q and p + q, hence r ∣ 2p and r ∣ 2q.
+
+• If r is odd, then r ∣ p and r ∣ q, so p = q = r, contradicting p > q.
+
+• If r = 2: p − q and p + q are even, so p and q are both odd. Adding p − q = 2ⁱ and p + q = 2ʲ gives p = 2ⁱ⁻¹(1 + 2ʲ⁻ⁱ). As p is odd, i = 1, and with k = j − 1 we get p = 2ᵏ + 1, q = 2ᵏ − 1. Among the three consecutive numbers 2ᵏ − 1, 2ᵏ, 2ᵏ + 1 one is divisible by 3, and it is not 2ᵏ; so one of the primes q, p equals 3. If p = 3 then q = 1, not a prime. Hence q = 3, 2ᵏ = 4, p = 5, and rⁿ = 25 − 9 = 16 = 2⁴, so n = 4.
+
+Check: 3² = 2² + 5¹ and 5² = 3² + 2⁴.
+
+Answer: (p, q, r, n) = (3, 2, 5, 1) and (5, 3, 2, 4).`,pitfalls:["Forgetting the case p − q = 1 = r⁰.","Assuming all primes are odd and thereby losing the solution with q = 2."]},{id:"GWF-2021-1",comp:"GWF",year:2021,n:1,area:"A",title:"c is at least 1",qDe:`Seien a und b positive ganze Zahlen und c eine positive reelle Zahl, für die
+
+(a + 1)/(b + c) = b/a
+
+erfüllt ist.
+
+Man beweise, dass c ≥ 1 gilt.`,q:`Let a and b be positive integers and c a positive real number such that
+
+(a + 1)/(b + c) = b/a.
+
+Prove that c ≥ 1.`,techniques:["size bounds","squares between squares"],difficulty:2,answer:null,hints:["Clear the denominators: a(a + 1) = b(b + c).","Since c > 0, b² < a² + a. Where does a² + a lie relative to the squares a² and (a + 1)²?","Integrality gives b ≤ a. Then bc = a² + a − b² ≥ b."],rubric:[["Clears denominators: a(a + 1) = b² + bc",1],["Uses c > 0 to get b² < a² + a < (a + 1)², hence b ≤ a (integrality)",4],["Concludes bc = a² + a − b² ≥ b, so c ≥ 1",3]],solution:`Clearing denominators gives a(a + 1) = b(b + c), i.e. bc = a² + a − b².
+
+Since c > 0, we have b² < a² + a < a² + 2a + 1 = (a + 1)², so b < a + 1. As a and b are integers, b ≤ a.
+
+The function t ↦ t² + t is increasing for t > 0, so a² + a ≥ b² + b. Therefore
+
+bc = a² + a − b² ≥ b² + b − b² = b,
+
+and dividing by b > 0 gives c ≥ 1. (Equality c = 1 occurs exactly for a = b.)`,pitfalls:["Not using that a and b are integers — for real a, b the claim is false (a = 1, b = 1.4 gives c ≈ 0.03).","Concluding b < a + 1 but forgetting that integrality is what turns it into b ≤ a."]},{id:"GWF-2021-2",comp:"GWF",year:2021,n:2,area:"G",title:"Tangent to the circle BDE",qDe:`Sei ABC ein gleichschenkliges Dreieck mit AC = BC und dem Umkreis k. Der Punkt D liegt auf dem kürzeren Kreisbogen von k über BC und ist von B und C verschieden. Der Schnittpunkt von CD mit AB sei E.
+
+Man beweise, dass die Gerade durch B und C eine Tangente an den Umkreis des Dreiecks BDE ist.`,q:`Let ABC be an isosceles triangle with AC = BC and circumcircle k. The point D lies on the shorter arc BC of k and is different from B and C. Let E be the intersection of CD with AB.
+
+Prove that the line through B and C is a tangent to the circumcircle of triangle BDE.`,techniques:["similar triangles","power of a point","cyclic quadrilateral"],difficulty:2,answer:null,hints:["A line through B is tangent to the circle BDE iff CB² = CD · CE (C on the line, D and E on one ray from C) — or use the tangent-chord angle.","Compare the triangles CBE and CDB: they share the angle at C. What are ∠CBE and ∠CDB?","Both equal 180° − α with α = ∠BAC = ∠ABC (exterior angle at B and the cyclic quadrilateral ABDC)."],rubric:[["Locates E on the extension of AB beyond B and gets ∠EBC = 180° − α",2],["∠BDC = 180° − α from the cyclic quadrilateral ABDC",2],["Similar triangles CBE and CDB, hence CB² = CD · CE",3],["Converse of the tangent-secant theorem (or tangent-chord angle) to conclude",1]],solution:`Let α = ∠BAC = ∠CBA. Since D lies on the arc BC not containing A, the line CD leaves the circle at D and meets the line AB beyond B; so D lies between C and E, and B lies between A and E.
+
+Angles. The quadrilateral ABDC is cyclic (in this order), so ∠BDC = 180° − ∠BAC = 180° − α. Since B lies between A and E, ∠EBC = 180° − ∠CBA = 180° − α.
+
+Similar triangles. Triangles CBE and CDB have the common angle at C (D lies on CE) and ∠CBE = ∠CDB = 180° − α. Hence they are similar, and CB/CE = CD/CB, i.e.
+
+CB² = CD · CE.
+
+Conclusion. D and E lie on the same ray from C, and CD · CE is the power of C with respect to the circumcircle of BDE. If the line CB met this circle in a second point B′ ≠ B, then, as C lies outside the circle, B′ would lie on the ray CB and the power would equal CB · CB′ ≠ CB². Hence CB touches the circle at B: the line BC is tangent to the circumcircle of triangle BDE.`,pitfalls:["Applying the power of a point the wrong way round (the converse is what is needed).","Placing E between A and B — it lies on the extension of AB beyond B."]},{id:"GWF-2021-3",comp:"GWF",year:2021,n:3,area:"K",title:"Differences down to 2021",qDe:`Auf einer Tafel stehen die Zahlen 1, 2, …, 2020 und 2021. Man führt folgende Operation aus:
+
+Man wählt zwei Zahlen aus, schreibt den Betrag ihrer Differenz auf die Tafel und löscht die beiden gewählten Zahlen.
+
+Das wiederholt man solange, bis nur noch eine Zahl auf der Tafel steht.
+
+(a) Man zeige, dass 2021 als letzte Zahl auf der Tafel stehen kann.
+
+(b) Man zeige, dass 2020 nicht als letzte Zahl auf der Tafel stehen kann.`,q:`The numbers 1, 2, …, 2020 and 2021 are written on a board. The following operation is performed:
+
+Choose two numbers, write the absolute value of their difference on the board and erase the two chosen numbers.
+
+This is repeated until only one number is left on the board.
+
+(a) Show that 2021 can be the last number on the board.
+
+(b) Show that 2020 cannot be the last number on the board.`,techniques:["invariant","parity","construction"],difficulty:1,answer:null,hints:["For (a): try to turn all numbers except 2021 into zeros.","Pair 1 with 2, 3 with 4, …, 2019 with 2020. What remains? Then pair the results again.","For (b): how does the parity of the sum of all numbers on the board change in one operation?"],rubric:[["(a) Valid explicit sequence of operations ending with 2021",4],["(b) The parity of the sum is invariant, because |x − y| ≡ x + y (mod 2)",2],["(b) The initial sum 2021 · 1011 is odd, so the last number is odd and cannot be 2020",2]],solution:`(a) Replace the pairs (1, 2), (3, 4), …, (2019, 2020) by their differences: the board now shows 2021 and 1010 ones. Replace the ones in pairs by |1 − 1| = 0: now 2021 and 505 zeros remain. Replace two zeros by 0 repeatedly until one zero is left (504 operations), and finally replace 2021 and 0 by |2021 − 0| = 2021.
+
+(b) For integers x, y we have |x − y| ≡ x − y ≡ x + y (mod 2). So an operation does not change the parity of the sum of all numbers on the board. Initially the sum is 1 + 2 + … + 2021 = 2021 · 2022/2 = 2021 · 1011, which is odd. Hence the last number is odd; in particular it cannot be 2020.`,pitfalls:["In (a), losing track of the numbers that remain (1010 ones give 505 zeros, which must still be merged).","Claiming that the sum itself is invariant — only its parity is."]},{id:"GWF-2021-4",comp:"GWF",year:2021,n:4,area:"N",title:"Cyclic divisibility triples",qDe:`Man bestimme alle Tripel (x, y, z) von positiven ganzen Zahlen, für die
+
+x ∣ (y + 1),   y ∣ (z + 1)   und   z ∣ (x + 1)
+
+gelten.`,q:`Determine all triples (x, y, z) of positive integers for which
+
+x ∣ (y + 1),   y ∣ (z + 1)   and   z ∣ (x + 1)
+
+hold.`,techniques:["divisibility","size bounds","case analysis","symmetry"],difficulty:3,answer:"(1, 1, 1) and the cyclic shifts of (2, 1, 1), (3, 2, 1) and (5, 4, 3): (1, 1, 1), (2, 1, 1), (1, 1, 2), (1, 2, 1), (3, 2, 1), (2, 1, 3), (1, 3, 2), (5, 4, 3), (4, 3, 5), (3, 5, 4).",hints:["The conditions are cyclic: you may assume that x is the largest of the three numbers (but not a full ordering!).","x ∣ y + 1 and y + 1 ≤ x + 1. Which multiple of x can y + 1 be?","You get y = x − 1 (or x = 1). Then z + 1 ≤ y + 2 is a multiple of y; finally use z ∣ x + 1. List all cyclic shifts at the end."],rubric:[["Uses the cyclic symmetry to assume x is the largest number",1],["From x ∣ y + 1 ≤ x + 1 deduces x = 1 or y = x − 1",2],["Analyses y ∣ z + 1 ≤ y + 2 and finds the possible z",2],["Solves (x − 2) ∣ (x + 1) and lists all ten triples",3]],solution:`The three conditions are invariant under the cyclic shift (x, y, z) → (y, z, x). Every triple can be shifted cyclically so that its first entry is a largest one, so we may assume x ≥ y and x ≥ z, and add all cyclic shifts at the end.
+
+If x = 1, then y = z = 1, giving (1, 1, 1).
+
+Let x ≥ 2. Then y + 1 is a positive multiple of x with y + 1 ≤ x + 1 < 2x, hence y + 1 = x, i.e. y = x − 1 ≥ 1.
+
+Next, z + 1 is a multiple ky of y with z + 1 ≤ x + 1 = y + 2, so (k − 1)y ≤ 2.
+
+• k = 1: z = y − 1 = x − 2, which needs x ≥ 3. The condition z ∣ x + 1 becomes (x − 2) ∣ (x + 1), i.e. (x − 2) ∣ 3, so x − 2 ∈ {1, 3}: x = 3 gives (3, 2, 1), x = 5 gives (5, 4, 3).
+
+• k = 2: y ≤ 2. For y = 1: x = 2, z = 1, and z ∣ x + 1 holds: (2, 1, 1). For y = 2: x = 3, z = 3, but 3 ∤ 4.
+
+• k = 3: y = 1, x = 2, z = 2, but 2 ∤ 3.
+
+So, with x maximal, the solutions are (1, 1, 1), (2, 1, 1), (3, 2, 1) and (5, 4, 3); all of them satisfy the three conditions. Adding the cyclic shifts, the complete list is (1, 1, 1), (2, 1, 1), (1, 1, 2), (1, 2, 1), (3, 2, 1), (2, 1, 3), (1, 3, 2), (5, 4, 3), (4, 3, 5), (3, 5, 4).`,pitfalls:["Assuming x ≥ y ≥ z — the conditions are only cyclic, not symmetric, so this loses solutions such as (3, 5, 4).","Forgetting to list the cyclic shifts in the final answer."]},{id:"GWF-2022-1",comp:"GWF",year:2022,n:1,area:"A",title:"1/(1 − a) + 1/(1 − b) ≥ 4",qDe:`Es seien a und b positive reelle Zahlen, für die a² + b² = 1/2 gilt.
+
+Man beweise, dass für sie die Ungleichung
+
+1/(1 − a) + 1/(1 − b) ≥ 4
+
+erfüllt ist, und man bestimme, wann Gleichheit eintritt.`,q:`Let a and b be positive real numbers with a² + b² = 1/2.
+
+Prove that they satisfy the inequality
+
+1/(1 − a) + 1/(1 − b) ≥ 4,
+
+and determine when equality occurs.`,techniques:["HM-AM","QM-AM","equality case"],difficulty:1,answer:"Equality exactly for a = b = 1/2.",hints:["First check that the denominators are positive.","Two standard means: 1/u + 1/v ≥ 4/(u + v) for u, v > 0, and a + b ≤ √(2(a² + b²)).","So it suffices to show a + b ≤ 1."],rubric:[["Notes 1 − a > 0 and 1 − b > 0",1],["1/(1 − a) + 1/(1 − b) ≥ 4/(2 − a − b) (HM-AM or Cauchy-Schwarz)",3],["a + b ≤ 1 from QM-AM",3],["Equality case a = b = 1/2",1]],solution:`From a² < 1/2 we get 0 < a < 1, and likewise 0 < b < 1, so 1 − a and 1 − b are positive.
+
+For positive u, v we have 1/u + 1/v ≥ 4/(u + v) (equivalent to (u − v)² ≥ 0). With u = 1 − a, v = 1 − b:
+
+1/(1 − a) + 1/(1 − b) ≥ 4/(2 − a − b).
+
+By QM-AM, a + b ≤ √(2(a² + b²)) = √1 = 1, so 2 − a − b ≥ 1 and 4/(2 − a − b) ≥ 4. This proves the inequality.
+
+Equality requires 1 − a = 1 − b and a + b = 1, i.e. a = b = 1/2; and indeed (1/2)² + (1/2)² = 1/2 and 2 + 2 = 4.`,pitfalls:["Bounding a + b in the wrong direction (an upper bound for a + b is needed).","Not stating the equality case, or not checking that it satisfies a² + b² = 1/2."]},{id:"GWF-2022-2",comp:"GWF",year:2022,n:2,area:"K",title:"Every digit has a bigger neighbour",qDe:`Man bestimme die Anzahl aller positiven ganzen zehnstelligen Zahlen mit folgenden Eigenschaften:
+
+• Die Zahl enthält jede der Ziffern 0, 1, 2, …, 8 und 9 genau einmal.
+
+• Jede Ziffer, außer der 9, besitzt eine Nachbarziffer, die größer ist als sie.
+
+(Anmerkung. Beispielsweise sind in der Zahl 1230 die Ziffern 1 bzw. 3 die Nachbarziffern von 2 und 2 bzw. 0 die Nachbarbarziffern von 3. Die Ziffern 1 und 0 haben nur eine Nachbarziffer.)`,q:`Determine the number of all positive ten-digit integers with the following properties:
+
+• The number contains each of the digits 0, 1, 2, …, 8 and 9 exactly once.
+
+• Every digit except the 9 has a neighbouring digit that is larger than it.
+
+(Note. For example, in the number 1230 the digits 1 and 3 are the neighbours of 2, and 2 and 0 are the neighbours of 3. The digits 1 and 0 have only one neighbour.)`,techniques:["induction","counting","bijection"],difficulty:2,answer:"256",hints:["Where can the 8 be? Where can the 7 be, given the positions of 9 and 8?","Show by induction that the digits 9, 8, …, k always occupy a block of consecutive positions.","So the number is built by attaching 8, 7, …, 0 one at a time at the left or the right end. Do not forget that a ten-digit number cannot start with 0."],rubric:[["Shows that the digits ≥ k always form a contiguous block (unimodal structure)",4],["Counts 2⁹ = 512 such arrangements",2],["Excludes those starting with 0: answer 256",2]],solution:`Claim: in a valid arrangement, for every k the digits k, k + 1, …, 9 occupy consecutive positions.
+
+Proof by downward induction on k. For k = 9 this is trivial. Assume the digits ≥ k + 1 form a block. The digit k needs a neighbour larger than k, i.e. a neighbour from that block; so k sits directly to the left or right of the block, and the digits ≥ k again form a block.
+
+Hence every valid arrangement arises by starting with 9 and attaching 8, 7, …, 0 one after another at the left or at the right end of the current block. Conversely, every arrangement built this way is valid: when digit k is attached, its neighbour is a larger digit, and this neighbour stays. Different sequences of choices give different arrangements (the position of each digit relative to the larger ones is recorded), so there are 2⁹ = 512 valid arrangements of the ten digits.
+
+Finally the first digit must not be 0. The digit 0 is attached last, at the left or the right end; by symmetry (mirror image) exactly half of the 512 arrangements start with 0. The answer is 512 − 256 = 256.`,pitfalls:["Forgetting to exclude a leading 0 (answer 512).",'Describing the structure "increasing up to 9, then decreasing" without proving that every valid number has it.']},{id:"GWF-2022-3",comp:"GWF",year:2022,n:3,area:"G",title:"Second intersection on the circumcircle",qDe:`Gegeben sei ein Dreieck ABC mit AC ≠ BC. Seien I und U der Inkreis- bzw. Umkreismittelpunkt des Dreiecks ABC. Der Inkreis berührt die Seite BC im Punkt D und die Seite AC im Punkt E. Die Umkreise der Dreiecke ABC und CDE schneiden einander in den zwei Punkten C und P.
+
+Man beweise, dass der Schnittpunkt S der Geraden CU und PI am Umkreis des Dreiecks ABC liegt.`,q:`Let ABC be a triangle with AC ≠ BC. Let I and U be the incentre and the circumcentre of triangle ABC. The incircle touches the side BC at the point D and the side AC at the point E. The circumcircles of triangles ABC and CDE meet at the two points C and P.
+
+Prove that the intersection S of the lines CU and PI lies on the circumcircle of triangle ABC.`,techniques:["Thales","inscribed angle theorem"],difficulty:2,answer:null,hints:["Which notable point besides C, D, E lies on the circumcircle of CDE?","The radii ID and IE are perpendicular to the sides, so CI is a diameter of that circle. What is ∠CPI?","Let S′ be the point of the circumcircle diametrically opposite to C. Then ∠CPS′ is a right angle as well."],rubric:[["Recognises the circle CDE as the circle with diameter CI (right angles at D and E)",3],["∠CPI = 90°",1],["Takes the antipode S′ of C on the circumcircle and gets ∠CPS′ = 90°",2],["Concludes that P, I, S′ are collinear, hence S = S′ lies on the circumcircle",2]],solution:`Since the incircle touches BC at D and AC at E, we have ∠CDI = ∠CEI = 90°. By Thales, D and E lie on the circle with diameter CI; so the circumcircle of CDE is this circle and passes through I. P lies on it and P ≠ I (I is inside the circumcircle of ABC, P on it), and P ≠ C, so ∠CPI = 90°.
+
+Let S′ be the point diametrically opposite to C on the circumcircle of ABC; it lies on the line CU. If P = S′, then S′ lies on PI and on CU. Otherwise, by Thales in the circumcircle of ABC, ∠CPS′ = 90°.
+
+In either case the lines PI and PS′ are both perpendicular to PC at P, so P, I and S′ are collinear: S′ lies on the line PI. The lines CU and PI are different (C does not lie on PI, since ∠CPI = 90°), so their only common point is S = S′. Hence S lies on the circumcircle of triangle ABC.
+
+(The condition AC ≠ BC guarantees that the two circles really meet in a second point P: for AC = BC they would be tangent at C.)`,pitfalls:["Trying a long angle chase with α, β, γ instead of spotting the two right angles at P.","Defining S as the antipode of C and forgetting to show that it lies on PI."]},{id:"GWF-2022-4",comp:"GWF",year:2022,n:4,area:"N",title:"Progressions of signed powers of 2",qDe:`Gegeben sei die Menge
+
+M = {−2²⁰²², −2²⁰²¹, …, −2², −2, −1, 1, 2, 2², …, 2²⁰²¹, 2²⁰²²}.
+
+Sei T eine Teilmenge von M, in der benachbarte Zahlen die gleiche Differenz haben, wenn man die Elemente der Größe nach ordnet.
+
+(a) Man bestimme die größte Anzahl von Elementen, die eine derartige Menge T enthalten kann.
+
+(b) Man gebe alle Mengen T mit der größtmöglichen Anzahl an Elementen an.`,q:`Consider the set
+
+M = {−2²⁰²², −2²⁰²¹, …, −2², −2, −1, 1, 2, 2², …, 2²⁰²¹, 2²⁰²²}.
+
+Let T be a subset of M in which neighbouring numbers have the same difference when the elements are ordered by size.
+
+(a) Determine the largest number of elements such a set T can have.
+
+(b) Give all sets T with the largest possible number of elements.`,techniques:["p-adic valuation","factorisation","case analysis"],difficulty:3,answer:"(a) 3. (b) T = {−2ᵇ⁺², −2ᵇ, 2ᵇ⁺¹} or T = {−2ᵇ⁺¹, 2ᵇ, 2ᵇ⁺²} with 0 ≤ b ≤ 2020 (4042 sets).",hints:["Can three powers of 2 of the same sign form an arithmetic progression?","So T has at most two positive and two negative elements. Write down the condition for a progression −2ᵃ < −2ᵇ < 2ᶜ.","A sum of two powers of 2 is a power of 2 only if the two powers are equal."],rubric:[["No three elements of the same sign (powers of two argument)",3],["Determines all 3-term progressions with mixed signs",2],["Excludes 4 elements (the pattern −, −, +, + leads to a contradiction)",2],["Lists all maximal sets with the correct range of b",1]],solution:`Lemma: if 2ˣ + 2ʸ = 2ᶻ for non-negative integers x ≤ y, then x = y (and z = x + 1). Indeed 2ˣ + 2ʸ = 2ˣ(1 + 2ʸ⁻ˣ), and for y > x the factor 1 + 2ʸ⁻ˣ is odd and ≥ 3, so the sum is not a power of 2.
+
+No three elements of T have the same sign. If 2ᵃ < 2ᵇ < 2ᶜ were in arithmetic progression, then 2 · 2ᵇ = 2ᵃ + 2ᶜ with a < c, contradicting the lemma. Multiplying by −1 handles negative elements. So T has at most two negative and two positive elements, and |T| ≤ 4.
+
+Mixed three-term progressions. Sorted by size, a 3-term progression with mixed signs is −2ᵃ < −2ᵇ < 2ᶜ or −2ᵃ < 2ᵇ < 2ᶜ.
+
+• −2ᵃ < −2ᵇ < 2ᶜ (so a > b): the middle condition −2 · 2ᵇ = −2ᵃ + 2ᶜ gives 2ᵃ = 2ᶜ + 2ᵇ⁺¹; by the lemma c = b + 1 and a = b + 2. The set is {−2ᵇ⁺², −2ᵇ, 2ᵇ⁺¹} with common difference 3 · 2ᵇ.
+
+• −2ᵃ < 2ᵇ < 2ᶜ (so b < c): 2 · 2ᵇ = 2ᶜ − 2ᵃ gives 2ᶜ = 2ᵇ⁺¹ + 2ᵃ, so a = b + 1 and c = b + 2. The set is {−2ᵇ⁺¹, 2ᵇ, 2ᵇ⁺²} with common difference 3 · 2ᵇ.
+
+No four elements. A 4-element T, sorted, would have signs −, −, +, +, say −2ᵃ < −2ᵇ < 2ᶜ < 2ᵈ. Its first three elements are of the first type, so c = b + 1. Its last three elements −2ᵇ < 2ᶜ < 2ᵈ are of the second type, so b = c + 1. Both cannot hold. Hence the maximum is 3, and it is attained, e.g. by {−4, −1, 2}.
+
+(b) The maximal sets are exactly the mixed 3-term progressions found above whose elements lie in M, i.e. with b + 2 ≤ 2022: T = {−2ᵇ⁺², −2ᵇ, 2ᵇ⁺¹} or T = {−2ᵇ⁺¹, 2ᵇ, 2ᵇ⁺²} with 0 ≤ b ≤ 2020.`,pitfalls:["Forgetting the range 0 ≤ b ≤ 2020 when listing all sets.","Listing only one of the two mirror-image families."]},{id:"GWF-2023-1",comp:"GWF",year:2023,n:1,area:"A",title:"Product of differences at most 2",qDe:`Es seien a, b und c reelle Zahlen mit 0 ≤ a, b, c ≤ 2. Man beweise, dass
+
+(a − b)(b − c)(a − c) ≤ 2
+
+gilt, und man gebe an, wann Gleichheit eintritt.`,q:`Let a, b and c be real numbers with 0 ≤ a, b, c ≤ 2. Prove that
+
+(a − b)(b − c)(a − c) ≤ 2,
+
+and state when equality occurs.`,techniques:["symmetry","AM-GM","equality case"],difficulty:2,answer:"Equality exactly for (a, b, c) = (2, 1, 0), (0, 2, 1) and (1, 0, 2).",hints:["When is the product positive at all? Only those orderings need work.","The expression is cyclic: you may assume a is the largest, and then a > b > c. Put x = a − b and y = b − c.","x + y = a − c ≤ 2 and xy ≤ ((x + y)/2)²."],rubric:[["Reduces to the case a > b > c (cyclic symmetry / sign analysis)",3],["Bound xy(x + y) ≤ (x + y)³/4 ≤ 2",3],["All three equality cases",2]],solution:`Let F(a, b, c) = (a − b)(b − c)(a − c) = −(a − b)(b − c)(c − a). The product (a − b)(b − c)(c − a) does not change under the cyclic substitution (a, b, c) → (b, c, a), and the constraint is symmetric. So we may rotate cyclically and assume that a is the largest of the three numbers.
+
+If F ≤ 0 there is nothing to show. So let F > 0; then a, b, c are distinct, and since a is the largest, a − b > 0 and a − c > 0, which forces b − c > 0: a > b > c. Put x = a − b > 0 and y = b − c > 0. Then x + y = a − c ≤ 2 − 0 = 2, and by AM-GM xy ≤ ((x + y)/2)². Hence
+
+F = xy(x + y) ≤ (x + y)³/4 ≤ 8/4 = 2.
+
+Equality requires x = y and a − c = 2, i.e. a = 2, c = 0, b = 1. Undoing the cyclic rotation, equality holds exactly for (a, b, c) = (2, 1, 0), (0, 2, 1) and (1, 0, 2); indeed F(0, 2, 1) = (−2) · 1 · (−1) = 2 and F(1, 0, 2) = 1 · (−2) · (−1) = 2.`,pitfalls:["Assuming a ≥ b ≥ c without justification: the expression is cyclic, not symmetric.","Giving only (2, 1, 0) as the equality case."]},{id:"GWF-2023-2",comp:"GWF",year:2023,n:2,area:"G",title:"Rhombus and a circle around A",qDe:`Sei ABCD eine Raute mit ∠BAD < 90°. Der Kreis durch D mit Mittelpunkt A schneide die Gerade CD ein zweites Mal im Punkt E. Der Schnittpunkt der Geraden BE und AC sei S.
+
+Man beweise, dass die Punkte A, S, D und E auf einem Kreis liegen.`,q:`Let ABCD be a rhombus with ∠BAD < 90°. The circle through D with centre A meets the line CD a second time at the point E. Let S be the intersection of the lines BE and AC.
+
+Prove that the points A, S, D and E lie on a circle.`,techniques:["inscribed angle theorem","angle chasing","cyclic quadrilateral"],difficulty:2,answer:null,hints:["Which other vertex of the rhombus lies on the circle with centre A through D?","AC is the perpendicular bisector of BD, so triangle SBD is isosceles.","Compare the exterior angle ∠DSE of triangle SBD with the central angle ∠DAE."],rubric:[["B lies on the circle with centre A (AB = AD), so ∠DBE = ½ ∠DAE",3],["SB = SD because AC is the perpendicular bisector of BD",2],["∠DSE = 2∠DBE = ∠DAE (exterior angle)",2],["Concludes that A, S, D, E are concyclic",1]],solution:`Let α = ∠BAD < 90°. Then ∠ADC = 180° − α is obtuse, so the foot of the perpendicular from A to the line CD lies beyond D, and E (the reflection of D in that foot) lies on the extension of CD beyond D. Hence ∠ADE = 180° − ∠ADC = α, and in the isosceles triangle ADE (AD = AE) also ∠AED = α, so ∠DAE = 180° − 2α.
+
+Since AB = AD, the point B also lies on the circle with centre A through D and E. The inscribed angle ∠DBE in this circle is half the central angle over the chord DE: ∠DBE = ½(180° − 2α) = 90° − α (it is acute, so B lies on the major arc and the central angle is ∠DAE).
+
+The diagonal AC of the rhombus is the perpendicular bisector of BD, so SB = SD and ∠SDB = ∠SBD = ∠EBD = 90° − α (S lies between B and E). The angle ∠DSE is the exterior angle at S of triangle BSD, hence
+
+∠DSE = ∠SBD + ∠SDB = 180° − 2α = ∠DAE.
+
+So S and A see the segment DE under the same angle, from the same side of the line DE; by the converse of the inscribed angle theorem, A, S, D, E lie on a circle.`,pitfalls:["Not noticing that B lies on the circle — then ∠DBE is hard to get.","Placing E between C and D (it lies on the extension of CD beyond D because ∠ADC is obtuse)."]},{id:"GWF-2023-3",comp:"GWF",year:2023,n:3,area:"K",title:"Two permutations with consecutive sums",qDe:"Man bestimme alle natürlichen Zahlen n ≥ 2, für die es zwei Anordnungen (a₁, a₂, …, aₙ) und (b₁, b₂, …, bₙ) der Zahlen 1, 2, …, n gibt, sodass (a₁ + b₁, a₂ + b₂, …, aₙ + bₙ) aufeinander folgende natürliche Zahlen sind.",q:"Determine all natural numbers n ≥ 2 for which there exist two arrangements (a₁, a₂, …, aₙ) and (b₁, b₂, …, bₙ) of the numbers 1, 2, …, n such that (a₁ + b₁, a₂ + b₂, …, aₙ + bₙ) are consecutive natural numbers.",techniques:["double counting","construction","parity"],difficulty:2,answer:"Exactly the odd n (n ≥ 3).",hints:["Add up all n sums in two different ways.","If the sums are N, N + 1, …, N + n − 1, compute N. When is it an integer?","For n = 2k + 1, try aᵢ = i and bᵢ = i + k for i ≤ k + 1, bᵢ = i − k − 1 for i ≥ k + 2."],rubric:[["Sum argument: n(n + 1) = nN + n(n − 1)/2",2],["Concludes that n must be odd",2],["Explicit construction for every odd n",3],["Verification that the construction works",1]],solution:`Necessity. Since both arrangements are permutations of 1, …, n, the sum of all aᵢ + bᵢ is 2(1 + 2 + … + n) = n(n + 1). If the sums are the consecutive numbers N, N + 1, …, N + n − 1 (in some order — reordering the indices simultaneously does not matter), their sum is nN + n(n − 1)/2. Hence n(n + 1) = nN + n(n − 1)/2, i.e. N = (n + 3)/2. As N is an integer, n must be odd.
+
+Sufficiency. Let n = 2k + 1 with k ≥ 1. Put aᵢ = i for all i, and
+
+bᵢ = i + k for 1 ≤ i ≤ k + 1,   bᵢ = i − k − 1 for k + 2 ≤ i ≤ 2k + 1.
+
+The values bᵢ run through k + 1, …, 2k + 1 and then 1, …, k, so (bᵢ) is an arrangement of 1, …, n. The sums are aᵢ + bᵢ = 2i + k for i ≤ k + 1, giving k + 2, k + 4, …, 3k + 2, and 2i − k − 1 for i ≥ k + 2, giving k + 3, k + 5, …, 3k + 1. Together these are exactly the 2k + 1 consecutive numbers k + 2, k + 3, …, 3k + 2. (Example n = 3: b = (2, 3, 1), sums 3, 5, 4.)
+
+Answer: exactly the odd numbers n ≥ 3.`,pitfalls:["Proving only that n must be odd, or giving the construction only for small n.","Forgetting that n = 1 is excluded by n ≥ 2 (the answer is all odd n ≥ 3)."]},{id:"GWF-2023-4",comp:"GWF",year:2023,n:4,area:"N",title:"xyd = x + y + d²",qDe:`Man bestimme alle Paare (x, y) von positiven ganzen Zahlen, sodass für d = ggT(x, y) die Gleichung
+
+xyd = x + y + d²
+
+gilt.`,q:`Determine all pairs (x, y) of positive integers such that, for d = gcd(x, y), the equation
+
+xyd = x + y + d²
+
+holds.`,techniques:["gcd","substitution","size bounds","factorisation"],difficulty:2,answer:"(x, y) = (2, 2), (2, 3), (3, 2)",hints:["Write x = da and y = db with gcd(a, b) = 1.","The equation becomes d²ab = a + b + d. The left side grows much faster — find a bound for d.","Use a + b ≤ ab + 1. For d = 1, factor (a − 1)(b − 1)."],rubric:[["Substitution x = da, y = db with gcd(a, b) = 1, giving d²ab = a + b + d",2],["Case d = 1: (a − 1)(b − 1) = 2",2],["Case d ≥ 2: a bound forces d = 2 and a = b = 1",3],["All three solutions, checked",1]],solution:`Write x = da and y = db with gcd(a, b) = 1. Dividing the equation d³ab = da + db + d² by d gives
+
+d²ab = a + b + d.
+
+Since (a − 1)(b − 1) ≥ 0, we have a + b ≤ ab + 1, so d²ab ≤ ab + 1 + d, i.e. (d² − 1)ab ≤ d + 1, i.e. (d − 1)ab ≤ 1 (divide by d + 1).
+
+• d = 1: ab = a + b + 1, i.e. (a − 1)(b − 1) = 2, so {a, b} = {2, 3}. These are coprime, giving (x, y) = (2, 3) and (3, 2).
+
+• d ≥ 2: then (d − 1)ab ≤ 1 forces d = 2 and a = b = 1, i.e. x = y = 2. Check: d = gcd(2, 2) = 2 and 2 · 2 · 2 = 8 = 2 + 2 + 4.
+
+Answer: (x, y) = (2, 2), (2, 3), (3, 2).`,pitfalls:["Forgetting to check the gcd condition for candidates (e.g. (1, 5) satisfies 2xy = x + y + 4 but has gcd 1).","Missing the symmetric pair (3, 2)."]},{id:"GWF-2024-1",comp:"GWF",year:2024,n:1,area:"A",title:"Cyclic sum at least 12",qDe:`Es seien a, b und c reelle Zahlen größer als 1. Man beweise die Ungleichung
+
+ab/(c − 1) + bc/(a − 1) + ca/(b − 1) ≥ 12.
+
+Wann gilt Gleichheit?`,q:`Let a, b and c be real numbers greater than 1. Prove the inequality
+
+ab/(c − 1) + bc/(a − 1) + ca/(b − 1) ≥ 12.
+
+When does equality hold?`,techniques:["AM-GM","equality case"],difficulty:2,answer:"Equality exactly for a = b = c = 2.",hints:["Try AM-GM on the three fractions. What is their product?","The product rearranges to a²/(a − 1) · b²/(b − 1) · c²/(c − 1).","For t > 1: t²/(t − 1) ≥ 4 is equivalent to (t − 2)² ≥ 0."],rubric:[["AM-GM on the three terms",3],["t²/(t − 1) ≥ 4 for t > 1",3],["Equality case a = b = c = 2 with justification",2]],solution:`All three terms are positive, so by AM-GM
+
+ab/(c − 1) + bc/(a − 1) + ca/(b − 1) ≥ 3 · ∛( a²b²c² / ((a − 1)(b − 1)(c − 1)) ) = 3 · ∛( a²/(a − 1) · b²/(b − 1) · c²/(c − 1) ).
+
+For t > 1 we have t² − 4(t − 1) = (t − 2)² ≥ 0, i.e. t²/(t − 1) ≥ 4, with equality iff t = 2. Hence the product under the cube root is at least 4³ = 64, and the sum is at least 3 · 4 = 12.
+
+Equality requires a = b = c = 2 (for the second step) and then all three terms are equal to 4, so the AM-GM step is an equality too. Thus equality holds exactly for a = b = c = 2.`,pitfalls:["Applying AM-GM and then trying to bound ab, bc, ca separately instead of regrouping the product.","Stating the equality case without checking that both inequalities become equalities at the same time."]},{id:"GWF-2024-2",comp:"GWF",year:2024,n:2,area:"G",title:"Orthocentre as circumcentre",qDe:`Sei ABC ein spitzwinkeliges Dreieck mit Höhenschnittpunkt H. Der Umkreis des Dreiecks BHC schneide AC ein weiteres Mal im Punkt P und AB ein weiteres Mal im Punkt Q.
+
+Man zeige, dass H der Umkreismittelpunkt des Dreiecks APQ ist.`,q:`Let ABC be an acute triangle with orthocentre H. The circumcircle of triangle BHC meets AC a second time at the point P and AB a second time at the point Q.
+
+Show that H is the circumcentre of triangle APQ.`,techniques:["reflection","orthocenter","inscribed angle theorem"],difficulty:2,answer:null,hints:["It suffices to show HA = HP and HA = HQ.","BH is perpendicular to AC. Reflect A in the line BH — where does the image land?","Show that the reflected point lies on the circle BHC by comparing ∠BP′H = ∠BAH with ∠BCH (both 90° − β)."],rubric:[["Idea: P is the reflection of A in the line BH (or an equivalent angle chase giving ∠HPA = ∠HAP)",3],["Proof that this reflection lies on the circle BHC",3],["HA = HP and analogously HA = HQ; conclusion",2]],solution:`Let β = ∠ABC and let H_b be the foot of the altitude from B; since the triangle is acute, H_b lies strictly between A and C. Let P′ be the reflection of A in the line BH. Because BH ⊥ AC, the point P′ lies on the line AC, and H_b is the midpoint of AP′; so P′ lies on the other side of BH than A, i.e. on the same side as C.
+
+P′ lies on the circle BHC. The reflection maps triangle ABH to P′BH, so ∠BP′H = ∠BAH. In the right triangle formed by A, B and the foot of the altitude from A, ∠BAH = 90° − β. In the right triangle formed by C, B and the foot of the altitude from C, ∠BCH = 90° − β. So ∠BP′H = ∠BCH, and P′ and C lie on the same side of BH; by the converse of the inscribed angle theorem, P′ lies on the circle through B, H, C.
+
+The line AC meets this circle in at most two points, C and P. If P′ ≠ C, then P′ = P. (If P′ = C, i.e. BA = BC, the line AC touches the circle at C and P = C = P′.) In every case P is the reflection of A in BH, and since H lies on the mirror line, HP = HA.
+
+In the same way, Q is the reflection of A in the line CH, so HQ = HA. Hence HA = HP = HQ, and H is the circumcentre of triangle APQ.`,pitfalls:["Proving HA = HP and forgetting the analogous HA = HQ.","Inscribed-angle steps with P on the wrong side of A — check its position with a careful sketch."]},{id:"GWF-2024-3",comp:"GWF",year:2024,n:3,area:"K",title:"Matches in a bowl",qDe:`Auf einem Tisch sind zehntausend Streichhölzer, von denen zwei in einer Schüssel liegen.
+
+Anna und Bernd spielen folgendes Spiel: Abwechselnd machen sie einen Zug, Anna beginnt. Ein Zug besteht darin, die Streichhölzer in der Schüssel abzuzählen, einen echten Teiler d dieser Anzahl auszuwählen und d Streichhölzer in die Schüssel dazuzugeben. Das Spiel ist zu Ende, wenn mehr als 2024 Streichhölzer in der Schüssel sind. Wer den letzten Zug gemacht hat, hat gewonnen.
+
+Man beweise, dass Anna gewinnen kann, unabhängig davon, wie Bernd spielt.
+
+(Anmerkung: Ein echter Teiler von n ist ein Teiler von n, der kleiner als n ist.)`,q:`There are ten thousand matches on a table, two of which are in a bowl.
+
+Anna and Bernd play the following game: they move alternately, Anna starts. A move consists of counting the matches in the bowl, choosing a proper divisor d of this number and adding d matches to the bowl. The game ends when there are more than 2024 matches in the bowl. Whoever made the last move has won.
+
+Prove that Anna can win, no matter how Bernd plays.
+
+(Note: a proper divisor of n is a divisor of n that is smaller than n.)`,techniques:["game strategy","parity","size bounds"],difficulty:3,answer:null,hints:["Look at parity: what do the proper divisors of an odd number look like?","If Anna always hands Bernd an odd number, he must add an odd divisor of size at most one third, and he hands back an even number.","Anna adds 1 while the pile is small; once she finds an even number n ≥ 1350, adding n/2 ends the game. Check that Bernd can never end it first."],rubric:[["Strategy: Anna adds 1 whenever she finds an even number smaller than 1350",3],["Bernd always receives an odd number, returns an even one and cannot end the game (odd proper divisor ≤ n/3)",3],["Final move: from an even number n ≥ 1350 Anna adds n/2 and exceeds 2024",2]],solution:`Strategy for Anna: whenever she finds an even number n of matches, she adds 1 if n < 1350, and she adds n/2 if n ≥ 1350.
+
+Bernd always faces an odd number. Suppose Anna finds an even n < 1350 and adds 1; Bernd finds the odd number m = n + 1 ≤ 1349. Every divisor of m is odd, so Bernd adds an odd d, and m + d is even: Anna again finds an even number. Moreover the smallest prime factor of m is at least 3, so a proper divisor satisfies d ≤ m/3. Hence Bernd's move produces at most m + m/3 ≤ 1349 · 4/3 < 1800 ≤ 2024 matches: Bernd can never end the game.
+
+Anna wins. The number of matches increases with every move, so after finitely many moves Anna finds an even number n ≥ 1350 (at the start she finds 2, which is even). Then n/2 is a proper divisor and she reaches n + n/2 ≥ 1350 + 675 = 2025 > 2024 matches. The game ends with her move, and she wins. (The ten thousand matches are more than enough: the bowl never needs more than 2024 + 1012 matches.)`,pitfalls:["Ignoring the possibility that Bernd ends the game himself — you must show his moves stay at most 2024.","Choosing a threshold that does not work on both sides: Anna needs n + n/2 > 2024, while Bernd must stay below with (n + 1) · 4/3."]},{id:"GWF-2024-4",comp:"GWF",year:2024,n:4,area:"N",title:"n⁵ + 5ⁿ versus n⁵ · 5ⁿ + 1",qDe:`Es sei n eine positive ganze Zahl.
+
+Man beweise, dass a(n) = n⁵ + 5ⁿ genau dann durch 11 teilbar ist, wenn auch b(n) = n⁵ · 5ⁿ + 1 durch 11 teilbar ist.`,q:`Let n be a positive integer.
+
+Prove that a(n) = n⁵ + 5ⁿ is divisible by 11 if and only if b(n) = n⁵ · 5ⁿ + 1 is divisible by 11.`,techniques:["modular arithmetic","Fermat little theorem"],difficulty:2,answer:null,hints:["Treat the case 11 ∣ n separately.","For 11 ∤ n, Fermat gives n¹⁰ ≡ 1 (mod 11).","Multiply a(n) by n⁵ and compare the result with b(n) modulo 11."],rubric:[["Treats the case 11 ∣ n",2],["Fermat: n¹⁰ ≡ 1 (mod 11) for 11 ∤ n",2],["Key identity n⁵ · a(n) ≡ b(n) (mod 11) and invertibility of n⁵; both directions",4]],solution:`Case 11 ∣ n. Then a(n) ≡ 5ⁿ (mod 11), which is not 0 because 11 ∤ 5, and b(n) ≡ 1 (mod 11). Neither number is divisible by 11, so the equivalence holds.
+
+Case 11 ∤ n. By Fermat's little theorem n¹⁰ ≡ 1 (mod 11). Therefore
+
+n⁵ · a(n) = n¹⁰ + n⁵ · 5ⁿ ≡ 1 + n⁵ · 5ⁿ = b(n) (mod 11).
+
+Since 11 ∤ n⁵ and 11 is prime, 11 ∣ a(n) holds iff 11 ∣ n⁵ · a(n), which by the congruence holds iff 11 ∣ b(n). This proves both directions.`,pitfalls:['Proving only one direction of the "if and only if".',"Forgetting the case 11 ∣ n, where Fermat cannot be applied."]},{id:"GWF-2025-1",comp:"GWF",year:2025,n:1,area:"A",title:"Sum of squares at most 9",qDe:`Sei n ≥ 3 eine positive ganze Zahl.
+
+Man beweise, dass für alle reellen Zahlen x₁, …, xₙ ∈ [0, 2] mit x₁ + … + xₙ = 5 die Ungleichung
+
+x₁² + … + xₙ² ≤ 9
+
+gilt. Wann gilt Gleichheit?`,q:`Let n ≥ 3 be a positive integer.
+
+Prove that for all real numbers x₁, …, xₙ ∈ [0, 2] with x₁ + … + xₙ = 5 the inequality
+
+x₁² + … + xₙ² ≤ 9
+
+holds. When does equality hold?`,techniques:["smoothing","parity","equality case"],difficulty:3,answer:"Equality exactly when two of the xᵢ equal 2, one equals 1 and all others are 0.",hints:["The trivial bound xᵢ² ≤ 2xᵢ only gives 10. Where is the loss?","Write x₁² + … + xₙ² = 10 − Σ xᵢ(2 − xᵢ) and bound xᵢ(2 − xᵢ) from below by min(xᵢ, 2 − xᵢ).","Because 5 is odd, the numbers cannot all be 0 or 2: show that the distances min(xᵢ, 2 − xᵢ) add up to at least 1. (Alternative: a smoothing argument pushing pairs apart.)"],rubric:[["Rewrites Σxᵢ² = 10 − Σxᵢ(2 − xᵢ) (or a correct smoothing setup)",2],["Lower bound xᵢ(2 − xᵢ) ≥ min(xᵢ, 2 − xᵢ)",2],["Shows that the total distance to {0, 2} is at least 1 (odd-sum argument), or completes a rigorous smoothing argument",3],["Equality case: two 2s, one 1, the rest 0",1]],solution:`Since x₁ + … + xₙ = 5,
+
+x₁² + … + xₙ² = 2(x₁ + … + xₙ) − Σ xᵢ(2 − xᵢ) = 10 − Σ xᵢ(2 − xᵢ),
+
+so we must show Σ xᵢ(2 − xᵢ) ≥ 1.
+
+For x ∈ [0, 2] let m(x) = min(x, 2 − x) ≥ 0, the distance from x to the set {0, 2}. Since max(x, 2 − x) ≥ 1, we get x(2 − x) = m(x) · max(x, 2 − x) ≥ m(x), with equality iff m(x) = 0 or max(x, 2 − x) = 1, i.e. iff x ∈ {0, 1, 2}.
+
+Write mᵢ = m(xᵢ). Each xᵢ equals either mᵢ or 2 − mᵢ. If k is the number of indices with xᵢ = 2 − mᵢ, then 5 = Σ xᵢ = 2k + Σ ±mᵢ with suitable signs. So Σ ±mᵢ = 5 − 2k is an odd integer, hence its absolute value is at least 1, and therefore Σ mᵢ ≥ |Σ ±mᵢ| ≥ 1.
+
+Altogether Σ xᵢ(2 − xᵢ) ≥ Σ mᵢ ≥ 1, i.e. x₁² + … + xₙ² ≤ 9.
+
+Equality requires every xᵢ ∈ {0, 1, 2} and Σ mᵢ = 1. Since m(1) = 1 and m(0) = m(2) = 0, exactly one xᵢ equals 1, and the others are 0 or 2 with sum 4: exactly two of them equal 2. Conversely 2² + 2² + 1² = 9. So equality holds exactly when two of the numbers are 2, one is 1 and the remaining n − 3 are 0 (this needs n ≥ 3).`,pitfalls:['Claiming the maximum is at (2, 2, 1, 0, …) by "pushing values apart" without justifying the smoothing step and why it terminates.',"Stating the equality case only for n = 3 and forgetting the zeros for larger n."]},{id:"GWF-2025-2",comp:"GWF",year:2025,n:2,area:"G",title:"Collinear P, Q, C",qDe:`Sei ABC ein gleichschenkeliges Dreieck mit AC = BC und Umkreis k. Die Normale auf BC durch B wird mit n bezeichnet. Sei weiters M ein beliebiger, aber von B verschiedener, Punkt auf n. Der Kreis k₁ mit dem Mittelpunkt M und dem Radius BM schneide AB ein weiteres Mal im Punkt P und den Umkreis k ein weiteres Mal im Punkt Q.
+
+Man beweise, dass die Punkte P, Q und C auf einer Geraden liegen.`,q:`Let ABC be an isosceles triangle with AC = BC and circumcircle k. The perpendicular to BC through B is denoted by n. Further, let M be an arbitrary point on n different from B. The circle k₁ with centre M and radius BM meets AB a second time at the point P and the circumcircle k a second time at the point Q.
+
+Prove that the points P, Q and C lie on a line.`,techniques:["power of a point","similar triangles","inversion"],difficulty:3,answer:null,hints:["What is special about the line BC relative to the circle k₁?","BC is tangent to k₁ at B, so for every line through C meeting k₁ at U and V: CU · CV = CB².","Let X be the point where the line CQ meets the line AB. Show CX · CQ = CA² = CB² (triangles CAX and CQA are similar), so X lies on k₁."],rubric:[["CB is tangent to k₁ (CB ⊥ MB), so the power of C with respect to k₁ is CB²",2],["Lemma: for X = CQ ∩ AB, CX · CQ = CA² (similar triangles CAX and CQA, or inversion in C)",3],["Combines: the second intersection of the line CQ with k₁ is X, so X = P",2],["Handles the details (X ≠ B, Q ≠ C) and concludes collinearity",1]],solution:`Since MB ⊥ BC, the line BC is tangent to k₁ at B. Hence C lies outside k₁, and for every line through C meeting k₁ at two points U, V we have CU · CV = CB² (power of C). Note Q ≠ C, because MC > MB (hypotenuse of the right triangle MBC), so C is not on k₁.
+
+Let X be the intersection of the line CQ with the line AB (they are not parallel: since CA = CB, the line through C parallel to AB is the tangent to k at C, which meets k only at C, whereas Q ≠ C).
+
+Lemma: CX · CQ = CA², with X and Q on the same ray from C. Since CA = CB, the arcs CA and CB of k are equal, so the inscribed angles over them are equal: ∠CQA = ∠CBA = ∠CAB, i.e. ∠CQA = ∠CAX. The triangles CAX and CQA share the angle at C, so they are similar, and CA/CQ = CX/CA. (Equivalently: the inversion with centre C and radius CA maps the line AB to the circle k, sending X to Q.)
+
+Now let X′ be the second intersection of the line CQ with k₁ (besides Q). Then CX′ · CQ = CB² = CA² = CX · CQ, and X′, X both lie on the ray CQ; hence X′ = X. So X lies on k₁ and on the line AB. The points of AB on k₁ are B and P; and X ≠ B, because X = B would put B on the line CQ, i.e. Q = B, which is excluded. Hence X = P, and P lies on the line CQ: the points P, Q and C are collinear.`,pitfalls:["Assuming the collinearity and deducing something from it (proving the converse).","Using a sketch with M on one side of BC only — M can lie on either side of B on n."]},{id:"GWF-2025-3",comp:"GWF",year:2025,n:3,area:"K",title:"Six bus lines",qDe:"In einer Stadt gibt es 6 verschiedene Autobuslinien, wobei jede genau in 5 Stationen hält und in beide Richtungen verkehrt. Trotzdem gibt es für je zwei verschiedene Stationen immer eine Autobuslinie, die diese beiden Stationen miteinander verbindet. Man bestimme die maximale Anzahl von Stationen dieser Stadt.",q:"A city has 6 different bus lines, each of which stops at exactly 5 stations and runs in both directions. Nevertheless, for any two different stations there is always a bus line that connects these two stations. Determine the maximum number of stations in this city.",techniques:["double counting","construction + bound"],difficulty:3,answer:"10",hints:["Fix one station. If it lies on k lines, how many other stations can it reach directly?","With more than 9 stations, every station must lie on at least 3 lines. Count station–line incidences.","For a construction with 10 stations: give each station a set of 3 lines so that any two stations share a line and each line gets exactly 5 stations. (Two 3-element subsets of {1, …, 6} are disjoint only if they are complementary.)"],rubric:[["Observation: a station on k lines is connected with at most 4k other stations",2],["Hence with more than 9 stations every station lies on at least 3 lines",2],["Double counting incidences: 3v ≤ 30, so v ≤ 10",2],["Valid construction with 10 stations (all 45 pairs checked)",2]],solution:`Bound. Let v be the number of stations and suppose v ≥ 10. A station on k lines shares a line with at most 4k other stations (each line has 4 further stops). Since every other station must share a line with it, v − 1 ≤ 4k, so k ≥ 9/4, i.e. k ≥ 3: every station lies on at least 3 lines. Counting pairs (station, line through it) in two ways gives 3v ≤ 6 · 5 = 30, so v ≤ 10.
+
+Construction with 10 stations A, …, J:
+
+Line 1: A, B, F, I, J
+Line 2: A, B, E, G, H
+Line 3: A, C, D, F, H
+Line 4: B, C, D, G, I
+Line 5: D, E, F, G, J
+Line 6: C, E, H, I, J
+
+Each line has 5 stops, and each station lies on exactly 3 lines: A on 1, 2, 3; B on 1, 2, 4; C on 3, 4, 6; D on 3, 4, 5; E on 2, 5, 6; F on 1, 3, 5; G on 2, 4, 5; H on 2, 3, 6; I on 1, 4, 6; J on 1, 5, 6. Two stations share a line iff their 3-sets of lines intersect. Two 3-element subsets of {1, …, 6} are disjoint only if they are complementary, and no two of the ten sets above are complementary (they are ten different sets, one from each complementary pair). Hence every pair of stations is connected.
+
+The maximum number of stations is 10.`,pitfalls:["Giving only the bound 10 without a construction, or a construction without the bound.","A construction in which some pair of stations has no common line — all 45 pairs must be covered."]},{id:"GWF-2025-4",comp:"GWF",year:2025,n:4,area:"N",title:"zⁿ + z + 1 is never a square",qDe:`Sei z eine positive ganze Zahl, die nicht durch 8 teilbar ist. Weiters sei n ≥ 2 eine positive ganze Zahl.
+
+Man beweise, dass keine der Zahlen der Form zⁿ + z + 1 eine Quadratzahl ist.`,q:`Let z be a positive integer that is not divisible by 8. Furthermore, let n ≥ 2 be a positive integer.
+
+Prove that none of the numbers of the form zⁿ + z + 1 is a perfect square.`,techniques:["squares between squares","modular arithmetic","case analysis"],difficulty:3,answer:null,hints:["Split by the parity of n. For even n = 2m, compare zⁿ + z + 1 with the squares of zᵐ and zᵐ + 1.","For odd n and odd z, look modulo 4.","For odd n ≥ 3 and even z, zⁿ is divisible by 8. Which residues do odd squares have modulo 8?"],rubric:[["n even: squeeze strictly between (zᵐ)² and (zᵐ + 1)²",3],["n odd, z odd: N ≡ 3 (mod 4)",2],["n odd, z even: N ≡ z + 1 ≢ 1 (mod 8)",3]],solution:`Let N = zⁿ + z + 1.
+
+n even, n = 2m with m ≥ 1. Then (zᵐ)² = zⁿ < N, and N < zⁿ + 2zᵐ + 1 = (zᵐ + 1)² because z ≤ zᵐ < 2zᵐ. So N lies strictly between two consecutive squares and is not a square.
+
+n odd, n ≥ 3, z odd. Then z² ≡ 1 (mod 4), and since n − 1 is even, zⁿ⁻¹ ≡ 1 (mod 4), so zⁿ ≡ z (mod 4) and N ≡ 2z + 1 ≡ 3 (mod 4), because 2z ≡ 2 (mod 4) for odd z. Squares are ≡ 0 or 1 (mod 4), so N is not a square.
+
+n odd, n ≥ 3, z even. Then 8 ∣ zⁿ, so N ≡ z + 1 (mod 8). Since z is even but not divisible by 8, z ≡ 2, 4 or 6 (mod 8), hence N ≡ 3, 5 or 7 (mod 8). But N is odd, and odd squares are ≡ 1 (mod 8). So N is not a square.
+
+Remark: the condition 8 ∤ z is necessary: 72³ + 72 + 1 = 373321 = 611².`,pitfalls:["Using only congruences: for even n they cannot work in general — the squeeze between consecutive squares is needed.","Overlooking that the case z odd, n odd needs its own argument (mod 4)."]},{id:"GWF-2026-1",comp:"GWF",year:2026,n:1,area:"A",title:"a² + b² ≥ 13 under a product condition",qDe:`Seien a und b positive reelle Zahlen mit
+
+(a + 4)(b + 1) = 24.
+
+Man beweise die Ungleichung
+
+a² + b² ≥ 13.
+
+Wann gilt Gleichheit?`,q:`Let a and b be positive real numbers with
+
+(a + 4)(b + 1) = 24.
+
+Prove the inequality
+
+a² + b² ≥ 13.
+
+When does equality hold?`,techniques:["Cauchy-Schwarz","AM-GM","equality case"],difficulty:2,answer:"Equality exactly for a = 2, b = 3.",hints:["Find the equality case first: try small integers with (a + 4)(b + 1) = 24.","At (2, 3) the vector (a, b) is parallel to (2, 3). Cauchy-Schwarz: 13(a² + b²) ≥ (2a + 3b)².","Show 2a + 3b ≥ 13 by AM-GM on 2(a + 4) and 3(b + 1), whose product is 6 · 24 = 144."],rubric:[["Finds the equality point (2, 3) and the linear quantity 2a + 3b",2],["2a + 3b ≥ 13 via AM-GM on 2(a + 4) and 3(b + 1)",3],["a² + b² ≥ (2a + 3b)²/13 via Cauchy-Schwarz",2],["Equality case a = 2, b = 3",1]],solution:`By AM-GM applied to the positive numbers 2(a + 4) and 3(b + 1),
+
+2(a + 4) + 3(b + 1) ≥ 2√(6(a + 4)(b + 1)) = 2√144 = 24,
+
+so 2a + 3b ≥ 24 − 11 = 13.
+
+By the Cauchy-Schwarz inequality, (2² + 3²)(a² + b²) ≥ (2a + 3b)², so
+
+a² + b² ≥ (2a + 3b)²/13 ≥ 13²/13 = 13
+
+(squaring is allowed since 2a + 3b ≥ 13 > 0).
+
+Equality requires 2(a + 4) = 3(b + 1) (so both equal 12, i.e. a = 2, b = 3) and (a, b) proportional to (2, 3); both hold for a = 2, b = 3, where indeed (2 + 4)(3 + 1) = 24 and 2² + 3² = 13. So equality holds exactly for a = 2, b = 3.`,pitfalls:["Substituting b = 24/(a + 4) − 1 and getting lost in a quartic without a plan.","Not checking that the equality conditions of both inequalities hold at the same point."]},{id:"GWF-2026-2",comp:"GWF",year:2026,n:2,area:"G",title:"Square and the arc CD",qDe:`Sei k der Umkreis eines Quadrats ABCD. Sei P ein Punkt auf dem kürzeren Kreisbogen CD von k mit P ≠ C und P ≠ D. Der Schnittpunkt der Geraden BP mit der Geraden AC sei Q, der Schnittpunkt der Geraden CP mit der Geraden AD sei R.
+
+Man beweise, dass die Gerade RQ normal auf die Gerade AC steht.`,q:`Let k be the circumcircle of a square ABCD. Let P be a point on the shorter arc CD of k with P ≠ C and P ≠ D. Let Q be the intersection of the line BP with the line AC, and R the intersection of the line CP with the line AD.
+
+Prove that the line RQ is perpendicular to the line AC.`,techniques:["orthocenter","cyclic quadrilateral","Thales"],difficulty:3,answer:null,hints:["AC is a diameter of k. What is ∠APC? Which triangle has AP and CD as altitudes?","Let H = AP ∩ CD; it is the orthocentre of triangle ACR, so RH ⊥ AC. It remains to show that Q lies on the line through H perpendicular to AC.","Show that H, Q, C, P are concyclic (∠HPQ and ∠HCQ are both 45°), then read off ∠HQC."],rubric:[["∠APC = 90° (Thales) and H = AP ∩ CD is the orthocentre of triangle ACR",3],["H, Q, C, P concyclic via ∠HPQ = ∠APB = 45° = ∠HCQ",2],["∠HQC = ∠HPC = 90°, so HQ ⊥ AC",2],["Combining: R, H, Q lie on the altitude from R",1]],solution:`Positions: P lies on the arc CD on the side of AC opposite to B, so the segment BP crosses AC at Q, inside the circle. The line AP crosses the side CD at an interior point H. The line CP meets the line AD beyond D at R.
+
+Orthocentre. AC is a diameter of k, so ∠APC = 90° (Thales): AP ⊥ CR. Also CD ⊥ AD, i.e. CD ⊥ AR. So AP and CD are two altitudes of triangle ACR, and their intersection H is its orthocentre. Hence RH ⊥ AC.
+
+Cyclic quadrilateral. Since H lies on segment AP and Q on segment BP, ∠HPQ = ∠APB, which equals the inscribed angle ∠ACB = 45° (both on chord AB). Since H lies on segment CD and Q on segment CA, ∠HCQ = ∠DCA = 45°. As P and C lie on the same side of the line HQ, the points H, Q, C, P are concyclic.
+
+In this circle ∠HQC = ∠HPC (both on chord HC), and ∠HPC = ∠APC = 90°. Hence HQ ⊥ AC.
+
+Conclusion. Both lines RH and QH pass through H and are perpendicular to AC, so they coincide: R, H, Q are collinear and RQ ⊥ AC. (R ≠ H, since R lies on AD and H on CD, and R = H would force R = D, i.e. P = D.)`,pitfalls:["A coordinate attempt with a special position of P (e.g. the midpoint of the arc) proves nothing in general.","Showing only that H lies on the altitude from R, without proving that Q also lies on it."]},{id:"GWF-2026-3",comp:"GWF",year:2026,n:3,area:"K",title:"Airy sets and factorials",qDe:`Sei n eine positive ganze Zahl. Eine Menge positiver ganzer Zahlen heiße luftig, wenn sie keine zwei benachbarten Zahlen enthält. Für jede luftige Teilmenge der Menge {1, 2, …, n} wird das Produkt ihrer Elemente berechnet, dann werden die Quadrate aller dieser Produkte addiert, wobei der leeren Teilmenge das Produkt 1 zugewiesen wird.
+
+Man bestimme diese Summe sₙ.
+
+Beispiel: n = 3
+
+Die luftigen Teilmengen von {1, 2, 3} sind {}, {1}, {2}, {3} und {1, 3}. Für die Produkte erhalten wir:
+{} | {1} | {2} | {3} | {1, 3}
+1 | 1 | 2 | 3 | 3
+Die Summe der Quadrate ergibt also s₃ = 1² + 1² + 2² + 3² + 3² = 24.`,q:`Let n be a positive integer. A set of positive integers is called airy if it contains no two neighbouring (consecutive) numbers. For every airy subset of the set {1, 2, …, n} the product of its elements is computed; then the squares of all these products are added, where the empty subset is assigned the product 1.
+
+Determine this sum sₙ.
+
+Example: n = 3
+
+The airy subsets of {1, 2, 3} are {}, {1}, {2}, {3} and {1, 3}. For the products we obtain:
+{} | {1} | {2} | {3} | {1, 3}
+1 | 1 | 2 | 3 | 3
+So the sum of the squares is s₃ = 1² + 1² + 2² + 3² + 3² = 24.`,techniques:["recursion","induction"],difficulty:2,answer:"sₙ = (n + 1)!",hints:["Compute s₁, s₂, s₃, s₄ and compare with factorials.","Split the airy subsets of {1, …, n} according to whether they contain n. If they do, they cannot contain n − 1.","This gives sₙ = sₙ₋₁ + n² · sₙ₋₂. Prove sₙ = (n + 1)! by induction with two base cases."],rubric:[["Correct recursion sₙ = sₙ₋₁ + n² sₙ₋₂ with justification",4],["Initial values and the conjecture (n + 1)!",1],["Induction proof",3]],solution:`Small values: s₁ = 1² + 1² = 2, s₂ = 1 + 1 + 4 = 6, s₃ = 24, s₄ = 120. This suggests sₙ = (n + 1)!. It is convenient to set s₀ = 1 (only the empty set).
+
+Recursion. Let n ≥ 2 and split the airy subsets T of {1, …, n} into two kinds.
+
+• n ∉ T: these are exactly the airy subsets of {1, …, n − 1}; they contribute sₙ₋₁.
+
+• n ∈ T: then n − 1 ∉ T, and T = T′ ∪ {n} where T′ is an arbitrary airy subset of {1, …, n − 2}. The product of T is n times the product of T′, so its square is n² times the square for T′. These sets contribute n² · sₙ₋₂.
+
+Hence sₙ = sₙ₋₁ + n² · sₙ₋₂ for n ≥ 2 (with s₀ = 1, s₁ = 2).
+
+Induction. sₙ = (n + 1)! holds for n = 0 and n = 1. If it holds for n − 2 and n − 1, then
+
+sₙ = n! + n² · (n − 1)! = n! + n · n! = (n + 1) · n! = (n + 1)!.
+
+Therefore sₙ = (n + 1)! for every positive integer n.`,pitfalls:["Using only one base case for a two-step recursion.","Forgetting the empty set (product 1) when computing the starting values."]},{id:"GWF-2026-4",comp:"GWF",year:2026,n:4,area:"N",title:"Squares of the form 3ᵏ + 3ⁿ and 7ᵏ + 7ⁿ",qDe:`Man beweise die folgenden beiden Behauptungen.
+
+(a) Es gibt unendlich viele Quadratzahlen der Form 3ᵏ + 3ⁿ mit positiven ganzen Zahlen k und n.
+
+(b) Es gibt keine Quadratzahlen der Form 7ᵏ + 7ⁿ mit positiven ganzen Zahlen k und n.`,q:`Prove the following two statements.
+
+(a) There are infinitely many perfect squares of the form 3ᵏ + 3ⁿ with positive integers k and n.
+
+(b) There are no perfect squares of the form 7ᵏ + 7ⁿ with positive integers k and n.`,techniques:["modular arithmetic","factorisation","construction"],difficulty:1,answer:null,hints:["(a): Factor out the smaller power: 3ᵏ(1 + 3ⁿ⁻ᵏ). When is 1 + 3ʲ a square?","1 + 3 = 4. Now choose k even.","(b): Look at 7ᵏ + 7ⁿ modulo 3."],rubric:[["(a) Family k = 2m, n = 2m + 1 with 3²ᵐ + 3²ᵐ⁺¹ = (2 · 3ᵐ)²",3],["(a) Notes that this gives infinitely many different squares",1],["(b) 7ᵏ + 7ⁿ ≡ 2 (mod 3), while squares are ≡ 0 or 1 (mod 3)",4]],solution:`(a) For every positive integer m put k = 2m and n = 2m + 1. Then
+
+3ᵏ + 3ⁿ = 3²ᵐ(1 + 3) = 4 · 3²ᵐ = (2 · 3ᵐ)².
+
+Different m give different squares, so there are infinitely many squares of this form.
+
+(b) Since 7 ≡ 1 (mod 3), we have 7ᵏ + 7ⁿ ≡ 1 + 1 = 2 (mod 3) for all k, n. But every square is ≡ 0 or 1 (mod 3) (as 0² ≡ 0, 1² ≡ 1, 2² ≡ 1). Hence 7ᵏ + 7ⁿ is never a square.`,pitfalls:["In (a), giving a single example — infinitely many are required.","In (b), a long factorisation argument that forgets the case k = n."]}];export{e as default};

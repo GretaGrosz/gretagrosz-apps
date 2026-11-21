@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The suite's shared tokens. Tape's accent is the coral of its icon, deep enough for white text (4.9:1).
+   Every theme is a set of these variables under [data-theme="…"] (src/themes.js lists them). They are set on <html>,
+   and on each preview in the theme picker, so a preview shows the real theme. */
+:root, [data-theme] {
+  color-scheme: light dark;
+  --bg: 242 242 247;
+  --surface: 255 255 255;
+  --fg: 0 0 0;
+  --fg2: 108 108 112;
+  --fg3: 138 138 142;
+  --fill: 118 118 128;
+  --line: 60 60 67; --line-a: 0.2;
+  --accent: 217 38 79;
+  --accent-ink: 205 30 70;
+  --danger: 215 0 21;
+  --glass-bg: rgb(250 250 252 / 0.84);
+  --glass-edge: inset 0 0 0 0.5px rgba(0, 0, 0, 0.08);
+  --spring: cubic-bezier(.2, .8, .2, 1);
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --page-bg: rgb(var(--bg));
+  /* Decorations, as variables so the nearest theme wins (a preview inside another theme stays itself) */
+  --round: 1;
+  --pixel: auto;
+  --title-color: inherit; --title-style: normal; --title-shadow: none; --title-case: none;
+  --card-shadow: none;
+  --accent-image: none; --accent-shadow: none; --accent-text-shadow: none;
+  --well-bg: rgb(var(--fill) / 0.12); --well-shadow: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]), [data-theme='classic'] {
+    --bg: 0 0 0;
+    --surface: 28 28 30;
+    --fg: 255 255 255;
+    --fg2: 174 174 178;
+    --fg3: 142 142 147;
+    --line: 84 84 88; --line-a: 0.65;
+    --accent: 230 48 90;
+    --accent-ink: 255 110 140;
+    --danger: 255 69 58;
+    --glass-bg: rgb(28 28 30 / 0.82);
+    --glass-edge: inset 0 0 0 0.5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Pink Dream: hot pink and white, sparkles, rounded italic headings */
+[data-theme='dream'] {
+  color-scheme: light;
+  --bg: 255 227 241;
+  --surface: 255 255 255;
+  --fg: 74 8 44;
+  --fg2: 140 45 95;
+  --fg3: 190 110 150;
+  --fill: 214 60 140;
+  --line: 214 60 140; --line-a: 0.22;
+  --accent: 209 21 123;
+  --accent-ink: 196 15 112;
+  --glass-bg: rgb(255 240 248 / 0.88);
+  --glass-edge: inset 0 0 0 1px rgba(209, 21, 123, 0.18), 0 6px 24px rgba(209, 21, 123, 0.18);
+  --font: ui-rounded, 'SF Pro Rounded', 'Arial Rounded MT Bold', 'Nunito', system-ui, sans-serif;
+  --page-bg: url(/themes/sparkle.svg) 0 0 / 160px 160px, radial-gradient(circle at 12% -4%, #ffb0da 0, transparent 46%),
+    radial-gradient(circle at 108% 30%, #ffc9e6 0, transparent 42%), rgb(255 227 241);
+  --title-style: italic; --title-color: rgb(209 21 123); --title-shadow: 0 2px 0 #fff;
+  --card-shadow: 0 4px 16px rgba(209, 21, 123, 0.1);
+  --accent-image: linear-gradient(135deg, #f0399f, #c50f72);
+}
+
+/* Blocks: stone, a strip of grass at the top, square corners and bevelled game-menu buttons */
+[data-theme='blocks'] {
+  color-scheme: light;
+  --bg: 198 198 198;
+  --surface: 219 219 219;
+  --fg: 30 30 30;
+  --fg2: 63 63 63;
+  --fg3: 74 74 74;
+  --fill: 80 80 80;
+  --line: 0 0 0; --line-a: 0.22;
+  --accent: 76 122 42;
+  --accent-ink: 56 98 28;
+  --danger: 170 0 0;
+  --glass-bg: rgb(198 198 198 / 0.97);
+  --glass-edge: inset 3px 3px 0 #fff, inset -3px -3px 0 #555;
+  --font: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --page-bg: url(/themes/grass.svg) 0 0 / 64px 32px repeat-x, url(/themes/stone.svg) 0 0 / 48px 48px;
+  --round: 0;
+  --pixel: pixelated;
+  --title-color: #fff; --title-shadow: 3px 3px 0 #3f3f3f; --title-case: uppercase;
+  --card-shadow: inset 3px 3px 0 #fff, inset -3px -3px 0 #555;
+  --accent-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.35), inset -3px -3px 0 rgba(0, 0, 0, 0.35);
+  --accent-text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+  --well-bg: rgb(176 176 176); --well-shadow: inset 3px 3px 0 #555, inset -3px -3px 0 #fff;
+}
+
+/* Neon Night: deep purple, a glowing grid, magenta and cyan */
+[data-theme='neon'] {
+  color-scheme: dark;
+  --bg: 11 2 33;
+  --surface: 26 11 61;
+  --fg: 255 255 255;
+  --fg2: 196 182 236;
+  --fg3: 150 135 196;
+  --fill: 160 120 255;
+  --line: 160 120 255; --line-a: 0.28;
+  --accent: 214 20 180;
+  --accent-ink: 0 232 255;
+  --danger: 255 90 110;
+  --glass-bg: rgb(20 6 50 / 0.86);
+  --glass-edge: inset 0 0 0 1px rgba(160, 120, 255, 0.35), 0 0 24px rgba(214, 20, 180, 0.25);
+  --page-bg: linear-gradient(rgba(255, 43, 214, 0.07) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, rgba(0, 232, 255, 0.06) 1px, transparent 1px) 0 0 / 32px 32px,
+    radial-gradient(circle at 50% -10%, rgba(214, 20, 180, 0.35) 0, transparent 55%), rgb(11 2 33);
+  --title-color: #fff; --title-shadow: 0 0 14px #ff2bd6, 0 0 3px #ff8be9;
+  --card-shadow: 0 0 0 1px rgba(160, 120, 255, 0.3);
+  --accent-shadow: 0 0 18px rgba(255, 43, 214, 0.55);
+}
+
+/* Ocean: pale sea, deep teal */
+[data-theme='ocean'] {
+  color-scheme: light;
+  --bg: 227 242 247;
+  --surface: 255 255 255;
+  --fg: 5 41 58;
+  --fg2: 50 95 115;
+  --fg3: 110 150 165;
+  --fill: 10 126 164;
+  --line: 10 126 164; --line-a: 0.2;
+  --accent: 10 116 152;
+  --accent-ink: 6 100 135;
+  --glass-bg: rgb(240 250 252 / 0.86);
+  --glass-edge: inset 0 0 0 1px rgba(10, 116, 152, 0.15);
+  --page-bg: radial-gradient(ellipse at 50% -20%, #bfe6f2 0, transparent 60%), linear-gradient(180deg, #e3f2f7, #f2fafc);
+  --card-shadow: 0 2px 10px rgba(10, 116, 152, 0.08);
+}
+
+html { background: rgb(var(--bg)); }
+body, .themed-bg { background: var(--page-bg); color: rgb(var(--fg)); font-family: var(--font); image-rendering: var(--pixel); }
+body *, .themed-bg * { image-rendering: auto; }
+h1 { color: var(--title-color); font-style: var(--title-style); text-shadow: var(--title-shadow); text-transform: var(--title-case); }
+.bg-accent { background-image: var(--accent-image); box-shadow: var(--accent-shadow); text-shadow: var(--accent-text-shadow); }
+.bg-fill { background-color: var(--well-bg); box-shadow: var(--well-shadow); }
+body {
+  @apply antialiased;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  -webkit-text-size-adjust: 100%;
+}
+button { -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+input, textarea, select { font-size: 16px; }
+input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; }
+::selection { background: rgb(var(--accent) / 0.25); }
+
+@layer base {
+  :focus-visible { outline: 3px solid rgb(var(--accent) / 0.6); outline-offset: 2px; }
+  :focus:not(:focus-visible) { outline: none; }
+}
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: var(--glass-edge);
+  }
+  .card { background: rgb(var(--surface)); box-shadow: var(--card-shadow); }
+  /* The chosen half of the Songs | Playlists switch: white in light mode, a lifted grey in Classic's dark */
+  .seg-on { background: rgb(var(--surface)); box-shadow: var(--card-shadow), 0 1px 2px rgba(0, 0, 0, 0.08); }
+  @media (prefers-color-scheme: dark) { [data-theme='classic'] .seg-on { background: rgb(99 99 102); } }
+  .prose-wrap { overflow-wrap: anywhere; }
+}
+
+/* The song position slider: a thin track that fills with the accent, a small round thumb */
+.scrubber { -webkit-appearance: none; appearance: none; height: 22px; background: transparent; touch-action: none; }
+.scrubber::-webkit-slider-runnable-track {
+  height: 5px; border-radius: 3px;
+  background: linear-gradient(to right, rgb(var(--fg) / .75) var(--p), rgb(var(--fill) / .28) var(--p));
+}
+.scrubber::-moz-range-track { height: 5px; border-radius: 3px; background: rgb(var(--fill) / .28); }
+.scrubber::-moz-range-progress { height: 5px; border-radius: 3px; background: rgb(var(--fg) / .75); }
+.scrubber::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; margin-top: -4.5px; border-radius: 50%; background: rgb(var(--fg)); }
+.scrubber::-moz-range-thumb { width: 14px; height: 14px; border: 0; border-radius: 50%; background: rgb(var(--fg)); }
+
+/* Playing indicator on the current song */
+.bar { height: 30%; }
+.bars-on .bar { animation: bar .9s ease-in-out infinite alternate; }
+@keyframes bar { from { height: 25%; } to { height: 100%; } }
+@media (prefers-reduced-motion: reduce) { .bars-on .bar { animation: none; height: 70%; } }
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass { background: rgb(var(--surface)); }
+}

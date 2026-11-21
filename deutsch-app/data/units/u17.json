@@ -1,0 +1,375 @@
+{
+ "id": "u17",
+ "n": 17,
+ "phase": 1,
+ "level": "B2",
+ "title": "Kommaregeln (Beistrich)",
+ "weak": true,
+ "tips": {
+  "de": "Ein Beistrich steht: 1) zwischen Hauptsatz und Nebensatz – immer vor dass, ob, weil, wenn, obwohl, damit, als, nachdem … und nach einem vorangestellten Nebensatz. 2) vor und nach Relativsätzen (der, die, das, in denen …). 3) vor Infinitivgruppen mit um/ohne/statt/anstatt/außer/als … zu und wenn ein Nomen, „es“ oder ein da-Wort darauf hinweist (Es ist wichtig, … zu …; Es kommt darauf an, … zu …). 4) bei Aufzählungen ohne „und/oder“. 5) vor aber, sondern, doch, jedoch (als Konjunktion). 6) nach Anrede im Brief („Sehr geehrte Damen und Herren,“). KEIN Beistrich: nach einem Satzglied am Satzanfang („Auf der anderen Seite haben …“), vor „und/oder“ in Aufzählungen.",
+  "en": "German commas follow grammar, not breathing. Always: before dass/ob/weil/wenn…, around relative clauses, before most zu-infinitive groups, before aber/sondern. Never after a fronted phrase like 'Auf der anderen Seite'.",
+  "contrast": "English puts commas where German doesn't ('On the other hand, …') and leaves them out where German needs them ('I think that…', 'the people who…', 'It is important to…'). Rule of thumb: every time a new verb group starts (a new clause or a zu-infinitive), there should be a comma.",
+  "table": [
+   [
+    "Komma JA",
+    "Ich glaube, dass … / Die Schüler, die … , … / Es ist wichtig, … zu … / …, aber … / …, um … zu …"
+   ],
+   [
+    "Komma NEIN",
+    "Auf der anderen Seite haben … / Meiner Meinung nach ist … / … und … / Ich möchte … lernen."
+   ]
+  ],
+  "examples": [
+   "Ist es wichtig, sich kritisch mit dem Thema auseinanderzusetzen?",
+   "Es wird darüber diskutiert, ob beliebte Urlaubsorte Obergrenzen brauchen.",
+   "Meinungen und Argumente, die berücksichtigt werden sollten, …",
+   "Letztendlich kommt es darauf an, eine Lösung zu finden.",
+   "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet. (kein Beistrich!)"
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u17l1",
+   "title": "Haupt- und Nebensatz",
+   "s": "komma.ns",
+   "gen": {
+    "commaItem": 3
+   },
+   "items": [
+    {
+     "t": "komma",
+     "a": "Es wird darüber diskutiert, ob beliebte Urlaubsorte Obergrenzen brauchen.",
+     "s": "komma.ob"
+    },
+    {
+     "t": "komma",
+     "a": "Ich glaube, dass das Handyverbot sinnvoll ist.",
+     "s": "komma.dass"
+    },
+    {
+     "t": "komma",
+     "a": "Wenn man Instagram öffnet, sieht man viele Urlaubsfotos."
+    },
+    {
+     "t": "komma",
+     "a": "Viele fliegen in den Urlaub, obwohl das dem Klima schadet."
+    },
+    {
+     "t": "komma",
+     "a": "Weil die Mieten steigen, ziehen viele aufs Land."
+    },
+    {
+     "t": "komma",
+     "a": "Man möchte auch dorthin, wenn man sieht, dass alle nach Italien geflogen sind."
+    },
+    {
+     "t": "komma",
+     "a": "Nachdem die Schüler protestiert hatten, reagierte die Regierung."
+    },
+    {
+     "t": "komma",
+     "a": "Ich frage mich, ob Schulproteste wirklich etwas bewirken können.",
+     "s": "komma.ob"
+    },
+    {
+     "t": "mc",
+     "q": "Wo fehlt der Beistrich? „Ich denke dass es schwer ist.“",
+     "o": [
+      "vor „dass“",
+      "nach „dass“",
+      "nirgends"
+     ],
+     "a": "vor „dass“",
+     "s": "komma.dass"
+    },
+    {
+     "t": "mc",
+     "q": "Wo fehlt der Beistrich? „Obwohl es regnet gehen wir hinaus.“",
+     "o": [
+      "nach „regnet“",
+      "nach „Obwohl“",
+      "nirgends"
+     ],
+     "a": "nach „regnet“"
+    },
+    {
+     "t": "fix",
+     "w": "wird darüber diskutiert ob beliebte Urlaubsorte überfüllt sind",
+     "a": "wird darüber diskutiert, ob beliebte Urlaubsorte überfüllt sind",
+     "s": "komma.ob"
+    },
+    {
+     "t": "fix",
+     "w": "Ich hoffe dass mein Brief veröffentlicht wird.",
+     "a": "Ich hoffe, dass mein Brief veröffentlicht wird.",
+     "s": "komma.dass"
+    },
+    {
+     "t": "fix",
+     "w": "Wenn es regnet bleiben wir zu Hause.",
+     "a": "Wenn es regnet, bleiben wir zu Hause."
+    },
+    {
+     "t": "listen",
+     "a": "Ich frage mich, ob Schulproteste wirklich etwas bewirken können."
+    }
+   ]
+  },
+  {
+   "id": "u17l2",
+   "title": "Relativsätze & Einschübe",
+   "s": "komma.rel",
+   "gen": {
+    "commaItem": 2
+   },
+   "items": [
+    {
+     "t": "komma",
+     "a": "Meinungen und Argumente, die berücksichtigt werden sollten, sind wichtig."
+    },
+    {
+     "t": "komma",
+     "a": "Die Schüler, die protestieren, fordern mehr Lehrkräfte."
+    },
+    {
+     "t": "komma",
+     "a": "Es gibt Länder, in denen Kinder in Zelten lernen."
+    },
+    {
+     "t": "komma",
+     "a": "Hallstatt, das jedes Jahr Millionen Touristen besuchen, liegt in Oberösterreich."
+    },
+    {
+     "t": "komma",
+     "a": "Der Artikel, den ich gelesen habe, war sehr einseitig."
+    },
+    {
+     "t": "komma",
+     "a": "Das ist ein Problem, das alle betrifft."
+    },
+    {
+     "t": "fix",
+     "w": "Meinungen und Argumente die berücksichtigt werden sollten",
+     "a": "Meinungen und Argumente, die berücksichtigt werden sollten"
+    },
+    {
+     "t": "fix",
+     "w": "Die Schüler, die protestieren können das auch.",
+     "a": "Die Schüler, die protestieren, können das auch.",
+     "r": "Relativsatz auch HINTEN mit Beistrich schließen."
+    },
+    {
+     "t": "fix",
+     "w": "Das Handy das ich gekauft habe ist kaputt.",
+     "a": "Das Handy, das ich gekauft habe, ist kaputt."
+    },
+    {
+     "t": "listen",
+     "a": "Die Schüler, die protestieren, fordern bessere Lernbedingungen."
+    }
+   ]
+  },
+  {
+   "id": "u17l3",
+   "title": "Infinitivgruppen",
+   "s": "komma.inf",
+   "gen": {
+    "commaItem": 1,
+    "infZu": 2
+   },
+   "items": [
+    {
+     "t": "komma",
+     "a": "Ist es wichtig, sich kritisch mit dem Thema auseinanderzusetzen?"
+    },
+    {
+     "t": "komma",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden."
+    },
+    {
+     "t": "komma",
+     "a": "Ich finde, dass es schwer ist, den Massentourismus richtig zu begrenzen."
+    },
+    {
+     "t": "komma",
+     "a": "Sie haben es geschafft, ihre Träume zu verwirklichen."
+    },
+    {
+     "t": "komma",
+     "a": "Viele lernen nur, um eine gute Note zu bekommen."
+    },
+    {
+     "t": "komma",
+     "a": "Statt mit dem Auto zu fahren, nehmen wir den Zug."
+    },
+    {
+     "t": "komma",
+     "a": "Es ist leicht, anderen die Schuld zuzuschieben."
+    },
+    {
+     "t": "mc",
+     "q": "Braucht dieser Satz einen Beistrich? „Ich möchte im Ausland studieren.“",
+     "o": [
+      "Nein",
+      "Ja, nach „möchte“"
+     ],
+     "a": "Nein",
+     "keepOrder": true,
+     "r": "Modalverb + Infinitiv ohne zu → kein Beistrich."
+    },
+    {
+     "t": "fix",
+     "w": "ist es wichtig sich kritisch auseinanderzusetzen",
+     "a": "ist es wichtig, sich kritisch auseinanderzusetzen"
+    },
+    {
+     "t": "fix",
+     "w": "Letztendlich kommt es darauf an eine Lösung zu finden.",
+     "a": "Letztendlich kommt es darauf an, eine Lösung zu finden."
+    },
+    {
+     "t": "fix",
+     "w": "dass es schwer ist den Massentourismus zu begrenzen",
+     "a": "dass es schwer ist, den Massentourismus zu begrenzen"
+    },
+    {
+     "t": "fix",
+     "w": "Er spart um ein Auto zu kaufen.",
+     "a": "Er spart, um ein Auto zu kaufen."
+    },
+    {
+     "t": "listen",
+     "a": "Ist es wichtig, sich kritisch mit dem Thema auseinanderzusetzen?"
+    }
+   ]
+  },
+  {
+   "id": "u17l4",
+   "title": "Kein Beistrich! (V2, und, oder)",
+   "s": "komma.kein",
+   "gen": {
+    "commaItem": 1,
+    "v2Front": 2
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+      "Auf der anderen Seite, haben alle Schüler Zugriff auf das Internet."
+     ],
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet.",
+     "y": [
+      "Nach einem Satzglied auf Position 1 kein Beistrich",
+      "Nach einer Einleitung immer Beistrich",
+      "Beides möglich"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Meiner Meinung nach ist das falsch.",
+      "Meiner Meinung nach, ist das falsch."
+     ],
+     "a": "Meiner Meinung nach ist das falsch."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Wir brauchen mehr Lehrkräfte und kleinere Klassen.",
+      "Wir brauchen mehr Lehrkräfte, und kleinere Klassen."
+     ],
+     "a": "Wir brauchen mehr Lehrkräfte und kleinere Klassen."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist richtig?",
+     "o": [
+      "Im Sommer kommen viele Touristen.",
+      "Im Sommer, kommen viele Touristen.",
+      "Im Sommer, viele Touristen kommen."
+     ],
+     "a": "Im Sommer kommen viele Touristen."
+    },
+    {
+     "t": "komma",
+     "a": "Wir brauchen mehr Lehrkräfte, kleinere Klassen und bessere Computer."
+    },
+    {
+     "t": "komma",
+     "a": "Der Tourismus bringt Geld, aber er zerstört auch die Natur."
+    },
+    {
+     "t": "komma",
+     "a": "Wir brauchen keine Verbote, sondern bessere Angebote."
+    },
+    {
+     "t": "komma",
+     "a": "Sehr geehrte Damen und Herren, in Ihrem Artikel berichten Sie über das Handyverbot."
+    },
+    {
+     "t": "fix",
+     "w": "Auf der anderen Seite, haben alle Schüler ein Handy.",
+     "a": "Auf der anderen Seite haben alle Schüler ein Handy.",
+     "s": "komma.kein"
+    },
+    {
+     "t": "fix",
+     "w": "Zum Beispiel, kann man mit dem Zug fahren.",
+     "a": "Zum Beispiel kann man mit dem Zug fahren."
+    },
+    {
+     "t": "fix",
+     "w": "Mit freundlichen Grüßen, Greta Grosz",
+     "a": "Mit freundlichen Grüßen Greta Grosz",
+     "r": "Nach der Grußformel steht kein Beistrich."
+    },
+    {
+     "t": "listen",
+     "a": "Auf der anderen Seite haben alle Schüler Zugriff auf das Internet."
+    }
+   ]
+  },
+  {
+   "id": "u17l5",
+   "title": "Beistrich-Mix",
+   "s": "komma",
+   "gen": {
+    "commaItem": 4
+   },
+   "items": [
+    {
+     "t": "komma",
+     "a": "Ich bin der Meinung, dass Schulproteste wirkliche Änderungen bewirken können, wenn viele Schüler mitmachen."
+    },
+    {
+     "t": "komma",
+     "a": "Obwohl das Fliegen billig ist, fahre ich mit dem Zug, weil es umweltfreundlicher ist."
+    },
+    {
+     "t": "komma",
+     "a": "Die Jugendlichen, die viel Zeit am Handy verbringen, schlafen oft zu wenig."
+    },
+    {
+     "t": "komma",
+     "a": "Es ist sinnvoll, die Angabe zweimal zu lesen, bevor man zu schreiben beginnt."
+    },
+    {
+     "t": "komma",
+     "a": "Kritiker behaupten, dass Jugendliche zu wenig über Politik wissen, aber das stimmt nicht."
+    },
+    {
+     "t": "komma",
+     "a": "Wenn man sieht, dass alle nach Italien fliegen, möchte man auch dorthin."
+    },
+    {
+     "t": "listen",
+     "a": "Obwohl das Fliegen billig ist, fahre ich mit dem Zug, weil es umweltfreundlicher ist."
+    }
+   ]
+  }
+ ]
+}

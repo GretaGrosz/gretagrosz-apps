@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* The shared gretagrosz.com app tokens. Deca only sets the colour of your streak (--accent, --button, --link, --tint)
+   from theme.js; everything else is the system look, light or dark with the phone. */
+:root {
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --bg: #f2f2f7;
+  --surface: #fff;
+  --label: #000;
+  --label-2: #6c6c70;
+  --sep: rgba(60, 60, 67, 0.29);
+  --fill: rgba(118, 118, 128, 0.12);
+  --accent: #ff3b30;
+  --button: #db352c;
+  --on-accent: #fff;
+  --link: #cc3229;
+  --tint: #ffe4e2;
+  --green: #248a3d;
+  --green-fill: #34c759;
+  --red: #d70015;
+  --red-fill: #ff3b30;
+  --r-card: 20px;
+  --r-control: 12px;
+  --h-button: 50px;
+  --tap: 44px;
+  --glass-bg: rgb(242 242 247 / 0.72);
+  --glass: saturate(180%) blur(20px);
+  --glass-edge: inset 0 -0.5px 0 rgba(0, 0, 0, 0.12);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur: 200ms;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000;
+    --surface: #1c1c1e;
+    --label: #fff;
+    --label-2: #aeaeb2;
+    --sep: rgba(84, 84, 88, 0.6);
+    --fill: rgba(118, 118, 128, 0.24);
+    --green: #30d158;
+    --red: #ff6961;
+    --glass-bg: rgb(0 0 0 / 0.72);
+    --glass-edge: inset 0 -0.5px 0 rgba(255, 255, 255, 0.14);
+  }
+}
+
+html {
+  background: var(--bg);
+  color: var(--label);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font: 400 17px/22px var(--font);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+button {
+  min-height: var(--tap);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
+  outline-offset: 2px;
+}
+input,
+textarea,
+select {
+  font-size: 17px;
+}
+
+.app {
+  min-height: 100dvh;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+.page {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 0 16px calc(32px + env(safe-area-inset-bottom));
+}
+.page-fill {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav bar: the one glass surface */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 -16px;
+  padding: env(safe-area-inset-top) 8px 0;
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass);
+  backdrop-filter: var(--glass);
+  box-shadow: var(--glass-edge);
+}
+.navbar-plain {
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Text styles */
+.large-title { font-size: 34px; line-height: 41px; font-weight: 700; letter-spacing: 0.01em; }
+.title1 { font-size: 28px; line-height: 34px; font-weight: 700; }
+.title2 { font-size: 22px; line-height: 28px; font-weight: 700; }
+.headline { font-size: 17px; line-height: 22px; font-weight: 600; }
+.body { font-size: 17px; line-height: 22px; }
+.subhead { font-size: 15px; line-height: 20px; }
+.footnote { font-size: 13px; line-height: 18px; color: var(--label-2); }
+.caption { font-size: 13px; line-height: 18px; color: var(--label-2); text-transform: uppercase; }
+.secondary { color: var(--label-2); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Inset grouped list */
+.group { background: var(--surface); border-radius: var(--r-card); overflow: hidden; }
+.row { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 11px 16px; width: 100%; text-align: left; position: relative; }
+.group > .row + .row::before,
+.group > * + .row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 16px;
+  right: 0;
+  height: 0.5px;
+  background: var(--sep);
+}
+button.row:active,
+label.row:active { background: var(--fill); }
+
+/* Buttons: flat, like iOS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--h-button);
+  padding: 0 22px;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 600;
+  transition: transform 120ms var(--ease), opacity var(--dur);
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.35; pointer-events: none; }
+.btn-filled { background: var(--button); color: var(--on-accent); }
+.btn-tinted { background: var(--tint); color: var(--link); }
+.btn-gray { background: var(--fill); color: var(--label); }
+.btn-green { background: var(--green-fill); color: #000; }
+.btn-red { background: #d70015; color: #fff; }
+.link { color: var(--link); font-size: 17px; display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 8px; }
+.link:disabled { opacity: 0.35; }
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: var(--tap); height: var(--tap); border-radius: 999px; color: var(--link); }
+.icon-btn:active { background: var(--fill); }
+
+/* Key caps, only where there is a keyboard */
+.kbd {
+  display: none;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 22px;
+  background: rgba(0, 0, 0, 0.12);
+}
+@media (hover: hover) and (pointer: fine) {
+  .kbd { display: inline-block; }
+}
+
+/* Text field */
+.field {
+  background: var(--surface);
+  border-radius: var(--r-control);
+  border: 2px solid transparent;
+  color: var(--label);
+  transition: border-color var(--dur);
+}
+.field::placeholder { color: var(--label-2); }
+.field:focus { border-color: color-mix(in srgb, var(--accent) 55%, transparent); outline: none; }
+.field.is-right { border-color: var(--green-fill); }
+.field.is-wrong { border-color: var(--red-fill); }
+
+/* Flashcard flip */
+.flip { perspective: 1400px; }
+.flip-inner { transition: transform 450ms var(--ease); transform-style: preserve-3d; }
+.flip-inner.flipped { transform: rotateY(180deg); }
+.flip-face { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip-back { transform: rotateY(180deg); }
+
+/* Segmented progress (cards, test) */
+.segments { display: flex; gap: 3px; height: 6px; }
+.segments > span { flex: 1; border-radius: 3px; background: var(--fill); transition: background-color 180ms var(--ease); }
+.segments > span.on { background: color-mix(in srgb, var(--label) 38%, transparent); }
+.segments > span.right { background: var(--green-fill); animation: seg-pop 260ms var(--spring); }
+.segments > span.wrong { background: var(--red-fill); animation: seg-pop 260ms var(--spring); }
+
+/* Motion: quick and springy; nothing moves for people who ask for reduced motion */
+@keyframes pop { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.06); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes rise { 0% { transform: translateY(10px); opacity: 0; } 100% { transform: none; opacity: 1; } }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes shake { 0%, 100% { transform: none; } 20% { transform: translateX(-8px); } 40% { transform: translateX(7px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.18); } 100% { transform: scale(1); } }
+@keyframes seg-pop { 0% { transform: scaleY(1); } 50% { transform: scaleY(1.8); } 100% { transform: scaleY(1); } }
+@keyframes num-out { to { transform: translateY(-110%); opacity: 0; } }
+@keyframes num-in { 0% { transform: translateY(110%); opacity: 0; } 70% { transform: translateY(-6%); opacity: 1; } 100% { transform: none; opacity: 1; } }
+@keyframes fall { 0% { transform: translateY(-10vh) rotate(0); opacity: 1; } 100% { transform: translateY(110vh) rotate(600deg); opacity: 0.9; } }
+@keyframes glow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--green-fill) 55%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
+.pop { animation: pop 280ms var(--ease) both; }
+.rise { animation: rise 220ms var(--ease) both; }
+.fade { animation: fade 200ms var(--ease) both; }
+.shake { animation: shake 320ms ease-out; }
+.bump { animation: bump 240ms var(--spring); }
+.glow { animation: glow 500ms var(--ease); }
+.num-out { animation: num-out 380ms cubic-bezier(0.5, 0, 0.75, 0) 350ms forwards; }
+.num-in { opacity: 0; animation: num-in 480ms var(--ease) 650ms forwards; }
+.confetti-piece { position: fixed; top: 0; width: 8px; height: 12px; border-radius: 3px; opacity: 0; animation: fall 2.4s ease-in forwards; pointer-events: none; }
+
+.ring-btn { transition: transform 160ms var(--ease); }
+.ring-btn:active { transform: scale(0.96); }
+
+/* Year grid: squares cascade in (all within 400 ms), today pulses once; the day sheet slides up */
+@keyframes sq-in { 0% { transform: scale(0.3); opacity: 0; } 100% { transform: none; opacity: 1; } }
+@keyframes today-pulse { 0% { transform: scale(1); } 40% { transform: scale(1.4); } 100% { transform: scale(1); } }
+@keyframes sheet-up { from { transform: translateY(100%); } to { transform: none; } }
+.year-sq { animation: sq-in 100ms var(--ease) both; }
+.year-sq:active { transform: scale(0.9); }
+.year-today { animation: sq-in 100ms var(--ease) both, today-pulse 520ms var(--spring) 420ms 1; }
+.sheet {
+  background: rgb(242 242 247 / 0.9);
+  -webkit-backdrop-filter: var(--glass);
+  backdrop-filter: var(--glass);
+  box-shadow: 0 -10px 40px -12px rgba(0, 0, 0, 0.25);
+  animation: sheet-up 260ms var(--ease) both;
+}
+@media (prefers-color-scheme: dark) { .sheet { background: rgb(28 28 30 / 0.9); } }
+.sheet-backdrop { animation: fade 200ms var(--ease) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; }
+  .num-out { display: none; }
+  .confetti-piece { display: none; }
+}

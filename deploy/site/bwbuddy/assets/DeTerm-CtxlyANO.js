@@ -1,0 +1,1 @@
+import{b as a,j as l}from"./index-BIoIB9NV.js";function r({term:n,shown:e,className:s=""}){const{lang:t}=a();return t==="de"||!n||n===e||!new RegExp("\\p{L}","u").test(n)?null:l.jsx("span",{lang:"de",className:`block text-[15px] font-normal text-label2 ${s}`,children:n})}export{r as D};

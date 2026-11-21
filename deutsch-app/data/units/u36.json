@@ -1,0 +1,250 @@
+{
+ "id": "u36",
+ "n": 36,
+ "phase": 4,
+ "level": "C1",
+ "title": "Rektion C1: Genitivverben, Adjektive, Präpositionen",
+ "tips": {
+  "de": "Einige Verben und Adjektive der Schriftsprache verlangen den Genitiv: bedürfen (Das bedarf einer Erklärung), sich bedienen, sich enthalten, gedenken, sich bewusst sein (Ich bin mir der Gefahr bewusst), sich sicher sein, verdächtigen/beschuldigen + Gen. Viele C1-Verben haben feste Präpositionen: beitragen zu, sich beziehen auf, verzichten auf, sich auswirken auf, appellieren an, zweifeln an, sich einsetzen für, ausgehen von, hinweisen auf, abhängen von, resultieren aus. Dazu Nomen mit Präposition: die Auswirkung auf, der Zweifel an, der Hinweis auf, der Verzicht auf, die Abhängigkeit von.",
+  "en": "Some formal verbs and adjectives take the genitive: bedürfen, sich bewusst sein, sich bedienen. Many C1 verbs have fixed prepositions: sich auswirken auf, verzichten auf, appellieren an, ausgehen von. Learn verb + preposition + case as one unit, and the noun form too (die Auswirkung auf).",
+  "contrast": "English 'be aware of the danger' → German 'sich der Gefahr bewusst sein' (genitive, no preposition). 'It requires an explanation' → 'Es bedarf einer Erklärung' (genitive). 'Effect on' → 'Auswirkung auf'; 'doubt about' → 'Zweifel an'.",
+  "examples": [
+   "Ich bin mir der Gefahr bewusst.",
+   "Das bedarf einer genauen Erklärung.",
+   "Der Klimawandel wirkt sich auf alle Lebensbereiche aus.",
+   "Ich appelliere an alle Verantwortlichen.",
+   "Wir gehen davon aus, dass die Preise weiter steigen."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u36l1",
+   "title": "Genitivverben & -adjektive",
+   "s": "rektion.gen",
+   "items": [
+    {
+     "t": "gap",
+     "q": "Ich bin mir ___ Gefahr bewusst.",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Das bedarf ___ genauen Erklärung.",
+     "h": "(ein-)",
+     "a": "einer"
+    },
+    {
+     "t": "gap",
+     "q": "Viele Firmen bedienen sich ___ künstlichen Intelligenz.",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Er wurde ___ Betrugs beschuldigt.",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Sie enthielt sich ___ Stimme.",
+     "a": "der"
+    },
+    {
+     "t": "mc",
+     "q": "„be aware of the risks“",
+     "o": [
+      "sich der Risiken bewusst sein",
+      "sich über die Risiken bewusst sein",
+      "sich den Risiken bewusst sein"
+     ],
+     "a": "sich der Risiken bewusst sein"
+    },
+    {
+     "t": "fix",
+     "w": "Ich bin mir die Gefahr bewusst.",
+     "a": "Ich bin mir der Gefahr bewusst."
+    },
+    {
+     "t": "fix",
+     "w": "Das bedarf eine Erklärung.",
+     "a": "Das bedarf einer Erklärung."
+    },
+    {
+     "t": "tr",
+     "en": "We are aware of the problem.",
+     "a": "Wir sind uns des Problems bewusst."
+    },
+    {
+     "t": "tr",
+     "en": "This requires a clear decision.",
+     "a": "Das bedarf einer klaren Entscheidung.",
+     "acc": [
+      "Dies bedarf einer klaren Entscheidung."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Wir sind uns der Gefahr durchaus bewusst."
+    }
+   ]
+  },
+  {
+   "id": "u36l2",
+   "title": "Verben mit Präposition C1",
+   "s": "vprep.c1",
+   "gen": {
+    "verbPrep": 1,
+    "daWo": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Der Klimawandel wirkt sich ___ alle Lebensbereiche aus.",
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Ich appelliere ___ alle Verantwortlichen.",
+     "a": "an"
+    },
+    {
+     "t": "gap",
+     "q": "Wir gehen ___ aus, dass die Preise weiter steigen.",
+     "h": "(da-Wort)",
+     "a": "davon"
+    },
+    {
+     "t": "gap",
+     "q": "Viele verzichten bewusst ___ das Fliegen.",
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Ich beziehe mich ___ Ihren Artikel vom 3. März.",
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Die Probleme resultieren ___ fehlenden Investitionen.",
+     "a": "aus"
+    },
+    {
+     "t": "gap",
+     "q": "Die Autorin weist ___ hin, dass viele Jugendliche gestresst sind.",
+     "h": "(da-Wort)",
+     "a": "darauf"
+    },
+    {
+     "t": "gap",
+     "q": "Ich zweifle ___, dass das Verbot wirkt.",
+     "h": "(da-Wort)",
+     "a": "daran"
+    },
+    {
+     "t": "fix",
+     "w": "Ich beziehe mich zu Ihrem Artikel.",
+     "a": "Ich beziehe mich auf Ihren Artikel."
+    },
+    {
+     "t": "fix",
+     "w": "Der Lärm wirkt sich an die Gesundheit aus.",
+     "a": "Der Lärm wirkt sich auf die Gesundheit aus."
+    },
+    {
+     "t": "tr",
+     "en": "I am referring to your article.",
+     "a": "Ich beziehe mich auf Ihren Artikel."
+    },
+    {
+     "t": "tr",
+     "en": "We assume that prices will continue to rise.",
+     "a": "Wir gehen davon aus, dass die Preise weiter steigen werden.",
+     "acc": [
+      "Wir gehen davon aus, dass die Preise weiter steigen."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Ich beziehe mich auf Ihren Artikel vom 3. März."
+    }
+   ]
+  },
+  {
+   "id": "u36l3",
+   "title": "Nomen mit Präposition",
+   "s": "vprep.nomen",
+   "items": [
+    {
+     "t": "match",
+     "q": "Nomen → Präposition",
+     "pairs": [
+      [
+       "die Auswirkung",
+       "auf"
+      ],
+      [
+       "der Zweifel",
+       "an"
+      ],
+      [
+       "die Abhängigkeit",
+       "von"
+      ],
+      [
+       "der Beitrag",
+       "zu"
+      ]
+     ]
+    },
+    {
+     "t": "match",
+     "q": "Nomen → Präposition",
+     "pairs": [
+      [
+       "der Verzicht",
+       "auf"
+      ],
+      [
+       "die Kritik",
+       "an"
+      ],
+      [
+       "die Angst",
+       "vor"
+      ],
+      [
+       "das Interesse",
+       "an"
+      ]
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Auswirkungen des Handys ___ die Konzentration sind groß.",
+     "a": "auf"
+    },
+    {
+     "t": "gap",
+     "q": "Es gibt Zweifel ___ der Wirksamkeit des Verbots.",
+     "a": "an"
+    },
+    {
+     "t": "gap",
+     "q": "Die Abhängigkeit ___ sozialen Medien wächst.",
+     "a": "von"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib im Nominalstil:\nDas Handy wirkt sich auf die Konzentration aus. → Die Auswirkung …",
+     "a": "Die Auswirkung des Handys auf die Konzentration",
+     "acc": [
+      "Die Auswirkung des Handys auf die Konzentration ist groß."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Es gibt große Zweifel an der Wirksamkeit des Verbots."
+    }
+   ]
+  }
+ ]
+}

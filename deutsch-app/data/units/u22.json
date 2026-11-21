@@ -1,0 +1,195 @@
+{
+ "id": "u22",
+ "n": 22,
+ "phase": 2,
+ "level": "B2",
+ "title": "Genitiv in der Schriftsprache",
+ "tips": {
+  "de": "In der Schriftsprache (und in der Schularbeit!) verwendet man den Genitiv statt „von + Dativ“: die Folgen des Klimawandels, die Meinung der Jugendlichen. Maskuline und neutrale Nomen bekommen -s oder -es (des Staates, des Landes), feminine und Plural nicht. Präpositionen mit Genitiv: wegen, trotz, während, aufgrund, innerhalb, außerhalb, statt/anstatt, laut, angesichts, bezüglich, hinsichtlich. „laut“ geht auch mit Dativ.",
+  "en": "In written German, use the genitive instead of 'von + dative': die Folgen des Klimawandels. Masculine/neuter nouns add -(e)s. Prepositions like wegen, trotz, während, aufgrund take the genitive.",
+  "contrast": "English uses 'of' or 's ('the consequences of climate change'). German uses the genitive case: no extra word, just the article (des/der) and the -s on masculine/neuter nouns. 'wegen dem' is spoken Austrian German; in the Schularbeit write 'wegen des'.",
+  "examples": [
+   "Wegen des Tourismus können sie neue Restaurants bauen.",
+   "aus Sicht der Wirtschaft",
+   "die verschiedenen Aspekte dieses Themas",
+   "Aufgrund der hohen Mieten ziehen viele weg.",
+   "Innerhalb eines Jahres stieg die Zahl der Touristen stark."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u22l1",
+   "title": "Genitiv statt von",
+   "s": "art.G",
+   "gen": {
+    "nounPhraseCase": 2
+   },
+   "items": [
+    {
+     "t": "tf",
+     "q": "Schreib mit Genitiv:\ndie Folgen von dem Klimawandel",
+     "a": "die Folgen des Klimawandels"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Genitiv:\ndie Meinung von den Jugendlichen",
+     "a": "die Meinung der Jugendlichen"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Genitiv:\ndie Rolle von dem Staat",
+     "a": "die Rolle des Staates",
+     "acc": [
+      "die Rolle des Staats"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Genitiv:\ndie Bedeutung von diesem Thema",
+     "a": "die Bedeutung dieses Themas"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Genitiv:\ndie Zukunft von unserer Gesellschaft",
+     "a": "die Zukunft unserer Gesellschaft"
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Genitiv:\nder Sitz von dem Premierminister",
+     "a": "der Sitz des Premierministers"
+    },
+    {
+     "t": "gap",
+     "q": "Die Nachteile des ___ sind bekannt.",
+     "h": "(der Massentourismus)",
+     "a": "Massentourismus"
+    },
+    {
+     "t": "gap",
+     "q": "Das Ziel des ___ ist klar.",
+     "h": "(das Projekt)",
+     "a": "Projekts",
+     "acc": [
+      "Projektes"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Meinung eines ___ ist wichtig.",
+     "h": "(der Experte)",
+     "a": "Experten"
+    },
+    {
+     "t": "gap",
+     "q": "die Rechte ___ Kinder",
+     "h": "(alle)",
+     "a": "aller"
+    },
+    {
+     "t": "fix",
+     "w": "die verschiedenen Aspekte von diesem Thema",
+     "a": "die verschiedenen Aspekte dieses Themas",
+     "r": "Schriftsprache: Genitiv."
+    },
+    {
+     "t": "fix",
+     "w": "Die Meinung des Staat ist klar.",
+     "a": "Die Meinung des Staates ist klar."
+    },
+    {
+     "t": "listen",
+     "a": "Die Folgen des Klimawandels betreffen die Zukunft unserer Gesellschaft."
+    }
+   ]
+  },
+  {
+   "id": "u22l2",
+   "title": "Präpositionen mit Genitiv",
+   "s": "prep.G",
+   "gen": {
+    "prepCase": 1
+   },
+   "items": [
+    {
+     "t": "gap",
+     "q": "Aufgrund ___ hohen Mieten ziehen viele aufs Land.",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Innerhalb ___ Jahres stieg die Zahl der Touristen.",
+     "h": "(ein-)",
+     "a": "eines"
+    },
+    {
+     "t": "gap",
+     "q": "Trotz ___ Verbots nutzen viele das Handy.",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Während ___ Unterrichts bleibt das Handy im Spind.",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Angesichts ___ Klimakrise müssen wir handeln.",
+     "a": "der"
+    },
+    {
+     "t": "gap",
+     "q": "Laut ___ Studie schlafen Jugendliche zu wenig.",
+     "h": "(ein-)",
+     "a": "einer"
+    },
+    {
+     "t": "gap",
+     "q": "Statt ___ Autos nehmen viele das Rad.",
+     "a": "des"
+    },
+    {
+     "t": "gap",
+     "q": "Außerhalb ___ Städte fahren die Busse selten.",
+     "a": "der"
+    },
+    {
+     "t": "fix",
+     "w": "Wegen dem Regen fällt der Ausflug aus.",
+     "a": "Wegen des Regens fällt der Ausflug aus."
+    },
+    {
+     "t": "fix",
+     "w": "Aufgrund den hohen Preisen fliegen weniger.",
+     "a": "Aufgrund der hohen Preise fliegen weniger."
+    },
+    {
+     "t": "fix",
+     "w": "Trotz dem schlechten Wetter kamen viele.",
+     "a": "Trotz des schlechten Wetters kamen viele."
+    },
+    {
+     "t": "tr",
+     "en": "because of the high rents",
+     "a": "wegen der hohen Mieten",
+     "acc": [
+      "aufgrund der hohen Mieten"
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "during the lesson",
+     "a": "während des Unterrichts"
+    },
+    {
+     "t": "tr",
+     "en": "within a year",
+     "a": "innerhalb eines Jahres"
+    },
+    {
+     "t": "listen",
+     "a": "Aufgrund der hohen Mieten ziehen viele junge Menschen aufs Land."
+    }
+   ]
+  }
+ ]
+}

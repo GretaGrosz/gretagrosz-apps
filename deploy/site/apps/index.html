@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Apps · Greta Grosz</title>
+<meta name="description" content="Seven apps Greta Grosz designed and built: BW Buddy, Agora, QED, Deca, Lock-In, Yap and Blank. All live." />
+<meta property="og:title" content="Apps · Greta Grosz" />
+<meta property="og:description" content="Seven apps Greta Grosz designed and built: BW Buddy, Agora, QED, Deca, Lock-In, Yap and Blank. All live." />
+<meta property="og:url" content="https://gretagrosz.com/apps/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://gretagrosz.com/img/og/apps.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://gretagrosz.com/apps/" />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+<link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/apps.css" />
+<script>
+  // Hide the page for a moment if it will be shown in German, so English never flashes first
+  try { var l = localStorage.getItem('lang') } catch (e) {}
+  if (l === 'de' || (l !== 'en' && (navigator.languages || [navigator.language]).some(function (x) { return /^de\b/i.test(x) }))) document.documentElement.classList.add('i18n-wait')
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="me" href="/"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="30" fill="#232B3D"/><g transform="translate(16 16) scale(.68)" fill="none" stroke="#D9E0EA" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M36.48 21 A32 32 0 0 1 81.88 52.79 Q81 61 72 61 L46 61"/><path d="M63.52 79 A32 32 0 0 1 18.12 47.21 Q19 39 28 39 L54 39"/></g></svg><span class="name">Greta<span class="last"> Grosz</span></span></a>
+  <div class="links"><a href="/finance/">Finance</a><a href="/apps/" aria-current="page">Apps</a><a href="/business/">Business</a></div>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div>
+</nav>
+
+<main id="main">
+<header class="apps-hero">
+  <div class="wrap">
+    <h1 class="rv">My apps</h1>
+  </div>
+  <div class="shelf-stage">
+    <span class="peek" aria-hidden="true"><img src="/img/mascot.webp" alt="" width="416" height="261" /></span>
+    <!-- apps:shelf -->
+    <nav class="shelf" aria-label="The seven apps">
+      <a href="/bwbuddy/" style="--i:0"><span class="app-icon"><img src="/img/icon-bw.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">BW Buddy</span></a>
+      <a href="/stance/" style="--i:1"><span class="app-icon"><img src="/img/icon-stance.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">Agora</span></a>
+      <a href="/regional/" style="--i:2"><span class="app-icon"><img src="/img/icon-qed.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">QED</span></a>
+      <a href="/tenaday/" style="--i:3"><span class="app-icon"><img src="/img/icon-ten.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">Deca</span></a>
+      <a href="/yap/" style="--i:4"><span class="app-icon"><img src="/img/icon-yap.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">Yap</span></a>
+      <a href="/blank/" style="--i:5"><span class="app-icon"><img src="/img/icon-blank.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">Blank</span></a>
+      <a href="/deutsch/" style="--i:6"><span class="app-icon"><img src="/img/icon-deutsch.webp" alt="" width="240" height="240" decoding="async" /></span><span class="nm">Lock-In</span></a>
+    </nav>
+    <!-- /apps:shelf -->
+  </div>
+</header>
+
+<div class="stack">
+<span class="anchor" id="bwbuddy"></span>
+<section data-app="bwbuddy" class="app" aria-labelledby="bw-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-bw.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>BW Buddy</b><span>Business studies</span></div></div>
+      <h2 id="bw-h">BW for the HAK, years 1 to 3.</h2>
+      <p class="lead">Put in your school exam date and Home becomes the plan: a grade forecast, and exactly the topics between you and the next grade.</p>
+      <p class="more">Lessons, quizzes and flashcards that come back just before you would forget them, in German, English and Hungarian. Every bit of XP grows Loopy’s market stall.</p>
+      <dl class="facts">
+        <div><dt>Lessons</dt><dd>48</dd><dd>years 1–3</dd></div>
+        <div><dt>Questions</dt><dd>775</dd><dd>in quizzes</dd></div>
+        <div><dt>Forecast</dt><dd>1–5</dd><dd>your grade for the next test</dd></div>
+      </dl>
+      <a class="btn" href="/bwbuddy/">Open BW Buddy</a>
+    </div>
+    <div class="app-demo"><div class="scene" data-scene="bwbuddy"></div></div>
+  </div>
+</section>
+
+<span class="anchor" id="stance"></span>
+<section data-app="stance" class="app flip" aria-labelledby="stance-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-stance.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>Agora</b><span>Debate</span></div></div>
+      <h2 id="stance-h">Pick a side. Argue it.</h2>
+      <p class="lead">One question a day: you argue your side before you see anyone else’s. Then Argue back puts the AI on the other side for three rounds.</p>
+      <p class="more">A judge quotes your strongest line and names the point you never answered. Practice is speaking training for the oral Matura: 1, 3 or 5 minutes on one of 240 topics or your own list, in English or German, with a coach tip after every talk.</p>
+      <dl class="facts">
+        <div><dt>Argue back</dt><dd>3 rounds</dd><dd>then a verdict</dd></div>
+        <div><dt>Practice</dt><dd>1–5 min</dd><dd>for the oral Matura</dd></div>
+        <div><dt>Topics</dt><dd>240</dd><dd>or your own list</dd></div>
+      </dl>
+      <a class="btn" href="/stance/">Open Agora</a>
+    </div>
+    <div class="app-demo"><div class="scene" data-scene="stance"></div></div>
+  </div>
+</section>
+
+<span class="anchor" id="qed"></span>
+<section data-app="qed" class="app" aria-labelledby="qed-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-qed.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>QED</b><span>Olympiad maths</span></div></div>
+      <h2 id="qed-h">Training for the Maths Olympiad.</h2>
+      <p class="lead">A plan paced to the date of the regional round of the Austrian Mathematical Olympiad.</p>
+      <p class="more">Write a proof on paper and take a photo: the AI marks it out of 8 and highlights the line with the gap. Every past problem since 2015 comes with a full solution, and your results add up to one predicted score out of 32.</p>
+      <dl class="facts">
+        <div><dt>AI marking</dt><dd>0–8</dd><dd>on a photo of your proof</dd></div>
+        <div><dt>Problems</dt><dd>48</dd><dd>since 2015</dd></div>
+        <div><dt>Score forecast</dt><dd>of 32</dd><dd>for the competition</dd></div>
+      </dl>
+      <a class="btn" href="/regional/">Open QED</a>
+    </div>
+    <div class="app-demo"><div class="scene" data-scene="qed"></div></div>
+  </div>
+</section>
+
+<span class="anchor" id="deca"></span>
+<section data-app="deca" class="app flip" aria-labelledby="deca-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-ten.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>Deca</b><span>Vocabulary</span></div></div>
+      <h2 id="deca-h">Ten new words a day.</h2>
+      <p class="lead">Five languages, any to any. Paste your school word list and your test date, and Deca spreads the words over the days until the test.</p>
+      <p class="more">Words you get wrong come back for review until they stick, and every word can be heard spoken. Each day you keep your streak, your colour gets a little darker.</p>
+      <dl class="facts">
+        <div><dt>Languages</dt><dd>5</dd><dd>any to any</dd></div>
+        <div><dt>Words</dt><dd>3,660</dd><dd>a new topic every day</dd></div>
+        <div><dt>Your list</dt><dd>Test date</dd><dd>planned to the day</dd></div>
+      </dl>
+      <a class="btn" href="/tenaday/">Open Deca</a>
+    </div>
+    <div class="app-demo"><div class="scene" data-scene="deca"></div></div>
+  </div>
+</section>
+
+<span class="anchor" id="yap"></span>
+<section data-app="yap" class="app" aria-labelledby="yap-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-yap.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>Yap</b><span>Voice social</span></div></div>
+      <h2 id="yap-h">A social app with no typing.</h2>
+      <p class="lead">Every post, reply and chat is a voice note. One tap on Catch up plays everything you haven’t heard, with the pauses cut and the words as captions.</p>
+      <p class="more">Hold to reply in the middle of it. Search finds anything anyone said, an invite link makes you friends at once, and the daily question shows your friends’ answers once you have answered. Guests can listen before they sign up.</p>
+      <dl class="facts">
+        <div><dt>Catch up</dt><dd>1 tap</dd><dd>everything unheard, 1.25×</dd></div>
+        <div><dt>Search</dt><dd>Every word</dd><dd>in every voice note</dd></div>
+        <div><dt>Voice notes</dt><dd>60 s</dd><dd>per post or message</dd></div>
+      </dl>
+      <a class="btn" href="/yap/">Open Yap</a>
+    </div>
+    <div class="app-demo"><div class="scene" data-scene="yap"></div></div>
+  </div>
+</section>
+
+<span class="anchor" id="blank"></span>
+<section data-app="blank" class="app flip" aria-labelledby="blank-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-blank.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>Blank</b><span>Projects</span></div></div>
+      <h2 id="blank-h">A coach for your next hobby project.</h2>
+      <p class="lead">Pick one of 11 hobbies and start a project from a step-by-step plan, worked on in short focus sessions.</p>
+      <p class="more">Every step can get a photo, so the project keeps its own timeline, and a finished project turns into a before-and-after reel. Pair up with one friend by invite link to see each other’s check-ins and send a nudge.</p>
+      <dl class="facts">
+        <div><dt>Hobbies</dt><dd>11</dd><dd>areas to pick</dd></div>
+        <div><dt>Reel</dt><dd>9:16</dd><dd>before and after</dd></div>
+        <div><dt>Buddy</dt><dd>1 friend</dd><dd>check-ins and nudges</dd></div>
+      </dl>
+      <a class="btn" href="/blank/">Open Blank</a>
+    </div>
+    <div class="app-demo"><div class="scene" data-scene="blank"></div></div>
+  </div>
+</section>
+
+<span class="anchor" id="deutsch"></span>
+<section data-app="deutsch" class="app" aria-labelledby="deutsch-h">
+  <div class="app-card rv">
+    <div class="app-text">
+      <div class="app-id"><span class="app-icon"><img src="/img/icon-deutsch.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span><div><b>Lock-In</b><span>German for school</span></div></div>
+      <h2 id="deutsch-h">Every mistake, until it’s gone.</h2>
+      <p class="lead">A grammar path from my German Schularbeit all the way to C1, built from my own corrected mistakes and paced to the test date.</p>
+      <p class="more">Strict checking marks every wrong ending, comma and capital letter, and each mistake comes back until it is right on three different days. Proofreading drills, timed exam simulations with a final checklist, and a copy-paste prompt for feedback from Claude. It all runs in the browser.</p>
+      <dl class="facts">
+        <div><dt>Units</dt><dd>40</dd><dd>A2 to C1</dd></div>
+        <div><dt>Exercises</dt><dd>1,800+</dd><dd>plus endless generated ones</dd></div>
+        <div><dt>Text types</dt><dd>8</dd><dd>with plans and phrases</dd></div>
+      </dl>
+      <a class="btn" href="/deutsch/">Open Lock-In</a>
+    </div>
+    <div class="app-demo"><div class="scene"><img src="/img/deutsch-scene.webp" alt="Lock-In on a phone: the daily plan and a corrected exercise" width="1200" height="960" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover" /></div></div>
+  </div>
+</section>
+</div>
+
+<section class="apps-end" aria-labelledby="end-h">
+  <div class="wrap">
+    <h2 id="end-h" class="rv">More of my work.</h2>
+    <div class="end-grid">
+      <a class="end-card finance rv" style="--d:1" href="/finance/">
+        <span class="eyebrow">Finance</span>
+        <h3>How Austria’s banks compete for Gen Z</h3>
+        <p>My market research, and an Excel tool that recommends a youth account by weighted score.</p>
+        <span class="link">See my finance work</span>
+      </a>
+      <div class="end-card contact rv" style="--d:2">
+        <h3>Let’s talk.</h3>
+        <p>Questions about my apps, or an idea for one?</p>
+        <div class="end-btns" data-contact="apps"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="dock" aria-label="Apps on this page" hidden>
+<!-- apps:dock -->
+  <a href="#bwbuddy" aria-label="BW Buddy"><span class="app-icon"><img src="/img/icon-bw.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+  <a href="#stance" aria-label="Agora"><span class="app-icon"><img src="/img/icon-stance.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+  <a href="#qed" aria-label="QED"><span class="app-icon"><img src="/img/icon-qed.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+  <a href="#deca" aria-label="Deca"><span class="app-icon"><img src="/img/icon-ten.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+  <a href="#yap" aria-label="Yap"><span class="app-icon"><img src="/img/icon-yap.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+  <a href="#blank" aria-label="Blank"><span class="app-icon"><img src="/img/icon-blank.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+  <a href="#deutsch" aria-label="Lock-In"><span class="app-icon"><img src="/img/icon-deutsch.webp" alt="" width="240" height="240" loading="lazy" decoding="async" /></span></a>
+<!-- /apps:dock -->
+</nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span class="me"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="30" fill="#232B3D"/><g transform="translate(16 16) scale(.68)" fill="none" stroke="#D9E0EA" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M36.48 21 A32 32 0 0 1 81.88 52.79 Q81 61 72 61 L46 61"/><path d="M63.52 79 A32 32 0 0 1 18.12 47.21 Q19 39 28 39 L54 39"/></g></svg>Greta Grosz</span>
+    <nav aria-label="Footer">
+      <a href="/finance/">Finance</a>
+      <a href="/apps/">Apps</a>
+      <a href="/business/">Business</a>
+      <a href="/cv/">CV</a>
+      <a href="/contact/">Contact</a>
+      <a href="https://www.linkedin.com/in/greta-grosz" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a class="gob" href="/goblin/">goblin</a>
+    </nav>
+    <span>© <span data-year>2026</span> · Made by Greta in Austria</span>
+  </div>
+</footer>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/i18n/apps.js"></script>
+<script src="/js/apps-data.js"></script>
+<script src="/js/apps.js"></script>
+<script src="/js/site.js"></script>
+</body>
+</html>

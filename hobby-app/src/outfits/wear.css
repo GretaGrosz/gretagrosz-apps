@@ -1,0 +1,121 @@
+/* Putting an accessory on, and taking it off (src/components/Buddy.jsx sets data-fresh / data-leaving for ~1.3 s).
+   hats drop from above and squash onto the head, glasses slide down and settle, neckwear pops on with a wobble,
+   gill bling pops onto each tip in a ripple. A burst of sparkles (.axo-poof) marks the moment it lands. */
+
+.axo .axo-wear { transform-box: view-box; }
+.axo .axo-wear[data-slot='head'] { transform-origin: 104px 52px; }
+.axo .axo-wear[data-slot='eyes'] { transform-origin: 104px 80px; }
+.axo .axo-wear[data-slot='neck'] { transform-origin: 106px 112px; }
+.axo .axo-wear[data-slot='gills'] { transform-origin: 0 0; }
+
+/* ---------- on ---------- */
+.axo .axo-wear[data-slot='head'][data-fresh] { animation: axo-wear-drop 900ms linear both; }
+
+@keyframes axo-wear-drop {
+  0% { transform: translate(-14px, -120px) rotate(-28deg); opacity: 0; animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.5); }
+  8% { opacity: 1; }
+  42% { transform: translate(0, 4px) rotate(5deg) scale(1.18, 0.78); animation-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1); }
+  58% { transform: translate(0, -14px) rotate(-3deg) scale(0.9, 1.12); animation-timing-function: cubic-bezier(0.5, 0, 0.8, 0.4); }
+  72% { transform: translate(0, 1px) rotate(1deg) scale(1.07, 0.94); }
+  86% { transform: translate(0, -2px) scale(0.98, 1.02); }
+  100% { transform: none; }
+}
+
+.axo .axo-wear[data-slot='eyes'][data-fresh] { animation: axo-wear-slide 760ms cubic-bezier(0.34, 1.45, 0.6, 1) both; }
+
+@keyframes axo-wear-slide {
+  0% { transform: translateY(-46px) scale(0.7) rotate(8deg); opacity: 0; }
+  35% { opacity: 1; }
+  70% { transform: translateY(2px) scale(1.06) rotate(-2deg); }
+  100% { transform: none; }
+}
+
+/* deal with it: pixel shades come down slowly and dead straight */
+.axo .axo-wear[data-item='pixel'][data-fresh] { animation: axo-wear-dealwithit 1100ms cubic-bezier(0.2, 0, 0.3, 1) both; }
+
+@keyframes axo-wear-dealwithit {
+  0% { transform: translateY(-80px); opacity: 0; }
+  10% { opacity: 1; }
+  88% { transform: translateY(1px); }
+  100% { transform: none; }
+}
+
+.axo .axo-wear[data-slot='neck'][data-fresh] { animation: axo-wear-pop 820ms linear both; }
+
+@keyframes axo-wear-pop {
+  0% { transform: scale(0.15) rotate(-20deg); opacity: 0; animation-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1); }
+  20% { opacity: 1; }
+  45% { transform: scale(1.2, 1.1) rotate(6deg); animation-timing-function: ease-in-out; }
+  65% { transform: scale(0.94, 0.98) rotate(-3deg); }
+  82% { transform: scale(1.03) rotate(1deg); }
+  100% { transform: none; }
+}
+
+.axo .axo-wear[data-slot='gills'][data-fresh] {
+  animation: axo-wear-gill 560ms cubic-bezier(0.34, 1.7, 0.6, 1) both;
+  animation-delay: calc(var(--i, 0) * 90ms + var(--s, 0) * 45ms);
+}
+
+@keyframes axo-wear-gill {
+  0% { transform: scale(0) rotate(-40deg); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: none; }
+}
+
+/* ---------- off: tossed up and away ---------- */
+.axo .axo-wear[data-leaving] { animation: axo-wear-toss 520ms cubic-bezier(0.4, 0, 0.8, 0.6) both; }
+.axo .axo-wear[data-slot='head'][data-leaving] { --toss-y: -90px; }
+.axo .axo-wear[data-slot='eyes'][data-leaving] { --toss-y: -60px; }
+.axo .axo-wear[data-slot='neck'][data-leaving] { --toss-y: 40px; }
+.axo .axo-wear[data-slot='gills'][data-leaving] { animation-name: axo-wear-shrink; animation-duration: 260ms; }
+
+@keyframes axo-wear-toss {
+  0% { transform: none; opacity: 1; }
+  25% { transform: translate(4px, calc(var(--toss-y, -80px) * -0.06)) rotate(4deg) scale(1.05); }
+  100% { transform: translate(46px, var(--toss-y, -80px)) rotate(38deg) scale(0.7); opacity: 0; }
+}
+
+@keyframes axo-wear-shrink {
+  to { transform: scale(0); opacity: 0; }
+}
+
+/* ---------- the sparkle burst where it lands ---------- */
+.axo .axo-poof > g { transform: rotate(var(--a)); }
+.axo .axo-poof-bit {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  opacity: 0;
+  animation: axo-poof 700ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  animation-delay: calc(var(--poof-at, 380ms) + var(--i, 0) * 12ms);
+}
+.axo .axo-wear[data-slot='eyes'] ~ .axo-poof { --poof-at: 500ms; }
+
+@keyframes axo-poof {
+  0% { transform: translate(0, 0) scale(0.2); opacity: 0; }
+  15% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--poof-r, 46px), 0) scale(1.1) rotate(120deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .axo .axo-wear[data-fresh] { animation: axo-wear-fade 200ms ease both; }
+  .axo .axo-wear[data-leaving] { animation: axo-wear-fade 200ms ease reverse both; }
+  .axo .axo-poof { display: none; }
+}
+
+@keyframes axo-wear-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* the wardrobe tile you just picked gives a little bounce */
+.acc-tile-pop { animation: acc-tile-pop 420ms cubic-bezier(0.34, 1.6, 0.6, 1); }
+
+@keyframes acc-tile-pop {
+  0% { transform: scale(0.8) rotate(-6deg); }
+  100% { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acc-tile-pop { animation: none; }
+}

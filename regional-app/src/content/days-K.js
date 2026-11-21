@@ -1,0 +1,495 @@
+// Combinatorics days 43–99 (Vertiefung). Keys are plan days (1–150).
+// Every answer was checked by computer. hints = [a small nudge, the key idea, the first step].
+export default {
+  43: {
+    lesson: {
+      idea: 'A graph is a set of points (vertices) joined by lines (edges). The degree of a vertex is the number of edges at it. Handshake lemma: the degrees add up to twice the number of edges, because every edge has two ends and is counted once at each end. So the number of vertices with odd degree is always even.\n\nWhenever a problem talks about people who know each other, teams that played each other or cities joined by roads, translate it into a graph. Then two tools do most of the work: adding up degrees, and looking at an extreme object (the vertex of largest degree, or a longest path).\n\nThe classic trap: in a group of n people a degree can be anything from 0 to n − 1, but 0 and n − 1 never occur together. Someone who knows everybody also knows the person who supposedly knows nobody.',
+      steps: ['Translate: people, cities, teams → vertices; “know each other”, “road”, “played” → edges.', 'Count edges: E = (sum of all degrees)/2.', 'Parity check: if the degree sum would be odd, the situation is impossible.', 'Extremes: look at the vertex of largest or smallest degree, or at a longest path. The end of a longest path has all its neighbours on the path.'],
+      example: {
+        q: 'Can 9 people each shake hands with exactly 3 of the others?',
+        a: 'No. The degree sum would be 9·3 = 27. But the degree sum is twice the number of handshakes, so it must be even.',
+      },
+      de: [['Graph', 'graph'], ['Knoten / Ecke', 'vertex'], ['Kante', 'edge'], ['Grad (Knotengrad)', 'degree'], ['Handschlaglemma', 'handshake lemma'], ['Weg', 'path'], ['Kreis', 'cycle']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'In a class of 11 students, 5 students have exactly 4 friends in the class and the other 6 have exactly 3 friends in the class. Friendship is mutual.\n\nHow many pairs of friends are there?',
+        answers: ['19'],
+        hints: ['If you add up everybody’s number of friends, how often is each friendship counted?', 'Handshake lemma: the degree sum is twice the number of edges.', 'The degree sum is 5·4 + 6·3.'],
+        solution: 'Adding all the numbers of friends counts every friendship twice, once for each friend. The sum is 5·4 + 6·3 = 38, so there are 38/2 = 19 pairs of friends. (Such a class really exists.)',
+      },
+      {
+        type: 'answer',
+        q: 'Anna and her husband Ben invite three other couples, so 8 people are at the party. Some people shake hands. Nobody shakes hands with themselves or with their own partner, and no two people shake hands twice. At the end Anna asks the other 7 people how many hands they shook, and she gets 7 different answers.\n\nHow many hands did Ben shake?',
+        answers: ['3'],
+        hints: ['What is the largest possible answer? Seven different answers means …', 'The answers are exactly 0, 1, …, 6. Who is the partner of the person who shook 6 hands?', 'The person with 6 shook hands with everyone except their partner, so the person with 0 must be that partner.'],
+        solution: 'Nobody can shake more than 6 hands (not themselves, not their partner), so the 7 answers are 0, 1, …, 6. Call the person with k handshakes Pₖ.\n\nP₆ shook hands with everyone except their partner. P₀ shook no hands, so P₀ is the person P₆ missed: P₀ and P₆ are a couple. Send this couple home. Every remaining person shook exactly one hand with P₆ and none with P₀, so P₁, …, P₅ now have 0, …, 4 handshakes, and 4 is again the maximum among 6 people. The same argument shows that P₁ and P₅ are a couple, and then P₂ and P₄.\n\nThe only person left besides Anna is P₃, so P₃ is her husband. Ben shook 3 hands.',
+      },
+      {
+        type: 'proof',
+        q: 'Prove that in every group of n ≥ 2 people there are two people who have the same number of friends inside the group. (Friendship is mutual.)',
+        hints: ['Which numbers of friends are possible?', 'Pigeonhole: n people, and the possible values are 0, 1, …, n − 1. That is n boxes, one too many.', 'Can the values 0 and n − 1 both occur?'],
+        keySteps: ['Every number of friends lies in {0, 1, …, n − 1}.', '0 and n − 1 cannot both occur: a person with n − 1 friends is a friend of everyone, so nobody has 0 friends.', 'So the n numbers take at most n − 1 different values.', 'By pigeonhole, two people have the same number of friends.'],
+        solution: 'Each person has between 0 and n − 1 friends in the group. If someone has n − 1 friends, they are friends with all the others, so nobody has 0 friends. Therefore the values 0 and n − 1 do not both occur, and the n people have at most n − 1 different numbers of friends.\n\nBy the pigeonhole principle two people have the same number of friends.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'In a graph (finitely many vertices, no loops, no double edges) every vertex has degree at least d, where d ≥ 2.\n\nProve that the graph contains a cycle of length at least d + 1.',
+      keySteps: ['Take a longest path v₀v₁…vₖ (its vertices are distinct). It exists because the graph is finite.', 'Every neighbour of v₀ lies on the path; otherwise the path could be made longer.', 'v₀ has at least d neighbours among v₁, …, vₖ, so it has a neighbour vⱼ with j ≥ d.', 'Then v₀v₁…vⱼv₀ is a cycle with j + 1 ≥ d + 1 vertices.'],
+      solution: 'There are only finitely many paths, so there is a longest one: v₀v₁…vₖ with all vᵢ different.\n\nIf v₀ had a neighbour w that is not on the path, then wv₀v₁…vₖ would be a longer path. So all neighbours of v₀ are among v₁, …, vₖ. There are at least d of them, so the one with the largest index, say vⱼ, has j ≥ d.\n\nNow v₀v₁…vⱼ followed by the edge vⱼv₀ is a cycle. It has j + 1 ≥ d + 1 ≥ 3 vertices, as required.',
+    },
+  },
+
+  47: {
+    lesson: {
+      idea: 'Colour every edge of the complete graph Kₙ (n points, every pair joined) red or blue. For n = 6 there is always a triangle with all three edges of one colour (a monochromatic triangle); for n = 5 there need not be. In words: among any 6 people there are 3 who all know each other or 3 who are all strangers. We write R(3, 3) = 6.\n\nWhy 6 works: pick a vertex A. It has 5 edges, so by pigeonhole at least 3 have the same colour, say red edges to B, C, D. If any edge among B, C, D is red, it forms a red triangle with A. If none is, BCD is a blue triangle.\n\nRecognise it when every pair of objects is in one of two (or three) relations and you want three objects that are pairwise in the same relation. The trap: to show that 6 is the smallest number, you also need a colouring of K₅ without a monochromatic triangle.',
+      steps: ['Pick one vertex and use pigeonhole on its edges: many edges of one colour.', 'Look at the edges among the other ends: one of that colour closes a triangle; if there is none, they all have the other colour.', 'For “smallest n” questions, give a colouring of Kₙ₋₁ that avoids the pattern.', 'To count monochromatic triangles, count two-coloured angles at each vertex (see the proof problem).'],
+      example: {
+        q: 'Why does K₅ not force a monochromatic triangle?',
+        a: 'Put the 5 points on a circle. Colour the 5 sides of the pentagon red and the 5 diagonals blue. The red edges form a 5-cycle and so do the blue ones (the pentagram), and a 5-cycle contains no triangle.',
+      },
+      de: [['vollständiger Graph', 'complete graph'], ['Kantenfärbung', 'edge colouring'], ['einfarbiges Dreieck', 'monochromatic triangle'], ['Ramsey-Zahl', 'Ramsey number'], ['Bekannte / Fremde', 'acquaintances / strangers']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'What is the smallest n such that every colouring of the edges of Kₙ with red and blue contains a triangle with all three edges of the same colour?',
+        answers: ['6'],
+        hints: ['You need two things: a reason why n works and an example showing n − 1 does not.', 'Look at one vertex and its edges: with 5 edges, 3 have the same colour.', 'For the example on 5 points, use a pentagon and its diagonals.'],
+        solution: 'n = 6 works: a vertex A has 5 edges, so three of them, to B, C, D, have the same colour, say red. If an edge among B, C, D is red, it closes a red triangle with A; otherwise BCD is blue.\n\nn = 5 does not: colour the sides of a regular pentagon red and its diagonals blue. Each colour forms a 5-cycle, which has no triangle. (Fewer than 5 points is even easier: just take part of this colouring.) So the answer is 6.',
+      },
+      {
+        type: 'answer',
+        q: 'The 10 edges of K₅ are coloured red and blue so that there is no triangle with all three edges of the same colour.\n\nHow many edges are red?',
+        answers: ['5'],
+        hints: ['Look at one vertex. It has 4 edges. What happens if 3 of them have the same colour?', 'Three edges of one colour at a vertex always produce a monochromatic triangle (the argument from the lesson).', 'So every vertex has exactly 2 red edges. Now use the handshake lemma.'],
+        solution: 'Suppose a vertex A has 3 red edges, to B, C, D. A red edge among B, C, D would close a red triangle; otherwise BCD is blue. Both are forbidden. The same holds for 3 blue edges. So every vertex has exactly 2 red and 2 blue edges.\n\nThe red degrees add up to 5·2 = 10, which is twice the number of red edges. So there are 5 red edges.',
+      },
+      {
+        type: 'proof',
+        q: 'The 15 edges of K₆ are coloured red and blue.\n\nProve that there are at least two monochromatic triangles.',
+        hints: ['Count “angles”: pairs of edges at the same vertex. Call an angle two-coloured if its edges have different colours.', 'A triangle that is not monochromatic has exactly 2 two-coloured angles. A monochromatic one has none.', 'A vertex with r red and 5 − r blue edges has r(5 − r) two-coloured angles. How large can that be?'],
+        keySteps: ['Two-coloured angle = two edges at one vertex with different colours. Each angle lies in exactly one triangle (the one on its three vertices).', 'A vertex with r red edges has r(5 − r) ≤ 6 two-coloured angles, so there are at most 6·6 = 36 in total.', 'Each non-monochromatic triangle contains exactly 2 two-coloured angles, a monochromatic one 0.', 'So there are at most 36/2 = 18 non-monochromatic triangles among the C(6, 3) = 20, hence at least 2 monochromatic ones.'],
+        solution: 'Call a pair of edges at the same vertex an angle, and call it two-coloured if the two edges have different colours. An angle at A with edges AB and AC lies in exactly one triangle, ABC.\n\nIn a triangle that is not monochromatic, two edges have one colour and the third edge the other colour. Then exactly two of its three angles are two-coloured. A monochromatic triangle has no two-coloured angle.\n\nA vertex with r red and 5 − r blue edges has r(5 − r) two-coloured angles, and r(5 − r) ≤ 2·3 = 6 for r = 0, …, 5. So there are at most 6·6 = 36 two-coloured angles, and at most 36/2 = 18 triangles that are not monochromatic. K₆ has C(6, 3) = 20 triangles, so at least 2 of them are monochromatic.',
+      },
+    ],
+    challenge: {
+      source: 'IMO 1964',
+      q: 'Each of 17 scientists writes letters to each of the others. Each pair of scientists writes about exactly one of three topics.\n\nProve that there are three scientists who all write to each other about the same topic.',
+      keySteps: ['Graph: 17 vertices, every edge coloured with one of 3 colours (topics).', 'Pick a scientist A: 16 edges, 3 colours, so at least 6 edges have the same colour, say topic 1 (since 3·5 = 15 < 16).', 'If two of these 6 scientists write about topic 1, they form a triangle with A.', 'Otherwise the 6 only use topics 2 and 3 among themselves, and R(3, 3) = 6 gives a monochromatic triangle.'],
+      solution: 'Make a graph: the scientists are vertices and each edge is coloured with the topic of that pair.\n\nTake one scientist A. A writes to 16 others about 3 topics. If each topic had at most 5 partners, there would be at most 15. So at least 6 scientists write to A about the same topic, say topic 1.\n\nIf two of these 6 write to each other about topic 1, they and A form the required triple. Otherwise every pair among the 6 writes about topic 2 or topic 3. That is a red/blue colouring of K₆, and by R(3, 3) = 6 it contains three scientists who pairwise write about the same topic.',
+    },
+  },
+
+  55: {
+    lesson: {
+      idea: 'Count one set in two different ways and set the answers equal. The set is usually a set of pairs: (student, club) with the student in the club, (edge, face) with the edge on the face, (person, committee) with the person on it. Counting by the first coordinate gives one expression, counting by the second gives another. The handshake lemma is the simplest example: the pairs (vertex, edge at that vertex) number both the degree sum and 2·E.\n\nA picture helps: an incidence table with one kind of object as rows, the other as columns, and a mark where they belong together. Counting the marks row by row and column by column must give the same total.\n\nRecognise it when the problem gives local data (“every club has 9 members”, “every two judges agree on at most k”) and asks for global data, or asks you to prove an inequality between two quantities. The trap: be precise about what exactly you count, and whether each object is counted once or several times.',
+      steps: ['Choose the pairs (or triples) to count. Draw the incidence table.', 'Count the marks row by row.', 'Count them column by column.', 'Set equal. For an inequality, bound one of the two counts, e.g. with the given “at most” or with x(b − x) ≤ b²/4.', 'Sums over all subsets: instead of going through the subsets, ask for each element how many subsets it contributes to.'],
+      example: {
+        q: 'In a class of 30 students every student is in exactly 3 clubs and every club has exactly 9 members. How many clubs are there?',
+        a: 'Count pairs (student, club) with the student in the club. By students: 30·3 = 90. By clubs: 9·k. So 9k = 90 and k = 10.',
+      },
+      de: [['doppeltes Abzählen', 'double counting'], ['Inzidenz', 'incidence'], ['Paar / Tripel', 'pair / triple'], ['Teilmenge', 'subset'], ['Ausschuss / Vorsitz', 'committee / chair']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'A football is sewn from 12 pentagons and 20 hexagons. Exactly three faces meet at every vertex.\n\nHow many vertices does it have?',
+        answers: ['60'],
+        hints: ['Count pairs (face, corner of that face).', 'Count them by faces first, then by vertices.', 'By faces: 12·5 + 20·6 = 180.'],
+        solution: 'Count pairs (face, vertex of that face). By faces: 12·5 + 20·6 = 180. By vertices: each vertex lies on 3 faces, so the number is 3V. Hence V = 60.\n\n(In the same way each edge lies on 2 faces, so there are 90 edges, and Euler’s formula 60 − 90 + 32 = 2 checks out.)',
+      },
+      {
+        type: 'answer',
+        q: 'For every non-empty subset of {1, 2, …, 10}, write down its largest element.\n\nWhat is the sum of all the numbers written down?',
+        answers: ['9217'],
+        hints: ['Don’t go through the 1023 subsets. Ask instead: how often is the number k written down?', 'k is the largest element exactly when the subset contains k and otherwise only numbers smaller than k.', 'That gives 2ᵏ⁻¹ subsets, so the sum is 1·1 + 2·2 + 3·4 + … + 10·512.'],
+        solution: 'The number k is the largest element of a subset exactly when the subset is k together with any subset of {1, …, k − 1}. There are 2ᵏ⁻¹ such subsets, so k is written 2ᵏ⁻¹ times.\n\nThe sum is 1·1 + 2·2 + 3·4 + 4·8 + 5·16 + 6·32 + 7·64 + 8·128 + 9·256 + 10·512 = 1 + 4 + 12 + 32 + 80 + 192 + 448 + 1024 + 2304 + 5120 = 9217.',
+      },
+      {
+        type: 'proof',
+        q: 'Prove that for every positive integer n\n\n1·C(n, 1) + 2·C(n, 2) + 3·C(n, 3) + … + n·C(n, n) = n·2ⁿ⁻¹.',
+        hints: ['Find a set of objects that both sides count.', 'From n people choose a committee of any size and one chair from the committee.', 'Count by choosing the committee first, then by choosing the chair first.'],
+        keySteps: ['Count pairs (committee, chair): a non-empty subset of n people and one of its members.', 'Committee first: k members in C(n, k) ways, then k choices of chair; total Σ k·C(n, k).', 'Chair first: n choices, then any subset of the other n − 1 people joins; total n·2ⁿ⁻¹.', 'Both count the same set, so they are equal.'],
+        solution: 'Count the ways to choose, from n people, a committee together with a chair who is a member of the committee.\n\nCommittee first: a committee with k members can be chosen in C(n, k) ways and its chair in k ways. Summing over k = 1, …, n gives the left side.\n\nChair first: the chair can be chosen in n ways. Each of the other n − 1 people is either on the committee or not, which gives 2ⁿ⁻¹ ways. That gives n·2ⁿ⁻¹.\n\nBoth count the same set, so the two sides are equal.',
+      },
+    ],
+    challenge: {
+      source: 'IMO 1998',
+      q: 'In a competition there are a contestants and b judges, where b ≥ 3 is odd. Each judge rates each contestant as “pass” or “fail”. Suppose that any two judges agree on the rating of at most k contestants.\n\nProve that k/a ≥ (b − 1)/(2b).',
+      keySteps: ['Count triples (contestant, pair of judges) in which the two judges give that contestant the same rating.', 'By pairs of judges: at most k·C(b, 2) = k·b(b − 1)/2.', 'By contestants: if x judges pass the contestant, there are C(x, 2) + C(b − x, 2) agreeing pairs.', 'With b = 2m + 1, C(x, 2) + C(b − x, 2) ≥ m² = (b − 1)²/4 for every integer x (minimum at x = m, m + 1).', 'So a(b − 1)²/4 ≤ k·b(b − 1)/2, which gives k/a ≥ (b − 1)/(2b).'],
+      solution: 'Let N be the number of triples (C, {J, J′}) where C is a contestant and J, J′ are two judges who give C the same rating.\n\nCounting by pairs of judges: each of the C(b, 2) pairs agrees on at most k contestants, so N ≤ k·b(b − 1)/2.\n\nCounting by contestants: if x judges pass contestant C and b − x fail C, then the agreeing pairs for C number C(x, 2) + C(b − x, 2) = (x² + (b − x)² − b)/2. Write b = 2m + 1. For integers x, the value of x² + (b − x)² is smallest when x is as close to b/2 as possible, i.e. x = m or m + 1, where it equals m² + (m + 1)². So C(x, 2) + C(b − x, 2) ≥ (m² + (m + 1)² − 2m − 1)/2 = m² = (b − 1)²/4. Hence N ≥ a(b − 1)²/4.\n\nTogether: a(b − 1)²/4 ≤ k·b(b − 1)/2. Divide by a·b(b − 1)/2 > 0: k/a ≥ (b − 1)/(2b).',
+    },
+  },
+
+  59: {
+    lesson: {
+      idea: 'Many counting problems are easy for small n and hard for the given n. Let aₙ be the answer for size n and ask: how can an object of size n start (or end)? Each case leaves a smaller object of the same kind, so aₙ is a sum of earlier terms.\n\nExample: climb a staircase with steps of 1 or 2 stairs. The first step is 1 (then aₙ₋₁ ways remain) or 2 (then aₙ₋₂ ways remain), so aₙ = aₙ₋₁ + aₙ₋₂, the Fibonacci recursion.\n\nRecognise it when the objects are built piece by piece (strings, tilings, paths, sequences of moves) and no direct formula is in sight. Traps: the cases must be disjoint and cover everything; the start values must be right (list small cases by hand); and if the leftover piece is not of the same kind, you need a second sequence for it.',
+      steps: ['Name the count: aₙ = number of good objects of size n.', 'Split by the first (or last) piece. Check that the cases are disjoint and complete.', 'Each case is a smaller good object: write aₙ in terms of aₙ₋₁, aₙ₋₂, …', 'If a leftover shape is new, give it its own sequence bₙ and find a recursion for it too.', 'Compute a₁, a₂ by hand, test the recursion on a small case, then iterate.'],
+      example: {
+        q: 'In how many ways can a 2×6 strip be tiled with 1×2 dominoes?',
+        a: 'Look at the left end: one vertical domino (a 2×5 strip remains) or two horizontal dominoes on top of each other (a 2×4 strip remains). So tₙ = tₙ₋₁ + tₙ₋₂ with t₁ = 1, t₂ = 2: 1, 2, 3, 5, 8, 13. Answer: 13.',
+      },
+      de: [['Rekursion / Rekursionsformel', 'recursion'], ['Anfangswerte', 'initial values'], ['Fallunterscheidung', 'case analysis'], ['Fibonacci-Folge', 'Fibonacci sequence'], ['Zeichenkette / Wort', 'string / word']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'How many strings of length 10 made of the digits 0 and 1 contain no two 1s next to each other?',
+        answers: ['144'],
+        hints: ['Let aₙ be the answer for length n. Look at the last digit.', 'If the last digit is 1, the digit before it must be 0.', 'aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3.'],
+        solution: 'Let aₙ count good strings of length n. A good string ends in 0 (before it: any good string of length n − 1) or in 01 (before it: any good string of length n − 2). So aₙ = aₙ₋₁ + aₙ₋₂.\n\na₁ = 2 (0, 1), a₂ = 3 (00, 01, 10). Then 5, 8, 13, 21, 34, 55, 89, 144. So a₁₀ = 144.',
+      },
+      {
+        type: 'answer',
+        q: 'How many words of length 7 can be made from the letters A, B, C if no two A’s may stand next to each other?',
+        answers: ['1224'],
+        hints: ['Let aₙ be the answer for length n. Split by the last letter.', 'Last letter B or C: 2aₙ₋₁ words. Last letter A: the letter before must be B or C.', 'aₙ = 2aₙ₋₁ + 2aₙ₋₂ with a₁ = 3 and a₂ = 8.'],
+        solution: 'If the word ends in B or C, the rest is any good word of length n − 1: 2aₙ₋₁. If it ends in A, it ends in BA or CA and the rest is any good word of length n − 2: 2aₙ₋₂. So aₙ = 2aₙ₋₁ + 2aₙ₋₂.\n\na₁ = 3, a₂ = 9 − 1 = 8. Then a₃ = 22, a₄ = 60, a₅ = 164, a₆ = 448, a₇ = 2·448 + 2·164 = 1224.',
+      },
+      {
+        type: 'proof',
+        q: 'Let aₙ be the number of subsets of {1, 2, …, n} (including the empty set) that contain no two consecutive numbers.\n\nProve that aₙ = aₙ₋₁ + aₙ₋₂ for all n ≥ 3.',
+        hints: ['Does the subset contain n or not?', 'If it does not contain n, what is it?', 'If it contains n, it cannot contain n − 1. What is left?'],
+        keySteps: ['Split the good subsets of {1, …, n} into those without n and those with n.', 'Without n: exactly the good subsets of {1, …, n − 1}: aₙ₋₁ of them.', 'With n: n − 1 is not in it, and removing n gives a good subset of {1, …, n − 2}; conversely adding n to such a set is good. So aₙ₋₂ of them.', 'The two cases are disjoint and cover everything: aₙ = aₙ₋₁ + aₙ₋₂.'],
+        solution: 'Every good subset S of {1, …, n} either contains n or not.\n\nIf n ∉ S, then S is a good subset of {1, …, n − 1}, and every such subset is a good subset of {1, …, n}. That gives aₙ₋₁ sets.\n\nIf n ∈ S, then n − 1 ∉ S, so S \\ {n} is a good subset of {1, …, n − 2}. Conversely, for every good subset T of {1, …, n − 2} the set T ∪ {n} is good, since its largest element below n is at most n − 2. This is a bijection, so there are aₙ₋₂ such sets.\n\nThe cases do not overlap, so aₙ = aₙ₋₁ + aₙ₋₂.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'In how many ways can a 3×8 board be tiled with 1×2 dominoes? Prove your answer.',
+      keySteps: ['Let aₙ = tilings of the 3×n board and bₙ = tilings of the 3×n board with one corner cell removed (by symmetry it doesn’t matter which corner).', 'First column of 3×n: three horizontal dominoes (rest 3×(n − 2)), or a vertical domino plus one horizontal one at the top or bottom (rest: 3×(n − 1) minus a corner). So aₙ = aₙ₋₂ + 2bₙ₋₁. The case list is complete.', 'First column of the board with a corner missing: a vertical domino (rest 3×(n − 1)), or two horizontal dominoes, which forces a third horizontal one in the row of the missing cell (rest: 3×(n − 2) minus a corner). So bₙ = aₙ₋₁ + bₙ₋₂.', 'Start values a₀ = 1 (empty board), a₂ = 3, b₁ = 1.', 'Iterate: b₃ = 4, a₄ = 11, b₅ = 15, a₆ = 41, b₇ = 56, a₈ = 153.'],
+      solution: 'Let aₙ be the number of tilings of the 3×n board and bₙ the number of tilings of the 3×n board with the bottom-left cell removed (removing any other corner gives the same number, by symmetry).\n\nRecursion for aₙ. Look at the three cells of the first column. If the top cell is covered by a vertical domino (together with the middle cell), the bottom cell needs a horizontal domino; what remains is a 3×(n − 1) board with a corner missing: bₙ₋₁ ways. If the top cell is covered horizontally, then the middle cell is covered either horizontally (then so is the bottom cell, and a 3×(n − 2) board remains: aₙ₋₂ ways) or vertically with the bottom cell (then a 3×(n − 1) board with its top corner missing remains: bₙ₋₁ ways). So aₙ = aₙ₋₂ + 2bₙ₋₁.\n\nRecursion for bₙ. The first column has only its top two cells. Either they form a vertical domino (a full 3×(n − 1) board remains: aₙ₋₁ ways) or both are covered horizontally. In the second case the bottom cell of column 2 can’t be covered from the left or from above, so it is covered by a horizontal domino reaching into column 3. What remains is a 3×(n − 2) board with its bottom-left corner missing: bₙ₋₂ ways. So bₙ = aₙ₋₁ + bₙ₋₂.\n\nStart: a₀ = 1, b₁ = 1, so a₂ = 1 + 2 = 3 (check by hand). Then b₃ = 3 + 1 = 4, a₄ = 3 + 8 = 11, b₅ = 11 + 4 = 15, a₆ = 11 + 30 = 41, b₇ = 41 + 15 = 56, a₈ = 41 + 112 = 153.\n\nThe 3×8 board has 153 tilings.',
+    },
+  },
+
+  63: {
+    lesson: {
+      idea: '|A ∪ B| = |A| + |B| − |A ∩ B|: elements in both sets were counted twice, so subtract them once. For three sets: |A ∪ B ∪ C| = |A| + |B| + |C| − |A ∩ B| − |A ∩ C| − |B ∩ C| + |A ∩ B ∩ C|. In general: add the single sets, subtract all intersections of two, add all intersections of three, and so on.\n\nWhy it works: an element that lies in exactly m ≥ 1 of the sets is counted C(m, 1) − C(m, 2) + C(m, 3) − … times on the right side. Since (1 − 1)ᵐ = 1 − C(m, 1) + C(m, 2) − … = 0, that number is exactly 1.\n\nUsually you want the objects with none of the bad properties: total minus the union. Recognise it from “none of”, “at least one of”, “no … sits next to …”, and when intersections are easy to count (divisibility by several numbers, fixed points, people glued together). Traps: forgetting the higher intersections, or treating overlapping sets as disjoint.',
+      steps: ['Name the bad properties: Aᵢ = objects with property i.', 'Count each Aᵢ, each intersection of two, of three, …', 'Use symmetry: often all intersections of k sets have the same size, giving C(n, k) equal terms.', 'Good = total − Σ|Aᵢ| + Σ|Aᵢ ∩ Aⱼ| − Σ|Aᵢ ∩ Aⱼ ∩ Aₖ| + …', 'Check the formula on a small case.'],
+      example: {
+        q: 'How many of the numbers 1, 2, …, 100 are divisible by 2 or by 3?',
+        a: '50 are divisible by 2, 33 by 3, and 16 by both (by 6). So 50 + 33 − 16 = 67.',
+      },
+      de: [['Inklusion-Exklusion / Siebformel', 'inclusion–exclusion'], ['Vereinigung', 'union'], ['Durchschnitt', 'intersection'], ['Fixpunkt', 'fixed point'], ['fixpunktfreie Permutation', 'derangement']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'How many of the numbers 1, 2, …, 1000 are divisible by none of 2, 3 and 5?',
+        answers: ['266'],
+        hints: ['First count the numbers divisible by at least one of 2, 3, 5.', 'A number divisible by 2 and 3 is divisible by 6; by all three, by 30.', 'Single sets: 500, 333, 200. Pairs: 166, 100, 66. Triple: 33.'],
+        solution: 'Divisible by 2, 3, 5: 500, 333, 200. By 6, 10, 15: 166, 100, 66. By 30: 33.\n\nDivisible by at least one: 500 + 333 + 200 − 166 − 100 − 66 + 33 = 734. So 1000 − 734 = 266 numbers are divisible by none of them.',
+      },
+      {
+        type: 'answer',
+        q: 'Six letters are put into six addressed envelopes, one letter per envelope, at random.\n\nIn how many of the 720 ways is no letter in its correct envelope?',
+        answers: ['265'],
+        hints: ['Let Aᵢ be the set of arrangements where letter i is in the right envelope.', 'If k given letters are correct, the other 6 − k can be arranged in (6 − k)! ways.', 'Good = 6! − C(6, 1)·5! + C(6, 2)·4! − C(6, 3)·3! + C(6, 4)·2! − C(6, 5)·1! + C(6, 6)·0!.'],
+        solution: 'Let Aᵢ be the arrangements where letter i is correct. Any k of these sets intersect in (6 − k)! arrangements, and there are C(6, k) ways to choose the k sets. So the number with no letter correct is\n\n720 − 6·120 + 15·24 − 20·6 + 15·2 − 6·1 + 1 = 720 − 720 + 360 − 120 + 30 − 6 + 1 = 265.',
+      },
+      {
+        type: 'proof',
+        q: 'Let p and q be different primes, a, b ≥ 1 and n = pᵃqᵇ.\n\nProve that exactly n(1 − 1/p)(1 − 1/q) of the numbers 1, 2, …, n are coprime to n.',
+        hints: ['When is a number not coprime to n?', 'k shares a factor with n exactly when p | k or q | k.', 'Count the multiples of p, of q, and of both among 1, …, n.'],
+        keySteps: ['k is coprime to n exactly when p ∤ k and q ∤ k (the only primes dividing n are p and q).', 'Among 1, …, n there are n/p multiples of p and n/q multiples of q (both are integers since p | n, q | n).', 'Multiples of both p and q are the multiples of pq (p, q different primes): n/(pq) of them.', 'Inclusion–exclusion: n − n/p − n/q + n/(pq) = n(1 − 1/p)(1 − 1/q).'],
+        solution: 'The only primes dividing n are p and q, so k is coprime to n exactly when k is divisible neither by p nor by q.\n\nSince p | n, the multiples of p among 1, …, n are p, 2p, …, n: n/p of them. Likewise there are n/q multiples of q. A number is divisible by both p and q exactly when it is divisible by pq, since they are different primes; pq | n, so there are n/(pq) such numbers.\n\nBy inclusion–exclusion the number of k divisible by neither is\nn − n/p − n/q + n/(pq) = n(1 − 1/p)(1 − 1/q).',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'Four married couples (8 different people) sit down in a row of 8 chairs.\n\nIn how many orders can they sit so that no couple sits next to each other? Prove your answer.',
+      keySteps: ['Let Aᵢ be the seatings where couple i sits together; the answer is 8! − |A₁ ∪ … ∪ A₄|.', 'Glue the k chosen couples into blocks: (8 − k)! orders of the 8 − k units, times 2ᵏ for the order inside each block. So any k of the sets intersect in 2ᵏ(8 − k)! seatings.', 'Inclusion–exclusion: 8! − C(4, 1)·2·7! + C(4, 2)·4·6! − C(4, 3)·8·5! + C(4, 4)·16·4!.', '= 40320 − 40320 + 17280 − 3840 + 384 = 13824.'],
+      solution: 'Let Aᵢ be the set of seatings in which couple i sits next to each other.\n\nFix k couples. Seatings where all of them sit together: treat each of these couples as one block. Then we arrange 8 − k units in a row, in (8 − k)! ways, and each block can be ordered in 2 ways. So the intersection of any k of the sets has 2ᵏ(8 − k)! elements, and there are C(4, k) such intersections.\n\nBy inclusion–exclusion the number of seatings with no couple together is\n8! − 4·2·7! + 6·4·6! − 4·8·5! + 1·16·4!\n= 40320 − 40320 + 17280 − 3840 + 384 = 13824.',
+    },
+  },
+
+  67: {
+    lesson: {
+      idea: 'To count a set, find a one-to-one correspondence (a bijection) with a set you can already count. Then both sets have the same size. To show two sets are equally large you don’t even need to count them: a bijection is enough.\n\nClassic examples. Stars and bars: a solution of x₁ + … + xₖ = n in non-negative integers is a row of n stars and k − 1 bars (x₁ stars, a bar, x₂ stars, …), so there are C(n + k − 1, k − 1) solutions. Gaps: choosing numbers with no two consecutive becomes ordinary choosing after you shift them together. Paths: a lattice path is a word in R and U.\n\nRecognise it when the objects are awkward but can be encoded as something simple: a word, a subset, a path. The trap: a bijection must work in both directions. Check that every object on the other side comes from exactly one object — the safest way is to write down the inverse map.',
+      steps: ['Describe the map: object ↦ code.', 'Check that the code really lies in the target set.', 'Write down the inverse map: code ↦ object. Check that both compositions return what you started with.', 'Count the simple side.'],
+      example: {
+        q: 'How many solutions does x + y + z = 5 have in non-negative integers?',
+        a: 'A solution is a row of 5 stars and 2 bars: x stars, bar, y stars, bar, z stars. For example 2 + 0 + 3 is ★★||★★★. Choose the places of the 2 bars among 7 places: C(7, 2) = 21.',
+      },
+      de: [['Bijektion / bijektive Abbildung', 'bijection'], ['eineindeutige Zuordnung', 'one-to-one correspondence'], ['Umkehrabbildung', 'inverse map'], ['Zerlegung (Partition) einer Zahl', 'partition of an integer'], ['nichtnegative ganze Zahlen', 'non-negative integers']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'How many solutions does x₁ + x₂ + x₃ + x₄ = 10 have in non-negative integers?',
+        answers: ['286'],
+        hints: ['Turn each solution into a row of stars and bars.', 'You need 10 stars and 3 bars.', 'Choose the positions of the 3 bars among 13 positions.'],
+        solution: 'Each solution corresponds to exactly one row of 10 stars and 3 bars (x₁ stars, bar, x₂ stars, bar, x₃ stars, bar, x₄ stars), and each such row gives a solution. So the number of solutions is C(13, 3) = 286.',
+      },
+      {
+        type: 'answer',
+        q: 'In how many ways can you choose three numbers from 1, 2, …, 20 so that no two of the chosen numbers are consecutive?',
+        answers: ['816'],
+        hints: ['Write the chosen numbers as a < b < c with b ≥ a + 2 and c ≥ b + 2.', 'Shift them together: a, b − 1, c − 2.', 'The shifted numbers are any three different numbers from 1 to 18.'],
+        solution: 'Map a < b < c (with gaps of at least 2) to a < b − 1 < c − 2. These are three different numbers from 1 to 18. Conversely, from any x < y < z in {1, …, 18} we get x, y + 1, z + 2, which are at most 20 and have gaps of at least 2. This is a bijection, so the answer is C(18, 3) = 816.',
+      },
+      {
+        type: 'proof',
+        q: 'Let n ≥ 1. Prove that {1, 2, …, n} has as many subsets with an even number of elements as subsets with an odd number of elements.',
+        hints: ['Find a way to turn an even subset into an odd one, and back.', 'Use the element 1.', 'Toggle 1: if it is in the set, remove it; if not, add it.'],
+        keySteps: ['Define f(S) = S \\ {1} if 1 ∈ S, and f(S) = S ∪ {1} if 1 ∉ S.', 'f changes the number of elements by exactly 1, so it maps even subsets to odd subsets and odd ones to even ones.', 'f(f(S)) = S, so f is its own inverse and a bijection.', 'Hence f is a bijection between even and odd subsets: they are equally many.'],
+        solution: 'For a subset S let f(S) be S with the element 1 toggled: remove 1 if 1 ∈ S, add 1 if 1 ∉ S. (This needs n ≥ 1.)\n\nf changes the size by exactly one, so it sends even subsets to odd ones and odd subsets to even ones. Toggling twice gives the original set: f(f(S)) = S. So f, restricted to the even subsets, is a bijection onto the odd subsets, with inverse f. Hence there are equally many of each (namely 2ⁿ⁻¹).',
+      },
+    ],
+    challenge: {
+      source: 'Classic (Euler)',
+      q: 'A partition of n is a way of writing n as a sum of positive integers where the order doesn’t matter. For example 6 = 3 + 2 + 1 is a partition into different parts and 6 = 3 + 1 + 1 + 1 is a partition into odd parts.\n\nProve that for every n, the number of partitions of n into different parts equals the number of partitions of n into odd parts.',
+      keySteps: ['Every positive integer can be written uniquely as 2ᵃ·m with m odd.', 'Map from distinct parts to odd parts: replace each part 2ᵃ·m by 2ᵃ copies of m. The sum is unchanged and all parts are odd.', 'Map from odd parts to distinct parts: if the odd part m occurs c times, write c in binary, c = 2ᵃ¹ + 2ᵃ² + … (different powers), and replace the c copies of m by the parts 2ᵃ¹·m, 2ᵃ²·m, …', 'These parts are all different: parts with different odd m differ in their odd part; parts with the same m differ in the power of 2.', 'The two maps are inverse to each other (uniqueness of 2ᵃ·m and of binary representation), so the two sets are equally large.'],
+      solution: 'Every positive integer has a unique form 2ᵃ·m with a ≥ 0 and m odd.\n\nFrom odd parts to distinct parts: suppose the odd number m occurs c times. Write c in binary as a sum of different powers of two, c = 2ᵃ¹ + 2ᵃ² + … + 2ᵃʳ, and replace the c copies of m by the r parts 2ᵃ¹m, …, 2ᵃʳm. The sum stays the same. All new parts are different: two parts with different odd parts m are different, and two parts with the same m have different powers of 2.\n\nFrom distinct parts to odd parts: write each part as 2ᵃ·m and replace it by 2ᵃ copies of m. The sum stays the same and all parts are odd.\n\nThese maps undo each other. Starting from odd parts, the parts 2ᵃ¹m, …, 2ᵃʳm turn back into 2ᵃ¹ + … + 2ᵃʳ = c copies of m. Starting from distinct parts, the parts with odd part m are 2ᵃ¹m, … with different exponents; they give c = 2ᵃ¹ + … copies of m, and the binary representation of c gives back exactly these exponents. So we have a bijection, and the two numbers are equal.\n\nExample n = 6: 6, 5 + 1, 4 + 2, 3 + 2 + 1 ↔ 3 + 3, 5 + 1, 1 + 1 + 1 + 1 + 1 + 1, 3 + 1 + 1 + 1.',
+    },
+  },
+
+  79: {
+    lesson: {
+      idea: 'Two pigeonhole tricks come up again and again.\n\nDifferences: among n + 1 integers, two have the same remainder mod n, so their difference is divisible by n. For sums, put r and n − r into the same box: then two numbers in one box have the same remainder (difference divisible by n) or remainders adding up to n (sum divisible by n).\n\nBlocks of consecutive numbers: for a₁, …, aₙ use the prefix sums s₀ = 0, s₁ = a₁, s₂ = a₁ + a₂, …, sₙ. A block aᵢ₊₁ + … + aⱼ equals sⱼ − sᵢ, so a question about block sums becomes a question about differences of prefix sums. For a block with sum exactly K, compare the lists s₁, …, sₙ and s₁ + K, …, sₙ + K: if together they have more entries than possible values, some sⱼ = sᵢ + K.\n\nRecognise it from “some consecutive …”, “divisible by”, “two of them differ by …”. The trap: choose the boxes carefully and check the count — strictly more objects than boxes.',
+      steps: ['Difference divisible by n: boxes = remainders mod n.', 'Sum or difference divisible by n: boxes {0}, {1, n − 1}, {2, n − 2}, …', 'Consecutive blocks: switch to prefix sums s₀, s₁, …, sₙ.', 'Block sum exactly K: put s₁, …, sₙ and s₁ + K, …, sₙ + K together and count the range of possible values.', 'For “smallest n”: also give n − 1 numbers without the property.'],
+      example: {
+        q: 'Prove that among any 6 integers, two have a difference divisible by 5.',
+        a: 'There are only 5 remainders mod 5. With 6 integers, two have the same remainder, and their difference is divisible by 5.',
+      },
+      de: [['Schubfachprinzip', 'pigeonhole principle'], ['Rest', 'remainder'], ['Teilsumme / Präfixsumme', 'partial sum / prefix sum'], ['aufeinanderfolgend', 'consecutive'], ['Differenz', 'difference']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'What is the smallest n such that among any n different integers there are always two whose difference is divisible by 9?',
+        answers: ['10'],
+        hints: ['When is a difference divisible by 9?', 'Boxes: the 9 remainders mod 9.', 'Also find 9 integers where no difference is divisible by 9.'],
+        solution: 'Two integers have a difference divisible by 9 exactly when they have the same remainder mod 9. With 10 integers and 9 remainders, two share a remainder. The 9 integers 0, 1, …, 8 have different remainders, so 9 is not enough. Answer: 10.',
+      },
+      {
+        type: 'answer',
+        q: 'What is the smallest n such that among any n different integers there are always two whose sum or whose difference is divisible by 10?',
+        answers: ['7'],
+        hints: ['The sum is divisible by 10 if the remainders are r and 10 − r.', 'Boxes: {0}, {5}, {1, 9}, {2, 8}, {3, 7}, {4, 6}.', 'Six boxes. Can you find 6 integers without the property?'],
+        solution: 'Sort the integers by remainder mod 10 into the 6 boxes {0}, {5}, {1, 9}, {2, 8}, {3, 7}, {4, 6}. If two integers land in the same box, they either have the same remainder (difference divisible by 10) or remainders r and 10 − r (sum divisible by 10). So 7 integers always work.\n\nThe 6 integers 0, 1, 2, 3, 4, 5 don’t: all pairwise sums are between 1 and 9 and all differences between 1 and 5. So the answer is 7.',
+      },
+      {
+        type: 'proof',
+        q: 'Let a₁, a₂, …, aₙ be any n integers.\n\nProve that some block of consecutive terms aᵢ₊₁ + aᵢ₊₂ + … + aⱼ (with 0 ≤ i < j ≤ n) has a sum divisible by n.',
+        hints: ['Look at the prefix sums s₀ = 0, s₁ = a₁, …, sₙ = a₁ + … + aₙ.', 'How many prefix sums are there, and how many remainders mod n?', 'A block sum is a difference of two prefix sums.'],
+        keySteps: ['Define s₀ = 0 and sₖ = a₁ + … + aₖ for k = 1, …, n.', 'These are n + 1 numbers but there are only n remainders mod n.', 'So sᵢ ≡ sⱼ (mod n) for some i < j.', 'Then aᵢ₊₁ + … + aⱼ = sⱼ − sᵢ is divisible by n.'],
+        solution: 'Let s₀ = 0 and sₖ = a₁ + a₂ + … + aₖ for k = 1, …, n. These n + 1 numbers can have only n different remainders mod n, so by pigeonhole two of them, sᵢ and sⱼ with i < j, have the same remainder.\n\nThen n divides sⱼ − sᵢ = aᵢ₊₁ + … + aⱼ, which is a block of consecutive terms.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'A chess player prepares for a tournament for 11 weeks (77 days). She plays at least one game every day, but at most 12 games in each of the 11 weeks.\n\nProve that there is a period of consecutive days in which she plays exactly 21 games.',
+      keySteps: ['Let sₖ be the number of games on days 1 to k. Then 1 ≤ s₁ < s₂ < … < s₇₇ ≤ 11·12 = 132.', 'Consider the 154 numbers s₁, …, s₇₇ and s₁ + 21, …, s₇₇ + 21.', 'All lie in {1, 2, …, 153}, so two are equal (pigeonhole).', 'The sₖ are all different and so are the sₖ + 21, so sⱼ = sᵢ + 21 for some i < j.', 'On days i + 1, …, j she played sⱼ − sᵢ = 21 games.'],
+      solution: 'Let sₖ be the total number of games played on days 1, …, k. She plays at least one game a day, so 1 ≤ s₁ < s₂ < … < s₇₇, and in total at most 11·12 = 132 games, so s₇₇ ≤ 132.\n\nLook at the 154 numbers s₁, …, s₇₇, s₁ + 21, …, s₇₇ + 21. All of them lie between 1 and 132 + 21 = 153. So two of them are equal. Two of the sₖ are never equal (the sequence is strictly increasing), and neither are two of the sₖ + 21. So sⱼ = sᵢ + 21 for some i and j, and then j > i.\n\nOn the days i + 1, i + 2, …, j she played sⱼ − sᵢ = 21 games.',
+    },
+  },
+
+  83: {
+    lesson: {
+      idea: 'A “find the largest (smallest) possible …” problem is really two problems.\n\nBound: prove that no configuration does better than k. Construction: show a configuration that reaches k. You need both. A bound without an example may not be sharp; an example only proves that k is possible, not that it is best. At the GWF a solution with only one half gets only part of the points.\n\nTypical bounds: split the board or the set into k parts that can each hold at most one chosen object (pigeonhole), count something in two ways, or use a colouring. Find the construction first by experimenting with small cases. A good extremal example often shows where to cut for the bound: in the example, each part of your partition should contain exactly one chosen object.\n\nThe trap: proving the bound only for “nice” configurations (symmetric ones, ones that look like your example). The bound must hold for every configuration.',
+      steps: ['Experiment and guess k.', 'Construction: write it down precisely and check every condition.', 'Bound: partition into k parts holding at most one each, or another counting argument that works for every configuration.', 'If the bound and the example don’t meet, improve the weaker side.', 'Write the answer as: “The maximum is k. Example: … Bound: …”.'],
+      example: {
+        q: 'At most how many numbers can you choose from 1, 2, …, 20 so that no two of them differ by exactly 1?',
+        a: 'Bound: the pairs {1, 2}, {3, 4}, …, {19, 20} each contain at most one chosen number, so at most 10. Example: 1, 3, 5, …, 19. The maximum is 10.',
+      },
+      de: [['Maximum / Minimum', 'maximum / minimum'], ['Abschätzung', 'bound'], ['Konstruktion / Beispiel', 'construction / example'], ['Man bestimme die größtmögliche Anzahl', 'determine the largest possible number'], ['höchstens / mindestens', 'at most / at least']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'What is the largest number of kings that can be placed on an 8×8 chessboard so that no two attack each other? (A king attacks the up to 8 cells around it, diagonals included.)',
+        answers: ['16'],
+        hints: ['Split the board into blocks that can each hold at most one king.', 'Any two cells of a 2×2 block are neighbours.', 'For the example, use the cells where row and column are both odd.'],
+        solution: 'Bound: split the board into 16 blocks of size 2×2. Any two cells in one block touch, so each block holds at most one king: at most 16.\n\nExample: put a king on each cell whose row number and column number are both odd. Two such cells differ by at least 2 in a row or a column, so they don’t touch. That is 4·4 = 16 kings. The maximum is 16.',
+      },
+      {
+        type: 'answer',
+        q: 'What is the largest number of elements of a subset of {1, 2, …, 50} in which no two different elements have a sum divisible by 7?',
+        answers: ['23'],
+        hints: ['Sort the numbers by their remainder mod 7. How many have each remainder?', 'Remainders r and 7 − r can’t both be used; remainder 0 can be used at most once.', 'Remainder 1 has 8 numbers (1, 8, …, 50); every other remainder has 7.'],
+        solution: 'Remainder 0: 7 numbers; remainder 1: 8 numbers (1, 8, …, 50); remainders 2, …, 6: 7 numbers each.\n\nBound: two numbers with remainder 0 have a sum divisible by 7, so at most one of them. If the set used both remainder r and 7 − r, those two numbers would add up to a multiple of 7. So from the classes {1, 6} at most 8 numbers, from {2, 5} at most 7, from {3, 4} at most 7. Total at most 1 + 8 + 7 + 7 = 23.\n\nExample: 7 together with all numbers with remainder 1, 2 or 3. Two remainders from {0, 1, 2, 3} (with 0 used once) add up to 1, …, 6, never to 0 or 7. That is 1 + 8 + 7 + 7 = 23 numbers. The maximum is 23.',
+      },
+      {
+        type: 'proof',
+        q: 'Let n ≥ 1. Find the largest size of a subset of {1, 2, …, 2n} in which no element divides another one, and prove your answer.',
+        hints: ['Try n = 3. Which large numbers can you take together?', 'Write every number as 2ᵃ·m with m odd. When does one number divide another with the same m?', 'There are only n odd numbers m ≤ 2n.'],
+        keySteps: ['Answer: n.', 'Construction: {n + 1, n + 2, …, 2n}. If a | b with a < b, then b ≥ 2a ≥ 2n + 2, impossible.', 'Bound: write each element as 2ᵃ·m with m odd; m is one of the n odd numbers 1, 3, …, 2n − 1.', 'Two elements with the same m: the one with the smaller power of 2 divides the other. So at most one element per m: at most n elements.'],
+        solution: 'The answer is n.\n\nConstruction: take n + 1, n + 2, …, 2n. If a | b with a ≠ b among them, then b ≥ 2a ≥ 2(n + 1) > 2n, a contradiction. So no element divides another, and the set has n elements.\n\nBound: write every number k ≤ 2n as k = 2ᵃ·m with m odd. Then m ≤ 2n is one of the n odd numbers 1, 3, …, 2n − 1. If a set has more than n elements, by pigeonhole two of them have the same odd part: 2ᵃ·m and 2ᵇ·m with a < b. Then 2ᵃ·m divides 2ᵇ·m. So a good set has at most n elements.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'Two bishops attack each other if they stand on the same diagonal (in either direction).\n\nWhat is the largest number of bishops that can be placed on an 8×8 chessboard so that no two attack each other? Prove your answer.',
+      keySteps: ['Answer: 14.', 'Construction: 8 bishops on the first row and 6 on the last row in columns b–g. Same row: no attack. A first-row bishop and a last-row bishop are on one diagonal only if their columns differ by 7, i.e. a and h — not used in the last row.', 'Bound: the board has 15 diagonals in the direction ↗; each holds at most one bishop, so at most 15.', 'The two diagonals of length 1 in that direction are the corners a8 and h1, and these two cells lie on the same ↘ diagonal. So they don’t both hold a bishop: at most 14.', 'Both halves: bound and example, so the maximum is 14.'],
+      solution: 'The answer is 14.\n\nExample: place bishops on all 8 cells of row 1 and on b8, c8, d8, e8, f8, g8. Bishops in the same row don’t attack. A bishop on row 1 and one on row 8 are on a common diagonal only if their columns differ by 7, which means columns a and h; but row 8 has no bishop in column a or h. So the 14 bishops don’t attack each other.\n\nBound: the cells of the board lie on 15 diagonals in the direction ↗ (lengths 1, 2, …, 8, …, 2, 1). Each such diagonal holds at most one bishop, so there are at most 15. If there were 15, every ↗ diagonal would hold one bishop, in particular the two diagonals consisting of a single cell, a8 and h1. But a8 and h1 lie on the same ↘ diagonal (a8, b7, …, h1), so these two bishops would attack each other. Hence at most 14 bishops.\n\nSo the maximum is 14.',
+    },
+  },
+
+  87: {
+    lesson: {
+      idea: 'A path in the grid from (0, 0) to (m, n) with unit steps right (R) and up (U) is the same as a word with m letters R and n letters U. So there are C(m + n, n) such paths.\n\nEven more useful than the formula is the addition rule: the number of paths to a point is the number to the point on its left plus the number to the point below it, because the last step comes from one of these two. Writing these numbers into the grid gives Pascal’s triangle turned on its side, and it handles forbidden points and strange shapes too (write 0 at a forbidden point).\n\nPaths through a point P: (paths to P)·(paths from P to the end). Paths avoiding points: inclusion–exclusion. Paths that must stay on one side of the diagonal: the reflection trick (see the challenge). Lattice paths hide behind words, queues at a ticket office, election counts and ±1 sequences. The trap: in inclusion–exclusion, paths through two forbidden points were subtracted twice and must be added back.',
+      steps: ['Encode the path as a word: C(m + n, m) paths from (0, 0) to (m, n).', 'Through P: multiply the counts before P and after P.', 'Avoiding points: total − through each point + through each pair − …, or fill in the grid with the addition rule.', 'Never crossing a line: reflection, or the addition rule restricted to the allowed points.'],
+      example: {
+        q: 'How many shortest paths from (0, 0) to (4, 4) pass through (2, 2)?',
+        a: 'C(4, 2) = 6 paths lead to (2, 2) and 6 from there to (4, 4). So 6·6 = 36.',
+      },
+      de: [['Gitterweg', 'lattice path'], ['Gitterpunkt', 'lattice point'], ['kürzester Weg', 'shortest path'], ['Pascalsches Dreieck', 'Pascal’s triangle'], ['Spiegelungsprinzip', 'reflection principle'], ['Binomialkoeffizient', 'binomial coefficient']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'How many paths lead from (0, 0) to (6, 4) if each step goes one unit to the right or one unit up?',
+        answers: ['210'],
+        hints: ['Write a path as a word in R and U.', 'The word has 10 letters: 6 R and 4 U.', 'Choose the positions of the 4 U’s.'],
+        solution: 'Each path is a word of 6 R’s and 4 U’s, and each such word is a path. Choose the 4 positions of the U’s among 10: C(10, 4) = 210.',
+      },
+      {
+        type: 'answer',
+        q: 'How many paths lead from (0, 0) to (5, 5) with steps one unit right or up, if they pass through neither (2, 2) nor (3, 3)?',
+        answers: ['84'],
+        hints: ['Count all paths and subtract the bad ones, using inclusion–exclusion.', 'Paths through (2, 2): C(4, 2)·C(6, 3). Through (3, 3): C(6, 3)·C(4, 2).', 'Through both: C(4, 2)·C(2, 1)·C(4, 2).'],
+        solution: 'All paths: C(10, 5) = 252. Through (2, 2): 6·20 = 120. Through (3, 3): 20·6 = 120. Through both: 6·2·6 = 72.\n\nBy inclusion–exclusion the paths through at least one point number 120 + 120 − 72 = 168, so 252 − 168 = 84 paths avoid both.',
+      },
+      {
+        type: 'proof',
+        q: 'Prove that for every n ≥ 1\n\nC(n, 0)² + C(n, 1)² + … + C(n, n)² = C(2n, n),\n\nby counting lattice paths.',
+        hints: ['The right side counts paths from (0, 0) to (n, n).', 'Every such path crosses the line x + y = n exactly once. Where?', 'Count the paths through (k, n − k).'],
+        keySteps: ['C(2n, n) = number of paths from (0, 0) to (n, n).', 'Each path has exactly one point on the line x + y = n (after exactly n steps): some (k, n − k) with 0 ≤ k ≤ n.', 'Paths through (k, n − k): C(n, k) to get there, and C(n, n − k) = C(n, k) from there to (n, n).', 'Summing over k counts every path exactly once: Σ C(n, k)² = C(2n, n).'],
+        solution: 'There are C(2n, n) paths from (0, 0) to (n, n). After exactly n steps a path is at a point (k, n − k) of the line x + y = n, for exactly one k ∈ {0, …, n}. So we can sort the paths by k.\n\nTo reach (k, n − k) there are C(n, k) paths. From there to (n, n) we need n − k steps right and k steps up: C(n, k) paths. So C(n, k)² paths pass through (k, n − k).\n\nAdding over k counts every path once: C(n, 0)² + … + C(n, n)² = C(2n, n).',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'How many paths lead from (0, 0) to (6, 6) with steps one unit right or one unit up, if the path must never go above the line y = x (points on the line are allowed)? Prove your answer.',
+      keySteps: ['Bad paths are exactly those that touch the line y = x + 1.', 'Reflect the part of a bad path up to its first point on y = x + 1 in that line: (0, 0) goes to (−1, 1). This gives a path from (−1, 1) to (6, 6).', 'The map is a bijection: every path from (−1, 1) to (6, 6) must touch y = x + 1 (it starts above, ends below), and reflecting back up to the first touch gives a bad path.', 'Paths from (−1, 1) to (6, 6): 7 R and 5 U, so C(12, 5) = 792.', 'Good paths: C(12, 6) − C(12, 5) = 924 − 792 = 132.'],
+      solution: 'There are C(12, 6) = 924 paths in total. A path goes above y = x exactly when it reaches a point on the line y = x + 1; call these paths bad.\n\nTake a bad path and its first point T on the line y = x + 1. Reflect the part from (0, 0) to T in the line y = x + 1 (the reflection swaps the roles of R and U on that part and sends (x, y) to (y − 1, x + 1)). The start (0, 0) becomes (−1, 1), so we get a path from (−1, 1) to (6, 6).\n\nConversely, a path from (−1, 1) to (6, 6) starts above the line y = x + 1 and ends below it, so it has a first point T on that line. Reflecting the part before T gives a path from (0, 0) that touches the line, i.e. a bad path. The two reflections undo each other, so this is a bijection.\n\nA path from (−1, 1) to (6, 6) has 7 steps right and 5 up: C(12, 5) = 792. So there are 924 − 792 = 132 good paths.\n\n(In general there are C(2n, n) − C(2n, n + 1) = C(2n, n)/(n + 1) such paths: the Catalan numbers.)',
+    },
+  },
+
+  91: {
+    lesson: {
+      idea: 'The sum of all entries of a table can be computed in two ways: add up the row sums, or add up the column sums. That alone solves many problems — it is double counting again. For tables of +1 and −1 use products: the product of all row products equals the product of all column products, since both are the product of all entries.\n\nWhen moves change a whole row or column (change all signs, add 1 to every entry), look for something the move cannot change (an invariant: a parity, a product) or something it always increases (a monovariant). A quantity that only takes finitely many values and increases with every move forces the process to stop.\n\nRecognise it from words like “m×n table”, “row sums”, “column sums”, “change the sign of a whole row”. The trap: the entry where a row and a column cross belongs to both; when you combine rows and columns, don’t count it twice by accident.',
+      steps: ['Total = sum of row sums = sum of column sums (or: product of row products = product of column products).', 'Parity: a row of n entries ±1 has a sum with the same parity as n.', 'Moves on rows or columns: find an invariant or a monovariant.', 'Counting tables: fill row by row and split into cases by what the later rows still need.'],
+      example: {
+        q: 'Can the numbers in a 3×3 table be chosen so that every row sum is negative and every column sum is positive?',
+        a: 'No. Adding the three row sums gives the total of all entries, which would be negative. Adding the column sums gives the same total, which would be positive.',
+      },
+      de: [['Tabelle', 'table'], ['Zeile', 'row'], ['Spalte', 'column'], ['Zeilensumme / Spaltensumme', 'row sum / column sum'], ['Vorzeichen', 'sign'], ['Invariante', 'invariant'], ['Monovariante', 'monovariant']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'A table has 5 rows and 7 columns. Every row sum is 21, and all 7 column sums are equal.\n\nWhat is each column sum?',
+        answers: ['15'],
+        hints: ['Compute the sum of all entries in two ways.', 'By rows: 5·21.', 'By columns: 7·c.'],
+        solution: 'The sum of all entries is 5·21 = 105 (by rows) and 7c (by columns). So c = 105/7 = 15.',
+      },
+      {
+        type: 'answer',
+        q: 'In how many ways can the 16 cells of a 4×4 table be filled with 0s and 1s so that every row and every column contains exactly two 1s?',
+        answers: ['90'],
+        hints: ['Choose the first row (C(4, 2) = 6 ways); by symmetry every choice gives the same number of completions.', 'Say row 1 has its 1s in columns 1 and 2. Then rows 2–4 must contain one more 1 in each of columns 1, 2 and two more in each of columns 3, 4.', 'Case: the extra 1s of columns 1 and 2 are in the same row, or in different rows.'],
+        solution: 'Row 1 can be chosen in 6 ways; by symmetry say it is 1100. Rows 2–4 must still put one 1 in column 1, one in column 2, and two each in columns 3 and 4.\n\nCase 1: the remaining 1s of columns 1 and 2 are in the same row (3 choices of row). That row is 1100, and the other two rows must both be 0011. That gives 3 tables.\n\nCase 2: they are in different rows i and j (3·2 = 6 ordered choices). The third row k gets no 1 in columns 1, 2, so it is 0011. Then rows i and j each need one more 1 in columns 3 or 4, and columns 3, 4 each need one more: 2 ways. That gives 12 tables.\n\nSo each first row has 15 completions, and there are 6·15 = 90 tables.',
+      },
+      {
+        type: 'proof',
+        q: 'Real numbers are written in the cells of an m×n table. In one move you may change the sign of every number in one row, or of every number in one column.\n\nProve that after finitely many moves you can reach a table in which every row sum and every column sum is non-negative.',
+        hints: ['Which row or column would you flip?', 'Flip a row (or column) whose sum is negative. What happens to the sum of all entries?', 'The total sum strictly increases, and there are only finitely many tables you can reach.'],
+        keySteps: ['Strategy: as long as some row or column has a negative sum s, flip it.', 'Flipping changes its sum from s to −s and leaves all other entries alone, so the total S increases by −2s > 0.', 'Every reachable table has each entry equal to ± the original entry, so there are at most 2ᵐⁿ reachable tables and S takes finitely many values.', 'S strictly increases, so no table repeats and the process stops — and it stops only when all row and column sums are ≥ 0.'],
+        solution: 'Let S be the sum of all entries. Strategy: while some row or some column has a negative sum, change its signs.\n\nIf that row (or column) had sum s < 0, after the move its sum is −s and nothing else changes, so S increases by −s − s = −2s > 0.\n\nEvery entry is always plus or minus its original value, so at most 2ᵐⁿ different tables can appear, and S takes only finitely many values. Since S strictly increases with every move, no table can appear twice, so the strategy stops after finitely many moves. It only stops when no row and no column has a negative sum, which is what we wanted.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'Every cell of an n×n table contains +1 or −1. Let r₁, …, rₙ be the products of the rows and c₁, …, cₙ the products of the columns.\n\n(a) Prove that for n = 25 the sum r₁ + … + r₂₅ + c₁ + … + c₂₅ is never 0.\n\n(b) Prove that for every even n there is a table with r₁ + … + rₙ + c₁ + … + cₙ = 0.',
+      keySteps: ['r₁·…·rₙ = product of all entries = c₁·…·cₙ, so the product of all 2n numbers rᵢ, cⱼ is (product of all entries)² = 1.', 'So among the 2n numbers rᵢ, cⱼ (each ±1) an even number are −1.', 'The sum is 0 exactly when n of the 2n numbers are −1; for n = 25 this is odd, a contradiction. (a) done.', '(b) Put −1 on the diagonal cells (1, 1), …, (n/2, n/2) and +1 elsewhere.', 'Then exactly the first n/2 rows and the first n/2 columns have product −1: n numbers −1 and n numbers +1, sum 0.'],
+      solution: '(a) The product r₁·r₂·…·rₙ is the product of all n² entries, and so is c₁·c₂·…·cₙ. So the product of all 2n numbers r₁, …, rₙ, c₁, …, cₙ is the square of the product of all entries, which is 1. Each of these numbers is ±1, so an even number of them are −1.\n\nIf the sum were 0, exactly half of the 2n numbers, i.e. n of them, would be −1. For n = 25 that is an odd number, a contradiction. So the sum is never 0.\n\n(b) Let n be even. Put −1 in the cells (1, 1), (2, 2), …, (n/2, n/2) and +1 everywhere else. Row i for i ≤ n/2 contains exactly one −1, so rᵢ = −1; the other rows have product +1. The same holds for the columns. So n/2 + n/2 = n of the numbers are −1 and n are +1, and the sum is 0.',
+    },
+  },
+
+  95: {
+    lesson: {
+      idea: 'Label every position W (the player to move can force a win) or L (the player to move loses against best play). Work backwards from the end. A position where you can’t move is L (if “cannot move” means losing). A position is W if some move leads to an L position, and L if every move leads to a W position. The winning strategy is: always move to an L position.\n\nIn the exam you rarely fill in the whole table. Instead, compute the small cases, guess the pattern of the L positions (parity, remainders, “both coordinates even”, a range of numbers), and prove two things:\n(1) from every L position, every move leads out of the set of L positions;\n(2) from every other position, some move leads into it.\nAlso check that the game ends. Then the player who can always hand the opponent an L position wins.\n\nRecognise it when the game is finite, has no draws and no luck. Traps: proving only (2) and forgetting (1), and forgetting to say who wins from the actual start position.',
+      steps: ['Fix the rule: does the last move win or lose? What are the end positions?', 'Work backwards from the end: fill a small table of W and L.', 'Guess the pattern of the L positions.', 'Prove (1) L → only non-L, (2) non-L → some L, and that the game ends.', 'Answer: who wins from the start, and how (the strategy).'],
+      example: {
+        q: 'A pile has 10 stones. Players alternately take 1, 2 or 5 stones; whoever takes the last stone wins. Who wins?',
+        a: 'Backwards: 0 is L; 1, 2 are W; 3 is L (moves to 2 or 1); 4, 5 W; 6 L; … The L positions are the multiples of 3: from a multiple of 3 you can’t reach another (1, 2, 5 are not multiples of 3), and from any other number you take 1 or 2 to reach one. 10 is not a multiple of 3, so the first player wins: take 1, then always restore a multiple of 3.',
+      },
+      de: [['Gewinnstellung', 'winning position'], ['Verluststellung', 'losing position'], ['Gewinnstrategie', 'winning strategy'], ['Zug', 'move'], ['rückwärts arbeiten', 'work backwards'], ['anziehender / nachziehender Spieler', 'first / second player']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'A king stands on an 8×8 chessboard. Two players move it in turn; each move goes one square left, one square down, or one square diagonally down-left. The player who cannot move (because the king is in the bottom-left corner) loses.\n\nFor how many of the 63 starting squares other than the bottom-left corner does the second player win?',
+        answers: ['15'],
+        hints: ['Give the squares coordinates (x, y) from 0 to 7, with the corner at (0, 0). Label (0, 0) as L and work backwards.', 'Fill in the bottom-left 4×4 corner. Which squares are L?', 'The L squares are those with x and y both even.'],
+        solution: 'Use coordinates 0–7 from the bottom-left corner. The L positions are exactly the squares with both coordinates even: from such a square every move makes x or y odd, and from any other square you can make both coordinates even with one move (left if only x is odd, down if only y is odd, diagonally if both are odd).\n\nThere are 4·4 = 16 such squares; without the corner, 15. From these the first player is in an L position, so the second player wins.',
+      },
+      {
+        type: 'answer',
+        q: 'The number 1 is on the board. Two players take turns; a move multiplies the current number by one of 2, 3, …, 9. The first player to reach a number of at least 1000 wins.\n\nThe first player has 8 possible first moves (multiply by 2, …, 9). How many of them are winning moves?',
+        answers: ['3'],
+        hints: ['Work backwards from 1000. From which numbers can you win immediately?', 'From 112 on you win at once (112·9 ≥ 1000). From 56 to 111 every move lands on 112 or more without reaching 1000, so these are losing.', 'Next: 7–55 are winning (you can reach 56–111), and 4, 5, 6 are losing.'],
+        solution: 'Work backwards. Numbers from 112 on are W: multiply by 9 to reach at least 1008. Numbers 56 to 111 are L: every move gives at least 112 but at most 999, handing the opponent a W number.\n\nNumbers 7 to 55 are W: take the smallest k with km ≥ 56; then km < 56 + m ≤ 111, and k ≤ 9 since 9·7 = 63 ≥ 56. Numbers 4, 5, 6 are L: every move gives a number from 8 to 54, which is W.\n\nSo the first player wins exactly by moving to an L number, i.e. 4, 5 or 6: multiply by 4, 5 or 6. That is 3 winning first moves.',
+      },
+      {
+        type: 'proof',
+        q: 'In the king game (a king on an 8×8 board moves one square left, down or diagonally down-left; whoever cannot move loses), use coordinates (x, y) ∈ {0, …, 7}² with the corner at (0, 0).\n\nProve that the second player wins exactly when the king starts on a square with x and y both even.',
+        hints: ['You must prove two properties of the set E = {both coordinates even}.', 'From E, does any move stay in E?', 'From outside E, find a move into E. Don’t forget that the game ends.'],
+        keySteps: ['The game ends: every move decreases x + y.', '(1) From a square in E, each move decreases x or y (or both) by 1, so some coordinate becomes odd: the move leaves E.', '(2) From a square outside E: x odd and y odd → diagonal; only x odd → left; only y odd → down. Each lands in E (odd coordinates are ≥ 1, so the move is legal).', 'The corner (0, 0) is in E and has no move. So the player facing E always faces E again or the corner, and loses; the player facing a square outside E moves into E and wins.'],
+        solution: 'Let E be the set of squares with both coordinates even. Every move lowers x + y, so the game ends.\n\n(1) From a square in E every move changes x, y or both by 1, so at least one coordinate becomes odd: no move stays in E.\n\n(2) From a square outside E: if x and y are both odd, move diagonally; if only x is odd, move left; if only y is odd, move down. An odd coordinate is at least 1, so the move is legal, and the new square is in E.\n\nSo the player who moves from outside E can always hand the opponent a square in E, while the player in E must hand back a square outside E. The game ends, and it ends in (0, 0) ∈ E, where the player to move loses. Hence the player who starts in E loses: the second player wins exactly when the start square has both coordinates even.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'A positive integer n is written on the board. Two players take turns. A move: if the current number is m, choose a divisor d of m with 1 ≤ d < m and replace m by m − d. The player who cannot move (when the number is 1) loses.\n\nFor which n does the first player have a winning strategy? Prove your answer.',
+      keySteps: ['Answer: exactly for even n.', 'The game ends: the number decreases and stays ≥ 1.', '(1) From an odd m every divisor d is odd, so m − d is even (and ≥ 1): odd numbers lead only to even numbers.', '(2) From an even m, d = 1 is allowed (1 < m) and gives the odd number m − 1.', 'The end position 1 is odd. So the player facing an odd number always loses; for even n the first player moves to n − 1 and then keeps answering with d = 1.'],
+      solution: 'The first player wins exactly when n is even.\n\nThe number strictly decreases and stays positive (since d < m), so the game ends, and it ends at 1, which is odd.\n\nIf m is odd, all its divisors are odd, so m − d is even. So from an odd number every move leads to an even number. If m is even, then m ≥ 2 and d = 1 is a legal move leading to the odd number m − 1.\n\nStrategy for even n: the first player always subtracts 1. Then the opponent always faces an odd number, must move to an even number, and the first player again subtracts 1. The first player can always move (from an even number), so the first player is never stuck; the game ends, so the opponent gets stuck at 1.\n\nFor odd n the second player uses the same strategy after the first player’s forced move to an even number. So the first player wins exactly for even n.',
+    },
+  },
+
+  99: {
+    lesson: {
+      idea: 'To prove that a region cannot be tiled, colour it so that every tile covers the colours in a fixed way, then count the colours in the region.\n\nChessboard colouring: a domino always covers one black and one white cell. So a region with different numbers of black and white cells has no domino tiling. For 1×k strips use k colours: give the cell in row i and column j the colour i + j mod k. Then every horizontal or vertical 1×k strip covers each colour exactly once, so a tileable region contains every colour equally often. For tiles that cover colours unevenly (the T-tetromino covers 3 cells of one colour and 1 of the other on a chessboard), look at parity.\n\nRecognise it from “Can this region be tiled?” or “Where can the leftover square be?”. The trap: a colouring can only prove impossibility. Equal colour counts prove nothing — to show that a tiling exists, you must give one.',
+      steps: ['Find a colouring in which one tile always covers the same colour pattern: chessboard, stripes, diagonals mod k.', 'Count the cells of each colour in the region.', 'Each tile covers the colours in a fixed way, so the totals must fit. If they don’t: impossible.', 'To locate a leftover cell: use two colourings (diagonals in both directions) and intersect.', 'For possibility: give an explicit tiling, often built from small blocks.'],
+      example: {
+        q: 'The cell in row 1, column 2 is removed from a 5×5 board. Can the remaining 24 cells be tiled by dominoes?',
+        a: 'No. Colour like a chessboard with the corners black: 13 black and 12 white cells. The removed cell is white, so 13 black and 11 white remain. Each domino covers one of each, so 12 dominoes would need 12 + 12.',
+      },
+      de: [['Pflasterung / Parkettierung', 'tiling'], ['Färbungsargument', 'colouring argument'], ['Dominostein', 'domino'], ['Schachbrettfärbung', 'chessboard colouring'], ['T-Tetromino', 'T-tetromino'], ['lückenlos und überschneidungsfrei überdecken', 'cover without gaps or overlaps']],
+    },
+    problems: [
+      {
+        type: 'answer',
+        q: 'Two opposite corner cells are removed from an 8×8 chessboard.\n\nWhat is the largest number of 1×2 dominoes that can be placed on the remaining 62 cells without overlapping?',
+        answers: ['30'],
+        hints: ['Colour like a chessboard. What colour are the two removed corners?', 'Both removed cells have the same colour, so 30 of one colour and 32 of the other remain.', 'Each domino uses one cell of each colour. Then find 30 dominoes.'],
+        solution: 'Opposite corners have the same colour, say black. So 30 black and 32 white cells remain. Each domino covers one black cell, so at most 30 dominoes fit.\n\nExample: tile rows 2–7 with 24 horizontal dominoes. Row 1 has 7 cells left in a row: 3 dominoes. Row 8 also has 7 cells left: 3 dominoes. That is 24 + 3 + 3 = 30. The maximum is 30.',
+      },
+      {
+        type: 'answer',
+        q: 'An 8×8 board is covered by 21 straight 1×3 tiles and one 1×1 square, without gaps or overlaps.\n\nOn how many of the 64 cells can the 1×1 square lie?',
+        answers: ['4'],
+        hints: ['Number rows and columns 1 to 8. Colour cell (i, j) by the remainder of i + j mod 3. What does a 1×3 tile cover?', 'Every 1×3 tile covers one cell of each colour. Colour 0 occurs 22 times, colours 1 and 2 occur 21 times. So the square has i + j ≡ 0 (mod 3).', 'Do the same with i − j. Which cells satisfy both conditions? Then check that each really works.'],
+        solution: 'Colour cell (i, j) by i + j mod 3. Every 1×3 tile covers one cell of each colour. The board has 22 cells with i + j ≡ 0 and 21 of each other colour, so the 21 tiles cover 21 of each and the square is on a cell with i + j ≡ 0 (mod 3). The same argument with i − j mod 3 (also 22, 21, 21) gives i − j ≡ 0 (mod 3). Then 2i ≡ 0, so i ≡ j ≡ 0 (mod 3): the square is on (3, 3), (3, 6), (6, 3) or (6, 6).\n\nAll four really work. For (3, 3): tile rows 6–8 with 8 vertical tiles and the 5×3 block of rows 1–5, columns 6–8 with 5 horizontal tiles. The remaining 5×5 block has (3, 3) as its centre, and the rest of it splits into four 2×3 rectangles arranged like a pinwheel around the centre, each made of 2 tiles. That is 8 + 5 + 8 = 21 tiles. The other three cells follow by rotating the board. Answer: 4.',
+      },
+      {
+        type: 'proof',
+        q: 'Prove that a 6×6 board cannot be tiled by 1×4 strips (horizontal or vertical), although 36 is divisible by 4.',
+        hints: ['Use 4 colours: colour cell (i, j) by i + j mod 4 (rows and columns numbered 0 to 5).', 'Every 1×4 strip, horizontal or vertical, covers each colour exactly once.', 'Count the colours: split the board into a 4×6 part, a 2×4 part and a 2×2 corner.'],
+        keySteps: ['Colour cell (i, j), 0 ≤ i, j ≤ 5, with i + j mod 4.', 'Every horizontal or vertical 1×4 strip covers four consecutive values of i + j, hence each colour once. So a tiling needs equal colour counts (9 each).', 'Rows 0–3 split into vertical 1×4 strips and rows 4–5, columns 0–3 into horizontal ones: these 32 cells contain each colour 8 times.', 'The corner rows 4–5, columns 4–5 has i + j = 8, 9, 9, 10, i.e. colours 0, 1, 1, 2.', 'So the counts are 9, 10, 9, 8 — not equal. No tiling exists.'],
+        solution: 'Number rows and columns 0 to 5 and give cell (i, j) the colour i + j mod 4. In a horizontal 1×4 strip, i + j takes four consecutive values, and the same holds in a vertical strip. So each strip covers each of the 4 colours exactly once, and a tiling by 9 strips would need exactly 9 cells of every colour.\n\nCount the colours. Rows 0–3 split into 6 vertical 1×4 strips, and rows 4–5 in columns 0–3 split into 2 horizontal strips; these 32 cells contain each colour exactly 8 times. The remaining 2×2 corner (rows 4–5, columns 4–5) has i + j = 8, 9, 9, 10, i.e. colours 0, 1, 1, 2.\n\nSo the board has 9 cells of colour 0, 10 of colour 1, 9 of colour 2 and 8 of colour 3. These are not equal, so no tiling by 1×4 strips exists.',
+      },
+    ],
+    challenge: {
+      source: 'Classic',
+      q: 'A T-tetromino is the shape of four cells: three in a row and one more attached to the middle one. It may be rotated.\n\n(a) Prove that a 10×10 board cannot be tiled by T-tetrominoes.\n\n(b) Show that an 8×8 board can be tiled by T-tetrominoes.',
+      keySteps: ['(a) A tiling would use 100/4 = 25 tiles.', 'Chessboard colouring: each T covers 3 cells of one colour and 1 of the other (the middle cell and its three neighbours have opposite colours).', 'Call a tile black-heavy or white-heavy. The board has 50 black and 50 white cells, so 3x + (25 − x) = 50, i.e. x = 12.5 black-heavy tiles — not an integer. Contradiction.', '(b) A 4×4 square can be tiled by 4 T’s (pinwheel: a1 a2 a3 b2 / b1 c1 d1 c2 / d2 d3 d4 c3 / a4 b4 c4 b3), and the 8×8 board splits into four 4×4 squares.'],
+      solution: '(a) A tiling of the 10×10 board would use 25 T-tetrominoes. Colour the board like a chessboard: 50 black and 50 white cells. In a T, the middle cell and its three neighbours have opposite colours, so each T covers 3 cells of one colour and 1 of the other.\n\nSay x tiles cover 3 black cells and 25 − x tiles cover 1 black cell. Then the number of black cells is 3x + (25 − x) = 2x + 25. This must be 50, so 2x = 25, which is impossible for an integer x. So no tiling exists.\n\n(Equivalently: the black-heavy and white-heavy tiles must be equally many, so the number of tiles must be even, but 25 is odd.)\n\n(b) Label the cells of a 4×4 square with columns a–d and rows 1–4. The four T’s {a1, a2, a3, b2}, {b1, c1, d1, c2}, {d2, d3, d4, c3}, {a4, b4, c4, b3} cover it exactly (a pinwheel). The 8×8 board splits into four 4×4 squares, so it can be tiled by 16 T-tetrominoes.',
+    },
+  },
+}

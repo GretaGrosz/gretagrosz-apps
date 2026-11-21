@@ -1,0 +1,344 @@
+{
+ "id": "u26",
+ "n": 26,
+ "phase": 4,
+ "level": "B2",
+ "title": "Futur I & II, Vermutungen",
+ "tips": {
+  "de": "Futur I: werden + Infinitiv. Es drückt Zukunft aus (meist reicht aber das Präsens: Morgen schreibe ich die Schularbeit) und vor allem Vermutungen über die Gegenwart: Sie wird krank sein (= wahrscheinlich ist sie krank). Futur II: werden + Partizip II + haben/sein. Es drückt Vermutungen über die Vergangenheit aus: Er wird den Bus verpasst haben. Oft mit „wohl“, „sicher“, „wahrscheinlich“. Im Nebensatz steht „werden“ am Ende: …, dass sie den Bus verpasst haben wird.",
+  "en": "Futur I (werden + infinitive) is used for predictions and, very often, for guesses about the present. Futur II (werden + participle + haben/sein) is a guess about the past: 'He will have missed the bus'.",
+  "contrast": "English uses 'will' for almost every future. German usually uses the PRESENT for plans ('Morgen fahre ich nach Wien'). 'Werden' sounds like a promise, a prediction or a guess. English 'He must have missed the bus' is often 'Er wird den Bus verpasst haben' or 'Er muss den Bus verpasst haben'.",
+  "table": [
+   [
+    "Futur I",
+    "Sie wird krank sein. (Vermutung jetzt)"
+   ],
+   [
+    "Futur II",
+    "Er wird den Bus verpasst haben. (Vermutung Vergangenheit)"
+   ],
+   [
+    "Nebensatz",
+    "…, dass er den Bus verpasst haben wird."
+   ],
+   [
+    "Zukunft",
+    "Ich werde mich bessern. (Versprechen)"
+   ]
+  ],
+  "examples": [
+   "Bis 2030 wird sich die Zahl der Elektroautos verdoppeln.",
+   "Wo ist Anna? – Sie wird noch im Bus sitzen.",
+   "Die Lehrerin wird die Texte schon korrigiert haben.",
+   "Bis Mai werde ich alle Units geschafft haben.",
+   "Ich glaube, dass die Mieten weiter steigen werden."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u26l1",
+   "title": "Futur I: Zukunft & Vermutung",
+   "s": "verb.futur1",
+   "items": [
+    {
+     "t": "mc",
+     "q": "Wo ist Lukas? – Er ___ noch im Bus sitzen.",
+     "o": [
+      "wird",
+      "ist",
+      "hat"
+     ],
+     "a": "wird",
+     "y": [
+      "Futur I als Vermutung über die Gegenwart",
+      "Futur I nur für die Zukunft",
+      "Perfekt"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Bis 2030 ___ sich die Zahl der Elektroautos verdoppeln.",
+     "o": [
+      "wird",
+      "werden",
+      "würde"
+     ],
+     "a": "wird"
+    },
+    {
+     "t": "mc",
+     "q": "Ich glaube, dass die Mieten weiter ___.",
+     "o": [
+      "steigen werden",
+      "werden steigen",
+      "wird steigen"
+     ],
+     "a": "steigen werden",
+     "y": [
+      "Nebensatz: werden ganz am Ende",
+      "werden direkt nach dem Subjekt",
+      "Singular"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz drückt eine Vermutung aus?",
+     "o": [
+      "Sie wird jetzt wohl zu Hause sein.",
+      "Sie ist jetzt zu Hause.",
+      "Sie war gestern zu Hause."
+     ],
+     "a": "Sie wird jetzt wohl zu Hause sein."
+    },
+    {
+     "t": "gap",
+     "q": "Die Regierung ___ das Problem nicht so schnell ___.",
+     "h": "(lösen, Futur I)",
+     "a": [
+      "wird",
+      "lösen"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Ich ___ mich ab jetzt besser ___.",
+     "h": "(vorbereiten, Futur I, Versprechen)",
+     "a": [
+      "werde",
+      "vorbereiten"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Viele Experten befürchten, dass der Meeresspiegel weiter ___ ___.",
+     "h": "(steigen, Futur I, Nebensatz)",
+     "a": [
+      "steigen",
+      "wird"
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Drück eine Vermutung aus (Futur I + wohl):\nDas Handy ist im Rucksack.",
+     "a": "Das Handy wird wohl im Rucksack sein.",
+     "acc": [
+      "Das Handy wird im Rucksack sein."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Drück eine Vermutung aus (Futur I + wohl):\nDie Schüler sind müde.",
+     "a": "Die Schüler werden wohl müde sein.",
+     "acc": [
+      "Die Schüler werden müde sein."
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Ich glaube, dass die Preise werden steigen.",
+     "a": "Ich glaube, dass die Preise steigen werden."
+    },
+    {
+     "t": "fix",
+     "w": "Morgen ich werde nach Wien fahren.",
+     "a": "Morgen werde ich nach Wien fahren."
+    },
+    {
+     "t": "tr",
+     "en": "She will probably be at home.",
+     "a": "Sie wird wohl zu Hause sein.",
+     "acc": [
+      "Sie wird wahrscheinlich zu Hause sein.",
+      "Sie ist wahrscheinlich zu Hause."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "I think that rents will keep rising.",
+     "a": "Ich glaube, dass die Mieten weiter steigen werden.",
+     "acc": [
+      "Ich denke, dass die Mieten weiter steigen werden.",
+      "Ich glaube, dass die Mieten weiterhin steigen werden."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Bis 2030 wird sich die Zahl der Elektroautos verdoppeln."
+    }
+   ]
+  },
+  {
+   "id": "u26l2",
+   "title": "Futur II: Vermutung über Vergangenes",
+   "s": "verb.futur2",
+   "gen": {
+    "futurZwei": 4
+   },
+   "items": [
+    {
+     "t": "mc",
+     "q": "Anna ist nicht da. – Sie ___ den Bus verpasst ___.",
+     "o": [
+      "wird … haben",
+      "hat … werden",
+      "wird … sein"
+     ],
+     "a": "wird … haben",
+     "y": [
+      "Futur II: werden + Partizip + haben (verpassen → haben)",
+      "Perfekt + werden",
+      "verpassen → sein"
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Der Zug ___ schon abgefahren ___.",
+     "o": [
+      "wird … sein",
+      "wird … haben",
+      "ist … werden"
+     ],
+     "a": "wird … sein",
+     "r": "abfahren → Perfekt mit sein → Futur II: wird … abgefahren sein."
+    },
+    {
+     "t": "mc",
+     "q": "Bis Mai ___ ich alle Units geschafft ___.",
+     "o": [
+      "werde … haben",
+      "habe … werden",
+      "werde … sein"
+     ],
+     "a": "werde … haben",
+     "r": "Futur II kann auch ausdrücken, was zu einem Zeitpunkt abgeschlossen sein wird."
+    },
+    {
+     "t": "gap",
+     "q": "Die Lehrerin ___ die Texte schon ___ ___.",
+     "h": "(korrigieren, Futur II)",
+     "a": [
+      "wird",
+      "korrigiert",
+      "haben"
+     ]
+    },
+    {
+     "t": "gap",
+     "q": "Die Touristen ___ schon am Morgen ___ ___.",
+     "h": "(ankommen, Futur II)",
+     "a": [
+      "werden",
+      "angekommen",
+      "sein"
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Er wird den Bus verpasst sein.",
+     "a": "Er wird den Bus verpasst haben.",
+     "r": "verpassen bildet das Perfekt mit haben."
+    },
+    {
+     "t": "fix",
+     "w": "Sie wird nach Italien geflogen haben.",
+     "a": "Sie wird nach Italien geflogen sein.",
+     "r": "fliegen (Bewegung) → sein."
+    },
+    {
+     "t": "fix",
+     "w": "Bis Mai werde ich alle Units haben geschafft.",
+     "a": "Bis Mai werde ich alle Units geschafft haben."
+    },
+    {
+     "t": "tr",
+     "en": "He will have missed the bus.",
+     "a": "Er wird den Bus verpasst haben."
+    },
+    {
+     "t": "tr",
+     "en": "By May I will have finished all units.",
+     "a": "Bis Mai werde ich alle Units geschafft haben.",
+     "acc": [
+      "Bis Mai werde ich alle Units abgeschlossen haben.",
+      "Bis Mai werde ich alle Units beendet haben."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Bis Mai werde ich alle Units geschafft haben."
+    }
+   ]
+  },
+  {
+   "id": "u26l3",
+   "title": "Vermutungen ausdrücken (Mix)",
+   "s": "verb.vermutung",
+   "gen": {
+    "futurZwei": 2,
+    "modalSubjektiv": 2
+   },
+   "items": [
+    {
+     "t": "match",
+     "q": "Wie sicher ist man?",
+     "pairs": [
+      [
+       "Er ist sicher krank.",
+       "fast sicher"
+      ],
+      [
+       "Er wird wohl krank sein.",
+       "wahrscheinlich"
+      ],
+      [
+       "Vielleicht ist er krank.",
+       "möglich"
+      ],
+      [
+       "Er ist angeblich krank.",
+       "man sagt es"
+      ]
+     ]
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz bedeutet: „Wahrscheinlich hat sie die Angabe nicht gelesen.“",
+     "o": [
+      "Sie wird die Angabe nicht gelesen haben.",
+      "Sie wird die Angabe nicht lesen.",
+      "Sie hatte die Angabe nicht gelesen."
+     ],
+     "a": "Sie wird die Angabe nicht gelesen haben."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Futur II:\nWahrscheinlich hat die Regierung das Problem unterschätzt.",
+     "a": "Die Regierung wird das Problem wohl unterschätzt haben.",
+     "acc": [
+      "Die Regierung wird das Problem unterschätzt haben."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit Futur I:\nWahrscheinlich ist das die beste Lösung.",
+     "a": "Das wird wohl die beste Lösung sein.",
+     "acc": [
+      "Das wird die beste Lösung sein."
+     ]
+    },
+    {
+     "t": "tr",
+     "en": "That will probably be the best solution.",
+     "a": "Das wird wohl die beste Lösung sein.",
+     "acc": [
+      "Das wird wahrscheinlich die beste Lösung sein."
+     ]
+    },
+    {
+     "t": "listen",
+     "a": "Die Regierung wird das Problem wohl unterschätzt haben."
+    }
+   ]
+  }
+ ]
+}

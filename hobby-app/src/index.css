@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light and dark colours. Dark follows the device unless a choice is saved (You → Appearance). */
+:root {
+  --ink: 0 0 0;
+  --mist: 238 238 240;
+  --card: 255 255 255;
+  --page: 242 242 247;
+  --line: 60 60 67;
+  --sub: 108 108 112;         /* secondary text #6C6C70: 4.7:1 on the page */
+  --accent: 184 90 67;        /* #B85A43, the suite's Blank accent: white text 4.6:1 */
+  --accent-ink: 172 76 54;    /* accent text on white/page */
+  --accent-soft: 250 232 226;
+  --good: 36 138 61;
+  --bad: 215 0 21;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.05);
+  --shadow-pop: 0 10px 40px rgba(0, 0, 0, 0.18);
+  --bar: 255 255 255;
+  --hero: 0 0 0;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --ink: 255 255 255;
+    --mist: 44 44 46;
+    --card: 28 28 30;
+    --page: 0 0 0;
+    --line: 84 84 88;
+    --sub: 174 174 178;
+    --accent: 184 90 67;
+    --accent-ink: 240 160 138;
+    --accent-soft: 70 36 28;
+    --good: 48 209 88;
+    --bad: 255 69 58;
+    --shadow-soft: 0 0 0 0.5px rgba(255, 255, 255, 0.06);
+    --shadow-pop: 0 10px 40px rgba(0, 0, 0, 0.7);
+    --bar: 22 22 24;
+    --hero: 44 44 46;
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --ink: 255 255 255;
+  --mist: 44 44 46;
+  --card: 28 28 30;
+  --page: 0 0 0;
+  --line: 84 84 88;
+  --sub: 174 174 178;
+  --accent: 184 90 67;
+  --accent-ink: 240 160 138;
+  --accent-soft: 70 36 28;
+  --good: 48 209 88;
+  --bad: 255 69 58;
+  --shadow-soft: 0 0 0 0.5px rgba(255, 255, 255, 0.06);
+  --shadow-pop: 0 10px 40px rgba(0, 0, 0, 0.7);
+  --bar: 22 22 24;
+  --hero: 44 44 46;
+  color-scheme: dark;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  @apply text-ink font-body antialiased;
+  background: rgb(var(--page));
+  -webkit-tap-highlight-color: transparent;
+}
+button, a, label, [role='button'] { touch-action: manipulation; }
+button { -webkit-user-select: none; user-select: none; }
+:focus-visible { outline: 2px solid rgb(var(--accent-ink)); outline-offset: 2px; }
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-[44px] select-none items-center justify-center gap-2 rounded-full px-5 text-[15px] font-semibold transition active:scale-[0.97];
+    -webkit-user-select: none;
+  }
+  .btn-lg { @apply min-h-[50px] px-6 text-[17px]; }
+  .btn:disabled { @apply pointer-events-none; opacity: 0.35; }
+  .btn-primary { @apply btn bg-spark text-white; }
+  .btn-primary:disabled { opacity: 0.45; }
+  .btn-dark { @apply btn bg-ink text-card; }
+  .btn-tinted { @apply btn bg-spark-soft text-spark-ink; }
+  .btn-plain { @apply btn bg-mist text-ink; }
+  /* Real translucency only on the bars; anything that carries text sits on an opaque surface */
+  .bar {
+    background: rgb(var(--bar) / 0.88);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+  .surface { @apply rounded-[20px] bg-card shadow-soft; }
+  /* 16px so iOS Safari never zooms into a field */
+  .input {
+    @apply block w-full rounded-xl bg-mist px-4 py-3 text-base text-ink outline-none transition placeholder:text-ink/40 focus:ring-2 focus:ring-spark-ink/40;
+  }
+  .row { @apply flex min-h-[48px] w-full items-center gap-3 px-4 text-left; }
+  .hairline { box-shadow: inset 0 -0.5px 0 rgb(var(--line) / 0.3); }
+  .large-title { @apply text-[34px] font-bold leading-[1.1] tracking-[-0.02em]; }
+  .section-label { @apply px-4 pb-2 text-[13px] font-semibold uppercase tracking-[0.04em] text-ink/55; }
+}
+
+/* The finished-project card: black in light mode, raised grey in dark mode */
+.hero { background: rgb(var(--hero)); color: #fff; }
+
+/* A category colour as a quiet tile that works in light and dark */
+.tint {
+  background: color-mix(in srgb, var(--tint, #888) 20%, rgb(var(--card)));
+  color: rgb(var(--ink));
+}
+
+/* Confetti pieces burst out and fall */
+.confetti {
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 11px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: confetti-fall 0.9s cubic-bezier(0.2, 0.7, 0.4, 1) forwards;
+}
+@keyframes confetti-fall {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--dx, 0), 150px) rotate(var(--rot, 360deg)); }
+}
+
+/* Becoming friends through an invite (pages/Profile.jsx): the two pictures slide together, the check pops in between */
+.invite-pop { animation: axo-card-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.friends-left { animation: friends-left 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both; }
+.friends-right { animation: friends-right 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both; }
+.friends-heart { animation: friends-heart 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both; }
+@keyframes friends-left { from { opacity: 0; transform: translateX(-56px) rotate(-8deg); } to { opacity: 1; transform: none; } }
+@keyframes friends-right { from { opacity: 0; transform: translateX(56px) rotate(8deg); } to { opacity: 1; transform: none; } }
+@keyframes friends-heart { from { opacity: 0; transform: scale(0.2); } to { opacity: 1; transform: scale(1); } }
+
+/* The check circle fills with a little spring */
+.check-fill { transition: background-color 0.18s ease-out, border-color 0.18s ease-out, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.check-fill.on { transform: scale(1.08); }
+
+:root { --tip-base: calc(max(10px, env(safe-area-inset-bottom)) + 76px); }
+@media (min-width: 768px) { :root { --tip-base: 24px; } }
+
+/* The axolotl's tip: the card rises with a little spring, the axolotl comes up from behind its edge */
+.axo-card-in { animation: axo-card-in 0.34s cubic-bezier(0.34, 1.4, 0.64, 1) both; }
+.axo-card-out { animation: axo-card-out 0.22s cubic-bezier(0.4, 0, 1, 1) 0.16s both; }
+.axo-tip-in { animation: axo-fade 0.12s ease-out both; }
+.axo-tip-out { animation: axo-tip-out 0.14s ease-in 0.24s both; }
+@keyframes axo-card-in { from { opacity: 0; transform: translateY(14px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes axo-card-out { to { opacity: 0; transform: translateY(12px) scale(0.98); } }
+@keyframes axo-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes axo-tip-out { to { opacity: 0; } }
+
+/* "Thinking" dots in Ask */
+.axo-dot { animation: axo-dot 1s ease-in-out infinite; }
+@keyframes axo-dot { 0%, 100% { opacity: 0.35; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .confetti { display: none; }
+  .axo-dot { animation: none; opacity: 0.6; }
+}

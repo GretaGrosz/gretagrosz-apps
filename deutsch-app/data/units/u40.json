@@ -1,0 +1,140 @@
+{
+ "id": "u40",
+ "n": 40,
+ "phase": 4,
+ "level": "C1",
+ "title": "C1-Gesamtcheck",
+ "tips": {
+  "de": "Diese Unit mischt alles, was auf C1-Niveau zählt: Partizipialattribute, Passiversatz, subjektive Modalverben, Konjunktiv I und II, C1-Konnektoren, Genitivpräpositionen, Nominalstil und Rektion. Wenn du den Checkpoint mit mindestens 90 % schaffst, beherrschst du die Grammatik des C1-Niveaus. Halte sie dann mit „Üben“ und den Sprints frisch.",
+  "en": "A mixed review of all C1 grammar. Passing the checkpoint with 90 % means you have the grammar of the C1 level. Keep it fresh with daily practice.",
+  "contrast": "At C1 the challenge is no longer single rules but combining them correctly in long, dense sentences, which is exactly what a Matura text needs.",
+  "examples": [
+   "Die im Parlament beschlossene Reform dürfte die Mieten kaum senken.",
+   "Einer Studie zufolge lässt sich der Lehrermangel nur langfristig beheben.",
+   "Der Minister soll von den Problemen gewusst haben, ohne dass er gehandelt hätte.",
+   "Angesichts der steigenden Preise wäre es sinnvoll, die Förderungen auszuweiten.",
+   "Die Autorin betont, dass dies nicht ohne politischen Willen umzusetzen sei."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "u40l1",
+   "title": "C1-Mix 1",
+   "s": "c1.mix",
+   "gen": {
+    "partizipAttribut": 1,
+    "passivErsatz": 1,
+    "modalSubjektiv": 1,
+    "prepC1": 1,
+    "konnC1": 1,
+    "alsOb": 1,
+    "futurZwei": 1
+   },
+   "items": [
+    {
+     "t": "fix",
+     "w": "Die im Parlament beschlossenen Reform dürfte die Mieten kaum senken.",
+     "a": "Die im Parlament beschlossene Reform dürfte die Mieten kaum senken."
+    },
+    {
+     "t": "fix",
+     "w": "Zufolge einer Studie lässt sich der Lehrermangel nur langfristig beheben.",
+     "a": "Einer Studie zufolge lässt sich der Lehrermangel nur langfristig beheben.",
+     "acc": [
+      "Laut einer Studie lässt sich der Lehrermangel nur langfristig beheben."
+     ]
+    },
+    {
+     "t": "fix",
+     "w": "Der Minister soll von den Problemen gewusst sein.",
+     "a": "Der Minister soll von den Problemen gewusst haben."
+    },
+    {
+     "t": "fix",
+     "w": "Angesichts den steigenden Preisen wäre es sinnvoll, die Förderungen auszuweiten.",
+     "a": "Angesichts der steigenden Preise wäre es sinnvoll, die Förderungen auszuweiten."
+    },
+    {
+     "t": "fix",
+     "w": "Die Autorin betont, dass dies nicht ohne politischen Willen umzusetzen ist sei.",
+     "a": "Die Autorin betont, dass dies nicht ohne politischen Willen umzusetzen sei."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib in EINEM Satz mit Partizipialattribut:\nDie Studie ist im Herbst erschienen. Sie zeigt, dass Jugendliche zu wenig schlafen.",
+     "a": "Die im Herbst erschienene Studie zeigt, dass Jugendliche zu wenig schlafen."
+    },
+    {
+     "t": "tf",
+     "q": "Schreib mit „sich lassen“ und „ohne dass“:\nDas Problem kann nicht gelöst werden. Die Regierung handelt nicht.",
+     "a": "Das Problem lässt sich nicht lösen, ohne dass die Regierung handelt."
+    },
+    {
+     "t": "listen",
+     "a": "Die im Herbst erschienene Studie zeigt, dass Jugendliche zu wenig schlafen."
+    }
+   ]
+  },
+  {
+   "id": "u40l2",
+   "title": "C1-Mix 2",
+   "s": "c1.mix",
+   "gen": {
+    "partizipAttribut": 1,
+    "passivErsatz": 1,
+    "relative": 1,
+    "commaItem": 1,
+    "adjEnding": 1,
+    "conjClause": 1
+   },
+   "items": [
+    {
+     "t": "tf",
+     "q": "Nominalstil:\nWeil die Nachfrage stark gestiegen ist, wurden die Preise erhöht.",
+     "a": "Aufgrund der stark gestiegenen Nachfrage wurden die Preise erhöht.",
+     "acc": [
+      "Wegen der stark gestiegenen Nachfrage wurden die Preise erhöht.",
+      "Infolge der stark gestiegenen Nachfrage wurden die Preise erhöht."
+     ]
+    },
+    {
+     "t": "tf",
+     "q": "Indirekte Rede (Der Experte warnt, …):\n„Die Folgen werden unterschätzt.“",
+     "a": "Der Experte warnt, die Folgen würden unterschätzt.",
+     "acc": [
+      "Der Experte warnt, dass die Folgen unterschätzt würden.",
+      "Der Experte warnt, die Folgen würden unterschätzt werden."
+     ],
+     "r": "werden (Plural) Konj. I = Indikativ → Ersatz: würden."
+    },
+    {
+     "t": "tf",
+     "q": "Kritik (hätte … sollen) + Passiv:\nMan hat die Bevölkerung nicht informiert.",
+     "a": "Die Bevölkerung hätte informiert werden sollen."
+    },
+    {
+     "t": "komma",
+     "a": "Die Regierung hätte früher handeln sollen, zumal die Probleme seit Jahren bekannt sind."
+    },
+    {
+     "t": "komma",
+     "a": "Wer die Angabe genau liest, vermeidet Fehler, die viele Punkte kosten."
+    },
+    {
+     "t": "mc",
+     "q": "Welcher Satz ist vollständig korrekt?",
+     "o": [
+      "Der von vielen kritisierte Plan dürfte kaum umsetzbar sein.",
+      "Der von vielen kritisierten Plan dürfte kaum umsetzbar sein.",
+      "Der von vielen kritisierte Plan dürfte kaum umsetzbar haben."
+     ],
+     "a": "Der von vielen kritisierte Plan dürfte kaum umsetzbar sein."
+    },
+    {
+     "t": "listen",
+     "a": "Die Regierung hätte früher handeln sollen, zumal die Probleme seit Jahren bekannt sind."
+    }
+   ]
+  }
+ ]
+}
