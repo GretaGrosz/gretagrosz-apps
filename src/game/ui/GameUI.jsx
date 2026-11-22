@@ -265,7 +265,10 @@ export function QuestionCard({ t, item, onPick, onNext }) {
       className="absolute inset-x-0 bottom-0 z-20 max-h-[86dvh] overflow-y-auto px-3 pb-[max(14px,env(safe-area-inset-bottom))]"
     >
       <div className="game-float mx-auto max-w-xl rounded-[26px] bg-surface p-5">
-        <p className="text-[13px] font-semibold uppercase tracking-wide text-accent-text">{header}</p>
+        <div className="flex items-baseline justify-between gap-2">
+          <p className="text-[13px] font-semibold uppercase tracking-wide text-accent-text">{header}</p>
+          {!done && <p className="flex-none text-[12px] text-label3">⏸ {t('timeStops')}</p>}
+        </div>
         <p className="mt-1.5 whitespace-pre-line text-[18px] font-semibold leading-snug">{q.question}</p>
         {hint && !done && <p className="mt-1.5 text-[14px] text-label2">{hint}</p>}
         <div className="mt-4 flex flex-col gap-2">
@@ -286,6 +289,7 @@ export function QuestionCard({ t, item, onPick, onNext }) {
           <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={SPRING}>
             <p className={`mt-4 text-[20px] font-bold ${right ? 'text-success' : 'text-danger'}`}>{right ? t('right') : t('wrong')}</p>
             {q.explanation && <p className="mt-1 whitespace-pre-line text-[15px] leading-snug text-label2">{q.explanation}</p>}
+            {!right && <p className="mt-2 rounded-xl bg-bg px-3 py-2 text-[14px] leading-snug text-label2">💛 {t('wrongNote')}</p>}
             <Button onClick={onNext} className="mt-4 w-full">
               {t('next')}
             </Button>
@@ -428,12 +432,25 @@ export function MaterialSheet({ open, onClose, t, lang, focus, onChange, exam, f
 }
 
 // ---------- Pause ----------
-export function PauseCard({ t, audio, onAudio, onResume, onQuit, onLeave }) {
+export function PauseCard({ t, audio, onAudio, onResume, onQuit, onLeave, gfx, onGfx }) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 z-30 flex items-center justify-center bg-black/25 px-5">
       <motion.div initial={{ scale: 0.92 }} animate={{ scale: 1 }} transition={SPRING} className="game-float w-full max-w-sm rounded-[26px] bg-surface p-5">
         <p className="text-center text-[22px] font-bold">{t('paused')}</p>
         <SoundToggles t={t} audio={audio} onAudio={onAudio} className="mt-4" />
+        {onGfx && (
+          <div className="mt-2.5 flex items-center gap-2">
+            <span className="px-1 text-[14px] font-semibold text-label2">{t('gfx')}</span>
+            {[
+              ['nice', t('gfxNice')],
+              ['fast', t('gfxFast')],
+            ].map(([k, label]) => (
+              <button key={k} onClick={() => onGfx(k)} className={`flex-1 rounded-full py-2 text-[15px] font-semibold ${gfx === k ? 'bg-accent/15 text-accent-text' : 'bg-fill/[0.12] text-label3'}`}>
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
         <Button onClick={onResume} className="mt-4 w-full">
           {t('resume')}
         </Button>

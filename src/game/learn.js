@@ -80,8 +80,12 @@ const shuffle = (list) => {
  * Nächste Frage für eine Station. used: Set der heute schon gestellten Fragen (refKey).
  * Bevorzugt Fragen, die heute noch nicht kamen; die Antworten werden gemischt.
  */
+// Am Handy mitten im Spiel lesen sich kurze Fragen viel leichter: die kommen zuerst, lange nur, wenn nichts anderes da ist
+export const isShort = (q) => q.question.length <= 150 && q.options.every((o) => String(o).length <= 85)
+
 export function nextQuestion(pool, station, used) {
-  const fresh = (list) => list.filter((q) => !used.has(refKey(q.ref)))
+  const all = (list) => list.filter((q) => !used.has(refKey(q.ref)))
+  const fresh = (list) => (all(list).some(isShort) ? all(list).filter(isShort) : all(list))
   const list = fresh(pool[station]).length ? fresh(pool[station]) : fresh(pool.all).length ? fresh(pool.all) : pool[station].length ? pool[station] : pool.all
   if (!list.length) return null
   const q = list[Math.floor(Math.random() * list.length)]

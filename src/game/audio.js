@@ -25,17 +25,160 @@ function ensure() {
   sfxBus = ctx.createGain()
   sfxBus.gain.value = state.sfx ? 0.55 : 0
   sfxBus.connect(master)
+  watch()
   return ctx
 }
 
+// ---------- iPhone/iPad: Stummschalter, Hintergrund, Unterbrechungen ----------
+// Auf iOS gehört Web Audio standardmäßig zur Audio-Sitzung „ambient“ und bleibt bei eingeschaltetem
+// Stummschalter still – dann wirkt der Ton kaputt. Zwei Wege, beide nur in einer Berührung:
+// 1. Safari 16.4+: navigator.audioSession.type = 'playback' (Ton wie bei Videos, trotz Stummschalter).
+// 2. Ältere iOS-Versionen: ein unsichtbares <audio>-Element spielt in Schleife Stille ab. Das schaltet
+//    die Seite in die Medien-Sitzung, und Web Audio klingt mit. Wird pausiert, wenn die Seite im
+//    Hintergrund ist, und bei der nächsten Berührung wieder gestartet.
+// Dazu: nach Hintergrund oder Unterbrechung (Anruf, Siri, Wecker; Safari meldet dann state 'interrupted')
+// den AudioContext wieder anwerfen – sofort, falls erlaubt, sonst bei der nächsten Berührung.
+
+const IOS =
+  typeof navigator !== 'undefined' &&
+  (/iPad|iPhone|iPod/.test(navigator.userAgent || '') || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))
+
+let keepAlive = null // <audio> mit Stille (nur iOS)
+let watching = false
+
+// Kurze stille WAV-Datei (8 kHz, 8 Bit, mono, 0,1 s) als data-URI, im Code erzeugt.
+function silentWav() {
+  const n = 800
+  const bytes = new Uint8Array(44 + n)
+  const dv = new DataView(bytes.buffer)
+  const text = (at, str) => [...str].forEach((ch, i) => dv.setUint8(at + i, ch.charCodeAt(0)))
+  text(0, 'RIFF')
+  dv.setUint32(4, 36 + n, true)
+  text(8, 'WAVE')
+  text(12, 'fmt ')
+  dv.setUint32(16, 16, true) // Länge des fmt-Blocks
+  dv.setUint16(20, 1, true) // PCM
+  dv.setUint16(22, 1, true) // mono
+  dv.setUint32(24, 8000, true) // Abtastrate
+  dv.setUint32(28, 8000, true) // Bytes pro Sekunde
+  dv.setUint16(32, 1, true) // Bytes pro Abtastwert
+  dv.setUint16(34, 8, true) // Bit
+  text(36, 'data')
+  dv.setUint32(40, n, true)
+  bytes.fill(128, 44) // 8-Bit-PCM: 128 = Stille
+  let bin = ''
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i])
+  return 'data:audio/wav;base64,' + btoa(bin)
+}
+
+function playbackSession() {
+  try {
+    const session = navigator.audioSession
+    if (session && session.type !== 'playback') session.type = 'playback'
+  } catch {
+    /* nicht unterstützt */
+  }
+}
+
+function startKeepAlive() {
+  if (!IOS) return
+  try {
+    if (!keepAlive) {
+      const a = document.createElement('audio')
+      a.setAttribute('playsinline', '')
+      a.setAttribute('webkit-playsinline', '')
+      a.setAttribute('x-webkit-airplay', 'deny')
+      try {
+        a.disableRemotePlayback = true
+      } catch {
+        /* egal */
+      }
+      a.preload = 'auto'
+      a.loop = true
+      a.src = silentWav()
+      keepAlive = a
+    }
+    if (keepAlive.paused && !document.hidden) {
+      const p = keepAlive.play()
+      if (p && p.catch) p.catch(() => {})
+    }
+  } catch {
+    /* ohne Ersatzweg weiter */
+  }
+}
+
+function resumeContext() {
+  try {
+    if (ctx && ctx.state !== 'running' && ctx.state !== 'closed') {
+      const p = ctx.resume()
+      if (p && p.catch) p.catch(() => {})
+    }
+  } catch {
+    /* nächste Berührung versucht es wieder */
+  }
+}
+
+// Bei jeder Berührung/Taste (solange das Spiel schon Ton hatte): alles wieder anwerfen, was hängt.
+function onGesture() {
+  if (!ctx) return
+  if (ctx.state !== 'running' || (keepAlive && keepAlive.paused && (state.music || state.sfx))) unlockAudio()
+}
+
+function onVisibility() {
+  try {
+    if (document.hidden) {
+      if (keepAlive && !keepAlive.paused) keepAlive.pause()
+    } else {
+      // Zurück im Vordergrund: gleich versuchen; klappt das ohne Berührung nicht, übernimmt onGesture.
+      resumeContext()
+      if (keepAlive) startKeepAlive()
+    }
+  } catch {
+    /* ignorieren */
+  }
+}
+
+function watch() {
+  if (watching) return
+  watching = true
+  try {
+    // 'interrupted' (iOS) oder 'suspended': sobald möglich weiterspielen
+    ctx.addEventListener?.('statechange', () => {
+      if (ctx.state === 'interrupted' || (ctx.state === 'suspended' && !document.hidden)) resumeContext()
+    })
+    document.addEventListener('visibilitychange', onVisibility)
+    window.addEventListener('pageshow', onVisibility)
+    for (const type of ['touchend', 'click', 'keydown']) document.addEventListener(type, onGesture, { capture: true, passive: true })
+  } catch {
+    /* ignorieren */
+  }
+}
+
+// Aus einer Berührung/Taste aufrufen. Darf beliebig oft aufgerufen werden und wirft nie.
 export function unlockAudio() {
-  const c = ensure()
-  if (c && c.state === 'suspended') c.resume().catch(() => {})
+  try {
+    // Sind Musik und Töne aus, nicht in die Medien-Sitzung wechseln (sonst stoppt z. B. Spotify umsonst)
+    if (state.music || state.sfx) {
+      playbackSession()
+      startKeepAlive()
+    }
+    ensure()
+    resumeContext()
+  } catch {
+    /* ohne Ton weiterspielen */
+  }
 }
 
 export function setAudio({ music, sfx }) {
   if (music !== undefined) state.music = music
   if (sfx !== undefined) state.sfx = sfx
+  if (!state.music && !state.sfx && keepAlive && !keepAlive.paused) {
+    try {
+      keepAlive.pause()
+    } catch {
+      /* egal */
+    }
+  }
   if (!ctx) return
   const t = ctx.currentTime
   musicBus.gain.setTargetAtTime(state.music ? 0.32 : 0, t, 0.08)
@@ -121,6 +264,8 @@ const MELODY = [
 function schedule() {
   const ahead = 0.18
   const eighth = 60 / (rush ? 128 : 102) / 2
+  // Nach einer Pause (Hintergrund, Unterbrechung) nicht alle verpassten Noten auf einmal nachholen
+  if (nextTime < ctx.currentTime - 0.25) nextTime = ctx.currentTime + 0.05
   while (nextTime < ctx.currentTime + ahead) {
     const bar = Math.floor(stepIndex / 8) % 8
     const pos = stepIndex % 8
@@ -240,6 +385,6 @@ export function voice(base = 520, mood = 'ok') {
 
 export function sfx(name) {
   if (!state.sfx || !ensure() || !SFX[name]) return
-  if (ctx.state === 'suspended') ctx.resume().catch(() => {})
+  if (ctx.state !== 'running') resumeContext()
   SFX[name](ctx.currentTime + 0.01)
 }

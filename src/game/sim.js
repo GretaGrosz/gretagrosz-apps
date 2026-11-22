@@ -27,26 +27,30 @@ export const CANDY = [
   { id: 'choco', color: '#A86B45', dark: '#7E4C2E' },
 ]
 
+// Preise abgestimmt mit einem realistischen Test-Bot und Richtwerten aus anderen Spielen (Recherche Nov. 2026):
+// ~90–110 Münzen Gewinn an Tag 1, erster Kauf nach Tag 1, alle 1–2 Tage etwas Neues, alles nach ~60–80 Spieltagen.
+// Fragen-Prämien sind ~30 % des Einkommens: deutlich spürbar, aber auch wer viel falsch hat, kommt gut voran.
 export const PRICES = {
-  sale: 5, // je Stück an der Theke
-  quickTip: 2, // schnell bedient (mehr als halbe Geduld übrig)
-  tipAsk: 8, // richtig beantwortete Kundenfrage
-  tipRegular: 12, // Stammkundschaft richtig
-  letter: 15,
-  inventur: 10,
-  cocoa: 8,
-  tour: 18,
-  tourBad: 3,
-  inspector: 20,
-  inspectorBad: 8,
-  late: 15, // Lieferverzug richtig behandelt → Entschädigung
-  wrongCustomer: 3,
-  wrongLetter: 5,
-  wrongInventur: 4,
-  boxGood: 6, // Einkaufspreis je Kiste mit Rabatt (richtige Antwort beim Bestellen)
-  boxFull: 9, // ohne Rabatt
-  rent: 20, // Standmiete pro Tag
-  snack: 3,
+  sale: 2, // je Stück an der Theke
+  quickTip: 1, // schnell bedient (mehr als halbe Geduld übrig)
+  tipAsk: 5, // richtig beantwortete Kundenfrage
+  tipRegular: 8, // Stammkundschaft richtig (die Frage war früher falsch)
+  letter: 9,
+  inventur: 6,
+  cocoa: 3,
+  tour: 10,
+  tourBad: 2, // Eintritt zahlen sie trotzdem
+  inspector: 12,
+  inspectorBad: 0,
+  late: 9, // Lieferverzug richtig behandelt → Entschädigung
+  // Fehler kosten keine Münzen (Lernen soll sich sicher anfühlen): man bekommt nur den Bonus nicht.
+  wrongCustomer: 0,
+  wrongLetter: 0,
+  wrongInventur: 0,
+  boxGood: 3, // Einkaufspreis je Kiste mit Rabatt (richtige Antwort beim Bestellen)
+  boxFull: 5, // ohne Rabatt
+  rent: 10, // Standmiete pro Tag
+  snack: 2,
 }
 
 // ---------- Orte (Welt-Einheiten; Hauptinsel von −6 bis 6) ----------
@@ -171,7 +175,9 @@ export function walkRects(areas = {}) {
   for (const id of Object.keys(AREA_GEO)) {
     if (!areas[id]) continue
     const g = AREA_GEO[id]
-    list.push(g.bridge)
+    // Brücke ein Stück in beide Inseln hinein verlängern, damit kein Spalt bleibt
+    const [b1, b2, b3, b4] = g.bridge
+    list.push(b3 - b1 > b4 - b2 ? [b1 - 0.7, b2, b3 + 0.7, b4] : [b1, b2 - 0.7, b3, b4 + 0.7])
     const [x1, z1, x2, z2] = g.platform
     list.push([x1 + 0.35, z1 + 0.35, x2 - 0.35, z2 - 0.35])
   }
@@ -351,14 +357,40 @@ export function screenToWorld(sx, sy) {
 function moveLoopy(s, dt, input) {
   const L = s.loopy
   let [dx, dz] = screenToWorld(input.x, input.y)
-  const len = Math.hypot(dx, dz)
+  let len = Math.hypot(dx, dz)
+  if (len > 0.08) L.path = null // Joystick/Tasten haben Vorrang vor dem Hintippen
+  else if (L.path?.length) {
+    const [gx, gz] = L.path[0]
+    dx = gx - L.x
+    dz = gz - L.z
+    const d = Math.hypot(dx, dz)
+    if (d < 0.12) {
+      L.path.shift()
+      if (!L.path.length) {
+        L.path = null
+        L.moving = false
+        s.near = stationAt(s)
+        if (L.autoAct) {
+          L.autoAct = false
+          act(s)
+        }
+        return
+      }
+      return moveLoopy(s, dt, input)
+    }
+    // die letzten Zentimeter nicht überschießen
+    const k = Math.min(1, (d / (s.speed * dt)) || 1)
+    dx = (dx / d) * k
+    dz = (dz / d) * k
+    len = 1
+  }
   L.moving = len > 0.08
   if (!L.moving) return
   if (len > 1) {
     dx /= len
     dz /= len
   }
-  const step = s.speed * dt * (L.carry ? 0.88 : 1)
+  const step = s.speed * dt * (L.carry ? 0.88 : 1) * (L.path ? 1.3 : 1)
   let nx = L.x + dx * step
   let nz = L.z + dz * step
   // am Rand entlanggleiten statt hängenbleiben
@@ -379,6 +411,166 @@ function moveLoopy(s, dt, input) {
 }
 
 const dist = (a, b) => Math.hypot(a.x - b[0], a.z - b[1])
+
+// ---------- Wegsuche (A* auf einem 0,25-Raster der begehbaren Flächen) ----------
+const CELL = 0.25
+const GX0 = -11.5
+const GZ0 = -11.5
+const GW = 76
+const GH = 92
+
+function blockedAt(s, x, z, r) {
+  if (!inWalk(s, x, z, r)) return true
+  for (const [x1, z1, x2, z2] of s.rects) {
+    const cx = Math.max(x1, Math.min(x, x2))
+    const cz = Math.max(z1, Math.min(z, z2))
+    if (Math.hypot(x - cx, z - cz) < r) return true
+  }
+  for (const [cx, cz, cr] of s.circles) if (Math.hypot(x - cx, z - cz) < cr + r) return true
+  return false
+}
+
+function gridOf(s) {
+  if (s._grid) return s._grid
+  const g = new Uint8Array(GW * GH)
+  for (let j = 0; j < GH; j++) for (let i = 0; i < GW; i++) g[j * GW + i] = blockedAt(s, GX0 + i * CELL, GZ0 + j * CELL, 0.36) ? 0 : 1
+  Object.defineProperty(s, '_grid', { value: g, enumerable: false, writable: true })
+  return g
+}
+
+const cellOf = (x, z) => [Math.round((x - GX0) / CELL), Math.round((z - GZ0) / CELL)]
+const inGrid = (i, j) => i >= 0 && j >= 0 && i < GW && j < GH
+
+function nearestOpen(g, i, j) {
+  if (inGrid(i, j) && g[j * GW + i]) return [i, j]
+  for (let r = 1; r < 14; r++) {
+    let best = null
+    let bd = Infinity
+    for (let dj = -r; dj <= r; dj++)
+      for (let di = -r; di <= r; di++) {
+        if (Math.max(Math.abs(di), Math.abs(dj)) !== r) continue
+        const a = i + di
+        const b = j + dj
+        if (inGrid(a, b) && g[b * GW + a] && di * di + dj * dj < bd) {
+          bd = di * di + dj * dj
+          best = [a, b]
+        }
+      }
+    if (best) return best
+  }
+  return null
+}
+
+function lineFree(g, a, b) {
+  const [x0, z0] = a
+  const [x1, z1] = b
+  const n = Math.ceil(Math.hypot(x1 - x0, z1 - z0) / (CELL * 0.5))
+  for (let k = 1; k < n; k++) {
+    const [i, j] = cellOf(x0 + ((x1 - x0) * k) / n, z0 + ((z1 - z0) * k) / n)
+    if (!inGrid(i, j) || !g[j * GW + i]) return false
+  }
+  return true
+}
+
+/** Weg von Loopy zu (x, z). act: am Ziel gleich handeln. Gibt false zurück, wenn kein Weg da ist. */
+export function goTo(s, x, z, { act: andAct = false } = {}) {
+  if (s.paused || s.over || s.pending) return false
+  const g = gridOf(s)
+  const L = s.loopy
+  const start = nearestOpen(g, ...cellOf(L.x, L.z))
+  const goal = nearestOpen(g, ...cellOf(x, z))
+  if (!start || !goal) return false
+  const N = GW * GH
+  const cost = new Float32Array(N).fill(Infinity)
+  const from = new Int32Array(N).fill(-1)
+  const si = start[1] * GW + start[0]
+  const gi = goal[1] * GW + goal[0]
+  cost[si] = 0
+  // kleiner Binärheap über [f, index]
+  const heap = [[0, si]]
+  const push = (f, id) => {
+    heap.push([f, id])
+    let c = heap.length - 1
+    while (c > 0) {
+      const p = (c - 1) >> 1
+      if (heap[p][0] <= heap[c][0]) break
+      ;[heap[p], heap[c]] = [heap[c], heap[p]]
+      c = p
+    }
+  }
+  const pop = () => {
+    const top = heap[0]
+    const last = heap.pop()
+    if (heap.length) {
+      heap[0] = last
+      let c = 0
+      for (;;) {
+        const l = 2 * c + 1
+        const r = l + 1
+        let m = c
+        if (l < heap.length && heap[l][0] < heap[m][0]) m = l
+        if (r < heap.length && heap[r][0] < heap[m][0]) m = r
+        if (m === c) break
+        ;[heap[m], heap[c]] = [heap[c], heap[m]]
+        c = m
+      }
+    }
+    return top
+  }
+  const h = (id) => Math.hypot((id % GW) - goal[0], Math.floor(id / GW) - goal[1])
+  const DIRS = [[1, 0, 1], [-1, 0, 1], [0, 1, 1], [0, -1, 1], [1, 1, 1.414], [1, -1, 1.414], [-1, 1, 1.414], [-1, -1, 1.414]]
+  let found = false
+  let guard = 0
+  while (heap.length && guard++ < N * 2) {
+    const [, id] = pop()
+    if (id === gi) {
+      found = true
+      break
+    }
+    const i = id % GW
+    const j = Math.floor(id / GW)
+    for (const [di, dj, c] of DIRS) {
+      const a = i + di
+      const b = j + dj
+      if (!inGrid(a, b)) continue
+      const nid = b * GW + a
+      if (!g[nid]) continue
+      if (di && dj && (!g[j * GW + a] || !g[b * GW + i])) continue // nicht über Ecken schneiden
+      const nc = cost[id] + c
+      if (nc < cost[nid]) {
+        cost[nid] = nc
+        from[nid] = id
+        push(nc + h(nid), nid)
+      }
+    }
+  }
+  if (!found) return false
+  const cells = []
+  for (let id = gi; id !== -1; id = from[id]) cells.push([GX0 + (id % GW) * CELL, GZ0 + Math.floor(id / GW) * CELL])
+  cells.reverse()
+  // Ecken glätten: nur Punkte behalten, zwischen denen keine gerade Linie frei ist
+  const pts = [[L.x, L.z]]
+  let k = 0
+  while (k < cells.length - 1) {
+    let far = cells.length - 1
+    while (far > k + 1 && !lineFree(g, pts[pts.length - 1], cells[far])) far--
+    pts.push(cells[far])
+    k = far
+  }
+  if (pts.length <= 1 || Math.hypot(L.x - x, L.z - z) < 0.3) {
+    // schon da: gleich handeln
+    L.path = null
+    L.autoAct = false
+    if (andAct) {
+      s.near = stationAt(s)
+      act(s)
+    }
+    return true
+  }
+  L.path = pts.slice(1)
+  L.autoAct = andAct
+  return true
+}
 
 // ---------- Stationen ----------
 function cafeWaiting(s) {
@@ -527,11 +719,11 @@ export function act(s) {
       const c = frontCustomer(s)
       s.jars[c.want] -= c.qty
       const rush = isRush(s.t)
-      const bonus = Math.floor(s.combo / 3) * (rush ? 2 : 1)
+      const bonus = Math.floor(s.combo / 5) * (rush ? 2 : 1)
       const mult = c.vip ? 5 : c.kind === 'gold' ? 3 : 1
       addMoney(s, PRICES.sale * c.qty * mult, 'sales')
       const quick = c.patience > c.max * 0.5 ? Math.round(PRICES.quickTip * (PERSONALITIES[c.personality]?.tip ?? 1)) : 0
-      if (bonus + quick) addMoney(s, bonus + quick, 'tips')
+      if (bonus + quick) addMoney(s, bonus + quick, 'sales') // Trinkgeld fürs schnelle Bedienen zählt zum Umsatz, nicht zu den Fragen-Prämien
       bumpCombo(s)
       L_mood(s, 'happy')
       served(s, c)
@@ -704,7 +896,6 @@ export function answer(s, ok, ref, text = '') {
   const c = q.customerId ? s.customers.find((c) => c.id === q.customerId) : null
   if (q.sub === 'inspector') {
     if (ok) addMoney(s, PRICES.inspector, 'tips')
-    else addMoney(s, -PRICES.inspectorBad, 'penalties')
     if (c) leave(s, c, ok ? 'happy' : 'ok')
     if (c && ok) fx(s, 'sparkle', c.x, c.z, 1.6)
   } else if (q.station === 'counter') {
@@ -714,12 +905,13 @@ export function answer(s, ok, ref, text = '') {
       if (c) served(s, c)
       if (q.sub === 'regular') s.regularsHappy += 1
     } else {
-      addMoney(s, -PRICES.wrongCustomer, 'penalties')
-      breakCombo(s)
+      // nicht schlimm: die Kundschaft kauft trotzdem und geht freundlich (nur ohne Bonus)
+      addMoney(s, PRICES.sale, 'sales')
       if (c) {
-        leave(s, c, 'angry')
-        fx(s, 'cloud', c.x, c.z, 1.6)
-        emit(s, 'voice', { species: c.species, mood: 'angry' })
+        s.served += 1
+        s.species[c.species] = (s.species[c.species] ?? 0) + 1
+        leave(s, c, 'ok')
+        emit(s, 'voice', { species: c.species, mood: 'ok' })
       }
     }
     if (q.castId) emit(s, 'friend', { castId: q.castId, ok })
@@ -729,12 +921,10 @@ export function answer(s, ok, ref, text = '') {
     s.letterKind = null
     s.nextLetter = s.t + rand(40, 58)
     if (ok) addMoney(s, late ? PRICES.late : PRICES.letter, 'tips')
-    else addMoney(s, -PRICES.wrongLetter, 'penalties')
   } else if (q.station === 'store') {
     s.inventur = false
     s.nextInventur = s.t + rand(50, 70)
     if (ok) addMoney(s, PRICES.inventur, 'tips')
-    else addMoney(s, -PRICES.wrongInventur, 'penalties')
   } else if (q.station === 'aquarium') {
     s.tour = false
     s.nextTour = s.t + rand(45, 60)
@@ -1085,6 +1275,17 @@ function startEvent(s, type) {
 }
 
 // ---------- Ein Schritt ----------
+/** Kundschaft gezielt schicken (für den Einführungstag). */
+export function sendCustomer(s, kind = 'normal', extra = {}) {
+  const ok = spawn(s, kind, extra)
+  if (ok && extra.want !== undefined) {
+    const c = s.customers[s.customers.length - 1]
+    c.want = extra.want
+    c.qty = 1
+  }
+  return ok
+}
+
 export function step(s, dt, input) {
   if (s.over) return
   dt = Math.min(dt, 0.05)
@@ -1112,6 +1313,32 @@ export function step(s, dt, input) {
       s.weather = { kind: 'rainbow', until: s.t + 14 }
       emit(s, 'rainbow')
     } else s.weather = null
+  }
+
+  // Einführungstag: Uhr steht, Kundschaft kommt nur, wenn die Anleitung sie schickt, niemand wird ungeduldig
+  if (s.tutorial) {
+    s.t = 0
+    s.customers.forEach((c) => (c.patience = c.max))
+    stepCustomers(s, dt)
+    const b = s.boat
+    if (b.state === 'coming') {
+      b.p = Math.min(1, b.p + dt / 4)
+      if (b.p >= 1) {
+        b.state = 'docked'
+        b.timer = 0
+        s.dockBoxes.push(...s.order.types)
+        s.order = null
+        emit(s, 'delivered')
+        emit(s, 'sfx', { name: 'horn' })
+      }
+    } else if (b.state === 'docked') {
+      b.timer += dt
+      if (b.timer > 1.6) b.state = 'leaving'
+    } else if (b.state === 'leaving') {
+      b.p = Math.max(0, b.p - dt / 3)
+      if (b.p <= 0) b.state = 'away'
+    }
+    return
   }
 
   // Zu Besuch bei Freunden: nur herumlaufen, kein Ladenbetrieb

@@ -8,6 +8,7 @@ import Page from '../components/Page.jsx'
 import ShopScene from '../components/ShopScene.jsx'
 import ShopTimeline from '../components/ShopTimeline.jsx'
 import Button from '../components/Button.jsx'
+import PlayGameButton from '../components/PlayGameButton.jsx'
 import ContentBoundary from '../components/ContentBoundary.jsx'
 import { IconTile, ListGroup, ListRow } from '../components/List.jsx'
 import { CalendarIcon, GridIcon, NotebookIcon, RepeatIcon } from '../components/Icons.jsx'
@@ -45,14 +46,16 @@ export default function Home() {
         </>
       )}
 
-      <ListGroup>
-        <ListRow
-          title={t('playGame')}
-          left={<IconTile><GridIcon className="h-[18px] w-[18px]" /></IconTile>}
-          right={t('playGameSub')}
-          onClick={() => navigate('/spiel')}
-        />
-      </ListGroup>
+      {/* Mit Prüfung steht der Laden (und sein großer Spiel-Knopf) unten – dann hier eine kurze Abkürzung. */}
+      {exam && (
+        <ListGroup>
+          <ListRow
+            title={t('playGame')}
+            left={<IconTile><GridIcon className="h-[18px] w-[18px]" /></IconTile>}
+            onClick={() => navigate('/spiel')}
+          />
+        </ListGroup>
+      )}
 
       {(!exam && dueCount > 0) || mistakeCount > 0 ? (
         <ListGroup>
@@ -135,7 +138,8 @@ function useShownLevel(index) {
   return Math.min(shown, index)
 }
 
-// Loopys Laden: wächst mit dem Lernen. Antippen zeigt die Firmengeschichte.
+// Loopys Laden: wächst mit dem Lernen. Die Insel antippen öffnet das Spiel Loopy & Co.,
+// die Zeile mit Stufe und XP zeigt die Firmengeschichte.
 function Shop({ hero = false }) {
   const { lang, t } = useLang()
   const navigate = useNavigate()
@@ -144,26 +148,24 @@ function Shop({ hero = false }) {
   const shown = useShownLevel(index)
   const [history, setHistory] = useState(false)
   const days = currentStreak(streak)
+  const play = () => navigate('/spiel')
 
   return (
-    <section className={`mb-5 overflow-hidden rounded-card bg-surface ${hero ? '' : ''}`}>
-      <div className="relative">
-        <button onClick={() => setHistory(true)} aria-label={t('historyTitle')} className="block w-full active:opacity-80">
-          <ShopScene level={shown} className={`mx-auto h-auto w-full ${hero ? 'max-w-md' : 'max-w-[280px]'}`} />
-        </button>
-        {/* Auf der Insel spielen: Loopy & Co. */}
-        <button
-          onClick={() => navigate('/spiel')}
-          className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-accent py-2 pl-3 pr-4 text-[15px] font-semibold text-white shadow-[0_6px_18px_-6px_rgb(0_122_255/0.6)] transition-transform active:scale-95"
-        >
-          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M8 5.6v12.8c0 .8.9 1.3 1.6.9l10-6.4c.6-.4.6-1.3 0-1.7l-10-6.4C8.9 4.3 8 4.8 8 5.6z" /></svg>
-          {t('play')}
-        </button>
+    <section className="mb-5 overflow-hidden rounded-card bg-surface">
+      {/* Auf der Insel spielen: Loopy & Co. */}
+      <button onClick={play} aria-label={t('playGame')} tabIndex={-1} className="block w-full transition-opacity active:opacity-80">
+        <ShopScene level={shown} className={`mx-auto h-auto w-full ${hero ? 'max-w-md' : 'max-w-[280px]'}`} />
+      </button>
+      <div className="mx-auto max-w-md px-4 pb-1">
+        <PlayGameButton onClick={play} />
       </div>
-      <div className="px-5 pb-4">
+      <button onClick={() => setHistory(true)} aria-label={t('historyTitle')} className="block w-full px-5 pb-4 pt-3 text-left transition-opacity active:opacity-70">
         <div className="flex items-baseline justify-between gap-3">
-          <span className="text-[17px] font-semibold text-label">{levelText(level, lang).name}</span>
-          <span className="text-[15px] text-label2 tabular">{t('levelN', { n: index + 1 })}</span>
+          <span className="min-w-0 truncate text-[17px] font-semibold text-label">{levelText(level, lang).name}</span>
+          <span className="flex flex-none items-center gap-1 text-[15px] text-label2 tabular">
+            {t('levelN', { n: index + 1 })}
+            <svg viewBox="0 0 24 24" className="h-4 w-4 self-center text-label3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg>
+          </span>
         </div>
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-fill/20" role="progressbar" aria-label={t('toNextLevel')} aria-valuenow={Math.round(progress * 100)} aria-valuemin={0} aria-valuemax={100}>
           <motion.div className="h-full rounded-full bg-accent" initial={{ width: 0 }} animate={{ width: `${progress * 100}%` }} transition={SPRING} />
@@ -172,7 +174,7 @@ function Shop({ hero = false }) {
           {next ? t('xpToNext', { xp, next: next.xp }) : t('maxLevel')}
           {days >= 2 && ` · ${t('streakDays', { n: days })}`}
         </p>
-      </div>
+      </button>
       <ShopTimeline open={history} current={index} onClose={() => setHistory(false)} />
     </section>
   )

@@ -22,6 +22,7 @@ const Einstellungen = lazy(() => import('./pages/Einstellungen.jsx'))
 const JahrgangWahl = lazy(() => import('./pages/Einstellungen.jsx').then((m) => ({ default: m.JahrgangWahl })))
 const SprachWahl = lazy(() => import('./pages/Einstellungen.jsx').then((m) => ({ default: m.SprachWahl })))
 import ContentBoundary from './components/ContentBoundary.jsx'
+import SaveNudge from './account/SaveNudge.jsx'
 import { ToastProvider } from './components/ToastContext.jsx'
 import { useProgress } from './progress.jsx'
 import { useLang } from './i18n.jsx'
@@ -91,6 +92,7 @@ export default function App() {
         </Routes>
       </ContentBoundary>
       <TabBar />
+      <SaveNudge />
     </div>
     </ToastProvider>
   )

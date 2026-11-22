@@ -9,10 +9,11 @@ import { ConfirmSheet } from '../components/Sheet.jsx'
 import { useToast } from '../components/ToastContext.jsx'
 import { IconTile, ListGroup, ListRow } from '../components/List.jsx'
 import { CapIcon, CheckIcon, DownloadIcon, GlobeIcon, UploadIcon } from '../components/Icons.jsx'
+import { AccountSettings } from '../account/Account.jsx'
 
 const Check = () => <CheckIcon className="h-5 w-5 text-accent-text" />
 
-// Einstellungen: Jahrgang, Sprache, Sicherung des Fortschritts
+// Einstellungen: Konto, Jahrgang, Sprache, Sicherung des Fortschritts
 export default function Einstellungen() {
   const navigate = useNavigate()
   const { lang, t } = useLang()
@@ -52,6 +53,8 @@ export default function Einstellungen() {
 
   return (
     <Page title={t('settings')}>
+      <AccountSettings />
+
       <ListGroup>
         <ListRow
           title={t('myYear')}

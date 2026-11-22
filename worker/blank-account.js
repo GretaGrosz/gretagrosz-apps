@@ -36,6 +36,7 @@
 // blank_passkey_challenges and are deleted on use; rpID comes from the request's host (gretagrosz.com, the workers.dev
 // host, localhost in dev). Accounts made with only a passkey have has_password = 0 and a random, unusable pass_hash.
 // Tables: worker/migrations/0550_blank_passkeys.sql.
+// BW Buddy's accounts (bwbuddy-account.js) reuse the exported helpers below; they don't change anything here.
 
 import { use } from './limits.js'
 import { badWords } from './blank-words.js'
@@ -61,35 +62,35 @@ const OPEN_CHALLENGES_PER_IP = 30 // unused passkey challenges one network can h
 const MIN = 60_000
 const DAY = 86_400_000
 
-class HttpError extends Error {
+export class HttpError extends Error {
   constructor(status, error, extra) {
     super(error)
     this.status = status
     this.extra = extra
   }
 }
-const fail = (status, error, extra) => {
+export const fail = (status, error, extra) => {
   throw new HttpError(status, error, extra)
 }
-const json = (data, status = 200) =>
+export const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } })
 const enc = new TextEncoder()
-const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('')
-const unhex = (s) => new Uint8Array(s.match(/../g).map((h) => parseInt(h, 16)))
+export const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('')
+export const unhex = (s) => new Uint8Array(s.match(/../g).map((h) => parseInt(h, 16)))
 export const sha256 = async (s) => hex(await crypto.subtle.digest('SHA-256', enc.encode(s)))
-const random = (n) => crypto.getRandomValues(new Uint8Array(n))
-const b64url = (bytes) =>
+export const random = (n) => crypto.getRandomValues(new Uint8Array(n))
+export const b64url = (bytes) =>
   btoa(String.fromCharCode(...bytes))
     .replace(/\+/g, '-')
     .replace(/\//g, '_')
     .replace(/=+$/, '')
 
-async function pbkdf2(password, salt, iter) {
+export async function pbkdf2(password, salt, iter) {
   const key = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveBits'])
   return hex(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt, iterations: iter }, key, 256))
 }
 // Same time whether or not the hashes match
-function same(a, b) {
+export function same(a, b) {
   if (a.length !== b.length) return false
   let d = 0
   for (let i = 0; i < a.length; i++) d |= a.charCodeAt(i) ^ b.charCodeAt(i)
@@ -152,7 +153,7 @@ async function sendResetEmail(env, to, username, link, lang) {
 // ---------- passkeys ----------
 // Which site the passkey belongs to: gretagrosz.com (also from www.), the workers.dev host, or localhost in dev
 // (any port, since Vite serves the app on its own port and proxies the API)
-function relyingParty(request) {
+export function relyingParty(request) {
   const host = new URL(request.url).hostname
   if (host === 'localhost' || host === '127.0.0.1') return { rpId: 'localhost', origin: (o) => /^http:\/\/localhost(:\d+)?$/.test(String(o)) }
   const rpId = host === 'gretagrosz.com' || host.endsWith('.gretagrosz.com') ? 'gretagrosz.com' : host
@@ -182,10 +183,10 @@ async function takeChallenge(db, id, kind) {
   return row
 }
 // The authenticator's signature counter (bytes 33–36 of the authenticator data)
-const signCount = (authData) => (authData.length >= 37 ? ((authData[33] << 24) >>> 0) + (authData[34] << 16) + (authData[35] << 8) + authData[36] : 0)
+export const signCount = (authData) => (authData.length >= 37 ? ((authData[33] << 24) >>> 0) + (authData[34] << 16) + (authData[35] << 8) + authData[36] : 0)
 const TRANSPORTS = ['ble', 'cable', 'hybrid', 'internal', 'nfc', 'smart-card', 'usb']
-const transports = (v) => (Array.isArray(v) ? [...new Set(v.filter((x) => TRANSPORTS.includes(x)))] : [])
-const readTransports = (s) => {
+export const transports = (v) => (Array.isArray(v) ? [...new Set(v.filter((x) => TRANSPORTS.includes(x)))] : [])
+export const readTransports = (s) => {
   try {
     return transports(JSON.parse(s || '[]'))
   } catch {
@@ -214,7 +215,7 @@ async function checkNewUsername(db, ip, u) {
   if (await db.prepare('SELECT 1 FROM blank_users WHERE username = ?').bind(u).first()) fail(409, 'taken')
 }
 
-async function readJson(request, max) {
+export async function readJson(request, max) {
   const text = await request.text()
   if (text.length > max) fail(413, 'too_big')
   try {

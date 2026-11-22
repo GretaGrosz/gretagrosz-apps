@@ -62,6 +62,8 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return
   const url = new URL(req.url)
   if (!url.href.startsWith(scope)) return
+  // Konto-API (/bwbuddy/api/*) nie aus dem Speicher
+  if (url.pathname.includes('/api/')) return
 
   // Seite selbst: sofort aus dem Speicher, im Hintergrund aktualisieren
   if (req.mode === 'navigate') {
@@ -117,6 +119,17 @@ self.addEventListener('fetch', (event) => {
 
 export default defineConfig({
   plugins: [react(), serviceWorker()],
+  // Nur beim Entwickeln: die Konto-API (worker/bwbuddy-account.js) vom lokalen `npx wrangler dev --port 8799`.
+  // Der Worker nimmt Schreibzugriffe nur von der eigenen Adresse an, darum bekommt die Weiterleitung dessen Origin.
+  server: {
+    proxy: {
+      '/bwbuddy/api': {
+        target: 'http://localhost:8799',
+        changeOrigin: true,
+        configure: (proxy) => proxy.on('proxyReq', (req) => { if (req.getHeader('origin')) req.setHeader('origin', 'http://localhost:8799') }),
+      },
+    },
+  },
   build: {
     // Die Inhalte (pro Sprache und Jahrgang) sind bewusst große, nachgeladene Pakete
     chunkSizeWarningLimit: 700,

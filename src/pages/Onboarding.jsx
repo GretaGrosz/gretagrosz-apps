@@ -7,12 +7,16 @@ import ShopScene from '../components/ShopScene.jsx'
 import Segmented from '../components/Segmented.jsx'
 import { ListGroup, ListRow } from '../components/List.jsx'
 import { SPRING } from '../motion.js'
+import { useAccount } from '../account/Account.jsx'
+import { useAccountText } from '../account/strings.js'
 
 // Erstes Öffnen: nur der Jahrgang. Die Sprache kommt von gretagrosz.com oder vom Gerät;
-// ist sie unbekannt, steht oben ein Umschalter.
+// ist sie unbekannt, steht oben ein Umschalter. Wer schon ein Konto hat, meldet sich unten an und bekommt seinen Stand.
 export default function Onboarding() {
   const { lang, setLang, langKnown, t } = useLang()
   const { finishOnboarding } = useProgress()
+  const account = useAccount()
+  const at = useAccountText()
 
   return (
     <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col px-4 pb-10 pt-[calc(env(safe-area-inset-top)+28px)]">
@@ -35,6 +39,11 @@ export default function Onboarding() {
             />
           ))}
         </ListGroup>
+        {!account.account && (
+          <button onClick={() => account.open('login')} className="mx-auto block min-h-[44px] px-3 text-[15px] text-accent-text active:opacity-50">
+            {at('haveAccount')}
+          </button>
+        )}
       </motion.div>
     </main>
   )

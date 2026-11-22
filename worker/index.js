@@ -1,12 +1,14 @@
 // gretagrosz.com Worker. Static files in deploy/site are served by Cloudflare before this runs;
 // only requests no file matches reach it. Each app's API lives in its own module:
-// Yap (/yap/api/*, yap.js), Stance (/stance/api/*, stance.js), and the others below.
+// Yap (/yap/api/*, yap.js), Stance (/stance/api/*, stance.js), and the others below
+// (BW Buddy's optional accounts: /bwbuddy/api/*, bwbuddy-account.js).
 // Everything else goes back to the static assets (which return their usual 404).
 import { yap } from './yap.js'
 import { stance } from './stance.js'
 import { site } from './site.js'
 import { qed } from './qed.js'
 import { blank } from './blank.js'
+import { bwbuddy } from './bwbuddy-account.js'
 import { withLimits } from './limits.js'
 import { sendDue } from './blank-reminders.js'
 import { sendSessionReminders } from './blank-together.js'
@@ -22,6 +24,7 @@ export default {
     if (url.pathname.startsWith('/api/site/')) return site(request, env, ctx, url)
     if (url.pathname.startsWith('/qed/api/')) return qed(request, env, ctx, url)
     if (url.pathname.startsWith('/blank/api/')) return blank(request, env, ctx, url)
+    if (url.pathname.startsWith('/bwbuddy/api/')) return bwbuddy(request, env, ctx, url)
     return env.ASSETS.fetch(request)
   },
   // Cron (wrangler.jsonc "triggers"): every 5 minutes, the axolotl's reminders that are due (blank-reminders.js)

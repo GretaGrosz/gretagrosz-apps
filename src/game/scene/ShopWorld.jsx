@@ -159,6 +159,34 @@ function XmasMini() {
 }
 const CONE_GEO = new THREE.ConeGeometry(1, 1, 12)
 
+// ---------- Sorten-Symbole (Farbe + Bild, auch für Farbenblinde lesbar) ----------
+export const CANDY_ICON = ['🍭', '🍬', '🧸', '🍫']
+const candyMats = []
+function candyMat(t) {
+  if (!candyMats[t]) {
+    const c = document.createElement('canvas')
+    c.width = c.height = 128
+    const g = c.getContext('2d')
+    g.fillStyle = CANDY[t].color
+    g.beginPath()
+    g.arc(64, 64, 62, 0, Math.PI * 2)
+    g.fill()
+    g.fillStyle = '#FFFFFF'
+    g.beginPath()
+    g.arc(64, 64, 50, 0, Math.PI * 2)
+    g.fill()
+    g.font = '84px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif'
+    g.textAlign = 'center'
+    g.textBaseline = 'middle'
+    g.fillText(CANDY_ICON[t], 64, 72)
+    const tex = new THREE.CanvasTexture(c)
+    tex.colorSpace = THREE.SRGBColorSpace
+    candyMats[t] = new THREE.MeshBasicMaterial({ map: tex, transparent: true })
+  }
+  return candyMats[t]
+}
+const PLANE = new THREE.PlaneGeometry(1, 1)
+
 // ---------- Theke mit Gläsern ----------
 const JAR_X = [-0.85, -0.29, 0.27, 0.83]
 const CANDY_AT = Array.from({ length: 6 }, (_, i) => [Math.cos(i * 2.4) * 0.07, 0.065 + i * 0.045, Math.sin(i * 2.4) * 0.07])
@@ -187,6 +215,7 @@ function LiveJar({ simRef, type, x }) {
         <mesh key={i} ref={(el) => (balls.current[i] = el)} geometry={SPHERE} material={toon(c.color)} scale={0.055} position={p} />
       ))}
       <Blob geo={CYL} color={c.dark} s={[0.17, 0.05, 0.17]} position={[0, 0.34, 0]} />
+      <mesh geometry={PLANE} material={candyMat(type)} scale={0.15} position={[0, 0.12, 0.17]} />
     </group>
   )
 }
@@ -533,7 +562,6 @@ function CustomerTag({ c }) {
     bar.current.position.x = -0.32 * (1 - k)
     barMat.color.set(k > 0.5 ? '#5CD6B0' : k > 0.25 ? '#FFB13D' : '#FF5E5E')
   })
-  const candy = CANDY[c.want]
   return (
     <group ref={ref}>
       <mesh geometry={SPHERE} material={flat('#FFFFFF')} scale={[0.42, 0.3, 0.02]} />
@@ -560,7 +588,7 @@ function CustomerTag({ c }) {
         </mesh>
       ) : (
         Array.from({ length: c.qty }, (_, i) => (
-          <mesh key={i} geometry={SPHERE} material={flat(candy.color)} scale={[0.11, 0.11, 0.03]} position={[(i - (c.qty - 1) / 2) * 0.24, 0.02, 0.03]} />
+          <mesh key={i} geometry={PLANE} material={candyMat(c.want)} scale={0.34} position={[(i - (c.qty - 1) / 2) * 0.3, 0.02, 0.03]} />
         ))
       )}
       {(c.kind === 'gold' || c.vip) && <mesh geometry={SPHERE} material={flat('#FFD45E')} scale={[0.07, 0.07, 0.02]} position={[0.3, 0.18, 0.03]} />}
@@ -589,7 +617,74 @@ function SitLift({ c, children }) {
   return <group ref={ref}>{children}</group>
 }
 
-// Unsichtbarer Boden zum Antippen beim Dekorieren
+// Ziel beim Hintippen: kleiner Ring, wo Loopy hinläuft
+function PathGoal({ simRef }) {
+  const ref = useRef()
+  useFrame(({ clock }) => {
+    const p = simRef.current?.loopy?.path
+    const last = p?.[p.length - 1]
+    ref.current.visible = Boolean(last)
+    if (!last) return
+    ref.current.position.set(last[0], 0.07, last[1])
+    ref.current.scale.setScalar(0.45 + Math.sin(clock.elapsedTime * 6) * 0.04)
+  })
+  return <mesh ref={ref} geometry={RING} material={flat('#FFD45E')} />
+}
+
+// Hüpfender Pfeil über dem Ziel der Anleitung (guideRef.current = [x, z] oder null)
+function GuidePointer({ guideRef }) {
+  const ref = useRef()
+  useFrame(({ clock, camera }) => {
+    const g = guideRef?.current
+    ref.current.visible = Boolean(g)
+    if (!g) return
+    ref.current.position.set(g[0], 2.3 + Math.abs(Math.sin(clock.elapsedTime * 4)) * 0.35, g[1])
+    ref.current.quaternion.copy(camera.quaternion)
+  })
+  return (
+    <group ref={ref}>
+      <mesh geometry={CONE_GEO} material={flat('#FF5E8A')} scale={[0.32, 0.5, 0.05]} rotation={[0, 0, Math.PI]} />
+      <mesh geometry={CYL} material={flat('#FF5E8A')} scale={[0.12, 0.4, 0.05]} position={[0, 0.42, 0]} />
+    </group>
+  )
+}
+
+// Rechnet die Bildschirm-Position der Ziele für die Pfeile am Rand aus (needsRef.current = [{ x, z, … }])
+const proj = new THREE.Vector3()
+function Projector({ needsRef }) {
+  useFrame(({ camera, size }) => {
+    const list = needsRef?.current
+    if (!list) return
+    for (const n of list) {
+      proj.set(n.x, 1, n.z).project(camera)
+      n.sx = ((proj.x + 1) / 2) * size.width
+      n.sy = ((1 - proj.y) / 2) * size.height
+    }
+  })
+  return null
+}
+
+// Merkt, wenn das Gerät zu langsam ist (unter ~32 Bilder pro Sekunde), und meldet es einmal
+function FpsWatch({ onSlow }) {
+  const st = useRef({ t: 0, n: 0, done: false, skip: 1.5 })
+  useFrame((_, dt) => {
+    const w = st.current
+    if (w.done || !onSlow) return
+    if (w.skip > 0) {
+      w.skip -= dt
+      return
+    }
+    w.t += dt
+    w.n += 1
+    if (w.t > 4) {
+      w.done = true
+      if (w.n / w.t < 32) onSlow()
+    }
+  })
+  return null
+}
+
+// Unsichtbarer Boden zum Antippen (Dekorieren oder Hinlaufen)
 function GroundTap({ onTap }) {
   return (
     <mesh
@@ -614,7 +709,7 @@ function GroundTap({ onTap }) {
  * season / holiday: Jahreszeit und Feiertag · rival: Haiberts Insel zeigen
  * decorating + onGroundTap / onPickDecor: Deko aufstellen und einsammeln
  */
-export default function ShopWorld({ simRef, inputRef, running, follow, customers, staffIds = [], dayKey, labels, areas = {}, decor = [], season, holiday, rival, decorating, onGroundTap, onPickDecor }) {
+export default function ShopWorld({ simRef, inputRef, running, follow, customers, staffIds = [], dayKey, labels, areas = {}, decor = [], season, holiday, rival, decorating, onGroundTap, onPickDecor, onWalkTap, guideRef, needsRef, lite, onSlow }) {
   const loopyEnt = () => simRef.current?.loopy
   const snow = season === 'winter'
   const xmas = holiday === 'xmas'
@@ -622,8 +717,8 @@ export default function ShopWorld({ simRef, inputRef, running, follow, customers
     <Canvas
       orthographic
       flat
-      shadows="soft"
-      dpr={[1, 2]}
+      shadows={lite ? false : 'soft'}
+      dpr={lite ? 1 : [1, 2]}
       gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
       camera={{ position: [40, 36, 40], zoom: 30, near: 0.1, far: 200 }}
       style={{ touchAction: 'none' }}
@@ -637,6 +732,11 @@ export default function ShopWorld({ simRef, inputRef, running, follow, customers
       <AreasLayer simRef={simRef} areas={areas} labels={labels} snow={snow} />
       <DecorLayer decor={decor} onPick={decorating ? onPickDecor : undefined} />
       {decorating && <GroundTap onTap={onGroundTap} />}
+      {!decorating && onWalkTap && <GroundTap onTap={onWalkTap} />}
+      <PathGoal simRef={simRef} />
+      <GuidePointer guideRef={guideRef} />
+      <Projector needsRef={needsRef} />
+      {!lite && <FpsWatch onSlow={onSlow} />}
       <Counter simRef={simRef} sign={labels.sign} xmas={xmas} />
       <Storeroom simRef={simRef} label={labels.store} />
       <Dock simRef={simRef} label={labels.dock} />
@@ -676,7 +776,7 @@ export default function ShopWorld({ simRef, inputRef, running, follow, customers
         </group>
       ))}
       <Effects simRef={simRef} />
-      <SeasonFall season={season === 'summer' ? null : season} />
+      {!lite && <SeasonFall season={season === 'summer' ? null : season} />}
       <Weather simRef={simRef} />
     </Canvas>
   )

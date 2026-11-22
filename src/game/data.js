@@ -45,46 +45,46 @@ export const MAX_HEARTS = 5
 //      calm = Wartende bleiben geduldiger, cafe = Kakao im Café zubereiten und servieren
 // Energie 0–100: sinkt bei jeder Aufgabe, Loopy kann füttern (Snack) – müde arbeiten sie langsamer, bei 0 schlafen sie.
 export const STAFF = [
-  { id: 'kai', species: 'crab', cost: 120, wage: 12, job: 'carry', emoji: '🦀' },
-  { id: 'luma', species: 'jelly', cost: 150, wage: 10, job: 'calm', emoji: '🪼' },
-  { id: 'otto', species: 'octopus', cost: 200, wage: 14, job: 'refill', emoji: '🐙' },
-  { id: 'momo', species: 'seal', cost: 220, wage: 14, job: 'cafe', needs: 'cafe', emoji: '🦭' },
+  { id: 'kai', species: 'crab', cost: 650, wage: 6, job: 'carry', emoji: '🦀' },
+  { id: 'luma', species: 'jelly', cost: 950, wage: 6, job: 'calm', emoji: '🪼' },
+  { id: 'otto', species: 'octopus', cost: 1350, wage: 8, job: 'refill', emoji: '🐙' },
+  { id: 'momo', species: 'seal', cost: 1700, wage: 8, job: 'cafe', needs: 'cafe', emoji: '🦭' },
 ]
 export const staffById = (id) => STAFF.find((s) => s.id === id)
-export const SNACK_COST = 3 // Münzen für einen Snack
+export const SNACK_COST = 2 // Münzen für einen Snack
 export const SNACK_ENERGY = 50
 
 // ---------- Neue Inselteile ----------
 export const AREAS = [
-  { id: 'beach', cost: 150, emoji: '🏖️' }, // Strand: Personal erholt sich, Kundschaft entspannter
-  { id: 'cafe', cost: 250, emoji: '☕' }, // Café: Kakao an Tischen servieren
-  { id: 'aquarium', cost: 400, emoji: '🐠' }, // Aquarium: Führungen mit Mini-Spiel, lockt Stars an
+  { id: 'beach', cost: 1000, emoji: '🏖️' }, // Strand: Personal erholt sich, Kundschaft entspannter
+  { id: 'cafe', cost: 1500, emoji: '☕' }, // Café: Kakao an Tischen servieren
+  { id: 'aquarium', cost: 2300, emoji: '🐠' }, // Aquarium: Führungen mit Mini-Spiel, lockt Stars an
 ]
 
 // ---------- Feste Verbesserungen ----------
 export const UPGRADES = [
-  { id: 'jars', cost: 60, emoji: '🫙' },
-  { id: 'shoes', cost: 80, emoji: '👟' },
-  { id: 'bench', cost: 100, emoji: '⛱️' },
-  { id: 'choco', cost: 150, emoji: '🍫' },
+  { id: 'jars', cost: 80, emoji: '🫙' },
+  { id: 'shoes', cost: 150, emoji: '👟' },
+  { id: 'bench', cost: 250, emoji: '⛱️' },
+  { id: 'choco', cost: 450, emoji: '🍫' },
 ]
 
 // ---------- Deko zum frei Hinstellen ----------
 // cozy: Gemütlichkeit – jede Deko macht die Kundschaft etwas geduldiger (insgesamt höchstens +30 %)
 // season: nur in dieser Zeit im Laden erhältlich (gekaufte bleiben)
 export const DECOR = [
-  { id: 'flowerpot', cost: 15, cozy: 1, emoji: '🪴' },
-  { id: 'lantern', cost: 25, cozy: 2, emoji: '🏮' },
-  { id: 'shellLamp', cost: 35, cozy: 2, emoji: '🐚' },
-  { id: 'parasol', cost: 40, cozy: 2, emoji: '⛱️' },
-  { id: 'benchDeco', cost: 45, cozy: 3, emoji: '🪑' },
-  { id: 'balloons', cost: 50, cozy: 3, emoji: '🎈' },
-  { id: 'flamingo', cost: 60, cozy: 3, emoji: '🦩' },
-  { id: 'fountain', cost: 120, cozy: 6, emoji: '⛲' },
-  { id: 'xmasTree', cost: 60, cozy: 4, emoji: '🎄', season: 'xmas' },
-  { id: 'snowman', cost: 30, cozy: 2, emoji: '⛄', season: 'winter' },
-  { id: 'pumpkin', cost: 25, cozy: 2, emoji: '🎃', season: 'halloween' },
-  { id: 'eggs', cost: 25, cozy: 2, emoji: '🥚', season: 'easter' },
+  { id: 'flowerpot', cost: 30, cozy: 1, emoji: '🪴' },
+  { id: 'lantern', cost: 50, cozy: 2, emoji: '🏮' },
+  { id: 'shellLamp', cost: 70, cozy: 2, emoji: '🐚' },
+  { id: 'parasol', cost: 80, cozy: 2, emoji: '⛱️' },
+  { id: 'benchDeco', cost: 90, cozy: 3, emoji: '🪑' },
+  { id: 'balloons', cost: 100, cozy: 3, emoji: '🎈' },
+  { id: 'flamingo', cost: 120, cozy: 3, emoji: '🦩' },
+  { id: 'fountain', cost: 350, cozy: 6, emoji: '⛲' },
+  { id: 'xmasTree', cost: 120, cozy: 4, emoji: '🎄', season: 'xmas' },
+  { id: 'snowman', cost: 60, cozy: 2, emoji: '⛄', season: 'winter' },
+  { id: 'pumpkin', cost: 50, cozy: 2, emoji: '🎃', season: 'halloween' },
+  { id: 'eggs', cost: 50, cozy: 2, emoji: '🥚', season: 'easter' },
 ]
 export const decorById = (id) => DECOR.find((d) => d.id === id)
 export const COZY_MAX = 0.3
@@ -93,13 +93,13 @@ export const COZY_MAX = 0.3
 // unlock: 'coins' (im Kleiderschrank kaufen) · 'daily' (Geschenk jeden 7. Tag in Folge) · 'album' (Stickeralbum) · 'season'
 export const OUTFITS = [
   { id: 'none', cost: 0, unlock: 'free', emoji: '🙂' },
-  { id: 'bow', cost: 40, unlock: 'coins', emoji: '🎀' },
-  { id: 'straw', cost: 60, unlock: 'coins', emoji: '👒' },
-  { id: 'beanie', cost: 60, unlock: 'coins', emoji: '🧢' },
-  { id: 'shades', cost: 80, unlock: 'coins', emoji: '🕶️' },
-  { id: 'flowers', cost: 90, unlock: 'coins', emoji: '🌸' },
-  { id: 'headphones', cost: 110, unlock: 'coins', emoji: '🎧' },
-  { id: 'chef', cost: 140, unlock: 'coins', emoji: '👨‍🍳' },
+  { id: 'bow', cost: 120, unlock: 'coins', emoji: '🎀' },
+  { id: 'straw', cost: 180, unlock: 'coins', emoji: '👒' },
+  { id: 'beanie', cost: 180, unlock: 'coins', emoji: '🧢' },
+  { id: 'shades', cost: 260, unlock: 'coins', emoji: '🕶️' },
+  { id: 'flowers', cost: 300, unlock: 'coins', emoji: '🌸' },
+  { id: 'headphones', cost: 380, unlock: 'coins', emoji: '🎧' },
+  { id: 'chef', cost: 480, unlock: 'coins', emoji: '👨‍🍳' },
   { id: 'pirate', cost: 0, unlock: 'daily', emoji: '🏴‍☠️' },
   { id: 'party', cost: 0, unlock: 'album', emoji: '🥳' },
   { id: 'crown', cost: 0, unlock: 'story', emoji: '👑' },

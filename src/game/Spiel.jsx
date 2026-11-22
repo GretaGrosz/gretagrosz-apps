@@ -10,7 +10,7 @@ import { useContentReady } from '../data/content.js'
 import { daysUntil } from '../data/questions.js'
 import { getKapitelList, getKapitelTopics } from '../data/curriculum.js'
 import ShopWorld from './scene/ShopWorld.jsx'
-import { DAY_LEN, PRICES, act, answer, canPlace, clockOf, closingCosts, createDay, isRush, planEvents, promptOf } from './sim.js'
+import { AQUARIUM, CAFE, DAY_LEN, PLACES, PRICES, act, answer, canPlace, clockOf, closingCosts, createDay, frontCustomer, goTo, isRush, planEvents, promptOf, sendCustomer } from './sim.js'
 import { AREAS, CAST, DECOR, OUTFITS, SAVE_VERSION, STAFF, UPGRADES, decorById, freshSave, holidayOf, seasonOf, speciesById, MAX_HEARTS } from './data.js'
 import { buildPool, mixed, nextQuestion, refKey, regularQuestions } from './learn.js'
 import { makeMiniGame } from './minigames.js'
@@ -29,6 +29,9 @@ import {
   newStickers,
   redeemGift,
   sendGift,
+  AREA_TEXT,
+  STAFF_TEXT,
+  UPGRADE_TEXT,
   stickerList,
   storyBeat,
 } from './meta.js'
@@ -36,6 +39,7 @@ import { NAMES, makeT } from './strings.js'
 import { setAudio, setRush, sfx, startMusic, stopMusic, unlockAudio, voice } from './audio.js'
 import { ActionButton, Count, Hud, Joystick, MaterialSheet, MoneyPops, PauseCard, Pill, QuestionCard, Summary, Toasts } from './ui/GameUI.jsx'
 import MiniGame from './ui/MiniGame.jsx'
+import { CoachCard, EdgeArrows } from './ui/Guide.jsx'
 import { AlbumSheet, DailyGiftCard, FriendsSheet, IslandSheet, MissionsCard, StoryDialog, VisitBanner, WardrobeSheet } from './ui/MetaUI.jsx'
 
 // Loopy & Co. – Loopy führt ihren Bonbonstand auf der schwebenden Insel. Man läuft mit WASD/Pfeiltasten
@@ -89,6 +93,15 @@ function visitFromLink() {
   }
 }
 
+const weakDevice = () => {
+  try {
+    const mem = navigator.deviceMemory
+    const cores = navigator.hardwareConcurrency
+    return (mem && mem <= 3) || (cores && cores <= 4 && isTouch())
+  } catch {
+    return false
+  }
+}
 const isTouch = () => typeof window !== 'undefined' && window.matchMedia?.('(pointer: coarse)').matches
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v))
 const STAFF_NAME = { kai: 'Kai', luma: 'Luma', otto: 'Otto', momo: 'Momo' }
@@ -99,6 +112,40 @@ const MG_CHANCE = { counter: 0.3, store: 0.35, dock: 0.35, mail: 0.3 }
 const MG_KIND = { counter: 'change', store: 'sort', dock: 'calc', mail: 'match' }
 
 let uid = 0
+
+// Einführungstag mit Oma Schildi: jeder Schritt hat ein Ziel (Pfeil), einen Start (was passiert) und ein „geschafft“
+const TUT = [
+  { id: 'walk', text: 'tut_walk', at: () => PLACES.serve, done: (s) => s.near === 'counter' },
+  { id: 'serve', text: 'tut_serve', at: () => PLACES.serve, start: (s) => sendCustomer(s, 'normal', { want: 0 }), done: (s) => s.served >= 1 },
+  { id: 'ask', text: 'tut_ask', at: () => PLACES.serve, start: (s) => sendCustomer(s, 'ask'), done: (s) => s.answers.length >= 1 && !s.pending },
+  {
+    id: 'empty',
+    text: 'tut_empty',
+    at: () => PLACES.storeDoor,
+    start: (s) => {
+      s.jars[1] = 0
+      s.store[1] = Math.max(1, s.store[1])
+      sendCustomer(s, 'normal', { want: 1 })
+    },
+    done: (s) => s.loopy.carry?.kind === 'box',
+  },
+  { id: 'refill', text: 'tut_refill', at: () => PLACES.serve, done: (s) => s.jars[1] > 0 },
+  { id: 'serve2', text: 'tut_serve2', at: () => PLACES.serve, done: (s) => !s.customers.some((c) => c.slot >= 0) },
+  {
+    id: 'order',
+    text: 'tut_order',
+    at: () => PLACES.dock,
+    start: (s) => (s.store = s.store.map(() => 0)),
+    done: (s) => Boolean(s.order) || s.boat.state !== 'away' || s.dockBoxes.length > 0,
+  },
+  {
+    id: 'unload',
+    text: 'tut_unload',
+    at: (s) => (s.loopy.carry?.src === 'dock' ? PLACES.storeDoor : PLACES.dockPile),
+    done: (s) => s.boat.state !== 'coming' && !s.order && s.dockBoxes.length === 0 && !s.loopy.carry,
+  },
+  { id: 'done', text: 'tut_done', at: () => null, done: () => false },
+]
 
 export default function Spiel() {
   const back = useBack('/')
@@ -146,6 +193,13 @@ export default function Spiel() {
   const [beat, setBeat] = useState(null)
   const [placing, setPlacing] = useState(null) // Deko-ID, die gerade aufgestellt wird
   const [showMissions, setShowMissions] = useState(false)
+  const [tut, setTut] = useState(null) // Schritt am Einführungstag (Index in TUT) oder null
+  const tutRef = useRef(null)
+  tutRef.current = tut
+  const guideRef = useRef(null)
+  const needsRef = useRef([])
+  const [needs, setNeeds] = useState([])
+  const lite = save.gfx === 'fast' || (save.gfx !== 'nice' && weakDevice())
   const used = useRef(new Set())
   const playedGames = useRef(new Set())
   const regulars = useRef([])
@@ -190,7 +244,8 @@ export default function Spiel() {
       let next = ensureMissions(s, now)
       const r = claimDaily(next, now)
       if (r.gift) {
-        setGift({ ...r.gift })
+        // beim allerersten Öffnen kein Geschenk-Fenster (nur Oma Schildi) – ab dem zweiten Besuch schon
+        if (s.seenHowTo) setGift({ ...r.gift })
         next = r.save
       }
       return next
@@ -228,7 +283,15 @@ export default function Spiel() {
     // Schwierigkeit passt sich an: wer viel richtig hat und kaum Kundschaft verliert, bekommt mehr zu tun
     const sk = save.skill ?? { acc: 0.75, svc: 0.85 }
     const diff = clamp(0.86 + (sk.svc - 0.82) * 0.9 + (sk.acc - 0.72) * 0.6 + Math.min(0.12, save.day * 0.008), 0.8, 1.25)
-    simRef.current = createDay(save, { regulars: castIds.slice(0, nReg), diff, events: planEvents(save.day, holiday), holiday })
+    const tutorial = !save.tutorialDone && save.day === 1
+    simRef.current = createDay(save, { regulars: tutorial ? [] : castIds.slice(0, nReg), diff, events: tutorial ? [] : planEvents(save.day, holiday), holiday })
+    TUT.forEach((x) => (x.started = false))
+    if (tutorial) {
+      simRef.current.tutorial = true
+      simRef.current.loopy.x = -2.3
+      simRef.current.loopy.z = -1.9
+      setTut(0)
+    } else setTut(null)
     setCustomers([])
     setDayKey((k) => k + 1)
     setReport(null)
@@ -302,6 +365,27 @@ export default function Spiel() {
     sfx(stars >= 2 ? 'right' : 'combo')
   }, [save, lang])
 
+  const endTutorial = useCallback(() => {
+    const s = simRef.current
+    if (s) {
+      s.tutorial = false
+      s.t = 0
+      s.nextSpawn = 1.5
+      s.customers.forEach((c) => (c.patience = c.max))
+    }
+    guideRef.current = null
+    setTut(null)
+    setSave((sv) => ({ ...sv, tutorialDone: true }))
+    sfx('gift')
+  }, [])
+
+  // Loopy zu einem Ziel schicken (Pfeil am Rand oder Hintippen)
+  const walkTo = useCallback((x, z, andAct = false) => {
+    const s = simRef.current
+    if (!s || (phaseRef.current !== 'play' && phaseRef.current !== 'visit')) return
+    if (goTo(s, x, z, { act: andAct })) sfx('click')
+  }, [])
+
   // ---------- Fragen und Mini-Spiele ----------
   const nameOf = useCallback(
     (c, id) => {
@@ -319,7 +403,7 @@ export default function Spiel() {
       const name = nameOf(c, ev.customerId)
       // Mini-Spiel?
       const special = ev.sub === 'regular' || ev.sub === 'inspector' || ev.sub === 'late'
-      const mgKind = ev.station === 'aquarium' ? (Math.random() < 0.5 ? 'match' : 'sort') : !special && Math.random() < (MG_CHANCE[ev.station] ?? 0) ? MG_KIND[ev.station] : null
+      const mgKind = s.tutorial ? null : ev.station === 'aquarium' ? (Math.random() < 0.5 ? 'match' : 'sort') : !special && Math.random() < (MG_CHANCE[ev.station] ?? 0) ? MG_KIND[ev.station] : null
       if (mgKind) {
         let game = null
         try {
@@ -515,6 +599,45 @@ export default function Spiel() {
           default:
         }
       }
+      // Einführungstag
+      const step = tutRef.current
+      if (step !== null && step !== undefined && TUT[step]) {
+        const T = TUT[step]
+        if (!T.started) {
+          T.started = true
+          T.start?.(s)
+        }
+        guideRef.current = T.at(s)
+        if (T.done(s) && TUT[step + 1]) {
+          sfx('pat')
+          tutRef.current = step + 1
+          setTut(step + 1)
+        }
+      } else guideRef.current = null
+
+      // Pfeile am Rand: was Loopy gerade braucht
+      const want = []
+      const add = (id, icon, at) => at && want.push({ id, icon, x: at[0], z: at[1] })
+      if (guideRef.current) add('guide', '👉', guideRef.current)
+      else {
+        if (frontCustomer(s) && s.near !== 'counter') add('counter', '🙋', PLACES.serve)
+        if (s.letter) add('mail', '✉️', PLACES.mailFront)
+        if (s.inventur) add('store', '📋', PLACES.storeDoor)
+        if (s.dockBoxes.length) add('dock', '📦', PLACES.dock)
+        if (s.areas.cafe && s.customers.some((c) => c.state === 'sit' && !c.served && !c.claimed)) add('cafe', '☕', CAFE.machineFront)
+        if (s.tour) add('tour', '🐠', AQUARIUM.front)
+        for (const k of Object.values(s.staff)) if (k.asleep) add(`staff-${k.id}`, '💤', [k.x, k.z])
+      }
+      const old = new Map(needsRef.current.map((n) => [n.id, n]))
+      needsRef.current = want.map((n) => {
+        const o = old.get(n.id)
+        if (!o) return { ...n, guide: n.id === 'guide' }
+        o.x = n.x
+        o.z = n.z
+        return o
+      })
+      setNeeds((prev) => (prev.length === want.length && prev.every((p, i) => p.id === want[i].id) ? prev : needsRef.current.map((n) => ({ id: n.id, icon: n.icon, guide: n.guide }))))
+
       const list = s.customers
       setCustomers((prev) => (prev.length === list.length && prev.every((c, i) => c === list[i]) ? prev : [...list]))
       const prompt = promptOf(s)
@@ -588,6 +711,8 @@ export default function Spiel() {
 
   const quitDay = () => {
     stopMusic()
+    setTut(null)
+    guideRef.current = null
     resetPreview()
     setQuestion(null)
     setPhase('menu')
@@ -753,12 +878,21 @@ export default function Spiel() {
   const missionsNew = missionsReady(save)
   const actionLabel = hud.prompt ? t(`a_${hud.prompt.action}`, { name: STAFF_NAME[hud.prompt.who] ?? '' }) : ''
 
+  // Nächstes Sparziel (immer sichtbar): das günstigste noch fehlende Stück aus Ausbau, Personal und Inselteilen
+  const L3 = (o) => (typeof o === 'string' ? o : o?.[lang] ?? o?.de ?? '')
+  const goal = [
+    ...UPGRADES.filter((u) => !save.upgrades?.[u.id]).map((u) => ({ cost: u.cost, emoji: u.emoji, name: L3(UPGRADE_TEXT[u.id]?.name) })),
+    ...STAFF.filter((x) => !save.staff?.[x.id] && (!x.needs || save.areas?.[x.needs])).map((x) => ({ cost: x.cost, emoji: x.emoji, name: STAFF_TEXT[x.id]?.name ?? x.id })),
+    ...AREAS.filter((a) => !save.areas?.[a.id]).map((a) => ({ cost: a.cost, emoji: a.emoji, name: L3(AREA_TEXT[a.id]?.name) })),
+  ].sort((a, b) => a.cost - b.cost)[0]
+
+  // Am ersten Tag nur das Nötigste; danach kommt jeden Tag etwas dazu
   const menuButtons = [
-    ['island', '🏝️', 0],
-    ['wardrobe', '👒', 0],
-    ['album', '📒', albumNew],
-    ['friends', '💌', 0],
-  ]
+    ['island', '🏝️', 0, 2],
+    ['wardrobe', '👒', 0, 2],
+    ['album', '📒', albumNew, 3],
+    ['friends', '💌', 0, 4],
+  ].filter(([, , , from]) => save.day >= from)
 
   return (
     <div className="game fixed inset-0 z-40 select-none overflow-hidden bg-[#EAF2FE] font-body" style={{ WebkitTouchCallout: 'none' }}>
@@ -781,6 +915,15 @@ export default function Spiel() {
             decorating={phase === 'decorate'}
             onGroundTap={placeAt}
             onPickDecor={pickDecor}
+            onWalkTap={phase === 'play' || phase === 'visit' ? (x, z) => walkTo(x, z) : undefined}
+            guideRef={guideRef}
+            needsRef={needsRef}
+            lite={lite}
+            onSlow={() => {
+              if (save.gfx === 'nice' || save.gfx === 'fast') return
+              setSave((sv) => ({ ...sv, gfx: 'fast' }))
+              toast(t('gfxAuto'))
+            }}
           />
         </WebGLGuard>
       </div>
@@ -836,16 +979,6 @@ export default function Spiel() {
                   </div>
                   <p className="flex-none pb-0.5 text-[15px] font-semibold text-label2">{t('day', { n: save.day })}</p>
                 </div>
-                {!save.seenHowTo && (
-                  <ol className="mt-3 space-y-1.5 rounded-2xl bg-bg px-4 py-3 text-[14px] leading-snug">
-                    {['how1', 'how2', 'how3', 'how4'].map((k, i) => (
-                      <li key={k} className="flex gap-2">
-                        <span className="font-bold text-accent-text">{i + 1}.</span>
-                        {t(k)}
-                      </li>
-                    ))}
-                  </ol>
-                )}
                 <button onClick={() => setSheet('material')} className="mt-3 flex w-full items-center justify-between rounded-2xl bg-bg px-4 py-2.5 text-left active:opacity-70">
                   <span>
                     <span className="block text-[12px] font-semibold uppercase tracking-wide text-label2">{t('material')}</span>
@@ -853,7 +986,7 @@ export default function Spiel() {
                   </span>
                   <ChevronRight className="h-4 w-4 text-label3" />
                 </button>
-                {save.missions?.list?.length > 0 && !showMissions && (
+                {save.day >= 2 && save.missions?.list?.length > 0 && !showMissions && (
                   <button onClick={() => setShowMissions(true)} className="mt-2 flex w-full items-center gap-3 rounded-2xl bg-bg px-4 py-2.5 text-left active:opacity-70">
                     <span className="text-[20px]" aria-hidden>
                       📋
@@ -868,7 +1001,7 @@ export default function Spiel() {
                     <ChevronRight className="h-4 w-4 text-label3" />
                   </button>
                 )}
-                {save.missions?.list?.length > 0 && showMissions && (
+                {save.day >= 2 && save.missions?.list?.length > 0 && showMissions && (
                   <div className="mt-2.5">
                     <MissionsCard
                       lang={lang}
@@ -880,11 +1013,34 @@ export default function Spiel() {
                     />
                   </div>
                 )}
+                {goal && save.day >= 2 && (
+                  <button onClick={() => setSheet('island')} className="mt-2 flex w-full items-center gap-3 rounded-2xl bg-bg px-4 py-2.5 text-left active:opacity-70">
+                    <span className="text-[22px]" aria-hidden>
+                      {goal.emoji}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="flex items-baseline justify-between gap-2">
+                        <span className="truncate text-[14px] font-semibold">
+                          <span className="text-label2">{t('nextGoal')}: </span>
+                          {goal.name}
+                        </span>
+                        <span className={`flex-none text-[13px] font-semibold tabular-nums ${save.coins >= goal.cost ? 'text-success' : 'text-label2'}`}>
+                          {Math.min(save.coins, goal.cost)}/{goal.cost}
+                        </span>
+                      </span>
+                      <span className="mt-1 block h-1.5 overflow-hidden rounded-full bg-fill/20">
+                        <span className="block h-full rounded-full bg-[#F0B429]" style={{ width: `${Math.min(100, (save.coins / goal.cost) * 100)}%` }} />
+                      </span>
+                    </span>
+                  </button>
+                )}
                 <p className="mt-2.5 text-center text-[12px] text-label2">{touch ? t('controlsTouch') : t('controlsKeys')}</p>
                 <div className="mt-2 flex gap-3">
-                  <Button variant="secondary" onClick={startDecorate} className="flex-1">
-                    {t('decorate')}
-                  </Button>
+                  {(save.day >= 3 || owned.length > 0 || save.decor.length > 0) && (
+                    <Button variant="secondary" onClick={startDecorate} className="flex-1">
+                      {t('decorate')}
+                    </Button>
+                  )}
                   <Button onClick={startDay} disabled={!pool || !pool.all.length} className="flex-[1.4]">
                     {!pool ? t('loading') : pool.all.length ? t('startDay', { n: save.day }) : t('noQuestions')}
                   </Button>
@@ -946,6 +1102,26 @@ export default function Spiel() {
           <Toasts items={toasts} />
           {phase === 'play' && (
             <>
+              <EdgeArrows
+                needsRef={needsRef}
+                items={needs}
+                onGo={(n) => {
+                  const at = needsRef.current.find((x) => x.id === n.id)
+                  if (at) walkTo(at.x, at.z, !n.guide)
+                }}
+              />
+              {tut !== null && TUT[tut] && (
+                <CoachCard
+                  lang={lang}
+                  text={t(TUT[tut].text)}
+                  step={tut}
+                  steps={TUT.length}
+                  skipLabel={t('tut_skip')}
+                  onSkip={endTutorial}
+                  action={TUT[tut].id === 'done' ? t('tut_go') : null}
+                  onAction={endTutorial}
+                />
+              )}
               {touch && <Joystick inputRef={inputRef} />}
               <ActionButton touch={touch} prompt={hud.prompt} label={actionLabel} onAct={() => act(simRef.current)} />
             </>
@@ -970,6 +1146,8 @@ export default function Spiel() {
             t={t}
             audio={save.audio}
             onAudio={onAudio}
+            gfx={lite ? 'fast' : 'nice'}
+            onGfx={(g) => setSave((sv) => ({ ...sv, gfx: g }))}
             onResume={() => setPhase(question ? 'question' : 'play')}
             onQuit={quitDay}
             onLeave={() => {

@@ -6,6 +6,7 @@ import App from './App.jsx'
 import { LanguageProvider, initialLang } from './i18n.jsx'
 import { ProgressProvider, STORAGE_KEY } from './progress.jsx'
 import { loadContent } from './data/content.js'
+import { AccountProvider } from './account/Account.jsx'
 import './index.css'
 
 // Inhalte des eigenen Jahrgangs sofort anfordern – parallel zum ersten Zeichnen der App.
@@ -22,7 +23,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <LanguageProvider>
         <ProgressProvider>
           <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-            <App />
+            {/* Optionales Konto: gleicht den Fortschritt mit dem Server ab (src/account/) */}
+            <AccountProvider>
+              <App />
+            </AccountProvider>
           </HashRouter>
         </ProgressProvider>
       </LanguageProvider>

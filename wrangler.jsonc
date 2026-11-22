@@ -1,6 +1,6 @@
 // Cloudflare deploy for gretagrosz.com: one Worker serving deploy/site/
 // (homepage at /, apps at /bwbuddy/ /blank/ /tenaday/ /regional/ /yap/ /stance/ /deutsch/).
-// Static files are served first; worker/index.js only answers the Yap API (/yap/api/*), the Stance API (/stance/api/*) and the site API (/api/site/*, worker/site.js) from D1. Unknown paths get website/404.html.
+// Static files are served first; worker/index.js only answers the app APIs (/yap/api/*, /stance/api/*, /blank/api/*, /qed/api/*, /bwbuddy/api/*) and the site API (/api/site/*, worker/site.js). Unknown paths get website/404.html.
 // Push notifications (Yap and Stance) need the VAPID_PRIVATE secret (wrangler secret put VAPID_PRIVATE; locally .dev.vars).
 // Settings copied from the dashboard upload. Deploy with: npm run deploy
 {

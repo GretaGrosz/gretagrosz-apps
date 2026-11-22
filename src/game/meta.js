@@ -54,7 +54,8 @@ export function claimDaily(save, now = new Date()) {
   const today = todayKey(now)
   const daily = save.daily ?? { last: null, streak: 0 }
   if (daily.last === today) return { save, gift: null }
-  const streak = daily.last === todayKey(dayBefore(now)) ? (daily.streak || 0) + 1 : 1
+  // Ein verpasster Tag pausiert die Serie nur (kein Neustart) – Zurückkommen soll sich nie wie eine Strafe anfühlen
+  const streak = (daily.streak || 0) + 1
   const gift = { coins: 10 + 5 * Math.min(streak, 6), streak }
   let next = { ...save, daily: { last: today, streak } }
   if (streak % 7 === 0) {
