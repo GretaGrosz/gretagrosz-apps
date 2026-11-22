@@ -1,7 +1,8 @@
-import { useMemo, useRef } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { Blob, INK, SPHERE, flat, toon, turnTo } from './toon.jsx'
+import Outfit from './Outfits.jsx'
 
 // Loopy, der Axolotl, in 3D: großer runder Kopf, glänzende Augen, Kiemenäste mit Kugeln. Ruhige Bewegungen.
 // Blickt in +z, Ursprung an den Füßen.
@@ -27,8 +28,9 @@ function stalkGeometry(len) {
 
 const MOUTH = new THREE.TorusGeometry(0.075, 0.017, 8, 18, Math.PI)
 
-// ent (optional): Objekt aus der Spielwelt { x, z, yaw, moving, mood } – dann steuert das Spiel Loopy direkt.
-export default function Loopy({ mood: moodProp = 'idle', spot = [0, 0, 0], face = 0, onClick, ent }) {
+// ent (optional): Objekt aus der Spielwelt { x, z, yaw, moving, mood, outfit } – dann steuert das Spiel Loopy direkt.
+// outfit: Outfit-ID aus data.js (OUTFITS); ent.outfit hat Vorrang.
+export default function Loopy({ mood: moodProp = 'idle', spot = [0, 0, 0], face = 0, onClick, ent, outfit = 'none' }) {
   const root = useRef()
   const body = useRef()
   const head = useRef()
@@ -39,6 +41,9 @@ export default function Loopy({ mood: moodProp = 'idle', spot = [0, 0, 0], face 
   const arms = useRef([])
   const s = useRef({ walk: 0, hop: 0, vy: 0, moodWas: ent ? ent.mood : moodProp, moodAt: 0, blinkAt: 2, blinkNext: 2, yaw: face, placed: false })
   const stalks = useMemo(() => GILLS.map((g) => stalkGeometry(g.len)), [])
+  // ent.outfit wird jedes Bild gelesen; neu gezeichnet wird nur, wenn es sich ändert
+  const [entOutfit, setEntOutfit] = useState(ent?.outfit)
+  const outfitSeen = useRef(ent?.outfit)
 
   useFrame(({ clock }, dtRaw) => {
     const dt = Math.min(Math.max(dtRaw, 1 / 240), 0.05)
@@ -46,6 +51,10 @@ export default function Loopy({ mood: moodProp = 'idle', spot = [0, 0, 0], face 
     const st = s.current
     const g = root.current
     const mood = ent ? ent.mood : moodProp
+    if (ent && ent.outfit !== outfitSeen.current) {
+      outfitSeen.current = ent.outfit
+      setEntOutfit(ent.outfit)
+    }
     if (!st.placed) {
       if (ent) g.position.set(ent.x, 0, ent.z)
       else g.position.set(spot[0], spot[1], spot[2])
@@ -190,6 +199,7 @@ export default function Loopy({ mood: moodProp = 'idle', spot = [0, 0, 0], face 
           ))}
           {/* Mund */}
           <mesh ref={mouth} geometry={MOUTH} material={flat(INK)} position={[0, -0.13, 0.462]} scale={[1, -1, 1]} />
+          <Outfit id={(ent && entOutfit != null ? entOutfit : outfit) ?? 'none'} />
         </group>
       </group>
     </group>

@@ -190,6 +190,52 @@ const SFX = {
   combo: (t) => [79, 84].forEach((m, i) => tone(sfxBus, { at: t + i * 0.07, freq: hz(m), dur: 0.2, vol: 0.13, harmonic: 0.3 })),
   nope: (t) => tone(sfxBus, { at: t, freq: 220, dur: 0.12, type: 'square', vol: 0.05 }),
   click: (t) => tone(sfxBus, { at: t, freq: 660, dur: 0.05, vol: 0.08 }),
+  munch: (t) => [0, 1, 2].forEach((i) => noise(sfxBus, { at: t + i * 0.11, dur: 0.06, vol: 0.12, high: 900 })),
+  pat: (t) => [0, 1].forEach((i) => tone(sfxBus, { at: t + i * 0.09, freq: hz(84 + i * 5), dur: 0.14, vol: 0.09, harmonic: 0.2 })),
+  fanfare: (t) => [67, 72, 76, 79, 76, 79, 84].forEach((m, i) => tone(sfxBus, { at: t + i * 0.09, freq: hz(m), dur: 0.22, type: i > 4 ? 'triangle' : 'square', vol: 0.07 })),
+  thunder: (t) => {
+    noise(sfxBus, { at: t, dur: 1.2, vol: 0.22, high: 60 })
+    tone(sfxBus, { at: t, freq: 70, dur: 1.0, type: 'sawtooth', vol: 0.05, slide: 0.6 })
+  },
+  sparkle: (t) => [88, 91, 96].forEach((m, i) => tone(sfxBus, { at: t + i * 0.05, freq: hz(m), dur: 0.18, vol: 0.06 })),
+  gift: (t) => [72, 76, 79, 84, 79, 84, 88].forEach((m, i) => tone(sfxBus, { at: t + i * 0.07, freq: hz(m), dur: 0.28, vol: 0.13, harmonic: 0.3 })),
+  blip: (t) => tone(sfxBus, { at: t, freq: 900 + Math.random() * 200, dur: 0.035, type: 'square', vol: 0.025 }),
+}
+
+// ---------- Plapperstimmen der Tiere ----------
+// base: Grundton (Hz) je Tierart, mood: ok (Hallo) | talk (erzählt) | happy (Danke!) | angry (grummelt)
+let lastVoice = 0
+export function voice(base = 520, mood = 'ok') {
+  if (!state.sfx || !ensure()) return
+  const now = ctx.currentTime
+  if (now - lastVoice < 0.25) return // nicht alle durcheinander
+  lastVoice = now
+  const n = mood === 'talk' ? 5 + Math.floor(Math.random() * 3) : mood === 'happy' ? 3 : mood === 'angry' ? 3 : 2
+  let at = now + 0.01
+  for (let i = 0; i < n; i++) {
+    let f = base * (0.88 + Math.random() * 0.3)
+    if (mood === 'happy') f = base * (1 + i * 0.18)
+    if (mood === 'angry') f = base * (0.6 - i * 0.05)
+    const dur = mood === 'angry' ? 0.11 : 0.065 + Math.random() * 0.03
+    const o = ctx.createOscillator()
+    const flt = ctx.createBiquadFilter()
+    const g = ctx.createGain()
+    o.type = mood === 'angry' ? 'sawtooth' : 'square'
+    o.frequency.setValueAtTime(f, at)
+    o.frequency.exponentialRampToValueAtTime(f * (mood === 'happy' && i === n - 1 ? 1.35 : 0.92), at + dur)
+    flt.type = 'lowpass'
+    flt.frequency.value = mood === 'angry' ? 900 : 2200
+    flt.Q.value = 3
+    g.gain.setValueAtTime(0.0001, at)
+    g.gain.exponentialRampToValueAtTime(mood === 'angry' ? 0.05 : 0.045, at + 0.008)
+    g.gain.exponentialRampToValueAtTime(0.0001, at + dur)
+    o.connect(flt)
+    flt.connect(g)
+    g.connect(sfxBus)
+    o.start(at)
+    o.stop(at + dur + 0.03)
+    at += dur + 0.025
+  }
 }
 
 export function sfx(name) {

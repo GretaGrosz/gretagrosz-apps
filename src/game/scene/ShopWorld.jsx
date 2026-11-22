@@ -2,20 +2,24 @@ import { useMemo, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import Loopy from './Loopy.jsx'
-import Kugel from './Kugel.jsx'
+import Critter from './Critter.jsx'
 import Krabbe from './Krabbe.jsx'
+import { Jelly, Octopus, Seal } from './Staff.jsx'
+import { Shark, Turtle } from './Story.jsx'
 import { Board, Cloud, Flower, Tree } from './World.jsx'
 import { Blob, CYL, INK, RBox, SPHERE, Slab, flat, toon, useTextTexture } from './toon.jsx'
-import { CANDY, PLACES, step } from '../sim.js'
+import { DayLight, Effects, GlowDriver, SeasonFall, Weather } from './Atmos.jsx'
+import { AreasLayer, DecorLayer, Lantern, RivalBlimp, RivalIsle, StringLights } from './Areas.jsx'
+import { AQUARIUM, AREA_GEO, CAFE, CANDY, PLACES, step } from '../sim.js'
 
 // Die spielbare Insel von Loopy & Co.: Theke vorne in der Mitte, Lagerhütte hinten links, Steg mit
 // Lieferluftschiff hinten rechts, Briefkasten vorne links. Alles Lebendige (Gläser, Kisten, Kundschaft,
 // Boot, Kai) liest jedes Bild den Zustand aus `simRef` – React zeichnet nur neu, wenn Kundschaft kommt oder geht.
 
-const PLOT = '#E4EEFC'
+const PLOT_BASE = '#E4EEFC'
 const PLOT_DEEP = '#C3D4F0'
 const PAVING = '#F7F9FD'
-const GRASS = '#8EE3C4'
+const GRASS_GREEN = '#8EE3C4'
 const WOOD = '#F2C99A'
 const WOOD_DEEP = '#E0AE78'
 const BLUE = '#339AFF'
@@ -28,8 +32,24 @@ const CENTER = new THREE.Vector3(0, 0, -0.4)
 const up = new THREE.Vector3()
 const want = new THREE.Vector3()
 
-function Rig({ simRef, follow }) {
+function overviewOf(areas) {
+  let [x1, z1, x2, z2] = [-6, -6, 6, 6]
+  for (const id of Object.keys(AREA_GEO)) {
+    if (!areas?.[id]) continue
+    const p = AREA_GEO[id].platform
+    x1 = Math.min(x1, p[0])
+    z1 = Math.min(z1, p[1])
+    x2 = Math.max(x2, p[2])
+    z2 = Math.max(z2, p[3])
+  }
+  // isometrisch: Breite am Schirm ≈ (Δx + Δz)/√2, Höhe ≈ halb so viel
+  const ext = Math.max(12, ((x2 - x1 + z2 - z1) / 2) * 1.0)
+  return { center: new THREE.Vector3((x1 + x2) / 2, 0, (z1 + z2) / 2 - 0.4), k: ext / 12 }
+}
+
+function Rig({ simRef, follow, areas }) {
   const { camera, size } = useThree()
+  const view = useMemo(() => overviewOf(areas), [areas])
   const at = useRef(CENTER.clone())
   const ready = useRef(false)
   useFrame((_, dt) => {
@@ -38,15 +58,13 @@ function Rig({ simRef, follow }) {
     const portrait = size.height > size.width
     const L = simRef.current?.loopy
     if (follow && L) want.set(L.x * 0.7, 0.5, L.z * 0.7 - 0.2)
-    else want.copy(CENTER)
+    else want.copy(view.center)
     at.current.lerp(want, k)
     const zoom = follow
       ? portrait
         ? Math.min(size.width / 8.6, size.height / 13)
         : Math.min(size.width / 14, size.height / 9.5)
-      : portrait
-        ? Math.min(size.width / 15.5, size.height / 21)
-        : Math.min(size.width / 19, size.height / 14)
+      : (portrait ? Math.min(size.width / 15.5, size.height / 21) : Math.min(size.width / 19, size.height / 14)) / view.k
     camera.zoom += (zoom - camera.zoom) * k
     camera.position.copy(at.current).addScaledVector(DIR, 40)
     camera.lookAt(at.current)
@@ -69,7 +87,9 @@ function Driver({ simRef, inputRef, running }) {
 }
 
 // ---------- Insel ----------
-function Island() {
+function Island({ snow }) {
+  const GRASS = snow ? '#EEF4FC' : GRASS_GREEN
+  const PLOT = snow ? '#F7FAFE' : PLOT_BASE
   return (
     <group>
       <Slab w={SIZE} d={SIZE} h={0.5} r={0.9} color={PLOT} />
@@ -89,12 +109,29 @@ function Island() {
   )
 }
 
-function Decor() {
+const TREES = [
+  [-4.7, 4.6, 1.15],
+  [4.5, 4.1, 1],
+  [-5.0, -0.2, 0.9],
+]
+
+function Decor({ snow, xmas }) {
   return (
     <group>
-      <Tree position={[-4.7, 0, 4.6]} scale={1.15} />
-      <Tree position={[4.5, 0, 4.1]} />
-      <Tree position={[-5.0, 0, -0.2]} scale={0.9} />
+      {TREES.map(([x, z, k]) => (
+        <group key={x}>
+          <Tree position={[x, 0, z]} scale={k} />
+          {snow && <Blob color="#FFFFFF" s={[0.5 * k, 0.24 * k, 0.5 * k]} position={[x, 1.62 * k, z]} />}
+        </group>
+      ))}
+      {[[5.25, -1.3], [-5.25, 1.55], [1.6, 5.25], [-1.2, -5.2]].map(([x, z]) => (
+        <Lantern key={x} position={[x, 0, z]} />
+      ))}
+      {xmas && (
+        <group position={[5.0, 0, -1.9]} scale={0.8}>
+          <XmasMini />
+        </group>
+      )}
       <Blob color="#5CD6B0" s={[0.32, 0.28, 0.32]} position={[0.2, 0.24, -5.0]} />
       <Blob color="#7DDDB5" s={[0.24, 0.22, 0.24]} position={[0.8, 0.2, -4.7]} />
       {[[-3.9, 4.0, 0], [-4.2, 5.0, 1], [-3.6, 4.7, 4], [3.8, 3.6, 2], [5.0, 4.6, 5], [-5.3, 0.6, 1], [1.1, -5.2, 3], [-0.1, -4.6, 0]].map(([x, z, c], i) => (
@@ -107,6 +144,20 @@ function Decor() {
     </group>
   )
 }
+
+function XmasMini() {
+  return (
+    <group>
+      <mesh geometry={CYL} material={toon('#E0AE78')} scale={[0.08, 0.3, 0.08]} position={[0, 0.15, 0]} />
+      {[[0.55, 0.6, 0.55], [0.43, 0.5, 0.95], [0.3, 0.42, 1.3]].map(([r, h, y], i) => (
+        <Blob key={i} geo={CONE_GEO} color={i % 2 ? '#3FBF98' : '#2FA57F'} s={[r, h, r]} position={[0, y, 0]} />
+      ))}
+      <StringLights from={[-0.45, 0.5, 0.3]} to={[0.4, 1.1, 0.25]} n={7} sag={-0.05} />
+      <mesh geometry={SPHERE} material={flat('#FFD45E')} scale={[0.12, 0.12, 0.05]} position={[0, 1.62, 0]} />
+    </group>
+  )
+}
+const CONE_GEO = new THREE.ConeGeometry(1, 1, 12)
 
 // ---------- Theke mit Gläsern ----------
 const JAR_X = [-0.85, -0.29, 0.27, 0.83]
@@ -140,7 +191,7 @@ function LiveJar({ simRef, type, x }) {
   )
 }
 
-function Counter({ simRef, sign }) {
+function Counter({ simRef, sign, xmas }) {
   const tex = useTextTexture(sign, { w: 640, h: 128, size: 58, fg: '#FFFFFF' })
   const stripes = 8
   return (
@@ -162,6 +213,7 @@ function Counter({ simRef, sign }) {
           )
         })}
       </group>
+      {xmas && <StringLights from={[-1.25, 2.55, 0.32]} to={[1.25, 2.55, 0.32]} n={14} sag={0.16} />}
       <RBox size={[2.12, 0.42, 0.05]} r={0.02} color={BLUE_DEEP} position={[0, 0.39, 0.665]} shadow={false} />
       <mesh position={[0, 0.39, 0.693]}>
         <planeGeometry args={[2.0, 0.4]} />
@@ -400,33 +452,41 @@ function LiveMarker({ simRef, position, when, color = '#FFD45E' }) {
 const RING = new THREE.RingGeometry(0.72, 0.86, 40)
 RING.rotateX(-Math.PI / 2)
 
-function StationRings({ simRef }) {
-  const rings = useRef({})
-  const spots = { counter: PLACES.serve, store: PLACES.storeDoor, dock: PLACES.dock, mail: PLACES.mailFront }
-  const mats = useMemo(() => ({ on: new THREE.MeshBasicMaterial({ color: '#FFFFFF', transparent: true, opacity: 0.85 }) }), [])
+const FIXED_SPOTS = { counter: PLACES.serve, store: PLACES.storeDoor, dock: PLACES.dock, mail: PLACES.mailFront, machine: CAFE.machineFront, aquarium: AQUARIUM.front }
+
+function StationRing({ simRef }) {
+  const ref = useRef()
+  const mat = useMemo(() => new THREE.MeshBasicMaterial({ color: '#FFFFFF', transparent: true, opacity: 0.85 }), [])
   useFrame(({ clock }) => {
     const s = simRef.current
-    Object.entries(rings.current).forEach(([k, m]) => {
-      if (!m) return
-      const on = s?.near === k
-      m.visible = on
-      if (on) m.scale.setScalar(1 + Math.sin(clock.elapsedTime * 5) * 0.04)
-    })
+    const m = ref.current
+    let at = s?.near ? FIXED_SPOTS[s.near] : null
+    if (s?.near === 'table') at = CAFE.tables[s.nearRef]
+    if (s?.near === 'staff') {
+      const k = s.staff[s.nearRef]
+      at = k ? [k.x, k.z] : null
+    }
+    m.visible = Boolean(at)
+    if (!at) return
+    m.position.set(at[0], 0.07, at[1])
+    const small = s.near === 'staff' || s.near === 'table'
+    m.scale.setScalar((small ? 0.75 : 1) * (1 + Math.sin(clock.elapsedTime * 5) * 0.04))
   })
-  return Object.entries(spots).map(([k, [x, z]]) => (
-    <mesh key={k} ref={(el) => (rings.current[k] = el)} geometry={RING} material={mats.on} position={[x, 0.07, z]} />
-  ))
+  return <mesh ref={ref} geometry={RING} material={mat} />
 }
 
 // ---------- Was Loopy trägt ----------
 function Carry({ ent, y = 1.5 }) {
   const ref = useRef()
   const crates = useRef([])
+  const cup = useRef()
   useFrame(() => {
     const e = ent()
-    const t = e?.carry?.type
+    const isCup = e?.carry?.kind === 'cocoa'
+    const t = isCup ? -1 : e?.carry?.type
     ref.current.visible = t !== undefined && t !== null
     if (!ref.current.visible) return
+    cup.current.visible = isCup
     ref.current.position.set(e.x, y + (e.moving ? Math.abs(Math.sin(performance.now() / 80)) * 0.04 : 0), e.z)
     ref.current.rotation.y = e.yaw
     crates.current.forEach((c, i) => c && (c.visible = i === t))
@@ -438,6 +498,13 @@ function Carry({ ent, y = 1.5 }) {
           <Crate type={t} />
         </group>
       ))}
+      <group ref={cup} position={[0, -0.2, 0.15]}>
+        <Blob geo={CYL} color="#FFFFFF" s={[0.15, 0.04, 0.15]} position={[0, 0.02, 0]} />
+        <Blob geo={CYL} color="#FFFFFF" s={[0.1, 0.2, 0.1]} position={[0, 0.13, 0]} />
+        <mesh geometry={CYL} material={toon('#7E4C2E')} scale={[0.085, 0.01, 0.085]} position={[0, 0.235, 0]} />
+        <mesh geometry={SPHERE} material={toon('#FFFFFF')} scale={[0.06, 0.035, 0.06]} position={[0, 0.25, 0]} />
+        <mesh geometry={SPHERE} material={toon('#FF84A6')} scale={0.025} position={[0.02, 0.29, 0]} />
+      </group>
     </group>
   )
 }
@@ -447,13 +514,19 @@ function CustomerTag({ c }) {
   const ref = useRef()
   const bar = useRef()
   const barMat = useMemo(() => new THREE.MeshBasicMaterial({ color: '#5CD6B0' }), [])
-  const qTex = useTextTexture('?', { w: 128, h: 128, size: 104, fg: BLUE_DEEP })
-  const ask = c.kind === 'ask' || c.kind === 'regular'
+  const qTex = useTextTexture(c.kind === 'inspector' ? '§' : '?', { w: 128, h: 128, size: 104, fg: c.kind === 'inspector' ? '#7E4C2E' : BLUE_DEEP })
+  const nameTex = useTextTexture(c.name || ' ', { w: 256, h: 80, size: 46, fg: '#FFFFFF' })
+  const ask = c.kind === 'ask' || c.kind === 'regular' || c.kind === 'inspector'
+  const cupRef = useRef()
+  const mainRef = useRef()
   useFrame(({ camera }) => {
-    const on = c.state !== 'leave' && c.present
+    const sitting = c.state === 'sit' && !c.served
+    const on = (c.state === 'walk' || c.state === 'wait' || sitting) && c.present
     ref.current.visible = on
     if (!on) return
-    ref.current.position.set(c.x, 1.95, c.z)
+    cupRef.current.visible = sitting
+    mainRef.current.visible = !sitting
+    ref.current.position.set(c.x, sitting ? 1.7 : 1.95, c.z)
     ref.current.quaternion.copy(camera.quaternion)
     const k = Math.max(0, c.patience / c.max)
     bar.current.scale.x = Math.max(0.001, k)
@@ -465,7 +538,21 @@ function CustomerTag({ c }) {
     <group ref={ref}>
       <mesh geometry={SPHERE} material={flat('#FFFFFF')} scale={[0.42, 0.3, 0.02]} />
       <mesh geometry={SPHERE} material={flat('#FFFFFF')} scale={[0.09, 0.09, 0.02]} position={[-0.12, -0.3, 0]} />
-      {c.kind === 'regular' && <mesh geometry={SPHERE} material={flat('#FFD45E')} scale={[0.1, 0.1, 0.02]} position={[0.36, 0.22, 0.02]} />}
+      {c.name && (
+        <group position={[0, 0.42, 0.02]}>
+          <mesh geometry={SPHERE} material={flat('#8F78E8')} scale={[0.36, 0.1, 0.02]} />
+          <mesh position={[0, 0, 0.02]}>
+            <planeGeometry args={[0.62, 0.2]} />
+            <meshBasicMaterial map={nameTex} transparent />
+          </mesh>
+        </group>
+      )}
+      <group ref={cupRef} visible={false}>
+        <mesh geometry={CYL} material={flat('#A86B45')} scale={[0.1, 0.16, 0.02]} position={[-0.02, 0, 0.03]} />
+        <mesh geometry={SPHERE} material={flat('#FFFFFF')} scale={[0.1, 0.04, 0.02]} position={[-0.02, 0.09, 0.04]} />
+        <mesh geometry={SPHERE} material={flat('#A86B45')} scale={[0.04, 0.05, 0.02]} position={[0.11, 0.0, 0.03]} />
+      </group>
+      <group ref={mainRef}>
       {ask ? (
         <mesh position={[0, 0.01, 0.03]}>
           <planeGeometry args={[0.42, 0.42]} />
@@ -476,7 +563,8 @@ function CustomerTag({ c }) {
           <mesh key={i} geometry={SPHERE} material={flat(candy.color)} scale={[0.11, 0.11, 0.03]} position={[(i - (c.qty - 1) / 2) * 0.24, 0.02, 0.03]} />
         ))
       )}
-      {c.kind === 'gold' && <mesh geometry={SPHERE} material={flat('#FFD45E')} scale={[0.07, 0.07, 0.02]} position={[0.3, 0.18, 0.03]} />}
+      {(c.kind === 'gold' || c.vip) && <mesh geometry={SPHERE} material={flat('#FFD45E')} scale={[0.07, 0.07, 0.02]} position={[0.3, 0.18, 0.03]} />}
+      </group>
       {/* Geduld */}
       <mesh position={[0, -0.42, 0.01]} material={flat('#E5E5EA')} scale={[0.64, 0.07, 1]}>
         <planeGeometry args={[1, 1]} />
@@ -488,14 +576,48 @@ function CustomerTag({ c }) {
   )
 }
 
+const STAFF_MODEL = { kai: Krabbe, otto: Octopus, luma: Jelly, momo: Seal }
+const STAFF_CARRY_Y = { kai: 0.72, otto: 1.35, luma: 1.5, momo: 1.4 }
+
+// Im Café sitzen Gäste auf dem Hocker (Sitzhöhe 0.3)
+function SitLift({ c, children }) {
+  const ref = useRef()
+  useFrame(() => {
+    const want = c.mood === 'sit' ? 0.3 : 0
+    ref.current.position.y += (want - ref.current.position.y) * 0.25
+  })
+  return <group ref={ref}>{children}</group>
+}
+
+// Unsichtbarer Boden zum Antippen beim Dekorieren
+function GroundTap({ onTap }) {
+  return (
+    <mesh
+      rotation={[-Math.PI / 2, 0, 0]}
+      position={[0, 0.06, 0]}
+      onPointerDown={(e) => {
+        e.stopPropagation()
+        onTap(e.point.x, e.point.z)
+      }}
+    >
+      <planeGeometry args={[60, 60]} />
+      <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+    </mesh>
+  )
+}
+
 /**
  * simRef: Spielzustand (kann null sein, dann steht die Insel ruhig)
- * inputRef: { x, y } Richtung in Bildschirmkoordinaten
+ * inputRef: { kx, ky, jx, jy } Richtung in Bildschirmkoordinaten
  * customers: Liste der Kundschaft (nur für das Neuzeichnen, Bewegung liest jedes Bild)
+ * staffIds: eingestelltes Personal · areas: gekaufte Inselteile · decor: aufgestellte Deko
+ * season / holiday: Jahreszeit und Feiertag · rival: Haiberts Insel zeigen
+ * decorating + onGroundTap / onPickDecor: Deko aufstellen und einsammeln
  */
-export default function ShopWorld({ simRef, inputRef, running, follow, customers, kai, dayKey, labels }) {
+export default function ShopWorld({ simRef, inputRef, running, follow, customers, staffIds = [], dayKey, labels, areas = {}, decor = [], season, holiday, rival, decorating, onGroundTap, onPickDecor }) {
   const loopyEnt = () => simRef.current?.loopy
-  const kaiEnt = () => simRef.current?.kai
+  const snow = season === 'winter'
+  const xmas = holiday === 'xmas'
   return (
     <Canvas
       orthographic
@@ -507,46 +629,55 @@ export default function ShopWorld({ simRef, inputRef, running, follow, customers
       style={{ touchAction: 'none' }}
     >
       <Driver simRef={simRef} inputRef={inputRef} running={running} />
-      <Rig simRef={simRef} follow={follow} />
-      <hemisphereLight args={['#FFFFFF', '#DCE7FA', 2.58]} />
-      <directionalLight
-        position={[-5, 12, 9]}
-        intensity={0.74}
-        castShadow
-        shadow-mapSize={[2048, 2048]}
-        shadow-bias={-0.0006}
-        shadow-normalBias={0.03}
-        shadow-camera-left={-10}
-        shadow-camera-right={10}
-        shadow-camera-top={10}
-        shadow-camera-bottom={-10}
-        shadow-camera-near={1}
-        shadow-camera-far={45}
-      />
-      <Island />
-      <Decor />
-      <Counter simRef={simRef} sign={labels.sign} />
+      <Rig simRef={simRef} follow={follow} areas={areas} />
+      <DayLight simRef={simRef} season={season} />
+      <GlowDriver />
+      <Island snow={snow} />
+      <Decor snow={snow} xmas={xmas} />
+      <AreasLayer simRef={simRef} areas={areas} labels={labels} snow={snow} />
+      <DecorLayer decor={decor} onPick={decorating ? onPickDecor : undefined} />
+      {decorating && <GroundTap onTap={onGroundTap} />}
+      <Counter simRef={simRef} sign={labels.sign} xmas={xmas} />
       <Storeroom simRef={simRef} label={labels.store} />
       <Dock simRef={simRef} label={labels.dock} />
       <Mailbox simRef={simRef} />
-      <StationRings simRef={simRef} />
-      <LiveMarker simRef={simRef} position={[PLACES.mail[0], 1.9, PLACES.mail[1]]} when={(s) => s.letter} />
+      <StationRing simRef={simRef} />
+      <LiveMarker simRef={simRef} position={[PLACES.mail[0], 1.9, PLACES.mail[1]]} when={(s) => s.letter} color={'#FFD45E'} />
       <LiveMarker simRef={simRef} position={[PLACES.store[0], 2.75, PLACES.store[1] + 0.6]} when={(s) => s.inventur} />
       <LiveMarker simRef={simRef} position={[PLACES.dockPile[0], 1.6, PLACES.dockPile[1]]} when={(s) => s.dockBoxes.length > 0} color="#5CD6B0" />
+      {areas.cafe && <LiveMarker simRef={simRef} position={[CAFE.machine[0], 2.75, CAFE.machine[1]]} when={(s) => s.customers.some((c) => c.state === 'sit' && !c.served && !c.claimed)} color="#FF84A6" />}
+      {areas.aquarium && <LiveMarker simRef={simRef} position={[AQUARIUM.front[0], 2.9, AQUARIUM.front[1] - 1.4]} when={(s) => s.tour} color="#7CC4FF" />}
+      <Turtle position={[PLACES.turtle[0], 0, PLACES.turtle[1]]} rotation={[0, 0.5, 0]} />
+      {rival && (
+        <RivalIsle label={labels.rival}>
+          <Shark position={[0, 0, 0]} rotation={[0, -0.7, 0]} />
+        </RivalIsle>
+      )}
+      <RivalBlimp simRef={simRef} label={labels.rivalAd} />
       <Loopy key={`loopy-${dayKey}`} ent={simRef.current?.loopy ?? { x: 0, z: -1.1, yaw: 0.6, moving: false, mood: 'idle' }} />
       <Carry ent={loopyEnt} />
-      {kai && (
-        <>
-          <Krabbe key={`kai-${dayKey}`} ent={kaiEnt} />
-          <Carry ent={kaiEnt} y={0.72} />
-        </>
-      )}
+      {staffIds.map((id) => {
+        const Model = STAFF_MODEL[id]
+        if (!Model) return null
+        const ent = () => simRef.current?.staff?.[id]
+        return (
+          <group key={`${id}-${dayKey}`}>
+            <Model ent={ent} />
+            <Carry ent={ent} y={STAFF_CARRY_Y[id]} />
+          </group>
+        )
+      })}
       {customers.map((c) => (
         <group key={c.id}>
-          <Kugel ent={c} color={c.color} dark={c.dark} hat={c.hat} />
+          <SitLift c={c}>
+            <Critter ent={c} species={c.species} tint={c.tint} vip={c.vip} santa={c.santa} inspector={c.inspector} />
+          </SitLift>
           <CustomerTag c={c} />
         </group>
       ))}
+      <Effects simRef={simRef} />
+      <SeasonFall season={season === 'summer' ? null : season} />
+      <Weather simRef={simRef} />
     </Canvas>
   )
 }

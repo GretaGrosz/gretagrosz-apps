@@ -5,7 +5,7 @@ import Sheet from '../../components/Sheet.jsx'
 import { CheckIcon, ChevronLeft, ChevronRight, XIcon } from '../../components/Icons.jsx'
 import { SPRING } from '../../motion.js'
 import { getKapitelList, jahrgaenge } from '../../data/curriculum.js'
-import { CANDY, DAY_LEN, PRICES, RUSH, UPGRADES } from '../sim.js'
+import { CANDY, DAY_LEN, RUSH } from '../sim.js'
 
 // Bedienelemente und Fenster von Loopy & Co. (über der 3D-Insel)
 
@@ -94,6 +94,7 @@ export function Toasts({ items }) {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={SPRING}
               className="game-float rounded-[22px] bg-[#FF5E8A] px-6 py-3 text-center text-white"
+              style={it.color ? { background: it.color } : undefined}
             >
               <p className="text-[26px] font-extrabold leading-tight">{it.text}</p>
               {it.sub && <p className="text-[14px] font-semibold opacity-90">{it.sub}</p>}
@@ -296,7 +297,7 @@ export function QuestionCard({ t, item, onPick, onNext }) {
 }
 
 // ---------- Tagesabschluss ----------
-export function Summary({ t, day, report, onNext, onShop, onMenu }) {
+export function Summary({ t, day, report, onNext, onShop, onMenu, children }) {
   const { ledger, costs, profit, served, lost, answers, bestCombo, stars } = report
   const right = answers.filter((a) => a.ok).length
   const lines = [
@@ -362,9 +363,10 @@ export function Summary({ t, day, report, onNext, onShop, onMenu }) {
             {answers.some((a) => !a.ok) && <p className="mt-2 text-[13px] text-label2">{t('mistakesNote')}</p>}
           </div>
         )}
+        {children}
         <div className="mt-4 flex gap-3">
           <Button variant="secondary" onClick={onShop} className="flex-1">
-            {t('upgrades')}
+            {t('island')}
           </Button>
           <Button onClick={onNext} className="flex-1">
             {t('nextDay')}
@@ -419,69 +421,6 @@ export function MaterialSheet({ open, onClose, t, lang, focus, onChange, exam, f
               </button>
             </li>
           ))}
-        </ul>
-      </div>
-    </Sheet>
-  )
-}
-
-// ---------- Laden ausbauen ----------
-const UP_ICON = {
-  jars: '🫙',
-  shoes: '👟',
-  bench: '⛱️',
-  kai: '🦀',
-  choco: '🍫',
-  shop: '🏪',
-}
-
-export function UpgradeSheet({ open, onClose, t, save, onBuy }) {
-  return (
-    <Sheet open={open} onClose={onClose} title={t('shopTitle')} action={<button onClick={onClose} className="px-2 py-2 text-[17px] font-semibold text-accent-text">{t('done')}</button>}>
-      <div className="px-4 pb-2">
-        <div className="mb-3 flex justify-center">
-          <Pill>
-            <span className="game-coin" />
-            {save.coins} {t('coins')}
-          </Pill>
-        </div>
-        <ul className="space-y-2.5">
-          {UPGRADES.map((u) => {
-            const owned = Boolean(save.upgrades[u.id])
-            const can = !owned && save.coins >= u.cost
-            return (
-              <li key={u.id} className="flex items-center gap-3 rounded-2xl bg-surface p-3.5">
-                <span className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-bg text-[26px]" aria-hidden>
-                  {UP_ICON[u.id]}
-                </span>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[16px] font-semibold leading-tight">{t(`u_${u.id}`)}</p>
-                  <p className="mt-0.5 text-[13px] leading-snug text-label2">{t(`u_${u.id}Text`, { n: PRICES.kaiWage })}</p>
-                </div>
-                {owned ? (
-                  <span className="flex items-center gap-1 text-[14px] font-semibold text-success">
-                    <CheckIcon className="h-4 w-4" strokeWidth={3} />
-                    {t('owned')}
-                  </span>
-                ) : (
-                  <button disabled={!can} onClick={() => onBuy(u)} className={`flex flex-none items-center gap-1.5 rounded-full px-3.5 py-2 text-[15px] font-semibold tabular-nums ${can ? 'bg-accent text-white active:opacity-80' : 'bg-fill/20 text-label3'}`}>
-                    <span className="game-coin !h-4 !w-4" />
-                    {u.cost}
-                  </button>
-                )}
-              </li>
-            )
-          })}
-          <li className="flex items-center gap-3 rounded-2xl bg-surface p-3.5 opacity-60">
-            <span className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-bg text-[26px]" aria-hidden>
-              {UP_ICON.shop}
-            </span>
-            <div className="min-w-0 flex-1">
-              <p className="text-[16px] font-semibold leading-tight">{t('u_shop')}</p>
-              <p className="mt-0.5 text-[13px] leading-snug text-label2">{t('u_shopText')}</p>
-            </div>
-            <span className="rounded-full bg-fill/20 px-3 py-1.5 text-[13px] font-semibold text-label2">{t('soon')}</span>
-          </li>
         </ul>
       </div>
     </Sheet>
